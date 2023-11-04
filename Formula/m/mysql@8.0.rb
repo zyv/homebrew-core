@@ -8,6 +8,7 @@ class MysqlAT80 < Formula
   sha256 "429c5f69f3722e31807e74119d157a023277af210bfee513443cae60ebd2a86d"
 
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
+  revision 1
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/8.0.html?tpl=files&os=src&version=8.0"
