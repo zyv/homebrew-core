@@ -4,6 +4,7 @@ class Widelands < Formula
   url "https://github.com/widelands/widelands/archive/refs/tags/v1.1.tar.gz"
   sha256 "6853fcf3daec9b66005691e5bcb00326634baf0985ad89a7e6511502612f6412"
   license "GPL-2.0-or-later"
+  revision 1
   version_scheme 1
 
   livecheck do
