@@ -4,7 +4,7 @@ class Urweb < Formula
   url "https://github.com/urweb/urweb/releases/download/20200209/urweb-20200209.tar.gz"
   sha256 "ac3010c57f8d90f09f49dfcd6b2dc4d5da1cdbb41cbf12cb386e96e93ae30662"
   license "BSD-3-Clause"
-  revision 8
+  revision 9
 
   bottle do
     sha256 arm64_sonoma:   "3ebe55a40e33090aebd46466fae8bf1dc6b21035271f9d57f905c1cd4a559e55"
