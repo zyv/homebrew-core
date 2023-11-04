@@ -4,6 +4,7 @@ class Simdutf < Formula
   url "https://github.com/simdutf/simdutf/archive/refs/tags/v4.0.9.tar.gz"
   sha256 "599e6558fc8d06f8346e5f210564f8b18751c93d83bce1a40a0e6a326c57b61e"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
   head "https://github.com/simdutf/simdutf.git", branch: "master"
 
   livecheck do
