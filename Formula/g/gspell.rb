@@ -4,7 +4,7 @@ class Gspell < Formula
   url "https://download.gnome.org/sources/gspell/1.12/gspell-1.12.2.tar.xz"
   sha256 "b4e993bd827e4ceb6a770b1b5e8950fce3be9c8b2b0cbeb22fdf992808dd2139"
   license "LGPL-2.1-or-later"
-  revision 1
+  revision 2
 
   bottle do
     sha256 arm64_sonoma:   "c3073d875233e0bfb03722e4d5e815b549a8a8eb14e5262a7e6efa342e463895"
