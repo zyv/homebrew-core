@@ -4,7 +4,7 @@ class Znc < Formula
   url "https://znc.in/releases/archive/znc-1.9.0.tar.gz"
   sha256 "8b99c9dbb21c1309705073460be9bfacb6f7b0e83a15fe5d4b7140201b39d2a1"
   license "Apache-2.0"
-  head "https://github.com/znc/znc.git", branch: "master"
+  revision 1
 
   bottle do
     sha256 arm64_sonoma:   "dddb735c0994729e2fc6b5deda68bcc2bb06cdc3926ccfdd177ce127c7d31d22"
