@@ -2,6 +2,7 @@ class Sile < Formula
   desc "Modern typesetting system inspired by TeX"
   homepage "https://sile-typesetter.org"
   license "MIT"
+  revision 1
 
   # TODO: With 0.15 release:
   # - Remove `cosmo` resource and corresponding references in install
