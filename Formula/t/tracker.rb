@@ -6,6 +6,7 @@ class Tracker < Formula
       tag:      "3.6.0",
       revision: "624ef729966f2d9cf748321bd7bac822489fa8ed"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 1
 
   # Tracker doesn't follow GNOME's "even-numbered minor is stable" version
   # scheme but they do appear to use 90+ minor/patch versions, which may
