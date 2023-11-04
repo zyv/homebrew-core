@@ -4,6 +4,7 @@ class Freeciv < Formula
   url "https://downloads.sourceforge.net/project/freeciv/Freeciv%203.0/3.0.10/freeciv-3.0.10.tar.xz"
   sha256 "c185c8ea0d6a2e974a5ad12fb837ca3ceb9aed3e7e884355f01035f5e779d23c"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
