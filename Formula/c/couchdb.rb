@@ -6,6 +6,7 @@ class Couchdb < Formula
   mirror "https://archive.apache.org/dist/couchdb/source/3.3.3/apache-couchdb-3.3.3.tar.gz"
   sha256 "7a2007b5f673d4be22a25c9a111d9066919d872ddb9135a7dcec0122299bd39e"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url :homepage
