@@ -5,6 +5,7 @@ class SpidermonkeyAT91 < Formula
   version "91.13.0"
   sha256 "53be2bcde0b5ee3ec106bd8ba06b8ae95e7d489c484e881dfbe5360e4c920762"
   license "MPL-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "e6c8e0991f5644ce8f5ba4978a458da014abcca8ffcc7633ef4f00d45a112e46"
