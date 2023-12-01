@@ -2,7 +2,7 @@ class Chakra < Formula
   desc "Core part of the JavaScript engine that powers Microsoft Edge"
   homepage "https://github.com/chakra-core/ChakraCore"
   license "MIT"
-  revision 6
+  revision 7
   head "https://github.com/chakra-core/ChakraCore.git", branch: "master"
 
   stable do
