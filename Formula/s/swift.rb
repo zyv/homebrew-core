@@ -7,6 +7,7 @@ class Swift < Formula
   url "https://github.com/apple/swift/archive/refs/tags/swift-5.9.2-RELEASE.tar.gz"
   sha256 "5b93c737c24ba7d861e0777800740eaa9ccddfa2a6a4326bd47dbc5aa9ae8379"
   license "Apache-2.0"
+  revision 1
 
   # This uses the `GithubLatest` strategy because a `-RELEASE` tag is often
   # created several days before the version is officially released.
