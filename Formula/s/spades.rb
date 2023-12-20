@@ -23,14 +23,15 @@ class Spades < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python@3.11"
+  depends_on "python-setuptools"
+  depends_on "python@3.12"
 
   uses_from_macos "bzip2"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "libomp"
+    depends_on "gcc"
   end
 
   on_linux do
@@ -38,11 +39,14 @@ class Spades < Formula
     depends_on "readline"
   end
 
+  fails_with :clang do
+    cause "fails to link with recent `libomp`"
+  end
+
   def install
-    mkdir "src/build" do
-      system "cmake", "..", *std_cmake_args
-      system "make", "install"
-    end
+    system "cmake", "-S", "src", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
     rewrite_shebang detected_python_shebang, *bin.children
   end
 
