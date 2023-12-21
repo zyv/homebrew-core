@@ -17,47 +17,33 @@ class Wxpython < Formula
     sha256               x86_64_linux:   "2b0a727845e44862bd0f74d23e0c1e2e8c91959e32d85aebff3ead82a0a10fb5"
   end
 
-  # FIXME: Build is currently broken with Doxygen 1.9.7+.
-  # FIXME: depends_on "doxygen" => :build
-  depends_on "bison" => :build # for `doxygen` resource
-  depends_on "cmake" => :build # for `doxygen` resource
+  depends_on "doxygen" => :build
+  depends_on "python-setuptools" => :build
   depends_on "sip" => :build
   depends_on "numpy"
   depends_on "pillow"
-  depends_on "python@3.11"
+  depends_on "python@3.12"
   depends_on "six"
   depends_on "wxwidgets"
-  uses_from_macos "flex" => :build, since: :big_sur # for `doxygen` resource
 
   on_linux do
     depends_on "pkg-config" => :build
     depends_on "gtk+3"
   end
 
-  # Build is broken with Doxygen 1.9.7+.
-  # TODO: Try to use Homebrew `doxygen` at next release.
-  resource "doxygen" do
-    url "https://doxygen.nl/files/doxygen-1.9.6.src.tar.gz"
-    mirror "https://downloads.sourceforge.net/project/doxygen/rel-1.9.6/doxygen-1.9.6.src.tar.gz"
-    sha256 "297f8ba484265ed3ebd3ff3fe7734eb349a77e4f95c8be52ed9977f51dea49df"
+  # Backport fix for doxygen 1.9.7+. Remove in the next release.
+  patch do
+    url "https://github.com/wxWidgets/Phoenix/commit/0b21230ee21e5e5d0212871b96a6d2fefd281038.patch?full_index=1"
+    sha256 "befd2a9594a2fa41f926edf412476479f2f311b4088c4738a867c5e7ca6c0f82"
   end
 
   def python
-    "python3.11"
+    "python3.12"
   end
 
   def install
-    odie "Check if `doxygen` resource can be removed!" if build.bottle? && version > "4.2.1"
-    # TODO: Try removing the block below at the next release.
-    resource("doxygen").stage do
-      system "cmake", "-S", ".", "-B", "build",
-                      "-DPYTHON_EXECUTABLE=#{which(python)}",
-                      *std_cmake_args(install_prefix: buildpath/".brew_home")
-      system "cmake", "--build", "build"
-      system "cmake", "--install", "build"
-    end
-
-    ENV["DOXYGEN"] = buildpath/".brew_home/bin/doxygen" # Formula["doxygen"].opt_bin/"doxygen"
+    ENV.cxx11
+    ENV["DOXYGEN"] = Formula["doxygen"].opt_bin/"doxygen"
     system python, "-u", "build.py", "dox", "touch", "etg", "sip", "build_py",
                    "--release",
                    "--use_syswx",
