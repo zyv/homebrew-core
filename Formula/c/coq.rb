@@ -4,6 +4,7 @@ class Coq < Formula
   url "https://github.com/coq/coq/releases/download/V8.19.0/coq-8.19.0.tar.gz"
   sha256 "17e5c10fadcd3cda7509d822099a892fcd003485272b56a45abd30390f6a426f"
   license "LGPL-2.1-only"
+  revision 1
   head "https://github.com/coq/coq.git", branch: "master"
 
   livecheck do
@@ -35,11 +36,13 @@ class Coq < Formula
     ENV.prepend_path "OCAMLPATH", Formula["ocaml-findlib"].opt_lib/"ocaml"
     system "./configure", "-prefix", prefix,
                           "-mandir", man,
+                          "-libdir", HOMEBREW_PREFIX/"lib/ocaml/coq",
                           "-docdir", pkgshare/"latex"
     system "make", "dunestrap"
     system "dune", "build", "-p", "coq-core,coq-stdlib,coqide-server,coq"
     system "dune", "install", "--prefix=#{prefix}",
                               "--mandir=#{man}",
+                              "--libdir=#{lib}/ocaml",
                               "coq-core",
                               "coq-stdlib",
                               "coqide-server",
@@ -73,5 +76,8 @@ class Coq < Formula
       Qed.
     EOS
     system bin/"coqc", testpath/"testing.v"
+    # test ability to find plugin files
+    output = shell_output("#{Formula["ocaml-findlib"].bin}/ocamlfind query coq-core.plugins.ltac")
+    assert_equal "#{HOMEBREW_PREFIX}/lib/ocaml/coq-core/plugins/ltac", output.chomp
   end
 end
