@@ -2,8 +2,8 @@ class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
   # Use the `-full` tarball to avoid having to download during the build.
-  url "https://github.com/JuliaLang/julia/releases/download/v1.9.4/julia-1.9.4-full.tar.gz"
-  sha256 "61843b9647fd06d3b2994f3277a64de1cb5a5a5297d930b8c8e3bc0e93740024"
+  url "https://github.com/JuliaLang/julia/releases/download/v1.10.1/julia-1.10.1-full.tar.gz"
+  sha256 "6ba58b55fc56e7d7cb854d5f3c7b8cfb6a209850d82ef74cdf76878d841612a4"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
   head "https://github.com/JuliaLang/julia.git", branch: "master"
 
@@ -17,12 +17,12 @@ class Julia < Formula
   end
 
   depends_on "cmake" => :build # Needed to build LLVM
-  # TODO: Use system `suite-sparse` when `julia` supports v7.
-  # PR ref: https://github.com/JuliaLang/julia/pull/48977
+  depends_on "gcc" => :build # for gfortran
+  # TODO: Use system `suite-sparse` when `julia` supports v7.3+.
+  # PR ref: https://github.com/JuliaLang/julia/pull/52577
   depends_on "suite-sparse" => :test # Check bundled copy is used
   depends_on "ca-certificates"
   depends_on "curl"
-  depends_on "gcc" # for gfortran
   depends_on "gmp"
   depends_on "libgit2"
   depends_on "libnghttp2"
@@ -91,17 +91,32 @@ class Julia < Formula
     args << "MACOSX_VERSION_MIN=#{MacOS.version}" if OS.mac?
 
     # Set MARCH and JULIA_CPU_TARGET to ensure Julia works on machines we distribute to.
-    # Values adapted from https://github.com/JuliaCI/julia-buildbot/blob/master/master/inventory.py
+    # Values adapted from https://github.com/JuliaCI/julia-buildbot/blob/master/master/inventory.py,
+    # then extended.
     args << "MARCH=#{Hardware.oldest_cpu}" if Hardware::CPU.intel?
 
-    cpu_targets = ["generic"]
-    cpu_targets += if Hardware::CPU.arm?
-      %w[cortex-a57 thunderx2t99 armv8.2-a,crypto,fullfp16,lse,rdm]
-    else
-      %w[sandybridge,-xsaveopt,clone_all haswell,-rdrnd,base(1)]
+    cpu_targets = %w[generic]
+    if Hardware::CPU.arm?
+      # Cortex A57, Thunder-X2, Nvidia Carmel,
+      # Neoverse V1/V2, Cortex A510/A710/A715/X2/X3
+      if OS.linux?
+        cpu_targets += %w[cortex-a57,base(0) thunderx2t99,base(0) armv8.2-a,crypto,fullfp16,lse,rdm,base(1)
+                          neoverse-512tvb,base(3) armv8.5-a,sve2,sve2-bitperm,i8mm,bf16,base(4)]
+      end
+      cpu_targets += %w[apple-m1,clone_all]
     end
-    args << "JULIA_CPU_TARGET=#{cpu_targets.join(";")}" if build.stable?
-    args << "TAGGED_RELEASE_BANNER=Built by #{tap.user} (v#{pkg_version})"
+    if Hardware::CPU.intel?
+      cpu_targets += ["#{Hardware.oldest_cpu},clone_all"]
+      cpu_targets += %w[sandybridge,-xsaveopt,base(1) haswell,-rdrnd,base(1) skylake,base(1)]
+      cpu_targets += %w[alderlake,base(4) sapphirerapids,base(4) znver4,base(4)] if OS.linux?
+    end
+    args << "JULIA_CPU_TARGET=#{cpu_targets.join(";")}"
+    user = begin
+      tap.user
+    rescue
+      "unknown user"
+    end
+    args << "TAGGED_RELEASE_BANNER=Built by #{user} (v#{pkg_version})"
 
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/julia"
     # Help Julia find keg-only dependencies
