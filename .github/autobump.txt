@@ -1789,6 +1789,7 @@ rune
 rure
 rust-analyzer
 rustcat
+rustfmt
 rustscan
 rustup-init
 rye
