@@ -24,8 +24,12 @@ class ArmNoneEabiGcc < Formula
 
   depends_on "arm-none-eabi-binutils"
   depends_on "gmp"
+  depends_on "isl"
   depends_on "libmpc"
   depends_on "mpfr"
+  depends_on "zstd"
+
+  uses_from_macos "zlib"
 
   def install
     target = "arm-none-eabi"
@@ -34,11 +38,14 @@ class ArmNoneEabiGcc < Formula
                              "--prefix=#{prefix}",
                              "--infodir=#{info}/#{target}",
                              "--disable-nls",
-                             "--without-isl",
                              "--without-headers",
                              "--with-as=#{Formula["arm-none-eabi-binutils"].bin}/arm-none-eabi-as",
                              "--with-ld=#{Formula["arm-none-eabi-binutils"].bin}/arm-none-eabi-ld",
-                             "--enable-languages=c,c++"
+                             "--enable-languages=c,c++,objc,lto",
+                             "--enable-lto",
+                             "--with-system-zlib",
+                             "--with-zstd",
+                             *std_configure_args
       system "make", "all-gcc"
       system "make", "install-gcc"
       system "make", "all-target-libgcc"
