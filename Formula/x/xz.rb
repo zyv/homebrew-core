@@ -27,7 +27,7 @@ class Xz < Formula
   end
 
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    system "./configure", *std_configure_args, "--disable-silent-rules", "--disable-nls"
     system "make", "check"
     system "make", "install"
   end
