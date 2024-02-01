@@ -1,8 +1,8 @@
 class Stlink < Formula
   desc "STM32 discovery line Linux programmer"
   homepage "https://github.com/stlink-org/stlink"
-  url "https://github.com/stlink-org/stlink/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "57ec1214905aedf59bee7f70ddff02316f64fa9ba5a9b6a3a64952edc5b65855"
+  url "https://github.com/stlink-org/stlink/archive/refs/tags/v1.8.0.tar.gz"
+  sha256 "cff760b5c212c2cc480f705b9ca7f3828d6b9c267950c6a547002cd0a1f5f6ac"
   license "BSD-3-Clause"
   head "https://github.com/stlink-org/stlink.git", branch: "develop"
 
@@ -24,8 +24,18 @@ class Stlink < Formula
   depends_on "pkg-config" => :build
   depends_on "libusb"
 
+  # upstream PR ref, https://github.com/stlink-org/stlink/pull/1373
+  patch do
+    url "https://github.com/stlink-org/stlink/commit/4eafbb29d106b32221c8d3b375b31d78f07de182.patch?full_index=1"
+    sha256 "a745b3f10eb9c831838afc53e94038f61b29cdbe70970d3417d15f0db5301791"
+  end
+  patch do
+    url "https://github.com/stlink-org/stlink/commit/d742e752d896c0f8d4a61b282457401f7a681b16.patch?full_index=1"
+    sha256 "1f86ccdcb6bbf2d8cf53d6c96e76c1f11aef83c9de0e8dbe9b8d5cafab02c28d"
+  end
+
   def install
-    args = std_cmake_args
+    args = []
 
     libusb = Formula["libusb"]
     args << "-DLIBUSB_INCLUDE_DIR=#{libusb.opt_include}/libusb-#{libusb.version.major_minor}"
@@ -35,8 +45,12 @@ class Stlink < Formula
       args << "-DSTLINK_MODPROBED_DIR=#{lib}/modprobe.d"
       args << "-DSTLINK_UDEV_RULES_DIR=#{lib}/udev/rules.d"
     end
-    system "cmake", ".", *args
-    system "make", "install"
+
+    args << "-DCMAKE_INSTALL_RPATH=#{rpath}"
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
