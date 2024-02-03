@@ -1,8 +1,8 @@
 class NicotinePlus < Formula
   desc "Graphical client for the Soulseek peer-to-peer network"
   homepage "https://nicotine-plus.org"
-  url "https://files.pythonhosted.org/packages/70/d5/15d8c60e3d27d3482fb8cba3ae0c49e57efe00f28e51b8aaea09f979bc48/nicotine-plus-3.2.9.tar.gz"
-  sha256 "41a86dc68b175d1dcac2ec2d79553cff4e5fbcca7f9f384c51cbaa393081b0c0"
+  url "https://files.pythonhosted.org/packages/65/c7/890d2e484b3149e268fa3ebc3024fe4947b9bc91123431c70064c1ed54fd/nicotine-plus-3.3.2.tar.gz"
+  sha256 "aa76ac841c3959c9c58286a0114f67532df0abe708e7a344ed8a9b3fc7ea351d"
   license "GPL-3.0-or-later"
   head "https://github.com/nicotine-plus/nicotine-plus.git", branch: "master"
 
@@ -38,11 +38,7 @@ class NicotinePlus < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/nicotine -v")
-    pid = fork do
-      exec bin/"nicotine", "-s"
-    end
-    sleep 3
-    Process.kill("TERM", pid)
+    # nicotine is a GUI app
+    assert_match version.to_s, shell_output("#{bin}/nicotine --version")
   end
 end
