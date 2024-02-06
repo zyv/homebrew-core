@@ -4,6 +4,7 @@ class Urdfdom < Formula
   url "https://github.com/ros/urdfdom/archive/refs/tags/4.0.0.tar.gz"
   sha256 "9848d106dc88dc0b907d5667c09da3ca53241fbcf17e982d8c234fe3e0d6ddcc"
   license "BSD-3-Clause"
+  revision 1
 
   # Upstream uses Git tags (e.g. `1.0.0`) to indicate a new version. They
   # created a few releases on GitHub in the past but now they simply use tags.
