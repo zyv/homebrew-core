@@ -1,8 +1,8 @@
 class Libxml2 < Formula
   desc "GNOME XML library"
   homepage "http://xmlsoft.org/"
-  url "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.4.tar.xz"
-  sha256 "497360e423cf0bd99eacdb7c6215dea92e6d6e89ee940393c2bae0e77cb9b7d0"
+  url "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.5.tar.xz"
+  sha256 "a972796696afd38073e0f59c283c3a2f5a560b5268b4babc391b286166526b21"
   license "MIT"
 
   # We use a common regex because libxml2 doesn't use GNOME's "even-numbered
