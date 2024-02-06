@@ -6,7 +6,7 @@ class Encfs < Formula
   # The code comprising the EncFS library (libencfs) is licensed under the LGPL.
   # The main programs (encfs, encfsctl, etc) are licensed under the GPL.
   license "GPL-3.0"
-  revision 3
+  revision 4
   head "https://github.com/vgough/encfs.git", branch: "master"
 
   bottle do
