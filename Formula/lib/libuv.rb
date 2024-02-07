@@ -1,8 +1,8 @@
 class Libuv < Formula
   desc "Multi-platform support library with a focus on asynchronous I/O"
   homepage "https://libuv.org"
-  url "https://github.com/libuv/libuv/archive/refs/tags/v1.47.0.tar.gz"
-  sha256 "d50af7e6d72526db137e66fad812421c8a1cae09d146b0ec2bb9a22c5f23ba93"
+  url "https://github.com/libuv/libuv/archive/refs/tags/v1.48.0.tar.gz"
+  sha256 "8c253adb0f800926a6cbd1c6576abae0bc8eb86a4f891049b72f9e5b7dc58f33"
   license "MIT"
   head "https://github.com/libuv/libuv.git", branch: "v1.x"
 
@@ -26,10 +26,6 @@ class Libuv < Formula
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "sphinx-doc" => :build
-
-  # Fix compile on older macOS.
-  # Remove with v1.48.
-  patch :DATA
 
   def install
     # This isn't yet handled by the make install process sadly.
@@ -63,20 +59,3 @@ class Libuv < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/src/unix/fs.c b/src/unix/fs.c
-index 891306da..9671f0dd 100644
---- a/src/unix/fs.c
-+++ b/src/unix/fs.c
-@@ -84,7 +84,9 @@
- 
- #if defined(__CYGWIN__) ||                                                    \
-     (defined(__HAIKU__) && B_HAIKU_VERSION < B_HAIKU_VERSION_1_PRE_BETA_5) || \
--    (defined(__sun) && !defined(__illumos__))
-+    (defined(__sun) && !defined(__illumos__)) ||                              \
-+    (defined(__APPLE__) && !TARGET_OS_IPHONE &&                               \
-+     MAC_OS_X_VERSION_MIN_REQUIRED < 110000)
- #define preadv(fd, bufs, nbufs, off)                                          \
-   pread(fd, (bufs)->iov_base, (bufs)->iov_len, off)
- #define pwritev(fd, bufs, nbufs, off)                                         \
