@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.land/"
-  url "https://github.com/denoland/deno/releases/download/v1.40.3/deno_src.tar.gz"
-  sha256 "7f2e06acb4cd0ff22c70b96a46f5c4f4a458e21e912a0cad6b44d599f4871b6a"
+  url "https://github.com/denoland/deno/releases/download/v1.40.4/deno_src.tar.gz"
+  sha256 "9b3b7e0f248155c986f91387b7a94311a05ba85b1c437a6d1dceb18d2f6636ff"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -60,8 +60,8 @@ class Deno < Formula
   # Use the version of `deno_core` crate at: https://github.com/denoland/deno/blob/v#{version}/Cargo.lock
   # Search for 'name = "deno_core"' (without single quotes).
   resource "deno_core" do
-    url "https://github.com/denoland/deno_core/archive/refs/tags/0.256.0.tar.gz"
-    sha256 "331b861f590ee25dc30c3d8eb6e6a5e2ba7abe1156e66dfc356a6efacdeceaba"
+    url "https://github.com/denoland/deno_core/archive/refs/tags/0.260.0.tar.gz"
+    sha256 "d2879f7b46b284fbec75d69fa436bc385e56e44101ea511822df21eec41569d9"
   end
 
   # To find the version of gn used:
@@ -144,9 +144,8 @@ class Deno < Formula
       console.log("hello", "deno");
     EOS
     assert_match "hello deno", shell_output("#{bin}/deno run hello.ts")
-    assert_match "console.log",
-      shell_output("#{bin}/deno run --allow-read=#{testpath} https://deno.land/std@0.50.0/examples/cat.ts " \
-                   "#{testpath}/hello.ts")
+    assert_match "Welcome to Deno!",
+      shell_output("#{bin}/deno run https://deno.land/std@0.100.0/examples/welcome.ts")
 
     linked_libraries = [
       Formula["sqlite"].opt_lib/shared_library("libsqlite3"),
