@@ -52,13 +52,6 @@ class OpensslAT3 < Formula
   link_overwrite "lib/pkgconfig/libcrypto.pc", "lib/pkgconfig/libssl.pc", "lib/pkgconfig/openssl.pc"
   link_overwrite "share/doc/openssl/*", "share/man/man*/*ssl"
 
-  # Fix multi-certificate PEM loading.
-  # Remove with OpenSSL 3.2.1.
-  patch do
-    url "https://github.com/openssl/openssl/commit/cafccb768be5b8f5c21852764f7b2863b6f5e204.patch?full_index=1"
-    sha256 "fd1628e55a6db01324bd4acf693316999b94de45b56c7460f92b15e65199bb6e"
-  end
-
   # SSLv2 died with 1.1.0, so no-ssl2 no longer required.
   # SSLv3 & zlib are off by default with 1.1.0 but this may not
   # be obvious to everyone, so explicitly state it for now to
