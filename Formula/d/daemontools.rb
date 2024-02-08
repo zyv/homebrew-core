@@ -4,7 +4,7 @@ class Daemontools < Formula
   url "https://cr.yp.to/daemontools/daemontools-0.76.tar.gz"
   sha256 "a55535012b2be7a52dcd9eccabb9a198b13be50d0384143bd3b32b8710df4c1f"
   license :public_domain
-  revision 1
+  revision 2
 
   livecheck do
     url "https://cr.yp.to/daemontools/install.html"
@@ -43,6 +43,7 @@ class Daemontools < Formula
     cd "daemontools-#{version}" do
       inreplace ["package/run", "src/svscanboot.sh"] do |s|
         s.gsub! "/service", "#{etc}/service"
+        s.gsub! "/command", bin.to_s
       end
 
       # Work around build error from root requirement: "Oops. Your getgroups() returned 0,
