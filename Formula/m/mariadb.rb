@@ -1,8 +1,8 @@
 class Mariadb < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://archive.mariadb.org/mariadb-11.2.2/source/mariadb-11.2.2.tar.gz"
-  sha256 "faedbd8790c7ee65b348c0169706b4bae91eb6ce7335a76b27dbd8813c42e21b"
+  url "https://archive.mariadb.org/mariadb-11.2.3/source/mariadb-11.2.3.tar.gz"
+  sha256 "14a0bba0c2847eb3f69a4637f55798f8abe10904cd1dd22899c9b0a39c43e35f"
   license "GPL-2.0-only"
 
   livecheck do
@@ -54,6 +54,13 @@ class Mariadb < Formula
 
   fails_with gcc: "5"
 
+  # Remove on next release.
+  # Upstream PR: https://github.com/MariaDB/server/pull/3064
+  patch do
+    url "https://github.com/MariaDB/server/commit/3624a36aed0346380255b141cb8a59998aaca4ee.patch?full_index=1"
+    sha256 "c9d0aa64b34c43ac9e3077d74c18532125c459d9d867ade69ce283d27b595b22"
+  end
+
   def install
     ENV.cxx11
 
@@ -76,7 +83,6 @@ class Mariadb < Formula
       -DINSTALL_DOCDIR=share/doc/#{name}
       -DINSTALL_INFODIR=share/info
       -DINSTALL_MYSQLSHAREDIR=share/mysql
-      -DWITH_LIBFMT=system
       -DWITH_SSL=system
       -DWITH_UNIT_TESTS=OFF
       -DDEFAULT_CHARSET=utf8mb4
