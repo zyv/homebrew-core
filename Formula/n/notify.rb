@@ -1,8 +1,8 @@
 class Notify < Formula
   desc "Stream the output of any CLI and publish it to a variety of supported platforms"
   homepage "https://github.com/projectdiscovery/notify"
-  url "https://github.com/projectdiscovery/notify/archive/refs/tags/v1.0.5.tar.gz"
-  sha256 "15824bee28cb9f3e74aa34559619fdceb865182fe12961d6c5cfc26db642b38c"
+  url "https://github.com/projectdiscovery/notify/archive/refs/tags/v1.0.6.tar.gz"
+  sha256 "b9883c8476f17465c7fced603382e6d3f379014ac7fae79a4bb61525a5fc63e8"
   license "MIT"
   head "https://github.com/projectdiscovery/notify.git", branch: "master"
 
@@ -25,7 +25,8 @@ class Notify < Formula
   end
 
   test do
-    assert_match "Current Version: #{version}", shell_output("#{bin}/notify --version 2>&1")
-    assert_predicate testpath/".config/notify/config.yaml", :exist?
+    assert_match "Current Version: #{version}", shell_output("#{bin}/notify -disable-update-check -version 2>&1")
+    output = shell_output("#{bin}/notify -disable-update-check -config \"#{testpath}/non_existent\" 2>&1", 1)
+    assert_match "Could not read config", output
   end
 end
