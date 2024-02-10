@@ -1,8 +1,8 @@
 class Subnetcalc < Formula
   desc "IPv4/IPv6 subnet calculator"
   homepage "https://www.nntb.no/~dreibh/subnetcalc/index.html"
-  url "https://github.com/dreibh/subnetcalc/archive/refs/tags/subnetcalc-2.4.23.tar.gz"
-  sha256 "cbfdcc54991cacb91adc652cb5f03b3ed975da0f574ff3f96f192c6046dc0e34"
+  url "https://github.com/dreibh/subnetcalc/archive/refs/tags/subnetcalc-2.5.1.tar.gz"
+  sha256 "c7257ca02518e863bf15042f7f88a70cae847917f333dc5dc17b7ccc6fc48000"
   license "GPL-3.0-or-later"
   head "https://github.com/dreibh/subnetcalc.git", branch: "master"
 
@@ -33,6 +33,7 @@ class Subnetcalc < Formula
       Netmask       = 255.255.255.255
       Broadcast     = not needed on Point-to-Point links
       Wildcard Mask = 0.0.0.0
+      Hex. Address  = 01010101
       Hosts Bits    = 0
       Max. Hosts    = 1   (2^0 - 0)
       Host Range    = { 1.1.1.1 - 1.1.1.1 }
