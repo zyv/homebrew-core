@@ -11,6 +11,10 @@ class Brag < Formula
 
   depends_on "uudeview"
 
+  on_linux do
+    depends_on "tcl-tk"
+  end
+
   def install
     bin.install "brag"
     man1.install "brag.1"
