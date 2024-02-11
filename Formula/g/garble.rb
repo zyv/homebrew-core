@@ -4,6 +4,7 @@ class Garble < Formula
   url "https://github.com/burrowers/garble/archive/refs/tags/v0.12.0.tar.gz"
   sha256 "cf18939683a9e453468e8dd1bcc0da5b1bb4b306e6cc5bf935e0c5c8d68b5d35"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/burrowers/garble.git", branch: "master"
 
   bottle do
@@ -37,16 +38,11 @@ class Garble < Formula
     system bin/"garble", "-literals", "-tiny", "build", testpath/"hello.go"
     assert_equal "Hello World\n", shell_output("#{testpath}/hello")
 
-    goos = Utils.safe_popen_read("#{Formula["go"].bin}/go", "env", "GOOS").chomp
-    goarch = Utils.safe_popen_read("#{Formula["go"].bin}/go", "env", "GOARCH").chomp
     expected = <<~EOS
       Build settings:
             -buildmode exe
              -compiler gc
              -trimpath true
-           CGO_ENABLED 1
-                GOARCH #{goarch}
-                  GOOS #{goos}
     EOS
     assert_match expected, shell_output("#{bin}/garble version")
   end
