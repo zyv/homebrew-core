@@ -13,9 +13,11 @@ class Uudeview < Formula
 
   bottle do
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a58cd61413eb8e656d8395b63d1542e9f256d669d227b23d7cf0f70181a420c3"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "28d8a4e08275d26926e19c32a6ca833ed3a1c3969ea5126c4def92e72442e66d"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "8c72240dbc205cb79229af479b8dc1774b4eb11d0ffad47391102e033be4bb07"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "93a098dc40d16b9785888c20c8d1707a62fe471938c99ea8074df042548cfed7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "cfbdefb80f1571aa3c8df28efe90f9a526ef1c936a51a2c0ea913e6da8447927"
     sha256 cellar: :any_skip_relocation, ventura:        "b82ecb8116e22c3c53af765f8da79f52aed9668182ff8b16d5a0523e739e51e7"
     sha256 cellar: :any_skip_relocation, monterey:       "0b5de5467dd832158645bca2006500fadaefc2e187819e883e9ff1a85bb60e64"
     sha256 cellar: :any_skip_relocation, big_sur:        "94426299f928e2c7985194d2a3f436112b2ca580945eacc82ad5047c619c2417"
