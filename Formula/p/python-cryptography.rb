@@ -7,13 +7,13 @@ class PythonCryptography < Formula
   head "https://github.com/pyca/cryptography.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "2328005942affbd2848d0e07b7f5bc94f285137449259ddc38a68e0a08907dd9"
-    sha256 cellar: :any,                 arm64_ventura:  "f97c14f672dc250ab7af90df97e35737c0398f58d79ab596129f02b0a424e03d"
-    sha256 cellar: :any,                 arm64_monterey: "649b0beca9658858ab71b331ca11abfc412b1f42cd366d8d9db2937ce35ad930"
-    sha256 cellar: :any,                 sonoma:         "78ff02d50e30ffb81a60b53e78061bf5335b663d4ad9f76503788f5647283ca9"
-    sha256 cellar: :any,                 ventura:        "ace2327ce77399f4d5add0d928ce147552e0ee455d7dc1bc772a28fd0165049f"
-    sha256 cellar: :any,                 monterey:       "3712e485d59c9830da11e5cc7dd785b6197705d391c827f64a8fbc5686c228ed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "de5094d4fce591010b8adb118922dd5b960837f1a99cd4aebcee5924e01e585a"
+    sha256 cellar: :any,                 arm64_sonoma:   "e7dd37573f85af118747591b4cb842b155ccbe3e66f7d6c52f6ed024d05a954b"
+    sha256 cellar: :any,                 arm64_ventura:  "e1c8b5ef7a22662b7fb283977ff04a36f3f9722122e0421cb83c74a198323fad"
+    sha256 cellar: :any,                 arm64_monterey: "8721cd8f6f6cb3b0903f66be7ec3b83c420b3285ff67a66c5583bb4034b5f927"
+    sha256 cellar: :any,                 sonoma:         "1746d0508011031efa1961b23dddf54822ca00f2cac265b35f94e86cb8ee6de6"
+    sha256 cellar: :any,                 ventura:        "8360c4ca7b89408c572cad48b598a40a02e60fab6b94a4f3add1d07ecca08019"
+    sha256 cellar: :any,                 monterey:       "aadfcc9c97a2cd7e4d99f32792af075e43ade84a98b7ef1b55efcb9a09f17979"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "57530e86e61dc1fe280f4e9eec0702a3b49e98ac0b1fda78a03c6de9f34c71f4"
   end
 
   depends_on "pkg-config" => :build
