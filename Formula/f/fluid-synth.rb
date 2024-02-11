@@ -39,44 +39,45 @@ class FluidSynth < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-Denable-alsa=#{OS.linux?}",
-                    "-Denable-aufile=ON",
-                    "-Denable-coverage=OFF",
-                    "-Denable-coreaudio=#{OS.mac?}",
-                    "-Denable-coremidi=#{OS.mac?}",
-                    "-Denable-dart=OFF",
-                    "-Denable-dbus=OFF",
-                    "-Denable-dsound=OFF",
-                    "-Denable-floats=OFF",
-                    "-Denable-fpe-check=OFF",
-                    "-Denable-framework=OFF",
-                    "-Denable-ipv6=ON",
-                    "-Denable-jack=#{OS.linux?}",
-                    "-Denable-ladspa=OFF",
-                    "-Denable-lash=OFF",
-                    "-Denable-libinstpatch=OFF",
-                    "-Denable-libsndfile=ON",
-                    "-Denable-midishare=OFF",
-                    "-Denable-network=ON",
-                    "-Denable-opensles=OFF",
-                    "-Denable-oboe=OFF",
-                    "-Denable-openmp=OFF",
-                    "-Denable-oss=OFF",
-                    "-Denable-pipewire=OFF",
-                    "-Denable-portaudio=ON",
-                    "-Denable-profiling=OFF",
-                    "-Denable-pulseaudio=OFF",
-                    "-Denable-readline=ON",
-                    "-Denable-sdl2=OFF",
-                    "-Denable-systemd=#{OS.linux?}",
-                    "-Denable-trap-on-fpe=OFF",
-                    "-Denable-threads=ON",
-                    "-Denable-ubsan=OFF",
-                    "-Denable-wasapi=OFF",
-                    "-Denable-waveout=OFF",
-                    "-Denable-winmidi=OFF",
-                    *std_cmake_args
+    args = %W[
+      -Denable-alsa=#{OS.linux?}
+      -Denable-aufile=ON
+      -Denable-coverage=OFF
+      -Denable-coreaudio=#{OS.mac?}
+      -Denable-coremidi=#{OS.mac?}
+      -Denable-dart=OFF
+      -Denable-dbus=OFF
+      -Denable-dsound=OFF
+      -Denable-floats=OFF
+      -Denable-fpe-check=OFF
+      -Denable-framework=OFF
+      -Denable-ipv6=ON
+      -Denable-jack=#{OS.linux?}
+      -Denable-ladspa=OFF
+      -Denable-lash=OFF
+      -Denable-libinstpatch=OFF
+      -Denable-libsndfile=ON
+      -Denable-midishare=OFF
+      -Denable-network=ON
+      -Denable-opensles=OFF
+      -Denable-oboe=OFF
+      -Denable-openmp=OFF
+      -Denable-oss=OFF
+      -Denable-pipewire=OFF
+      -Denable-portaudio=ON
+      -Denable-profiling=OFF
+      -Denable-pulseaudio=OFF
+      -Denable-readline=ON
+      -Denable-sdl2=OFF
+      -Denable-systemd=#{OS.linux?}
+      -Denable-trap-on-fpe=OFF
+      -Denable-threads=ON
+      -Denable-ubsan=OFF
+      -Denable-wasapi=OFF
+      -Denable-waveout=OFF
+      -Denable-winmidi=OFF
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
 
     # On macOS, readline is keg-only so use the absolute path to its pc file
     # uses_from_macos "readline" produces another error
@@ -89,8 +90,11 @@ class FluidSynth < Formula
 
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
     pkgshare.install "sf2"
+
+    system "cmake", "-S", ".", "-B", "static", *args, *std_cmake_args, "-DBUILD_SHARED_LIBS=OFF"
+    system "cmake", "--build", "static"
+    lib.install "static/src/libfluidsynth.a"
   end
 
   test do
