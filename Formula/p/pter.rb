@@ -3,8 +3,8 @@ class Pter < Formula
 
   desc "Your console and graphical UI to manage your todo.txt file(s)"
   homepage "https://vonshednob.cc/pter/"
-  url "https://files.pythonhosted.org/packages/2c/23/138875969e4f4c2893baac7765767100f84e1adb9dc0cb42c3c5f08d42a7/pter-3.14.0.tar.gz"
-  sha256 "be223dc66e5428d9e2e593a3ce5fa29e36e88ab745476f9dc7661a97a510f9a1"
+  url "https://files.pythonhosted.org/packages/99/7e/43e46aabede195064760769ea73db0aa55f45992198fe418eda635f1824d/pter-3.15.0.tar.gz"
+  sha256 "74d91caba7bd2391467a75e893a14b205870aee89c680fd4996cc119a26fdcc5"
   license "MIT"
 
   bottle do
