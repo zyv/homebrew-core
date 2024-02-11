@@ -1,8 +1,8 @@
 class Showkey < Formula
   desc "Simple keystroke visualizer"
   homepage "http://www.catb.org/~esr/showkey/"
-  url "http://www.catb.org/~esr/showkey/showkey-1.8.tar.gz"
-  sha256 "31b6b064976a34d7d8e7a254db0397ba2dc50f1bb6e283038b17c48a358d50d3"
+  url "http://www.catb.org/~esr/showkey/showkey-1.9.tar.gz"
+  sha256 "7230aed91f9a510ae5d234a32ba88402eb6c39431ad8175e78035f9d9b6a8f6e"
   license "MIT"
   head "https://gitlab.com/esr/showkey.git", branch: "master"
 
@@ -49,6 +49,7 @@ class Showkey < Formula
       sleep 1
       pipe.write "\cC\cD"
     end
-    assert_match(/^Hello<SP>Homebrew!<CTL-D=EOT>/, output)
+
+    assert_match "Hello<SP>Homebrew!\r\nBye...\r\n", output
   end
 end
