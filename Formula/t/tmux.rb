@@ -1,22 +1,9 @@
 class Tmux < Formula
   desc "Terminal multiplexer"
   homepage "https://tmux.github.io/"
+  url "https://github.com/tmux/tmux/releases/download/3.4/tmux-3.4.tar.gz"
+  sha256 "551ab8dea0bf505c0ad6b7bb35ef567cdde0ccb84357df142c254f35a23e19aa"
   license "ISC"
-  revision 3
-
-  stable do
-    # Remove `stable` block in next release.
-    url "https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz"
-    sha256 "e4fd347843bd0772c4f48d6dde625b0b109b7a380ff15db21e97c11a4dcdf93f"
-
-    # Patch for CVE-2022-47016. Remove in next release.
-    # Upstream commit does not apply to 3.3a, so we use Nix's patch.
-    # https://github.com/NixOS/nixpkgs/pull/213041
-    patch do
-      url "https://raw.githubusercontent.com/NixOS/nixpkgs/2821a121dc2acf2fe07d9636ee35ff61807087ea/pkgs/tools/misc/tmux/CVE-2022-47016.patch"
-      sha256 "c1284aace9231e736ace52333ec91726d3dfda58d3a3404b67c6f40bf5ed28a4"
-    end
-  end
 
   livecheck do
     url :stable
@@ -40,13 +27,13 @@ class Tmux < Formula
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
-
-    uses_from_macos "bison" => :build
   end
 
   depends_on "pkg-config" => :build
   depends_on "libevent"
   depends_on "ncurses"
+
+  uses_from_macos "bison" => :build # for yacc
 
   # Old versions of macOS libc disagree with utf8proc character widths.
   # https://github.com/tmux/tmux/issues/2223
