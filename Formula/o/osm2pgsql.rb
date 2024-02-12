@@ -1,10 +1,9 @@
 class Osm2pgsql < Formula
   desc "OpenStreetMap data to PostgreSQL converter"
   homepage "https://osm2pgsql.org"
-  url "https://github.com/openstreetmap/osm2pgsql/archive/refs/tags/1.10.0.tar.gz"
-  sha256 "33849d8edacbca5ab5492fed32ac954de14f92ab6b3028c03ef88bb7ab596d20"
+  url "https://github.com/openstreetmap/osm2pgsql/archive/refs/tags/1.11.0.tar.gz"
+  sha256 "6b46313813b816f15ce906c04cd4108bbb05362740e0a1a8889055f4e25977d2"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/openstreetmap/osm2pgsql.git", branch: "master"
 
   bottle do
@@ -46,7 +45,9 @@ class Osm2pgsql < Formula
   end
 
   test do
-    assert_match "Connecting to database failed: connection to server",
-                 shell_output("#{bin}/osm2pgsql /dev/null 2>&1", 1)
+    output = shell_output("#{bin}/osm2pgsql /dev/null 2>&1", 1)
+    assert_match "ERROR: Connecting to database failed", output
+
+    assert_match version.to_s, shell_output("#{bin}/osm2pgsql --version 2>&1")
   end
 end
