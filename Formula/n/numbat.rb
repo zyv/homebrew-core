@@ -7,13 +7,13 @@ class Numbat < Formula
   head "https://github.com/sharkdp/numbat.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6645d94e88d8ab4840d57797d905a8223d61cf035f5cf136ff9de89448476d37"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d59741688b1a59c0b1033df6611ebd8a7bc8e815b09714a3934d481e572f1623"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7a47afbd66695a4f379811fc96c02497529821f111902d2ce8411a5fb9653be2"
-    sha256 cellar: :any_skip_relocation, sonoma:         "dc490fc02cec78750565c3060170811046c93f57b7363069fa88be6c3213c172"
-    sha256 cellar: :any_skip_relocation, ventura:        "6b8da7a773899db9cb434387e186ba77a27da12a50f71b28bf0af85c8dea2857"
-    sha256 cellar: :any_skip_relocation, monterey:       "bc76167236b9c22183d4b9b05ae77a1e6f998dcfe28c1edb0e1bc630fb292b5d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5f1c0a6a893665815e4f692b17b45fc5d2348725c9b95feb4c7dfafc5707fc07"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8cd65794c8fdd68b2ce48cb9e517086c0f742d10d19ce3f0fc6053f5024df381"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1944bd431814c9591ec7c40f576f4b1f4bbe83eb56ac07b53ba06109bfd3456e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3b749678d37673f7aa568ff1cc0c2ea0c778e6b45158368b855cd4e7bdeaad9"
+    sha256 cellar: :any_skip_relocation, sonoma:         "80ae6c8bde7b15b7a409cc015b0e7b2893b71feb5aed0512d94e1b3e91b9063e"
+    sha256 cellar: :any_skip_relocation, ventura:        "1ea917ad3f145844504c8aecb575e779d7222d43eadf7b99517b3887ca8ad2fc"
+    sha256 cellar: :any_skip_relocation, monterey:       "a55b86959b751f747e570c259be90e8752688532eb38ebd749beb2c258970a3b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c067c875f0e69702c3c0797c8ffb7491f9ed6e1d5e909f274fe9a21ce8d5225"
   end
 
   depends_on "rust" => :build
