@@ -3,8 +3,8 @@ class Dolphie < Formula
 
   desc "Feature-rich top tool for monitoring MySQL"
   homepage "https://github.com/charles-001/dolphie"
-  url "https://files.pythonhosted.org/packages/2d/07/7ae060b33fc8133f38d9141744f5602ae33de1de0b6c05528c9bd2b0ef9e/dolphie-4.1.1.tar.gz"
-  sha256 "641b5fca44fb7f072ce69af9aff1a783c00cc559a8b1fadc8d3bcb33f0116acf"
+  url "https://files.pythonhosted.org/packages/36/3b/59e75cc80eae7329295c9f21082d0edbb5237fe1642711ab317e343a94ba/dolphie-4.2.0.tar.gz"
+  sha256 "47af136817e19d2aeb5d7a166bfa20d5624ad74f23a5a4023a66591eb6ba180f"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -79,8 +79,8 @@ class Dolphie < Formula
   end
 
   resource "uc-micro-py" do
-    url "https://files.pythonhosted.org/packages/75/db/241444fe6df6970a4c18d227193cad77fab7cec55d98e296099147de017f/uc-micro-py-1.0.2.tar.gz"
-    sha256 "30ae2ac9c49f39ac6dce743bd187fcd2b574b16ca095fa74cd9396795c954c54"
+    url "https://files.pythonhosted.org/packages/91/7a/146a99696aee0609e3712f2b44c6274566bc368dfe8375191278045186b8/uc-micro-py-1.0.3.tar.gz"
+    sha256 "d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a"
   end
 
   def install
