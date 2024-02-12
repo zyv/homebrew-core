@@ -3,8 +3,8 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/4f/dc/8c9d2902dc61bb5d2e39122fa17a93714bd9c57f918e0e1f186879aa1af3/locust-2.23.0.tar.gz"
-  sha256 "f4857bc0a30578724274d7f1ef5c50c3953735718b31019993c40d5797dbddce"
+  url "https://files.pythonhosted.org/packages/24/b2/cf440ab75f33d1341bc0340ed26ba8bfc755f8cad11d1d3a0b3bc33a1cd3/locust-2.23.1.tar.gz"
+  sha256 "6cc729729e5ebf5852fc9d845302cfcf0ab0132f198e68b3eb0c88b438b6a863"
   license "MIT"
 
   bottle do
