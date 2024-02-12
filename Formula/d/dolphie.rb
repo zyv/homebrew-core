@@ -3,18 +3,18 @@ class Dolphie < Formula
 
   desc "Feature-rich top tool for monitoring MySQL"
   homepage "https://github.com/charles-001/dolphie"
-  url "https://files.pythonhosted.org/packages/2d/07/7ae060b33fc8133f38d9141744f5602ae33de1de0b6c05528c9bd2b0ef9e/dolphie-4.1.1.tar.gz"
-  sha256 "641b5fca44fb7f072ce69af9aff1a783c00cc559a8b1fadc8d3bcb33f0116acf"
+  url "https://files.pythonhosted.org/packages/36/3b/59e75cc80eae7329295c9f21082d0edbb5237fe1642711ab317e343a94ba/dolphie-4.2.0.tar.gz"
+  sha256 "47af136817e19d2aeb5d7a166bfa20d5624ad74f23a5a4023a66591eb6ba180f"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cb7377e7f1a993c6ba9ae2816dd118581c6b919de0a9f685a7033fddcfd173c3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "73e2ddbda2fdfb97b2b7748f6bf36c656a210b339b93bae392b774f3d9284780"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6648b0cf70d568cfdd0e6409f9370224da4eaf03f7f3e484d3e94bc2c388f928"
-    sha256 cellar: :any_skip_relocation, sonoma:         "110f781fac2046573c32f5904b697ea9226a877013d518ce90c1f18ae3437b3c"
-    sha256 cellar: :any_skip_relocation, ventura:        "3e33a09074cc06d19de932d3f6966dac67f1462a3c2db98b16319bd8ba227852"
-    sha256 cellar: :any_skip_relocation, monterey:       "b1dfe2b6a5402b118e0da407d9ff9987e77e084ad4c52f7609be6f74b1fc0bd3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "076a86b4535b789871ff71e9f4c2bd461c73892b8f7f73146a52ab9ad9b7f526"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e09291feebc41e9d40cc2c71f0d72b57a7d59fb0f7c405b1cd09c80f885e31dd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d6449561d7b87016b8ee6cc00d0829634e23f5594e2f48c8a0a1688986229f7d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcf07178a15e2b0a91b662993ea52f5929d1353f887ae0a070240ff15412a898"
+    sha256 cellar: :any_skip_relocation, sonoma:         "7c8136bfc8f2b30d813e6e02756314d24d6119ade0380713e40df504fd344ed0"
+    sha256 cellar: :any_skip_relocation, ventura:        "e6b282f7ee912bc686fece9a1e407673597717cd017563e48f3abd1752724b3a"
+    sha256 cellar: :any_skip_relocation, monterey:       "36b1452b25e533135e34a2aca9807f09d9cfe1cd97e804d1d3fb0b95df72a9ff"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b3d56ebb15ba3c96718e278298de207839f271458b4dcde2e33d92257b951fb"
   end
 
   depends_on "cffi"
@@ -79,8 +79,8 @@ class Dolphie < Formula
   end
 
   resource "uc-micro-py" do
-    url "https://files.pythonhosted.org/packages/75/db/241444fe6df6970a4c18d227193cad77fab7cec55d98e296099147de017f/uc-micro-py-1.0.2.tar.gz"
-    sha256 "30ae2ac9c49f39ac6dce743bd187fcd2b574b16ca095fa74cd9396795c954c54"
+    url "https://files.pythonhosted.org/packages/91/7a/146a99696aee0609e3712f2b44c6274566bc368dfe8375191278045186b8/uc-micro-py-1.0.3.tar.gz"
+    sha256 "d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a"
   end
 
   def install
