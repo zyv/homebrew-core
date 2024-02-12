@@ -7,8 +7,8 @@ class Sile < Formula
   # - Remove `cosmo` resource and corresponding references in install
   # - Switch `lua` dependency to `luajit` and clean up `lua` references
   stable do
-    url "https://github.com/sile-typesetter/sile/releases/download/v0.14.16/sile-0.14.16.tar.xz"
-    sha256 "cf97585b7dcf77d99e328f6cdce71a4070324fe001f7876f730fa04c6c923857"
+    url "https://github.com/sile-typesetter/sile/releases/download/v0.14.17/sile-0.14.17.tar.xz"
+    sha256 "7f89bedecedabb5168250ad9dd80c09ed289c8e88c3d0d756d2d1d92ee065e04"
 
     depends_on "lua"
   end
