@@ -1028,6 +1028,7 @@ env:
     phpmyadmin
     phpstan
     phpunit
+    phylum-cli
     pianod
     picard-tools
     pig
