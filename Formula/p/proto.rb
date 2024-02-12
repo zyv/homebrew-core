@@ -35,6 +35,8 @@ class Proto < Formula
     bin.each_child do |f|
       basename = f.basename
 
+      next if basename.to_s == "proto-shim"
+
       (libexec/"bin").install f
       (bin/basename).write_env_script libexec/"bin"/basename, PROTO_INSTALL_DIR: opt_prefix/"bin"
     end
@@ -54,7 +56,7 @@ class Proto < Formula
 
     path = testpath/"test.js"
     path.write "console.log('hello');"
-    output = shell_output("#{testpath}/.proto/bin/node #{path}").strip
+    output = shell_output("#{testpath}/.proto/shims/node #{path}").strip
     assert_equal "hello", output
   end
 end
