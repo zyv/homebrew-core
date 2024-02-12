@@ -3,8 +3,8 @@ class CondaLock < Formula
 
   desc "Lightweight lockfile for conda environments"
   homepage "https://github.com/conda/conda-lock"
-  url "https://files.pythonhosted.org/packages/1f/de/de03945a72a5c18c63a8663f57fdc49281e22873eb555d1d8e3e5efc00cb/conda_lock-2.5.4.tar.gz"
-  sha256 "afa4f1d502f50a4ada606e3f296b977c41ce742415dbe423017d61de20b34703"
+  url "https://files.pythonhosted.org/packages/48/27/91cf799143ad5577ab67a3237672fcfe6536980a614e0f25836ddea582fc/conda_lock-2.5.5.tar.gz"
+  sha256 "a6840f8f8ba6f9f8ece40c8b48d683f0588ccf29199f149bd94a712d58d789bc"
   license "MIT"
 
   bottle do
@@ -152,6 +152,11 @@ class CondaLock < Formula
   resource "ruamel-yaml-clib" do
     url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa0240c53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
+  end
+
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/fc/c9/b146ca195403e0182a374e0ea4dbc69136bad3cd55bc293df496d625d0f7/setuptools-69.0.3.tar.gz"
+    sha256 "be1af57fc409f93647f2e8e4573a142ed38724b8cdd389706a867bb4efcf1e78"
   end
 
   resource "smmap" do
