@@ -15,11 +15,9 @@ class Lightning < Formula
   end
 
   depends_on "binutils" => :build
-  depends_on arch: :x86_64
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-silent-rules", "--prefix=#{prefix}"
+    system "./configure", *std_configure_args.reject { |s| s["--disable-debug"] }, "--disable-silent-rules"
     system "make", "install"
   end
 
