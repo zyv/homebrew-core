@@ -8,14 +8,14 @@ class Abi3audit < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "975f11fb62809ceb38d2380f4ec49d056b0ad5b3f31074ea174f21b92fae1217"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "69af1583164604d24fb34794416fb53b5d55e00d829e2e24b32f153259b50d09"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6cdd917d31edfef5526ea8d568f1a938852028c025aeaa3e6ca8216d09c6288f"
-    sha256 cellar: :any_skip_relocation, sonoma:         "78bb2ed3904bf719a5886b92d9c94fb72a2c24e1ac02561b840487dfdbe1f9be"
-    sha256 cellar: :any_skip_relocation, ventura:        "d470bc62bd5c74b1ed36f2c50f054c0ee2071112730aa6eb133b42666fed4a01"
-    sha256 cellar: :any_skip_relocation, monterey:       "5ce530d5ff454664fe4225dd672656d6bcbf608268a94bba4d5a168478444eb3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "96d660eb4c8bd0f87178886064529b69ef62faa142646570b25a700de7fbc1bc"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "18ac62781ec028807a044892baee50a92d7b4d5fff21ae9ab337fd86e4640666"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6bede2e3de5b2cc3eaa58c4790734a583de98f4ab98f8814e2ac34e5788586d5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c13b79c836c59e073453d20da39976c1f4ba01384e4e2ab5b6a296eaf77a7505"
+    sha256 cellar: :any_skip_relocation, sonoma:         "38f622a1e31a99db877d739bf685de4c31c8b89ea3bbee00f17b9748ef1ef779"
+    sha256 cellar: :any_skip_relocation, ventura:        "e8a9e5ed6a8518948f6f95e5cffb1b09a3548b137691665d4f0e3b5eacdcf686"
+    sha256 cellar: :any_skip_relocation, monterey:       "2f89d183341a9bdb52462a78f400ff9c835a61ce830a57e7d2ab500aadfaacea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7dade876fa469d7dc52cd6ee847346bc47ccd054277cb5f16305af8be1f86498"
   end
 
   depends_on "cmake" => :build
