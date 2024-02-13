@@ -1,8 +1,8 @@
 class MariadbAT111 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://archive.mariadb.org/mariadb-11.1.3/source/mariadb-11.1.3.tar.gz"
-  sha256 "ad3aa6ae478179275ecb28e3ed8a578f2004f084e14409727c0bf04975ace36c"
+  url "https://archive.mariadb.org/mariadb-11.1.4/source/mariadb-11.1.4.tar.gz"
+  sha256 "8f6473368a67b1a615f7a5c3af151b78744af058c3e406a9b4d3b8eb4055f97b"
   license "GPL-2.0-only"
 
   livecheck do
@@ -54,6 +54,13 @@ class MariadbAT111 < Formula
   end
 
   fails_with gcc: "5"
+
+  # upstream patch ref, https://github.com/MariaDB/server/pull/3064
+  # remove when it got merged and released
+  patch do
+    url "https://github.com/MariaDB/server/commit/3624a36aed0346380255b141cb8a59998aaca4ee.patch?full_index=1"
+    sha256 "c9d0aa64b34c43ac9e3077d74c18532125c459d9d867ade69ce283d27b595b22"
+  end
 
   def install
     ENV.cxx11
