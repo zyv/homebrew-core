@@ -1,7 +1,6 @@
 class Mighttpd2 < Formula
   desc "HTTP server"
-  # raised a homepage issue https://github.com/kazu-yamamoto/mighttpd2/issues/28
-  homepage "https://github.com/kazu-yamamoto/mighttpd2"
+  homepage "https://kazu-yamamoto.github.io/mighttpd2/"
   url "https://hackage.haskell.org/package/mighttpd2-4.0.5/mighttpd2-4.0.5.tar.gz"
   sha256 "3b8db69586cea76adfd6b17d2988c99153d184e2eec05afdae0686e19468237e"
   license "BSD-3-Clause"
