@@ -4,8 +4,8 @@ class Threadweaver < Formula
   license "LGPL-2.0-or-later"
 
   stable do
-    url "https://download.kde.org/stable/frameworks/5.114/threadweaver-5.114.0.tar.xz"
-    sha256 "f0f5042c7c1cbf601ba1c1e0c8d487e942abba52e3c9367c08717cc3517907f8"
+    url "https://download.kde.org/stable/frameworks/5.115/threadweaver-5.115.0.tar.xz"
+    sha256 "9fd08658f5b5bf3879217834ed392da245f16ae1199795f72423336d48d24eb8"
     depends_on "qt@5"
   end
 
