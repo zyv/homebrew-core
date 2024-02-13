@@ -6,7 +6,8 @@ class LibcapNg < Formula
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "22a6f560a4595f9a1eb06d80fc979e6de253ad89f7f0bcbe5133e94c3ebd7e0c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3762e67587dbdae0a476f3e25a2b7f6274a6328cf8f9ca3304857d995907b9be"
   end
 
   head do
