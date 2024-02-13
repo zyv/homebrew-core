@@ -4,7 +4,7 @@ class Minio < Formula
   url "https://github.com/minio/minio.git",
       tag:      "RELEASE.2024-02-13T15-35-11Z",
       revision: "7b9f9e0628f4e697e9242b77e80afe1afaf7a4f5"
-  version "20240212210227"
+  version "20240213153511"
   license "AGPL-3.0-or-later"
   head "https://github.com/minio/minio.git", branch: "master"
 
@@ -17,13 +17,13 @@ class Minio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "169ae01cced3a33b51be870eb1d6b4236c76a89569db1c3f310ea1c9bf97ef5d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8de5f6cc2aa0c6a22cd69f83c569a7840dd640c16ef09974eded28793379d200"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "aa21293c6bb5b1696a900ed360eba2b6cd34034d3e0d10e6c75ff55b69548859"
-    sha256 cellar: :any_skip_relocation, sonoma:         "26310d4862b2a0a450277ca3de451e0de96724f543273545ea14e7392b9b607c"
-    sha256 cellar: :any_skip_relocation, ventura:        "a3d4267808c7aff16e4072e1b0d30e5442f9503e165456d7e620df6ac06c3ce0"
-    sha256 cellar: :any_skip_relocation, monterey:       "c167bae1d29383c907ef7d3230a6d1f337c52c490517f570cdc4c409aa3cfa32"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44c3214d2bee162d8f037c68e919cecdfb7054e85d9d593ab49b9b9a8cd0d3ef"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2b62ea695a96c3e227a4047aff50931b136ed5fe08a43fc1008552b08d44f436"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2ed3e6e3efa25d538e2da8e945420e50275b195c9e51f0c998f81b7648c5a85e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c2122da258b021bf235bd90183919461198418642ca6fc86d00eb9a331b0c522"
+    sha256 cellar: :any_skip_relocation, sonoma:         "06fa6942d58cdbb7c4f374d9cdad07a4dafb3c171643ea045635da21b3c27afe"
+    sha256 cellar: :any_skip_relocation, ventura:        "bf85b0592c8bf2a62780a63eaf696a5342123b5f602bf1c0174d637642e152a0"
+    sha256 cellar: :any_skip_relocation, monterey:       "ede7fec9c0b1309eebd76e04635f18e0df112eda057434f8f38794879ec417cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7aef83781cb8bcc2709e2adc98c5defcab0d9c0af797235095c972cb345c1ec6"
   end
 
   depends_on "go" => :build
