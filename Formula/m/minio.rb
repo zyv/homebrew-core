@@ -4,7 +4,7 @@ class Minio < Formula
   url "https://github.com/minio/minio.git",
       tag:      "RELEASE.2024-02-13T15-35-11Z",
       revision: "7b9f9e0628f4e697e9242b77e80afe1afaf7a4f5"
-  version "20240212210227"
+  version "20240213153511"
   license "AGPL-3.0-or-later"
   head "https://github.com/minio/minio.git", branch: "master"
 
