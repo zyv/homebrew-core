@@ -3,8 +3,8 @@ require "language/node"
 class NetlifyCli < Formula
   desc "Netlify command-line tool"
   homepage "https://www.netlify.com/docs/cli"
-  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-17.16.1.tgz"
-  sha256 "8f94c3478f4054cb08298f5ea5e2c89609bf7a47c1aff0e04729262ba4093800"
+  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-17.16.2.tgz"
+  sha256 "434d94d456ca654cb3036e3a89c893b97dec044556431f6fe940dea1a907bc41"
   license "MIT"
   head "https://github.com/netlify/cli.git", branch: "main"
 
@@ -46,6 +46,12 @@ class NetlifyCli < Formula
       # Replace the vendored pre-built xsel with one we build ourselves
       ln_sf (Formula["xsel"].opt_bin/"xsel").relative_path_from(linux_dir), linux_dir
     end
+
+    # Remove incompatible pre-built `bare-fs`/`bare-os` binaries
+    os = OS.kernel_name.downcase
+    arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
+    node_modules.glob("{bare-fs,bare-os}/prebuilds/*")
+                .each { |dir| dir.rmtree if dir.basename.to_s != "#{os}-#{arch}" }
   end
 
   test do
