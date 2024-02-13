@@ -1,10 +1,9 @@
 class Sugarjar < Formula
   desc "Helper utility for a better Git/GitHub experience"
   homepage "https://github.com/jaymzh/sugarjar/"
-  url "https://github.com/jaymzh/sugarjar/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "5a75fab10cfb1509ae9e7ee5cfced13afbfec19e44e5020acf4a219f9c04f79c"
+  url "https://github.com/jaymzh/sugarjar/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "27dcadee28327585cf26d1285a0a4806352c3d118131d9efde3729d7956510bd"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5372e89ff6e0b73f450dd765c4271ec3df21ca9f177ecc4f415c919634ae6139"
@@ -28,6 +27,7 @@ class Sugarjar < Formula
     system "gem", "install", "--ignore-dependencies", "sugarjar-#{version}.gem"
     bin.install libexec/"bin/sj"
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
+    bash_completion.install "extras/sugarjar_completion.bash"
   end
 
   test do
