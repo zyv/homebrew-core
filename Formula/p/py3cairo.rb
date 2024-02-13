@@ -1,8 +1,8 @@
 class Py3cairo < Formula
   desc "Python 3 bindings for the Cairo graphics library"
   homepage "https://cairographics.org/pycairo/"
-  url "https://github.com/pygobject/pycairo/releases/download/v1.25.1/pycairo-1.25.1.tar.gz"
-  sha256 "7e2be4fbc3b4536f16db7a11982cbf713e75069a4d73d44fe5a49b68423f5c0c"
+  url "https://github.com/pygobject/pycairo/releases/download/v1.26.0/pycairo-1.26.0.tar.gz"
+  sha256 "2dddd0a874fbddb21e14acd9b955881ee1dc6e63b9c549a192d613a907f9cbeb"
   license any_of: ["LGPL-2.1-only", "MPL-1.1"]
 
   bottle do
