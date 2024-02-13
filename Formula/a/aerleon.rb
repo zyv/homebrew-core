@@ -9,14 +9,14 @@ class Aerleon < Formula
   head "https://github.com/aerleon/aerleon.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9c1b65930b667fcfae99c5a424d9c8e3cd44f2571fb3c9e0385531f71496b631"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bbd227303b41ec320a2eb4cd1d2c88f26d84c41dd7fd3c6ad161dbf2e90e3e5d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "35377a544fd125beed57aaedb5b4833889297dc163008e63847dec8e88f8d24a"
-    sha256 cellar: :any_skip_relocation, sonoma:         "9f70ece21ef37df4123de7301edba034c019da2258c711232ed5b8b663da47f7"
-    sha256 cellar: :any_skip_relocation, ventura:        "f2a1cd2c3cd15b25e685f83e606a36369a9999dd1d802f9a40ef3114a9074d49"
-    sha256 cellar: :any_skip_relocation, monterey:       "471d3f6860c4f2dd3bc5b6cce5ff3a4100074b3d0595067899fef80fac5bbe59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "df1f0b57a62fb6c0dce4bb584fab002dd7afc9cb25b884a41bf89ace6336884c"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fba986d48e2660f0793902161dc340033826988687368e54d167ad2582ff87ff"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "443e4869b384088b7480b71abd487a6e8f484cd580d142e7b7d6591e5794c21e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed35df34125322a1889008e522566e49bd4df831995e9d02e0324b22dc22ac6b"
+    sha256 cellar: :any_skip_relocation, sonoma:         "36a528a249ac51e197317878fcbd43a4359609c40d0263541778d153f25afa19"
+    sha256 cellar: :any_skip_relocation, ventura:        "a964f0a88b90962658c81534496e9c7029aa9dae5f46d6e9494b45447dde1f95"
+    sha256 cellar: :any_skip_relocation, monterey:       "944212093a588cc6ab9e63da9535e35e8ec509fbd73d378409ed971e0caa3bbc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "69a6fe0fb1e645c0ec2e374706bc4ce95ced0fad09c03a3ca2bd12093ebd6598"
   end
 
   depends_on "python@3.12"
