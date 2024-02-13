@@ -3,8 +3,8 @@ require "language/node"
 class Cdxgen < Formula
   desc "Creates CycloneDX Software Bill-of-Materials (SBOM) for projects"
   homepage "https://github.com/CycloneDX/cdxgen"
-  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-10.0.6.tgz"
-  sha256 "da70d9bfd25723604df61d81ff2d6a7a41ab0cd42e7dea5cb422bd05a3a15321"
+  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-10.1.1.tgz"
+  sha256 "4e8d79c831885e1051cfeaca9092d83b327d0f1b3d7a3097650e542542c5c232"
   license "Apache-2.0"
 
   bottle do
@@ -53,7 +53,7 @@ class Cdxgen < Formula
         2.4.12
     EOS
 
-    assert_match "BOM includes 1 components and 0 dependencies", shell_output("#{bin}/cdxgen -p")
+    assert_match "BOM includes 1 components and 2 dependencies", shell_output("#{bin}/cdxgen -p")
 
     assert_match version.to_s, shell_output("#{bin}/cdxgen --version")
   end
