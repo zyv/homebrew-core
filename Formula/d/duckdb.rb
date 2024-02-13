@@ -2,8 +2,8 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/duckdb/duckdb.git",
-      tag:      "v0.9.2",
-      revision: "3c695d7ba94d95d9facee48d395f46ed0bd72b46"
+      tag:      "v0.10.0",
+      revision: "20b1486d1192f9fbd2328d1122b5afe5f1747fce"
   license "MIT"
 
   bottle do
@@ -17,6 +17,7 @@ class Duckdb < Formula
   end
 
   depends_on "cmake" => :build
+  uses_from_macos "python" => :build
 
   def install
     mkdir "build"
