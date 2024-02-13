@@ -11,9 +11,6 @@
   "aiven-client": {
     "exclude_packages": ["requests"]
   },
-  "adb-enhanced": {
-    "exclude_packages": ["docopt", "psutil"]
-  },
   "all-repos": {
     "exclude_packages": ["packaging"]
   },
