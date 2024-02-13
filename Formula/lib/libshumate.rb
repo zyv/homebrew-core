@@ -1,8 +1,8 @@
 class Libshumate < Formula
   desc "Shumate is a GTK toolkit providing widgets for embedded maps"
   homepage "https://gitlab.gnome.org/GNOME/libshumate"
-  url "https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.2.tar.xz"
-  sha256 "8f094f6e7e256ab192800516ff96617abeec2363b054aad6aeb17e0088c1fb2c"
+  url "https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.3.tar.xz"
+  sha256 "6b8a159ed744fdd15992411662a05cb4187fb55e185111a366e0038d2f0b3543"
   license "LGPL-2.1-or-later"
 
   # libshumate doesn't use GNOME's "even-numbered minor is stable" version
