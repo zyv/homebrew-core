@@ -10,8 +10,7 @@ class Encfs < Formula
   head "https://github.com/vgough/encfs.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 x86_64_linux: "765ec364935df8b4e7d4845cd287d70cc2eaeb6ef7634c5109fe27f0dc0bb1fd"
+    sha256 x86_64_linux: "1952d5ef71cdd862776574b47add8ae4649b907c6ed734fac41b7357d13250f7"
   end
 
   depends_on "cmake" => :build
