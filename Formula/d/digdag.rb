@@ -11,15 +11,7 @@ class Digdag < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "787d866fdde49da3b57825b62fdb89e860b388e56879ae978a4fc455e7d5f3b3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e37d28f1924c0650e7cdb521183d22ac6121ed56369108ed95ad3fe59a29646e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e37d28f1924c0650e7cdb521183d22ac6121ed56369108ed95ad3fe59a29646e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e37d28f1924c0650e7cdb521183d22ac6121ed56369108ed95ad3fe59a29646e"
-    sha256 cellar: :any_skip_relocation, sonoma:         "787d866fdde49da3b57825b62fdb89e860b388e56879ae978a4fc455e7d5f3b3"
-    sha256 cellar: :any_skip_relocation, ventura:        "e37d28f1924c0650e7cdb521183d22ac6121ed56369108ed95ad3fe59a29646e"
-    sha256 cellar: :any_skip_relocation, monterey:       "e37d28f1924c0650e7cdb521183d22ac6121ed56369108ed95ad3fe59a29646e"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e37d28f1924c0650e7cdb521183d22ac6121ed56369108ed95ad3fe59a29646e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b90e288ab66481212d6aa5e095300b1b769eee3b5e8ef20a1b334977bed073e5"
+    sha256 cellar: :any_skip_relocation, all: "3af153565676568e99be6edfa30c63e2729d7c3e0b1c89cad5fbb49550be4ac3"
   end
 
   depends_on "openjdk@11"
