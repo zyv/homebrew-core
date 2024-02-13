@@ -1,8 +1,8 @@
 class Ncview < Formula
   desc "Visual browser for netCDF format files"
   homepage "https://cirrus.ucsd.edu/ncview/"
-  url "https://cirrus.ucsd.edu/~pierce/ncview/ncview-2.1.9.tar.gz"
-  sha256 "e2317ac094af62f0adcf68421d70658209436aae344640959ec8975a645891af"
+  url "https://cirrus.ucsd.edu/~pierce/ncview/ncview-2.1.10.tar.gz"
+  sha256 "08d9cefb58a25b41316296074dccfe24147c3b7ea1af071cbfe785eff9f0dc65"
   license "GPL-3.0-only"
 
   livecheck do
