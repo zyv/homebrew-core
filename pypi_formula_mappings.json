@@ -1,7 +1,4 @@
 {
-  "aerleon": {
-    "exclude_packages": ["absl-py", "ply", "pyyaml", "typing-extensions"]
-  },
   "aiven-client": {
     "exclude_packages": ["requests"]
   },
