@@ -23,11 +23,14 @@ class LibcapNg < Formula
   depends_on "swig" => :build
   depends_on :linux
 
+  # Compat for latest swig, removing deprecated `%except` directive
+  # https://github.com/stevegrubb/libcap-ng/commit/30453b6553948cd05c438f9f509013e3bb84f25b
+  patch :DATA
+
   def install
     system "./autogen.sh" if build.head?
     system "./configure", *std_configure_args,
                           "--disable-silent-rules",
-                          "--without-python",
                           "--with-python3"
     system "make", "install"
   end
@@ -48,3 +51,23 @@ class LibcapNg < Formula
     system "python3.12", "-c", "import capng"
   end
 end
+
+__END__
+diff --git a/bindings/src/capng_swig.i b/bindings/src/capng_swig.i
+index fcdaf18..fa85e13 100644
+--- a/bindings/src/capng_swig.i
++++ b/bindings/src/capng_swig.i
+@@ -30,13 +30,6 @@
+ 
+ %varargs(16, signed capability = 0) capng_updatev;
+ 
+-%except(python) {
+-  $action
+-  if (result < 0) {
+-    PyErr_SetFromErrno(PyExc_OSError);
+-    return NULL;
+-  }
+-}
+ #endif
+ 
+ %define __signed__
