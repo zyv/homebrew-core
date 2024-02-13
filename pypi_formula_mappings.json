@@ -8,9 +8,6 @@
   "aiven-client": {
     "exclude_packages": ["requests"]
   },
-  "all-repos": {
-    "exclude_packages": ["packaging"]
-  },
   "animdl": {
     "exclude_packages": ["certifi", "lxml", "packaging", "pygments", "pyyaml"]
   },
