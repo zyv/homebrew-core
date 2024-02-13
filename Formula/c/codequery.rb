@@ -30,13 +30,12 @@ class Codequery < Formula
 
   test do
     # Copy test files as `cqmakedb` gets confused if we just symlink them.
-    test_files = (pkgshare/"test").children
-    cp test_files, testpath
+    cp (pkgshare/"test").children, testpath
 
     system bin/"cqmakedb", "-s", "./codequery.db",
-                              "-c", "./cscope.out",
-                              "-t", "./tags",
-                              "-p"
+                           "-c", "./cscope.out",
+                           "-t", "./tags",
+                           "-p"
     output = shell_output("#{bin}/cqsearch -s ./codequery.db -t info_platform")
     assert_match "info_platform", output
   end
