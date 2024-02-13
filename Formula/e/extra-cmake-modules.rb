@@ -5,8 +5,8 @@ class ExtraCmakeModules < Formula
   head "https://invent.kde.org/frameworks/extra-cmake-modules.git", branch: "master"
 
   stable do
-    url "https://download.kde.org/stable/frameworks/5.114/extra-cmake-modules-5.114.0.tar.xz"
-    sha256 "359ae9ea917fe3ffbb13ff7066dd1dd9750c9a50309737f7d3f43bbd55c6967c"
+    url "https://download.kde.org/stable/frameworks/5.115/extra-cmake-modules-5.115.0.tar.xz"
+    sha256 "ee3e35f6a257526b8995a086dd190528a8ef4b3854b1e457b8122701b0ce45ee"
     depends_on "qt@5" => :build
   end
 
