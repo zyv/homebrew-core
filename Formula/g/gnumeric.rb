@@ -6,13 +6,13 @@ class Gnumeric < Formula
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
-    sha256                               arm64_sonoma:   "4654930a19b5295b3808857cf1985b778999b4d04a9dfd3a58cdf253988bf5c1"
-    sha256                               arm64_ventura:  "1a43c1ca977f60182710adee735cdc107321326e9f258586a0e14ee3fba6161e"
-    sha256                               arm64_monterey: "4530fbd65dd79250711dcae5ed15edc7c3338892aeb4e73365a14a95fb74bf56"
-    sha256                               sonoma:         "afcc4c8fae9d15ab06ff3e103bb212fffe54a48f3b5cc473778b5e48c37e2578"
-    sha256                               ventura:        "bc3ca8c247541147ad1b019ad370a43cd118b45f5100491b62e35490facdc3dd"
-    sha256                               monterey:       "d5013e28b3a916249d65bbe7e1eca52102e0c98eab41593621f8a22f259a2c45"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "59e18dcd5e4cb826854ae189716f058f1a91dd2fb2a3cd60430a02e614d9765a"
+    sha256                               arm64_sonoma:   "9ac4b6038db349fcb894b3f16b2b5450e8b97e130609e8b509e117346eb3edf6"
+    sha256                               arm64_ventura:  "d0cb4f9530d15cd61556bc16915e80d0496805fa3a5555d543543ed918de3ec0"
+    sha256                               arm64_monterey: "a94bc870862a5c7d92ea8b1baaf3c7cb84e189b17cb1fdc66130e8e080738f48"
+    sha256                               sonoma:         "61fe8907d180ec8d1fbc1e810b8f276566822fb916d582bb1e4264c0f3a6fd2e"
+    sha256                               ventura:        "046dd2fbc0294941ae45432b97715fb80d4b5159edc05fd83d256a0b08c91422"
+    sha256                               monterey:       "640060260af9ef39b76959b827f81c511351aaf6b70b31a43f958c47a95855f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22083c21842d8e41c7a37d5af2bb683d6fb1fb52347db917785fd02024a6a341"
   end
 
   depends_on "gettext" => :build
