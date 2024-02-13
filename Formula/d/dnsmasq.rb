@@ -1,8 +1,8 @@
 class Dnsmasq < Formula
   desc "Lightweight DNS forwarder and DHCP server"
   homepage "https://thekelleys.org.uk/dnsmasq/doc.html"
-  url "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.89.tar.gz"
-  sha256 "8651373d000cae23776256e83dcaa6723dee72c06a39362700344e0c12c4e7e4"
+  url "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.90.tar.gz"
+  sha256 "8f6666b542403b5ee7ccce66ea73a4a51cf19dd49392aaccd37231a2c51b303b"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
 
   livecheck do
