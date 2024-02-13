@@ -18,7 +18,11 @@ class Hcloud < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/hetznercloud/cli/internal/version.version=v#{version}"
+    ldflags = %W[
+      -s -w
+      -X github.com/hetznercloud/cli/internal/version.version=v#{version}
+      -X github.com/hetznercloud/cli/internal/version.versionPrerelease=
+    ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/hcloud"
 
     generate_completions_from_executable(bin/"hcloud", "completion")
