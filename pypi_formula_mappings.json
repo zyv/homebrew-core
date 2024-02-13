@@ -5,9 +5,6 @@
   "aerleon": {
     "exclude_packages": ["absl-py", "ply", "pyyaml", "typing-extensions"]
   },
-  "airshare": {
-    "exclude_packages": ["click", "requests"]
-  },
   "aiven-client": {
     "exclude_packages": ["requests"]
   },
