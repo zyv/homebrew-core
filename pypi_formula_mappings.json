@@ -899,7 +899,7 @@
     "exclude_packages": ["typing-extensions"]
   },
   "pyinstaller": {
-    "exclude_packages": ["packaging"],
+    "exclude_packages": ["packaging", "setuptools"],
     "extra_packages": ["macholib"]
   },
   "pylint": {
