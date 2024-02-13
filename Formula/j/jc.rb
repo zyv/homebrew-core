@@ -3,8 +3,8 @@ class Jc < Formula
 
   desc "Serializes the output of command-line tools to structured JSON output"
   homepage "https://github.com/kellyjonbrazil/jc"
-  url "https://files.pythonhosted.org/packages/b7/42/be8a1d0410bfddc1a30c06d77d06a1856c49fb18ec5545474a6f17dc3399/jc-1.25.0.tar.gz"
-  sha256 "eba4aaaf5128f18a16121c0bcfc1b794fc80b665ee97f6a25da9c156559da54e"
+  url "https://files.pythonhosted.org/packages/53/a6/065f0796a0a21bc040bc88c8a33410c12729a2a6f4c269d0349f685796da/jc-1.25.1.tar.gz"
+  sha256 "683352e903ece9a86eae0c3232188e40178139e710c740a466ef91ed87c4cc7e"
   license "MIT"
 
   bottle do
@@ -21,8 +21,8 @@ class Jc < Formula
   depends_on "python@3.12"
 
   resource "ruamel-yaml" do
-    url "https://files.pythonhosted.org/packages/82/43/fa976e03a4a9ae406904489119cd7dd4509752ca692b2e0a19491ca1782c/ruamel.yaml-0.18.5.tar.gz"
-    sha256 "61917e3a35a569c1133a8f772e1226961bf5a1198bea7e23f06a0841dea1ab0e"
+    url "https://files.pythonhosted.org/packages/29/81/4dfc17eb6ebb1aac314a3eb863c1325b907863a1b8b1382cdffcb6ac0ed9/ruamel.yaml-0.18.6.tar.gz"
+    sha256 "8b27e6a217e786c6fbe5634d8f3f11bc63e0f80f6a5890f28863d9c45aac311b"
   end
 
   resource "ruamel-yaml-clib" do
