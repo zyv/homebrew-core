@@ -3,8 +3,8 @@ class Jupyterlab < Formula
 
   desc "Interactive environments for writing and running code"
   homepage "https://jupyter.org/"
-  url "https://files.pythonhosted.org/packages/31/c6/d60b787af86f8c4ed15b8f734153ecaceeef5dc137496d4e6c0ab889fc9d/jupyterlab-4.1.0.tar.gz"
-  sha256 "92cdfd86c53e163fb9e91e14497901153536c5a889c9225dade270f6107a077f"
+  url "https://files.pythonhosted.org/packages/d7/e5/d9fb2c3f0ad0e1f7f02807e8e802551785bca69132db54bd232a6e9d8af1/jupyterlab-4.1.1.tar.gz"
+  sha256 "8acc9f561729d8f32c14c294c397917cddfeeb13a5d46f811979b71b4911a9fd"
   license all_of: [
     "BSD-3-Clause",
     "MIT", # semver.py
@@ -51,8 +51,8 @@ class Jupyterlab < Formula
   end
 
   resource "appnope" do
-    url "https://files.pythonhosted.org/packages/6a/cd/355842c0db33192ac0fc822e2dcae835669ef317fe56c795fb55fcddb26f/appnope-0.1.3.tar.gz"
-    sha256 "02bd91c4de869fbb1e1c50aafc4098827a7a54ab2f39d9dcba6c9547ed920e24"
+    url "https://files.pythonhosted.org/packages/35/5d/752690df9ef5b76e169e68d6a129fa6d08a7100ca7f754c89495db3c6019/appnope-0.1.4.tar.gz"
+    sha256 "1de3860566df9caf38f01f86f65e0e13e379af54f9e4bee1e66b48f2efffd1ee"
   end
 
   resource "argon2-cffi" do
@@ -101,8 +101,8 @@ class Jupyterlab < Formula
   end
 
   resource "debugpy" do
-    url "https://files.pythonhosted.org/packages/61/fe/0486b90b9ac0d9afced236fdfe6e54c2f45b7ef09225210090f23dc6e48a/debugpy-1.8.0.zip"
-    sha256 "12af2c55b419521e33d5fb21bd022df0b5eb267c3e178f1d374a63a2a6bdccd0"
+    url "https://files.pythonhosted.org/packages/5e/c7/a18e15ed2e53f86de2e1c4162a54ddf1c4f4cee5ca40270c14725ccdd8ff/debugpy-1.8.1.zip"
+    sha256 "f696d6be15be87aef621917585f9bb94b1dc9e8aced570db1b8a6fc14e8f9b42"
   end
 
   resource "defusedxml" do
@@ -146,8 +146,8 @@ class Jupyterlab < Formula
   end
 
   resource "ipykernel" do
-    url "https://files.pythonhosted.org/packages/03/55/644139aaa3237b0c6c8e3296462b2214cf3423d41c48e812db4555d42573/ipykernel-6.29.0.tar.gz"
-    sha256 "b5dd3013cab7b330df712891c96cd1ab868c27a7159e606f762015e9bf8ceb3f"
+    url "https://files.pythonhosted.org/packages/87/e4/6f1b4ab7d7fb9268d67a6c7c4520a7d76a5bbafd7abb716ed43b006153e0/ipykernel-6.29.2.tar.gz"
+    sha256 "3bade28004e3ff624ed57974948116670604ac5f676d12339693f3142176d3f0"
   end
 
   resource "isoduration" do
@@ -231,8 +231,8 @@ class Jupyterlab < Formula
   end
 
   resource "nbconvert" do
-    url "https://files.pythonhosted.org/packages/8a/55/97826908be6005add50fe67b2809ede11c1e0f8342de23b2ce66a65591f2/nbconvert-7.14.2.tar.gz"
-    sha256 "a7f8808fd4e082431673ac538400218dd45efd076fbeb07cc6e5aa5a3a4e949e"
+    url "https://files.pythonhosted.org/packages/c9/0b/bf0744e4da661e9db32c2ecbbe0f08b14e4e4344c602c2c609210c795bb6/nbconvert-7.16.0.tar.gz"
+    sha256 "813e6553796362489ae572e39ba1bff978536192fb518e10826b0e8cadf03ec8"
   end
 
   resource "nbformat" do
