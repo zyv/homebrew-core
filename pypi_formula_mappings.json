@@ -1,7 +1,4 @@
 {
-  "abi3audit": {
-    "exclude_packages": ["platformdirs", "packaging", "pygments", "requests", "rich", "six"]
-  },
   "aerleon": {
     "exclude_packages": ["absl-py", "ply", "pyyaml", "typing-extensions"]
   },
