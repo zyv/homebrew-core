@@ -1,10 +1,9 @@
 class Gnumeric < Formula
   desc "GNOME Spreadsheet Application"
   homepage "https://projects.gnome.org/gnumeric/"
-  url "https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.56.tar.xz"
-  sha256 "51a38f35ac5b0f71defa8b9e20bf2e08563798f1cb33379a9a17726fb1e3e1b2"
+  url "https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.57.tar.xz"
+  sha256 "aff50b1b62340c24fccf453d5fad3e7fb73f4bc4b34f7e34b6c3d2d9af6a1e4f"
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
-  revision 1
 
   bottle do
     sha256                               arm64_sonoma:   "4654930a19b5295b3808857cf1985b778999b4d04a9dfd3a58cdf253988bf5c1"
@@ -38,13 +37,6 @@ class Gnumeric < Formula
 
   on_linux do
     depends_on "perl-xml-parser"
-  end
-
-  # Fix build with libxml2 2.12. Remove if upstream PR is merged and in release.
-  # PR ref: https://gitlab.gnome.org/GNOME/gnumeric/-/merge_requests/32
-  patch do
-    url "https://gitlab.gnome.org/GNOME/gnumeric/-/commit/a95622e5da645481d87d8d4fc6b339123cce0498.diff"
-    sha256 "892b0ec2a566846c1545638336cdd4157bf9114d98abb3afbda074e179c0fa2a"
   end
 
   def install
