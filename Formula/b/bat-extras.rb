@@ -1,8 +1,8 @@
 class BatExtras < Formula
   desc "Bash scripts that integrate bat with various command-line tools"
   homepage "https://github.com/eth-p/bat-extras"
-  url "https://github.com/eth-p/bat-extras/archive/refs/tags/v2023.09.19.tar.gz"
-  sha256 "8a9b933f5d954c3a89a8435e7a02b4a80e6e16f6a8cb9ff89056cfde3fe67b20"
+  url "https://github.com/eth-p/bat-extras/archive/refs/tags/v2024.02.12.tar.gz"
+  sha256 "53e1c43a0ab660a8f7b2176a9c89de17616d42011ad63f30e2793ceb0f8c6688"
   license "MIT"
 
   livecheck do
