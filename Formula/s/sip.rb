@@ -1,10 +1,9 @@
 class Sip < Formula
-  include Language::Python::Virtualenv
-
   desc "Tool to create Python bindings for C and C++ libraries"
-  homepage "https://www.riverbankcomputing.com/software/sip/intro"
-  url "https://files.pythonhosted.org/packages/b1/29/06e5036c035f17e0e874d71d4f5968d70aa879b155335d46f645757ff649/sip-6.8.2.tar.gz"
-  sha256 "2e65a423037422ccfde095c257703a8ff45cc1c89bdaa294d7819bc836c87639"
+  # upstream page 404 report, https://github.com/Python-SIP/sip/issues/7
+  homepage "https://python-sip.readthedocs.io/en/latest/"
+  url "https://files.pythonhosted.org/packages/99/85/261c41cc709f65d5b87669f42e502d05cc544c24884121bc594ab0329d8e/sip-6.8.3.tar.gz"
+  sha256 "888547b018bb24c36aded519e93d3e513d4c6aa0ba55b7cc1affbd45cf10762c"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
   head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
@@ -28,11 +27,6 @@ class Sip < Formula
     deps.map(&:to_formula)
         .select { |f| f.name.start_with?("python@") }
         .sort_by(&:version)
-  end
-
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/fc/c9/b146ca195403e0182a374e0ea4dbc69136bad3cd55bc293df496d625d0f7/setuptools-69.0.3.tar.gz"
-    sha256 "be1af57fc409f93647f2e8e4573a142ed38724b8cdd389706a867bb4efcf1e78"
   end
 
   def install
