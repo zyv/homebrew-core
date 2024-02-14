@@ -1,8 +1,8 @@
 class Astro < Formula
   desc "To build and run Airflow DAGs locally and interact with the Astronomer API"
   homepage "https://www.astronomer.io/"
-  url "https://github.com/astronomer/astro-cli/archive/refs/tags/v1.22.0.tar.gz"
-  sha256 "64a63f75829f5a7b3840253a044dcbde5b37e90b6e012133b087a27980454b41"
+  url "https://github.com/astronomer/astro-cli/archive/refs/tags/v1.23.0.tar.gz"
+  sha256 "cbda1eeb5adac5d3be2188d56f2c82c7f68746a7eb3f62b1b079cdf6bf136968"
   license "Apache-2.0"
 
   livecheck do
