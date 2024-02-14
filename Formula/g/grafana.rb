@@ -16,7 +16,7 @@ class Grafana < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c8d77a8b68c8cf139b3406afc79ea4ed1c7985370fbb15c537275fe9129af56"
   end
 
-  depends_on "go" => :build
+  depends_on "go@1.21" => :build # use "go" again when https://github.com/grafana/grafana/pull/82114 is released
   depends_on "node" => :build
   depends_on "yarn" => :build
 
