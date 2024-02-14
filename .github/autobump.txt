@@ -105,6 +105,7 @@ azcopy
 b2-tools
 b3sum
 babel
+bacula-fd
 bagit
 baidupcs-go
 balena-cli
@@ -267,6 +268,7 @@ clair
 clamav
 clarinet
 clazy
+clblast
 clhep
 cli11
 cli53
@@ -283,6 +285,7 @@ cloudflare-wrangler2
 cloudflared
 cloudformation-cli
 cloudformation-guard
+cloudfox
 cloudprober
 clusterawsadm
 clusterctl
@@ -352,6 +355,7 @@ cryptominisat
 crystal
 crystalline
 csfml
+csprecon
 css-crush
 csvq
 csvtk
@@ -471,6 +475,7 @@ dufs
 dumpling
 dunamai
 dune
+duo_unix
 dust
 dvc
 dxpy
@@ -520,6 +525,9 @@ epr
 erdtree
 erg
 erigon
+erlang
+erlang@24
+erlang@25
 erofs-utils
 esbuild
 eslint
@@ -543,6 +551,7 @@ fail2ban
 faiss
 fakeroot
 falco
+falcoctl
 fantom
 fastfec
 fastlane
@@ -551,6 +560,7 @@ fastp
 fastqc
 faudio
 faust
+favirecon
 fblog
 fclones
 fd
@@ -584,6 +594,7 @@ flix
 flow-cli
 fluent-bit
 flume
+flyscrape
 flyway
 fmt
 fn
@@ -599,6 +610,7 @@ forgit
 fork-cleaner
 fortio
 fourmolu
+freeciv
 freeipmi
 freerdp
 freeswitch
@@ -620,13 +632,17 @@ fw
 fwupd
 fx
 g-ls
+gator
 gatsby-cli
 gau
 gdu
 geeqie
+gegl
 geph4
 gerbil-scheme
+gf
 gh
+ghostunnel
 ghq
 ghz
 ghz-web
@@ -644,6 +660,7 @@ gitbucket
 gitlab-runner
 gitleaks
 gitql
+gitsign
 glassfish
 gleam
 glibmm
@@ -652,6 +669,7 @@ glooctl
 gmailctl
 gmic
 gmsh
+gnumeric
 gnunet
 gnupg-pkcs11-scd
 gnuplot
@@ -690,6 +708,8 @@ grin
 gromacs
 groovy
 groovysdk
+grpc
+grpc-swift
 grype
 gsmartcontrol
 gsoap
@@ -786,6 +806,7 @@ keydb
 ki
 kickstart
 kind
+kiota
 kitchen-sync
 kn
 knot
@@ -827,6 +848,7 @@ leiningen
 lexbor
 lexicon
 lf
+libadwaita
 libdap
 libepoxy
 libgetdata
@@ -834,6 +856,7 @@ libgit2@1.6
 libgr
 libgsf
 libint
+libjwt
 liblinear
 libnfs
 liboqs
@@ -842,9 +865,11 @@ libpipeline
 librdkafka
 librespot
 libressl
+libshumate
 libsndfile
 libucl
 libxkbfile
+libxvmc
 lima
 linkerd
 linode-cli
@@ -871,6 +896,7 @@ manifest-tool
 mapcidr
 marked
 marp-cli
+massdriver
 matterbridge
 maven
 mavsdk
@@ -892,6 +918,7 @@ micronaut
 mighttpd2
 mill
 mimirtool
+minder
 minetest
 minikube
 miniserve
@@ -910,6 +937,7 @@ mongodb-atlas-cli
 monika
 monolith
 moto
+mpich
 mpv
 muffet
 murex
@@ -927,6 +955,7 @@ nats-streaming-server
 naturaldocs
 navi
 ncspot
+ncview
 needle
 neo4j
 neofetch
@@ -941,6 +970,7 @@ newman
 newrelic-cli
 newrelic-infra-agent
 nfpm
+nixpacks
 nng
 node_exporter
 node-sass
@@ -966,6 +996,7 @@ onednn
 onedrive
 ooniprobe
 opa
+open-adventure
 openh264
 openiothub-server
 openjph
@@ -982,7 +1013,9 @@ orientdb
 orocos-kdl
 ortp
 osc
+osctrl-cli
 osm
+ospray
 osv-scanner
 ott
 oxipng
@@ -1018,6 +1051,7 @@ pkgconf
 plantuml
 plow
 pmd
+pmtiles
 pngquant
 pnpm
 pocketbase
@@ -1026,12 +1060,14 @@ popeye
 postgis
 powerman
 pre-commit
+presenterm
 prestd
 prestodb
 principalmapper
 procs
 prometheus-cpp
 protoc-gen-go-grpc
+proxify
 proxytunnel
 prqlc
 prr
@@ -1043,6 +1079,7 @@ purescript
 pushpin
 pwntools
 py-spy
+py3cairo
 pyflow
 pyoxidizer
 pyright
@@ -1058,6 +1095,7 @@ quicktype
 qxmpp
 radamsa
 rancher-cli
+rattler-build
 rav1e
 rbspy
 rbw
@@ -1066,6 +1104,7 @@ rcs
 readpe
 rebar3
 recode
+redwax-tool
 regina-rexx
 regula
 remind
@@ -1086,6 +1125,7 @@ rqlite
 rswift
 rubberband
 ruff
+rust-analyzer
 rustup-init
 rye
 s-search
@@ -1093,7 +1133,9 @@ s2n
 saml2aws
 sbt
 scala
+scalingo
 sccache
+schemathesis
 scorecard
 scotch
 scrcpy
@@ -1114,6 +1156,7 @@ sheldon
 shellharden
 shellz
 shfmt
+shush
 signal-cli
 silicon
 singularity
@@ -1126,6 +1169,7 @@ sleuthkit
 slides
 slirp4netns
 sloc
+slurm
 smimesign
 sn0int
 snakemake
@@ -1147,6 +1191,7 @@ sqlmap
 sqlpage
 sqlx-cli
 squid
+src
 sshs
 sslyze
 stanford-corenlp
@@ -1154,6 +1199,7 @@ starship
 staticcheck
 statix
 stdman
+steampipe
 stellar-core
 step
 storm
@@ -1185,6 +1231,7 @@ tcsh
 tctl
 tealdeer
 tectonic
+teip
 tektoncd-cli
 teku
 telegraf
@@ -1200,6 +1247,7 @@ terraform-rover
 terraformer
 terragrunt
 terragrunt-atlantis-config
+terramate
 terrascan
 testkube
 tfsec
@@ -1243,6 +1291,7 @@ valabind
 vale
 vapoursynth
 vault-cli
+vcluster
 veclibfort
 velero
 verapdf
@@ -1274,6 +1323,7 @@ wasmer
 wasmtime
 watchexec
 webdis
+webkitgtk
 webp
 webpack
 websocat
@@ -1300,18 +1350,21 @@ xkbcomp
 xkeyboardconfig
 xplr
 xray
+xrootd
 yaegi
 ykman
 yle-dl
 yosys
 youtubedr
 yq
+yubico-piv-tool
 z3
 zabbix
 zbctl
 zellij
 zenith
 zf
+zlint
 znapzend
 zola
 zookeeper
