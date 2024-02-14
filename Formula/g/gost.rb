@@ -28,6 +28,10 @@ class Gost < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "de1f718516d68a836440a2ad09bc48ec150935de28084726bab8e159c2c48860"
   end
 
+  # no release to support go1.20, https://github.com/ginuerzh/gost/issues/1012
+  # also no actions on go1.21 build support PR, https://github.com/ginuerzh/gost/pull/983
+  deprecate! date: "2024-02-14", because: :unmaintained
+
   depends_on "go@1.20" => :build
 
   conflicts_with "vulsio-gost", because: "both install `gost` binaries"
