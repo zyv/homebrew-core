@@ -12,13 +12,13 @@ class Mcap < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "269531063a715d2f8a6ef821b0b571da4fe5f94b56503f150bf6e376b0cdaebd"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fbb159c13d86341531f7bf7a7f305e9b9ced8507e9c8650499f77fd0aed4266f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7bfd5a35c34b637d03afafe3d9bcbc65da9cd829399d673db44434152b1c697d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "1a8f92a7314cca9cfebcd6065a21be47bb447f1ae954306fc65cd08bbe6f503f"
-    sha256 cellar: :any_skip_relocation, ventura:        "69ecfb4ec6465b355222d8d20bac5a562847fee45e93ec0ce5064338034449c5"
-    sha256 cellar: :any_skip_relocation, monterey:       "8b54ec93b3a253dc98e862c7910a912627e9333ea71280d2c6e477b5280f1ca1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ced425bd8a689c1175e33c30902f2839272161ef84c19ecc5d3013930b5a52cf"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "42a2916214c0bab01de9e627ec35b4dda281af33f258acf7703a8b1bdeb483ad"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c58cfadf1d4360bce1540bab956d17fae2ea44970583d6c34da6b59fa23598d8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ab998d8d3919d919d33cd43d60a9bdbce8c62b6cf7d38a37e03cf1c4538d20aa"
+    sha256 cellar: :any_skip_relocation, sonoma:         "f1981402e89e374a52df2c1846b4bc2bfd42c369348b622cc2e2433856e5fd34"
+    sha256 cellar: :any_skip_relocation, ventura:        "8aedee37ebe84e20e9c4c7ab003671bc3df933089a21cf09ff5293c941da971e"
+    sha256 cellar: :any_skip_relocation, monterey:       "8f73ba7fe10e35e4bfde2017194b54255eb46b808b2cf5b03354417b35cb8153"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72d83297cf952241a8050e1fedb74f514dbaf4a12887ccd92bce4cb721542a0c"
   end
 
   depends_on "go" => :build
