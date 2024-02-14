@@ -5,6 +5,7 @@ class OperatorSdk < Formula
       tag:      "v1.33.0",
       revision: "542966812906456a8d67cf7284fc6410b104e118"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/operator-framework/operator-sdk.git", branch: "master"
 
   livecheck do
@@ -22,7 +23,8 @@ class OperatorSdk < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a1e03597383084ce8f01d276d922bc96b01fd3865abb1801f71d8e016d06ebbb"
   end
 
-  depends_on "go"
+  # use "go" again when https://github.com/operator-framework/operator-sdk/issues/6644 is resolved and released
+  depends_on "go@1.21"
 
   def install
     ENV["GOBIN"] = bin
@@ -32,6 +34,8 @@ class OperatorSdk < Formula
   end
 
   test do
+    ENV.prepend_path "PATH", Formula["go@1.21"].bin
+
     if build.stable?
       version_output = shell_output("#{bin}/operator-sdk version")
       assert_match "version: \"v#{version}\"", version_output
