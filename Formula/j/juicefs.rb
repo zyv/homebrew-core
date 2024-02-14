@@ -21,7 +21,7 @@ class Juicefs < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d0f01c6689b8a3ee1565cf80752214efd2e6fcd6a2edb429171bdfc440c04f5"
   end
 
-  depends_on "go" => :build
+  depends_on "go@1.21" => :build # use "go" again when https://github.com/juicedata/juicefs/pull/4340 is released
 
   def install
     system "make"
