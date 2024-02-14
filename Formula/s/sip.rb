@@ -8,13 +8,13 @@ class Sip < Formula
   head "https://www.riverbankcomputing.com/hg/sip", using: :hg
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fd7af2171fcb4ca71524ee632746404bbe297f37ed406043c23dc6a7d878455a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f67d12f087a3f7ea9ec6d90bdbf616774d15202e7687129c9970ec52f4f11050"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "13d82e1e0fc16aa384f8951ea1ebced744eb6ec4de4da638566127ea0136da9b"
-    sha256 cellar: :any_skip_relocation, sonoma:         "d6ad885aba351d9e094b6dfdd07c47e61b17a2e897411df6e6aedfd26c84b378"
-    sha256 cellar: :any_skip_relocation, ventura:        "83a66a89d782c6f7890c8387d940b71055b3ad24987fa577cf1ff3c1a9778ac1"
-    sha256 cellar: :any_skip_relocation, monterey:       "fd0e462966fcf0e827ad45d65545221bc4b00584f2f920c8e6588991b7b768c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "55e09b90648563625f3ab1576a4a8277e0b5f386f291b30523777e60fd8ea973"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c72ef903a6273a299314786f62bb0dd7514c671e815e03f1986637e50b389fa3"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1215a87c1cd9ebf7a19c58591a4947d7e01669ea188cf38169ec6f84d2563616"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "161ac2919ec3990d7462fffbabc623301b02db130ddcdbf11f44b6ff84f8b976"
+    sha256 cellar: :any_skip_relocation, sonoma:         "abedf2f58e97a6bd15b937cad168225e7f56b5998ed5898307d4021ba3a51638"
+    sha256 cellar: :any_skip_relocation, ventura:        "0b83c01077f716d62be770898c1d718e81285f2969e3998d9675e70061110e83"
+    sha256 cellar: :any_skip_relocation, monterey:       "6c34630d0ec9a45a2a5270079d2aa6ce1a930bb4e0dd20a0e5b812f45d098e9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "12eb797765c96258bc8e1bff5bb62689d9ee3fed08419ca8d4312a3c86d811e6"
   end
 
   depends_on "python@3.11" => [:build, :test]
