@@ -2,8 +2,8 @@ class Podman < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
   url "https://github.com/containers/podman.git",
-      tag:      "v4.9.2",
-      revision: "f9a48ebcfa9a39144be0f86f4ba842752835f945"
+      tag:      "v4.9.3",
+      revision: "8d2b55ddde1bc81f43d018dfc1ac027c06b26a7f"
   license all_of: ["Apache-2.0", "GPL-3.0-or-later"]
   head "https://github.com/containers/podman.git", branch: "main"
 
@@ -44,8 +44,8 @@ class Podman < Formula
 
   resource "gvproxy" do
     on_macos do
-      url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.7.2.tar.gz"
-      sha256 "2163287ba1df33d9aba905888f271dc997d04fd3027f1c1f0c354d6045e07425"
+      url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.7.3.tar.gz"
+      sha256 "851ed29b92e15094d8eba91492b6d7bab74aff4538dae0c973eb7d8ff48afd8a"
     end
   end
 
@@ -65,8 +65,8 @@ class Podman < Formula
 
   resource "netavark" do
     on_linux do
-      url "https://github.com/containers/netavark/archive/refs/tags/v1.10.2.tar.gz"
-      sha256 "5df03e3dc82e208dd49684e7b182ffe6c158ad9d9d06cba0c3d4820f471bfaa4"
+      url "https://github.com/containers/netavark/archive/refs/tags/v1.10.3.tar.gz"
+      sha256 "fdc3010cb221f0fcef0302f57ef6f4d9168a61f9606238a3e1ed4d2e348257b7"
     end
   end
 
