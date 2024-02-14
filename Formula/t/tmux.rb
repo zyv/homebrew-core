@@ -50,8 +50,7 @@ class Tmux < Formula
     system "sh", "autogen.sh" if build.head?
 
     args = %W[
-      --disable-dependency-tracking
-      --prefix=#{prefix}
+      --enable-sixel
       --sysconfdir=#{etc}
     ]
 
@@ -67,7 +66,7 @@ class Tmux < Formula
     end
 
     ENV.append "LDFLAGS", "-lresolv"
-    system "./configure", *args
+    system "./configure", *args, *std_configure_args
 
     system "make", "install"
 
