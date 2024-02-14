@@ -304,9 +304,6 @@
   "crytic-compile": {
     "exclude_packages": ["solc-select", "toml"]
   },
-  "csvkit": {
-    "exclude_packages": ["pytz", "six", "typing-extensions"]
-  },
   "cyclonedx-python": {
     "package_name": "cyclonedx-bom",
     "exclude_packages": ["lxml", "packaging", "pyparsing", "python-dateutil", "six", "toml"]
