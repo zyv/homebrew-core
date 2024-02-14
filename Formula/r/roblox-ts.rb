@@ -8,13 +8,13 @@ class RobloxTs < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cf9da20fd24dd9cb54822277533b44f2ec347bf437958a133eda571d0c0aeb93"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cf9da20fd24dd9cb54822277533b44f2ec347bf437958a133eda571d0c0aeb93"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cf9da20fd24dd9cb54822277533b44f2ec347bf437958a133eda571d0c0aeb93"
-    sha256 cellar: :any_skip_relocation, sonoma:         "dae9e3fb7e6887c5fdcf4d7d4fbb46aa84cb340a7c89a94bd8a25ff656d4e218"
-    sha256 cellar: :any_skip_relocation, ventura:        "dae9e3fb7e6887c5fdcf4d7d4fbb46aa84cb340a7c89a94bd8a25ff656d4e218"
-    sha256 cellar: :any_skip_relocation, monterey:       "dae9e3fb7e6887c5fdcf4d7d4fbb46aa84cb340a7c89a94bd8a25ff656d4e218"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "911a62c95e6df1e05f82cfd2de03e6fe8bca2c808bf54d2a3444e01af47ad680"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1a6ed097780daf20fafdc52936033ba0619d7d79f25326eb288272c6074212b4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1a6ed097780daf20fafdc52936033ba0619d7d79f25326eb288272c6074212b4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1a6ed097780daf20fafdc52936033ba0619d7d79f25326eb288272c6074212b4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "aa56d3cc04906892b5574ebd1bb3c831d48e8e792f4af084f887bc948d12f3c9"
+    sha256 cellar: :any_skip_relocation, ventura:        "aa56d3cc04906892b5574ebd1bb3c831d48e8e792f4af084f887bc948d12f3c9"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa56d3cc04906892b5574ebd1bb3c831d48e8e792f4af084f887bc948d12f3c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7bbba3aae911460dde9c44aa1d492690e7e94df7f2971aa313cb2423c06b8c1b"
   end
 
   depends_on "node"
