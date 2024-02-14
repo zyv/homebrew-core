@@ -6,6 +6,7 @@ class GitBranchless < Formula
   url "https://github.com/arxanas/git-branchless/archive/refs/tags/v0.8.0.tar.gz"
   sha256 "f9e13d9a3de960b32fb684a59492defd812bb0785df48facc964478f675f0355"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
   head "https://github.com/arxanas/git-branchless.git", branch: "master"
 
   # Upstream appears to use GitHub releases to indicate that a version is
@@ -44,7 +45,7 @@ class GitBranchless < Formula
 
     system "cargo", "install", *std_cargo_args(path: "git-branchless")
 
-    system "git", "branchless", "install-man-pages", man1
+    system "git", "branchless", "install-man-pages", man
   end
 
   test do
