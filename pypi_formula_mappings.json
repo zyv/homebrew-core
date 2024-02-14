@@ -68,7 +68,7 @@
     "exclude_packages": ["click", "markdown", "PyYAML", "requests-oauthlib"]
   },
   "arjun": {
-    "exclude_packages": ["dicttoxml", "requests"]
+    "exclude_packages": ["certifi"]
   },
   "arxiv_latex_cleaner": {
     "exclude_packages": ["absl-py", "pillow", "regex", "six", "PyYAML"]
