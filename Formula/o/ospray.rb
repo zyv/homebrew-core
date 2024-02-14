@@ -12,12 +12,13 @@ class Ospray < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma:   "8f0c2b7fc94018818e368fe539e533f58cb7bb6223fbedb08118153f57366564"
-    sha256 cellar: :any, arm64_ventura:  "3669abca9f9a4920fe97d08c318bb24ed7a42e203c40d814f42860f2f9054943"
-    sha256 cellar: :any, arm64_monterey: "62bbd8250633c21c5be47eca0087c81d1066b1f07ee33c77772c059f8158a707"
-    sha256 cellar: :any, sonoma:         "40dcc27c71be76c8894f02fb0721134c028f0d43da61356c809e10685eb47cf2"
-    sha256 cellar: :any, ventura:        "4459fbe2d70bdb75452b9933292d24cf1253d8430465f0d85fad23f82baffe06"
-    sha256 cellar: :any, monterey:       "874d511bb6038cd75a206d2d2ab0027baea27abfc3512dadc601d629b33d739e"
+    sha256 cellar: :any,                 arm64_sonoma:   "83a2eb52dc3a954cec96dbd1ad9fe82d7ea18e6ddcc304800f344e0210ed2608"
+    sha256 cellar: :any,                 arm64_ventura:  "5ffc81abe610dfb975773f96aa5eb2425ccf455c830c568175141fdd30f81750"
+    sha256 cellar: :any,                 arm64_monterey: "84ee9a6bf1b4c6feb7c531a2414197c47d3902b2821619f49de078835c27cc08"
+    sha256 cellar: :any,                 sonoma:         "9f8cc433a1fb8a46d70e1c66f88246dd5fad7e95c45ceaca75ab3c184ccbdcc6"
+    sha256 cellar: :any,                 ventura:        "a14930930e2f158a9751871dcb48b5a20a3e36af43a5fc8e21c81883650c9999"
+    sha256 cellar: :any,                 monterey:       "5bc8a7cb0682ffd50311281d3e354cf4d6c9a680147b3af757aa7276135a2204"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb7638362fd78b814886a4a47b19e8919567a95304d9c05325be5405e832db01"
   end
 
   depends_on "cmake" => :build
