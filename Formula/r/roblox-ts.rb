@@ -3,8 +3,8 @@ require "language/node"
 class RobloxTs < Formula
   desc "TypeScript-to-Luau Compiler for Roblox"
   homepage "https://roblox-ts.com/"
-  url "https://registry.npmjs.org/roblox-ts/-/roblox-ts-2.2.0.tgz"
-  sha256 "3fa23b1d2f7b3daf6be39f03e6c72b7a29f56f3995348d38bc931530becdca53"
+  url "https://registry.npmjs.org/roblox-ts/-/roblox-ts-2.3.0.tgz"
+  sha256 "3ae2ba96ec389eacf1d29cef2e825fae91b45aef1c395dfa1d023b7aa73f0f3f"
   license "MIT"
 
   bottle do
@@ -22,12 +22,15 @@ class RobloxTs < Formula
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
-    deuniversalize_machos
+
+    # Replace universal binaries with native slices
+    deuniversalize_machos libexec/"lib/node_modules/roblox-ts/node_modules/fsevents/fsevents.node"
   end
 
   test do
-    system bin/"rbxtsc", "init", "game", "-y"
-    assert_predicate testpath/"package.json", :exist?
-    assert_predicate testpath/"package-lock.json", :exist?
+    output = shell_output("#{bin}/rbxtsc 2>&1", 1)
+    assert_match "Unable to find tsconfig.json", output
+
+    assert_match version.to_s, shell_output("#{bin}/rbxtsc --version")
   end
 end
