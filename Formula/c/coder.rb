@@ -15,7 +15,7 @@ class Coder < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "69338571ea5bc8a0891ffa3ffe6eee65453ea35263954dd2062f49b851ae25aa"
   end
 
-  depends_on "go" => :build
+  depends_on "go@1.21" => :build # see https://github.com/coder/coder/issues/11342
 
   def install
     ldflags = %W[
