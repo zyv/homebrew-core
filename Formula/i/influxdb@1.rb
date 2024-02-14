@@ -1,8 +1,8 @@
 class InfluxdbAT1 < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
-  url "https://github.com/influxdata/influxdb/archive/refs/tags/v1.11.4.tar.gz"
-  sha256 "dc6942eb742220a175d43588ecbccb7d3abb00e8aa8f5c515e33f98f99ba8518"
+  url "https://github.com/influxdata/influxdb/archive/refs/tags/v1.11.5.tar.gz"
+  sha256 "11942f7f4637f80565832c41455dfae29ed78f283bffc0ca48bd7843535e8bd5"
   # 1.x is using MIT license while 1.x and 3.x is using dual license (Apache-2.0/MIT)
   license "MIT"
 
@@ -33,12 +33,6 @@ class InfluxdbAT1 < Formula
   resource "pkg-config-wrapper" do
     url "https://github.com/influxdata/pkg-config/archive/refs/tags/v0.2.11.tar.gz"
     sha256 "52b22c151163dfb051fd44e7d103fc4cde6ae8ff852ffc13adeef19d21c36682"
-  end
-
-  # Build patch to build with Rust 1.72+
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/5557bf4d21d86a0aa8495861441a4b5457f18b6b/influxdb%401/1.11.4-rust.patch"
-    sha256 "28e382e5a134377d01462661185dcdeaa9864c0a626acfd17964b90bd58d3ad5"
   end
 
   def install
