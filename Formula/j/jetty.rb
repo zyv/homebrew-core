@@ -1,9 +1,9 @@
 class Jetty < Formula
   desc "Java servlet engine and webserver"
   homepage "https://eclipse.dev/jetty/"
-  url "https://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-distribution/9.4.53.v20231009/jetty-distribution-9.4.53.v20231009.tar.gz"
-  version "9.4.53.v20231009"
-  sha256 "b04b4cd45f3bf3c09a26bdf7f4e8d1a67e1a0f224ef4539534a0719b2c701088"
+  url "https://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-distribution/9.4.54.v20240208/jetty-distribution-9.4.54.v20240208.tar.gz"
+  version "9.4.54.v20240208"
+  sha256 "e20c39354a50b16ce420343be2e517dca7c0a4de6b1f411c670a9c81002c64fc"
   license any_of: ["Apache-2.0", "EPL-1.0"]
 
   livecheck do
@@ -33,7 +33,7 @@ class Jetty < Formula
     # probably match the jetty-setuid version that is included with jetty.
     resource "jetty.toolchain" do
       url "https://github.com/eclipse/jetty.toolchain/archive/ce0f110e0b95baf85775897aa90f5b6c0cc6cd4d.tar.gz"
-      sha256 "06a3ac033e5c4cc05716e7d362de7257e73aad1783b297bd57b6e0f7661555ab"
+      sha256 "9a19e7f3c947bbc1979cfef1f8dfc038fb0df4aa518396b9b84b44c69b79332f"
 
       # Fix header paths on macOS to follow modern JDKs rather than old system Java.
       # PR ref: https://github.com/eclipse/jetty.toolchain/pull/211
