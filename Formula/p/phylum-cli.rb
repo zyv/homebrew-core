@@ -22,11 +22,23 @@ class PhylumCli < Formula
   uses_from_macos "zlib"
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "cli")
+    system "cargo", "install", "--no-default-features", *std_cargo_args(path: "cli")
+
+    # Generate and install shell completions
+    system "cargo", "run", "--package", "xtask", "--no-default-features", "gencomp"
+    bash_completion.install "target/completions/phylum.bash" => "phylum"
+    zsh_completion.install "target/completions/_phylum"
+    fish_completion.install "target/completions/phylum.fish"
+  end
+
+  def caveats
+    <<~EOS
+      No official extensions have been preinstalled.
+    EOS
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/phylum version")
+    assert_match version.to_s, shell_output("#{bin}/phylum --version")
 
     output = shell_output("#{bin}/phylum extension")
     assert_match "No extensions are currently installed.", output
