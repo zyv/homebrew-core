@@ -20,7 +20,7 @@ class Clair < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb434c8789c0d0b1fe858eb2573cd97a9c52cf34b04872b03126a10ace8f43b6"
   end
 
-  depends_on "go" => :build
+  depends_on "go@1.21" => :build # use "go" again when https://github.com/quay/clair/pull/1942 is released
 
   def install
     ldflags = %W[
