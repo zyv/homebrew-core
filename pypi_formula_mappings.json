@@ -829,9 +829,6 @@
     ]
   },
   "psutils": "pspdfutils",
-  "ptpython": {
-    "exclude_packages": ["Pygments"]
-  },
   "pwntools": {
     "exclude_packages": [
       "certifi", "cffi", "cryptography", "mako", "markupsafe", "packaging", "psutil",
