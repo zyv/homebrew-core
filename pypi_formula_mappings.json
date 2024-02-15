@@ -520,7 +520,7 @@
   },
   "httpie": {
     "package_name": "httpie",
-    "exclude_packages": ["certifi", "Pygments"]
+    "exclude_packages": ["certifi"]
   },
   "huggingface-cli": {
     "package_name": "huggingface-hub",
