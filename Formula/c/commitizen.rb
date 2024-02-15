@@ -18,12 +18,12 @@ class Commitizen < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "79edddf66a66d34c9dc396cd044db02ec184d230231f81cf915f25cfee95a1d7"
   end
 
-  depends_on "python-argcomplete"
-  depends_on "python-markupsafe"
-  depends_on "python-packaging"
-  depends_on "python-typing-extensions"
   depends_on "python@3.12"
-  depends_on "pyyaml"
+
+  resource "argcomplete" do
+    url "https://files.pythonhosted.org/packages/f0/a2/ce706abe166457d5ef68fac3ffa6cf0f93580755b7d5f883c456e94fab7b/argcomplete-3.2.2.tar.gz"
+    sha256 "f3e49e8ea59b4026ee29548e24488af46e30c9de57d48638e24f54a1ea1000a2"
+  end
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
@@ -50,9 +50,24 @@ class Commitizen < Formula
     sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
   end
 
+  resource "markupsafe" do
+    url "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz"
+    sha256 "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
+    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
+  end
+
   resource "prompt-toolkit" do
     url "https://files.pythonhosted.org/packages/fb/93/180be2342f89f16543ec4eb3f25083b5b84eba5378f68efff05409fb39a9/prompt_toolkit-3.0.36.tar.gz"
     sha256 "3e163f254bef5a03b146397d7c1963bd3e2812f0964bb9a24e6ec761fd28db63"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   resource "questionary" do
@@ -83,10 +98,8 @@ class Commitizen < Formula
   def install
     virtualenv_install_with_resources
 
-    python_exe = Formula["python@3.12"].opt_libexec/"bin/python"
-    register_argcomplete = Formula["python-argcomplete"].opt_bin/"register-python-argcomplete"
     generate_completions_from_executable(
-      python_exe, register_argcomplete, "cz",
+      libexec/"bin/register-python-argcomplete", "cz",
       base_name:              "cz",
       shell_parameter_format: :arg
     )
