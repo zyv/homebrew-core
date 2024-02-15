@@ -7,15 +7,13 @@ class Cdebug < Formula
   head "https://github.com/iximiuz/cdebug.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ef52781baa184fe68498a97f6684583118f6ec03d688a8753bca4bf72c490ecd"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d0356a3e1ee8c7ce5de59c4f24b2a7b17d9126a5284f9677d7fd91c82b4d07e3"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d0356a3e1ee8c7ce5de59c4f24b2a7b17d9126a5284f9677d7fd91c82b4d07e3"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0356a3e1ee8c7ce5de59c4f24b2a7b17d9126a5284f9677d7fd91c82b4d07e3"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2327854d9210bdb2ae313d45966bd3194337d84a798a282d64b6df0d304cc8ba"
-    sha256 cellar: :any_skip_relocation, ventura:        "dea3380567fbf906b88881ae2524d57c71dd712266fa282aab6bbc50bdc96174"
-    sha256 cellar: :any_skip_relocation, monterey:       "8080dc9eacd768e9d5b5a1503b1a1443b2559f5b5ee1cba9a8124c4756f75b40"
-    sha256 cellar: :any_skip_relocation, big_sur:        "535e557d4bf258b532bc57f1e6fd88bdcddc3328050110142c2668a6bcc157eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7a853028bc69423f191b40acbe2d59eca2d7d793139fa46dea447ae38962762"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "16a334fb41d0f467f8597cdadd17d67f3b34a3aae94bfc7a8d845f082422cbb8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e7beb242b84142d56e98ef0a3a47f8ce02ef8f9d81818c9fa6c0b1b6262a3401"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ddf112f7c9050d89fc2a76b3869cb08fcb1a3b52b3a848e6d4f825d4254ab0d4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "dae0dfab89a60bc86335d2949dafbd4fd4fbe643f3bd0ba45e7c698fe996fa91"
+    sha256 cellar: :any_skip_relocation, ventura:        "44abff8207050bb0a264dde0c4c1a0a5789ebf898203641090c2a290a5cb80af"
+    sha256 cellar: :any_skip_relocation, monterey:       "89bd6ab3fcf425da2cb013f412fdbfef45352de58bf9dcb57a8128e2384b0b29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17ef7c5714c668b7727d8f1f5fecbcdc618dcb9535f99e42c4a507baa9ffb277"
   end
 
   depends_on "go" => :build
