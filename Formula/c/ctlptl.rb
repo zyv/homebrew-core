@@ -1,8 +1,8 @@
 class Ctlptl < Formula
   desc "Making local Kubernetes clusters fun and easy to set up"
   homepage "https://github.com/tilt-dev/ctlptl"
-  url "https://github.com/tilt-dev/ctlptl/archive/refs/tags/v0.8.26.tar.gz"
-  sha256 "7b0bb2ba31b7b0e4f8a57e903fccdd96d6281431b4157806c04a8cae87552daf"
+  url "https://github.com/tilt-dev/ctlptl/archive/refs/tags/v0.8.27.tar.gz"
+  sha256 "6afa37a0c74a0dc886920f72eeca1570bb35573626ede4f18aecfd55ef0ba9cd"
   license "Apache-2.0"
 
   bottle do
