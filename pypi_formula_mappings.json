@@ -89,9 +89,6 @@
   "aws-google-auth": {
     "exclude_packages": ["certifi", "keyring", "lxml", "pillow", "six", "tabulate"]
   },
-  "aws-shell" : {
-    "exclude_packages": ["six", "Pygments", "docutils"]
-  },
   "aws-sso-util": {
     "exclude_packages": ["certifi", "six", "PyYAML"]
   },
