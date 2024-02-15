@@ -712,9 +712,6 @@
   "notifiers": {
     "exclude_packages": ["certifi", "click"]
   },
-  "nox": {
-    "exclude_packages": ["argcomplete", "packaging", "virtualenv"]
-  },
   "nvchecker": {
     "package_name": "nvchecker[pypi]",
     "exclude_packages": ["packaging", "pycurl"]
