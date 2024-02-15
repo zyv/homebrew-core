@@ -1,8 +1,8 @@
 class Tfautomv < Formula
   desc "Generate Terraform moved blocks automatically for painless refactoring"
   homepage "https://tfautomv.dev/"
-  url "https://github.com/busser/tfautomv/archive/refs/tags/v0.5.4.tar.gz"
-  sha256 "10ee3f50f7444415fb1467996ca79c11be67a863cc839d7641cf49a9fef38bd5"
+  url "https://github.com/busser/tfautomv/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "e45cc34160e6ea89e41f07126174fcb5e01ec28263651dad1bf703343e9988f9"
   license "Apache-2.0"
   head "https://github.com/busser/tfautomv.git", branch: "main"
 
@@ -25,9 +25,9 @@ class Tfautomv < Formula
 
   test do
     tofu = Formula["opentofu"].opt_bin/"tofu"
-    output = shell_output("#{bin}/tfautomv -terraform-bin #{tofu} -show-analysis 2>&1", 1)
+    output = shell_output("#{bin}/tfautomv --terraform-bin #{tofu} 2>&1", 1)
     assert_match "No configuration files", output
 
-    assert_match version.to_s, shell_output("#{bin}/tfautomv -version")
+    assert_match version.to_s, shell_output("#{bin}/tfautomv --version")
   end
 end
