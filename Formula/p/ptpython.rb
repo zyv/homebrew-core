@@ -18,7 +18,6 @@ class Ptpython < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3d170df21e2c087835c297b7ad04d90161a840918ae2c9f8dd2a4413a2ccef2"
   end
 
-  depends_on "pygments"
   depends_on "python@3.12"
 
   resource "appdirs" do
@@ -39,6 +38,11 @@ class Ptpython < Formula
   resource "prompt-toolkit" do
     url "https://files.pythonhosted.org/packages/cc/c6/25b6a3d5cd295304de1e32c9edbcf319a52e965b339629d37d42bb7126ca/prompt_toolkit-3.0.43.tar.gz"
     sha256 "3527b7af26106cbc65a040bcc84839a3566ec1b051bb0bfe953631e704b0ff7d"
+  end
+
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
+    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
   end
 
   resource "wcwidth" do
