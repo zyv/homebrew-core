@@ -1,8 +1,8 @@
 class Cxxopts < Formula
   desc "Lightweight C++ command-line option parser"
   homepage "https://github.com/jarro2783/cxxopts"
-  url "https://github.com/jarro2783/cxxopts/archive/refs/tags/v3.1.1.tar.gz"
-  sha256 "523175f792eb0ff04f9e653c90746c12655f10cb70f1d5e6d6d9491420298a08"
+  url "https://github.com/jarro2783/cxxopts/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "9f43fa972532e5df6c5fd5ad0f5bac606cdec541ccaf1732463d8070bbb7f03b"
   license "MIT"
   head "https://github.com/jarro2783/cxxopts.git", branch: "master"
 
