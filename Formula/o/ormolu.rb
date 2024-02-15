@@ -1,8 +1,8 @@
 class Ormolu < Formula
   desc "Formatter for Haskell source code"
   homepage "https://github.com/tweag/ormolu"
-  url "https://github.com/tweag/ormolu/archive/refs/tags/0.7.3.0.tar.gz"
-  sha256 "dfc3cd77ad55e80719a80583f0a0d753b7f6061fe1f1fc49f6805cbb06452c0c"
+  url "https://github.com/tweag/ormolu/archive/refs/tags/0.7.4.0.tar.gz"
+  sha256 "7d30dea0adf6511a7a872fadb06cf037bc5ef118450b1618e6d1900785439444"
   license "BSD-3-Clause"
   head "https://github.com/tweag/ormolu.git", branch: "master"
 
