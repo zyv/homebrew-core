@@ -5,6 +5,14 @@ class Coder < Formula
   sha256 "4900f2fd5bcac42192fb213cf19f67622b9d1180a319e5d2ac0d2ea1470c79eb"
   license "AGPL-3.0-only"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check the "latest" release instead
+  # of the Git tags.
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     rebuild 1
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fee3e0d0b8d37ea33867c996dc7db874ee2b6f8984c9ba484f5d14f7ff14b3fb"
