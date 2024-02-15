@@ -8,7 +8,7 @@ class Ski < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c3579d8ff81a16c59efa672da26be95e006c19debd511d532f7fc29011cf02c9"
+    sha256 cellar: :any_skip_relocation, all: "14141d2ba391efd4932d5c119c2429abb66f8ef243bc0b22fcf9b71f717be9aa"
   end
 
   head do
