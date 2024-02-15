@@ -1,10 +1,10 @@
 class Morse < Formula
   desc "QSO generator and morse code trainer"
   homepage "http://www.catb.org/~esr/morse/"
-  url "http://www.catb.org/~esr/morse/morse-2.5.tar.gz"
-  sha256 "476d1e8e95bb173b1aadc755db18f7e7a73eda35426944e1abd57c20307d4987"
+  # reported the artifact issue on the project page, https://gitlab.com/esr/morse-classic/-/issues/1
+  url "https://gitlab.com/esr/morse-classic/-/archive/2.6/morse-classic-2.6.tar.bz2"
+  sha256 "ec44144d52a1eef36fbe0ca400c54556a7ba8f8c3de38d80512d19703b89f615"
   license "BSD-2-Clause"
-  revision 2
 
   livecheck do
     url :homepage
@@ -23,16 +23,16 @@ class Morse < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "xmlto" => :build
   depends_on "pulseaudio"
 
-  # Use Debian patch to fix usage with newer `pulseaudio`
-  patch do
-    url "https://sources.debian.org/data/main/m/morse/2.5-2/debian/patches/04fix-pa_simple_write-with-mono-output.patch"
-    sha256 "69b57f6230fcb649ca0695b75cf0968d0ce82e6c30c7190dd50b87245e432fa2"
-  end
+  patch :DATA
 
   def install
+    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+
     ENV["CC"] = "#{ENV.cc} -Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
+
     system "make", "all"
     bin.install %w[morse QSO]
     man1.install %w[morse.1 QSO.1]
@@ -45,3 +45,19 @@ class Morse < Formula
     assert_match "Could not initialize audio", shell_output("#{bin}/morse -- 2>&1", 1)
   end
 end
+
+__END__
+diff --git a/Makefile b/Makefile
+index 8bdf1f6..df39baa 100644
+--- a/Makefile
++++ b/Makefile
+@@ -28,8 +28,8 @@
+ #DEVICE = X11
+ #DEVICE = Linux
+ #DEVICE = OSS
+-DEVICE = ALSA
+-#DEVICE = PA
++#DEVICE = ALSA
++DEVICE = PA
+
+ VERSION=$(shell sed -n <NEWS '/^[0-9]/s/:.*//p' | head -1)
