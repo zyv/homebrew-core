@@ -13,13 +13,13 @@ class Cppad < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "d12c2a7d18b01ef9fdce995d7ad034a7c821769e1ca7ab98b8d5cf540c98ea71"
-    sha256 cellar: :any,                 arm64_ventura:  "15fb093bbccc84db7e902b534582684b962ecd481de643766945fdd737d19f52"
-    sha256 cellar: :any,                 arm64_monterey: "d81c8146226b83f6861652396ccd6667b899c259824d63d70cb14725e9034ecc"
-    sha256 cellar: :any,                 sonoma:         "24be243a61a0a0f00ccded8f8726b2f73cfb2faf49abf9456fb3be69c97d79ce"
-    sha256 cellar: :any,                 ventura:        "de6e377bbaf59b8655b0d205ccde4f1f39b5f0cbaba3f4266e2d7d9398e5c453"
-    sha256 cellar: :any,                 monterey:       "58f2809811a75b3392fdb38dc6e4b577e772ca735d906b9fb21cc0fa5e0461ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a990029f406085153495d9474210ddf3f7cbba17c46f21e607179383fda6d256"
+    sha256 cellar: :any,                 arm64_sonoma:   "12ae2bbd836e116f8e608333bc7af3a1dbfeee17942a15005b2c6c3f81d64745"
+    sha256 cellar: :any,                 arm64_ventura:  "4cf257fb4bd5154e68f01257cce38fc216c57961695cbbd636e36255a5b97b7f"
+    sha256 cellar: :any,                 arm64_monterey: "9ac44e35e95b0431963b44da9fe4042f78ff8712aa6115f09ee511cecd23c7eb"
+    sha256 cellar: :any,                 sonoma:         "838b0387119ee362941af56b7445ab09763cfa8eb4601af6dc0e38f5ae6bedb6"
+    sha256 cellar: :any,                 ventura:        "942da8efe1194e69d061ff8014a0ebcc8a684557d332ded003a146d82fe2bb19"
+    sha256 cellar: :any,                 monterey:       "ef0b678341ad3d04ce90a9bd555a2dcc4a9523a5c62925524d542e49d2ba33f4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b99e3a19bf3affc19bf27c1cb433d1b4ddf075156fb8392797ed02a0f5710445"
   end
 
   depends_on "cmake" => :build
