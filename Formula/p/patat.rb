@@ -1,8 +1,8 @@
 class Patat < Formula
   desc "Terminal-based presentations using Pandoc"
   homepage "https://github.com/jaspervdj/patat"
-  url "https://hackage.haskell.org/package/patat-0.10.1.1/patat-0.10.1.1.tar.gz"
-  sha256 "f16e93a4199c301ad18fc48d3ae8eb49f6fb64f4550e6629e199249a6dc6ae59"
+  url "https://hackage.haskell.org/package/patat-0.11.0.0/patat-0.11.0.0.tar.gz"
+  sha256 "34f1f5ca565be76e0a75920290b7c8552132822f1d4a7ab85d445bc13c7c6ec6"
   license "GPL-2.0-or-later"
   head "https://github.com/jaspervdj/patat.git", branch: "main"
 
@@ -17,7 +17,7 @@ class Patat < Formula
   end
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.6" => :build
+  depends_on "ghc" => :build
   depends_on "pandoc" => :build
   depends_on "pkg-config" => :build
 
