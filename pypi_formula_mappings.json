@@ -835,9 +835,6 @@
       "certifi", "cffi", "keyring", "packaging", "pycparser", "six", "virtualenv"
     ]
   },
-  "pre-commit": {
-    "exclude_packages": ["PyYAML", "virtualenv"]
-  },
   "principalmapper": {
     "exclude_packages": ["packaging", "pyparsing", "six"]
   },
