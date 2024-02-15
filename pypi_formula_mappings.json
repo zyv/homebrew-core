@@ -278,9 +278,6 @@
       "pyyaml", "requests", "six"
     ]
   },
-  "copier": {
-    "exclude_packages": ["markupsafe", "packaging", "Pygments", "PyYAML", "typing-extensions"]
-  },
   "cppman": {
     "exclude_packages": ["six"]
   },
