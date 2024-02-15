@@ -4,6 +4,7 @@ class Topgrade < Formula
   url "https://github.com/topgrade-rs/topgrade/archive/refs/tags/v14.0.1.tar.gz"
   sha256 "e4262fae2c89efe889b5a3533dc25d35dd3fbaf373091170f20bcc852017e8be"
   license "GPL-3.0-or-later"
+  head "https://github.com/topgrade-rs/topgrade.git", branch: "main"
 
   livecheck do
     url :stable
@@ -24,6 +25,9 @@ class Topgrade < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    generate_completions_from_executable(bin/"topgrade", "--gen-completion")
+    (man1/"topgrade.1").write Utils.safe_popen_read(bin/"topgrade", "--gen-manpage")
   end
 
   test do
