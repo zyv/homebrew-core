@@ -685,9 +685,6 @@
       "packaging", "Pygments", "PyYAML", "tabulate", "typing-extensions"
     ]
   },
-  "mkdocs": {
-    "exclude_packages": ["click", "markdown", "markupsafe", "packaging", "PyYAML", "six"]
-  },
   "molecule": {
     "extra_packages": ["docker-py", "molecule-vagrant", "python-vagrant"],
     "exclude_packages": ["cryptography", "packaging", "pygments", "pyyaml", "six"]
