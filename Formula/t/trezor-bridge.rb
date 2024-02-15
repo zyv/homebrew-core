@@ -5,6 +5,7 @@ class TrezorBridge < Formula
       tag:      "v2.0.33",
       revision: "2680d5e6f7b02f06aefac1c2a9fef2c6052685de"
   license "LGPL-3.0-only"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "759841e8ae02dfd9e248af122d4ff1ea86fa431213b2254ca403b37fd19a7994"
@@ -17,6 +18,12 @@ class TrezorBridge < Formula
   end
 
   depends_on "go" => :build
+
+  # upstream patch ref, https://github.com/trezor/trezord-go/pull/300
+  patch do
+    url "https://github.com/trezor/trezord-go/commit/318b01237604256b1a561b2fa57826aa0ebb218d.patch?full_index=1"
+    sha256 "b48d0026281814f9a6a8cac48b701db741391d285867593b4ce272e70aff229a"
+  end
 
   def install
     system "go", "build", *std_go_args(output: bin/"trezord-go", ldflags: "-s -w")
