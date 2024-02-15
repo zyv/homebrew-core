@@ -147,8 +147,7 @@
     "extra_packages": ["capstone", "gnupg", "matplotlib", "pycryptodome"]
   },
   "black": {
-    "package_name": "black[d]",
-    "exclude_packages": ["attrs", "click", "idna", "packaging", "pathspec", "platformdirs"]
+    "package_name": "black[d]"
   },
   "borgmatic": {
     "extra_packages": ["ruamel.yaml.clib"],
