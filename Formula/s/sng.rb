@@ -1,10 +1,9 @@
 class Sng < Formula
   desc "Enable lossless editing of PNGs via a textual representation"
   homepage "https://sng.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/sng/sng-1.1.0.tar.gz"
-  sha256 "119c55870c1d1bdc65f7de9dbc62929ccb0c301c2fb79f77df63f5d477f34619"
+  url "https://downloads.sourceforge.net/project/sng/sng-1.1.1.tar.xz"
+  sha256 "c9bdfb80f5a17db1aab9337baed64a8ebea5c0ddf82915c6887b8cfb87ece61e"
   license "Zlib"
-  revision 1
 
   bottle do
     rebuild 1
@@ -25,8 +24,10 @@ class Sng < Formula
   depends_on "xorgrgb"
 
   def install
-    system "./configure", "--prefix=#{prefix}", "--with-rgbtxt=#{Formula["xorgrgb"].share}/X11/rgb.txt"
-    system "make", "install"
+    # Fix RGBTXT ref to use Homebrew share path
+    inreplace "Makefile", "/usr/share/X11/rgb.txt", "#{HOMEBREW_PREFIX}/share/X11/rgb.txt"
+
+    system "make", "install", "DESTDIR=#{prefix}", "prefix=/", "CC=#{ENV.cc}"
   end
 
   test do
