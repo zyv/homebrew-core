@@ -763,7 +763,7 @@
     "exclude_packages": ["pygments", "six"]
   },
   "pdm": {
-    "exclude_packages": ["certifi", "packaging", "Pygments", "pyproject-hooks", "six", "virtualenv"],
+    "exclude_packages": ["certifi"],
     "extra_packages": ["wheel"]
   },
   "percol": {
