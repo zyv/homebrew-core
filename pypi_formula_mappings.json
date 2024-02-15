@@ -805,9 +805,6 @@
   "pip-audit": {
     "exclude_packages": ["certifi", "packaging", "Pygments", "pyparsing", "six", "toml"]
   },
-  "pip-tools": {
-    "exclude_packages": ["build", "click", "packaging", "pyproject-hooks"]
-  },
   "pipenv": {
     "exclude_packages": ["certifi"]
   },
