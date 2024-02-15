@@ -556,9 +556,6 @@
   "ipython": {
     "exclude_packages": ["six", "Pygments"]
   },
-  "iredis": {
-    "exclude_packages": ["six", "packaging", "Pygments", "pyparsing"]
-  },
   "jc": {
     "exclude_packages": ["Pygments"]
   },
