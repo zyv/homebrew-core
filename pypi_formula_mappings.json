@@ -254,11 +254,6 @@
   "codelimit": {
     "exclude_packages": ["certifi", "click", "Pygments", "typing-extensions", "six"]
   },
-  "commitizen": {
-    "exclude_packages": [
-      "argcomplete", "markupsafe", "PyYAML", "typing-extensions", "packaging"
-    ]
-  },
   "conan": {
     "exclude_packages": ["certifi", "markupsafe", "Pygments", "PyYAML", "six"],
     "extra_packages": ["distro"]
