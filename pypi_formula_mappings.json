@@ -812,7 +812,6 @@
     "exclude_packages": ["certifi"]
   },
   "pipgrip": {
-    "exclude_packages": ["click", "packaging", "setuptools", "six"],
     "extra_packages": ["wheel"]
   },
   "pipx": {
