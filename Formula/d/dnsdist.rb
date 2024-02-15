@@ -1,8 +1,8 @@
 class Dnsdist < Formula
   desc "Highly DNS-, DoS- and abuse-aware loadbalancer"
   homepage "https://www.dnsdist.org/"
-  url "https://downloads.powerdns.com/releases/dnsdist-1.8.3.tar.bz2"
-  sha256 "858323f2ed5181488bb7558fbf4f84ec7198600b070b2c5375d15d40695727f4"
+  url "https://downloads.powerdns.com/releases/dnsdist-1.9.0.tar.bz2"
+  sha256 "16bab15cad9245571806398a8e4a5dc32a92b6bb60e617c12fe958c945889c7c"
   license "GPL-2.0-only"
 
   livecheck do
@@ -22,9 +22,11 @@ class Dnsdist < Formula
 
   depends_on "boost" => :build
   depends_on "pkg-config" => :build
+  depends_on "abseil"
   depends_on "cdb"
   depends_on "fstrm"
   depends_on "h2o"
+  depends_on "libnghttp2"
   depends_on "libsodium"
   depends_on "luajit"
   depends_on "openssl@3"
@@ -36,15 +38,14 @@ class Dnsdist < Formula
   fails_with gcc: "5"
 
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}",
+    system "./configure", "--disable-silent-rules",
                           "--without-net-snmp",
                           "--enable-dns-over-tls",
                           "--enable-dns-over-https",
                           "--enable-dnscrypt",
                           "--with-re2",
-                          "--sysconfdir=#{etc}/dnsdist"
+                          "--sysconfdir=#{etc}/dnsdist",
+                          *std_configure_args
     system "make", "install"
   end
 
