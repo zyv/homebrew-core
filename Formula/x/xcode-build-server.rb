@@ -8,6 +8,10 @@ class XcodeBuildServer < Formula
   license "MIT"
   head "https://github.com/SolaWing/xcode-build-server.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "acb6a9442ac88d56faef8f0ee71f9f0939125e07157070994f0fd8db077757e5"
+  end
+
   depends_on "gzip"
   depends_on :macos
   depends_on "python@3.12"
