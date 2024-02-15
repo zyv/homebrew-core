@@ -815,9 +815,6 @@
     "exclude_packages": ["click", "packaging", "setuptools", "six"],
     "extra_packages": ["wheel"]
   },
-  "pipx": {
-    "exclude_packages": ["argcomplete", "packaging"]
-  },
   "platformio": {
     "exclude_packages": [
       "certifi", "click", "packaging", "tabulate", "typing-extensions", "uvicorn"
