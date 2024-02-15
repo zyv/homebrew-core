@@ -4,8 +4,8 @@ class Qcachegrind < Formula
   license "GPL-2.0-or-later"
 
   stable do
-    url "https://download.kde.org/stable/release-service/23.08.4/src/kcachegrind-23.08.4.tar.xz"
-    sha256 "7cf17ae3b87c2b4c575f2eceddae84b412f5f6dfcee8a0f15755e6eed3d22b04"
+    url "https://download.kde.org/stable/release-service/23.08.5/src/kcachegrind-23.08.5.tar.xz"
+    sha256 "056687b7adb0049db0503738cf95a7051f3b889b3313fa8b78dc7d03c3dbb7b6"
     depends_on "qt@5"
   end
 
