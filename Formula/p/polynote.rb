@@ -37,9 +37,10 @@ class Polynote < Formula
     sha256               x86_64_linux:   "4727c9959271464c8193c106a68aa1748e9af1044686553e63993b7960970281"
   end
 
+  depends_on "python-setuptools" => :build
   depends_on "numpy" # used by `jep` for Java primitive arrays
   depends_on "openjdk"
-  depends_on "python@3.11"
+  depends_on "python@3.12"
 
   resource "jep" do
     url "https://files.pythonhosted.org/packages/b3/0c/d208bc8a86f032b9a9270876129aadb41fa1a4baa172d68a29c579950856/jep-4.1.1.tar.gz"
@@ -47,7 +48,7 @@ class Polynote < Formula
   end
 
   def install
-    python3 = "python3.11"
+    python3 = "python3.12"
 
     with_env(JAVA_HOME: Language::Java.java_home) do
       resource("jep").stage do
