@@ -7,6 +7,16 @@ class Rawdog < Formula
   sha256 "99cdc8f2ee1baad93e2e36150384d3b65bb4cce72b6d1d0633a2a4678b5415b5"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "688ce09e421119d8cd64661ce48437fea5e2c2bbf7cd4a48afb4a3a1a74d3a56"
+    sha256 cellar: :any,                 arm64_ventura:  "98e05bbc6d286fc278d95fdc175b6bdaf36edd0a266b4b996c609651aee6ec75"
+    sha256 cellar: :any,                 arm64_monterey: "7534900aa029c98483e2bdf51babf8b2e724dec38016c2dcf08112e6fb617282"
+    sha256 cellar: :any,                 sonoma:         "9264395b63bbd02c8a441ab164c3f51ddac0b07c91143fb0d0d7d95e1d72655f"
+    sha256 cellar: :any,                 ventura:        "9c835ddf02540503d864f9dba01b86d01aa529f5606d20c6824131692c2d4c8b"
+    sha256 cellar: :any,                 monterey:       "1cd02b8cbcfa2ef4f7709d42e04bf5d81a0e5e2e4be9ba9d643295db70233a99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd8e438f9b2794766766c3750f0d49e1a9765c9b01ed8efdefa995fe3bd9c154"
+  end
+
   depends_on "rust" => :build # for tiktoken
   depends_on "python@3.11"
 
