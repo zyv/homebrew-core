@@ -1,8 +1,8 @@
 class Ascii < Formula
   desc "List ASCII idiomatic names and octal/decimal code-point forms"
   homepage "http://www.catb.org/~esr/ascii/"
-  url "http://www.catb.org/~esr/ascii/ascii-3.19.tar.gz"
-  sha256 "f9da2efed82f245658f9561e5b756809e71eaf0e5a7735ac5beb924cdda9a560"
+  url "http://www.catb.org/~esr/ascii/ascii-3.20.tar.gz"
+  sha256 "9e6e57ea60d419a803a024ce6366254efb716266b84eedd58cd980dabcc11674"
   license "BSD-2-Clause"
 
   livecheck do
