@@ -27,11 +27,7 @@ jobs:
     runs-on: ubuntu-22.04
     container:
       image: ghcr.io/homebrew/ubuntu22.04:master
-      options: --user root
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -47,7 +43,7 @@ jobs:
 
       - name: Get list of autobump formulae
         id: autobump
-        run: echo "autobump_list=$(xargs < "$GITHUB_WORKSPACE"/.github/autobump.txt)" >> "$GITHUB_OUTPUT"
+        run: echo "autobump_list=$(xargs < "$(brew --repo homebrew/core)"/.github/autobump.txt)" >> "$GITHUB_OUTPUT"
 
       - name: Bump formulae
         uses: Homebrew/actions/bump-packages@master
