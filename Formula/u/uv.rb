@@ -6,6 +6,16 @@ class Uv < Formula
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "ca1169ea487f6f434e6b1b7f9c841b78b720e20758b9396acc68d414d5da4e27"
+    sha256 cellar: :any,                 arm64_ventura:  "9f982250f2594aeabdc527a6aad9f843e180a16243d62d307f2a8c55fdce0a5c"
+    sha256 cellar: :any,                 arm64_monterey: "ecaa1bdad062fa8252543bc0f4804639eefed54581424919116ffacaaa108576"
+    sha256 cellar: :any,                 sonoma:         "af7db072d3c00fe26c3aff0ed891b41d31be18e8de647fafe74a55460d9087f8"
+    sha256 cellar: :any,                 ventura:        "97b7687e5e0d885c5014ab8f2584d2d28335034d6b1ba07fbde5dc9cdabd8983"
+    sha256 cellar: :any,                 monterey:       "fec548d51cb304b8b7e7c018bfac3e8a350409ed89c4a1d66307e5d62d9484f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "831da35f1d440235f5a6bf02ce84b461b7ea13b292eb6fd3c1f834f38468b142"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "libgit2"
