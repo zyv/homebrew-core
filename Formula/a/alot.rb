@@ -24,10 +24,7 @@ class Alot < Formula
   depends_on "gpgme"
   depends_on "libmagic"
   depends_on "notmuch"
-  depends_on "python-setuptools"
-  depends_on "python-typing-extensions"
   depends_on "python@3.12"
-  depends_on "six"
 
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/97/90/81f95d5f705be17872843536b1868f351805acf6971251ff07c1b8334dbb/attrs-23.1.0.tar.gz"
@@ -74,9 +71,24 @@ class Alot < Formula
     sha256 "c1ba14b08e4a5f5c31a302b7721239695b2f0f058d125bd5ce1ee36b9d9d3c3b"
   end
 
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
+    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
   resource "twisted" do
     url "https://files.pythonhosted.org/packages/5b/6c/d58b1bfc47cf02bd282f32fee9bd74d834fb2a92fdedf3e56f1ddb778c18/twisted-23.8.0.tar.gz"
     sha256 "3c73360add17336a622c0d811c2a2ce29866b6e59b1125fd6509b17252098a24"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
+    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
   end
 
   resource "urwid" do
