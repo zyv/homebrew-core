@@ -32,6 +32,6 @@ class Azion < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/azion --version")
-    assert_match "Failed to build your resource", shell_output("#{bin}/azion dev 2>&1", 1)
+    assert_match "Failed to build your resource", shell_output("#{bin}/azion dev --yes 2>&1", 1)
   end
 end
