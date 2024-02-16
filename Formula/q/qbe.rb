@@ -1,8 +1,8 @@
 class Qbe < Formula
   desc "Compiler Backend"
   homepage "https://c9x.me/compile/"
-  url "https://c9x.me/compile/release/qbe-1.1.tar.xz"
-  sha256 "7d0a53dd40df48072aae317e11ddde15d1a980673160e514e235b9ecaa1db12c"
+  url "https://c9x.me/compile/release/qbe-1.2.tar.xz"
+  sha256 "a6d50eb952525a234bf76ba151861f73b7a382ac952d985f2b9af1df5368225d"
   license "MIT"
 
   livecheck do
