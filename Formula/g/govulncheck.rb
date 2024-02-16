@@ -4,6 +4,7 @@ class Govulncheck < Formula
   url "https://github.com/golang/vuln/archive/refs/tags/v1.0.4.tar.gz"
   sha256 "11fc5678f7d1d838b4dd38032baf32cd244d029dbe6a4a3e7d88a5e7ccdaf4f0"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6d1b5d0eef56b2d195c0585e69cab89a5b24912bcb1ce9f47c7a043c095b9510"
