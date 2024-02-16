@@ -1,8 +1,8 @@
 class WoofDoom < Formula
   desc "Woof! is a continuation of the Boom/MBF bloodline of Doom source ports"
   homepage "https://github.com/fabiangreffrath/woof"
-  url "https://github.com/fabiangreffrath/woof/archive/refs/tags/woof_12.0.2.tar.gz"
-  sha256 "b7babd807225cafcf114cad8aff4bcbe8fda773dde1842b1b19ab32a164b82e9"
+  url "https://github.com/fabiangreffrath/woof/archive/refs/tags/woof_14.0.0.tar.gz"
+  sha256 "b0571ccda5d9428091aa5e238980cc4c08a3c22db2d7d1a16faae636e245f93b"
   license "GPL-2.0-only"
   head "https://github.com/fabiangreffrath/woof.git", branch: "master"
 
@@ -36,7 +36,7 @@ class WoofDoom < Formula
     EOS
     (testpath/"test_invalid.wad").write testdata
 
-    expected_output = "CheckIWAD: IWAD tag not present test_invalid.wad"
+    expected_output = "Wad file test_invalid.wad doesn't have IWAD or PWAD id"
     assert_match expected_output, shell_output("#{bin}/woof -nogui -iwad test_invalid.wad 2>&1", 255)
   end
 end
