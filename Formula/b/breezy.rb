@@ -21,8 +21,6 @@ class Breezy < Formula
   depends_on "gettext" => :build
   depends_on "rust" => :build
   depends_on "python@3.12"
-  depends_on "pyyaml"
-  depends_on "six"
   uses_from_macos "openssl"
 
   resource "configobj" do
@@ -48,6 +46,16 @@ class Breezy < Formula
   resource "patiencediff" do
     url "https://files.pythonhosted.org/packages/57/9f/0973293d232696ae191cef7c4e8eb1ebbdb7728c48662ebf04c26fd576e4/patiencediff-0.2.14.tar.gz"
     sha256 "a604d5727f996f0fd9de4534b143d3e803ec4f1b18e40cd78e91ab48a289a95f"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "urllib3" do
