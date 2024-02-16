@@ -11,13 +11,7 @@ class WiremockStandalone < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8597e6c0109f6e4038341caaec2899bc88e87cb47322b5b103b000e4d8535245"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8597e6c0109f6e4038341caaec2899bc88e87cb47322b5b103b000e4d8535245"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8597e6c0109f6e4038341caaec2899bc88e87cb47322b5b103b000e4d8535245"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8597e6c0109f6e4038341caaec2899bc88e87cb47322b5b103b000e4d8535245"
-    sha256 cellar: :any_skip_relocation, ventura:        "8597e6c0109f6e4038341caaec2899bc88e87cb47322b5b103b000e4d8535245"
-    sha256 cellar: :any_skip_relocation, monterey:       "8597e6c0109f6e4038341caaec2899bc88e87cb47322b5b103b000e4d8535245"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ece895ebc05143fa3cb60f4e6d20573dbbbbfa31432c848d172d2291bac1bd7"
+    sha256 cellar: :any_skip_relocation, all: "48f3d3941892341e292c23262ed911ab21cdd750579a8e97d9249880e3622651"
   end
 
   depends_on "openjdk"
