@@ -3,8 +3,8 @@ class Iredis < Formula
 
   desc "Terminal Client for Redis with AutoCompletion and Syntax Highlighting"
   homepage "https://iredis.xbin.io/"
-  url "https://files.pythonhosted.org/packages/e1/f9/c302b8bdfcc55159e32999a4d6d9eb252ed91333a7ca7b34bd9e61d240ef/iredis-1.14.0.tar.gz"
-  sha256 "821336ab54e4cea7169ac51bd94f3daa45a3b9843b1adee1bf2ea3dd3230f184"
+  url "https://files.pythonhosted.org/packages/ec/3b/4c21a41cabb02aca14281fab7bcdde3792b1a03043fe36b7b1ffbe0be55d/iredis-1.14.1.tar.gz"
+  sha256 "0814a748aa63ddb4fc3fa1defb0a1d4874bc7d05812226f5378f4ceb53b5fe50"
   license "BSD-3-Clause"
   head "https://github.com/laixintao/iredis.git", branch: "master"
 
