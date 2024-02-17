@@ -1,8 +1,8 @@
 class Boxes < Formula
   desc "Draw boxes around text"
   homepage "https://boxes.thomasjensen.com/"
-  url "https://github.com/ascii-boxes/boxes/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "fa4f7cd1876e4b22e950b4ca7c90776eb8edcf137316bdfd9c1780cf7cfb5d73"
+  url "https://github.com/ascii-boxes/boxes/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "e226b4ff91e1260fc80e8312b39cde5a783b96e9f248530eae941b7f1bf6342a"
   license "GPL-3.0-only"
   head "https://github.com/ascii-boxes/boxes.git", branch: "master"
 
@@ -23,6 +23,7 @@ class Boxes < Formula
   depends_on "pcre2"
 
   uses_from_macos "flex" => :build
+  uses_from_macos "ncurses"
 
   def install
     # distro uses /usr/share/boxes change to prefix
