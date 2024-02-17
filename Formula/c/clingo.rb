@@ -1,8 +1,8 @@
 class Clingo < Formula
   desc "ASP system to ground and solve logic programs"
-  homepage "https://potassco.org/"
-  url "https://github.com/potassco/clingo/archive/refs/tags/v5.6.2.tar.gz"
-  sha256 "81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be"
+  homepage "https://potassco.org/clingo/"
+  url "https://github.com/potassco/clingo/archive/refs/tags/v5.7.1.tar.gz"
+  sha256 "544b76779676075bb4f557f05a015cbdbfbd0df4b2cc925ad976e86870154d81"
   license "MIT"
 
   livecheck do
@@ -42,14 +42,21 @@ class Clingo < Formula
   link_overwrite "bin/lpconvert"
   link_overwrite "bin/reify"
 
+  def python3
+    which("python3.12")
+  end
+
   def install
+    site_packages = Language::Python.site_packages(python3)
+
     system "cmake", "-S", ".", "-B", "build",
                     "-DCLINGO_BUILD_WITH_PYTHON=ON",
                     "-DCLINGO_BUILD_PY_SHARED=ON",
                     "-DPYCLINGO_USE_INSTALL_PREFIX=ON",
                     "-DPYCLINGO_USER_INSTALL=OFF",
                     "-DCLINGO_BUILD_WITH_LUA=ON",
-                    "-DPython_EXECUTABLE=#{which("python3.12")}",
+                    "-DPython_EXECUTABLE=#{python3}",
+                    "-DPYCLINGO_INSTALL_DIR=#{site_packages}",
                     "-DPYCLINGO_DYNAMIC_LOOKUP=OFF",
                     *std_cmake_args
     system "cmake", "--build", "build"
