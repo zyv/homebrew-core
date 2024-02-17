@@ -1,19 +1,11 @@
 class Citus < Formula
   desc "PostgreSQL-based distributed RDBMS"
   homepage "https://www.citusdata.com"
+  url "https://github.com/citusdata/citus/archive/refs/tags/v12.1.0.tar.gz"
+  sha256 "cc25122ecd5717ac0b14d8cba981265d15d71cd955210971ce6f174eb0036f9a"
   license "AGPL-3.0-only"
+  revision 1
   head "https://github.com/citusdata/citus.git", branch: "main"
-
-  stable do
-    url "https://github.com/citusdata/citus/archive/refs/tags/v12.1.0.tar.gz"
-    sha256 "cc25122ecd5717ac0b14d8cba981265d15d71cd955210971ce6f174eb0036f9a"
-
-    # Backport fix for macOS dylib suffix.
-    patch do
-      url "https://github.com/citusdata/citus/commit/0f28a69f12418d211ffba5f7ddd222fd0c47daeb.patch?full_index=1"
-      sha256 "b8a350538d75523ecc171ea8f10fc1d0a2f97bd7ac6116169d773b0b5714215e"
-    end
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "3feaa17bbc05d3902404413582f22f70b526f55797c357c775654f8c4e55c9b4"
@@ -27,18 +19,19 @@ class Citus < Formula
 
   depends_on "lz4"
   depends_on "openssl@3"
-  depends_on "postgresql@16"
+  depends_on "postgresql@14"
   depends_on "readline"
   depends_on "zstd"
 
   uses_from_macos "curl"
 
   def postgresql
-    Formula["postgresql@16"]
+    deps.map(&:to_formula)
+        .find { |f| f.name.start_with?("postgresql@") }
   end
 
   def install
-    ENV["PG_CONFIG"] = postgresql.opt_libexec/"bin/pg_config"
+    ENV["PG_CONFIG"] = postgresql.opt_bin/"pg_config"
 
     system "./configure", *std_configure_args
     system "make"
@@ -51,8 +44,8 @@ class Citus < Formula
 
   test do
     ENV["LC_ALL"] = "C"
-    pg_ctl = postgresql.opt_libexec/"bin/pg_ctl"
-    psql = postgresql.opt_libexec/"bin/psql"
+    pg_ctl = postgresql.opt_bin/"pg_ctl"
+    psql = postgresql.opt_bin/"psql"
     port = free_port
 
     system pg_ctl, "initdb", "-D", testpath/"test"
