@@ -8,13 +8,7 @@ class Ncnn < Formula
   head "https://github.com/Tencent/ncnn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "d75c2a159a4cc1bf1165d302e0bfcb7acc00ec12f52c8dcb67937d078442a01d"
-    sha256 cellar: :any,                 arm64_ventura:  "e7eedcc6b672d4f4ff40cba7b3984278ec06351f4c37325bdcd5502744fc7d32"
-    sha256 cellar: :any,                 arm64_monterey: "22f9bce91742fb03cd129183af65469f9df0afed7a0330b363aae81f761c135d"
-    sha256 cellar: :any,                 sonoma:         "adb02b8a3bc4ded55fda3ba649698a344fb87b04a99ec9c1dad08c4aeb732bfa"
-    sha256 cellar: :any,                 ventura:        "9146f293dd438018a14742144a5cc17c8867d81bf249501c5e37d76a8cff80a1"
-    sha256 cellar: :any,                 monterey:       "d8d7206c842938769ac837f9a1a97e631d0cc0baa03ba1d9feabd8999c58870b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "efe18a3790d5d8414992641259b7cf4637f3cbddcd7c35d197a1763ed94c646a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d7d1e16d1108dba1e4b7094f263f259f45f1bf4ab57dd54be1fbce4ed3a693fb"
   end
 
   depends_on "cmake" => :build
