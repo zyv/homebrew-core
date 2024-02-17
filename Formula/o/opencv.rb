@@ -12,13 +12,14 @@ class Opencv < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "ba39615dd15b721d827bc6e279e93ee9f8f5eb98318567e75dafb6860ce2ab26"
-    sha256 arm64_ventura:  "c564080714ed607e22d370d307cb6222a817a16dd485ac7d2eaaceeba1584ec7"
-    sha256 arm64_monterey: "ba1db9116dacc494c289c246980015eb8f0c878a5812a5f36c44ee5925013d6f"
-    sha256 sonoma:         "ae0d4c447b76c2d11f614e269370f91676d7fda5c954716b7dd09e0a774681b0"
-    sha256 ventura:        "dcd8a93b8783c50a13d2b95dccf120f6d1d07edea98d5f3303c22e81176ad93e"
-    sha256 monterey:       "4f9a46eaa5fc6e16837c3b56a59a74502fb90be9f182ec83c852f69fffceb9da"
-    sha256 x86_64_linux:   "f895888b6af7d5cb0a32003bb1f0da3a400c7c3d6f000c4fe66965a01d29b73d"
+    rebuild 1
+    sha256 arm64_sonoma:   "23b52b7eae72e228f4ceae31780ede90ac49084a51d36d5475f8b92597a1a895"
+    sha256 arm64_ventura:  "28e92ebdcbda5293d3838c566fa7cade2f473836cd216ab7d3afbd3922aeae25"
+    sha256 arm64_monterey: "f2ddde5f2ddff6aded6ab03c0a2bad19b57ce68f199a5ecb063c7560db7477f0"
+    sha256 sonoma:         "d0e3b64bcd085462c6e07bc4ff0795e38950adc7fc49d5c25f5ad0ee66591f1a"
+    sha256 ventura:        "eafc62749e42fc9e26ced73e2bfc19d5ee8ab528a3b4c8e0aa45669dd8bbb3f3"
+    sha256 monterey:       "728274319d4babb4b75c3891d87e84e2f7057f0faba2300014b59a43ea2c6dbf"
+    sha256 x86_64_linux:   "19443b8d5cabd9d7e722fc35cbe051c35e21d4a7b67162af065cb9b1504ca7b0"
   end
 
   depends_on "cmake" => :build
@@ -76,7 +77,7 @@ class Opencv < Formula
     libdirs.each { |l| (buildpath/"3rdparty"/l).rmtree }
 
     args = %W[
-      -DCMAKE_CXX_STANDARD=11
+      -DCMAKE_CXX_STANDARD=17
       -DCMAKE_OSX_DEPLOYMENT_TARGET=
       -DBUILD_JASPER=OFF
       -DBUILD_JPEG=OFF
@@ -170,7 +171,7 @@ class Opencv < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++11", "test.cpp", "-I#{include}/opencv4", "-o", "test"
+    system ENV.cxx, "-std=c++17", "test.cpp", "-I#{include}/opencv4", "-o", "test"
     assert_equal shell_output("./test").strip, version.to_s
 
     output = shell_output("#{python3} -c 'import cv2; print(cv2.__version__)'")
