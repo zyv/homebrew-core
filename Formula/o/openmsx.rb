@@ -53,6 +53,13 @@ class Openmsx < Formula
     cause "Requires C++20"
   end
 
+  # https://github.com/openMSX/openMSX/pull/1542
+  # remove in version > 19.1
+  patch do
+    url "https://github.com/openMSX/openMSX/commit/78939807459c8647174d86f0bcd77ed4310e187d.patch?full_index=1"
+    sha256 "cf752e2d85a8907cc55e12f7fa9350ffad61325c2614e011face593e57a58299"
+  end
+
   def install
     ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1300
 
