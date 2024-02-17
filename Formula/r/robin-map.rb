@@ -5,6 +5,10 @@ class RobinMap < Formula
   sha256 "2b54d2c1de2f73bea5c51d5dcbd64813a08caf1bfddcfdeee40ab74e9599e8e3"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "9ec3d8a7a6711689502a43c55592977ec6ce631be317ff8e7af3554fdb3b7498"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   def install
