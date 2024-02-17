@@ -4,6 +4,7 @@ class TemporalTables < Formula
   url "https://github.com/arkhipov/temporal_tables/archive/refs/tags/v1.2.2.tar.gz"
   sha256 "85517266748a438ab140147cb70d238ca19ad14c5d7acd6007c520d378db662e"
   license "BSD-2-Clause"
+  revision 1
 
   livecheck do
     url :stable
@@ -21,14 +22,15 @@ class TemporalTables < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fbf23af17784bccfed9a768e3e09625b47723ff7ae38d076dc99867ec881ea5"
   end
 
-  depends_on "postgresql@16"
+  depends_on "postgresql@14"
 
   def postgresql
-    Formula["postgresql@16"]
+    deps.map(&:to_formula)
+        .find { |f| f.name.start_with?("postgresql@") }
   end
 
   def install
-    system "make", "install", "PG_CONFIG=#{postgresql.opt_libexec}/bin/pg_config",
+    system "make", "install", "PG_CONFIG=#{postgresql.opt_bin}/pg_config",
                               "pkglibdir=#{lib/postgresql.name}",
                               "datadir=#{share/postgresql.name}",
                               "docdir=#{doc}"
@@ -36,8 +38,8 @@ class TemporalTables < Formula
 
   test do
     ENV["LC_ALL"] = "C"
-    pg_ctl = postgresql.opt_libexec/"bin/pg_ctl"
-    psql = postgresql.opt_libexec/"bin/psql"
+    pg_ctl = postgresql.opt_bin/"pg_ctl"
+    psql = postgresql.opt_bin/"psql"
     port = free_port
 
     system pg_ctl, "initdb", "-D", testpath/"test"
