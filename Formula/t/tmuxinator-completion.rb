@@ -11,7 +11,7 @@ class TmuxinatorCompletion < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "07356d3774292178ffbe9431a22dd9b65dfcecab1fa0bc350b6c0d9c67e47855"
+    sha256 cellar: :any_skip_relocation, all: "eb4be07c94ce27b0a469cf77315073a67a01f3de13610fcd8a9e3dd7df425348"
   end
 
   conflicts_with "tmuxinator", because: "the tmuxinator formula includes completion"
