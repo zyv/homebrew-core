@@ -1,8 +1,8 @@
 class Uffizzi < Formula
   desc "Self-serve developer platforms in minutes, not months with k8s virtual clusters"
   homepage "https://uffizzi.com"
-  url "https://github.com/UffizziCloud/uffizzi_cli/archive/refs/tags/v2.4.4.tar.gz"
-  sha256 "03ff8c4a90bd30379044f94750e47d4b8cc63560c8be17b56f7efdc1e17c8a3b"
+  url "https://github.com/UffizziCloud/uffizzi_cli/archive/refs/tags/v2.4.5.tar.gz"
+  sha256 "43817eac97590d9fd16dfb9c8066d7d7ade7b7bff5d5a4192ea2e7b21dc795f3"
   license "Apache-2.0"
 
   livecheck do
@@ -131,8 +131,8 @@ class Uffizzi < Formula
   end
 
   resource "minitest" do
-    url "https://rubygems.org/gems/minitest-5.21.2.gem"
-    sha256 "7685cdb8db964c7f68fcee974f21b62f0b60aaea2a6c898782e27e720ffebac2"
+    url "https://rubygems.org/gems/minitest-5.20.0.gem"
+    sha256 "a3faf26a757ced073aaae0bd10481340f53e221a4f50d8a6033591555374752e"
   end
 
   resource "ruby2_keywords" do
@@ -166,8 +166,8 @@ class Uffizzi < Formula
   end
 
   resource "uffizzi-cli" do
-    url "https://rubygems.org/gems/uffizzi-cli-2.4.4.gem"
-    sha256 "5dd4b90a960e7541d8a347ea03d749a0ee747049a907cf02dbb7a46a05394fee"
+    url "https://rubygems.org/gems/uffizzi-cli-2.4.5.gem"
+    sha256 "973cec46a986aa0061f428ab55781959b8b3b74d8f15d17a56c9353d63b43fa7"
   end
 
   def install
