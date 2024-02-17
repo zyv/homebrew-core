@@ -1,18 +1,9 @@
 class Liblo < Formula
   desc "Lightweight Open Sound Control implementation"
   homepage "https://liblo.sourceforge.net/"
-  license "LGPL-2.1"
-
-  stable do
-    url "https://downloads.sourceforge.net/project/liblo/liblo/0.31/liblo-0.31.tar.gz"
-    sha256 "2b4f446e1220dcd624ecd8405248b08b7601e9a0d87a0b94730c2907dbccc750"
-
-    # Fix -flat_namespace being used on Big Sur and later.
-    patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-      sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-    end
-  end
+  url "https://downloads.sourceforge.net/project/liblo/liblo/0.32/liblo-0.32.tar.gz"
+  sha256 "5df05f2a0395fc5ac90f6b538b8c82bb21941406fd1a70a765c7336a47d70208"
+  license "LGPL-2.1-or-later"
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "39f1705123d3a8b54e27f7e73d0177e93eff1a1f408aae472fc94b3f10e65a74"
@@ -38,16 +29,10 @@ class Liblo < Formula
   end
 
   def install
-    args = %W[
-      --disable-debug
-      --disable-dependency-tracking
-      --prefix=#{prefix}
-    ]
-
     if build.head?
-      system "./autogen.sh", *args
+      system "./autogen.sh", *std_configure_args
     else
-      system "./configure", *args
+      system "./configure", *std_configure_args
     end
 
     system "make", "install"
