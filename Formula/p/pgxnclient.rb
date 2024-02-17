@@ -1,4 +1,6 @@
 class Pgxnclient < Formula
+  include Language::Python::Virtualenv
+
   desc "Command-line client for the PostgreSQL Extension Network"
   homepage "https://pgxn.github.io/pgxnclient/"
   url "https://github.com/pgxn/pgxnclient/archive/refs/tags/v1.3.2.tar.gz"
@@ -17,16 +19,15 @@ class Pgxnclient < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6745c687892ab80f7ed281cdc4a1046591bca73953589d1dcc9cf5fdd6eb3a1f"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "python@3.12"
-  depends_on "six"
 
-  def python3
-    "python3.12"
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
