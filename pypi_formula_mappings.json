@@ -589,7 +589,7 @@
     ]
   },
   "linode-cli": {
-    "exclude_packages": ["certifi", "Pygments", "PyYAML", "packaging"]
+    "exclude_packages": ["certifi"]
   },
   "liquidctl": {
     "exclude_packages": ["pillow"]
