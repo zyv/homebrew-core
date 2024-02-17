@@ -5,6 +5,7 @@ class Noseyparker < Formula
       tag:      "v0.16.0",
       revision: "6fac285015b6e07bc8eacc020d3f3f270c0bfe2c"
   license "Apache-2.0"
+  head "https://github.com/praetorian-inc/noseyparker.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "50db564b661533644ea94832f316071e72ffc389bfd141bf5b75fa701f81b991"
