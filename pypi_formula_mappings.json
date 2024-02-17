@@ -6,7 +6,7 @@
     "exclude_packages": ["certifi", "lxml", "packaging", "pygments", "pyyaml"]
   },
   "anime-downloader": {
-    "exclude_packages": ["certifi", "six", "tabulate"]
+    "exclude_packages": ["certifi"]
   },
   "ansible": {
     "exclude_packages": [
@@ -81,7 +81,7 @@
     "extra_packages": ["fitsio"]
   },
   "athenacli": {
-    "exclude_packages": ["click", "pygments", "python-dateutil", "six", "sqlparse", "tabulate", "urllib3"]
+    "exclude_packages": ["sqlparse"]
   },
   "aws-elasticbeanstalk": {
     "exclude_packages": ["certifi", "cffi", "cryptography", "packaging", "pycparser", "python-dateutil", "PyYAML", "six"]
@@ -109,9 +109,6 @@
   },
   "awslogs": {
     "exclude_packages": ["six"]
-  },
-  "awsume": {
-    "exclude_packages": ["psutil", "pyyaml", "six"]
   },
   "b2-tools": {
     "exclude_packages": [
@@ -143,7 +140,7 @@
     "exclude_packages": ["certifi", "typing-extensions", "Pygments"]
   },
   "binwalk": {
-    "exclude_packages": ["numpy", "packaging", "pillow", "psutil", "pyparsing", "six"],
+    "exclude_packages": ["numpy", "pillow"],
     "extra_packages": ["capstone", "gnupg", "matplotlib", "pycryptodome"]
   },
   "black": {
@@ -158,9 +155,6 @@
   },
   "bpytop": {
     "exclude_packages": ["psutil"]
-  },
-  "breezy": {
-    "exclude_packages": ["six", "PyYAML"]
   },
   "buku": {
     "package_name": "buku[server]",
@@ -191,9 +185,6 @@
   },
   "cffi": {
     "exclude_packages": ["pycparser"]
-  },
-  "cfn-flip": {
-    "exclude_packages": ["click", "six", "PyYAML"]
   },
   "cfn-lint": {
     "exclude_packages": [
@@ -241,9 +232,6 @@
   "cloudformation-cli": {
     "extra_packages": ["cloudformation-cli-go-plugin", "cloudformation-cli-java-plugin", "cloudformation-cli-python-plugin"],
     "exclude_packages": ["certifi", "click", "markupsafe", "six", "packaging", "PyYAML", "typing-extensions"]
-  },
-  "cloudiscovery": {
-    "exclude_packages": ["pytz", "six"]
   },
   "cloudsplaining": {
     "exclude_packages": ["certifi", "click", "markdown", "markupsafe", "pyyaml", "six"]
@@ -296,10 +284,7 @@
     "exclude_packages": ["certifi", "cryptography", "packaging"]
   },
   "datasette": {
-    "exclude_packages": [
-      "certifi", "click", "markupsafe", "PyYAML", "six",
-      "typing-extensions", "uvicorn"
-    ]
+    "exclude_packages": ["certifi", "uvicorn"]
   },
   "detect-secrets": {
     "exclude_packages": ["requests", "PyYAML"]
