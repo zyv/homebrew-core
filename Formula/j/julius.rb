@@ -27,6 +27,10 @@ class Julius < Formula
   patch :DATA
 
   def install
+    # https://github.com/julius-speech/julius/issues/153 fixes implicit declaration error
+    inreplace "libsent/src/adin/adin_mic_darwin_coreaudio.c",
+      "#include <stdio.h>", "#include <stdio.h>\n#include <sent/stddefs.h>"
+
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
