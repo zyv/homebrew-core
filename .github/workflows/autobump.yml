@@ -51,5 +51,3 @@ jobs:
         with:
           token: ${{ secrets.HOMEBREW_CORE_REPO_WORKFLOW_TOKEN }}
           formulae: ${{ github.event.inputs.formulae || steps.autobump.outputs.autobump_list }}
-        env:
-          HOMEBREW_TEST_BOT_AUTOBUMP: 1
