@@ -35,6 +35,10 @@ class Owamp < Formula
   patch :DATA
 
   def install
+    # fix implicit-function-declaration error
+    # reported upstream by email
+    inreplace "owamp/capi.c", "#include <assert.h>", "#include <assert.h>\n#include <ctype.h>"
+
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
