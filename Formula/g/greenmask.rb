@@ -5,6 +5,16 @@ class Greenmask < Formula
   sha256 "39699698cd1326fec8f075475f2aeda225f30e701149a5b366730856c7e39dea"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0c6b35750b814568124e45bc324aa874cc745a891b6480e5a0d468f348d1b8e8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "47e18ac57d1cd27ad323e42b576d33b7c8d1b5579f13c236c0170616cdd36f08"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "58b62640ef7f7f7e4f2618191f701c695a85938639dbcb1d1ea842dc0ab3c642"
+    sha256 cellar: :any_skip_relocation, sonoma:         "5cdb47525685b069295250bd6ad48d3514a1ea512d61f56ac442e7a25ae7d46e"
+    sha256 cellar: :any_skip_relocation, ventura:        "4ee74ceea5179be089ba182178d1cafd7f04208e9176fac204f0ee78c8c5b884"
+    sha256 cellar: :any_skip_relocation, monterey:       "250d4696ae64f5a85adf351fa45f9373805cb0db1bd11d9e88904596e945fd72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e482969bf222069ef4e48dfb661dac9bf5cf8cf538d55eadc72f167676e1255e"
+  end
+
   depends_on "go" => :build
 
   def install
