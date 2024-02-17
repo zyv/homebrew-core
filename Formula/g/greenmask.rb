@@ -4,6 +4,7 @@ class Greenmask < Formula
   url "https://github.com/GreenmaskIO/greenmask/archive/refs/tags/v0.1.5.tar.gz"
   sha256 "39699698cd1326fec8f075475f2aeda225f30e701149a5b366730856c7e39dea"
   license "Apache-2.0"
+  head "https://github.com/GreenmaskIO/greenmask.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0c6b35750b814568124e45bc324aa874cc745a891b6480e5a0d468f348d1b8e8"
