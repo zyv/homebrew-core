@@ -15,8 +15,8 @@ class Ncnn < Formula
   depends_on "protobuf"
 
   on_macos do
-    depends_on "glslang" => :build
     depends_on "vulkan-headers" => [:build, :test]
+    depends_on "glslang"
     depends_on "libomp"
     depends_on "molten-vk"
   end
