@@ -7,15 +7,13 @@ class Nfdump < Formula
   head "https://github.com/phaag/nfdump.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "29e9ad6c311b8b90a3c58d9fab6b77ccf9c5ed20c79be3870ab6739012b2e07c"
-    sha256 cellar: :any,                 arm64_ventura:  "50eeb03bae9b62393985bd7879eb640422a75943df16e9f023bbb0eedbe0a8ba"
-    sha256 cellar: :any,                 arm64_monterey: "fe3792a8237227e5d1b26a9fb0a175053c953270e082844a31b178bd08c1119d"
-    sha256 cellar: :any,                 arm64_big_sur:  "a0f283180241934960029478fe9215ae5b0eb2160f8b1989e9ef9750024ec858"
-    sha256 cellar: :any,                 sonoma:         "a84273e2f05bebc14f648a1f29ebb68c32cf6b757b1d5ca5c76933eb4bd509b5"
-    sha256 cellar: :any,                 ventura:        "33c9d0b402c2b4f30d8bae3206323dc9ff7f1100950c0e9867736bd38daddfa0"
-    sha256 cellar: :any,                 monterey:       "cc5a415e262adc15e207645f11d265298c9a73a22c8d441b1ae11fdd9c9fe818"
-    sha256 cellar: :any,                 big_sur:        "0db91bfdde00f9eaf26f2ab5a23f4623f808ddca50ffef180f7bdd4537187f48"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b970f64f2505ff3028cea23a1015664c490606fe8e9c52eb26284e7353aba299"
+    sha256 cellar: :any,                 arm64_sonoma:   "42fa76feef300134d762f24e8d44867855ad1f43641fec68998d39df23dce6cb"
+    sha256 cellar: :any,                 arm64_ventura:  "543982b0fe73e4278ae50a28305e2503f6f0923114b0793e5f848a49055d6b92"
+    sha256 cellar: :any,                 arm64_monterey: "798c9f5fa5609a306c20de9a6521792152aefd2e027f8144ec6f4a6a342aaca5"
+    sha256 cellar: :any,                 sonoma:         "f1e1729415f6311951d6a910d1a616c0b608eec317285be862559cc735a92a92"
+    sha256 cellar: :any,                 ventura:        "830e40010f31f0e9487b018b27b7a9539adec2d19d33b1a6c35c358e8b0eea41"
+    sha256 cellar: :any,                 monterey:       "a9123fe3397f88570182367261c1c6b30a323e4da4a1427bcb200898149bcdb1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64b660aaaa2bea081d802e32c32af4d2869b8a421cefb000467758b106f20847"
   end
 
   depends_on "autoconf" => :build
