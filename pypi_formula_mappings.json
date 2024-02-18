@@ -68,7 +68,7 @@
     "exclude_packages": ["certifi"]
   },
   "arxiv_latex_cleaner": {
-    "exclude_packages": ["absl-py", "pillow", "regex", "six", "PyYAML"]
+    "exclude_packages": ["pillow"]
   },
   "astrometry-net": {
     "exclude_packages": ["numpy"],
