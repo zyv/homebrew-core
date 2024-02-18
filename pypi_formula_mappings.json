@@ -748,12 +748,6 @@
   "pferd": {
     "exclude_packages": ["certifi", "Pygments"]
   },
-  "pgcli": {
-    "exclude_packages": [
-      "click", "Pygments", "python-dateutil", "six", "sqlparse", "tabulate",
-      "typing-extensions"
-    ]
-  },
   "pip-audit": {
     "exclude_packages": ["certifi", "packaging", "Pygments", "pyparsing", "six", "toml"]
   },
