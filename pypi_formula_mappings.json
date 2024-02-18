@@ -488,12 +488,6 @@
       "Pygments", "virtualenv"
     ]
   },
-  "homeassistant-cli": {
-    "exclude_packages": [
-      "attrs", "click", "jinja2", "markupsafe", "ply", "pytz", "requests",
-      "six", "tabulate"
-    ]
-  },
   "howdoi": {
     "exclude_packages": [
       "certifi", "cffi", "cryptography", "lxml", "pycparser", "Pygments",
