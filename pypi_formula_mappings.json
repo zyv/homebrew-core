@@ -1038,10 +1038,8 @@
     "exclude_packages": ["packaging"]
   },
   "sphinx-doc": {
-    "extra_packages": ["numpydoc"],
-    "exclude_packages": [
-      "docutils", "jinja2", "packaging", "Pygments", "requests", "tabulate"
-    ]
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["numpydoc"]
   },
   "spoof-mac": {
     "exclude_packages": ["docopt"]
