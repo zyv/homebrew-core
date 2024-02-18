@@ -1,9 +1,8 @@
 class Quasi88 < Formula
   desc "PC-8801 emulator"
   homepage "https://www.eonet.ne.jp/~showtime/quasi88/"
-  url "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-0.6.4.tgz"
-  sha256 "2c4329f9f77e02a1e1f23c941be07fbe6e4a32353b5d012531f53b06996881ff"
-  revision 1
+  url "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-0.7.0.tgz"
+  sha256 "62bc2aa09dd19ec1d15386d96bd71148c2cdf2a0bd012529643a568a77faa714"
 
   livecheck do
     url "https://www.eonet.ne.jp/~showtime/quasi88/download.html"
@@ -31,12 +30,13 @@ class Quasi88 < Formula
       SDL_VERSION=1
       ARCH=macosx
       SOUND_SDL=1
-      LD=#{ENV.cxx}
+      CC=#{ENV.cc}
       CXX=#{ENV.cxx}
+      LD=#{ENV.cxx}
       CXXLIBS=
     ]
     system "make", *args
-    bin.install "quasi88.sdl" => "quasi88"
+    bin.install "quasi88"
   end
 
   def caveats
