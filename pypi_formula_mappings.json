@@ -1167,9 +1167,6 @@
   "weasyprint": {
     "exclude_packages": ["Brotli", "fonttools", "Pillow", "six", "cffi", "pycparser"]
   },
-  "west": {
-    "exclude_packages": ["docopt", "packaging", "python-dateutil", "PyYAML", "six"]
-  },
   "woob": {
     "exclude_packages": [
       "certifi", "lxml", "packaging", "pillow", "Pygments", "python-dateutil",
