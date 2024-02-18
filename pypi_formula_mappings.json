@@ -1038,12 +1038,7 @@
     ]
   },
   "snapcraft": {
-    "exclude_packages": [
-      "attrs", "cffi", "click", "lxml", "packaging", "pygit2",
-      "python-dateutil", "pytz", "pyyaml", "psutil", "pyparsing", "requests",
-      "six", "tabulate", "toml", "typing-extensions"
-    ],
-    "extra_packages": ["catkin_pkg", "pydantic-yaml[yaml]<1", "setuptools<60"]
+    "extra_packages": ["catkin_pkg"]
   },
   "solc-select": {
     "exclude_packages": ["packaging"]
