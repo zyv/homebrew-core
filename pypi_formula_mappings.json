@@ -270,7 +270,7 @@
     "exclude_packages": ["certifi", "uvicorn"]
   },
   "detect-secrets": {
-    "exclude_packages": ["requests", "PyYAML"]
+    "exclude_packages": ["certifi"]
   },
   "diffoscope": {
     "package_name": "diffoscope[cmdline]"
