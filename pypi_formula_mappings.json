@@ -255,12 +255,6 @@
       "certifi", "keyring", "packaging", "pycparser", "pyyaml", "six", "typing-extensions", "virtualenv"
     ]
   },
-  "cookiecutter": {
-    "exclude_packages": [
-      "click", "jinja2", "markupsafe", "pygments", "python-dateutil",
-      "pyyaml", "requests", "six"
-    ]
-  },
   "cppman": {
     "exclude_packages": ["six"]
   },
