@@ -19,7 +19,6 @@ class Fortls < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc750c090055052b2ddc422030bf75e7d56aeee7a88dadde6455b0d665fe7faf"
   end
 
-  depends_on "python-packaging"
   depends_on "python@3.12"
 
   conflicts_with "fortran-language-server", because: "both install `fortls` binaries"
@@ -27,6 +26,11 @@ class Fortls < Formula
   resource "json5" do
     url "https://files.pythonhosted.org/packages/f9/40/89e0ecbf8180e112f22046553b50a99fdbb9e8b7c49d547cda2bfa81097b/json5-0.9.14.tar.gz"
     sha256 "9ed66c3a6ca3510a976a9ef9b8c0787de24802724ab1860bc0153c7fdd589b02"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
+    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
   end
 
   def install
