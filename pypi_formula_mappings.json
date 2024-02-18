@@ -134,7 +134,7 @@
     "exclude_packages": ["certifi", "lxml", "packaging", "pyparsing", "six"]
   },
   "bilix": {
-    "exclude_packages": ["certifi", "typing-extensions", "Pygments"]
+    "exclude_packages": ["certifi"]
   },
   "binwalk": {
     "exclude_packages": ["numpy", "pillow"],
