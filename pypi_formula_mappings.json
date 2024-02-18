@@ -1189,10 +1189,7 @@
     "exclude_packages": ["toml"]
   },
   "vunnel": {
-    "exclude_packages": [
-      "certifi", "click", "jinja2", "lxml", "markupsafe", "packaging", "pluggy",
-      "python-dateutil", "pyyaml", "ruff", "six", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "watson": {
     "exclude_packages": ["certifi", "click", "python-dateutil", "six"]
