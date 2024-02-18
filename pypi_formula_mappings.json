@@ -603,7 +603,7 @@
     "extra_packages": ["wheel"]
   },
   "mapproxy": {
-    "exclude_packages": ["certifi", "pillow", "PyYAML"],
+    "exclude_packages": ["certifi", "pillow"],
     "extra_packages": ["pyproj"]
   },
   "mathlibtools": {
