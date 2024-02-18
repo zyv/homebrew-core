@@ -716,9 +716,6 @@
       "PyYAML", "six", "pytz"
     ]
   },
-  "organize-tool": {
-    "exclude_packages": ["cffi", "click", "jinja2", "markupsafe", "pycparser", "Pygments", "PyYAML", "six"]
-  },
   "osc": {
     "exclude_packages": ["cffi", "pycparser", "cryptography"]
   },
