@@ -8,14 +8,14 @@ class Glances < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8975199729672566e15b0ec095cc88b048dcb5eafd1f116debc5c75cd218d404"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f897e7e780bffb144439713351420078a7e4c8a1c3dc2eb9bf9ec1bcac044440"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f8e903fffdf03b3e9fb57478a575f3e7ef2ba60b7b291da23c86b86db25da610"
-    sha256 cellar: :any_skip_relocation, sonoma:         "354ecf359f2ba52e90068961d8db04797ac4a513f5bd88277fe8364ff23bb795"
-    sha256 cellar: :any_skip_relocation, ventura:        "dde228e56d2bd9634e1d80a2f7d786dab00a056aecc1fbe75e24a8213c5f88b4"
-    sha256 cellar: :any_skip_relocation, monterey:       "0600c2432101a001cd67bfe4b7ee0aded6b149f39a314fb9bcd3c3536d600ebf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "75b17c5577dc5a51614d2abd4c612ce9a692c3295fe98561f3f2786197c2d1d1"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "94cf86e270364b6d5afa586d699740dee8262295ebcc806959807d2980cc4937"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e1d27318512abbb5ef932b174efc7b888b021fdfcdb61f60f0ec25b03aed2e80"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "096de5c73c7f4245a974c96ca2e8e7a86d7b56af37203ede48a38bf551423197"
+    sha256 cellar: :any_skip_relocation, sonoma:         "d723a52308c014c5e89a8d9a88ccf41fcf3e0b4e10bb924f4578dd0aea8d0bea"
+    sha256 cellar: :any_skip_relocation, ventura:        "9142b4ca73e862ab8e3721ac77925ff28c20ed726d2498289cb3b6d0803ba9e7"
+    sha256 cellar: :any_skip_relocation, monterey:       "b9832aa17005c5eafb2ec44d81e0613ec28da12d7f13f217876521516862d9a0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cefcd43cb168e567d5544477554213c7ffa95b4f2617c042218b3177d74a7a6d"
   end
 
   depends_on "python@3.12"
