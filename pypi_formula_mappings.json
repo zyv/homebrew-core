@@ -1102,10 +1102,7 @@
     "exclude_packages": ["six"]
   },
   "theharvester": {
-    "exclude_packages": [
-      "argcomplete", "certifi", "cffi", "filelock", "lxml", "packaging", "pygments", "python-dateutil", "PyYAML",
-      "six", "typing-extensions", "uvicorn"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "tmuxp": {
     "exclude_packages": ["PyYAML"]
