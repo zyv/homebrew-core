@@ -368,9 +368,6 @@
   "esptool": {
     "exclude_packages": ["cffi", "cryptography", "pycparser", "six", "PyYAML"]
   },
-  "euler-py": {
-    "exclude_packages": ["click"]
-  },
   "evernote-backup": {
     "exclude_packages": ["certifi", "click", "pyparsing"]
   },

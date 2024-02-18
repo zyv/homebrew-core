@@ -1,4 +1,6 @@
 class EulerPy < Formula
+  include Language::Python::Virtualenv
+
   desc "Project Euler command-line tool written in Python"
   homepage "https://github.com/iKevinY/EulerPy"
   url "https://github.com/iKevinY/EulerPy/archive/refs/tags/v1.4.0.tar.gz"
@@ -18,16 +20,20 @@ class EulerPy < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c570e81e52680c373bf09d4e2f4372275f36e3579fbd1603f9f8ca9f96ef04f"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-click"
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
+    sha256 "ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
+  end
+
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
+    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
