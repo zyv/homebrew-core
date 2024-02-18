@@ -281,8 +281,7 @@
     "exclude_packages": ["requests", "PyYAML"]
   },
   "diffoscope": {
-    "package_name": "diffoscope[cmdline]",
-    "exclude_packages": ["argcomplete"]
+    "package_name": "diffoscope[cmdline]"
   },
   "dnsrobocert": {
     "exclude_packages": [
