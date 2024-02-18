@@ -721,9 +721,6 @@
   "percol": {
     "exclude_packages": ["six"]
   },
-  "peru": {
-    "exclude_packages": ["PyYAML"]
-  },
   "pferd": {
     "exclude_packages": ["certifi", "Pygments"]
   },
