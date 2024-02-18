@@ -70,9 +70,6 @@
   "arxiv_latex_cleaner": {
     "exclude_packages": ["absl-py", "pillow", "regex", "six", "PyYAML"]
   },
-  "asitop": {
-    "exclude_packages": ["psutil", "six"]
-  },
   "astrometry-net": {
     "exclude_packages": ["numpy"],
     "extra_packages": ["fitsio"]
