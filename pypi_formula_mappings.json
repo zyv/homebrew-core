@@ -1214,7 +1214,7 @@
     "extra_packages": ["colorama"]
   },
   "wtfis": {
-    "exclude_packages": ["certifi", "click", "pygments", "typing-extensions"]
+    "exclude_packages": ["certifi"]
   },
   "wxpython": {
     "exclude_packages": ["numpy", "pillow", "six"]
