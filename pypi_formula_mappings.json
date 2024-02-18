@@ -1198,9 +1198,6 @@
   "virtualenvwrapper": {
     "exclude_packages": ["virtualenv"]
   },
-  "virtualenv": {
-    "exclude_packages": ["distlib", "filelock", "platformdirs"]
-  },
   "virtualfish": {
     "exclude_packages": ["packaging", "psutil"]
   },
