@@ -754,9 +754,6 @@
       "typing-extensions"
     ]
   },
-  "pgxnclient": {
-    "exclude_packages": ["six"]
-  },
   "pip-audit": {
     "exclude_packages": ["certifi", "packaging", "Pygments", "pyparsing", "six", "toml"]
   },
