@@ -178,7 +178,7 @@
     "exclude_packages": ["certifi", "cffi", "click", "cryptography", "markupsafe", "pycparser", "six"]
   },
   "cf2tf": {
-    "exclude_packages": ["certifi", "click", "packaging", "six"]
+    "exclude_packages": ["certifi"]
   },
   "cffi": {
     "exclude_packages": ["pycparser"]
