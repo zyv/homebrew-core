@@ -451,9 +451,6 @@
   "gitlint": {
     "exclude_packages": ["click", "python-dateutil", "six"]
   },
-  "glances": {
-    "exclude_packages": ["packaging", "psutil"]
-  },
   "goolabs": {
     "exclude_packages": ["click", "requests", "six"]
   },
