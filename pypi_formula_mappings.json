@@ -1220,9 +1220,6 @@
     "package_name": "xonsh[ptk,pygments,proctitle]",
     "exclude_packages": ["Pygments"]
   },
-  "xxh": {
-    "exclude_packages": ["PyYAML"]
-  },
   "yamale": {
     "exclude_packages": ["PyYAML"]
   },
