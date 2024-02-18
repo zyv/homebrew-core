@@ -404,7 +404,7 @@
   },
   "keyring": {
     "package_name": "keyring[completion]",
-    "exclude_packages": ["cffi", "cryptography", "pycparser"]
+    "exclude_packages": ["cryptography"]
   },
   "ldeep": {
     "exclude_packages": ["cryptography"]
