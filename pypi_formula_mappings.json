@@ -902,9 +902,6 @@
   "rbtools": {
     "exclude_packages": ["certifi", "six", "typing-extensions"]
   },
-  "rdiff-backup": {
-    "exclude_packages": ["PyYAML"]
-  },
   "recon-ng": {
     "exclude_packages": ["certifi", "lxml", "PyYAML", "six", "pytz"]
   },
