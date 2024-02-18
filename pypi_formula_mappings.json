@@ -199,7 +199,7 @@
     "exclude_packages": ["certifi"]
   },
   "check-jsonschema": {
-    "exclude_packages": ["attrs", "click", "python-dateutil", "requests", "six"],
+    "exclude_packages": ["certifi"],
     "extra_packages": [
       "fqdn", "isoduration", "jsonpointer", "rfc3339-validator",
       "rfc3987", "uri_template", "webcolors"
