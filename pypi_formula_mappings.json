@@ -1042,9 +1042,6 @@
   "slither-analyzer": {
     "exclude_packages": ["certifi", "crytic-compile", "packaging", "solc-select", "toml", "typing-extensions"]
   },
-  "snakefmt": {
-    "exclude_packages": ["black", "toml"]
-  },
   "snakemake": {
     "exclude_packages": [
       "certifi", "docutils", "markupsafe", "packaging", "psutil", "pyyaml", "tabulate"
