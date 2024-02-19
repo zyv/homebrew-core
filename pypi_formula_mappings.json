@@ -381,7 +381,7 @@
     "exclude_packages": ["markdown", "markupsafe", "pygments"]
   },
   "gallery-dl": {
-    "exclude_packages": ["requests"]
+    "exclude_packages": ["certifi"]
   },
   "gcalcli": {
     "exclude_packages": ["certifi", "pyparsing", "six"]
