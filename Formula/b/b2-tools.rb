@@ -3,8 +3,8 @@ class B2Tools < Formula
 
   desc "B2 Cloud Storage Command-Line Tools"
   homepage "https://github.com/Backblaze/B2_Command_Line_Tool"
-  url "https://files.pythonhosted.org/packages/0a/12/623f37900c1e9725901564819a11bab20ebf6dae5ecf206672a664c38031/b2-3.15.0.tar.gz"
-  sha256 "d74736cdd7402f2efe086c618d40bab4c2d0719dd698b7916356cd296ba7032b"
+  url "https://files.pythonhosted.org/packages/0a/6c/60841f3e0bc58450bf622a59a61bf2521d51d9070c533081b5e5609aa528/b2-3.16.0.tar.gz"
+  sha256 "eb13ae6eeb01144d2cb3d9f0257bafa08fbf084b4247079ab3c05eed6e1e9936"
   license "MIT"
 
   bottle do
@@ -34,8 +34,8 @@ class B2Tools < Formula
   end
 
   resource "b2sdk" do
-    url "https://files.pythonhosted.org/packages/24/0c/cf4705f98ca0edff0f29e3f7407a1cd2265fa6920c27be74ee172cdb37e1/b2sdk-1.30.1.tar.gz"
-    sha256 "9217c30bfb5891e468c726aae2aace996e628411885752437bdf0d4b8a3ba29d"
+    url "https://files.pythonhosted.org/packages/a6/41/dbfbd2db5aedca17ef2b1a0e5c0fa3d1e9d0500eabec40d6c255120c343c/b2sdk-1.31.0.tar.gz"
+    sha256 "3e0e4a78e273ee4cafd622a849c1c20ba75900f4f66a252b0cc7174792c21d2d"
   end
 
   resource "charset-normalizer" do
@@ -104,8 +104,8 @@ class B2Tools < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/06/04/e65e7f457ce9a2e338366a3a873ec6994e081cf4f99becb59ab6ce19e4b5/tqdm-4.65.2.tar.gz"
-    sha256 "5f7d8b4ac76016ce9d51a7f0ea30d30984888d97c474fdc4a4148abfb5ee76aa"
+    url "https://files.pythonhosted.org/packages/ea/85/3ce0f9f7d3f596e7ea57f4e5ce8c18cb44e4a9daa58ddb46ee0d13d6bff8/tqdm-4.66.2.tar.gz"
+    sha256 "6cd52cdf0fef0e0f543299cfc96fec90d7b8a7e88745f411ec33eb44d5ed3531"
   end
 
   resource "types-python-dateutil" do
@@ -123,7 +123,6 @@ class B2Tools < Formula
 
     system bin/"b2", "install-autocomplete", "--shell", "bash"
     bash_completion.install "#{Dir.home}/.bash_completion.d/b2"
-    pkgshare.install (buildpath/"contrib").children
   end
 
   test do
