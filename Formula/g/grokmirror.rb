@@ -10,14 +10,14 @@ class Grokmirror < Formula
   head "https://github.com/mricon/grokmirror.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0734b350dbe50cc991fd9218e541b96019e4af7fd6ce3c4bd71ea75967173f60"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0beff38baa132fe21dac39b0b1d7b1e5dabd51733b81d1ba32efde71197eeb2d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "00b1f516078c53c36278dd5bb921bffa18407ca0c5023a3eaa8dd9d2c94ddc72"
-    sha256 cellar: :any_skip_relocation, sonoma:         "4c627c8fc433d1d1a19a104eabb6e314e569fd35047d45575239a867a9cdb9b3"
-    sha256 cellar: :any_skip_relocation, ventura:        "68848143483b3ddb6cbfc5c688051dafe18c9ac36edea2cb5b9777a3ffc9f4cc"
-    sha256 cellar: :any_skip_relocation, monterey:       "6f287d5751e12b42008fa2a4ae311a90e859540a8d97a0cfa7db75320f2f1956"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5bc1cb99b2b9e001670c44d3790e7dd1c2fc9990d288032220116b60a809c582"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4c557379e61c491ebeabc41aa8965ed767ccccdaf04a6cf60cf31ad93e514c12"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f4ebef4f21c9a3ad83006e8b6b21e1e374195fa69efcb89678af73611cc63244"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d5e648fa5c0d43cbf30b227b89d221b565e574b001f4e24f3d12711dadade83"
+    sha256 cellar: :any_skip_relocation, sonoma:         "5e9164165c5fff4af9374e13ab4690b8ffd69051c1cfea097e767d485e6b9b1e"
+    sha256 cellar: :any_skip_relocation, ventura:        "9bb00a337d70282fa78f113285508ff0e1e696df4c54daf2cbf98716d42243e6"
+    sha256 cellar: :any_skip_relocation, monterey:       "d31582ff8a87c15de78aacaaf97d7b73e6564534896b4210d2a9f5c0ea21a499"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7122c9f8ee3da3d6aa21a733b58e012e8adce0d5e88bc9bd8bd7ba0daabf6873"
   end
 
   depends_on "python-certifi"
