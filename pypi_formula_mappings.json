@@ -1144,11 +1144,8 @@
     "exclude_packages": ["Brotli", "fonttools", "Pillow", "six", "cffi", "pycparser"]
   },
   "woob": {
-    "exclude_packages": [
-      "certifi", "lxml", "packaging", "pillow", "Pygments", "python-dateutil",
-      "PyYAML", "six"
-    ],
-    "extra_packages": ["colorama"]
+    "exclude_packages": ["certifi", "pillow"],
+    "extra_packages": ["setuptools"]
   },
   "wtfis": {
     "exclude_packages": ["certifi"]
