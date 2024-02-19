@@ -1,8 +1,8 @@
 class GitCliff < Formula
   desc "Highly customizable changelog generator"
   homepage "https://github.com/orhun/git-cliff"
-  url "https://github.com/orhun/git-cliff/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "8ec9a2c9cd0e97a8111a82bcf2fce415f40818897bdc76a2c5cc63d99114ec30"
+  url "https://github.com/orhun/git-cliff/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "ab29fbda532bec2a344d99f39b7998063c576efee92a1bee083c6fba5f52e4ef"
   license all_of: ["Apache-2.0", "MIT"]
 
   bottle do
@@ -49,8 +49,16 @@ class GitCliff < Formula
     system "git", "init"
     system "git", "add", "cliff.toml"
     system "git", "commit", "-m", "chore: initial commit"
-    changelog = "### Miscellaneous Tasks\n\n- Initial commit"
-    assert_match changelog, shell_output("git cliff")
+
+    assert_match <<~EOS, shell_output("git cliff")
+      All notable changes to this project will be documented in this file.
+
+      ## [unreleased]
+
+      ### ⚙️ Miscellaneous Tasks
+
+      - Initial commit
+    EOS
 
     linkage_with_libgit2 = (bin/"git-cliff").dynamically_linked_libraries.any? do |dll|
       next false unless dll.start_with?(HOMEBREW_PREFIX.to_s)
