@@ -7,8 +7,8 @@ class Gmic < Formula
   head "https://github.com/GreycLab/gmic.git", branch: "master"
 
   livecheck do
-    url "https://gmic.eu/files/source/"
-    regex(/href=.*?gmic[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url "https://gmic.eu/download.html"
+    regex(/Latest\s+stable:.*?href=.*?gmic[._-]v?(\d+(?:\.\d+)+)\.t/im)
   end
 
   bottle do
