@@ -1,8 +1,8 @@
 class Mgba < Formula
   desc "Game Boy Advance emulator"
   homepage "https://mgba.io/"
-  url "https://github.com/mgba-emu/mgba/archive/refs/tags/0.10.2.tar.gz"
-  sha256 "60afef8fb79ba1f7be565b737bae73c6604a790391c737f291482a7422d675ae"
+  url "https://github.com/mgba-emu/mgba/archive/refs/tags/0.10.3.tar.gz"
+  sha256 "be2cda7de3da8819fdab0c659c5cd4c4b8ca89d9ecddeeeef522db6d31a64143"
   license "MPL-2.0"
   head "https://github.com/mgba-emu/mgba.git", branch: "master"
 
@@ -26,6 +26,7 @@ class Mgba < Formula
   depends_on "ffmpeg"
   depends_on "libepoxy"
   depends_on "libpng"
+  depends_on "libsamplerate"
   depends_on "libzip"
   depends_on "lua"
   depends_on "qt@5"
@@ -43,11 +44,19 @@ class Mgba < Formula
   end
 
   def install
+    # https://github.com/mgba-emu/mgba/issues/3115
+    args = []
+    args << "-DUSE_DISCORD_RPC=OFF" if OS.linux?
+
+    # Disable CMake fixup_bundle to prevent copying dylibs into app bundle
+    inreplace "src/platform/qt/CMakeLists.txt", "fixup_bundle(", "# \\0"
+
     # Install .app bundle into prefix, not prefix/Applications
     inreplace "src/platform/qt/CMakeLists.txt", "Applications", "."
 
-    system "cmake", ".", *std_cmake_args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
     # Replace SDL frontend binary with a script for running Qt frontend
     # -DBUILD_SDL=OFF would be easier, but disable joystick support in Qt frontend
@@ -60,6 +69,7 @@ class Mgba < Formula
   end
 
   test do
-    system "#{bin}/mGBA", "-h"
+    # mGBA opens a GUI with other commands, so we can only check the version
+    assert_match version.to_s, shell_output("#{bin}/mGBA --version")
   end
 end
