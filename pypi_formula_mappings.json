@@ -1046,9 +1046,6 @@
   "texttest": {
     "exclude_packages": ["psutil"]
   },
-  "thefuck": {
-    "exclude_packages": ["six"]
-  },
   "theharvester": {
     "exclude_packages": ["certifi"]
   },
