@@ -1173,7 +1173,7 @@
     "exclude_packages": ["cffi", "click", "cryptography", "keyring", "pycparser"]
   },
   "yle-dl": {
-    "exclude_packages": ["cffi", "configargparse", "lxml", "pycparser", "requests"]
+    "exclude_packages": ["certifi"]
   },
   "yt-dlp": {
     "exclude_packages": ["certifi"]
