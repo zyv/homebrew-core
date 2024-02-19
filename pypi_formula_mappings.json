@@ -295,10 +295,7 @@
     "exclude_packages": ["click", "markupsafe", "packaging", "six"]
   },
   "dolphie": {
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "packaging", "pycparser", "Pygments",
-      "requests", "sqlparse", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "dooit": {
     "exclude_packages": ["six", "PyYAML", "virtualenv", "Pygments", "typing-extensions", "pytz"]
