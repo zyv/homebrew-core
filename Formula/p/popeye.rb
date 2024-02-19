@@ -1,8 +1,8 @@
 class Popeye < Formula
   desc "Kubernetes cluster resource sanitizer"
   homepage "https://popeyecli.io"
-  url "https://github.com/derailed/popeye/archive/refs/tags/v0.20.0.tar.gz"
-  sha256 "9f456ebc8fdb3c9fee8ecdd102832f1217da26a41548376d16925e9fbc1abf9a"
+  url "https://github.com/derailed/popeye/archive/refs/tags/v0.20.1.tar.gz"
+  sha256 "1cd4750a3148af5859d78d2c72a7fb9a0fd0ef5d0fa7983623f88c8e3da6cd15"
   license "Apache-2.0"
 
   bottle do
