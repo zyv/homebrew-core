@@ -262,6 +262,7 @@ checkbashisms
 checkdmarc
 checkmake
 checkstyle
+cherrytree
 chezmoi
 chkrootkit
 choose-rust
@@ -272,6 +273,7 @@ cilium-cli
 cimg
 circleci
 circumflex
+citus
 clair
 clamav
 clarinet
@@ -283,6 +285,7 @@ cli53
 clickhouse-cpp
 cliclick
 clifm
+clingo
 clipboard
 clojurescript
 closure-compiler
@@ -386,6 +389,7 @@ d2
 daemon
 dafny
 dagger
+daq
 darkstat
 dart-sdk
 dartsim
@@ -399,6 +403,7 @@ dbdeployer
 dbml-cli
 dbus
 dcd
+dcm2niix
 ddcutil
 ddrescue
 deark
@@ -441,6 +446,7 @@ dnsmasq
 dnsperf
 dnstwist
 dnsx
+docfx
 docker
 docker-buildx
 docker-compose
@@ -566,6 +572,7 @@ faas-cli
 fabric
 fabric-installer
 fail2ban
+faircamp
 faiss
 fakeroot
 falco
@@ -610,6 +617,7 @@ fleet-cli
 flint
 flix
 flow-cli
+flowpipe
 fluent-bit
 flume
 flyctl
@@ -655,6 +663,7 @@ g-ls
 gator
 gatsby-cli
 gau
+gdal
 gdu
 geeqie
 gegl
@@ -699,6 +708,7 @@ gnuplot
 go-critic
 go-feature-flag-relay-proxy
 go-md2man
+go-task
 goaccess
 goctl
 goffice
@@ -710,6 +720,7 @@ google-java-format
 goose
 gopass
 gopls
+goplus
 gor
 goredo
 goreleaser
@@ -766,11 +777,14 @@ htmlq
 htmltest
 htpdate
 httm
+httping
 httpx
 httpyac
+huggingface-cli
 hugo
 hyperfine
 hypre
+i2p
 iamy
 igraph
 igv
@@ -832,6 +846,7 @@ kahip
 kalker
 kamel
 kapacitor
+karmadactl
 kcat
 kcptun
 keptn
@@ -840,6 +855,7 @@ kew
 keydb
 ki
 kickstart
+kics
 kind
 kiota
 kitchen-sync
@@ -851,6 +867,7 @@ kompose
 kops
 kor
 kotlin
+krakend
 krew
 ktlint
 kube-linter
@@ -859,6 +876,7 @@ kubebuilder
 kubecfg
 kubecm
 kubeconform
+kubefirst
 kubergrunt
 kubernetes-cli
 kubeseal
@@ -876,7 +894,9 @@ latex2html
 latexml
 lazydocker
 ld-find-code-refs
+ldeep
 lean-cli
+leapp-cli
 lefthook
 lego
 leiningen
@@ -913,10 +933,12 @@ libucl
 libxext
 libxkbfile
 libxvmc
+libzim
 lima
 linkerd
 linode-cli
 liquibase
+livekit
 llm
 llvm
 lmdb
@@ -926,8 +948,10 @@ locust
 log4cxx
 logstash
 lout
+lsof
 luau
 luit
+lunzip
 lux
 lychee
 lzip
@@ -949,6 +973,7 @@ mawk
 maxwell
 mdbook
 mdcat
+mdless
 mdzk
 mediamtx
 meilisearch
@@ -962,15 +987,18 @@ metabase
 metals
 metricbeat
 micro
+micromamba
 micronaut
 mighttpd2
 mill
+millet
 mimirtool
 minder
 minetest
 minikube
 miniserve
 minizinc
+minizip
 minuit2
 mmark
 mmctl
@@ -987,6 +1015,9 @@ monika
 monolith
 morse
 moto
+mpc
+mpd
+mpg123
 mpich
 mpv
 mruby
@@ -1012,6 +1043,7 @@ neo4j
 neofetch
 neomutt
 neon
+neonctl
 nerdctl
 nest
 netdata
@@ -1020,6 +1052,8 @@ netlify-cli
 newman
 newrelic-cli
 newrelic-infra-agent
+nexttrace
+nfdump
 nfpm
 nginx
 nixpacks
@@ -1034,6 +1068,7 @@ notcurses
 nsq
 nuclei
 numactl
+numbat
 numcpp
 nushell
 nvc
@@ -1046,6 +1081,7 @@ ocrmypdf
 octave
 oh-my-posh
 oha
+oil
 okta-aws-cli
 okteto
 omniorb
@@ -1055,15 +1091,20 @@ ooniprobe
 opa
 open-adventure
 open-mpi
+opendetex
 openh264
 openiothub-server
-openjdk@8
+openjdk
 openjdk@11
 openjdk@17
-openjdk
+openjdk@8
 openjph
+openlibm
 openrtsp
 opensearch
+openshift-cli
+opentelemetry-cpp
+opentofu
 openvdb
 openvpn
 operator-sdk
@@ -1071,6 +1112,7 @@ optipng
 or-tools
 oras
 orc-tools
+ord
 organize-tool
 orientdb
 ormolu
@@ -1094,14 +1136,17 @@ payara
 pdal
 pdftk-java
 pdm
+pdns
 pdnsrec
 perltidy
 pfetch-rs
 pgbadger
 pgbouncer
 pgloader
+pgroonga
 pgweb
 phoronix-test-suite
+php
 php-code-sniffer
 php-cs-fixer
 phpmd
@@ -1118,6 +1163,7 @@ pkgconf
 plantuml
 plow
 pmd
+pmix
 pmtiles
 pngquant
 pnpm
@@ -1125,6 +1171,7 @@ pocketbase
 podman
 popeye
 postgis
+postgrest
 powerman
 pre-commit
 presenterm
@@ -1133,9 +1180,12 @@ prestodb
 prettier
 principalmapper
 procs
+proftpd
 prometheus-cpp
 protoc-gen-go-grpc
+protolint
 proxify
+proxsuite
 proxytunnel
 prqlc
 prr
@@ -1165,10 +1215,12 @@ qcachegrind
 qd
 qjackctl
 qpid-proton
+quantlib
 questdb
 quick-lint-js
 quicktype
 qxmpp
+rabbitmq
 radamsa
 rancher-cli
 rattler-build
@@ -1178,11 +1230,14 @@ rbspy
 rbw
 rclone
 rcs
+re-flex
 readpe
 rebar3
 recode
+recoverpy
 redis
 redwax-tool
+regclient
 regina-rexx
 regula
 release-it
@@ -1195,6 +1250,8 @@ resvg
 revive
 rhit
 riemann
+rio
+risor
 rke
 roadrunner
 rollup
@@ -1202,6 +1259,7 @@ rosa-cli
 rover
 rpg-cli
 rpki-client
+rpmspectool
 rqlite
 rswift
 rsyncy
@@ -1212,6 +1270,7 @@ rustup-init
 rye
 s-search
 s2n
+saf-cli
 sagittarius-scheme
 saml2aws
 sbt
@@ -1242,8 +1301,12 @@ shellharden
 shellz
 shfmt
 showkey
+shtools
 shush
+sigma-cli
 signal-cli
+signmykey
+sile
 silicon
 singularity
 sip
@@ -1262,9 +1325,11 @@ slurm
 smimesign
 sn0int
 snakemake
+snapcraft
 sng
 sniffer
 sniffglue
+snort
 snowflake
 snyk-cli
 socket_vmnet
@@ -1275,9 +1340,11 @@ sonarqube
 sonarqube-lts
 sonobuoy
 spglib
+spidermonkey
 sponge
 spotbugs
 spotify-tui
+sql-migrate
 sqlancer
 sqlc
 sqlmap
@@ -1316,10 +1383,13 @@ swagger-codegen
 swagger-codegen@2
 swagger2markup-cli
 swi-prolog
+swiftformat
 syft
 syncthing
 sysdig
+sysstat
 systemd
+tailscale
 tailwindcss
 talhelper
 talisman
@@ -1356,6 +1426,8 @@ thrift
 tika
 tile38
 timg
+tin
+tintin
 tippecanoe
 tm
 tmux-xpanes
@@ -1374,6 +1446,7 @@ trafficserver
 translate-toolkit
 tree-sitter
 triangle
+trino
 trivy
 trojan-go
 trufflehog
@@ -1382,7 +1455,9 @@ typedb
 typescript-language-server
 typos-cli
 tz
+uffizzi
 ugit
+ugrep
 uni
 universal-ctags
 usb.ids
@@ -1400,6 +1475,9 @@ verapdf
 vercel-cli
 vgrep
 victoriametrics
+video-compare
+vineyard
+vips
 virgil
 virtualenvwrapper
 virustotal-cli
@@ -1413,8 +1491,10 @@ volta
 vpn-slice
 vsearch
 vsh
+vte3
 vue-cli
 vultr
+vunnel
 wabt
 wakatime-cli
 wallpaper
@@ -1426,6 +1506,7 @@ wasm-tools
 wasmer
 wasmtime
 watchexec
+web-ext
 webdis
 webkitgtk
 webp
