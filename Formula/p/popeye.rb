@@ -1,8 +1,8 @@
 class Popeye < Formula
   desc "Kubernetes cluster resource sanitizer"
   homepage "https://popeyecli.io"
-  url "https://github.com/derailed/popeye/archive/refs/tags/v0.20.1.tar.gz"
-  sha256 "1cd4750a3148af5859d78d2c72a7fb9a0fd0ef5d0fa7983623f88c8e3da6cd15"
+  url "https://github.com/derailed/popeye/archive/refs/tags/v0.20.2.tar.gz"
+  sha256 "c84f89723bdc3d1aff20c9b6660b6af6d4a74ac90ea6aad6d50933f18121a192"
   license "Apache-2.0"
 
   bottle do
@@ -18,13 +18,21 @@ class Popeye < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    ldflags = %W[
+      -s -w
+      -X github.com/derailed/popeye/cmd.version=#{version}
+      -X github.com/derailed/popeye/cmd.commit=#{tap.user}
+      -X github.com/derailed/popeye/cmd.date=#{time.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags: ldflags)
 
     generate_completions_from_executable(bin/"popeye", "completion")
   end
 
   test do
-    assert_match "connect: connection refused",
-      shell_output("#{bin}/popeye --save --out html --output-file report.html", 1)
+    output = shell_output("#{bin}/popeye --save --out html --output-file report.html 2>&1", 2)
+    assert_match "connect: connection refused", output
+
+    assert_match version.to_s, shell_output("#{bin}/popeye version")
   end
 end
