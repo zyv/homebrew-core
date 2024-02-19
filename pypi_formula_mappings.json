@@ -422,7 +422,7 @@
     "exclude_packages": ["click", "python-dateutil", "six"]
   },
   "goolabs": {
-    "exclude_packages": ["click", "requests", "six"]
+    "exclude_packages": ["certifi"]
   },
   "gptline": {
     "exclude_packages": ["certifi", "click", "lxml", "pillow", "pygments", "pyyaml", "six"]
