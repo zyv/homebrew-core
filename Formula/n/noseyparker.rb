@@ -26,7 +26,7 @@ class Noseyparker < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "crates/noseyparker-cli")
+    system "cargo", "install", "--features", "release", *std_cargo_args(path: "crates/noseyparker-cli")
     mv bin/"noseyparker-cli", bin/"noseyparker"
 
     generate_completions_from_executable(bin/"noseyparker", "shell-completions", "--shell")
