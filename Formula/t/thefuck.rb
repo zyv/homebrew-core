@@ -9,14 +9,14 @@ class Thefuck < Formula
   head "https://github.com/nvbn/thefuck.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c0cd4272e6787d23bb980a218f863f7bc6f7054423e9888481cd25aeda9c06a5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "33a477185117d10d5303ab23b20c75b5dae623818049d774bb22cbd5b9465f94"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a407caab7389fc6a24d80fdb986e350fb618b1ffe70081db49e0134c7107fcc4"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f47837746848e2461ffe06c9f53327596da7f060a3af7d0c9cf2cfdb98548f31"
-    sha256 cellar: :any_skip_relocation, ventura:        "1e6691aaa62a7e42bcf58066623a6fc222417cbc520c051a200434e3dd6ab4e2"
-    sha256 cellar: :any_skip_relocation, monterey:       "425f36d7acbc639a4dffa316ee71e759ffc548672e420e94fe86474310e6a8ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8b7681bccf20ba84eced3265495eecc1584764b8ed3551fbb7c26325b167ef7"
+    rebuild 4
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2500915b3e5ae0e48eaaeb40ec7cf32a9cf9e5a1d5ee122a8b81fee9e2883e9a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4fce04b72e849bedecb73ab255ce785547c1ca0dc03692fdeb1aff09449088d7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c64d432a8a96d9966f3fd83b103b99e74e37e0de3d093470ce49a16262ea27ca"
+    sha256 cellar: :any_skip_relocation, sonoma:         "f43208a72c2dd68ae928b83ab412cbb475e5aefe9b187a585e0fee51dad9eb90"
+    sha256 cellar: :any_skip_relocation, ventura:        "99bd0b5a6ab2ecced963bf1f671c4d05e01d7ebfc438da2b0cb9b65240b7f1eb"
+    sha256 cellar: :any_skip_relocation, monterey:       "99b4d59149650a245c251e1f0451b76f24dcfddead80ab86cc59dc92874487ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ca39bcb4d313412aeb25a11fa8d3925bd6d37007b47b27dbc7c0f12508bb2e60"
   end
 
   depends_on "python@3.12"
