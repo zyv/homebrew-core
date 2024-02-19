@@ -1179,7 +1179,7 @@
     "exclude_packages": ["cffi", "configargparse", "lxml", "pycparser", "requests"]
   },
   "yt-dlp": {
-    "exclude_packages": ["brotli", "certifi", "mutagen"]
+    "exclude_packages": ["certifi"]
   },
   "zabbix-cli": {
     "exclude_packages": ["certifi"]
