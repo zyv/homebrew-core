@@ -434,7 +434,7 @@
     "exclude_packages": ["certifi", "markdown", "markupsafe", "Pygments"]
   },
   "grokmirror": {
-    "exclude_packages": ["requests"]
+    "exclude_packages": ["certifi"]
   },
   "gyb": {
     "exclude_packages": ["certifi", "pyinstaller", "pyparsing"]
