@@ -20,7 +20,6 @@ class Thefuck < Formula
   end
 
   depends_on "python@3.12"
-  depends_on "six"
 
   resource "colorama" do
     url "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz"
@@ -33,8 +32,8 @@ class Thefuck < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/2d/01/beb7331fc6c8d1c49dd051e3611379bfe379e915c808e1301506027fce9d/psutil-5.9.6.tar.gz"
-    sha256 "e4b92ddcd7dd4cdd3f900180ea1e104932c7bce234fb88976e2a3b296441225a"
+    url "https://files.pythonhosted.org/packages/90/c7/6dc0a455d111f68ee43f27793971cf03fe29b6ef972042549db29eec39a2/psutil-5.9.8.tar.gz"
+    sha256 "6be126e3225486dff286a8fb9a06246a5253f4c7c53b475ea5f5ac934e64194c"
   end
 
   resource "pyte" do
@@ -42,9 +41,14 @@ class Thefuck < Formula
     sha256 "5af970e843fa96a97149d64e170c984721f20e52227a2f57f0a54207f08f083f"
   end
 
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/2e/1c/21f2379555bba50b54e5a965d9274602fe2bada4778343d5385840f7ac34/wcwidth-0.2.10.tar.gz"
-    sha256 "390c7454101092a6a5e43baad8f83de615463af459201709556b6e4b1c861f97"
+    url "https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz"
+    sha256 "72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5"
   end
 
   # Drop distutils for 3.12: https://github.com/nvbn/thefuck/pull/1404
@@ -101,7 +105,7 @@ index 27876ef47..611ec84b7 100644
 @@ -6,6 +5,17 @@
  from . import const
  from .system import Path
- 
+
 +try:
 +    import importlib.util
 +
@@ -113,7 +117,7 @@ index 27876ef47..611ec84b7 100644
 +except ImportError:
 +    from imp import load_source
 +
- 
+
  class Settings(dict):
      def __getattr__(self, item):
 diff --git a/thefuck/types.py b/thefuck/types.py
