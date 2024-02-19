@@ -982,7 +982,7 @@
     "extra_packages": ["pysigma-backend-sqlite"]
   },
   "sigstore": {
-    "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser", "pygments", "six", "typing-extensions"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "sip": {
     "exclude_packages": ["packaging", "setuptools"]
