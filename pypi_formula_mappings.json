@@ -469,7 +469,7 @@
     "exclude_packages": ["lxml", "packaging", "pillow"]
   },
   "instaloader": {
-    "exclude_packages": ["requests"]
+    "exclude_packages": ["certifi"]
   },
   "instalooter": {
     "exclude_packages": ["certifi", "six"]
