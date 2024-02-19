@@ -384,9 +384,6 @@
   "ford": {
     "exclude_packages": ["markdown", "markupsafe", "pygments"]
   },
-  "fred": {
-    "exclude_packages": ["requests", "click"]
-  },
   "gallery-dl": {
     "exclude_packages": ["requests"]
   },
