@@ -14,13 +14,14 @@ class ZabbixCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6045d4260ee1e3eb050119e8e80f0b1daaf78551e73b9cbdc4f95310f15ca97d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8f3fffae3994bfd7553bc828f97a42fc183313429c0c283796605b5d0f18bff1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f5bc8108f0c921e6dc2045bfe508e781a5b1aea230151176c1ef5db821c420c"
-    sha256 cellar: :any_skip_relocation, sonoma:         "7c95788d0967958bde73a30a203cf13a42182aeefe56f63d2c09fed0523135f1"
-    sha256 cellar: :any_skip_relocation, ventura:        "fe978e32953f9a0f3e79638f0ad27a5ee51713059d7fad86bcfe789316a21525"
-    sha256 cellar: :any_skip_relocation, monterey:       "72da57d05cf66f8f06cbe00ec3e7a501418447030be66a9504f7b370ffd79cc4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58ab30317704c5affc8a4dd85d1b4a74e4b9e7557284cd6c02c10b474edfc6dc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "615774762025acd0659ecf3daf919e6114eafa54e8a8df120e0dd48b757a7964"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7813942f1e22699abfad5fb7871c4a92f236f5fcf1a44eb704a07e72e60ffde7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "28eef75530b6d15d5a47c9055861403925c40537259eeec20e9b9ce36ae8cff1"
+    sha256 cellar: :any_skip_relocation, sonoma:         "c4b6555f444442b982eac10a1dbd8d514b7a98bc1a251d7956b4e1aea42de648"
+    sha256 cellar: :any_skip_relocation, ventura:        "d3a935de2f2d586566c562f64c7cd0ad57a5716ecf4195b26670a718c6e9e11a"
+    sha256 cellar: :any_skip_relocation, monterey:       "eebfe753011a00db105682b46558372654fc2c19b63784096f3b7d4e1b0e3b71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4cae7790742cc2b5fb0f92a180ce26e52d0099fb55a4f7973fc3774ef3c92dc1"
   end
 
   depends_on "python-certifi"
