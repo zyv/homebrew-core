@@ -8,14 +8,14 @@ class Litecli < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0d30b5150aafcb6b1de022478f2543f4fc09e9e464c93c7d7d23f70a108396b9"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c4d5bb87fd5549ef2482d0fab7fbe0ce108131fc79ba097c6c5de8ee5609527f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c4713d3290f8c2bca809c3cfddd8311330c8811798716a11f06af7917f05cb2d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "7b022b71f6446bd39e412418b44594a72480f4f1d1a94b731d1febe6bd46bc5f"
-    sha256 cellar: :any_skip_relocation, ventura:        "3ac2d8cb9f52d6347ea7ce9a0e516e45e2dc6ded90b5f1c307848b76c24b9304"
-    sha256 cellar: :any_skip_relocation, monterey:       "f7033105796fc518c81ecd070f3ead605f226f9b640a683f48a552eaacde70ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f921bde07b395ef7f4b88d8d427e5ab1bbd6f99413fa14e40218c1e59d26256a"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "71d93c3e1530e6302a50c64c081731149a3e0c4ffc7912810ffc10822a611123"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cc0468cbded08e31e832d6973bc69f4d2732868587e3ce4fc25219db79fc329b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c9b86328b4112ed70684af3cf8d462d104b7ddc9aee1d9de62e7633d94b8eb27"
+    sha256 cellar: :any_skip_relocation, sonoma:         "39e2727f3aac6f48753b2e1c02b7339bb2d7ee38c951fa33da694df495d07e2c"
+    sha256 cellar: :any_skip_relocation, ventura:        "6fc7049f7829a4c7a95af3f4c3231fc0848fe3aef13aef0b3b9b667068493414"
+    sha256 cellar: :any_skip_relocation, monterey:       "b9088adf46104d70cdeba33916445d51d1356b6dfaaa97d10b928cf27a7053e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6262b7265a87b3ca230742ccdb93bf72630344789a1940b401fd6ea9a79cfaf"
   end
 
   depends_on "python@3.12"
