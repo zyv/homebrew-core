@@ -1138,7 +1138,7 @@
     "exclude_packages": ["certifi", "click", "python-dateutil", "six"]
   },
   "waybackpy": {
-    "exclude_packages": ["click", "requests"]
+    "exclude_packages": ["certifi"]
   },
   "weasyprint": {
     "exclude_packages": ["Brotli", "fonttools", "Pillow", "six", "cffi", "pycparser"]
