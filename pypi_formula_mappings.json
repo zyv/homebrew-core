@@ -548,9 +548,6 @@
   "litani": {
     "exclude_packages": ["markupsafe", "PyYAML"]
   },
-  "litecli": {
-    "exclude_packages": ["click", "Pygments", "six", "sqlparse", "tabulate"]
-  },
   "llm": {
     "exclude_packages": [
       "click", "certifi", "pluggy", "Pygments", "python-dateutil", "PyYAML",
