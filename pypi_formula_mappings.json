@@ -1094,7 +1094,7 @@
     "exclude_packages": ["certifi"]
   },
   "twarc": {
-    "exclude_packages": ["click", "configobj", "python-dateutil", "requests", "requests-oauthlib", "six"]
+    "exclude_packages": ["certifi"]
   },
   "twine": {
     "exclude_packages": ["certifi", "docutils", "keyring", "Pygments"]
