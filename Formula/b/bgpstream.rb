@@ -1,8 +1,8 @@
 class Bgpstream < Formula
   desc "For live and historical BGP data analysis"
   homepage "https://bgpstream.caida.org/"
-  url "https://github.com/CAIDA/libbgpstream/releases/download/v2.2.0/libbgpstream-2.2.0.tar.gz"
-  sha256 "db7926c099972468f1a2f98f1aea9a5a1760d1f744ff6966b79bbcc6651bdb69"
+  url "https://github.com/CAIDA/libbgpstream/releases/download/v2.3.0/libbgpstream-2.3.0.tar.gz"
+  sha256 "c6be2c761ed216edc23a85409a5de3639172bc42db115c8574c2108ace7481a4"
   license "BSD-2-Clause"
 
   bottle do
@@ -22,24 +22,8 @@ class Bgpstream < Formula
   depends_on "librdkafka"
   depends_on "wandio"
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
-
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-    directory "lib/formats/libparsebgp"
-  end
-
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./configure", *std_configure_args, "--disable-silent-rules"
     system "make", "install"
   end
 
