@@ -1,8 +1,8 @@
 class Czkawka < Formula
   desc "Duplicate file utility"
   homepage "https://github.com/qarmin/czkawka"
-  url "https://github.com/qarmin/czkawka/archive/refs/tags/6.1.0.tar.gz"
-  sha256 "63e64c717a93b3d5210d6a4718833fdbf3ad7b28c9b74a243d9de3ab1ee6ad5a"
+  url "https://github.com/qarmin/czkawka/archive/refs/tags/7.0.0.tar.gz"
+  sha256 "ce7d072056dedc4f2ca4d3647dc786ba071d4f3c58e79415da18d7dafd62e87b"
   license all_of: ["MIT", "CC-BY-4.0"]
 
   bottle do
