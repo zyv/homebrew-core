@@ -1017,9 +1017,7 @@
     "exclude_packages": ["click", "pluggy", "python-dateutil", "six", "tabulate"]
   },
   "ssh-mitm": {
-    "exclude_packages": [
-      "argcomplete", "cffi", "cryptography", "packaging", "pycparser", "pygments", "pytz", "pyyaml", "six"
-    ]
+    "exclude_packages": ["cryptography"]
   },
   "sslyze": {
     "exclude_packages": ["typing-extensions", "pycparser"]
