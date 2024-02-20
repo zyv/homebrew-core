@@ -10,14 +10,14 @@ class SlitherAnalyzer < Formula
   head "https://github.com/crytic/slither.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_sonoma:   "20fc5e697a005779223f35e935f777ec62295d1eacf252215adc62b0348add9e"
-    sha256 cellar: :any,                 arm64_ventura:  "cd48d6dc2454e433c9b2844586e00a70d19950df9b542b4307271386143fcc53"
-    sha256 cellar: :any,                 arm64_monterey: "4505cfe72360d3b8675550e73aeee7027c6b72b3096054dab3c1db2313a638e7"
-    sha256 cellar: :any,                 sonoma:         "a078dc8d6073cf79835c2f3f0fe5916b6ca5fdf1f02d33cceecfd30dab49aea9"
-    sha256 cellar: :any,                 ventura:        "66206bfde4ea44f816deb98266a8a9423852c32a8de229498769a5d478afd8f5"
-    sha256 cellar: :any,                 monterey:       "72f14e435134f0b75098fa226708bd005f92a726a29b86d95cc6943daa7f8ba4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d10fce23a075635282fcd19c8488eb57637a16da38ee50b94027a9dc2d9441a2"
+    rebuild 4
+    sha256 cellar: :any,                 arm64_sonoma:   "37b1a2cc4a19741dc7c7747881dd287c7b0b828fdcf305bddbd290c62ef6c0f4"
+    sha256 cellar: :any,                 arm64_ventura:  "4be0ad28bebddc0035400ba05286ac581379fd99ff466e8d8316cea46f370542"
+    sha256 cellar: :any,                 arm64_monterey: "20a10ea3662ae3d554220e762cf135e91df13ae1b922d9606ad2e0d411294179"
+    sha256 cellar: :any,                 sonoma:         "c3c91a79ab81f0c121eb7bdb9631aeb67bae30e9d149c1152e01c634560afe5b"
+    sha256 cellar: :any,                 ventura:        "cf15e76f4856cfaea0a4ec09122368c9024f1776509769633315057fbfbe69a0"
+    sha256 cellar: :any,                 monterey:       "9b668d3f38cc0ee372fa6eb674e12b2ee9ec6b54925e5e8ff76ab996d25cb5e9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa888c2539a7b7c83d06b60006e8867d1359bb75ec12fe4a93cf760d0c52ca49"
   end
 
   depends_on "rust" => :build # for rpds-py
