@@ -9,13 +9,13 @@ class OciCli < Formula
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "938ab8dc87dffc7f849bb20582e06d619579933eec8b56948b2fa305ce80414b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "77d86e7e42c8e23f94f6c50db8a8083e4dd8e256ac51ab5fbbf50844899b8d49"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4bd149bc0dc01375b2aeba28e154a859903e9903f83f9021844f7e09d482bc3a"
-    sha256 cellar: :any_skip_relocation, sonoma:         "ed2030da734037c26553f09d044e4723c63184e7221fdf93c5d8314f19812cd8"
-    sha256 cellar: :any_skip_relocation, ventura:        "4cfe959c63e9bbc059bfaa3d516ec188cf250970a6a50728941fecda2a45321b"
-    sha256 cellar: :any_skip_relocation, monterey:       "72930aa511c2ea31ce4184782a264ff3e3e4328e38e02ab9089b3f75db175c64"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f6eb2350d0f2ade13e85ee952642ca0b8b009b5c275ad8c55cb3e5f6fa96f22"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1276ef7f69071b0dad94ddffd4a74773caff4d41a3918f02070ec9e9ece55e71"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c11377c538f03fa8b05491430179a3c3c96cdce5ffa18c7c15f8d7fb4f1ce41c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a3b3503b6813befce0c303da8ec74c50ce5d8901bed7008714e658fb22e6ead8"
+    sha256 cellar: :any_skip_relocation, sonoma:         "e6b8171b342d218987eb745cdaa39854dc3e6adb600e116b4712427b41da1c57"
+    sha256 cellar: :any_skip_relocation, ventura:        "44486c129bfa26a8452522561433e4e02b1efa4347bac97c3adffb24754d24ff"
+    sha256 cellar: :any_skip_relocation, monterey:       "41d12476ccec6ba2be4cbee1819a51c046c9161d04a4a51248a603e98864ee1c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "460339269a080ddc465529711e010f4c7d1d216195b1d6c764e6f78db49912e7"
   end
 
   # "pkg-config", "cmake", "rust" are for terminaltables
