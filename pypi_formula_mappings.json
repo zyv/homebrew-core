@@ -853,9 +853,6 @@
   "pyvim": {
     "exclude_packages": ["six", "Pygments"]
   },
-  "pywhat": {
-    "exclude_packages": ["click", "Pygments"]
-  },
   "raven": {
     "package_name": "raven-cycode",
     "exclude_packages": ["certifi", "packaging", "pygments", "pytz", "pyyaml", "six"]
