@@ -1050,7 +1050,7 @@
     "exclude_packages": ["certifi"]
   },
   "trailscraper": {
-    "exclude_packages": ["click", "python-dateutil", "pytz", "six"]
+    "extra_packages": ["setuptools"]
   },
   "translate-toolkit": {
     "exclude_packages": ["lxml"]
