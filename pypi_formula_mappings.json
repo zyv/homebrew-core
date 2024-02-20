@@ -409,9 +409,6 @@
   "gitless": {
     "exclude_packages": ["pygit2"]
   },
-  "gitlint": {
-    "exclude_packages": ["click", "python-dateutil", "six"]
-  },
   "goolabs": {
     "exclude_packages": ["certifi"]
   },
