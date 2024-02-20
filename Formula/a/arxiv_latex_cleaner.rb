@@ -19,12 +19,9 @@ class ArxivLatexCleaner < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7a50e20b87a04dc6ef4868c2f3470ac0c88550e6bbdffbc9667cc461a8fd0ca"
   end
 
+  depends_on "libyaml"
   depends_on "pillow"
   depends_on "python@3.12"
-
-  def python3
-    "python3.12"
-  end
 
   resource "absl-py" do
     url "https://files.pythonhosted.org/packages/7a/8f/fc001b92ecc467cc32ab38398bd0bfb45df46e7523bf33c2ad22a505f06e/absl-py-2.1.0.tar.gz"
