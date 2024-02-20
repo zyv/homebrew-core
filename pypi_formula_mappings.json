@@ -533,9 +533,6 @@
   "liquidctl": {
     "exclude_packages": ["pillow"]
   },
-  "litani": {
-    "exclude_packages": ["markupsafe", "PyYAML"]
-  },
   "llm": {
     "exclude_packages": [
       "click", "certifi", "pluggy", "Pygments", "python-dateutil", "PyYAML",
