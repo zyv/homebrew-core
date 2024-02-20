@@ -875,9 +875,6 @@
   "recon-ng": {
     "exclude_packages": ["certifi", "lxml", "PyYAML", "six", "pytz"]
   },
-  "recoverpy": {
-    "exclude_packages": ["pygments", "typing-extensions"]
-  },
   "regipy": {
     "package_name": "regipy[cli]",
     "exclude_packages": ["click", "pytz", "tabulate"]
