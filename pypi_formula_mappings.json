@@ -801,12 +801,6 @@
   "python-anytree": {
     "exclude_packages": ["six"]
   },
-  "python-boto3": {
-    "exclude_packages": ["botocore", "s3transfer"]
-  },
-  "python-botocore": {
-    "exclude_packages": ["jmespath", "python-dateutil", "six", "urllib3"]
-  },
   "python-build": {
     "exclude_packages": ["packaging", "pyproject-hooks"]
   },
@@ -849,9 +843,6 @@
   },
   "python-rich": {
     "exclude_packages": ["markdown-it-py", "pygments"]
-  },
-  "python-s3transfer": {
-    "exclude_packages": ["botocore"]
   },
   "python-yq": {
     "exclude_packages": ["argcomplete", "PyYAML"]
