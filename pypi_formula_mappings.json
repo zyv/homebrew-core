@@ -514,9 +514,6 @@
     "package_name": "keyring[completion]",
     "exclude_packages": ["cffi", "cryptography", "pycparser"]
   },
-  "khal": {
-    "exclude_packages": ["pytz", "six"]
-  },
   "khard": {
     "exclude_packages": ["python-dateutil", "six"]
   },
