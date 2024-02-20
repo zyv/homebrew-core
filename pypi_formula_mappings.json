@@ -742,9 +742,6 @@
   "pygit2": {
     "exclude_packages": ["cffi", "pycparser", "setuptools"]
   },
-  "pygitup": {
-    "exclude_packages": ["typing-extensions"]
-  },
   "pyinstaller": {
     "exclude_packages": ["packaging", "setuptools"],
     "extra_packages": ["macholib"]
