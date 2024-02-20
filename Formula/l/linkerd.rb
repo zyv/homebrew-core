@@ -2,8 +2,8 @@ class Linkerd < Formula
   desc "Command-line utility to interact with linkerd"
   homepage "https://linkerd.io"
   url "https://github.com/linkerd/linkerd2.git",
-      tag:      "stable-2.14.9",
-      revision: "2aae59bd247914357405634650906230f7d4813a"
+      tag:      "stable-2.14.10",
+      revision: "1ea6b271718f90182bdf747490895784988e980e"
   license "Apache-2.0"
 
   livecheck do
@@ -23,12 +23,17 @@ class Linkerd < Formula
 
   depends_on "go" => :build
 
+  # upstream PR to bump go to v1.22, https://github.com/linkerd/linkerd2/pull/12114
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/8e0c96d6f54eb3e6b6a690b7800995f3a3a6bb9c/linkerd/stable-2.14.10.patch"
+    sha256 "0d634f7ca5036e75435a10318f3e6a7d6a5c40ee0c21689a5f1814dbc5ba6911"
+  end
+
   def install
     ENV["CI_FORCE_CLEAN"] = "1"
 
     system "bin/build-cli-bin"
     bin.install Dir["target/cli/*/linkerd"]
-    prefix.install_metafiles
 
     generate_completions_from_executable(bin/"linkerd", "completion")
   end
