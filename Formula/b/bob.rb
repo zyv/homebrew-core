@@ -1,8 +1,8 @@
 class Bob < Formula
   desc "Version manager for neovim"
   homepage "https://github.com/MordechaiHadad/bob"
-  url "https://github.com/MordechaiHadad/bob/archive/refs/tags/v2.8.0.tar.gz"
-  sha256 "623b4482c2ea5c0d89251190a9e2f717270adab7090b5b05efcb17b4d2b2b854"
+  url "https://github.com/MordechaiHadad/bob/archive/refs/tags/v2.8.1.tar.gz"
+  sha256 "d4bd4fe014c9784bb2561ffbd400f760d4c53201c2296bdee1e9dac61d299dd7"
   license "MIT"
 
   bottle do
