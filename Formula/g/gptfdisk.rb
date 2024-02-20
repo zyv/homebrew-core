@@ -1,10 +1,9 @@
 class Gptfdisk < Formula
   desc "Text-mode partitioning tools"
   homepage "https://www.rodsbooks.com/gdisk/"
-  url "https://downloads.sourceforge.net/project/gptfdisk/gptfdisk/1.0.9/gptfdisk-1.0.9.tar.gz"
-  sha256 "dafead2693faeb8e8b97832b23407f6ed5b3219bc1784f482dd855774e2d50c2"
+  url "https://downloads.sourceforge.net/project/gptfdisk/gptfdisk/1.0.10/gptfdisk-1.0.10.tar.gz"
+  sha256 "2abed61bc6d2b9ec498973c0440b8b804b7a72d7144069b5a9209b2ad693a282"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "2dda92a3ecdab96ed973a073efe01cf1a4d8b58c272d85000d1caeab0bf69811"
@@ -26,10 +25,6 @@ class Gptfdisk < Formula
   on_linux do
     depends_on "util-linux"
   end
-
-  # Backport upstream commit to fix crash with popt 1.19. Remove in the next release.
-  # Ref: https://sourceforge.net/p/gptfdisk/code/ci/5d5e76d369a412bfb3d2cebb5fc0a7509cef878d/
-  patch :DATA
 
   def install
     if OS.mac?
@@ -61,16 +56,3 @@ class Gptfdisk < Formula
     assert_match "Found valid GPT with protective MBR", shell_output("#{bin}/gdisk -l test.dmg")
   end
 end
-
-__END__
---- a/gptcl.cc
-+++ b/gptcl.cc
-@@ -155,7 +155,7 @@
-    } // while
-
-    // Assume first non-option argument is the device filename....
--   device = (char*) poptGetArg(poptCon);
-+   device = strdup((char*) poptGetArg(poptCon));
-    poptResetContext(poptCon);
-
-    if (device != NULL) {
