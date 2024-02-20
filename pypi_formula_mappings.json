@@ -961,7 +961,7 @@
     "exclude_packages": ["packaging", "setuptools"]
   },
   "slither-analyzer": {
-    "exclude_packages": ["certifi", "crytic-compile", "packaging", "solc-select", "toml", "typing-extensions"]
+    "exclude_packages": ["certifi"]
   },
   "snakemake": {
     "exclude_packages": [
