@@ -1,10 +1,9 @@
 class QtMysql < Formula
   desc "Qt SQL Database Driver"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtbase-everywhere-src-6.6.1.tar.xz"
-  sha256 "450c5b4677b2fe40ed07954d7f0f40690068e80a94c9df86c2c905ccd59d02f7"
+  url "https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtbase-everywhere-src-6.6.2.tar.xz"
+  sha256 "b89b426b9852a17d3e96230ab0871346574d635c7914480a2a27f98ff942677b"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only", "LGPL-3.0-only"]
-  revision 1
 
   livecheck do
     formula "qt"
@@ -29,13 +28,6 @@ class QtMysql < Formula
     because: "qt-mysql, qt-mariadb, and qt-percona-server install the same binaries"
 
   fails_with gcc: "5"
-
-  # Fix for breaking API changes in MySQL 8.3.0
-  # https://codereview.qt-project.org/c/qt/qtbase/+/532555
-  patch do
-    url "https://github.com/qt/qtbase/commit/41c842d3f7eecdf736d26026427033791586c83a.patch?full_index=1"
-    sha256 "f89d7c40ec29f992edcd5332c9512d5573d8047cb907eb8e36aaee15ba33a547"
-  end
 
   def install
     args = std_cmake_args + %W[
