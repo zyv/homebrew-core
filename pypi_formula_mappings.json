@@ -1055,7 +1055,7 @@
     "exclude_packages": ["certifi", "docutils", "keyring", "Pygments"]
   },
   "twtxt": {
-    "exclude_packages": ["click", "six"]
+    "extra_packages": ["setuptools"]
   },
   "urlwatch": {
     "exclude_packages": ["certifi", "keyring", "PyYAML"]
