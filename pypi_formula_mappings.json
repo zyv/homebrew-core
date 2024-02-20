@@ -115,10 +115,7 @@
     "exclude_packages": ["pbr"]
   },
   "bbot": {
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "docutils", "lxml", "markupsafe", "packaging",
-      "psutil", "pycparser", "pyyaml", "six", "tabulate", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "beancount": {
     "exclude_packages": ["certifi", "lxml", "packaging", "pyparsing", "six"]
