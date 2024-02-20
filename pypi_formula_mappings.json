@@ -1111,7 +1111,7 @@
   },
   "vdirsyncer": {
     "package_name": "vdirsyncer[google]",
-    "exclude_packages": ["certifi", "click"]
+    "exclude_packages": ["certifi"]
   },
   "vint": {
     "exclude_packages": ["PyYAML"]
