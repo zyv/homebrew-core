@@ -650,7 +650,7 @@
     "exclude_packages": ["certifi"]
   },
   "okta-awscli": {
-    "exclude_packages": ["certifi", "click", "six"]
+    "exclude_packages": ["certifi"]
   },
   "onionprobe": {
     "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser", "pyyaml", "six"]
