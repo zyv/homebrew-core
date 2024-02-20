@@ -1037,9 +1037,6 @@
   "theharvester": {
     "exclude_packages": ["certifi"]
   },
-  "tmuxp": {
-    "exclude_packages": ["PyYAML"]
-  },
   "todoman": {
     "exclude_packages": ["click", "python-dateutil", "pytz", "six", "tabulate"]
   },

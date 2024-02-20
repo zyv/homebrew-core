@@ -17,8 +17,8 @@ class Tmuxp < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "90fd18649e65fed61b02d4bf5989567aa783ddc98fe9f33a3f7e2530177f0a77"
   end
 
+  depends_on "libyaml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
   depends_on "tmux"
 
   resource "colorama" do
@@ -29,6 +29,11 @@ class Tmuxp < Formula
   resource "libtmux" do
     url "https://files.pythonhosted.org/packages/9a/d9/5da31caa48d24041c759255e10e8388c2eeb49fec30c8731f6b2a8d543ad/libtmux-0.31.0.post0.tar.gz"
     sha256 "38fd419a4e1088bbe6fffac73af00c0741b3a60e476a1fe179be746812fa717c"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   def install
