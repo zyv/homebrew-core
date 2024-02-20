@@ -18,7 +18,6 @@ class Pygitup < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "fe772ee98b9633d8d4bea9033faf56a4e47d67ea55fe149070068d03a9ea60c1"
   end
 
-  depends_on "python-typing-extensions"
   depends_on "python@3.12"
 
   resource "colorama" do
@@ -44,6 +43,11 @@ class Pygitup < Formula
   resource "termcolor" do
     url "https://files.pythonhosted.org/packages/10/56/d7d66a84f96d804155f6ff2873d065368b25a07222a6fd51c4f24ef6d764/termcolor-2.4.0.tar.gz"
     sha256 "aab9e56047c8ac41ed798fa36d892a37aca6b3e9159f3e0c24bc64a9b3ac7b7a"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
+    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
   end
 
   def install
