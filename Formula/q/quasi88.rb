@@ -10,16 +10,13 @@ class Quasi88 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "643a3684cc93e7e3a047072e0013f1f0eb2b1248e07d1526e1bb016bbeb016f3"
-    sha256 cellar: :any,                 arm64_ventura:  "7b4c72ce4204ac7a10b58982ba65f7bb900f3b6bc2a71533efdd4eb8394b38e1"
-    sha256 cellar: :any,                 arm64_monterey: "5a13523bdec455846c2a50a069305794522261565d040aac6304b2b07af649e9"
-    sha256 cellar: :any,                 arm64_big_sur:  "6a128b745d94138d3fe571518ce9755c0bfa34324e229da743007e6d5961aab1"
-    sha256 cellar: :any,                 sonoma:         "453d73a74b467f0776936e76713c0f728161a377f5755ddb2a664af3f1d2856b"
-    sha256 cellar: :any,                 ventura:        "c70a45dd3e4f7f7aed3e14cefd80319e7f1dc8644dab7597df4cdddf9191011e"
-    sha256 cellar: :any,                 monterey:       "5af9ca3ad12c1bfa8d761fc1ff30d36099dd032fdd47fc2e85f89722a21de6dd"
-    sha256 cellar: :any,                 big_sur:        "3a46e754acb469e4619f3cedeb402ebe45b69a096c65688697e3144aac61b413"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "278f6e32cae48b0acd18865f8793d442b5e9d5aa3a201a6d3bf179c27d39a46e"
+    sha256 cellar: :any,                 arm64_sonoma:   "fd5024b5cd310b12254e64c0e4b31ce1bdbf788a434a0632b62ff52f912245af"
+    sha256 cellar: :any,                 arm64_ventura:  "1a7c8d32d6d7b0f0c409b9dffbdad9fde33957cd20c39f60dbc41c9319c0624b"
+    sha256 cellar: :any,                 arm64_monterey: "e96d666621124f3633778e28ec26b98bde39f7510ed3e7e61cf3692ffe5d205d"
+    sha256 cellar: :any,                 sonoma:         "042695a723221c23cdbacb5eec6b2b41e9180b38f47a66b88f9f75b4a03e8d9f"
+    sha256 cellar: :any,                 ventura:        "a7b82ee65ce372cadad0ef2be7dd8f9dc7e87947260204640323c5b8bbe55c72"
+    sha256 cellar: :any,                 monterey:       "dfdd7a24162a85fc484fc629863a52c16fd57ae3e81c76900da6c39f2bc1c081"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bce3d0326c16726bf494c20359c43e9cc226e3842ab367c9958af7eb5423a927"
   end
 
   depends_on "sdl12-compat"
