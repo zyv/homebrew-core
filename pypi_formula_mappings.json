@@ -3,7 +3,7 @@
     "exclude_packages": ["requests"]
   },
   "animdl": {
-    "exclude_packages": ["certifi", "lxml", "packaging", "pygments", "pyyaml"]
+    "exclude_packages": ["certifi"]
   },
   "anime-downloader": {
     "exclude_packages": ["certifi"]
