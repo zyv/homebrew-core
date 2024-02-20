@@ -6,6 +6,7 @@ class ArxivLatexCleaner < Formula
   url "https://files.pythonhosted.org/packages/66/87/8866fcffec4c6d39eaa7a08e3bb0b98ec98464aef55fcf0897196819a2f0/arxiv_latex_cleaner-1.0.4.tar.gz"
   sha256 "6c371dd6c7bec01259bebc80820e6704274d2f5f75f9de1d112d9d3f8a392023"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/google-research/arxiv-latex-cleaner.git", branch: "main"
 
   bottle do
