@@ -6,6 +6,7 @@ class YleDl < Formula
   url "https://files.pythonhosted.org/packages/5c/ba/ae9008b208cfc78f8de4b32ea98d4107d6bf940e5062f8985f70dd18b086/yle_dl-20240130.tar.gz"
   sha256 "fe871fe3d63c232183f52d234f3e54afa2cffa8aa697a94197d2d3947b19e37d"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/aajanki/yle-dl.git", branch: "master"
 
   bottle do
