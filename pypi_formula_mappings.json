@@ -1063,7 +1063,7 @@
     "exclude_packages": ["virtualenv"]
   },
   "virtualfish": {
-    "exclude_packages": ["packaging", "psutil"]
+    "extra_packages": ["setuptools"]
   },
   "volatility": {
     "extra_packages": ["capstone", "pycryptodome", "yara-python", "jsonschema"]
