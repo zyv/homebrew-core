@@ -771,9 +771,6 @@
   "pyqt-builder": {
     "exclude_packages": ["packaging", "pyparsing", "sip", "toml"]
   },
-  "pyspelling": {
-    "exclude_packages": ["lxml", "markdown", "PyYAML", "six"]
-  },
   "python@3.8": {
     "extra_packages": ["setuptools", "pip", "wheel"]
   },
