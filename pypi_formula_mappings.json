@@ -953,9 +953,6 @@
   "snapcraft": {
     "extra_packages": ["catkin_pkg"]
   },
-  "solc-select": {
-    "exclude_packages": ["packaging"]
-  },
   "sphinx-doc": {
     "exclude_packages": ["certifi"],
     "extra_packages": ["numpydoc"]
