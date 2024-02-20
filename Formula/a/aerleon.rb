@@ -6,6 +6,7 @@ class Aerleon < Formula
   url "https://files.pythonhosted.org/packages/b8/e5/f4386abc5d0e7f18bba22650514c1c14dbd235c93e11ac020f6c724614da/aerleon-1.7.0.tar.gz"
   sha256 "f3145c2a04f37c0463fbd80ee650f039bda9bc445e9c7fd4f18d8eeeda1b6ead"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/aerleon/aerleon.git", branch: "main"
 
   bottle do
