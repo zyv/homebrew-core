@@ -1031,9 +1031,6 @@
   "touca": {
     "exclude_packages": ["certifi"]
   },
-  "tox": {
-    "exclude_packages": ["packaging"]
-  },
   "trafilatura": {
     "exclude_packages": ["certifi"]
   },
