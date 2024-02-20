@@ -796,9 +796,6 @@
   "python-markdown-it-py": {
     "exclude_packages": ["mdurl"]
   },
-  "python-openapi3": {
-    "exclude_packages": ["pyyaml", "requests"]
-  },
   "python-prompt-toolkit": {
     "exclude_packages": ["wcwidth"]
   },
