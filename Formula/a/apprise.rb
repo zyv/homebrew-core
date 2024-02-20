@@ -18,16 +18,9 @@ class Apprise < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d2b0ee41dfe5a7d17807e7521ab15e0f495daaba1d3e74899b1a084fc743127a"
   end
 
+  depends_on "libyaml"
+  depends_on "python-certifi"
   depends_on "python@3.12"
-
-  def python3
-    "python3.12"
-  end
-
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/71/da/e94e26401b62acd6d91df2b52954aceb7f561743aa5ccc32152886c76c96/certifi-2024.2.2.tar.gz"
-    sha256 "0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f"
-  end
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
@@ -70,8 +63,8 @@ class Apprise < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/e2/cc/abf6746cc90bc52df4ba730f301b89b3b844d6dc133cb89a01cfe2511eb9/urllib3-2.2.0.tar.gz"
-    sha256 "051d961ad0c62a94e50ecf1af379c3aba230c66c710493493560c0c223c49f20"
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   def install
