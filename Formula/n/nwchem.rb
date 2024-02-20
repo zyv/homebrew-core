@@ -40,6 +40,20 @@ class Nwchem < Formula
     sha256 "fcfc2b505a3afb0cc234cd0ac587c09c4d74e295f24496c899db7dc09dc7029b"
   end
 
+  # fix for Py_SetProgramName deprecated by python 3.11
+  # Remove in next release.
+  patch do
+    url "https://github.com/nwchemgit/nwchem/commit/c6851de6a771a31d387e06819fce26b49391b20b.patch?full_index=1"
+    sha256 "558b4f25013b91f29b2740e4d26fa6ebae861260d8ddd169c89aea255b49b7ea"
+  end
+
+  # fix for python 3.13
+  # Remove in next release.
+  patch do
+    url "https://github.com/nwchemgit/nwchem/commit/bc18d20d90ba1fd6efc894558bef2fdacaac28a8.patch?full_index=1"
+    sha256 "5432e8b0af47e80efb22f11774738e578919f5f857a7a3e46138a173910269d7"
+  end
+
   def install
     pkgshare.install "QA"
 
@@ -74,8 +88,15 @@ class Nwchem < Formula
       ENV["LIBXC_INCLUDE"] = Formula["libxc"].opt_include.to_s
       os = OS.mac? ? "MACX64" : "LINUX64"
       system "make", "nwchem_config", "NWCHEM_MODULES=all python gwmol", "USE_MPI=Y"
+      cd "tools" do
+        system "make", "NWCHEM_TARGET=#{os}", "USE_MPI=Y"
+      end
+      mkdir_p "../bin/#{os}"
+      system ENV.cc, "config/depend.c", "-o", "../bin/#{os}/depend.x"
+      system "make", "USE_INTERNALBLAS=1", "deps_stamp", "NWCHEM_TARGET=#{os}", "USE_MPI=Y"
+      ENV["QUICK_BUILD"] = "1"
       system "make", "NWCHEM_TARGET=#{os}", "USE_MPI=Y"
-
+      ENV.delete("QUICK_BUILD")
       bin.install "../bin/#{os}/nwchem"
       pkgshare.install "basis/libraries"
       pkgshare.install "basis/libraries.bse"
