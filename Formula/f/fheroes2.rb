@@ -24,9 +24,8 @@ class Fheroes2 < Formula
   depends_on "cmake" => :build
   depends_on "gettext" => :build
 
-  depends_on "libpng"
+  depends_on "innoextract"
   depends_on "sdl2"
-  depends_on "sdl2_image"
   depends_on "sdl2_mixer"
 
   uses_from_macos "zlib"
