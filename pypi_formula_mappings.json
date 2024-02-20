@@ -419,7 +419,7 @@
     "exclude_packages": ["certifi", "pillow"]
   },
   "grayskull": {
-    "exclude_packages": ["certifi", "packaging", "typing-extensions"]
+    "extra_packages": ["setuptools"]
   },
   "grip": {
     "exclude_packages": ["certifi", "markdown", "markupsafe", "Pygments"]
