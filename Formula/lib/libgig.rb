@@ -1,8 +1,8 @@
 class Libgig < Formula
   desc "Library for Gigasampler and DLS (Downloadable Sounds) Level 1/2 files"
   homepage "https://www.linuxsampler.org/libgig/"
-  url "https://download.linuxsampler.org/packages/libgig-4.4.0.tar.bz2"
-  sha256 "b5ef0149157e3869e49c844a08e69191c93b59cfd27c4b8dd413fd32797e4bcb"
+  url "https://download.linuxsampler.org/packages/libgig-4.4.1.tar.bz2"
+  sha256 "fdc89efab1f906128e6c54729967577e8d0462017018bc12551257df5dfe3aa4"
   license "GPL-2.0-or-later"
 
   livecheck do
