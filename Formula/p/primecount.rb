@@ -4,6 +4,7 @@ class Primecount < Formula
   url "https://github.com/kimwalisch/primecount/archive/refs/tags/v7.10.tar.gz"
   sha256 "0a0e9aaa25d8c24d06f0612fc01cd0c31f3eac4e096a9248fc041dd42dc60afb"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "584aa5450727af6f4c82e850ed0c5b08ce4d3a71b6e2ee5577ad58c2ca6a98c5"
