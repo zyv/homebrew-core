@@ -1,8 +1,8 @@
 class ApacheBrooklynCli < Formula
   desc "Apache Brooklyn command-line interface"
   homepage "https://brooklyn.apache.org"
-  url "https://github.com/apache/brooklyn-client/archive/refs/tags/rel/apache-brooklyn-1.0.0.tar.gz"
-  sha256 "9eb52ac3cd76adf219b66eb8b5a7899c86e25736294bca666a5b4e24d34e911b"
+  url "https://github.com/apache/brooklyn-client/archive/refs/tags/rel/apache-brooklyn-1.1.0.tar.gz"
+  sha256 "0c9ec77413e88d4ca23d0821c4d053b7cc69818962d4ccb9e7082c9d1dea7146"
   license "Apache-2.0"
 
   livecheck do
@@ -28,12 +28,8 @@ class ApacheBrooklynCli < Formula
   depends_on "go" => :build
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-    (buildpath/"src/github.com/apache/brooklyn-client").install "cli"
-    cd "src/github.com/apache/brooklyn-client/cli" do
-      system "go", "build", "-o", bin/"br", ".../br"
-      prefix.install_metafiles
+    cd "cli" do
+      system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"br"), "./br"
     end
   end
 
