@@ -1,9 +1,9 @@
 class Snort < Formula
   desc "Flexible Network Intrusion Detection System"
   homepage "https://www.snort.org"
-  url "https://github.com/snort3/snort3/archive/refs/tags/3.1.78.0.tar.gz"
-  mirror "https://fossies.org/linux/misc/snort3-3.1.78.0.tar.gz"
-  sha256 "08a51223c22aa3196e6dc959d3b52df03da9a458877ff7e77fa9c4ee8eb8947c"
+  url "https://github.com/snort3/snort3/archive/refs/tags/3.1.81.0.tar.gz"
+  mirror "https://fossies.org/linux/misc/snort3-3.1.81.0.tar.gz"
+  sha256 "d4093b0bfde013b3ad246cbc87bbd6c0cc09dfb9b4978b1a76b4ab27abf6d03a"
   license "GPL-2.0-only"
   head "https://github.com/snort3/snort3.git", branch: "master"
 
@@ -55,6 +55,10 @@ class Snort < Formula
   fails_with gcc: "5"
 
   def install
+    # Work around `std::ptr_fun` usage.
+    # Issue ref: https://github.com/snort3/snort3/issues/347
+    ENV.append "CXXFLAGS", "-D_LIBCPP_ENABLE_CXX17_REMOVED_BINDERS" if ENV.compiler == :clang
+
     # These flags are not needed for LuaJIT 2.1 (Ref: https://luajit.org/install.html).
     # On Apple ARM, building with flags results in broken binaries and they need to be removed.
     inreplace "cmake/FindLuaJIT.cmake", " -pagezero_size 10000 -image_base 100000000\"", "\""
