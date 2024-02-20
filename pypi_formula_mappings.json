@@ -64,6 +64,9 @@
   "apkleaks": {
     "exclude_packages": ["click", "lxml"]
   },
+  "apprise": {
+    "exclude_packages": ["certifi"]
+  },
   "arjun": {
     "exclude_packages": ["certifi"]
   },
