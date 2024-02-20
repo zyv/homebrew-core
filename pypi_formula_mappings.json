@@ -250,6 +250,9 @@
       "certifi", "keyring", "packaging", "pycparser", "pyyaml", "six", "typing-extensions", "virtualenv"
     ]
   },
+  "cookiecutter": {
+    "exclude_packages": ["certifi"]
+  },
   "cppman": {
     "exclude_packages": ["six"]
   },
