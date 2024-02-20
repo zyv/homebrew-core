@@ -19,6 +19,7 @@ class Aerleon < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "69a6fe0fb1e645c0ec2e374706bc4ce95ced0fad09c03a3ca2bd12093ebd6598"
   end
 
+  depends_on "libyaml"
   depends_on "python@3.12"
 
   resource "absl-py" do
