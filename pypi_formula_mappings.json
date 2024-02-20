@@ -858,9 +858,6 @@
     "package_name": "regipy[cli]",
     "exclude_packages": ["click", "pytz", "tabulate"]
   },
-  "remarshal": {
-    "exclude_packages": ["packaging", "pluggy", "python-dateutil", "pyyaml", "six"]
-  },
   "restview": {
     "exclude_packages": ["six", "Pygments", "docutils"]
   },
