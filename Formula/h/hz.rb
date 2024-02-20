@@ -1,8 +1,8 @@
 class Hz < Formula
   desc "Golang HTTP framework for microservices"
   homepage "https://github.com/cloudwego/hertz"
-  url "https://github.com/cloudwego/hertz/archive/refs/tags/cmd/hz/v0.8.0.tar.gz"
-  sha256 "7ba7009eb648cdc69840e645408ca1176c5c906db80873dfe54db972da40f591"
+  url "https://github.com/cloudwego/hertz/archive/refs/tags/cmd/hz/v0.8.1.tar.gz"
+  sha256 "99c64988df9a4bfbd59e694572dbd30bd61d109b3462df8a5db64b2fc2afaf4e"
   license "Apache-2.0"
   head "https://github.com/cloudwego/hertz.git", branch: "develop"
 
