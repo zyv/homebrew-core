@@ -771,9 +771,6 @@
   "python@3.12": {
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
   },
-  "python-anytree": {
-    "exclude_packages": ["six"]
-  },
   "python-build": {
     "exclude_packages": ["packaging", "pyproject-hooks"]
   },
