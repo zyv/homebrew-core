@@ -9,13 +9,13 @@ class Kin < Formula
   head "https://github.com/Serchinastico/Kin.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c18b30fe63a931ce39a351a56757d056f8cb8eb65afcb66915da95473119ec81"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a68442572da54214562be750571ce8523e44f3ebe27dd34974f0995bb4112bd4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fe35cbc07de38118dc432ca0ed8f90e1560234e9e0f96ff861d9fc123993ba25"
-    sha256 cellar: :any_skip_relocation, sonoma:         "6c0067848905a9e285758c23a5a58b7f0abc8cdb3996ca843f4d9d14349ed478"
-    sha256 cellar: :any_skip_relocation, ventura:        "828ebe0b72e6689e961f0f0d1d1cd21a5703f942213cb8a8bba81785a44036b6"
-    sha256 cellar: :any_skip_relocation, monterey:       "c1b9a596f879be72d378fd5d230dc0565933537c695cd966cd867704f34a5b9b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d74221f7f0650cad1b5add5a690012ade87146f477f946e9886321d5def43556"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6807d8dd5eb1f09a09a71a785fcaa8f45f35b9d0947f2940a1beb10a48f93a36"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "06ab8e57893078fb0792bffc354312e94c353e37ac8ca6532135e9ad7d975aba"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "818558a3eda35af74a418207556a8ff0b7fb24249c0f0e9b79d89319a4b23aec"
+    sha256 cellar: :any_skip_relocation, sonoma:         "c1084bb9a1381fa05866c7cfd81271c18bc8a7ff0c877f133fef3f31bcb245ec"
+    sha256 cellar: :any_skip_relocation, ventura:        "155712f579dd6161db9bedf3deffd586502a9276a0940df07ad40fdac3f597a2"
+    sha256 cellar: :any_skip_relocation, monterey:       "e505a49dbaefe2d93f5ba153f6156a2d07cd62c47ac83c32acf19cd933b00d09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0328c3668c00292fb9736cfc30cbb74259201456f9230fa2f2ae9572901bcfd3"
   end
 
   depends_on "python@3.12"
