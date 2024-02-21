@@ -240,7 +240,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "datasette": {
-    "exclude_packages": ["certifi", "uvicorn"]
+    "exclude_packages": ["certifi"]
   },
   "detect-secrets": {
     "exclude_packages": ["certifi"]
