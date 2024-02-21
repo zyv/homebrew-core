@@ -1,4 +1,6 @@
 class Mackup < Formula
+  include Language::Python::Virtualenv
+
   desc "Keep your Mac's application settings in sync"
   homepage "https://github.com/lra/mackup"
   url "https://files.pythonhosted.org/packages/47/98/87dfab0ae5d1abad48a56825585dcd406cdc183dbce930e24ef8439769ba/mackup-0.8.40.tar.gz"
@@ -17,20 +19,20 @@ class Mackup < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ef78d3ada78aa1149aed572375451333f0d5c981a5621150332f9c6f159c1d4b"
   end
 
-  depends_on "poetry" => :build
-  depends_on "python-docopt"
   depends_on "python@3.12"
-  depends_on "six"
 
-  def python3
-    "python3.12"
+  resource "docopt" do
+    url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
+    sha256 "49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
-    site_packages = Language::Python.site_packages(python3)
-    ENV.prepend_path "PYTHONPATH", Formula["poetry"].opt_libexec/site_packages
-
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
