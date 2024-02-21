@@ -252,9 +252,6 @@
     "package_name": "dnstwist[full]",
     "exclude_packages": ["certifi"]
   },
-  "doc8": {
-    "exclude_packages": ["docutils", "Pygments"]
-  },
   "docker-squash": {
     "exclude_packages": ["certifi"]
   },
