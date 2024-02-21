@@ -9,12 +9,10 @@ class Gdbgui < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, sonoma:       "90f57ed26219bc56ba9d4cd6723e1be22671ab33b61e4dd82607cf5fb13c07ff"
-    sha256 cellar: :any_skip_relocation, ventura:      "93601eb1af66befa802f36eb45afc053f172cb6c19e5a6281c1b3f0f75d544f9"
-    sha256 cellar: :any_skip_relocation, monterey:     "6cac4a7fd50072c2108068772edf1ba7e78270946c428620b47ca81139e644e2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "d1a4536b5eb571a9ca4fcffc86a0529712ac50340131a1681c32a38af7e1a218"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "36eb1049e48848080019c1533e14b63a43041667389e5ba0f8353adab5b3db17"
+    sha256 cellar: :any_skip_relocation, sonoma:       "98297f04a9bfa7028485e946f78e8fd3b3626f86976457c6d2115cd343a67288"
+    sha256 cellar: :any_skip_relocation, ventura:      "9050299328bdf5d618bf88f6035dbf87ba9a78eeb30e7d6aaac7f89fd22d4593"
+    sha256 cellar: :any_skip_relocation, monterey:     "522f9c070c12a7fb7d3b3d1355dc4b425dc1f8f6a4a22ad898f11eb2cc62b3bf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3e21d4de715f9491188306dd090bbc23f6fabe60eadf6b1e65238d19e30abee5"
   end
 
   depends_on arch: :x86_64 # gdb is not supported on macOS ARM
