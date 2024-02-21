@@ -1,8 +1,8 @@
 class Cdi < Formula
   desc "C and Fortran Interface to access Climate and NWP model Data"
   homepage "https://code.mpimet.mpg.de/projects/cdi"
-  url "https://code.mpimet.mpg.de/attachments/download/29020/cdi-2.3.0.tar.gz"
-  sha256 "fff47c8eac38ec2e0f47715aadcbc1343b166aa017f0466019e73c4a53a323a6"
+  url "https://code.mpimet.mpg.de/attachments/download/29309/cdi-2.4.0.tar.gz"
+  sha256 "91fca015b04c6841b9eab8b49e7726d35e35b9ec4350922072ec6e9d5eb174ef"
   license "GPL-2.0-only"
 
   livecheck do
