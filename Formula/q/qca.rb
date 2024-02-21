@@ -4,6 +4,7 @@ class Qca < Formula
   url "https://download.kde.org/stable/qca/2.3.8/qca-2.3.8.tar.xz"
   sha256 "48759ca86a0202461d908ba66134380cc3bb7d20fed3c031b9fc0289796a8264"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://invent.kde.org/libraries/qca.git", branch: "master"
 
   livecheck do
@@ -34,9 +35,20 @@ class Qca < Formula
 
   uses_from_macos "cyrus-sasl"
 
+  on_macos do
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1400
+  end
+
+  fails_with :clang do
+    build 1400
+    cause "Requires C++20"
+  end
+
   fails_with gcc: "5"
 
   def install
+    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1400
+
     ENV["QC_CERTSTORE_PATH"] = Formula["ca-certificates"].pkgetc/"cert.pem"
 
     # FIXME: QCA_PLUGINS_INSTALL_DIR should match qt's directory "{share}/qt/plugins";
