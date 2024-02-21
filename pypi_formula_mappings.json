@@ -53,9 +53,6 @@
       "python-neutronclient", "pywinrm", "requests-credssp", "shade", "zabbix-api"
     ]
   },
-  "apkleaks": {
-    "exclude_packages": ["click", "lxml"]
-  },
   "apprise": {
     "exclude_packages": ["certifi"]
   },
