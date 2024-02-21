@@ -730,9 +730,6 @@
   "python-build": {
     "exclude_packages": ["packaging", "pyproject-hooks"]
   },
-  "python-configobj": {
-    "exclude_packages": ["six"]
-  },
   "python-cryptography": {
     "exclude_packages": ["cffi", "pycparser", "typing-extensions"],
     "extra_packages": ["semantic-version", "setuptools-rust"]
