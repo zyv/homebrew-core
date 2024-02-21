@@ -6,6 +6,7 @@ class Abi3audit < Formula
   url "https://files.pythonhosted.org/packages/a3/4d/1f08c6db0b6cf02ef0fe33be39144d4477030910c3f61bffa3b2a9b09e87/abi3audit-0.0.9.tar.gz"
   sha256 "4f469e146d911f238724d49fd280d8bb7f411ff5d224865b13e47d4132e776a6"
   license "MIT"
+  revision 1
 
   bottle do
     rebuild 2
