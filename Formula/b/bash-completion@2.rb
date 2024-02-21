@@ -1,9 +1,9 @@
 class BashCompletionAT2 < Formula
   desc "Programmable completion for Bash 4.2+"
   homepage "https://github.com/scop/bash-completion"
-  url "https://github.com/scop/bash-completion/releases/download/2.11/bash-completion-2.11.tar.xz"
-  sha256 "73a8894bad94dee83ab468fa09f628daffd567e8bef1a24277f1e9a0daf911ac"
-  license "GPL-2.0"
+  url "https://github.com/scop/bash-completion/releases/download/2.12.0/bash-completion-2.12.0.tar.xz"
+  sha256 "3eb05b1783c339ef59ed576afb0f678fa4ef49a6de8a696397df3148f8345af9"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url :stable
@@ -36,15 +36,7 @@ class BashCompletionAT2 < Formula
   def install
     inreplace "bash_completion" do |s|
       s.gsub! "readlink -f", "readlink" if OS.mac?
-      if build.head?
-        s.gsub! "(/etc/bash_completion.d)", "(#{etc}/bash_completion.d)"
-      else
-        # Automatically read Homebrew's existing v1 completions
-        s.gsub! ":-/etc/bash_completion.d", ":-#{etc}/bash_completion.d"
-        # Automatically read Homebrew's v2 completions.
-        # TODO: Remove in the next release as script is able to find via PATH.
-        s.gsub! ":-/usr/local/share:", ":-#{HOMEBREW_PREFIX}/share:/usr/local/share:"
-      end
+      s.gsub! "(/etc/bash_completion.d)", "(#{etc}/bash_completion.d)"
     end
 
     system "autoreconf", "-i" if build.head?
