@@ -19,7 +19,8 @@ class Theharvester < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "edbbe07787db6dd9f370d7f8d89247cc60661b416903c568ea1b71823c2c77a8"
   end
 
-  depends_on "rust" => :build # for pydantic_core
+  depends_on "rust" => :build
+  depends_on "libyaml"
   depends_on "python-certifi"
   depends_on "python@3.12"
 
