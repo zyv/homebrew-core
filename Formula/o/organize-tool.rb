@@ -8,14 +8,13 @@ class OrganizeTool < Formula
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sonoma:   "85c209d2daf316ecba6d50e14a09c9df3a109b1f103dc32a26565f2253903f79"
-    sha256 cellar: :any,                 arm64_ventura:  "001d02e892e8addc850341f36270561cf556eb67846300075be5713bd4eadbbc"
-    sha256 cellar: :any,                 arm64_monterey: "53342c5f06b99195208d7ea8b9a21eda09c1c10139775d5e4ea4ca2b7163a93a"
-    sha256 cellar: :any,                 sonoma:         "ff956a8be5236ceb04ef7e06924e7b5b0ab90a53fa4dc934f5a3a499695a4129"
-    sha256 cellar: :any,                 ventura:        "317d3dcc2f74348813286d52fd8ede62474f85419b2f09d7e1db9165b273db63"
-    sha256 cellar: :any,                 monterey:       "6bec2de75bcf33b29dbdc5d94a290ccb5ce9c9e9e286c468996c7922916bea74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78cbd3f4f5eec6390a4707a418d1a17407b586726e5fdc318239261d90a3058f"
+    sha256 cellar: :any,                 arm64_sonoma:   "8b14f35ea8e0050c9418f262ee0eccf36df788ddb5441268caf06d3725811b3b"
+    sha256 cellar: :any,                 arm64_ventura:  "0feaa1a2c5072b30445d3089836f2701df7a0587ac5efef571ab9ec174104131"
+    sha256 cellar: :any,                 arm64_monterey: "f279503b0bafb2e8cd4a32078f61d4ef4c236b102f35c5317038ceca2e30e151"
+    sha256 cellar: :any,                 sonoma:         "58f51bf40b74a2f843a6fab3f8eb662242aadc3d18c3abdf369db80a09a69ef4"
+    sha256 cellar: :any,                 ventura:        "82530e74a7702a4200c159c55e6bec286893dd6a3a4a382a32ec8b4056337030"
+    sha256 cellar: :any,                 monterey:       "405b5ec7f507415ba734056aec714c7984bae3277fb36261f94fd2412d3d36fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cc19910e15b03c76b976a200adad410743df660f2ac721564b8747833aeb2eb"
   end
 
   depends_on "cmake" => :build
