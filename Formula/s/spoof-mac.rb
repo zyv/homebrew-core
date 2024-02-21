@@ -1,4 +1,6 @@
 class SpoofMac < Formula
+  include Language::Python::Virtualenv
+
   desc "Spoof your MAC address in macOS"
   homepage "https://github.com/feross/SpoofMAC"
   url "https://files.pythonhosted.org/packages/9c/59/cc52a4c5d97b01fac7ff048353f8dc96f217eadc79022f78455e85144028/SpoofMAC-2.1.1.tar.gz"
@@ -18,20 +20,19 @@ class SpoofMac < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8eba81d41a64fab35f01af1682bef0200b159f224fd4eb40d0e4056fc1e39d0"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-docopt"
   depends_on "python@3.12"
 
   on_linux do
     depends_on "net-tools"
   end
 
-  def python3
-    "python3.12"
+  resource "docopt" do
+    url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
+    sha256 "49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   def caveats
