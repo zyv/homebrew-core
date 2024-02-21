@@ -69,9 +69,6 @@
     "exclude_packages": ["numpy"],
     "extra_packages": ["fitsio"]
   },
-  "athenacli": {
-    "exclude_packages": ["sqlparse"]
-  },
   "aws-elasticbeanstalk": {
     "exclude_packages": ["certifi", "cffi", "cryptography", "packaging", "pycparser", "python-dateutil", "PyYAML", "six"]
   },
