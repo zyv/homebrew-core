@@ -1,4 +1,6 @@
 class Yamllint < Formula
+  include Language::Python::Virtualenv
+
   desc "Linter for YAML files"
   homepage "https://github.com/adrienverge/yamllint"
   url "https://files.pythonhosted.org/packages/da/06/d8cee5c3dfd550cc0a466ead8b321138198485d1034130ac1393cc49d63e/yamllint-1.35.1.tar.gz"
@@ -16,17 +18,21 @@ class Yamllint < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "8799f333c63d658c4dd6d87113fab523b23b8e41940e869c50e4205609145bb7"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-pathspec"
+  depends_on "libyaml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
 
-  def python3
-    "python3.12"
+  resource "pathspec" do
+    url "https://files.pythonhosted.org/packages/ca/bc/f35b8446f4531a7cb215605d100cd88b7ac6f44ab3fc94870c120ab3adbf/pathspec-0.12.1.tar.gz"
+    sha256 "a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do

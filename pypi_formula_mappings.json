@@ -1048,9 +1048,6 @@
   "yamale": {
     "exclude_packages": ["PyYAML"]
   },
-  "yamllint": {
-    "exclude_packages": ["pathspec", "PyYAML"]
-  },
   "ykman": {
     "exclude_packages": ["cffi", "click", "cryptography", "keyring", "pycparser"]
   },
