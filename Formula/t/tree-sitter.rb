@@ -3,8 +3,8 @@ require "language/node"
 class TreeSitter < Formula
   desc "Parser generator tool and incremental parsing library"
   homepage "https://tree-sitter.github.io/"
-  url "https://github.com/tree-sitter/tree-sitter/archive/refs/tags/v0.20.9.tar.gz"
-  sha256 "9b2fd489a7281e3a7e5e7cbbf3a974e5a6a115889ae65676d61b79bdae96464e"
+  url "https://github.com/tree-sitter/tree-sitter/archive/refs/tags/v0.21.0.tar.gz"
+  sha256 "6bb60e5b63c1dc18aba57a9e7b3ea775b4f9ceec44cc35dac4634d26db4eb69c"
   license "MIT"
   head "https://github.com/tree-sitter/tree-sitter.git", branch: "master"
 
@@ -52,7 +52,7 @@ class TreeSitter < Formula
       hello
     EOS
     parse_result = shell_output("#{bin}/tree-sitter parse #{testpath}/test/corpus/hello.txt").strip
-    assert_equal("(source_file [0, 0] - [1, 0])", parse_result)
+    assert_equal("(source_file [0, 0] - [1, 0])", parse_result.split("\n")[-1])
 
     # test `tree-sitter test`
     (testpath/"test"/"corpus"/"test_case.txt").write <<~EOS
