@@ -1,8 +1,8 @@
 class Phoneinfoga < Formula
   desc "Information gathering framework for phone numbers"
   homepage "https://sundowndev.github.io/phoneinfoga/"
-  url "https://github.com/sundowndev/phoneinfoga/archive/refs/tags/v2.10.8.tar.gz"
-  sha256 "7aef72755c5bea9ba80b73dcacc7757d3933ffb135d7a3f8e8ee5786a764e852"
+  url "https://github.com/sundowndev/phoneinfoga/archive/refs/tags/v2.11.0.tar.gz"
+  sha256 "adb3cf459d36c4372b5cab235506afcba24df175eca87bb36539126bb1dbf64e"
   license "GPL-3.0-only"
   head "https://github.com/sundowndev/phoneinfoga.git", branch: "master"
 
