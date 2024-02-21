@@ -6,7 +6,7 @@ class Twarc < Formula
   url "https://files.pythonhosted.org/packages/8a/ed/ac80b24ece6ee552f6deb39be34f01491cff4018cca8c5602c901dc08ecf/twarc-2.14.0.tar.gz"
   sha256 "fa8ee3052d8b9678231bea95d1bdcbabb3968d35c56a8d1fcedc8982e8c66a66"
   license "MIT"
-  revision 3
+  revision 4
 
   bottle do
     rebuild 3
