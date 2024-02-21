@@ -344,9 +344,6 @@
   "gcalcli": {
     "exclude_packages": ["certifi", "pyparsing", "six"]
   },
-  "gdbgui": {
-    "exclude_packages": ["six"]
-  },
   "ggshield": {
     "exclude_packages": ["certifi", "cryptography"]
   },
