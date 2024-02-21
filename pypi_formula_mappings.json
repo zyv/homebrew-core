@@ -495,9 +495,6 @@
       "brotli", "certifi", "click", "markupsafe", "psutil", "six", "typing-extensions"
     ]
   },
-  "mackup": {
-    "exclude_packages": ["docopt", "six"]
-  },
   "magic-wormhole": {
     "exclude_packages": ["cffi", "cryptography", "pycparser", "six", "typing-extensions"],
     "extra_packages": ["wheel"]
