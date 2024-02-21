@@ -223,10 +223,7 @@
   "crytic-compile": {
     "exclude_packages": ["solc-select", "toml"]
   },
-  "cyclonedx-python": {
-    "package_name": "cyclonedx-bom",
-    "exclude_packages": ["lxml", "packaging", "pyparsing", "python-dateutil", "six", "toml"]
-  },
+  "cyclonedx-python": "cyclonedx-bom",
   "cycode": {
     "exclude_packages": ["certifi"]
   },
