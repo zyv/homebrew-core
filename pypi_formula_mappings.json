@@ -931,9 +931,6 @@
   "theharvester": {
     "exclude_packages": ["certifi"]
   },
-  "todoman": {
-    "exclude_packages": ["click", "python-dateutil", "pytz", "six", "tabulate"]
-  },
   "toot": {
     "exclude_packages": ["certifi"]
   },
