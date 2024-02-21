@@ -99,9 +99,6 @@
   "bandcamp-dl": {
     "exclude_packages": ["certifi"]
   },
-  "bashate": {
-    "exclude_packages": ["pbr"]
-  },
   "bbot": {
     "exclude_packages": ["certifi", "cryptography"]
   },

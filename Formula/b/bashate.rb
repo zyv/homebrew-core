@@ -1,4 +1,6 @@
 class Bashate < Formula
+  include Language::Python::Virtualenv
+
   desc "Code style enforcement for bash programs"
   homepage "https://github.com/openstack/bashate"
   url "https://files.pythonhosted.org/packages/4d/0c/35b92b742cc9da7788db16cfafda2f38505e19045ae1ee204ec238ece93f/bashate-2.1.1.tar.gz"
@@ -16,16 +18,15 @@ class Bashate < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d760da6d91318d5f9e1ee0a0bdb716145bf0c9bf50531350796df64a583d1721"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-pbr"
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
+  resource "pbr" do
+    url "https://files.pythonhosted.org/packages/8d/c2/ee43b3b11bf2b40e56536183fc9f22afbb04e882720332b6276ee2454c24/pbr-6.0.0.tar.gz"
+    sha256 "d1377122a5a00e2f940ee482999518efe16d745d423a670c27773dfbc3c9a7d9"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
