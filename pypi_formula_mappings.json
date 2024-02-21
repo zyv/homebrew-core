@@ -84,9 +84,6 @@
   "aws-sso-util": {
     "exclude_packages": ["certifi"]
   },
-  "aws2-wrap": {
-    "exclude_packages": ["psutil"]
-  },
   "awscli": {
     "exclude_packages": ["cffi", "docutils", "pycparser", "six"]
   },
