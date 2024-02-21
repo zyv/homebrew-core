@@ -125,9 +125,6 @@
   "bpython": {
     "exclude_packages": ["certifi", "Pygments", "six"]
   },
-  "bpytop": {
-    "exclude_packages": ["psutil"]
-  },
   "buku": {
     "package_name": "buku[server]",
     "exclude_packages": ["certifi", "cffi", "click", "cryptography", "Jinja2", "MarkupSafe", "pycparser", "python-dateutil", "six", "urllib3"]
