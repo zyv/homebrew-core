@@ -3,19 +3,18 @@ class OrganizeTool < Formula
 
   desc "File management automation tool"
   homepage "https://github.com/tfeldmann/organize"
-  url "https://files.pythonhosted.org/packages/46/11/64cd44c8accd864c1f3e67a8185b60434834d50e0876a961554ceb9a64f7/organize_tool-3.1.2.tar.gz"
-  sha256 "03ef0bc8a179a31a302b65f0b2a725cc949946075dd13cd1fb72c2307dda9fbe"
+  url "https://files.pythonhosted.org/packages/3d/26/77406e216a995455367d0714dd0729a4c23b95801ea39143b4da4dbc178e/organize_tool-3.2.0.tar.gz"
+  sha256 "9323872b3df86e213749157868fd3549d817ce5e8cb0785b6ecef8d5bed8dc63"
   license "MIT"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sonoma:   "85c209d2daf316ecba6d50e14a09c9df3a109b1f103dc32a26565f2253903f79"
-    sha256 cellar: :any,                 arm64_ventura:  "001d02e892e8addc850341f36270561cf556eb67846300075be5713bd4eadbbc"
-    sha256 cellar: :any,                 arm64_monterey: "53342c5f06b99195208d7ea8b9a21eda09c1c10139775d5e4ea4ca2b7163a93a"
-    sha256 cellar: :any,                 sonoma:         "ff956a8be5236ceb04ef7e06924e7b5b0ab90a53fa4dc934f5a3a499695a4129"
-    sha256 cellar: :any,                 ventura:        "317d3dcc2f74348813286d52fd8ede62474f85419b2f09d7e1db9165b273db63"
-    sha256 cellar: :any,                 monterey:       "6bec2de75bcf33b29dbdc5d94a290ccb5ce9c9e9e286c468996c7922916bea74"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78cbd3f4f5eec6390a4707a418d1a17407b586726e5fdc318239261d90a3058f"
+    sha256 cellar: :any,                 arm64_sonoma:   "8b14f35ea8e0050c9418f262ee0eccf36df788ddb5441268caf06d3725811b3b"
+    sha256 cellar: :any,                 arm64_ventura:  "0feaa1a2c5072b30445d3089836f2701df7a0587ac5efef571ab9ec174104131"
+    sha256 cellar: :any,                 arm64_monterey: "f279503b0bafb2e8cd4a32078f61d4ef4c236b102f35c5317038ceca2e30e151"
+    sha256 cellar: :any,                 sonoma:         "58f51bf40b74a2f843a6fab3f8eb662242aadc3d18c3abdf369db80a09a69ef4"
+    sha256 cellar: :any,                 ventura:        "82530e74a7702a4200c159c55e6bec286893dd6a3a4a382a32ec8b4056337030"
+    sha256 cellar: :any,                 monterey:       "405b5ec7f507415ba734056aec714c7984bae3277fb36261f94fd2412d3d36fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9cc19910e15b03c76b976a200adad410743df660f2ac721564b8747833aeb2eb"
   end
 
   depends_on "cmake" => :build
@@ -23,6 +22,7 @@ class OrganizeTool < Formula
   depends_on "freetype"
   depends_on "libyaml"
   depends_on "openjpeg"
+  depends_on "python-cryptography"
   depends_on "python@3.12"
 
   resource "annotated-types" do
@@ -40,9 +40,19 @@ class OrganizeTool < Formula
     sha256 "bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0"
   end
 
+  resource "charset-normalizer" do
+    url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
+    sha256 "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
+  end
+
   resource "docopt-ng" do
     url "https://files.pythonhosted.org/packages/e4/50/8d6806cf13138127692ae6ff79ddeb4e25eb3b0bcc3c1bd033e7e04531a9/docopt_ng-0.9.0.tar.gz"
     sha256 "91c6da10b5bb6f2e9e25345829fb8278c78af019f6fc40887ad49b060483b1d7"
+  end
+
+  resource "docx2txt" do
+    url "https://files.pythonhosted.org/packages/7d/7d/60ee3f2b16d9bfdfa72e8599470a2c1a5b759cb113c6fe1006be28359327/docx2txt-0.8.tar.gz"
+    sha256 "2c06d98d7cfe2d3947e5760a57d924e3ff07745b379c8737723922e7009236e5"
   end
 
   resource "exifread" do
@@ -78,6 +88,11 @@ class OrganizeTool < Formula
   resource "mdurl" do
     url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
     sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
+  end
+
+  resource "pdfminer-six" do
+    url "https://files.pythonhosted.org/packages/31/b1/a43e3bd872ded4deea4f8efc7aff1703fca8c5455d0c06e20506a06a44ff/pdfminer.six-20231228.tar.gz"
+    sha256 "6004da3ad1a7a4d45930cb950393df89b068e73be365a6ff64a838d37bcb08c4"
   end
 
   resource "platformdirs" do
