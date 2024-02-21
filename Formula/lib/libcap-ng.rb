@@ -28,12 +28,16 @@ class LibcapNg < Formula
   # https://github.com/stevegrubb/libcap-ng/commit/30453b6553948cd05c438f9f509013e3bb84f25b
   patch :DATA
 
+  def python3
+    "python3.12"
+  end
+
   def install
     system "./autogen.sh" if build.head?
     system "./configure", *std_configure_args,
                           "--disable-silent-rules",
                           "--with-python3"
-    system "make", "install"
+    system "make", "install", "py3execdir=#{prefix/Language::Python.site_packages(python3)}"
   end
 
   test do
@@ -49,7 +53,7 @@ class LibcapNg < Formula
     EOS
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lcap-ng", "-o", "test"
     assert_equal "ok", `./test`
-    system "python3.12", "-c", "import capng"
+    system python3, "-c", "import capng"
   end
 end
 
