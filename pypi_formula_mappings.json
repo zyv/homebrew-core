@@ -424,7 +424,8 @@
     "exclude_packages": ["certifi"]
   },
   "iocextract": {
-    "exclude_packages": ["regex"]
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["requests"]
   },
   "ipython": {
     "exclude_packages": ["six", "Pygments"]
