@@ -884,9 +884,6 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["numpydoc"]
   },
-  "spoof-mac": {
-    "exclude_packages": ["docopt"]
-  },
   "sqlfluff": {
     "exclude_packages": [
       "click", "markupsafe", "packaging", "pygments", "PyYAML", "typing-extensions"
