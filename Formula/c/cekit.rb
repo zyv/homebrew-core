@@ -17,7 +17,7 @@ class Cekit < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "1953c1205a6b3ff72285b3d7899973a7d8c96db7d33cc6530c2928c9b73ae882"
   end
 
-  depends_on "python-setuptools" => :build
+  depends_on "libyaml"
   depends_on "python@3.12"
 
   resource "click" do
@@ -71,8 +71,8 @@ class Cekit < Formula
   end
 
   resource "ruamel-yaml" do
-    url "https://files.pythonhosted.org/packages/82/43/fa976e03a4a9ae406904489119cd7dd4509752ca692b2e0a19491ca1782c/ruamel.yaml-0.18.5.tar.gz"
-    sha256 "61917e3a35a569c1133a8f772e1226961bf5a1198bea7e23f06a0841dea1ab0e"
+    url "https://files.pythonhosted.org/packages/29/81/4dfc17eb6ebb1aac314a3eb863c1325b907863a1b8b1382cdffcb6ac0ed9/ruamel.yaml-0.18.6.tar.gz"
+    sha256 "8b27e6a217e786c6fbe5634d8f3f11bc63e0f80f6a5890f28863d9c45aac311b"
   end
 
   resource "ruamel-yaml-clib" do
