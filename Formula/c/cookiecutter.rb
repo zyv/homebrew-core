@@ -3,8 +3,8 @@ class Cookiecutter < Formula
 
   desc "Utility that creates projects from templates"
   homepage "https://github.com/cookiecutter/cookiecutter"
-  url "https://files.pythonhosted.org/packages/1a/5d/9f6a7b748436597060654c8b5815dabedd78893e566bc9838c6dcbf05e04/cookiecutter-2.5.0.tar.gz"
-  sha256 "e61e9034748e3f41b8bd2c11f00d030784b48711c4d5c42363c50989a65331ec"
+  url "https://files.pythonhosted.org/packages/52/17/9f2cd228eb949a91915acd38d3eecdc9d8893dde353b603f0db7e9f6be55/cookiecutter-2.6.0.tar.gz"
+  sha256 "db21f8169ea4f4fdc2408d48ca44859349de2647fbe494a9d6c3edfc0542c21c"
   license "BSD-3-Clause"
   head "https://github.com/cookiecutter/cookiecutter.git", branch: "master"
 
