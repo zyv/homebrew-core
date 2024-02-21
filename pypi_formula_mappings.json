@@ -448,7 +448,8 @@
     "exclude_packages": ["Pygments"]
   },
   "jenkins-job-builder": {
-    "exclude_packages": ["certifi", "markupsafe", "PyYAML", "setuptools", "six"]
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["setuptools"]
   },
   "jinja2-cli": {
     "package_name": "jinja2-cli[yaml,toml,xml]",
