@@ -404,7 +404,7 @@
     "extra_packages": ["setuptools"]
   },
   "grip": {
-    "exclude_packages": ["certifi", "markdown", "markupsafe", "Pygments"]
+    "exclude_packages": ["certifi"]
   },
   "grokmirror": {
     "exclude_packages": ["certifi"]
