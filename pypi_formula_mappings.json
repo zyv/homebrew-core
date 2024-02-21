@@ -288,9 +288,6 @@
   "dolphie": {
     "exclude_packages": ["certifi", "cryptography"]
   },
-  "dooit": {
-    "exclude_packages": ["six", "PyYAML", "virtualenv", "Pygments", "typing-extensions", "pytz"]
-  },
   "dotbot": {
     "exclude_packages": ["PyYAML"]
   },
