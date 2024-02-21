@@ -395,10 +395,7 @@
     ]
   },
   "howdoi": {
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "lxml", "pycparser", "Pygments",
-      "six", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "http-prompt": {
     "exclude_packages": ["certifi", "click", "Pygments", "PyYAML", "six"]
