@@ -6,15 +6,13 @@ class Asciidoctor < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d4a2e8e85f7b50d7496b078fc77079d8253b51ab36e815e1975d9920c0bfe574"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "987d9a5584cd331ed4c922c595e1e25e24314def4deaef7bd9c2764d74727224"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "987d9a5584cd331ed4c922c595e1e25e24314def4deaef7bd9c2764d74727224"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "987d9a5584cd331ed4c922c595e1e25e24314def4deaef7bd9c2764d74727224"
-    sha256 cellar: :any_skip_relocation, sonoma:         "69d971698522103d2d7102161048fb7c7a301a2019fc6c47f13a7048f7bed75f"
-    sha256 cellar: :any_skip_relocation, ventura:        "9833ecbbc05e19319c2ddb83c5310a05202bad47dfa5fb739c01e27f6ddbbd55"
-    sha256 cellar: :any_skip_relocation, monterey:       "9833ecbbc05e19319c2ddb83c5310a05202bad47dfa5fb739c01e27f6ddbbd55"
-    sha256 cellar: :any_skip_relocation, big_sur:        "9833ecbbc05e19319c2ddb83c5310a05202bad47dfa5fb739c01e27f6ddbbd55"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c05e33e2d036fc68a2b6cb4489108f241d1daa445d68534ebcbafde9c47a05dd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e30f71491a030ea2dec1c63f0b00e061a03ecabdc9eb5e94852637b6c6b0b638"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e30f71491a030ea2dec1c63f0b00e061a03ecabdc9eb5e94852637b6c6b0b638"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e30f71491a030ea2dec1c63f0b00e061a03ecabdc9eb5e94852637b6c6b0b638"
+    sha256 cellar: :any_skip_relocation, sonoma:         "f1330a677e96b6a3a21b4412eea992f56385944ce4e7929ac1e62c5d10ba1693"
+    sha256 cellar: :any_skip_relocation, ventura:        "f1330a677e96b6a3a21b4412eea992f56385944ce4e7929ac1e62c5d10ba1693"
+    sha256 cellar: :any_skip_relocation, monterey:       "f1330a677e96b6a3a21b4412eea992f56385944ce4e7929ac1e62c5d10ba1693"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ebc56f94f9fd1338d7f9e5372cde31a9c8ba76af4c26551825bdf57e32a5c366"
   end
 
   # Some gems require >= ruby 2.7
