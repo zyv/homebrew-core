@@ -6,6 +6,7 @@ class Apprise < Formula
   url "https://files.pythonhosted.org/packages/aa/99/f8e96a92f6385e6a5b38f454743dfa8a3610a9a0b4272df066c9aca97d72/apprise-1.7.2.tar.gz"
   sha256 "09e159b29008e6c8e93d7ffc3c15d419c0bbae41620405f8f2d3432b72a2e9bf"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     rebuild 2
