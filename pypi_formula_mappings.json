@@ -418,7 +418,7 @@
     "exclude_packages": ["typing-extensions"]
   },
   "img2pdf": {
-    "exclude_packages": ["lxml", "packaging", "pillow"]
+    "exclude_packages": ["pillow"]
   },
   "instaloader": {
     "exclude_packages": ["certifi"]
