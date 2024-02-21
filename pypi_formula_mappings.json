@@ -462,9 +462,6 @@
     "package_name": "keyring[completion]",
     "exclude_packages": ["cffi", "cryptography", "pycparser"]
   },
-  "khard": {
-    "exclude_packages": ["python-dateutil", "six"]
-  },
   "ldeep": {
     "exclude_packages": ["cffi", "cryptography", "pycparser", "six"]
   },
