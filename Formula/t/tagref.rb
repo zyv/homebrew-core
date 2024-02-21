@@ -1,8 +1,8 @@
 class Tagref < Formula
   desc "Refer to other locations in your codebase"
   homepage "https://github.com/stepchowfun/tagref"
-  url "https://github.com/stepchowfun/tagref/archive/refs/tags/v1.8.5.tar.gz"
-  sha256 "5c97a144ff485f90bda461e2f9fdc73840270cf1e0c5b380505330ec66d9ecb7"
+  url "https://github.com/stepchowfun/tagref/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "51775ee3b1f67fff71bf8db7f2fb35c6123df10f36220185785071757bdaf3eb"
   license "MIT"
 
   bottle do
@@ -35,7 +35,7 @@ class Tagref < Formula
     ENV["NO_COLOR"] = "true"
     output = shell_output("#{bin}/tagref 2>&1")
     assert_match(
-      /2 tags and 2 references validated in \d+ files\./,
+      "2 tags, 2 tag references, 0 file references, and 0 directory references",
       output,
       "Tagref did not find all the tags.",
     )
