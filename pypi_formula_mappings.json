@@ -1,6 +1,6 @@
 {
   "aiven-client": {
-    "exclude_packages": ["requests"]
+    "exclude_packages": ["certifi"]
   },
   "animdl": {
     "exclude_packages": ["certifi"]
