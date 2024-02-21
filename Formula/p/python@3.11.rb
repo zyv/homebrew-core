@@ -12,13 +12,13 @@ class PythonAT311 < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "360a3c596e6dc366b14105edd808c402f92963c893060ab08a46e5478da9d9f8"
-    sha256 arm64_ventura:  "43a26af08d37b1c27930e587b498071726ba9810b5b0c3b48772406410fe4a5e"
-    sha256 arm64_monterey: "88abcc63a0b938a76807c067b97cf3f3c5d9138e52255952336125e7cfcf3ac0"
-    sha256 sonoma:         "3ea9e879c186ad5d7ebcb930746c19ba828ebb9cce25e30f984ab569a405a503"
-    sha256 ventura:        "0f4b5681ffa3da52e7eb33c75435ebdb58c1af12b2b16dfd0266dab28ef811a6"
-    sha256 monterey:       "2f423003d778d46f0a733c565d93a086a5c186af63871ed7a8f545e24ebe62d4"
-    sha256 x86_64_linux:   "e30cedb29d299760adce6a0d2a390828c80466da49c6da80ea524f039ea64188"
+    sha256 arm64_sonoma:   "70dc9fcb84915ae957c5184326a00dfac2b6ef4ff7499a89f85872a4224583a1"
+    sha256 arm64_ventura:  "d4fa103943c27f5f3053822b10d904521f32ddb6fa09fba214f6a4050fc1ea9f"
+    sha256 arm64_monterey: "499c45033e5ab8978d33a6c8c2a7cffb4011a05b1d39b4b64d49c14a837e6c90"
+    sha256 sonoma:         "a0bac9048b07adbc7ef5371af600f731a907a7102f097608e80e74c23247ecd5"
+    sha256 ventura:        "653a1f0706c98abe6e8a0674d9227711791ae056ce8a59f9ac5e91e4f03b8b2b"
+    sha256 monterey:       "035c4c51329afabf69846a0ac5eff334ec3fcfbe7110aae632cc2bc77933c2ed"
+    sha256 x86_64_linux:   "72be3c11e8f047f276f95fabb14ad84a9df898e2c5edd019aae9f51ce63b7007"
   end
 
   # setuptools remembers the build flags python is built with and uses them to
