@@ -1,10 +1,10 @@
 class Libmrss < Formula
   desc "C library for RSS files or streams"
   homepage "https://github.com/bakulf/libmrss"
-  # Update to use an archive from GitHub once there's a release after 0.19.2
-  url "https://www.autistici.org/bakunin/libmrss/libmrss-0.19.2.tar.gz"
-  sha256 "071416adcae5c1a9317a4a313f2deb34667e3cc2be4487fb3076528ce45b210b"
+  url "https://github.com/bakulf/libmrss/archive/refs/tags/0.19.4.tar.gz"
+  sha256 "28022247056b04ca3f12a9e21134d42304526b2a67b7d6baf139e556af1151c6"
   license "LGPL-2.1-or-later"
+  head "https://github.com/bakulf/libmrss.git", branch: "master"
 
   bottle do
     rebuild 2
@@ -22,35 +22,50 @@ class Libmrss < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "8913d28bfed0e28e74935e3700fe71d2591da2d8ab2c8d3929dbd6ba7cc4786e"
   end
 
-  head do
-    url "https://github.com/bakulf/libmrss.git", branch: "master"
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
-
-  depends_on "pkg-config" => :build
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+  depends_on "pkg-config" => [:build, :test]
   depends_on "libnxml"
 
-  on_macos do
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
+  def install
+    # need NEWS file for build
+    touch "NEWS"
+
+    system "autoreconf", "--force", "--install", "--verbose"
+    system "./configure", *std_configure_args
+    system "make", "install"
   end
 
-  def install
-    if build.head?
-      mkdir "m4"
-      inreplace "autogen.sh", "libtoolize", "glibtoolize"
-      system "./autogen.sh"
-    elsif OS.mac?
-      system "autoreconf", "--force", "--verbose", "--install"
-    end
+  test do
+    (testpath/"test.c").write <<~EOS
+      #include <stdio.h>
+      #include <mrss.h>
 
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
-    system "make", "install"
+      int main() {
+        mrss_t *rss;
+        mrss_error_t error;
+        mrss_item_t *item;
+        const char *url = "https://raw.githubusercontent.com/git/git.github.io/master/feed.xml";
+
+        error = mrss_parse_url(url, &rss);
+        if (error) {
+            printf("Error parsing RSS feed: %s\\n", mrss_strerror(error));
+            return 1;
+        }
+
+        for (item = rss->item; item; item = item->next) {
+            printf("Title: %s\\n", item->title);
+        }
+
+        mrss_free(rss);
+
+        return 0;
+      }
+    EOS
+
+    pkg_config_flags = shell_output("pkg-config --cflags --libs mrss").chomp.split
+    system ENV.cc, "test.c", *pkg_config_flags, "-o", "test"
+    assert_match "Title: {{ post.title | xml_escape}}", shell_output("./test")
   end
 end
