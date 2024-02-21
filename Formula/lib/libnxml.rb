@@ -16,19 +16,16 @@ class Libnxml < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "63bb969c6efc96d3bc6c97c4e8faa0dc918ed41bdf9d55e25f372f33b4c4d78e"
   end
 
-  # Regenerate `configure` to avoid `-flat_namespace` bug.
-  # None of our usual patches apply.
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "pkg-config" => [:build, :test]
 
   uses_from_macos "curl"
 
   def install
     system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
@@ -73,7 +70,8 @@ class Libnxml < Formula
       }
     EOS
 
-    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lnxml", "-o", "test"
+    pkg_config_flags = shell_output("pkg-config --cflags --libs nxml").chomp.split
+    system ENV.cc, "test.c", *pkg_config_flags, "-o", "test"
     assert_equal("root: Hello world!\n", shell_output("./test"))
   end
 end
