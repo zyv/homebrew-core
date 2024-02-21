@@ -229,9 +229,6 @@
   "cookiecutter": {
     "exclude_packages": ["certifi"]
   },
-  "cppman": {
-    "exclude_packages": ["six"]
-  },
   "credstash": {
     "exclude_packages": ["cffi", "cryptography", "pycparser", "six"]
   },
