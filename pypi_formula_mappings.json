@@ -151,12 +151,6 @@
   "cffi": {
     "exclude_packages": ["pycparser"]
   },
-  "cfn-lint": {
-    "exclude_packages": [
-      "attrs", "networkx", "pbr", "python-dateutil", "pyyaml", "six", "sympy",
-      "typing-extensions", "urllib3"
-    ]
-  },
   "cfripper": {
     "exclude_packages": ["click", "PyYAML", "typing-extensions", "six"]
   },
