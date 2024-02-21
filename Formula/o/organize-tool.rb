@@ -8,19 +8,20 @@ class OrganizeTool < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "5d6b61e6e74bb835e8e560cfbd391ecf09345150d50e097c86edf022df4c986d"
-    sha256 cellar: :any,                 arm64_ventura:  "4fc085ebd1bdcfb9d78e079bc653694cbd0b52c150697506e532b1c0b67251e5"
-    sha256 cellar: :any,                 arm64_monterey: "dc9b93b5f2bba098c7121f7aafd5a87fe33dd5a58290db6a9063a581b1024012"
-    sha256 cellar: :any,                 sonoma:         "89a4dac1fa7902ef589eb5f395235448dabff6169fe755869617d3ef487edc5d"
-    sha256 cellar: :any,                 ventura:        "af738e6e0d65dd106ae035dbdc9f60bdd9ffe6800ae3db41c12ba52d3a0ed5f9"
-    sha256 cellar: :any,                 monterey:       "bb146d44bf39fb8bb52fbebc42bef3de9db14c9881a580004b8b323ff82a00b1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6bc0a9b18d1b5110b1a845c2d8ab68875f7d0172a920bb4e8314c149d2728121"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_sonoma:   "85c209d2daf316ecba6d50e14a09c9df3a109b1f103dc32a26565f2253903f79"
+    sha256 cellar: :any,                 arm64_ventura:  "001d02e892e8addc850341f36270561cf556eb67846300075be5713bd4eadbbc"
+    sha256 cellar: :any,                 arm64_monterey: "53342c5f06b99195208d7ea8b9a21eda09c1c10139775d5e4ea4ca2b7163a93a"
+    sha256 cellar: :any,                 sonoma:         "ff956a8be5236ceb04ef7e06924e7b5b0ab90a53fa4dc934f5a3a499695a4129"
+    sha256 cellar: :any,                 ventura:        "317d3dcc2f74348813286d52fd8ede62474f85419b2f09d7e1db9165b273db63"
+    sha256 cellar: :any,                 monterey:       "6bec2de75bcf33b29dbdc5d94a290ccb5ce9c9e9e286c468996c7922916bea74"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78cbd3f4f5eec6390a4707a418d1a17407b586726e5fdc318239261d90a3058f"
   end
 
   depends_on "cmake" => :build
-  depends_on "rust" => :build # for pydantic_core
+  depends_on "rust" => :build
   depends_on "freetype"
+  depends_on "libyaml"
   depends_on "openjpeg"
   depends_on "python@3.12"
 
