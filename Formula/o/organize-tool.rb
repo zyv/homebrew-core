@@ -19,8 +19,9 @@ class OrganizeTool < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "rust" => :build # for pydantic_core
+  depends_on "rust" => :build
   depends_on "freetype"
+  depends_on "libyaml"
   depends_on "openjpeg"
   depends_on "python@3.12"
 
