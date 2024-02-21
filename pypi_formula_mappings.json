@@ -791,6 +791,9 @@
     "package_name": "raven-cycode",
     "exclude_packages": ["certifi", "packaging", "pygments", "pytz", "pyyaml", "six"]
   },
+  "rawdog": {
+    "exclude_packages": ["certifi"]
+  },
   "rbtools": {
     "exclude_packages": ["certifi", "six", "typing-extensions"]
   },

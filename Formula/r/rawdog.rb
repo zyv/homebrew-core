@@ -18,7 +18,9 @@ class Rawdog < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b05cca910221a733e79b2fcffa31356c7c809faa6cbb7b793ef42b1b2bd4f0f"
   end
 
-  depends_on "rust" => :build # for tiktoken
+  depends_on "rust" => :build
+  depends_on "libyaml"
+  depends_on "python-certifi"
   depends_on "python@3.12"
 
   resource "aiohttp" do
@@ -37,18 +39,13 @@ class Rawdog < Formula
   end
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/2d/b8/7333d87d5f03247215d86a86362fd3e324111788c6cdd8d2e6196a6ba833/anyio-4.2.0.tar.gz"
-    sha256 "e1875bb4b4e2de1669f4bc7869b6d3f54231cdced71605e6e64c9be77e3be50f"
+    url "https://files.pythonhosted.org/packages/db/4d/3970183622f0330d3c23d9b8a5f52e365e50381fd484d08e3285104333d3/anyio-4.3.0.tar.gz"
+    sha256 "f75253795a87df48568485fd18cdd2a3fa5c4f7c5be8e5e36637733fce06fed6"
   end
 
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/e3/fc/f800d51204003fa8ae392c4e8278f256206e7a919b708eef054f5f4b650d/attrs-23.2.0.tar.gz"
     sha256 "935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30"
-  end
-
-  resource "certifi" do
-    url "https://files.pythonhosted.org/packages/71/da/e94e26401b62acd6d91df2b52954aceb7f561743aa5ccc32152886c76c96/certifi-2024.2.2.tar.gz"
-    sha256 "0569859f95fc761b18b45ef421b1290a0f65f147e92a1e5eb3e635f9a5e4e66f"
   end
 
   resource "charset-normalizer" do
@@ -117,8 +114,8 @@ class Rawdog < Formula
   end
 
   resource "litellm" do
-    url "https://files.pythonhosted.org/packages/a4/8a/dafe8757962b95a813e077fdff67885aad5c6ea5e081a7e47e740948197a/litellm-1.24.3.tar.gz"
-    sha256 "915f69b38665a82919a5deca2d21d58ab5342b69ab20ca9d232092694b841a7e"
+    url "https://files.pythonhosted.org/packages/00/d6/6d6fe7a3893736ca4b3f581dc397dc68d8fb24a2d06a91cc3cd61d7d1c4a/litellm-1.26.6.tar.gz"
+    sha256 "5d3af7d13e2b8e33c03168841b87d6fbb377157cc69ccde108ba0f43f7eabbdd"
   end
 
   resource "markupsafe" do
@@ -197,8 +194,8 @@ class Rawdog < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/e2/cc/abf6746cc90bc52df4ba730f301b89b3b844d6dc133cb89a01cfe2511eb9/urllib3-2.2.0.tar.gz"
-    sha256 "051d961ad0c62a94e50ecf1af379c3aba230c66c710493493560c0c223c49f20"
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   resource "yarl" do
