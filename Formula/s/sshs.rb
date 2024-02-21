@@ -1,8 +1,8 @@
 class Sshs < Formula
   desc "Graphical command-line client for SSH"
   homepage "https://github.com/quantumsheep/sshs"
-  url "https://github.com/quantumsheep/sshs/archive/refs/tags/3.4.0.tar.gz"
-  sha256 "f46f9185f97e35cf3b02286631df715027c3b0d374959c7e402a21bd30208f74"
+  url "https://github.com/quantumsheep/sshs/archive/refs/tags/4.0.0.tar.gz"
+  sha256 "905ee68f84210043e0589162ed36d41bf3583233d8a017dfa33dab7b90cf6006"
   license "MIT"
 
   bottle do
@@ -18,14 +18,14 @@ class Sshs < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0db2b2dec20f5fd9bdc5d9b18f5e6f7780352991dd9c4b025346b3ad1da3c6a2"
   end
 
-  depends_on "go" => :build
+  depends_on "rust" => :build
 
   def install
-    system "make", "build", "VERSION=#{version}", "OUTPUT=#{bin}/sshs"
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
-    assert_equal "sshs version #{version}", shell_output(bin/"sshs --version").strip
+    assert_equal "sshs #{version}", shell_output(bin/"sshs --version").strip
 
     (testpath/".ssh/config").write <<~EOS
       Host "Test"
