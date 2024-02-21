@@ -1,8 +1,8 @@
 class JfrogCli < Formula
   desc "Command-line interface for JFrog products"
   homepage "https://www.jfrog.com/confluence/display/CLI/JFrog+CLI"
-  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.52.10.tar.gz"
-  sha256 "c5072ad254852921f007e7591afaee3d89a09919ed4c8fb2e492a1c7f1215672"
+  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.53.1.tar.gz"
+  sha256 "19b499135f210f4d237e65d6826433e69c7d321d21ad894abc385b2292220307"
   license "Apache-2.0"
   head "https://github.com/jfrog/jfrog-cli.git", branch: "v2"
 
@@ -17,6 +17,12 @@ class JfrogCli < Formula
   end
 
   depends_on "go" => :build
+
+  # upstream patch PR to support go1.22 build, https://github.com/jfrog/jfrog-cli/pull/2447
+  patch do
+    url "https://github.com/jfrog/jfrog-cli/commit/9cba3d265b798f5a7768af2317a12de9c01ab401.patch?full_index=1"
+    sha256 "2c3fb451956d5de0382371612456cfad5b907ac40e2240507a5050ea4df4c797"
+  end
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"jf")
