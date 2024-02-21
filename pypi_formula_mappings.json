@@ -749,9 +749,6 @@
   "python-markdown-it-py": {
     "exclude_packages": ["mdurl"]
   },
-  "python-prompt-toolkit": {
-    "exclude_packages": ["wcwidth"]
-  },
   "python-requests": {
     "exclude_packages": ["certifi", "charset-normalizer", "idna", "urllib3"]
   },
