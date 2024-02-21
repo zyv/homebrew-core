@@ -345,9 +345,6 @@
   "evernote-backup": {
     "exclude_packages": ["certifi", "click", "pyparsing"]
   },
-  "eye-d3": {
-    "exclude_packages": ["packaging", "toml"]
-  },
   "fabric": {
     "extra_packages": ["decorator"],
     "exclude_packages": ["cffi", "cryptography", "invoke", "pycparser"]
