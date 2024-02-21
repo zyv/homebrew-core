@@ -1,8 +1,8 @@
 class Botan < Formula
   desc "Cryptographic algorithms and formats library in C++"
   homepage "https://botan.randombit.net/"
-  url "https://botan.randombit.net/releases/Botan-3.2.0.tar.xz"
-  sha256 "049c847835fcf6ef3a9e206b33de05dd38999c325e247482772a5598d9e5ece3"
+  url "https://botan.randombit.net/releases/Botan-3.3.0.tar.xz"
+  sha256 "368f11f426f1205aedb9e9e32368a16535dc11bd60351066e6f6664ec36b85b9"
   license "BSD-2-Clause"
   head "https://github.com/randombit/botan.git", branch: "master"
 
@@ -30,12 +30,12 @@ class Botan < Formula
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1315
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1400
   end
 
   fails_with :clang do
-    build 1315
-    cause "requires Xcode 13.3"
+    build 1400
+    cause "Requires C++20"
   end
 
   fails_with gcc: "5"
@@ -46,7 +46,7 @@ class Botan < Formula
 
   def install
     ENV.cxx11
-    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1315
+    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1400
 
     args = %W[
       --prefix=#{prefix}
