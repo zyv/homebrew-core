@@ -6,6 +6,7 @@ class Arjun < Formula
   url "https://files.pythonhosted.org/packages/83/2d/e521035e38c81c9d7f4aa02a287dddeb163ad51ebca28bef7563fc503c07/arjun-2.2.2.tar.gz"
   sha256 "3b2235144e91466b14474ab0cad1bcff6fb1313edb943a690c64ed0ff995cc46"
   license "AGPL-3.0-only"
+  revision 1
 
   bottle do
     rebuild 2
