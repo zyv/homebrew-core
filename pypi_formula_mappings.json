@@ -744,9 +744,6 @@
   "python-requests": {
     "exclude_packages": ["certifi", "charset-normalizer", "idna", "urllib3"]
   },
-  "python-rich": {
-    "exclude_packages": ["markdown-it-py", "pygments"]
-  },
   "python-yq": {
     "exclude_packages": ["argcomplete", "PyYAML"]
   },
