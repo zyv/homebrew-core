@@ -755,9 +755,6 @@
   "s3cmd": {
     "exclude_packages": ["python-dateutil", "python-magic", "six"]
   },
-  "s4cmd": {
-    "exclude_packages": ["six", "python-dateutil", "pytz"]
-  },
   "sail": {
     "package_name": "sailed-io",
     "exclude_packages": [
