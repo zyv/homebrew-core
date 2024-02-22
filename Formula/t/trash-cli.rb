@@ -1,4 +1,6 @@
 class TrashCli < Formula
+  include Language::Python::Virtualenv
+
   desc "Command-line interface to the freedesktop.org trashcan"
   homepage "https://github.com/andreafrancia/trash-cli"
   url "https://files.pythonhosted.org/packages/1e/2b/267cd091c656738fd7fb2f60d86898698c5431c0565f87917f8eb6abb753/trash-cli-0.23.11.10.tar.gz"
@@ -17,20 +19,23 @@ class TrashCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2d547aed5a0794b2785e3d0a539fa6d2ffdf0435acb1675b12964ec6056d3d3"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-psutil"
   depends_on "python@3.12"
-  depends_on "six"
 
   conflicts_with "macos-trash", because: "both install a `trash` binary"
   conflicts_with "trash", because: "both install a `trash` binary"
 
-  def python3
-    "python3.12"
+  resource "psutil" do
+    url "https://files.pythonhosted.org/packages/90/c7/6dc0a455d111f68ee43f27793971cf03fe29b6ef972042549db29eec39a2/psutil-5.9.8.tar.gz"
+    sha256 "6be126e3225486dff286a8fb9a06246a5253f4c7c53b475ea5f5ac934e64194c"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources(link_manpages: true)
   end
 
   test do

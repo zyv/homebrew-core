@@ -916,9 +916,6 @@
   "translate-toolkit": {
     "exclude_packages": ["lxml"]
   },
-  "trash-cli": {
-    "exclude_packages": ["psutil", "six"]
-  },
   "trezor-agent": {
     "exclude_packages": [
       "certifi", "click", "cffi", "cryptography", "docutils", "pycparser",
