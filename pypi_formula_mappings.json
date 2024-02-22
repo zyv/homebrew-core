@@ -406,7 +406,7 @@
     "exclude_packages": ["certifi"]
   },
   "instalooter": {
-    "exclude_packages": ["certifi", "six"]
+    "exclude_packages": ["certifi"]
   },
   "internetarchive": {
     "exclude_packages": ["certifi"]
