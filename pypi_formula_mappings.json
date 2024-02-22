@@ -396,9 +396,6 @@
     "package_name": "huggingface-hub",
     "exclude_packages": ["certifi", "packaging", "PyYAML", "typing-extensions"]
   },
-  "hyfetch": {
-    "exclude_packages": ["typing-extensions"]
-  },
   "img2pdf": {
     "exclude_packages": ["pillow"]
   },
