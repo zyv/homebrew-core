@@ -3,10 +3,9 @@ class AwsSamCli < Formula
 
   desc "CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM"
   homepage "https://aws.amazon.com/serverless/sam/"
-  url "https://files.pythonhosted.org/packages/c5/ce/9ddcdfe18466ec6a7eac5b157d37f377a6c3c8ee331a0c0434a8ac0472cb/aws-sam-cli-1.109.0.tar.gz"
-  sha256 "2853a836b66c16d4a0c6c8312c2300e8c298fc76d4ff9917955c963d158bffcf"
+  url "https://files.pythonhosted.org/packages/52/ca/3f7de194e0d419f8e29c6098fafe3d8e637adda85021dadf67ad8f87ef6d/aws-sam-cli-1.110.0.tar.gz"
+  sha256 "35d585fe1b8598747a50f736b2a1ce2def069118a1cccb4f3d5391cb0ace427e"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     rebuild 1
@@ -44,13 +43,13 @@ class AwsSamCli < Formula
   end
 
   resource "aws-lambda-builders" do
-    url "https://files.pythonhosted.org/packages/88/0c/13b2dd06cd206822e7be2f0acd86e3561d1991f20cf5d3aebc1210f31e90/aws_lambda_builders-1.45.0.tar.gz"
-    sha256 "5c19a6628eecf21578cd9c521e747f4a2163c62c527cd840b11b62a10b661348"
+    url "https://files.pythonhosted.org/packages/74/ed/701b3db0b5b1efca12a3c53da0dfd3212ddbddb4ef2a00eccc9902a2c311/aws_lambda_builders-1.46.0.tar.gz"
+    sha256 "fe3ffc5b3d3176b3e3f92a57d83615ed63399ba897d1ce4110bcaba83a1878d3"
   end
 
   resource "aws-sam-translator" do
-    url "https://files.pythonhosted.org/packages/05/74/01b555f6862974d8c4f31147715bcda5f81903482b4468c161d4fccdd388/aws-sam-translator-1.84.0.tar.gz"
-    sha256 "dbfd5669b5ef4bd7bc7af4775eec2ce4db61a2c2a17d721e67b51cf6a6dd63f9"
+    url "https://files.pythonhosted.org/packages/43/e0/2943607c4947d409c55ff4893cb0aabb6759a933c065a201012f80bc63e7/aws-sam-translator-1.85.0.tar.gz"
+    sha256 "e41938affa128fb5bde5e1989b260bf539a96369bba3faf316ce66651351df39"
   end
 
   resource "binaryornot" do
@@ -64,23 +63,23 @@ class AwsSamCli < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/bb/7a/5ec8b3d253c00ec23246018e5d5dd31639a67a88aabd109a17dcc2d80d40/boto3-1.34.45.tar.gz"
-    sha256 "46432fd506708fec6caec4392d758c6f5b79a376dee67d3284fe8b6bfbafeaf4"
+    url "https://files.pythonhosted.org/packages/89/51/8b7c07768bef5756cdc38b3168b228139d2ff1ddd782e515f1c0f2c35a2a/boto3-1.34.47.tar.gz"
+    sha256 "7574afd70c767fdbb19726565a67b47291e1e35ec792c9fbb8ee63cb3f630d45"
   end
 
   resource "boto3-stubs" do
-    url "https://files.pythonhosted.org/packages/24/bb/d2e0948bae0cb688c6cfcc976d582dfd2ad7a7987b9220570adbdc317bfb/boto3-stubs-1.34.32.tar.gz"
-    sha256 "077f13b0856862bedafb92b8499b960624d06f684595be701fade51a8e9615ed"
+    url "https://files.pythonhosted.org/packages/05/66/0869ed76554991657b2d83ebf11247aae565ac57ea5dd52ce31870a16993/boto3-stubs-1.34.43.tar.gz"
+    sha256 "0a0bdf96eb42f3b12b9bf159d97c407cf272e0430e5f7b42581ce7124ce9bb78"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/1a/bd/6aeaef8d15cd59acef3f47b2658507f99effa1736847352da89b1550e3f1/botocore-1.34.45.tar.gz"
-    sha256 "bf4fe24dd00a6262a27573dea1690ea68eb20f939e7086effadf19aa1acb44d1"
+    url "https://files.pythonhosted.org/packages/93/cf/8c9516f6b1fb859e7fcb7413942b51573b54113307a92db46a44497a3b96/botocore-1.34.47.tar.gz"
+    sha256 "29f1d6659602c5d79749eca7430857f7a48dd02e597d0ea4a95a83c47847993e"
   end
 
   resource "botocore-stubs" do
-    url "https://files.pythonhosted.org/packages/5c/b7/c38d97c1cf2731a0cd276acd78ee4edf0cb61ccfede251458563a5764f88/botocore_stubs-1.34.45.tar.gz"
-    sha256 "870ecc41f4559dab592b0e3d5d52950e2c35211cfbbedf5b05cb9ca760fb291b"
+    url "https://files.pythonhosted.org/packages/2d/18/b4038b2b43efdeba39a611e7304ac1c9dd1a18e9a006e90b86e65d0f453f/botocore_stubs-1.34.47.tar.gz"
+    sha256 "cc1fac318e3b28f4cae4f664daa1598fcd1daa87fe5b312b402137b761ed1c46"
   end
 
   resource "cfn-lint" do
@@ -159,8 +158,8 @@ class AwsSamCli < Formula
   end
 
   resource "jsonpickle" do
-    url "https://files.pythonhosted.org/packages/6e/92/62fdc2f6b468b870dd171ad21748ef0ec2bff1b258c25ce6db3545cccc90/jsonpickle-3.0.2.tar.gz"
-    sha256 "e37abba4bfb3ca4a4647d28bb9f4706436f7b46c8a8333b4a718abafa8e46b37"
+    url "https://files.pythonhosted.org/packages/05/68/38c6c809fd3203e507c0c95ebede5e682bdc84f2e81fc6f818d7926c6a41/jsonpickle-3.0.3.tar.gz"
+    sha256 "5691f44495327858ab3a95b9c440a79b41e35421be1a6e09a47b6c9b9421fd06"
   end
 
   resource "jsonpointer" do
@@ -229,8 +228,8 @@ class AwsSamCli < Formula
   end
 
   resource "mypy-boto3-lambda" do
-    url "https://files.pythonhosted.org/packages/56/0a/d6d9df1bf4b6373f348b5867e9046a4ad1dbb5d5e8d66af7c3bd60e35000/mypy-boto3-lambda-1.34.44.tar.gz"
-    sha256 "b465e00c33267ceffdf3040c9562755d73aee21902a16d9b84294f7f0e378ab9"
+    url "https://files.pythonhosted.org/packages/7b/df/bedebdf4e5b719812db2ba3dfba2110341b55649dc15116d5eb250cfa5bf/mypy-boto3-lambda-1.34.46.tar.gz"
+    sha256 "275297944c5e36a170b37ce70229f21db6dd3561606799f18d96e36ac5df6876"
   end
 
   resource "mypy-boto3-s3" do
