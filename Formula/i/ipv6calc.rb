@@ -5,8 +5,8 @@ class Ipv6calc < Formula
 
   desc "Small utility for manipulating IPv6 addresses"
   homepage "https://www.deepspace6.net/projects/ipv6calc.html"
-  url "https://github.com/pbiering/ipv6calc/archive/refs/tags/4.1.0.tar.gz"
-  sha256 "9c42edd9998f13465d275a3124cfdf72c93fd793d38f6d732124ac3f4b84e36e"
+  url "https://github.com/pbiering/ipv6calc/archive/refs/tags/4.2.0.tar.gz"
+  sha256 "767dbd3d21d04e21aa9764275e2aae726f04daf66bca21fc65f0a652bdc8b50e"
   license "GPL-2.0-only"
 
   # Upstream creates stable version tags (e.g., `v1.2.3`) before a release but
@@ -68,7 +68,7 @@ class Ipv6calc < Formula
     end
 
     # This needs --mandir, otherwise it tries to install to /share/man/man8.
-    system "./configure", "--prefix=#{prefix}", "--mandir=#{man}"
+    system "./configure", "--prefix=#{prefix}", "--mandir=#{man}", "--datadir=#{pkgshare}"
     system "make"
     system "make", "install"
   end
