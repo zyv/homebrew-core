@@ -1,4 +1,6 @@
 class JujuWait < Formula
+  include Language::Python::Virtualenv
+
   desc "Juju plugin for waiting for deployments to settle"
   homepage "https://launchpad.net/juju-wait"
   url "https://files.pythonhosted.org/packages/0c/2b/f4bd0138f941e4ba321298663de3f1c8d9368b75671b17aa1b8d41a154dc/juju-wait-2.8.4.tar.gz"
@@ -17,17 +19,27 @@ class JujuWait < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0df86b91b3a8d26f0219243a6eccd28535bc82a39dc62df5ca5e4acf1c73380"
   end
 
-  depends_on "juju"
-  depends_on "python-setuptools"
-  depends_on "python@3.12"
-  depends_on "pyyaml"
+  # From homepage:
+  # [DEPRECATED] Since Juju 3, there's a native Juju command covering this -
+  # https://juju.is/docs/olm/juju-wait-for. Please use that instead.
+  deprecate! date: "2024-02-22", because: :deprecated_upstream
 
-  def python3
-    "python3.12"
+  depends_on "juju"
+  depends_on "libyaml"
+  depends_on "python@3.12"
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
+
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
+    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
