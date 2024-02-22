@@ -770,7 +770,7 @@
     "exclude_packages": ["pathspec", "PyYAML"]
   },
   "sceptre": {
-    "exclude_packages": ["certifi", "click", "packaging", "pyparsing", "six", "PyYAML"]
+    "exclude_packages": ["certifi"]
   },
   "schemathesis": {
     "exclude_packages": ["certifi", "click", "markupsafe", "six", "packaging", "PyYAML", "typing-extensions"]
