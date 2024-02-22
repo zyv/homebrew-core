@@ -816,7 +816,7 @@
     ]
   },
   "sigma-cli": {
-    "exclude_packages": ["certifi", "click", "markupsafe", "pyparsing", "pyyaml"],
+    "exclude_packages": ["certifi"],
     "extra_packages": ["pysigma-backend-sqlite"]
   },
   "sigstore": {
