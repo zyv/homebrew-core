@@ -151,9 +151,6 @@
   "cffi": {
     "exclude_packages": ["pycparser"]
   },
-  "cfripper": {
-    "exclude_packages": ["click", "PyYAML", "typing-extensions", "six"]
-  },
   "charm-tools": {
     "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser", "PyYAML", "six"],
     "extra_packages": ["pip==22.3.1", "wheel"]

@@ -17,25 +17,27 @@ class Cfripper < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ceebfaa6f2aa9ac2845598ed93d264d89e9fd9db5ef01074ddf332ed19c387bf"
   end
 
-  depends_on "python-click"
-  depends_on "python-typing-extensions"
+  depends_on "libyaml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
-  depends_on "six"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/0d/4d/a098b0b06b28043078e34b07e12e958cbea288e19454b83b1c22efc68719/boto3-1.34.40.tar.gz"
-    sha256 "81d026ed8c8305b880c71f9f287f9b745b52bd358a91cfc133844c907db4d7ee"
+    url "https://files.pythonhosted.org/packages/89/51/8b7c07768bef5756cdc38b3168b228139d2ff1ddd782e515f1c0f2c35a2a/boto3-1.34.47.tar.gz"
+    sha256 "7574afd70c767fdbb19726565a67b47291e1e35ec792c9fbb8ee63cb3f630d45"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/2b/7e/3ec86e69e49ce314f680280449189c05609c0801ad549bd53d2af612f6df/botocore-1.34.40.tar.gz"
-    sha256 "cb794bdb5b3d41845749a182ec93cb1453560e52b97ae0ab43ace81deb011f6d"
+    url "https://files.pythonhosted.org/packages/93/cf/8c9516f6b1fb859e7fcb7413942b51573b54113307a92db46a44497a3b96/botocore-1.34.47.tar.gz"
+    sha256 "29f1d6659602c5d79749eca7430857f7a48dd02e597d0ea4a95a83c47847993e"
   end
 
   resource "cfn-flip" do
     url "https://files.pythonhosted.org/packages/ca/75/8eba0bb52a6c58e347bc4c839b249d9f42380de93ed12a14eba4355387b4/cfn_flip-1.3.0.tar.gz"
     sha256 "003e02a089c35e1230ffd0e1bcfbbc4b12cc7d2deb2fcc6c4228ac9819307362"
+  end
+
+  resource "click" do
+    url "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz"
+    sha256 "ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
   end
 
   resource "jmespath" do
@@ -68,9 +70,24 @@ class Cfripper < Formula
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
   end
 
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
+
   resource "s3transfer" do
     url "https://files.pythonhosted.org/packages/a0/b5/4c570b08cb85fdcc65037b5229e00412583bb38d974efecb7ec3495f40ba/s3transfer-0.10.0.tar.gz"
     sha256 "d0c8bbf672d5eebbe4e57945e23b972d963f07d82f661cabf678a5c88831595b"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
+    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
   end
 
   resource "urllib3" do
