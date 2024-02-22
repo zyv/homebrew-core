@@ -62,6 +62,15 @@ class Gmic < Formula
     system "make", "install", *args, "PREFIX=#{prefix}"
     lib.install "src/libgmic.a"
 
+    if OS.mac?
+      # The Makefile does not install the dylib and gmic.h, so we need to
+      # install them manually.
+      ln_s "libgmic.#{version}.dylib", "src/libgmic.dylib"
+      lib.install "src/libgmic.#{version}.dylib"
+      lib.install "src/libgmic.dylib"
+      include.install "src/gmic.h"
+    end
+
     # Need gmic binary to build completions
     ENV.prepend_path "PATH", bin
     system "make", "bashcompletion", *args
