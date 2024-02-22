@@ -814,9 +814,6 @@
       "certifi", "cryptography", "packaging", "pycparser", "six", "tabulate", "typing-extensions"
     ]
   },
-  "shallow-backup": {
-    "exclude_packages": ["click", "six"]
-  },
   "shodan": {
     "exclude_packages": ["certifi", "click", "six"]
   },
