@@ -18,8 +18,6 @@ class Pyinstaller < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0b29f4e046b744dcb1877a462a4101134c7b024f1781b4be12d58cc0dad39cba"
   end
 
-  depends_on "python-packaging"
-  depends_on "python-setuptools"
   depends_on "python@3.12"
 
   resource "altgraph" do
@@ -32,9 +30,19 @@ class Pyinstaller < Formula
     sha256 "07ae9e15e8e4cd9a788013d81f5908b3609aa76f9b1421bae9c4d7606ec86a30"
   end
 
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
+    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
+  end
+
   resource "pyinstaller-hooks-contrib" do
     url "https://files.pythonhosted.org/packages/c4/d0/276175694985ae97497f176591a724c226257ad93acf1901896a218aed76/pyinstaller-hooks-contrib-2024.1.tar.gz"
     sha256 "51a51ea9e1ae6bd5ffa7ec45eba7579624bf4f2472ff56dba0edc186f6ed46a6"
+  end
+
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
+    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
   end
 
   def install
