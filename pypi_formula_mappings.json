@@ -859,9 +859,6 @@
   "sslyze": {
     "exclude_packages": ["typing-extensions", "pycparser"]
   },
-  "stormssh": {
-    "exclude_packages": ["six"]
-  },
   "streamlink": {
     "exclude_packages": ["certifi"]
   },
