@@ -6,7 +6,7 @@ class HomeassistantCli < Formula
   url "https://files.pythonhosted.org/packages/b2/98/fd5e7beb7cc135f80d78b32c85ac15f3ba9219063b794b1d184fb07fd84b/homeassistant-cli-0.9.6.tar.gz"
   sha256 "9b9b705eaf6ee40dc6a732f3458c78ba37b62b7330bc17b132e6fee385ec8606"
   license "Apache-2.0"
-  revision 5
+  revision 6
   head "https://github.com/home-assistant-ecosystem/home-assistant-cli.git", branch: "dev"
 
   bottle do
