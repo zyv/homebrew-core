@@ -349,9 +349,6 @@
     "exclude_packages": ["certifi", "cffi", "cryptography", "keyring", "six"],
     "extra_packages": ["pyobjc-framework-localauthentication"]
   },
-  "git-cola": {
-    "exclude_packages": ["packaging", "pyparsing", "pyqt5"]
-  },
   "git-review": {
     "exclude_packages": ["certifi"]
   },
