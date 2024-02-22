@@ -7,13 +7,13 @@ class Uv < Formula
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "ac33af7995fc3039ff5550a974f83898dd8a47c45bbaede57ae8c05adb91e7ec"
-    sha256 cellar: :any,                 arm64_ventura:  "f45d7152c8a3e2f932605651197c61dc97c13feb2d0177ae9ac1d3cb00d8f47d"
-    sha256 cellar: :any,                 arm64_monterey: "976fe0fa13acaa7b912fff280c04f12045a454140390d5d44ff5d7c81fe6d68f"
-    sha256 cellar: :any,                 sonoma:         "993d30e0e47519033e366374e2f708efc57e37dedb729097db5e68b5d3c7b8e9"
-    sha256 cellar: :any,                 ventura:        "788acae63485df5fa917b585b6c85966e59e18ccc60fa8b15f2f224689b8d35b"
-    sha256 cellar: :any,                 monterey:       "ff445601e2fb573b13b3b84bde669d8a8c00e75f203101321a85c16bac197ead"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "51661e6141a2f950811321c8e39bae658222f9e1a61a89fa671bdad8895a16a0"
+    sha256 cellar: :any,                 arm64_sonoma:   "fd2a2d38795732e7bbfa34e2af05a84d0e867fe4a45f949bcc175caa5162af26"
+    sha256 cellar: :any,                 arm64_ventura:  "90cedfabb792b798bb9157feaf9daf08d1dee1d4585aaecb97754d994bd60790"
+    sha256 cellar: :any,                 arm64_monterey: "fc6dd51e44db249fffb0ac39a3f60e7a41098f3b16ccef823dc2632ee6aa6f30"
+    sha256 cellar: :any,                 sonoma:         "4721df63c3e410e35469935888136f1c83bb00503ebcea2bc11c3a30835dea3a"
+    sha256 cellar: :any,                 ventura:        "69fd19a660cbe48e12419b776643fac20f9c25af0de430c2e60990a78938e609"
+    sha256 cellar: :any,                 monterey:       "c4bb230ba1af149eed011bd6e1d2cf8ba575144fb9b6954487eecd4db7f35045"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b6e19a700a052baca865c36ef86c503391ba895c985f4e98b5253ece6a50f6e"
   end
 
   depends_on "pkg-config" => :build
