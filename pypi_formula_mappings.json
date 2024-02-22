@@ -430,7 +430,7 @@
     "exclude_packages": ["cffi", "cryptography", "keyring", "pygments", "six"]
   },
   "juju-wait": {
-    "exclude_packages": ["PyYAML"]
+    "extra_packages": ["setuptools"]
   },
   "jupyterlab": {
     "extra_packages": ["hatch-jupyter-builder", "hatch-nodejs-version", "jupyter-console", "notebook"],
