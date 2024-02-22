@@ -905,10 +905,7 @@
   "urlwatch": {
     "exclude_packages": ["certifi"]
   },
-  "uvicorn": {
-    "package_name": "uvicorn[standard]",
-    "exclude_packages": ["click", "pyyaml"]
-  },
+  "uvicorn": "uvicorn[standard]",
   "vdirsyncer": {
     "package_name": "vdirsyncer[google]",
     "exclude_packages": ["certifi"]
