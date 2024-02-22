@@ -6,7 +6,7 @@ class Pgxnclient < Formula
   url "https://github.com/pgxn/pgxnclient/archive/refs/tags/v1.3.2.tar.gz"
   sha256 "0d02a91364346811ce4dbbfc2f543356dac559e4222a3131018c6570d32e592a"
   license "BSD-3-Clause"
-  revision 1
+  revision 2
 
   bottle do
     rebuild 4
@@ -26,12 +26,20 @@ class Pgxnclient < Formula
     sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
+  def python3
+    "python3.12"
+  end
+
   def install
     virtualenv_install_with_resources
+    site_packages = Language::Python.site_packages(python3)
+    inreplace libexec/site_packages/name/"__init__.py",
+              "/usr/local/libexec/pgxnclient", HOMEBREW_PREFIX/"libexec/#{name}"
   end
 
   test do
     assert_match "pgxn", shell_output("#{bin}/pgxnclient mirror")
     assert_match version.to_s, shell_output("#{bin}/pgxnclient --version")
+    assert_match "#{HOMEBREW_PREFIX}/libexec/#{name}", shell_output("#{bin}/pgxn help --libexec")
   end
 end
