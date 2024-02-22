@@ -24,13 +24,13 @@ class Qt < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "e040f997f95282baf2c4a8b23ba850ba8f24e6b02e4535d0b72ef7a8e85d6683"
-    sha256 cellar: :any,                 arm64_ventura:  "fac465712296b83234abdf073491c71f9ffe6fd2e9991586f232c6fa4dcfe296"
-    sha256 cellar: :any,                 arm64_monterey: "fe7cc99dad709cf37c02804131612960aa366b00324b6d2750e651fe47419914"
-    sha256 cellar: :any,                 sonoma:         "4a9ddf2302d2c31340344831ce18bbce08277e0b042874510654444d31ef2534"
-    sha256 cellar: :any,                 ventura:        "c1a6cc75a3961fc1233d7d7db668d1cbf5150efae0c4fcf83bef83c81a4668a9"
-    sha256 cellar: :any,                 monterey:       "dc9ddc418d8bd4594650613e02a421bbd45d13643f6ac023347f0283e55073ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2466031ed6771eb76fdd53fa6b6a88dcf4899d211e03236aeb40beb38ecb123"
+    sha256 cellar: :any,                 arm64_sonoma:   "a9d95f1582f5cb23eea92dda0bd0ddccb4297fc530a7cd5d4a1c9254e0488153"
+    sha256 cellar: :any,                 arm64_ventura:  "dcb0d32a32c5b9155959126d8e1f5014d32e1362ce6f63e180fc6e1fd2d6cd05"
+    sha256 cellar: :any,                 arm64_monterey: "718146457c8bb16d5ec0bb787a6481691405f2f04b02caa3537f28a7c7a3e2bd"
+    sha256 cellar: :any,                 sonoma:         "f8651f33242865b096e741a482eb7bb92bd25ca2bf10b5d2fd5814ad59e7ebd4"
+    sha256 cellar: :any,                 ventura:        "37932cb59665a2fa653a2c50d96d4d7269730b284c55ec386d80dcbb9b0c996e"
+    sha256 cellar: :any,                 monterey:       "6dcb4d83e2f9448e808ab1644ed6c3cddf9a1ddc50cf83dd4443c4af9059f9d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c8715946c0781c5ead15767e1ea979b8a31eecffebd7f27664c925806e72f3b"
   end
 
   depends_on "cmake" => [:build, :test]
