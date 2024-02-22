@@ -3,8 +3,8 @@ class Pyside < Formula
 
   desc "Official Python bindings for Qt"
   homepage "https://wiki.qt.io/Qt_for_Python"
-  url "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.1-src/pyside-setup-everywhere-src-6.6.1.tar.xz"
-  sha256 "341f42483fbe58c88fa5b353eefa83ffcc4ec440bf6e87c1c7ffd278ed54d1ca"
+  url "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.6.2-src/pyside-setup-everywhere-src-6.6.2.tar.xz"
+  sha256 "14620b694d7af4c978443016292d3d2108ba5dc105f4170e3b71eadcaf04c9f0"
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-3.0-only"]
 
   livecheck do
