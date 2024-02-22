@@ -752,9 +752,6 @@
   "ruff-lsp": {
     "exclude_packages": ["ruff", "packaging", "typing-extensions"]
   },
-  "s3cmd": {
-    "exclude_packages": ["python-dateutil", "python-magic", "six"]
-  },
   "sail": {
     "package_name": "sailed-io",
     "exclude_packages": [
