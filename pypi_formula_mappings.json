@@ -259,7 +259,7 @@
     "exclude_packages": ["PyYAML"]
   },
   "dotdrop": {
-    "exclude_packages": ["certifi", "markupsafe", "packaging"]
+    "exclude_packages": ["certifi"]
   },
   "dstack": {
     "package_name": "dstack[aws,azure,gcp,lambda]",
