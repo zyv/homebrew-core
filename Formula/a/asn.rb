@@ -7,7 +7,7 @@ class Asn < Formula
   head "https://github.com/nitefood/asn.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a43a606858d835c27e99c35b2fd6690782def102cc55e0a8b9b2badcc91664fa"
+    sha256 cellar: :any_skip_relocation, all: "64f3b93002c184f6dc96f8168527051f9b8d0f73ccc8a5d402355915fc35f6cd"
   end
 
   depends_on "aha"
