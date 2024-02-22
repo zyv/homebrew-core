@@ -628,9 +628,6 @@
       "certifi", "cffi", "keyring", "packaging", "pycparser", "six", "virtualenv"
     ]
   },
-  "principalmapper": {
-    "exclude_packages": ["packaging", "pyparsing", "six"]
-  },
   "proselint": {
     "exclude_packages": ["six"]
   },
