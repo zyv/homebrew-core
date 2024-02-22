@@ -8,13 +8,14 @@ class Borgbackup < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma:   "bc31509030a17c5d4ef3d2eecad05b2fd404ed864dfa6f878db861b0dfde0f00"
-    sha256 cellar: :any, arm64_ventura:  "33f99c655179e11e547f3c22b06699968bace5fa80073743dfba7d2f95699ae8"
-    sha256 cellar: :any, arm64_monterey: "4fe506abe0b19de9178c48082b4a67edb2aea2f9a2433c3d322352861bf48c1a"
-    sha256 cellar: :any, sonoma:         "7d0baacf487d75a952b5264d358184dc84178f65add94f16ac005104b33ee0a6"
-    sha256 cellar: :any, ventura:        "19de0e2b52efdada354dac3301468d3c6c263a0f21e8dc0c2d2cc610bd668f53"
-    sha256 cellar: :any, monterey:       "cac2b98a538f4f49eb46483fa7f573503d4a88250664855e44617314ea89cf91"
-    sha256               x86_64_linux:   "5c8f52180ed2eae5ffd9aef6d2ffad9a1d7d9fb6100777d92f0a432b77d9cdce"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "14a678b837c610113fdd4016c28c3a8fc0d68270e024be61ce0aba4071ca10ff"
+    sha256 cellar: :any,                 arm64_ventura:  "fc334f0ae5286e6bfc94f82b4873f52f692f00670e9ed07c3be24b7b049e2488"
+    sha256 cellar: :any,                 arm64_monterey: "97d661573da79192fd6d487d0a2437484eaa9e508c3c4c0ea34b1852592ffec6"
+    sha256 cellar: :any,                 sonoma:         "87990713c58627a77691fa1339c104a068ed7142912c1898516fc4463a796a60"
+    sha256 cellar: :any,                 ventura:        "d64701f5d40b28082c2837af7c7fe02fb0bd13cabf536890b576ba6b4f72c490"
+    sha256 cellar: :any,                 monterey:       "bf19e7f2a71270ae581be1eebd1d1d2e50a5ea9dcfc44cddf5203bd90b71e75d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9c7c2566edc313eadee52db6c19fec6c274d54b623be4a335f5f1ca3cc1e451d"
   end
 
   depends_on "pkg-config" => :build
