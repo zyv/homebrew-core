@@ -932,7 +932,7 @@
     "exclude_packages": ["certifi"]
   },
   "vint": {
-    "exclude_packages": ["PyYAML"]
+    "extra_packages": ["setuptools"]
   },
   "virt-manager": {
     "exclude_packages": ["certifi"]
