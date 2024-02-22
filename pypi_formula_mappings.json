@@ -880,9 +880,6 @@
   "svtplay-dl": {
     "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser", "PyYAML"]
   },
-  "tarsnapper": {
-    "exclude_packages": ["python-dateutil", "PyYAML", "six"]
-  },
   "terminator": {
     "exclude_packages": ["psutil"]
   },
