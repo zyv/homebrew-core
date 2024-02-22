@@ -1,10 +1,10 @@
 class Znc < Formula
   desc "Advanced IRC bouncer"
   homepage "https://wiki.znc.in/ZNC"
-  url "https://znc.in/releases/archive/znc-1.8.2.tar.gz"
-  sha256 "ff238aae3f2ae0e44e683c4aee17dc8e4fdd261ca9379d83b48a7d422488de0d"
+  url "https://znc.in/releases/archive/znc-1.9.0.tar.gz"
+  sha256 "8b99c9dbb21c1309705073460be9bfacb6f7b0e83a15fe5d4b7140201b39d2a1"
   license "Apache-2.0"
-  revision 9
+  head "https://github.com/znc/znc.git", branch: "master"
 
   bottle do
     rebuild 1
@@ -17,13 +17,7 @@ class Znc < Formula
     sha256 x86_64_linux:   "a98c0ee38419f421ac3380517735a45263a21dee7ebb2bffa87d0f182ce2b632"
   end
 
-  head do
-    url "https://github.com/znc/znc.git", branch: "master"
-
-    depends_on "cmake" => :build
-    depends_on "swig" => :build
-  end
-
+  depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "icu4c"
   depends_on "openssl@3"
@@ -35,35 +29,18 @@ class Znc < Formula
     python3 = "python3.12"
     xy = Language::Python.major_minor_version python3
 
-    ENV.cxx11
-    # These need to be set in CXXFLAGS, because ZNC will embed them in its
-    # znc-buildmod script; ZNC's configure script won't add the appropriate
-    # flags itself if they're set in superenv and not in the environment.
-    ENV.append "CXXFLAGS", "-std=c++11"
-    ENV.append "CXXFLAGS", "-stdlib=libc++" if ENV.compiler == :clang
+    # Fixes: CMake Error: Problem with archive_write_header(): Can't create 'swigpyrun.h'
+    ENV.deparallelize
 
-    if OS.linux?
-      ENV.append "CXXFLAGS", "-I#{Formula["zlib"].opt_include}"
-      ENV.append "LIBS", "-L#{Formula["zlib"].opt_lib}"
-    end
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DWANT_PYTHON=ON",
+                    "-DWANT_PYTHON_VERSION=python-#{xy}",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
-    if build.head?
-      system "cmake", "-S", ".", "-B", "build",
-                      "-DWANT_PYTHON=ON",
-                      "-DWANT_PYTHON_VERSION=python-#{xy}",
-                      *std_cmake_args
-      system "cmake", "--build", "build"
-      system "cmake", "--install", "build"
-    else
-      system "./configure", "--prefix=#{prefix}", "--enable-python=python-#{xy}"
-      system "make", "install"
-
-      # Replace dependencies' Cellar paths with opt paths
-      inreplace [bin/"znc-buildmod", lib/"pkgconfig/znc.pc"] do |s|
-        s.gsub! Formula["icu4c"].prefix.realpath, Formula["icu4c"].opt_prefix
-        s.gsub! Formula["openssl@3"].prefix.realpath, Formula["openssl@3"].opt_prefix
-      end
-    end
+    # Avoid references to Homebrew shims directory
+    inreplace lib/"pkgconfig/znc.pc", Superenv.shims_path/ENV.cxx, ENV.cxx
   end
 
   service do
