@@ -20,9 +20,7 @@ class Streamlink < Formula
 
   depends_on "libxml2" # https://github.com/Homebrew/homebrew-core/issues/98468
   depends_on "python-certifi"
-  depends_on "python-typing-extensions"
   depends_on "python@3.12"
-  depends_on "six"
 
   uses_from_macos "libffi"
   uses_from_macos "libxslt"
@@ -86,6 +84,11 @@ class Streamlink < Formula
     sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
   end
 
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
   resource "sniffio" do
     url "https://files.pythonhosted.org/packages/cd/50/d49c388cae4ec10e8109b1b833fd265511840706808576df3ada99ecb0ac/sniffio-1.3.0.tar.gz"
     sha256 "e60305c5e5d314f5389259b7f22aaa33d8f7dee49763119234af3755c55b9101"
@@ -104,6 +107,11 @@ class Streamlink < Formula
   resource "trio-websocket" do
     url "https://files.pythonhosted.org/packages/dd/36/abad2385853077424a11b818d9fd8350d249d9e31d583cb9c11cd4c85eda/trio-websocket-0.11.1.tar.gz"
     sha256 "18c11793647703c158b1f6e62de638acada927344d534e3c7628eedcb746839f"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
+    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
   end
 
   resource "urllib3" do
