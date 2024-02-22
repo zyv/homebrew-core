@@ -1,8 +1,8 @@
 class Lighthouse < Formula
   desc "Rust Ethereum 2.0 Client"
   homepage "https://lighthouse.sigmaprime.io/"
-  url "https://github.com/sigp/lighthouse/archive/refs/tags/v4.6.0.tar.gz"
-  sha256 "de3186df8f41077968aa5ce358837858e1142a3c91877ca2b32066e4002dd9c3"
+  url "https://github.com/sigp/lighthouse/archive/refs/tags/v5.0.0.tar.gz"
+  sha256 "3f279a5539bc56765f4e29a4be63f07f1d31dc8ec871770fde35dadfbbd8383a"
   license "Apache-2.0"
 
   livecheck do
@@ -46,9 +46,10 @@ class Lighthouse < Formula
 
     http_port = free_port
     fork do
-      exec bin/"lighthouse", "beacon_node", "--http", "--http-port=#{http_port}", "--port=#{free_port}"
+      exec bin/"lighthouse", "beacon_node",
+           "--http", "--http-port=#{http_port}", "--port=#{free_port}", "--allow-insecure-genesis-sync"
     end
-    sleep 10
+    sleep 18
 
     output = shell_output("curl -sS -XGET http://127.0.0.1:#{http_port}/eth/v1/node/syncing")
     assert_match "is_syncing", output
