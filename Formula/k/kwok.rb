@@ -1,8 +1,8 @@
 class Kwok < Formula
   desc "Kubernetes WithOut Kubelet - Simulates thousands of Nodes and Clusters"
   homepage "https://kwok.sigs.k8s.io"
-  url "https://github.com/kubernetes-sigs/kwok/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "3ed107a8f485610dc8fe3d7e8b327028855e9e0aca0c7bcf83ef3d18f6a834d7"
+  url "https://github.com/kubernetes-sigs/kwok/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "b35fc2d99ca4e63c024169238cfae098ef55263804133d721d30a8dbcacbe7d6"
   license "Apache-2.0"
 
   bottle do
