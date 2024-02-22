@@ -25,14 +25,6 @@
       "ansible-core", "black", "certifi", "pygments", "pyyaml", "yamllint"
     ]
   },
-  "ansible@6": {
-    "extra_packages": [
-      "docker", "python-neutronclient", "shade", "pywinrm", "kerberos", "boto3", "apache-libcloud", "passlib",
-      "zabbix-api", "junos-eznc", "jxmlease", "dnspython", "pysphere3", "python-consul", "requests-credssp",
-      "openshift", "pexpect", "ntc-templates", "proxmoxer"
-    ],
-    "exclude_packages": ["six", "PyYAML"]
-  },
   "ansible@7": {
     "extra_packages": [
       "docker", "python-neutronclient", "shade", "pywinrm", "kerberos", "boto3", "apache-libcloud", "passlib",
