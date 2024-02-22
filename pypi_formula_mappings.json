@@ -733,10 +733,7 @@
   "recon-ng": {
     "exclude_packages": ["certifi", "lxml", "PyYAML", "six", "pytz"]
   },
-  "regipy": {
-    "package_name": "regipy[cli]",
-    "exclude_packages": ["click", "pytz", "tabulate"]
-  },
+  "regipy": "regipy[cli]",
   "restview": {
     "exclude_packages": ["six", "Pygments", "docutils"]
   },
