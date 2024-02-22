@@ -8,13 +8,14 @@ class TerraformLocal < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3614a628a8c8fd5ef774778e21e5f7b80e53b6a6bd6d3a70dd3c16f56a8c8e27"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f85a0dca6ed0a98a84292cbddb506aff531b842b089f0518cd9fad0665117dc5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4cce38f62db80953abb2482fe882b25d2d7beed93fb88d0245604999bf76974f"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2105f17d1340ed3a25c7b4ed307ee479d42c60541954abc6e5ca1d08955f3389"
-    sha256 cellar: :any_skip_relocation, ventura:        "76ba159bc965aae9ea59e51b4b950ad2d2124ccc29ae6d17d43605a6ec89742d"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae3e91673df4969879c7628d98ac22750600327658325d49543aa60e44208415"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "268c82e80a8dafb6eaef70b488e680247b0387fa407edbd83caa329e0f5d4d66"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a5c956fc9e4e400e66aa5ba94e1a933f53e8ccff7750a7023e48707f1b728307"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4f2248f4e9bcf8c3e7de23363e69ee7cae48a7698bffa44ec103c405fc399c0d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c076d8a8bc4ac61bf52d2d7fc82caa0e7f09b0cbad3a84b019020321f4d53ef3"
+    sha256 cellar: :any_skip_relocation, sonoma:         "88604ba047fc601f7e04946918636a4730e249d219b2773e845d7d471361443c"
+    sha256 cellar: :any_skip_relocation, ventura:        "740885ac7fe72a9153200b51344142de214a90ff44c01e0732f41699bedffe7b"
+    sha256 cellar: :any_skip_relocation, monterey:       "866886ab54398dfeeedf4520317a0d7619c1062791bc3ad85de0e45d8c3d3690"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49e268a72290ca7fb3762fab0f6c5bbd3318110988fb50dc5da1cb15e512c8f6"
   end
 
   depends_on "localstack"
