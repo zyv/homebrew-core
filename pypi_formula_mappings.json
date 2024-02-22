@@ -590,7 +590,7 @@
     "exclude_packages": ["certifi", "six", "typing-extensions"]
   },
   "parliament": {
-    "exclude_packages": ["six", "PyYAML"]
+    "extra_packages": ["setuptools"]
   },
   "pdm": {
     "exclude_packages": ["certifi"],
