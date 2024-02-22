@@ -1,4 +1,6 @@
 class Borgbackup < Formula
+  include Language::Python::Virtualenv
+
   desc "Deduplicating archiver with compression and authenticated encryption"
   homepage "https://borgbackup.org/"
   url "https://files.pythonhosted.org/packages/a6/19/f94be9fda92ea73cbf22b643a03a0b64559027ef5467765142d8242e712a/borgbackup-1.2.7.tar.gz"
@@ -16,23 +18,15 @@ class Borgbackup < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "python-setuptools" => :build
   depends_on "libb2"
   depends_on "lz4"
   depends_on "openssl@3"
-  depends_on "python-msgpack"
-  depends_on "python-packaging"
-  depends_on "python-pyparsing"
   depends_on "python@3.12"
   depends_on "xxhash"
   depends_on "zstd"
 
   on_linux do
     depends_on "acl"
-  end
-
-  def python3
-    "python3.12"
   end
 
   resource "msgpack" do
@@ -52,7 +46,7 @@ class Borgbackup < Formula
     ENV["BORG_LIBZSTD_PREFIX"] = Formula["zstd"].prefix
     ENV["BORG_OPENSSL_PREFIX"] = Formula["openssl@3"].prefix
 
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
 
     man1.install Dir["docs/man/*.1"]
     bash_completion.install "scripts/shell_completions/bash/borg"
