@@ -432,9 +432,6 @@
     "package_name": "jinja2-cli[yaml,toml,xml]",
     "exclude_packages": ["jinja2", "MarkupSafe", "PyYAML", "toml"]
   },
-  "johnnydep": {
-    "exclude_packages": ["packaging", "PyYAML", "six", "tabulate", "toml"]
-  },
   "jrnl": {
     "exclude_packages": ["cffi", "cryptography", "keyring", "pygments", "six"]
   },
