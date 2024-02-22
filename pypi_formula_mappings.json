@@ -889,9 +889,6 @@
   "tern": {
     "exclude_packages": ["certifi", "PyYAML", "packaging"]
   },
-  "terraform-local": {
-    "exclude_packages": ["python-dateutil", "six"]
-  },
   "texttest": {
     "exclude_packages": ["psutil"]
   },
