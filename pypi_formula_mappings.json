@@ -652,7 +652,6 @@
     "exclude_packages": ["cffi", "pycparser", "setuptools"]
   },
   "pyinstaller": {
-    "exclude_packages": ["packaging", "setuptools"],
     "extra_packages": ["macholib"]
   },
   "pylint": {
