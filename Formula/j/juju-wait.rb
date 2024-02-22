@@ -9,14 +9,14 @@ class JujuWait < Formula
   revision 3
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "303da078c86c9eaddd791ce344e0d6fbf9385b5ff4cffaa90ac910b8470266f7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "268ed5860e7e913b45423248156bb5640ad73ed425caa9b69027379e4cb3e00d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ea34e2bb1ec1f4142a84416b3f4e723169d39981029e356569aa039c9ed9ad18"
-    sha256 cellar: :any_skip_relocation, sonoma:         "6db4290f87938fe4b43228106b87002ea963a3d29bb4abf0531e8ff6a2dd98e9"
-    sha256 cellar: :any_skip_relocation, ventura:        "b0f5eaee9697c9314dc97c953123a2043cd06a3453fcf5a9a281898eeb9a2897"
-    sha256 cellar: :any_skip_relocation, monterey:       "319541177a94f774de87ced218abdf4c69824bdcab6c21a0740bb19412f4ec99"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0df86b91b3a8d26f0219243a6eccd28535bc82a39dc62df5ca5e4acf1c73380"
+    rebuild 5
+    sha256 cellar: :any,                 arm64_sonoma:   "586783238caaf8b1947e5f37955209eb7df05b528cddb3cccfa0e4f3ba01c7cc"
+    sha256 cellar: :any,                 arm64_ventura:  "f2583a6872555a52166daae3ab7a6fe3d625f273b7f0b2fcd4d6657c48108350"
+    sha256 cellar: :any,                 arm64_monterey: "06cf598be9fb449ffe7a666d2d2361b185fb47b1963353e0ef0906c8d07c24f8"
+    sha256 cellar: :any,                 sonoma:         "efc417cd2f1b32f71a7cf94aefc45c8d962c6b43c4d31dceaf8e616fae81b303"
+    sha256 cellar: :any,                 ventura:        "4c518cb63b8ee35f9ee3d68cbf31ab4c8969c5542fb7be107241e84d7fcdf2de"
+    sha256 cellar: :any,                 monterey:       "910d64ff5fca96376a9faca8ec8e5f2ea2d5962c46fac12cc62fb0d3be4839e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "227cffc879030285ded0425b1d084c63acf69aa453841bde987666f0fb296798"
   end
 
   # From homepage:
