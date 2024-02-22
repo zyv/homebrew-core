@@ -1,8 +1,8 @@
 class Luv < Formula
   desc "Bare libuv bindings for lua"
   homepage "https://github.com/luvit/luv"
-  url "https://github.com/luvit/luv/archive/refs/tags/1.47.0-0.tar.gz"
-  sha256 "f9911d9d33808514e9ddc1e74667a57c427efa14fefecfa5fabe80ce95a3150a"
+  url "https://github.com/luvit/luv/archive/refs/tags/v1.48.0-0.tar.gz"
+  sha256 "c9c12e414f8045aea11e5dbb44cd6c68196c10e02e1294dad971c367976cc1f9"
   license "Apache-2.0"
   head "https://github.com/luvit/luv.git", branch: "master"
 
@@ -22,8 +22,8 @@ class Luv < Formula
   depends_on "libuv"
 
   resource "lua-compat-5.3" do
-    url "https://github.com/keplerproject/lua-compat-5.3/archive/refs/tags/v0.10.tar.gz"
-    sha256 "d1ed32f091856f6fffab06232da79c48b437afd4cd89e5c1fc85d7905b011430"
+    url "https://github.com/lunarmodules/lua-compat-5.3/archive/refs/tags/v0.12.tar.gz"
+    sha256 "1ad84bb7d78cd3d0f8b6edbbb4c3a649f2b2c58c0f4b911b134317ea76c75135"
   end
 
   def install
