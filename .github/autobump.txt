@@ -129,6 +129,7 @@ bazarr
 bazel
 bazel-diff
 bazelisk
+bbot
 bbtools
 bcftools
 bcoin
@@ -163,6 +164,7 @@ bore-cli
 borgmatic
 bosh-cli
 botan
+botan@2
 bottom
 brev
 brew-php-switcher
@@ -328,6 +330,7 @@ conduit
 condure
 conftest
 consul-template
+container-diff
 contentful-cli
 convco
 convox
@@ -695,12 +698,14 @@ gitsign
 gjs
 glassfish
 gleam
+glfw
 glibmm
 global
 glooctl
 gmailctl
 gmic
 gmsh
+gnu-units
 gnumeric
 gnunet
 gnupg-pkcs11-scd
@@ -730,6 +735,7 @@ gosec
 gostatic
 got
 gotestwaf
+gotpm
 govc
 gowsdl
 gpg-tui
@@ -766,6 +772,7 @@ helmify
 helmsman
 hermit
 hexyl
+hfstospell
 hidapi
 himalaya
 hive
@@ -805,6 +812,7 @@ ipopt
 ipython
 ircd-hybrid
 iredis
+ispc
 istioctl
 ittapi
 ivy
@@ -840,6 +848,7 @@ k2tf
 k3d
 k3sup
 k6
+k8sgpt
 k9s
 kafka
 kahip
@@ -886,6 +895,7 @@ kubevious
 kubie
 kumactl
 kustomize
+kwok
 kyma-cli
 kyverno
 lacework-cli
@@ -930,10 +940,12 @@ libsecret
 libshumate
 libsndfile
 libucl
+libunwind
 libxext
 libxkbfile
 libxvmc
 libzim
+lighttpd
 lima
 linkerd
 linode-cli
@@ -966,6 +978,7 @@ mapcidr
 marked
 marp-cli
 massdriver
+matplotplusplus
 matterbridge
 maven
 mavsdk
@@ -1181,9 +1194,11 @@ prettier
 principalmapper
 procs
 proftpd
+prometheus
 prometheus-cpp
 protoc-gen-go-grpc
 protolint
+prowler
 proxify
 proxsuite
 proxytunnel
@@ -1254,6 +1269,7 @@ rio
 risor
 rke
 roadrunner
+rojo
 rollup
 rosa-cli
 rover
@@ -1272,9 +1288,12 @@ s-search
 s2n
 saf-cli
 sagittarius-scheme
+samba
 saml2aws
 sbt
 scala
+scala@2.12
+scala@2.13
 scalingo
 scarb
 sccache
@@ -1291,6 +1310,7 @@ seaweedfs
 selene
 selenium-server
 semgrep
+sentencepiece
 seqkit
 ser2net
 serverless
@@ -1325,6 +1345,7 @@ slurm
 smimesign
 sn0int
 snakemake
+snap
 snapcraft
 sng
 sniffer
@@ -1340,6 +1361,7 @@ sonarqube
 sonarqube-lts
 sonobuoy
 spglib
+spicetify-cli
 spidermonkey
 sponge
 spotbugs
@@ -1347,9 +1369,11 @@ spotify-tui
 sql-migrate
 sqlancer
 sqlc
+sqlcmd
 sqlmap
 sqlpage
 sqlx-cli
+squashfuse
 squid
 src
 sshs
@@ -1362,6 +1386,7 @@ stdman
 steampipe
 stellar-core
 step
+storj-uplink
 storm
 strace
 streamlink
@@ -1384,6 +1409,7 @@ swagger-codegen@2
 swagger2markup-cli
 swi-prolog
 swiftformat
+swiftplantuml
 syft
 syncthing
 sysdig
@@ -1525,6 +1551,7 @@ woodpecker-cli
 woof-doom
 wumpus
 wxwidgets
+x3270
 xbyak
 xcbeautify
 xclogparser
@@ -1540,6 +1567,7 @@ xkeyboardconfig
 xplr
 xray
 xrootd
+xterm
 yaegi
 yamllint
 ykman
@@ -1558,6 +1586,7 @@ zipkin
 zlib
 zlint
 znapzend
+znc
 zola
 zookeeper
 zoxide
