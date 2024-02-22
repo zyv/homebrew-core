@@ -10,14 +10,14 @@ class Vint < Formula
   head "https://github.com/Vimjas/vint.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1319077794aae2570266011f32f314e0bce928260c3483fc3e8028cfd5b0cf67"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "da095f3c3d7bf27d006250c11af9146b99e2be722b042c85b86cd233ac5ded12"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0d3589692befc631c2ea8d474df1df078748a5993c9a5ff21d8800d00f34ad49"
-    sha256 cellar: :any_skip_relocation, sonoma:         "d41e154871646df72a558e72d6e9d0d385e3a304faee61e275f843d22c35c243"
-    sha256 cellar: :any_skip_relocation, ventura:        "748682bc4aa982f38f04302e83a1e9e17ecd640dceb5ab8f4cb59d5b21f37902"
-    sha256 cellar: :any_skip_relocation, monterey:       "5128d9f27ec3a1c69f3b0bfc0d09e41c7e755824066da0e2b88d98969dadfc02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c0c1dc2caf33492d3808738a46aa2fe536b0b8b712f17e5b7e8749bff2de117"
+    rebuild 4
+    sha256 cellar: :any,                 arm64_sonoma:   "8b27c505ce438219954cea4c8804c8caf0a3055769853871a6405b4b9892f35b"
+    sha256 cellar: :any,                 arm64_ventura:  "07f73da0912788b7e2a244329de02a4a8b48f4788c966628cdf402e56608ca25"
+    sha256 cellar: :any,                 arm64_monterey: "fb1ef2807d71a58efe9d8fdd29b6b2477bbc9fbda37398b67dcbaad925b58de7"
+    sha256 cellar: :any,                 sonoma:         "2799f7304f4643ddbbfe2633ddd35af7dc8a765087a6b9564b693ccaf3bfaa76"
+    sha256 cellar: :any,                 ventura:        "2ceb0176ec62ed830d033f5b3a7bd5fd161b01509bab9c8f32ddd003e5ce619b"
+    sha256 cellar: :any,                 monterey:       "53ad7b22ab20a7431b58f77f13aa580fea9e2a8c50d1e77c3e32f87d21d29c94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ebb92e73bde3fd79edbb7ef68a8d91b7430c323d71039e9e7b0ec11b3507f9c"
   end
 
   depends_on "libyaml"
