@@ -252,9 +252,6 @@
   "docker-squash": {
     "exclude_packages": ["certifi"]
   },
-  "doitlive": {
-    "exclude_packages": ["click", "markupsafe", "packaging", "six"]
-  },
   "dolphie": {
     "exclude_packages": ["certifi", "cryptography"]
   },
