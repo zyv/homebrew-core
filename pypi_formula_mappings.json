@@ -546,7 +546,8 @@
     "exclude_packages": ["pycairo", "PyGObject"]
   },
   "notifiers": {
-    "exclude_packages": ["certifi", "click"]
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["setuptools"]
   },
   "nvchecker": {
     "package_name": "nvchecker[pypi]",
