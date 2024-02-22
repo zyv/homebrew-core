@@ -6,6 +6,7 @@ class CfnLint < Formula
   url "https://files.pythonhosted.org/packages/f1/d7/c239d3325f40b3323de1da4170a3b2e108fc1094c739cda992619cafe68b/cfn-lint-0.85.2.tar.gz"
   sha256 "f8a5cc55daeaaa747b8d776dcf62fe1b6bfb8cb46ae60950cbe627601facccd7"
   license "MIT-0"
+  revision 1
 
   bottle do
     rebuild 1
