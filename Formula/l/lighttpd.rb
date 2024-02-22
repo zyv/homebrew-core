@@ -1,8 +1,8 @@
 class Lighttpd < Formula
   desc "Small memory footprint, flexible web-server"
   homepage "https://www.lighttpd.net/"
-  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.73.tar.xz"
-  sha256 "818816d0b314b0aa8728a7076513435f6d5eb227f3b61323468e1f10dbe84ca8"
+  url "https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.74.tar.xz"
+  sha256 "5c08736e83088f7e019797159f306e88ec729abe976dc98fb3bed71b9d3e53b5"
   license "BSD-3-Clause"
 
   livecheck do
@@ -33,7 +33,16 @@ class Lighttpd < Formula
   # default max. file descriptors; this option will be ignored if the server is not started as root
   MAX_FDS = 512
 
+  # notified upstream in the related commit, lighttpd/lighttpd1.4@4e0af6d
+  resource "queue.h" do
+    url "https://raw.githubusercontent.com/lighttpd/lighttpd1.4/4e0af6d8eba32fd1526a38e2b3db5fe76dab9912/src/compat/sys/queue.h"
+    sha256 "8b284031772b1ba2035d9b05b24f2cb9b23e7bd324bcccb5e3fcc57d34aafa48"
+  end
+
   def install
+    # patch to add the missing queue.h file
+    resource("queue.h").stage buildpath/"src/compat/sys"
+
     args = %W[
       --disable-dependency-tracking
       --disable-silent-rules
