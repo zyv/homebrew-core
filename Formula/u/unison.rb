@@ -1,8 +1,8 @@
 class Unison < Formula
   desc "File synchronization tool"
   homepage "https://www.cis.upenn.edu/~bcpierce/unison/"
-  url "https://github.com/bcpierce00/unison/archive/refs/tags/v2.53.3.tar.gz"
-  sha256 "aaea04fc5bc76dcfe8627683c9659ee4c194d4f992cc8aaa15bbb2820fc8de46"
+  url "https://github.com/bcpierce00/unison/archive/refs/tags/v2.53.4.tar.gz"
+  sha256 "d19e4293013581dbc4d149aef89b34c76221efcbd873c7aa5193de489addb85a"
   license "GPL-3.0-or-later"
   head "https://github.com/bcpierce00/unison.git", branch: "master"
 
@@ -28,14 +28,13 @@ class Unison < Formula
   depends_on "ocaml" => :build
 
   def install
-    ENV.deparallelize
-    ENV.delete "CFLAGS" # ocamlopt reads CFLAGS but doesn't understand common options
-    ENV.delete "NAME" # https://github.com/Homebrew/homebrew/issues/28642
-    system "make", "UISTYLE=text"
+    system "make", "src/unison"
     bin.install "src/unison"
     # unison-fsmonitor is built just for Linux targets
-    bin.install "src/unison-fsmonitor" if OS.linux?
-    prefix.install_metafiles "src"
+    if OS.linux?
+      system "make", "src/unison-fsmonitor"
+      bin.install "src/unison-fsmonitor"
+    end
   end
 
   test do
