@@ -111,8 +111,9 @@ jobs:
               path: Formula/.+@.+
               except:
                 - Formula/b/bash-completion@2.rb
+                - Formula/lib/libxml++@5.rb
                 - Formula/o/openssl@3.rb
-                - Formula/p/postgresql@15.rb
+                - Formula/p/postgresql@16.rb
                 - Formula/p/python@3.12.rb
                 - Formula/p/python-gdbm@3.12.rb
                 - Formula/p/python-tk@3.12.rb
