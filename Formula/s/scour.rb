@@ -1,4 +1,6 @@
 class Scour < Formula
+  include Language::Python::Virtualenv
+
   desc "SVG file scrubber"
   homepage "https://www.codedread.com/scour/"
   url "https://files.pythonhosted.org/packages/75/19/f519ef8aa2f379935a44212c5744e2b3a46173bf04e0110fb7f4af4028c9/scour-0.38.2.tar.gz"
@@ -19,16 +21,15 @@ class Scour < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc600b61a19b88d56999c0b025e8a25d5a7018c907a563124897c30a33e786a8"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "python@3.12"
-  depends_on "six"
 
-  def python3
-    "python3.12"
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do

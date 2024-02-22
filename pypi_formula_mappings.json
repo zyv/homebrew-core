@@ -778,9 +778,6 @@
   "scipy": {
     "exclude_packages": ["numpy"]
   },
-  "scour": {
-    "exclude_packages": ["six"]
-  },
   "scoutsuite": {
     "exclude_packages": ["certifi", "cryptography", "pyparsing", "pytz", "pyyaml", "six", "typing-extensions"]
   },
