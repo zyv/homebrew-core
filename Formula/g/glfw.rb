@@ -1,8 +1,8 @@
 class Glfw < Formula
   desc "Multi-platform library for OpenGL applications"
   homepage "https://www.glfw.org/"
-  url "https://github.com/glfw/glfw/archive/refs/tags/3.3.10.tar.gz"
-  sha256 "4ff18a3377da465386374d8127e7b7349b685288cb8e17122f7e1179f73769d5"
+  url "https://github.com/glfw/glfw/archive/refs/tags/3.4.tar.gz"
+  sha256 "c038d34200234d071fae9345bc455e4a8f2f544ab60150765d7704e08f3dac01"
   license "Zlib"
   head "https://github.com/glfw/glfw.git", branch: "master"
 
@@ -17,22 +17,25 @@ class Glfw < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
 
   on_linux do
     depends_on "freeglut"
     depends_on "libxcursor"
+    depends_on "libxkbcommon"
     depends_on "mesa"
   end
 
   def install
-    args = std_cmake_args + %w[
+    args = %w[
       -DGLFW_USE_CHDIR=TRUE
       -DGLFW_USE_MENUBAR=TRUE
       -DBUILD_SHARED_LIBS=TRUE
     ]
 
-    system "cmake", *args, "."
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
