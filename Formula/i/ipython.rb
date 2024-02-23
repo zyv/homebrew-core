@@ -18,9 +18,7 @@ class Ipython < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "503a1b164bb657f7f9a8e381f07e3aa07e173bcaa0276eb9aa2bf1527b2e2f72"
   end
 
-  depends_on "pygments"
   depends_on "python@3.12"
-  depends_on "six"
 
   resource "asttokens" do
     url "https://files.pythonhosted.org/packages/45/1d/f03bcb60c4a3212e15f99a56085d93093a497718adf828d050b9d675da81/asttokens-2.4.1.tar.gz"
@@ -72,6 +70,16 @@ class Ipython < Formula
     sha256 "2b45320af6dfaa1750f543d714b6d1c520a1688dec6fd24d339063ce0aaa9ac3"
   end
 
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
+    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
   resource "stack-data" do
     url "https://files.pythonhosted.org/packages/28/e3/55dcc2cfbc3ca9c29519eb6884dd1415ecb53b0e934862d3559ddcb7e20b/stack_data-0.6.3.tar.gz"
     sha256 "836a778de4fec4dcd1dcd89ed8abff8a221f58308462e1c4aa2a3cf30148f0b9"
@@ -90,7 +98,6 @@ class Ipython < Formula
   def install
     virtualenv_install_with_resources
 
-    # Install man page
     man1.install libexec/"share/man/man1/ipython.1"
   end
 
