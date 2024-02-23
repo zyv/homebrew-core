@@ -23,18 +23,16 @@ class Fobis < Formula
 
   depends_on "gcc" # for gfortran
   depends_on "graphviz"
-  # Issue ref: https://github.com/szaghi/FoBiS/issues/129
-  # `future` issue ref: https://github.com/PythonCharmers/python-future/issues/625
-  depends_on "python@3.11" # Python 3.12 blocked by imp usage in `future`
+  depends_on "python@3.12"
 
   resource "configparser" do
-    url "https://files.pythonhosted.org/packages/4b/c0/3a47084aca7a940ed1334f89ed2e67bcb42168c4f40c486e267fe71e7aa0/configparser-5.3.0.tar.gz"
-    sha256 "8be267824b541c09b08db124917f48ab525a6c3e837011f3130781a224c57090"
+    url "https://files.pythonhosted.org/packages/0b/65/bad3eb64f30657ee9fa2e00e80b3ad42037db5eb534fadd15a94a11fe979/configparser-6.0.0.tar.gz"
+    sha256 "ec914ab1e56c672de1f5c3483964e68f71b34e457904b7b76e06b922aec067a8"
   end
 
   resource "future" do
-    url "https://files.pythonhosted.org/packages/8f/2e/cf6accf7415237d6faeeebdc7832023c90e0282aa16fd3263db0eb4715ec/future-0.18.3.tar.gz"
-    sha256 "34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307"
+    url "https://files.pythonhosted.org/packages/a7/b2/4140c69c6a66432916b26158687e821ba631a4c9273c474343badf84d3ba/future-1.0.0.tar.gz"
+    sha256 "bd2968309307861edae1458a4f8a4f3598c03be43b97521076aebf5d94c07b05"
   end
 
   def install
