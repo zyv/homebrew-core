@@ -303,7 +303,7 @@
     ]
   },
   "flintrock": {
-    "exclude_packages": ["cffi", "cryptography", "pycparser", "PyYAML", "six"]
+    "exclude_packages": ["cryptography"]
   },
   "flit": {
     "exclude_packages": ["certifi", "docutils", "flit-core"]
