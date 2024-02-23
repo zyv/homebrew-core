@@ -18,11 +18,10 @@ class Ldeep < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e158bd389bc80697ff26d1684b942fb0dfb305de6678aa556a3c8903f97a7ba8"
   end
 
-  depends_on "cffi"
-  depends_on "pycparser"
   depends_on "python-cryptography"
   depends_on "python@3.12"
-  depends_on "six"
+
+  uses_from_macos "krb5"
 
   resource "asn1crypto" do
     url "https://files.pythonhosted.org/packages/de/cf/d547feed25b5244fcb9392e288ff9fdc3280b10260362fc45d37a798a6ee/asn1crypto-1.5.1.tar.gz"
@@ -72,6 +71,11 @@ class Ldeep < Formula
   resource "pycryptodomex" do
     url "https://files.pythonhosted.org/packages/31/a4/b03a16637574312c1b54c55aedeed8a4cb7d101d44058d46a0e5706c63e1/pycryptodomex-3.20.0.tar.gz"
     sha256 "7a710b79baddd65b806402e14766c721aee8fb83381769c27920f26476276c1e"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "termcolor" do

@@ -431,7 +431,7 @@
     "exclude_packages": ["cffi", "cryptography", "pycparser"]
   },
   "ldeep": {
-    "exclude_packages": ["cffi", "cryptography", "pycparser", "six"]
+    "exclude_packages": ["cryptography"]
   },
   "legit": {
     "exclude_packages": ["six"]
