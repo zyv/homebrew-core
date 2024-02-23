@@ -1,4 +1,6 @@
 class Mdv < Formula
+  include Language::Python::Virtualenv
+
   desc "Styled terminal markdown viewer"
   homepage "https://github.com/axiros/terminal_markdown_viewer"
   url "https://files.pythonhosted.org/packages/d0/32/f5e1b8c70dc40b02604fbd0be3ff0bd5e01ee99c9fddf8f423b10d07cd31/mdv-1.7.5.tar.gz"
@@ -16,18 +18,26 @@ class Mdv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6b962c0ce56c2662067b53e2b40b8499b4cda28011790acbd4fb18a17576030"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "pygments"
-  depends_on "python-markdown"
+  depends_on "libyaml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
 
-  def python3
-    "python3.12"
+  resource "markdown" do
+    url "https://files.pythonhosted.org/packages/11/28/c5441a6642681d92de56063fa7984df56f783d3f1eba518dc3e7a253b606/Markdown-3.5.2.tar.gz"
+    sha256 "e1ac7b3dc550ee80e602e71c1d168002f062e49f1b11e26a36264dafd4df2ef8"
+  end
+
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
+    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
