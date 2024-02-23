@@ -809,9 +809,8 @@
     "exclude_packages": ["certifi"]
   },
   "snakemake": {
-    "exclude_packages": [
-      "certifi", "docutils", "markupsafe", "packaging", "psutil", "pyyaml", "tabulate"
-    ]
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["setuptools"]
   },
   "snapcraft": {
     "extra_packages": ["catkin_pkg"]
