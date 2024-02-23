@@ -16,16 +16,13 @@ class Esptool < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "3e578c131a1fdeaef5665ed44c2de48aaa938f7255941a4015397b58ce1692e0"
   end
 
-  depends_on "cffi"
-  depends_on "pycparser"
+  depends_on "libyaml"
   depends_on "python-cryptography"
   depends_on "python@3.12"
-  depends_on "pyyaml"
-  depends_on "six"
 
   resource "bitarray" do
-    url "https://files.pythonhosted.org/packages/2e/7b/31d117a213a0a42a5c5f48bab3e5786b98952d243022d43727f379db0e16/bitarray-2.8.5.tar.gz"
-    sha256 "b7564fd218cc4479f7f0106d341e096f78907b47865aeeff702c807df1927c01"
+    url "https://files.pythonhosted.org/packages/c7/bf/25cf92a83e1fe4948d7935ae3c02f4c9ff9cb9c13e977fba8af11a5f642c/bitarray-2.9.2.tar.gz"
+    sha256 "a8f286a51a32323715d77755ed959f94bef13972e9a2fe71b609e40e6d27957e"
   end
 
   resource "bitstring" do
@@ -48,9 +45,19 @@ class Esptool < Formula
     sha256 "3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb"
   end
 
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
+
   resource "reedsolo" do
     url "https://files.pythonhosted.org/packages/f7/61/a67338cbecf370d464e71b10e9a31355f909d6937c3a8d6b17dd5d5beb5e/reedsolo-1.7.0.tar.gz"
     sha256 "c1359f02742751afe0f1c0de9f0772cc113835aa2855d2db420ea24393c87732"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
