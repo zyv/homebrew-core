@@ -172,9 +172,6 @@
   "cloudsplaining": {
     "exclude_packages": ["certifi", "click", "markdown", "markupsafe", "pyyaml", "six"]
   },
-  "coconut": {
-    "exclude_packages": ["psutil", "pygments", "typing-extensions"]
-  },
   "codelimit": {
     "exclude_packages": ["certifi", "click", "Pygments", "typing-extensions", "six"]
   },
