@@ -9,14 +9,14 @@ class Eralchemy < Formula
   revision 7
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "a6ed7900c4ae0d86c0367a73d0ff6347b0d4926c1b5e7ff55585392749564758"
-    sha256 cellar: :any,                 arm64_ventura:  "07ddc38eec10f049dfc18f65a158110bba687de240a6019a98a79a1cd19bb346"
-    sha256 cellar: :any,                 arm64_monterey: "e45387cbdc1de739e84583380009217fe11afdd30afb49bac433760bb8e1b0d6"
-    sha256 cellar: :any,                 sonoma:         "acb34ace16cfeaeee0dbb47d5dcb7048aacced1f1d4c6904eab4b4d8c0cc9bf3"
-    sha256 cellar: :any,                 ventura:        "12ab1b4d747e635bb747b087e989b29c967eee5eab308af169d05a20d5616122"
-    sha256 cellar: :any,                 monterey:       "d7a3ef294cc855950faf77b476f3ff424559fbcbffae08dc32e6af938a81cd57"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5593d71ebe46e3ddeef556375e808b01f9cba7726c61fb7ea7d00e7a825bd725"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_sonoma:   "367acd7b96563e4125df8898bc2f1cb07b229bbbb04b78a321b19e1fc8c789b1"
+    sha256 cellar: :any,                 arm64_ventura:  "9c97192396a1913523c7cfc518ee6992bd19190ffe648b015984f5783a026ecf"
+    sha256 cellar: :any,                 arm64_monterey: "697bcb5c3612f600fa6c4792eb54ae3598478159c353d6bc727f5f5c59a3cdfe"
+    sha256 cellar: :any,                 sonoma:         "7d08e2b884b797dfac455c6a727e51170d6391784bb05df88068aa9be781475a"
+    sha256 cellar: :any,                 ventura:        "971c788786605ca57de3a4703ae9d6bf5769cab7cb3f4eeda30717edb0b14d23"
+    sha256 cellar: :any,                 monterey:       "b692bdfec78085160b99b0c0b985513ac9be3a7186f8c13271e562c073d6c295"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3aa0e534f282e2a530f99e14caceced86c646d818a2092cd07d523bdb244e29d"
   end
 
   depends_on "pkg-config" => :build
