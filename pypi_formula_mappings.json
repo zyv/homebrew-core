@@ -371,7 +371,7 @@
   },
   "huggingface-cli": {
     "package_name": "huggingface-hub",
-    "exclude_packages": ["certifi", "packaging", "PyYAML", "typing-extensions"]
+    "exclude_packages": ["certifi"]
   },
   "img2pdf": {
     "exclude_packages": ["pillow"]
