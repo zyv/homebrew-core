@@ -8,14 +8,14 @@ class Mdv < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "bc43a81dcd0224e032355f7ea81dd6de635ddd47b0b825976b89c279fde6ffb3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bbe4c48d4bc66d2320979367b7278755f56be8d5eac7e2f3b35d5d3d520f3a63"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cb5dc631d29d93f8b0f129397af31130c191a999817c313d0ebd346e3918b602"
-    sha256 cellar: :any_skip_relocation, sonoma:         "fb4ebfb14b2f20cc6da9c45ba8c34150b5d827b49c1d8201802d77a472464908"
-    sha256 cellar: :any_skip_relocation, ventura:        "a57584e6b7b87bcbcabd58e7940d12ccf5190bdb02aa3603d76768106fe93180"
-    sha256 cellar: :any_skip_relocation, monterey:       "0c089e77f856a538eee4a3b282eb30906ed2590825a8c03655994ea500d7e07c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6b962c0ce56c2662067b53e2b40b8499b4cda28011790acbd4fb18a17576030"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_sonoma:   "a2fca7b5066ffec483e3334ee021c2165b69767e89bd883dd744107fe61a7410"
+    sha256 cellar: :any,                 arm64_ventura:  "e46e133e37e80d0bf8cef00c329d6d83f2edffe4844d6b51e90d1369f0337cc7"
+    sha256 cellar: :any,                 arm64_monterey: "c1483e7152c649c7599c727339e18d4c29e6b072886bd257296441f78ff9acf6"
+    sha256 cellar: :any,                 sonoma:         "e8f8f7c52d3a2bf1bc3dca1a41e40981de6ebe5bfdb92942154d3719096a074e"
+    sha256 cellar: :any,                 ventura:        "f1ace8ac0376b82ec336fb54f4cf00577d1c13e7a2745a0c0b8243e89c558554"
+    sha256 cellar: :any,                 monterey:       "0aad2a912ab73605a010eda5e5d746ce8dffaae0fc54fd540a486426d80e235a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67e68c2e3d0fdd937eba2a890e6482cd65f7bfbd87df293660df31d78e3136b3"
   end
 
   depends_on "libyaml"
