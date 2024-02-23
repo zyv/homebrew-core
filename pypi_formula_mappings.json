@@ -497,10 +497,7 @@
     "extra_packages": ["tomli"]
   },
   "meta-package-manager": {
-    "exclude_packages": [
-      "certifi", "click", "docutils", "markupsafe",
-      "packaging", "Pygments", "PyYAML", "tabulate", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "molecule": {
     "extra_packages": ["docker-py", "molecule-vagrant", "python-vagrant"],
