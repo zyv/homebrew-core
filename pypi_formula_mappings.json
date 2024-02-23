@@ -588,7 +588,7 @@
     "exclude_packages": ["certifi", "Pygments"]
   },
   "pip-audit": {
-    "exclude_packages": ["certifi", "packaging", "Pygments", "pyparsing", "six", "toml"]
+    "exclude_packages": ["certifi"]
   },
   "pipenv": {
     "exclude_packages": ["certifi"]
