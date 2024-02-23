@@ -1,8 +1,8 @@
 class CodeMinimap < Formula
   desc "High performance code minimap generator"
   homepage "https://github.com/wfxr/code-minimap"
-  url "https://github.com/wfxr/code-minimap/archive/refs/tags/v0.6.4.tar.gz"
-  sha256 "4e2f15e4a0f7bd31e33f1c423e3120318e13de1b6800ba673037e38498b3a423"
+  url "https://github.com/wfxr/code-minimap/archive/refs/tags/v0.6.6.tar.gz"
+  sha256 "0526a15a53a0612963f5d35f74d8381c13c7a9fe49272a289e7237f9ad8879ab"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
