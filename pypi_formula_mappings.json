@@ -59,7 +59,7 @@
     "extra_packages": ["fitsio"]
   },
   "aws-elasticbeanstalk": {
-    "exclude_packages": ["certifi", "cffi", "cryptography", "packaging", "pycparser", "python-dateutil", "PyYAML", "six"]
+    "exclude_packages": ["certifi"]
   },
   "aws-google-auth": {
     "exclude_packages": ["certifi", "keyring", "lxml", "pillow", "six", "tabulate"]
