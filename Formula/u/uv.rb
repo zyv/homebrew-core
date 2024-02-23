@@ -1,8 +1,8 @@
 class Uv < Formula
   desc "Extremely fast Python package installer and resolver, written in Rust"
   homepage "https://github.com/astral-sh/uv"
-  url "https://github.com/astral-sh/uv/archive/refs/tags/0.1.9.tar.gz"
-  sha256 "4a52429d4fa6ea21040b15eea6ac3a72cce49d9a7b38b090810a380833f75add"
+  url "https://github.com/astral-sh/uv/archive/refs/tags/0.1.10.tar.gz"
+  sha256 "2c31cb4b0d8c9e38f456bb813e40acb369cccf169043e9642b9879bd144f05b6"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/astral-sh/uv.git", branch: "main"
 
@@ -31,6 +31,7 @@ class Uv < Formula
     ENV["OPENSSL_NO_VENDOR"] = "1"
 
     system "cargo", "install", "--no-default-features", *std_cargo_args(path: "crates/uv")
+    generate_completions_from_executable(bin/"uv", "generate-shell-completion")
   end
 
   def check_binary_linkage(binary, library)
