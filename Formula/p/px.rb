@@ -1,4 +1,6 @@
 class Px < Formula
+  include Language::Python::Virtualenv
+
   desc "Ps and top for human beings (px / ptop)"
   homepage "https://github.com/walles/px"
   url "https://github.com/walles/px.git",
@@ -16,17 +18,12 @@ class Px < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4e9861786d4a53cf68888cbd090e2154f1f34762f5af8ade431a0b5620396ba"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "python@3.12"
 
   uses_from_macos "lsof"
 
-  def python3
-    "python3.12"
-  end
-
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
 
     man1.install Dir["doc/*.1"]
   end
