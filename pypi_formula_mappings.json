@@ -784,7 +784,7 @@
     "exclude_packages": ["certifi"]
   },
   "shub": {
-    "exclude_packages": ["certifi", "packaging", "pyyaml", "six"]
+    "exclude_packages": ["certifi"]
   },
   "shyaml": {
     "exclude_packages": ["PyYAML"]
