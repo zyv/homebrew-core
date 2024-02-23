@@ -8,13 +8,13 @@ class Seam < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c9c9206f8a9af9c69382d4348bea2fa0d3bc7c3309428d768c59b608ea265dfc"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c9c9206f8a9af9c69382d4348bea2fa0d3bc7c3309428d768c59b608ea265dfc"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c9c9206f8a9af9c69382d4348bea2fa0d3bc7c3309428d768c59b608ea265dfc"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2861bc41403b0de627f02d359950414dc6e5ea33105630311eb9e87cdf1fa4ae"
-    sha256 cellar: :any_skip_relocation, ventura:        "2861bc41403b0de627f02d359950414dc6e5ea33105630311eb9e87cdf1fa4ae"
-    sha256 cellar: :any_skip_relocation, monterey:       "2861bc41403b0de627f02d359950414dc6e5ea33105630311eb9e87cdf1fa4ae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c9c9206f8a9af9c69382d4348bea2fa0d3bc7c3309428d768c59b608ea265dfc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cd35c1f389cc8fca48ac86fd96e031ec745a3d93ea75479f6b010a8c3f641f2d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd35c1f389cc8fca48ac86fd96e031ec745a3d93ea75479f6b010a8c3f641f2d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cd35c1f389cc8fca48ac86fd96e031ec745a3d93ea75479f6b010a8c3f641f2d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "e264b0a3f419594cd370f15794dde81259508c956e9333cda955b0c398975683"
+    sha256 cellar: :any_skip_relocation, ventura:        "e264b0a3f419594cd370f15794dde81259508c956e9333cda955b0c398975683"
+    sha256 cellar: :any_skip_relocation, monterey:       "e264b0a3f419594cd370f15794dde81259508c956e9333cda955b0c398975683"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd35c1f389cc8fca48ac86fd96e031ec745a3d93ea75479f6b010a8c3f641f2d"
   end
 
   depends_on "node"
