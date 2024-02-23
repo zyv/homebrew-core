@@ -564,6 +564,9 @@
       "PyYAML", "six", "pytz"
     ]
   },
+  "organize-tool": {
+    "exclude_packages": ["cryptography"]
+  },
   "osc": {
     "exclude_packages": ["cffi", "pycparser", "cryptography"]
   },
