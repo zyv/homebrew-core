@@ -1,8 +1,8 @@
 class Poco < Formula
   desc "C++ class libraries for building network and internet-based applications"
   homepage "https://pocoproject.org/"
-  url "https://pocoproject.org/releases/poco-1.12.5p2/poco-1.12.5p2-all.tar.gz"
-  sha256 "4bdf352deef1dcc39260c1b43604236f5759dbdd9c695fffac23488f502f95a2"
+  url "https://pocoproject.org/releases/poco-1.13.2/poco-1.13.2-all.tar.gz"
+  sha256 "33fe6c0d623e026b026d0ae757e617538428dbb6fe65297196693c78b55711a0"
   license "BSL-1.0"
   head "https://github.com/pocoproject/poco.git", branch: "master"
 
@@ -30,11 +30,14 @@ class Poco < Formula
   uses_from_macos "zlib"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
-                    "-DENABLE_DATA_MYSQL=OFF",
-                    "-DENABLE_DATA_ODBC=OFF",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    "-DPOCO_UNBUNDLED=ON"
+    args = %W[
+      -DENABLE_DATA_MYSQL=OFF
+      -DENABLE_DATA_ODBC=OFF
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DPOCO_UNBUNDLED=ON
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
