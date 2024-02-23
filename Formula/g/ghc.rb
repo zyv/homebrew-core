@@ -1,8 +1,6 @@
 class Ghc < Formula
   desc "Glorious Glasgow Haskell Compilation System"
   homepage "https://haskell.org/ghc/"
-  url "https://downloads.haskell.org/~ghc/9.8.1/ghc-9.8.1-src.tar.xz"
-  sha256 "b2f8ed6b7f733797a92436f4ff6e088a520913149c9a9be90465b40ad1f20751"
   # We build bundled copies of libffi and GMP so GHC inherits the licenses
   license all_of: [
     "BSD-3-Clause",
@@ -10,6 +8,17 @@ class Ghc < Formula
     any_of: ["LGPL-3.0-or-later", "GPL-2.0-or-later"], # GMP
   ]
   head "https://gitlab.haskell.org/ghc/ghc.git", branch: "master"
+
+  stable do
+    url "https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-src.tar.xz"
+    sha256 "e2fb7a7dd7461237d22e8365a83edd9e1a77d2e15d045f3945396845a87781c9"
+
+    # Backport fix for autoconf 2.72.
+    patch do
+      url "https://gitlab.haskell.org/ghc/ghc/-/commit/c9731d6d3cad01fccb88c99c4f26070a44680389.diff"
+      sha256 "f7e921f7096c97bd4e63ac488186a132eb0cc508d04f0c5a99e9ded51bf16b25"
+    end
+  end
 
   livecheck do
     url "https://www.haskell.org/ghc/download.html"
@@ -80,8 +89,14 @@ class Ghc < Formula
       end
     end
     on_linux do
-      url "https://downloads.haskell.org/~cabal/cabal-install-3.10.2.0/cabal-install-3.10.2.0-x86_64-linux-ubuntu20_04.tar.xz"
-      sha256 "c2a8048caa3dbfe021d0212804f7f2faad4df1154f1ff52bd2f3c68c1d445fe1"
+      on_arm do
+        url "https://downloads.haskell.org/~cabal/cabal-install-3.10.2.0/cabal-install-3.10.2.0-aarch64-linux-deb10.tar.xz"
+        sha256 "004ed4a7ca890fadee23f58f9cb606c066236a43e16b34be2532b177b231b06d"
+      end
+      on_intel do
+        url "https://downloads.haskell.org/~cabal/cabal-install-3.10.2.0/cabal-install-3.10.2.0-x86_64-linux-ubuntu20_04.tar.xz"
+        sha256 "c2a8048caa3dbfe021d0212804f7f2faad4df1154f1ff52bd2f3c68c1d445fe1"
+      end
     end
   end
 
