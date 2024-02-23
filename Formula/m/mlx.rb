@@ -8,6 +8,11 @@ class Mlx < Formula
   license "MIT"
   head "https://github.com/ml-explore/mlx.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any, arm64_sonoma:  "eaa9bd9c7017b4a1f6c23bc3a74927d5ba1423b3e38a294cec3eca9232134ed3"
+    sha256 cellar: :any, arm64_ventura: "e512248d8fa6baa6f14a500b2fd08caa64c11d71c379c5cbe553e56ffeacb029"
+  end
+
   depends_on "cmake" => :build
   depends_on "pybind11" => :build
   depends_on xcode: ["14.3", :build]
