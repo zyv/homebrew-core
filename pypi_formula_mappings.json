@@ -106,7 +106,7 @@
     "exclude_packages": ["certifi"]
   },
   "bpython": {
-    "exclude_packages": ["certifi", "Pygments", "six"]
+    "exclude_packages": ["certifi"]
   },
   "buku": {
     "package_name": "buku[server]",
