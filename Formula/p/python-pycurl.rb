@@ -1,10 +1,9 @@
 class PythonPycurl < Formula
   desc "Python Interface To libcurl"
   homepage "http://pycurl.io/"
-  url "https://files.pythonhosted.org/packages/a8/af/24d3acfa76b867dbd8f1166853c18eefc890fc5da03a48672b38ea77ddae/pycurl-7.45.2.tar.gz"
-  sha256 "5730590be0271364a5bddd9e245c9cc0fb710c4cbacbdd95264a3122d23224ca"
+  url "https://files.pythonhosted.org/packages/c9/5a/e68b8abbc1102113b7839e708ba04ef4c4b8b8a6da392832bb166d09ea72/pycurl-7.45.3.tar.gz"
+  sha256 "8c2471af9079ad798e1645ec0b0d3d4223db687379d17dd36a70637449f81d6b"
   license any_of: ["LGPL-2.1-or-later", "MIT"]
-  revision 1
 
   bottle do
     rebuild 1
