@@ -512,7 +512,7 @@
     ]
   },
   "mvt": {
-    "exclude_packages": ["certifi", "cffi", "click", "cryptography", "packaging", "pycparser", "Pygments", "PyYAML"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "mycli": {
     "exclude_packages": [
