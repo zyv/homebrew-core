@@ -43,7 +43,7 @@ class Root < Formula
   depends_on "openblas"
   depends_on "openssl@3"
   depends_on "pcre"
-  depends_on "python@3.11"
+  depends_on "python@3.12"
   depends_on "sqlite"
   depends_on "tbb"
   depends_on :xcode
@@ -66,7 +66,7 @@ class Root < Formula
   fails_with gcc: "5"
 
   def python3
-    "python3.11"
+    "python3.12"
   end
 
   def install
@@ -85,7 +85,7 @@ class Root < Formula
       -DCLING_CXX_PATH=clang++
       -DCMAKE_CXX_STANDARD=17
       -DCMAKE_INSTALL_ELISPDIR=#{elisp}
-      -DPYTHON_EXECUTABLE=#{python3}
+      -DPYTHON_EXECUTABLE=#{which(python3)}
       -DXROOTD_ROOT_DIR=#{Formula["xrootd"].opt_prefix}
       -Dbuiltin_afterimage=ON
       -Dbuiltin_cfitsio=OFF
