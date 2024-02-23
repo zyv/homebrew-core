@@ -9,13 +9,14 @@ class MetaPackageManager < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d534219c5eed5c1c2f4ba7455aed3aa763c4407dcf7d4cbfc6d63636feef92ae"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5d8f4f8ca99199a67d05ead327c166851a8ca4b518e4eda5a90192acbae7c821"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f47787ec179258f6093c10d790c55a9751805217ebf083a4beedbb2f76d5844a"
-    sha256 cellar: :any_skip_relocation, sonoma:         "a2a10c9b68bca5d3dd2a57a19a0583daff097996dc43cbf8a9efc8e849944f9f"
-    sha256 cellar: :any_skip_relocation, ventura:        "5131ac6f112412f6fb0f131ba74aefbfd327ea9c1e57822f678c8112f2d275c2"
-    sha256 cellar: :any_skip_relocation, monterey:       "163588f80dbae15c58e6b56051a3ec6c2c8c595e9ee270a2e3c280aeb1bfb346"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0a1c6d0ea904b2890b9961ce52d70bf77c6fb84df63e1fe6f880f4ff77795520"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "e1360ae8a019d0095e3d6b5173c1f63a6fe49438d4315fd114dbd1413e4737ad"
+    sha256 cellar: :any,                 arm64_ventura:  "9795f2e3fdef741205dad60b8b9c00179a1aed2eeba7424a5d50ddfaf5abd7e0"
+    sha256 cellar: :any,                 arm64_monterey: "a6c107f99c48f2bd313e533fc684c38756c52de2d1d3a74119a890e0a8c489d1"
+    sha256 cellar: :any,                 sonoma:         "d6ab4379f4ca7f547227ab35e4debc871dd8a443e55c314c1320c05232149602"
+    sha256 cellar: :any,                 ventura:        "3555c82c6713a13c4ad0f09722d70912f1fda3edc07e419b5ba2d72879423bf8"
+    sha256 cellar: :any,                 monterey:       "4673a4f65a463aff217444454c5076b0c365724e089e6dda63cd8c019e6206c0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb323e136cde24f98b51e2f47fe5263021a7353657e36a1b4f0e2dd231f5d186"
   end
 
   depends_on "libyaml"
