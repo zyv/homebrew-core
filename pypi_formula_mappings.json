@@ -682,9 +682,6 @@
   "pythran": {
     "exclude_packages": ["numpy", "ply", "setuptools"]
   },
-  "pyvim": {
-    "exclude_packages": ["six", "Pygments"]
-  },
   "raven": {
     "package_name": "raven-cycode",
     "exclude_packages": ["certifi", "packaging", "pygments", "pytz", "pyyaml", "six"]
