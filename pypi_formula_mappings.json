@@ -624,10 +624,7 @@
   },
   "psutils": "pspdfutils",
   "pwntools": {
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "mako", "markupsafe", "packaging", "psutil",
-      "pycparser", "python-dateutil", "pygments", "requests", "six"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "px": {
     "exclude_packages": ["six"]
