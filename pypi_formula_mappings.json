@@ -498,7 +498,7 @@
   },
   "molecule": {
     "extra_packages": ["docker-py", "molecule-vagrant", "python-vagrant"],
-    "exclude_packages": ["cryptography", "packaging", "pygments", "pyyaml", "six"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "mongo-orchestration": {
     "exclude_packages": ["certifi"]
