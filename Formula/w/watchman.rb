@@ -26,6 +26,7 @@ class Watchman < Formula
   depends_on "googletest" => :build
   depends_on "mvfst" => :build
   depends_on "pkg-config" => :build
+  depends_on "python-setuptools" => :build
   depends_on "rust" => :build
   depends_on "boost"
   depends_on "edencommon"
@@ -38,7 +39,7 @@ class Watchman < Formula
   depends_on "libsodium"
   depends_on "openssl@3"
   depends_on "pcre2"
-  depends_on "python@3.11"
+  depends_on "python@3.12"
 
   fails_with gcc: "5"
 
@@ -55,7 +56,7 @@ class Watchman < Formula
     #       formulae, so let's link them statically instead. This is done by default.
     system "cmake", "-S", ".", "-B", "build",
                     "-DENABLE_EDEN_SUPPORT=ON",
-                    "-DPython3_EXECUTABLE=#{which("python3.11")}",
+                    "-DPython3_EXECUTABLE=#{which("python3.12")}",
                     "-DWATCHMAN_VERSION_OVERRIDE=#{version}",
                     "-DWATCHMAN_BUILDINFO_OVERRIDE=#{tap.user}",
                     "-DWATCHMAN_STATE_DIR=#{var}/run/watchman",
