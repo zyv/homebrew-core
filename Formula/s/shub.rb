@@ -9,13 +9,14 @@ class Shub < Formula
   head "https://github.com/scrapinghub/shub.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "14f8d4242a7a4f664942d03b2f232fc1206babc9f8303d4d97846aa92fb5845c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a62ae7c791632a0e52213f063b6c4995fbc76c420eb7d77f03933ceb9262ff46"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f518ee6e3fb9d2d5b6452e052e2a5668fb05fbdd1b71baf123fb2f1f76dac8a3"
-    sha256 cellar: :any_skip_relocation, sonoma:         "ad2c57f32803c92abef1e89465c41f0e6d67393dda0b34c47a24a2925e2e721a"
-    sha256 cellar: :any_skip_relocation, ventura:        "377ad1c42b9cdc2d0a53bd4511ac6ffdac9bfb7744a04a53790fd233a9602462"
-    sha256 cellar: :any_skip_relocation, monterey:       "1d1ac510304870c06664a28139ebe924b588644c45a66030ae264b38d1b9cbff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f05f408e3fe1827f47c3273866a4e4d682e60ff989951b09a0e423e469a844d"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "206ad8b643ae54fa173e9647d4427dc647b94631fd4e3f5d01922efd4fcd7a44"
+    sha256 cellar: :any,                 arm64_ventura:  "b133d7244844e5a19749e70bbae60efa526f7fd753b868ea949e294acdaff614"
+    sha256 cellar: :any,                 arm64_monterey: "2005811e77abaa3f6a568b5ecba1264695376a8158508baeb8ba6aa96193e73c"
+    sha256 cellar: :any,                 sonoma:         "78cd8123c6fb17d0ce1587b011be5e224c3176c0531d48654246592ab261e6fb"
+    sha256 cellar: :any,                 ventura:        "b35aab05fd9c781c7a06e6da4e16932967d96d0597bb2297d5994241f4588f95"
+    sha256 cellar: :any,                 monterey:       "aa3032386f6d3248d903dd746a8d8cdd87737567780cb12d45a8a19eaf632b41"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eb3fe2554634895598a7e301ddf2c1c98069942964ffed41dafb4d0b732ff478"
   end
 
   depends_on "libyaml"
