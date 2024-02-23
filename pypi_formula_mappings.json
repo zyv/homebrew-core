@@ -474,9 +474,6 @@
     "extra_packages": ["semantic-version", "setuptools-rust", "tomli"]
   },
   "mdv": "mdv[yaml]",
-  "memray": {
-    "exclude_packages": ["jinja2", "markupsafe", "pygments"]
-  },
   "mentat": {
     "exclude_packages": [
       "certifi", "cffi", "jinja2", "markupsafe", "numpy", "packaging",
