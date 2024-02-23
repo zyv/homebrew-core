@@ -617,10 +617,7 @@
     "exclude_packages": ["six"]
   },
   "prowler": {
-    "exclude_packages": [
-      "certifi", "cffi", "click", "cryptography", "pycparser",
-      "pyparsing", "PyYAML", "six", "tabulate", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "psutils": "pspdfutils",
   "pwntools": {
