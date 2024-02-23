@@ -798,11 +798,6 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["numpydoc"]
   },
-  "sqlfluff": {
-    "exclude_packages": [
-      "click", "markupsafe", "packaging", "pygments", "PyYAML", "typing-extensions"
-    ]
-  },
   "sqlite-utils": {
     "exclude_packages": ["click", "pluggy", "python-dateutil", "six", "tabulate"]
   },
