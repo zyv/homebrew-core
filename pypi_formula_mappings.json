@@ -550,10 +550,7 @@
   },
   "openstackclient": {
     "extra_packages": ["python-designateclient", "python-heatclient", "python-octaviaclient"],
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "packaging", "pycparser", "pyparsing",
-      "PyYAML", "six", "pytz"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "organize-tool": {
     "exclude_packages": ["cryptography"]
