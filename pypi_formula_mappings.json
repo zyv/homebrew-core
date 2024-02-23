@@ -516,9 +516,6 @@
       "sqlparse", "tabulate"
     ]
   },
-  "name-that-hash": {
-    "exclude_packages": ["click", "Pygments"]
-  },
   "nbdime": {
     "exclude_packages": ["certifi", "jupyter-server", "nbconvert", "pyyaml", "six"]
   },
