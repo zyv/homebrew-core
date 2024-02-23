@@ -1,8 +1,8 @@
 class StructurizrCli < Formula
   desc "Command-line utility for Structurizr"
   homepage "https://structurizr.com"
-  url "https://github.com/structurizr/cli/releases/download/2024.01.02/structurizr-cli.zip"
-  sha256 "cb904943baa6a273158d03d8e527026fff34fc71a9b4cd9a7cc0c4377f13179d"
+  url "https://github.com/structurizr/cli/releases/download/v2024.02.22/structurizr-cli.zip"
+  sha256 "76a48bee2016d851a0737bffbbf9aae00d2043e96e1b746ffb7e189ca917b264"
   license "Apache-2.0"
 
   bottle do
@@ -18,8 +18,8 @@ class StructurizrCli < Formula
   end
 
   test do
-    result = pipe_output("#{bin}/structurizr-cli").strip
-    assert_match "Usage: structurizr push|pull|lock|unlock|export|validate|list|version|help [options]", result
+    result = shell_output("#{bin}/structurizr-cli validate -w /dev/null", 1)
+    assert_match "/dev/null is not a JSON or DSL file", result
 
     assert_match "structurizr-cli: #{version}", shell_output("#{bin}/structurizr-cli version")
   end
