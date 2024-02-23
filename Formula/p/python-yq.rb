@@ -19,15 +19,24 @@ class PythonYq < Formula
   end
 
   depends_on "jq"
-  depends_on "python-argcomplete"
+  depends_on "libyaml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
 
   conflicts_with "yq", because: "both install `yq` executables"
 
+  resource "argcomplete" do
+    url "https://files.pythonhosted.org/packages/f0/a2/ce706abe166457d5ef68fac3ffa6cf0f93580755b7d5f883c456e94fab7b/argcomplete-3.2.2.tar.gz"
+    sha256 "f3e49e8ea59b4026ee29548e24488af46e30c9de57d48638e24f54a1ea1000a2"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
+
   resource "tomlkit" do
-    url "https://files.pythonhosted.org/packages/0d/07/d34a911a98e64b07f862da4b10028de0c1ac2222ab848eaf5dd1877c4b1b/tomlkit-0.12.1.tar.gz"
-    sha256 "38e1ff8edb991273ec9f6181244a6a391ac30e9f5098e7535640ea6be97a7c86"
+    url "https://files.pythonhosted.org/packages/df/fc/1201a374b9484f034da4ec84215b7b9f80ed1d1ea989d4c02167afaa4400/tomlkit-0.12.3.tar.gz"
+    sha256 "75baf5012d06501f07bee5bf8e801b9f343e7aac5a92581f20f80ce632e6b5a4"
   end
 
   resource "xmltodict" do
@@ -37,15 +46,9 @@ class PythonYq < Formula
 
   def install
     virtualenv_install_with_resources
-
-    python3 = "python3.12"
-    register_argcomplete = Formula["python-argcomplete"].opt_bin/"register-python-argcomplete"
     %w[yq xq tomlq].each do |script|
-      generate_completions_from_executable(
-        python3, register_argcomplete, script,
-        base_name:              script,
-        shell_parameter_format: :arg
-      )
+      generate_completions_from_executable(libexec/"bin/register-python-argcomplete", script,
+                                           shell_parameter_format: :arg)
     end
   end
 
