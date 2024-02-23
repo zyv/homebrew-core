@@ -338,6 +338,12 @@
   "gitless": {
     "exclude_packages": ["pygit2"]
   },
+  "gnuradio": {
+    "extra_packages": [
+      "click", "click-plugins", "jsonschema", "lxml", "mako",
+      "packaging", "pygccxml", "pyyaml", "setuptools"
+    ]
+  },
   "goolabs": {
     "exclude_packages": ["certifi"]
   },
