@@ -813,9 +813,6 @@
   "terminator": {
     "exclude_packages": ["psutil"]
   },
-  "tern": {
-    "exclude_packages": ["certifi", "PyYAML", "packaging"]
-  },
   "texttest": {
     "exclude_packages": ["psutil"]
   },
