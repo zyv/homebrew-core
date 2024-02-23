@@ -1,8 +1,8 @@
 class Ospray < Formula
   desc "Ray-tracing-based rendering engine for high-fidelity visualization"
   homepage "https://www.ospray.org/"
-  url "https://github.com/ospray/ospray/archive/refs/tags/v3.0.0.tar.gz"
-  sha256 "d8d8e632d77171c810c0f38f8d5c8387470ca19b75f5b80ad4d3d12007280288"
+  url "https://github.com/ospray/ospray/archive/refs/tags/v3.1.0.tar.gz"
+  sha256 "0b9d7df900fe0474b12e5a2641bb9c3f5a1561217b2789834ebf994a15288a82"
   license "Apache-2.0"
   head "https://github.com/ospray/ospray.git", branch: "master"
 
@@ -27,13 +27,13 @@ class Ospray < Formula
   depends_on "tbb"
 
   resource "rkcommon" do
-    url "https://github.com/ospray/rkcommon/archive/refs/tags/v1.12.0.tar.gz"
-    sha256 "6abb901073811cdbcbe336772e1fcb458d78cab5ad8d5d61de2b57ab83581e80"
+    url "https://github.com/ospray/rkcommon/archive/refs/tags/v1.13.0.tar.gz"
+    sha256 "8ae9f911420085ceeca36e1f16d1316a77befbf6bf6de2a186d65440ac66ff1f"
   end
 
   resource "openvkl" do
-    url "https://github.com/openvkl/openvkl/archive/refs/tags/v2.0.0.tar.gz"
-    sha256 "469c3fba254c4fcdd84f8a9763d2e1aaa496dc123b5a9d467cc0a561e284c4e6"
+    url "https://github.com/openvkl/openvkl/archive/refs/tags/v2.0.1.tar.gz"
+    sha256 "0c7faa9582a93e93767afdb15a6c9c9ba154af7ee83a6b553705797be5f8af62"
   end
 
   def install
