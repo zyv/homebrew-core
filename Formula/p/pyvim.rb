@@ -8,14 +8,14 @@ class Pyvim < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2e4c9ae743c25b11c373055da09e5741f8978457575847589d44a9916b788f3d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a1da6f44b9955463f99b8c04b606fddd3697e6036db65c17800b65526c93224e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3384b88b9d1b9cc66426343366f07fadae5202397727c3e694bd62bc942bbe1c"
-    sha256 cellar: :any_skip_relocation, sonoma:         "0b940a3731430d50ba62cd35d111d1a7ef316bc8268c4452c21b8f641d10584a"
-    sha256 cellar: :any_skip_relocation, ventura:        "fa3f1f6b006a2296b3a20a4bfdd1547fc59a45893a0c75a9b272fcabab5c9ddd"
-    sha256 cellar: :any_skip_relocation, monterey:       "8012317bf225ae6cee1e2d882c367de498023915b0275e4a7bfdd0c486c153b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fcede15ebeb6ab14f705aafa482ee208beea862817095707daaf1205dedb2548"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1fabdb60c65c36e93648427fb5f03278e06721da2054ca77757a43e0f32d22ce"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "26e75453e568feac0a23b75e39e04cbb45464efcb5bbc728d6581c15d0b564e9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "58e897805bef968ebd9cf15ac8c64eba3e6f0aef4d1c7790f63e1a997bb03c93"
+    sha256 cellar: :any_skip_relocation, sonoma:         "ebe41590bc2dae28d56e75384d175b115d06865e9f993c822553b6b9513a9c80"
+    sha256 cellar: :any_skip_relocation, ventura:        "8ad0f921278af9f8303eaad5f58fdc516edda15dcd842ff72fcb63ef40e9372c"
+    sha256 cellar: :any_skip_relocation, monterey:       "bb3915d625f814c0ca990a2c8c3147fcf999c3f41de553398dc6acc50b6f94aa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4830c6cddd5102044fd283da3104df143ef3e7667f79b45816cf746bb4b76dab"
   end
 
   depends_on "python@3.12"
