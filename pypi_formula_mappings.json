@@ -708,7 +708,11 @@
     "exclude_packages": ["certifi"]
   },
   "recon-ng": {
-    "exclude_packages": ["certifi", "lxml", "PyYAML", "six", "pytz"]
+    "exclude_packages": ["certifi"],
+    "extra_packages": [
+      "pyyaml", "dnspython", "lxml", "mechanize", "requests",
+      "flask", "flask-restful", "flasgger", "dicttoxml", "XlsxWriter", "unicodecsv", "rq"
+    ]
   },
   "regipy": "regipy[cli]",
   "restview": {
