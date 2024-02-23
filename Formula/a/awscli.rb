@@ -3,8 +3,8 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.22.tar.gz"
-  sha256 "1a54dba93085ec9a5b21ce583d42651d16440afe71bf1746371c06136d9cd32f"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.23.tar.gz"
+  sha256 "198d065039a82e542a502d62d3ec84d71c6ac2a1e96a38ab0433f5d7f2cab45e"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
@@ -88,6 +88,11 @@ class Awscli < Formula
     sha256 "1f08fd5a2bea9c4180db71678e850b995d2a5f4537be0e94557668cf0f5f9497"
   end
 
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/03/20/630783571e76e5fa5f3e9f29398ca3ace377207b8196b54e0ffdf09f12c1/setuptools-67.8.0.tar.gz"
+    sha256 "62642358adc77ffa87233bc4d2354c4b2682d214048f500964dbe760ccedf102"
+  end
+
   resource "six" do
     url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
     sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
@@ -101,6 +106,11 @@ class Awscli < Formula
   resource "wcwidth" do
     url "https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz"
     sha256 "72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5"
+  end
+
+  resource "wheel" do
+    url "https://files.pythonhosted.org/packages/7a/b0/29c0c8c6f8cebeb0de4c17bc44365cba0b35cb4246e4a27a7e12ecf92d73/wheel-0.38.1.tar.gz"
+    sha256 "ea041edf63f4ccba53ad6e035427997b3bb10ee88a4cd014ae82aeb9eea77bb9"
   end
 
   def python3
@@ -123,7 +133,11 @@ class Awscli < Formula
       ENV.prepend "LDFLAGS", "-L./build/temp.linux-x86_64-#{python_version}/deps/install/lib"
     end
 
-    virtualenv_install_with_resources(system_site_packages: false)
+    # The `awscrt` resource requires `setuptools` & `wheel`, so they must be installed first
+    venv = virtualenv_create(libexec, "python3.11", system_site_packages: false)
+    venv.pip_install resources.reject { |r| r.name == "awscrt" }
+    venv.pip_install resource("awscrt")
+    venv.pip_install_and_link buildpath
 
     pkgshare.install "awscli/examples"
 
