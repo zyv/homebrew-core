@@ -758,7 +758,7 @@
   },
   "semgrep": {
     "package_name": "semgrep",
-    "exclude_packages": ["certifi", "click", "packaging", "Pygments", "typing-extensions"]
+    "exclude_packages": ["certifi"]
   },
   "sgr": {
     "exclude_packages": [
