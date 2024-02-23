@@ -11,14 +11,13 @@ class BashCompletionAT2 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2327d8eb7f1d32238624d720bd28856c4489fc1992bf3dc48c4a837cb988dfc1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2327d8eb7f1d32238624d720bd28856c4489fc1992bf3dc48c4a837cb988dfc1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2327d8eb7f1d32238624d720bd28856c4489fc1992bf3dc48c4a837cb988dfc1"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e0a9d02cb41f262b764f79135ba150948faab51058d20030e118b555b50f0f66"
-    sha256 cellar: :any_skip_relocation, ventura:        "e0a9d02cb41f262b764f79135ba150948faab51058d20030e118b555b50f0f66"
-    sha256 cellar: :any_skip_relocation, monterey:       "e0a9d02cb41f262b764f79135ba150948faab51058d20030e118b555b50f0f66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac195162fd4c749460be5eada9042bca58d30646f3eff1371af50cb1fde5714c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a89a69189337d02ae9915a7d63f3300a97bfc577a80fb95151b5172d6d8be329"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a89a69189337d02ae9915a7d63f3300a97bfc577a80fb95151b5172d6d8be329"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a89a69189337d02ae9915a7d63f3300a97bfc577a80fb95151b5172d6d8be329"
+    sha256 cellar: :any_skip_relocation, sonoma:         "c8a4c8bd99146abfcd893b273e6a4a53d6a47c3768c169f68296bc3e35d0dc2a"
+    sha256 cellar: :any_skip_relocation, ventura:        "c8a4c8bd99146abfcd893b273e6a4a53d6a47c3768c169f68296bc3e35d0dc2a"
+    sha256 cellar: :any_skip_relocation, monterey:       "c8a4c8bd99146abfcd893b273e6a4a53d6a47c3768c169f68296bc3e35d0dc2a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4b277dc873ae381d168808461328bf1a0580f9e94288990f14de82756cb4441"
   end
 
   head do
