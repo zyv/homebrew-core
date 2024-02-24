@@ -468,10 +468,7 @@
   },
   "mdv": "mdv[yaml]",
   "mentat": {
-    "exclude_packages": [
-      "certifi", "cffi", "jinja2", "markupsafe", "numpy", "packaging",
-      "pillow", "pycparser", "pygments", "requests", "six", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi", "numpy", "pillow"]
   },
   "meson-python": {
     "exclude_packages": ["meson", "packaging"],
