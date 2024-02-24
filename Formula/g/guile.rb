@@ -5,6 +5,7 @@ class Guile < Formula
   mirror "https://ftpmirror.gnu.org/guile/guile-3.0.9.tar.xz"
   sha256 "1a2625ac72b2366e95792f3fe758fd2df775b4044a90a4a9787326e66c0d750d"
   license "LGPL-3.0-or-later"
+  revision 1
 
   bottle do
     rebuild 1
@@ -45,6 +46,9 @@ class Guile < Formula
   uses_from_macos "libxcrypt"
 
   def install
+    # So we can find libraries with (dlopen).
+    ENV.append "LDFLAGS", "-Wl,-rpath,#{HOMEBREW_PREFIX}/lib"
+
     # Avoid superenv shim
     inreplace "meta/guile-config.in", "@PKG_CONFIG@", Formula["pkg-config"].opt_bin/"pkg-config"
 
