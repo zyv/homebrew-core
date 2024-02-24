@@ -611,9 +611,6 @@
   "pyinstaller": {
     "extra_packages": ["macholib"]
   },
-  "pylint": {
-    "exclude_packages": ["isort", "typing-extensions"]
-  },
   "pyqt": {
     "exclude_packages": [
       "PyQt6-3D-Qt6", "PyQt6-Charts-Qt6", "PyQt6-DataVisualization-Qt6",
