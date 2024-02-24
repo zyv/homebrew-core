@@ -19,8 +19,12 @@ class Supervisor < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "b5c5f62ca8dc1b0d9643a120ea346c9b5206a726fe8c27de63321e2c9cb2666a"
   end
 
-  depends_on "python-setuptools"
   depends_on "python@3.12"
+
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
+    sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
+  end
 
   def install
     inreplace buildpath/"supervisor/skel/sample.conf" do |s|
