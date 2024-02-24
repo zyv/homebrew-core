@@ -283,7 +283,8 @@
     "exclude_packages": ["cryptography"]
   },
   "evernote-backup": {
-    "exclude_packages": ["certifi", "click", "pyparsing"]
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["oauth2", "setuptools"]
   },
   "fabric": {
     "extra_packages": ["decorator"],
