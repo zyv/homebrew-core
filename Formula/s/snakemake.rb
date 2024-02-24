@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/d3/3e/4c2445384c430f1ee272f4868fdae828e6cab6de5c6df3bfab3dd7a41973/snakemake-8.4.12.tar.gz"
-  sha256 "1320590f24d3ef08d63ac91f1b3f634b27e4cfef21c7bbb3f267a79d75327621"
+  url "https://files.pythonhosted.org/packages/6f/40/ce94c895b18687a8f9342ec49f8a3fe5f3b9f53e24a93eb611eee680cc4f/snakemake-8.5.1.tar.gz"
+  sha256 "1cfc81901047b831aa322a22fe86f3a2191b721a8deeb28d6448ae4eb0a5bc70"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -186,8 +186,8 @@ class Snakemake < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
-    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
+    url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
+    sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
   end
 
   resource "smart-open" do
@@ -208,6 +208,11 @@ class Snakemake < Formula
   resource "snakemake-interface-executor-plugins" do
     url "https://files.pythonhosted.org/packages/32/11/8032e5f21e5e33822185d5001a5bb1b6e3743795304149d18da435ae4284/snakemake_interface_executor_plugins-8.2.0.tar.gz"
     sha256 "4c74e3e1751bab6b266baf8688e854b8b4c5c5e10f5e34c581f42d69af4ff13b"
+  end
+
+  resource "snakemake-interface-report-plugins" do
+    url "https://files.pythonhosted.org/packages/ea/49/8ef5e80fabce98f44767cf3a30656348806df9759db26e5a2fda59700f9b/snakemake_interface_report_plugins-1.0.0.tar.gz"
+    sha256 "02311cdc4bebab2a1c28469b5e6d5c6ac6e9c66998ad4e4b3229f1472127490f"
   end
 
   resource "snakemake-interface-storage-plugins" do
