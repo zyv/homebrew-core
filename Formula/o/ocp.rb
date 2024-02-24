@@ -1,11 +1,19 @@
 class Ocp < Formula
   desc "UNIX port of the Open Cubic Player"
   homepage "https://stian.cubic.org/project-ocp.php"
-  url "https://stian.cubic.org/ocp/ocp-0.2.106.tar.xz"
-  sha256 "bf11d96d4a58bbf9c344eb53cf815fc2097c63a3c2c713f7ffb134073bd84721"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://github.com/mywave82/opencubicplayer.git", branch: "master"
+
+  stable do
+    url "https://stian.cubic.org/ocp/ocp-0.2.107.tar.xz"
+    sha256 "7627e4fe3acf7ffd7108ac2a6bf53e8a28de7a220c054338c8642c4e37d94626"
+
+    # Backport fix for label in front of variable. Remove in the next release.
+    patch do
+      url "https://github.com/mywave82/opencubicplayer/commit/93ec77fa19226a42972d599a2037e2b0cbd2ac00.patch?full_index=1"
+      sha256 "fef3fde17c923a732aa831825ba84efa9d3b6652b40964dfad5a07ad33b511ce"
+    end
+  end
 
   livecheck do
     url :homepage
