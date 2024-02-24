@@ -696,10 +696,7 @@
   },
   "sail": {
     "package_name": "sailed-io",
-    "exclude_packages": [
-      "certifi", "click", "fabric", "filelock", "invoke", "jinja2",
-      "markupsafe", "packaging", "pyyaml", "six"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "salt-lint": {
     "exclude_packages": ["pathspec", "PyYAML"]
