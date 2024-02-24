@@ -222,6 +222,9 @@
     "package_name": "dnstwist[full]",
     "exclude_packages": ["certifi"]
   },
+  "dnsviz": {
+    "extra_packages": ["dnspython", "m2crypto", "pygraphviz"]
+  },
   "docker-squash": {
     "exclude_packages": ["certifi"]
   },
