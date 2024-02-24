@@ -664,9 +664,6 @@
   "python-requests": {
     "exclude_packages": ["certifi", "charset-normalizer", "idna", "urllib3"]
   },
-  "python-yq": {
-    "exclude_packages": ["argcomplete", "PyYAML"]
-  },
   "pythran": {
     "exclude_packages": ["numpy", "ply", "setuptools"]
   },
