@@ -8,6 +8,11 @@ class VulkanProfiles < Formula
   license "Apache-2.0"
   head "https://github.com/KhronosGroup/Vulkan-Profiles.git", branch: "main"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "eec52b47eaeced54cd5ae3ba5bf6a2c76d28484ce45e8d17baae37e877f61738"
     sha256 cellar: :any,                 arm64_ventura:  "5e9d95cd32f1d072e5186a470336c87b46e7b776255b27d6a9f9699b2b1eefb1"
