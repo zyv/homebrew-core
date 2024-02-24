@@ -23,12 +23,11 @@ class Osc < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "508bf16aec2472063bbdbd220157551feab1928005f580d34dde2c7bada50b7f"
   end
 
-  depends_on "cffi"
-  depends_on "pycparser"
   depends_on "python-cryptography"
   depends_on "python@3.12"
 
   uses_from_macos "curl"
+  uses_from_macos "libffi"
 
   resource "rpm" do
     url "https://files.pythonhosted.org/packages/8c/15/ef9b3d4a0b4b9afe62fd2be374003643ea03fc8026930646ad0781bb9492/rpm-0.1.0.tar.gz"
@@ -36,8 +35,8 @@ class Osc < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/36/dd/a6b232f449e1bc71802a5b7950dc3675d32c6dbc2a1bd6d71f065551adb6/urllib3-2.1.0.tar.gz"
-    sha256 "df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   def install
