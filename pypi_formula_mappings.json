@@ -281,10 +281,8 @@
     "exclude_packages": ["certifi"]
   },
   "fdroidserver": {
-    "exclude_packages": [
-      "certifi", "cffi", "click", "cryptography", "fonttools", "ipython", "lxml", "matplotlib", "networkx", "numpy",
-      "packaging", "pillow", "pygments", "pyparsing", "pyyaml", "six", "typing-extensions", "yamllint"
-    ]
+    "exclude_packages": ["certifi", "cryptography", "numpy", "pillow"],
+    "extra_packages": ["androguard==3.3.5"]
   },
   "flintrock": {
     "exclude_packages": ["cryptography"]
