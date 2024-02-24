@@ -665,7 +665,7 @@
   },
   "raven": {
     "package_name": "raven-cycode",
-    "exclude_packages": ["certifi", "packaging", "pygments", "pytz", "pyyaml", "six"]
+    "exclude_packages": ["certifi"]
   },
   "rawdog": {
     "exclude_packages": ["certifi"]
