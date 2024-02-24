@@ -1,8 +1,8 @@
 class Mmv < Formula
   desc "Move, copy, append, and link multiple files"
   homepage "https://github.com/rrthomas/mmv"
-  url "https://github.com/rrthomas/mmv/releases/download/v2.5.1/mmv-2.5.1.tar.gz"
-  sha256 "f7b4cbd3b778909541df3ab11284288eeb05c68d5ad620f354568e82553dec14"
+  url "https://github.com/rrthomas/mmv/releases/download/v2.6/mmv-2.6.tar.gz"
+  sha256 "020cb39cb177aa9e66363d73f49fe2e56aa23a3501c9cb16383f75b1ddcd4fe4"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -17,8 +17,16 @@ class Mmv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e401678476327b649450fb13a9c083bd1d2185d0f90a7250cea2678d9291c9ba"
   end
 
+  depends_on "help2man" => :build # for patch
   depends_on "pkg-config" => :build
   depends_on "bdw-gc"
+
+  # Backport fix for gnulib base_name().
+  # TODO: Remove patch and `help2man` dependency in the next release.
+  patch do
+    url "https://github.com/rrthomas/mmv/commit/5a3ab0746db2f761bff332dc2411afe1f99434eb.patch?full_index=1"
+    sha256 "cf9efa6f6eb175d2d71f46ab3a3da317390c82594424168f4af023abd4e9c168"
+  end
 
   def install
     # Fix compile with newer Clang
