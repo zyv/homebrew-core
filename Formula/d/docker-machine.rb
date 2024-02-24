@@ -1,10 +1,9 @@
 class DockerMachine < Formula
   desc "Create Docker hosts locally and on cloud providers"
   homepage "https://docs.docker.com/machine"
-  url "https://gitlab.com/gitlab-org/ci-cd/docker-machine.git",
-      tag:      "v0.16.2-gitlab.23",
-      revision: "c57b3d7e5613393b5102d295e4ceeccaf80a5105"
-  version "0.16.2-gitlab.23"
+  url "https://gitlab.com/gitlab-org/ci-cd/docker-machine/-/archive/v0.16.2-gitlab.24/docker-machine-v0.16.2-gitlab.24.tar.bz2"
+  version "0.16.2-gitlab.24"
+  sha256 "172bcf784745806f39551caa5f565ab0dc792f1d26538c872fe9bceff49015ee"
   license "Apache-2.0"
   head "https://gitlab.com/gitlab-org/ci-cd/docker-machine.git", branch: "master"
 
@@ -18,20 +17,19 @@ class DockerMachine < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "98dc3c6b44ecb7242954b862fd54154177629a03802bd2c8df7c39f68fe0d57d"
   end
 
-  depends_on "automake" => :build
   depends_on "go" => :build
 
+  # upstream version patch PR, https://gitlab.com/gitlab-org/ci-cd/docker-machine/-/merge_requests/121
+  patch do
+    url "https://gitlab.com/gitlab-org/ci-cd/docker-machine/-/commit/8630d656313d791bd99a80e02b4efa9b3c95b250.diff"
+    sha256 "96ff340785c1e7e6ddb5cec71ed3f2c0fadd8381a270b7f7688fc46d2b568f1c"
+  end
+
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-    (buildpath/"src/github.com/docker/machine").install buildpath.children
-    cd "src/github.com/docker/machine" do
-      system "make", "build"
-      bin.install Dir["bin/*"]
-      bash_completion.install Dir["contrib/completion/bash/*.bash"]
-      zsh_completion.install "contrib/completion/zsh/_docker-machine"
-      prefix.install_metafiles
-    end
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/docker-machine"
+
+    bash_completion.install Dir["contrib/completion/bash/*.bash"]
+    zsh_completion.install "contrib/completion/zsh/_docker-machine"
   end
 
   service do
