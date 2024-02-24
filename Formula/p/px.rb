@@ -4,8 +4,8 @@ class Px < Formula
   desc "Ps and top for human beings (px / ptop)"
   homepage "https://github.com/walles/px"
   url "https://github.com/walles/px.git",
-      tag:      "3.5.1",
-      revision: "53c4faf6708a89d5dd07ac5b994b42e4ae4164b2"
+      tag:      "3.5.2",
+      revision: "584f919429f1da41661d87b59305347680fb0a2c"
   license "MIT"
 
   bottle do
