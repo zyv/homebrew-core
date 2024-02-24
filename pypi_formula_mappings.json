@@ -553,7 +553,7 @@
     "exclude_packages": ["cryptography"]
   },
   "osc": {
-    "exclude_packages": ["cffi", "pycparser", "cryptography"]
+    "exclude_packages": ["cryptography"]
   },
   "osc-cli": {
     "exclude_packages": ["certifi"]
