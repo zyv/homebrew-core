@@ -446,10 +446,7 @@
     ]
   },
   "localstack": {
-    "exclude_packages": [
-      "certifi", "click", "cffi", "cryptography", "pycparser",
-      "Pygments", "psutil", "PyYAML", "six", "tabulate"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "locust": {
     "exclude_packages": ["certifi"]
