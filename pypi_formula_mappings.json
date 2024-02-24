@@ -360,7 +360,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "http-prompt": {
-    "exclude_packages": ["certifi", "click", "Pygments", "PyYAML", "six"]
+    "exclude_packages": ["certifi"]
   },
   "httpie": {
     "package_name": "httpie",
