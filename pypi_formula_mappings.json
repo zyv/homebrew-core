@@ -583,9 +583,6 @@
     "exclude_packages": ["certifi", "cffi", "cryptography", "lxml", "pycparser", "PyYAML", "six"],
     "extra_packages": ["pyOpenSSL", "jq"]
   },
-  "podman-compose": {
-    "exclude_packages": ["PyYAML"]
-  },
   "poetry": {
     "exclude_packages": [
       "certifi", "cffi", "keyring", "packaging", "pycparser", "six", "virtualenv"
