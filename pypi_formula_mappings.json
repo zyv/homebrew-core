@@ -398,10 +398,7 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["setuptools"]
   },
-  "jinja2-cli": {
-    "package_name": "jinja2-cli[yaml,toml,xml]",
-    "exclude_packages": ["jinja2", "MarkupSafe", "PyYAML", "toml"]
-  },
+  "jinja2-cli": "jinja2-cli[yaml,toml,xml]",
   "jrnl": {
     "exclude_packages": ["cffi", "cryptography", "keyring", "pygments", "six"]
   },
