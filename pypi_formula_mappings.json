@@ -563,7 +563,7 @@
     "exclude_packages": ["six"]
   },
   "pferd": {
-    "exclude_packages": ["certifi", "Pygments"]
+    "exclude_packages": ["certifi"]
   },
   "pip-audit": {
     "exclude_packages": ["certifi"]
