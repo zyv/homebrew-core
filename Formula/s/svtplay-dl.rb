@@ -17,12 +17,10 @@ class SvtplayDl < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "729c967c059e50fd9f3742386792db9369c727476e4e56f2f7106ed9a4a4e356"
   end
 
-  depends_on "cffi"
-  depends_on "pycparser"
+  depends_on "libyaml"
   depends_on "python-certifi"
   depends_on "python-cryptography"
   depends_on "python@3.12"
-  depends_on "pyyaml"
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
@@ -39,14 +37,19 @@ class SvtplayDl < Formula
     sha256 "3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0"
   end
 
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
+
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
     sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/36/dd/a6b232f449e1bc71802a5b7950dc3675d32c6dbc2a1bd6d71f065551adb6/urllib3-2.1.0.tar.gz"
-    sha256 "df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   def install
