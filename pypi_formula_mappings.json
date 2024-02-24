@@ -306,9 +306,6 @@
     "exclude_packages": ["certifi", "docutils", "flit-core"]
   },
   "fobis": "fobis-py",
-  "ford": {
-    "exclude_packages": ["markdown", "markupsafe", "pygments"]
-  },
   "gallery-dl": {
     "exclude_packages": ["certifi"]
   },
