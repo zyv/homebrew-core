@@ -1,8 +1,10 @@
 class Pipdeptree < Formula
+  include Language::Python::Virtualenv
+
   desc "CLI to display dependency tree of the installed Python packages"
   homepage "https://github.com/tox-dev/pipdeptree"
-  url "https://files.pythonhosted.org/packages/c9/3e/4457ce966a3307286597666fd1527631c66780a5ade3dcbffbea97108060/pipdeptree-2.14.0.tar.gz"
-  sha256 "3296195250e00d37638f2cce70495e3345645b4bbecc1c38ac39339f1511d9b5"
+  url "https://files.pythonhosted.org/packages/a1/eb/2b71b63917845b231fe150ff70ef2f10c856a20d721c081a115e87cba2fb/pipdeptree-2.15.0.tar.gz"
+  sha256 "b80098c9337f27b1d612c35223aa5a655c9a9e32021d7d0d0091e8dbce78fbeb"
   license "MIT"
 
   bottle do
@@ -15,18 +17,10 @@ class Pipdeptree < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "527e352eca9fe96f6f98b32dfc9414e490c065bebddf2f9d6ac4b6aa52d241c9"
   end
 
-  depends_on "python-hatch-vcs" => :build
-  depends_on "python-hatchling" => :build
-  depends_on "python-setuptools" => :build
-  depends_on "python-setuptools-scm" => :build
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
-  end
-
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
