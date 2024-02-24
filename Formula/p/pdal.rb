@@ -38,6 +38,10 @@ class Pdal < Formula
   fails_with gcc: "5" # gdal is compiled with GCC
 
   def install
+    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
+    # libunwind due to it being present in a library search path.
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib if DevelopmentTools.clang_build_version >= 1500
+
     system "cmake", ".", *std_cmake_args,
                          "-DWITH_LASZIP=TRUE",
                          "-DBUILD_PLUGIN_GREYHOUND=ON",
@@ -53,5 +57,6 @@ class Pdal < Formula
 
   test do
     system bin/"pdal", "info", doc/"test/data/las/interesting.las"
+    assert_match "pdal #{version}", shell_output("#{bin}/pdal --version")
   end
 end
