@@ -19,11 +19,9 @@ class RobotFramework < Formula
   end
 
   depends_on "rust" => :build # for bcrypt
-  depends_on "cffi"
   depends_on "python-certifi"
   depends_on "python-cryptography"
   depends_on "python@3.12"
-  depends_on "six"
 
   resource "attrs" do
     url "https://files.pythonhosted.org/packages/e3/fc/f800d51204003fa8ae392c4e8278f256206e7a919b708eef054f5f4b650d/attrs-23.2.0.tar.gz"
@@ -96,8 +94,8 @@ class RobotFramework < Formula
   end
 
   resource "selenium" do
-    url "https://files.pythonhosted.org/packages/16/fd/a0ef793383077dd6296e4637acc82d1e9893e9a49a47f56e96996909e427/selenium-4.16.0.tar.gz"
-    sha256 "b2e987a445306151f7be0e6dfe2aa72a479c2ac6a91b9d5ef2d6dd4e49ad0435"
+    url "https://files.pythonhosted.org/packages/5e/30/5d5d83efaac1c7b2aa45e383b74e733156dae6c67434c562f88e05db9ddb/selenium-4.18.1.tar.gz"
+    sha256 "a11f67afa8bfac6b77e148c987b33f6b14eb1cae4d352722a75de1f26e3f0ae2"
   end
 
   resource "sniffio" do
@@ -120,9 +118,14 @@ class RobotFramework < Formula
     sha256 "18c11793647703c158b1f6e62de638acada927344d534e3c7628eedcb746839f"
   end
 
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
+    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
+  end
+
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/36/dd/a6b232f449e1bc71802a5b7950dc3675d32c6dbc2a1bd6d71f065551adb6/urllib3-2.1.0.tar.gz"
-    sha256 "df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"
+    url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
+    sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
   resource "wsproto" do
