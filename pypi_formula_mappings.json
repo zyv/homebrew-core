@@ -685,9 +685,6 @@
     ]
   },
   "regipy": "regipy[cli]",
-  "restview": {
-    "exclude_packages": ["six", "Pygments", "docutils"]
-  },
   "rich-cli": {
     "exclude_packages": ["certifi"]
   },
