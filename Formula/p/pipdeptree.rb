@@ -1,32 +1,26 @@
 class Pipdeptree < Formula
+  include Language::Python::Virtualenv
+
   desc "CLI to display dependency tree of the installed Python packages"
   homepage "https://github.com/tox-dev/pipdeptree"
-  url "https://files.pythonhosted.org/packages/c9/3e/4457ce966a3307286597666fd1527631c66780a5ade3dcbffbea97108060/pipdeptree-2.14.0.tar.gz"
-  sha256 "3296195250e00d37638f2cce70495e3345645b4bbecc1c38ac39339f1511d9b5"
+  url "https://files.pythonhosted.org/packages/a1/eb/2b71b63917845b231fe150ff70ef2f10c856a20d721c081a115e87cba2fb/pipdeptree-2.15.0.tar.gz"
+  sha256 "b80098c9337f27b1d612c35223aa5a655c9a9e32021d7d0d0091e8dbce78fbeb"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2d3ff54da88d0100efbe3142eb52d38f5b62644c1b2f081f14d7cf9007fa4566"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bc54e8b6fd7210905d5b3d982e5e99135571da6628a93ec6c2f808967ba2fcda"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "52d98eed44f7d1196cda0eb9a2ad1647a9cc1926e60f5c6324d1b9d8f63fa005"
-    sha256 cellar: :any_skip_relocation, sonoma:         "573ffcdab87ce11932a7186ac42ff56dac278aee65151c21bed438df569bb501"
-    sha256 cellar: :any_skip_relocation, ventura:        "ef8e6545a03d85116bd9f05116bade24154c8c6024c2f0fa18acc635d2e85fb9"
-    sha256 cellar: :any_skip_relocation, monterey:       "5dd23053f1ca7ea3bdc00fa6af94beb44e12c4b628030431a20b900a9ec242b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "527e352eca9fe96f6f98b32dfc9414e490c065bebddf2f9d6ac4b6aa52d241c9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b61c7f2e42bbac735ca60dda48dd3d1714db6ef4ec7308a0749e478bfb8969ec"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c58beaef91e51d7becd9ddfa4d9c6dacaf8f0881a24bd2c62a707bc491fee4ca"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "21ef70e594213d0917be474d881a4f55072b1e474be4c5678369641ea1570a00"
+    sha256 cellar: :any_skip_relocation, sonoma:         "0fb2ba787ea3f581e3cee70578f4850f040e59512afc51509fa80541461f8147"
+    sha256 cellar: :any_skip_relocation, ventura:        "51b10feb74cff4461ffc222a7f478f248793422ba77bbd447c9020c70eb37f12"
+    sha256 cellar: :any_skip_relocation, monterey:       "f153dae1c82875153ee15e68ad4bed1f0a534c0fce24f86811b8c0f4c344671b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c8e9ccce3b965c3b1f3cb55609f25db902a8d3fddfb1ae49e74a8b52c521fe05"
   end
 
-  depends_on "python-hatch-vcs" => :build
-  depends_on "python-hatchling" => :build
-  depends_on "python-setuptools" => :build
-  depends_on "python-setuptools-scm" => :build
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
-  end
-
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
