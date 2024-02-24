@@ -1,8 +1,8 @@
 class Wiiuse < Formula
   desc "Connect Nintendo Wii Remotes"
   homepage "https://github.com/wiiuse/wiiuse"
-  url "https://github.com/wiiuse/wiiuse/archive/refs/tags/0.15.5.tar.gz"
-  sha256 "d22b66eb13b92513c7736cc5e867fed40b25a0e398a70aa059711fc4f4769363"
+  url "https://github.com/wiiuse/wiiuse/archive/refs/tags/0.15.6.tar.gz"
+  sha256 "a3babe5eb284606090af706b356f1a0476123598f680094b1799670ec1780a44"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -25,6 +25,7 @@ class Wiiuse < Formula
     args = %w[
       -DBUILD_EXAMPLE=NO
       -DBUILD_EXAMPLE_SDL=NO
+      -DBUILD_SHARED_LIBS=ON
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
