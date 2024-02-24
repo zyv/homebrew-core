@@ -697,7 +697,7 @@
     "exclude_packages": ["certifi"]
   },
   "schemathesis": {
-    "exclude_packages": ["certifi", "click", "markupsafe", "six", "packaging", "PyYAML", "typing-extensions"]
+    "exclude_packages": ["certifi"]
   },
   "scikit-image": {
     "exclude_packages": ["networkx", "numpy", "packaging", "pillow", "scipy"]
