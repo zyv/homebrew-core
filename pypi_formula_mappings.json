@@ -159,11 +159,7 @@
     "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser"]
   },
   "checkov": {
-    "exclude_packages": [
-      "argcomplete", "certifi", "cffi", "click", "jinja2", "markdown",
-      "markupsafe", "networkx", "numpy", "packaging", "pycparser", "pyparsing",
-      "PyYAML", "six", "tabulate", "toml", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi", "numpy"]
   },
   "cloudformation-cli": {
     "extra_packages": ["cloudformation-cli-go-plugin", "cloudformation-cli-java-plugin", "cloudformation-cli-python-plugin", "setuptools"],
