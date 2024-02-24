@@ -773,9 +773,6 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["numpydoc"]
   },
-  "sqlite-utils": {
-    "exclude_packages": ["click", "pluggy", "python-dateutil", "six", "tabulate"]
-  },
   "ssh-mitm": {
     "exclude_packages": ["cryptography"]
   },
