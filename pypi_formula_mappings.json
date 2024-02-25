@@ -567,9 +567,6 @@
       "certifi", "cffi", "keyring", "packaging", "pycparser", "six", "virtualenv"
     ]
   },
-  "proselint": {
-    "exclude_packages": ["six"]
-  },
   "prowler": {
     "exclude_packages": ["certifi", "cryptography"]
   },
