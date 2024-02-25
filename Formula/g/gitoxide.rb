@@ -1,8 +1,8 @@
 class Gitoxide < Formula
   desc "Idiomatic, lean, fast & safe pure Rust implementation of Git"
   homepage "https://github.com/Byron/gitoxide"
-  url "https://github.com/Byron/gitoxide/archive/refs/tags/v0.33.0.tar.gz"
-  sha256 "0fc1e0f9e36d2622f6a11925607090abf619c73551d2a8f5ea710e97ef1a9eb4"
+  url "https://github.com/Byron/gitoxide/archive/refs/tags/v0.34.0.tar.gz"
+  sha256 "5f0686213fa3ad3d6f3adedf3df463dfdb9bb60f9cad03a174ec6b5adba1567f"
   license "Apache-2.0"
   head "https://github.com/Byron/gitoxide.git", branch: "main"
 
@@ -44,7 +44,7 @@ class Gitoxide < Formula
     system "git", "-C", "test", "commit", "--message", "initial commit", "--quiet"
     # the gix test output is to stderr so it's redirected to stderr to match
     assert_match "OK", shell_output("#{bin}/gix --repository test verify 2>&1")
-    assert_match "gitoxide", shell_output("#{bin}/ein --version")
+    assert_match "ein", shell_output("#{bin}/ein --version")
     assert_match "./test", shell_output("#{bin}/ein tool find")
   end
 end
