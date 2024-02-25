@@ -494,8 +494,7 @@
     "extra_packages": ["setuptools"]
   },
   "nvchecker": {
-    "package_name": "nvchecker[pypi]",
-    "exclude_packages": ["packaging", "pycurl"]
+    "package_name": "nvchecker[pypi]"
   },
   "oci-cli": {
     "exclude_packages": ["certifi", "cryptography"]
