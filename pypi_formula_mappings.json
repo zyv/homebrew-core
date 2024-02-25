@@ -418,9 +418,6 @@
   "ldeep": {
     "exclude_packages": ["cryptography"]
   },
-  "legit": {
-    "exclude_packages": ["six"]
-  },
   "lexicon": {
     "package_name": "dns-lexicon[full]",
     "exclude_packages": ["certifi", "cryptography"]
