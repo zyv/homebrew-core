@@ -315,6 +315,10 @@
   "ggshield": {
     "exclude_packages": ["certifi", "cryptography"]
   },
+  "gimmecert": {
+    "exclude_packages": ["certifi", "cryptography"],
+    "extra_packages": ["setuptools"]
+  },
   "gimme-aws-creds": {
     "package_name": "gimme-aws-creds",
     "exclude_packages": ["certifi", "cffi", "cryptography", "keyring", "six"],
