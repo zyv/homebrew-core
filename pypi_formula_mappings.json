@@ -798,7 +798,7 @@
     "exclude_packages": ["certifi"]
   },
   "twine": {
-    "exclude_packages": ["certifi", "docutils", "keyring", "Pygments"]
+    "exclude_packages": ["certifi"]
   },
   "twtxt": {
     "extra_packages": ["setuptools"]
