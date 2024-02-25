@@ -6,6 +6,7 @@ class BandcampDl < Formula
   url "https://files.pythonhosted.org/packages/e5/4d/d463bcc20602f5385e0441cd7171b1fe6b67e2bb76240ae0f2684de6c022/bandcamp-downloader-0.0.15.tar.gz"
   sha256 "2f7666c00e9cff39135d5c9fc0498bbc93d64684fcb13171cbd9584e31692ebb"
   license "Unlicense"
+  revision 1
   head "https://github.com/iheanyi/bandcamp-dl.git", branch: "master"
 
   bottle do
