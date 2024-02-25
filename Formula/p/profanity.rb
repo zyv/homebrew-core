@@ -50,6 +50,7 @@ class Profanity < Formula
     # environment will prevent any other `brew` installations from being found.
     system "./configure", *std_configure_args,
                           "--disable-silent-rules",
+                          "--enable-python-plugins",
                           "BREW=#{HOMEBREW_BREW_FILE}"
     system "make", "install"
   end
