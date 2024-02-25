@@ -3,8 +3,8 @@ class Gcovr < Formula
 
   desc "Reports from gcov test coverage program"
   homepage "https://gcovr.com/"
-  url "https://files.pythonhosted.org/packages/a5/d9/fc88c9df718e44dad943fec14db80e49cc0b1a592bbbf691f56a3955ccaf/gcovr-7.0.tar.gz"
-  sha256 "d4124f89e9299cce4a0b2fda9b9cd6c07c4b7d0e94705eb071fd332671ee1125"
+  url "https://files.pythonhosted.org/packages/1f/8d/7d8d83965b80e3854f863493faca12cc0d3776a41e01ce38e25c26155ac0/gcovr-7.1.tar.gz"
+  sha256 "c5137340a51333d2fffe61f3d957d81b8a6727991f9d59b5a5b35bdd3493845c"
   license "BSD-3-Clause"
   head "https://github.com/gcovr/gcovr.git", branch: "master"
 
@@ -23,6 +23,11 @@ class Gcovr < Formula
 
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"
+
+  resource "colorlog" do
+    url "https://files.pythonhosted.org/packages/db/38/2992ff192eaa7dd5a793f8b6570d6bbe887c4fbbf7e72702eb0a693a01c8/colorlog-6.8.2.tar.gz"
+    sha256 "3e3e079a41feb5a1b64f978b5ea4f46040a94f11f0e8bbb8261e3dbbeca64d44"
+  end
 
   resource "jinja2" do
     url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
