@@ -1,8 +1,8 @@
 class Qpdf < Formula
   desc "Tools for and transforming and inspecting PDF files"
   homepage "https://github.com/qpdf/qpdf"
-  url "https://github.com/qpdf/qpdf/releases/download/v11.8.0/qpdf-11.8.0.tar.gz"
-  sha256 "d9321f5fbc50251803630a5604ddc5ed9a4d93bc023d9a7436a302e7c9741259"
+  url "https://github.com/qpdf/qpdf/releases/download/v11.9.0/qpdf-11.9.0.tar.gz"
+  sha256 "9f5d6335bb7292cc24a7194d281fc77be2bbf86873e8807b85aeccfbff66082f"
   license "Apache-2.0"
 
   bottle do
