@@ -21,13 +21,17 @@ class Percol < Formula
   end
 
   depends_on "python@3.12"
-  depends_on "six"
 
   uses_from_macos "expect" => :test
 
   resource "cmigemo" do
     url "https://files.pythonhosted.org/packages/2f/e4/374df50b655e36139334046f898469bf5e2d7600e1e638f29baf05b14b72/cmigemo-0.1.6.tar.gz"
     sha256 "7313aa3007f67600b066e04a4805e444563d151341deb330135b4dcdf6444626"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
