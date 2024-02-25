@@ -6,6 +6,7 @@ class Moto < Formula
   url "https://files.pythonhosted.org/packages/b8/0e/4eefbe1d41a1584e48ebd61ebdafa119a053be1e04882be4d53b00660771/moto-5.0.2.tar.gz"
   sha256 "7e27395e5c63ff9554ae14b5baa41bfe6d6b1be0e59eb02977c6ce28411246de"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     rebuild 1
