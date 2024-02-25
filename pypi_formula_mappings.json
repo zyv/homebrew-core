@@ -315,9 +315,6 @@
   "ggshield": {
     "exclude_packages": ["certifi", "cryptography"]
   },
-  "gi-docgen": {
-    "exclude_packages": ["jinja2", "markdown", "markupsafe", "pygments", "smartypants"]
-  },
   "gimme-aws-creds": {
     "package_name": "gimme-aws-creds",
     "exclude_packages": ["certifi", "cffi", "cryptography", "keyring", "six"],
