@@ -1,4 +1,6 @@
 class TranslateToolkit < Formula
+  include Language::Python::Virtualenv
+
   desc "Toolkit for localization engineers"
   homepage "https://toolkit.translatehouse.org/"
   url "https://files.pythonhosted.org/packages/32/40/2776a3356a0902cd3962031f0d4d6eae04c6f17ca1ded575435182094ceb/translate-toolkit-3.12.2.tar.gz"
@@ -16,16 +18,18 @@ class TranslateToolkit < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "010eb219237ed6d5693ef2b6abf9d26430a75b35787942a8ac4fb1d2180a8771"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-lxml"
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
+  uses_from_macos "libxml2", since: :ventura
+  uses_from_macos "libxslt"
+
+  resource "lxml" do
+    url "https://files.pythonhosted.org/packages/2b/b4/bbccb250adbee490553b6a52712c46c20ea1ba533a643f1424b27ffc6845/lxml-5.1.0.tar.gz"
+    sha256 "3eea6ed6e6c918e468e693c41ef07f3c3acc310b70ddd9cc72d9ef84bc9564ca"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
