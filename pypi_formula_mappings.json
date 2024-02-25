@@ -847,9 +847,6 @@
   "xonsh": {
     "package_name": "xonsh[ptk,pygments,proctitle]"
   },
-  "yamale": {
-    "exclude_packages": ["PyYAML"]
-  },
   "ykman": {
     "exclude_packages": ["cffi", "click", "cryptography", "keyring", "pycparser"]
   },
