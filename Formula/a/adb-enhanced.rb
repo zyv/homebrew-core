@@ -6,6 +6,7 @@ class AdbEnhanced < Formula
   url "https://files.pythonhosted.org/packages/82/11/1228620ea0c9204d6d908d8485005141ab3d71d3db71a152080439fa927d/adb-enhanced-2.5.22.tar.gz"
   sha256 "b829dcb4c9a9422735d416a62820de679bed8b08dfbff2014d46a525c39bc7d0"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     rebuild 5
