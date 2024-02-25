@@ -826,9 +826,6 @@
   "volatility": {
     "extra_packages": ["capstone", "pycryptodome", "yara-python", "jsonschema"]
   },
-  "vulture": {
-    "exclude_packages": ["toml"]
-  },
   "vunnel": {
     "exclude_packages": ["certifi"]
   },

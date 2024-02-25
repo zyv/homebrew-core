@@ -1,4 +1,6 @@
 class Vulture < Formula
+  include Language::Python::Virtualenv
+
   desc "Find dead Python code"
   homepage "https://github.com/jendrikseipp/vulture"
   url "https://files.pythonhosted.org/packages/da/70/29f296be6353598dfbbdf994f5496e6bf0776be6811c8491611a31aa15da/vulture-2.11.tar.gz"
@@ -16,16 +18,10 @@ class Vulture < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "63f6b4f4c33053e4f2e22fe9f090066beb906de180259ddec58ee6819aa7bbf5"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-toml"
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
-  end
-
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
