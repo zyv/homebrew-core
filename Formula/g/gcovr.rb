@@ -9,14 +9,13 @@ class Gcovr < Formula
   head "https://github.com/gcovr/gcovr.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d5566f0c6f14364945c835df2947db9e695335b84ab73355a62385119f3ab197"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e5a93a75d623714d4c2c50d92b81ce127594a902284f1f1c00dd664112683e80"
-    sha256 cellar: :any,                 arm64_monterey: "09ed520fa85988b5b384762d5c8390beffdce2748a888a56922888914da08689"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2bf4a88b739a1e9e339a024eec252e387a54e723e4b7104708d37a2e9f51a12b"
-    sha256 cellar: :any_skip_relocation, ventura:        "dca05368949b6c730cc9bef2c1e06cc1d80f606837e02fb398b6ab9876b30d1d"
-    sha256 cellar: :any,                 monterey:       "e450dacb2d35ca4243b61dc099371d70cb8a9c91117144a1bd2167b74a3b08f4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "204b86011ea81e0925fd6a80fa6c6c83e89dc43d8553090c690338c5ea6e8b01"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d35532fca91eb79d00b2b03828ad03a6b96c0b78493163a66bfcb86ca0df3caf"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "69b1d168bd764d4187481e5a409d023084c5d385271bbe063aec145048255f92"
+    sha256 cellar: :any,                 arm64_monterey: "922d47202e8665413b3a317db3dc28f8fcfbbabe5f883439f23da0b8f89a7592"
+    sha256 cellar: :any_skip_relocation, sonoma:         "1593ec3eb7e7b5ec38afb5e74745778bb7ed9f831102662f1e09689033bc4127"
+    sha256 cellar: :any_skip_relocation, ventura:        "e1ab7eeafd466cf860c6f546c9ec5378a7f7f3f86c6d840f5e1463ae9408fc4a"
+    sha256 cellar: :any,                 monterey:       "19d92f52aa501bb20e12c080f818a5467ceb98cc0d8ecec5622349af69db39ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81931fb1efe7029d4dc3b95d93816805c74d4f6b15946e7ffd46c4a40c6f6586"
   end
 
   depends_on "python@3.12"
