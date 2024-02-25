@@ -401,7 +401,7 @@
   },
   "jinja2-cli": "jinja2-cli[yaml,toml,xml]",
   "jrnl": {
-    "exclude_packages": ["cffi", "cryptography", "keyring", "pygments", "six"]
+    "exclude_packages": ["cryptography"]
   },
   "juju-wait": {
     "extra_packages": ["setuptools"]
