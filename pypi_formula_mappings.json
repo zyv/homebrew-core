@@ -560,9 +560,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "poetry": {
-    "exclude_packages": [
-      "certifi", "cffi", "keyring", "packaging", "pycparser", "six", "virtualenv"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "prowler": {
     "exclude_packages": ["certifi", "cryptography"]
