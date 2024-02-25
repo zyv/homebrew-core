@@ -1,4 +1,6 @@
 class Volk < Formula
+  include Language::Python::Virtualenv
+
   desc "Vector Optimized Library of Kernels"
   homepage "https://www.libvolk.org/"
   url "https://github.com/gnuradio/volk/releases/download/v3.1.2/volk-3.1.2.tar.gz"
@@ -17,25 +19,31 @@ class Volk < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "pygments"
-  depends_on "python-mako"
-  depends_on "python-markupsafe"
+  depends_on "cpu_features"
+  depends_on "orc"
   depends_on "python@3.12"
-
-  on_intel do
-    depends_on "cpu_features"
-  end
 
   fails_with gcc: "5" # https://github.com/gnuradio/volk/issues/375
 
-  # see discussions in https://github.com/gnuradio/volk/issues/745
-  patch do
-    url "https://github.com/gnuradio/volk/commit/bc59cad9dcde3865f87b71988634109bd3b6fb1c.patch?full_index=1"
-    sha256 "52476d6ee7511ead8ee396f9f1af45bcd7519a859b088418232226c770a9864a"
+  resource "mako" do
+    url "https://files.pythonhosted.org/packages/d4/1b/71434d9fa9be1ac1bc6fb5f54b9d41233be2969f16be759766208f49f072/Mako-1.3.2.tar.gz"
+    sha256 "2a0c8ad7f6274271b3bb7467dd37cf9cc6dab4bc19cb69a4ef10669402de698e"
+  end
+
+  resource "markupsafe" do
+    url "https://files.pythonhosted.org/packages/87/5b/aae44c6655f3801e81aa3eef09dbbf012431987ba564d7231722f68df02d/MarkupSafe-2.1.5.tar.gz"
+    sha256 "d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"
   end
 
   def install
-    python = "python3.12"
+    python3 = "python3.12"
+
+    venv = virtualenv_create(buildpath/"venv", python3)
+    venv.pip_install resources
+    ENV.prepend_path "PYTHONPATH", buildpath/"venv"/Language::Python.site_packages(python3)
+
+    # Avoid falling back to bundled cpu_features
+    (buildpath/"cpu_features").rmtree
 
     # Avoid references to the Homebrew shims directory
     inreplace "lib/CMakeLists.txt" do |s|
@@ -43,13 +51,10 @@ class Volk < Formula
       s.gsub! "${CMAKE_CXX_COMPILER}", ENV.cxx
     end
 
-    # cpu_features fails to build on ARM macOS.
-    args = %W[
-      -DPYTHON_EXECUTABLE=#{which(python)}
-      -DENABLE_TESTING=OFF
-      -DVOLK_CPU_FEATURES=#{Hardware::CPU.intel?}
-    ]
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DPYTHON_EXECUTABLE=#{which(python3)}",
+                    "-DENABLE_TESTING=OFF",
+                    *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
