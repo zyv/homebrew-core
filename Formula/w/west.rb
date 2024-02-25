@@ -6,7 +6,7 @@ class West < Formula
   url "https://files.pythonhosted.org/packages/ee/7a/4c69c6a1054b319421d5acf028564bb1303ea9da42032a2000021d6495ee/west-1.2.0.tar.gz"
   sha256 "b41e51ac90393944f9c01f7be27000d4b329615b7ed074fb0ef693b464681297"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/zephyrproject-rtos/west.git", branch: "main"
 
   bottle do
