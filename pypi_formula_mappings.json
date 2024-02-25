@@ -646,9 +646,6 @@
   "python-mako": {
     "exclude_packages": ["markupsafe"]
   },
-  "python-markdown-it-py": {
-    "exclude_packages": ["mdurl"]
-  },
   "python-requests": {
     "exclude_packages": ["certifi", "charset-normalizer", "idna", "urllib3"]
   },
