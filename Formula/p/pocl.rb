@@ -2,11 +2,10 @@ class Pocl < Formula
   desc "Portable Computing Language"
   homepage "http://portablecl.org"
   # TODO: Check if we can use unversioned `llvm` at version bump.
-  url "https://github.com/pocl/pocl/archive/refs/tags/v4.0.tar.gz"
-  sha256 "7f4e8ab608b3191c2b21e3f13c193f1344b40aba7738f78762f7b88f45e8ce03"
+  url "https://github.com/pocl/pocl/archive/refs/tags/v5.0.tar.gz"
+  sha256 "fd0bb6e50c2286278c11627b71177991519e1f7ab2576bd8d8742974db414549"
   license "MIT"
-  revision 1
-  head "https://github.com/pocl/pocl.git", branch: "master"
+  head "https://github.com/pocl/pocl.git", branch: "main"
 
   livecheck do
     url :stable
@@ -30,14 +29,6 @@ class Pocl < Formula
   depends_on "llvm@16"
   depends_on "opencl-icd-loader"
   uses_from_macos "python" => :build
-
-  fails_with :clang do
-    cause <<-EOS
-      .../pocl-3.1/lib/CL/devices/builtin_kernels.cc:24:10: error: expected expression
-               {BIArg("char*", "input", READ_BUF),
-               ^
-    EOS
-  end
 
   fails_with gcc: "5" # LLVM is built with GCC
 
