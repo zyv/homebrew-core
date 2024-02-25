@@ -540,9 +540,6 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["wheel"]
   },
-  "percol": {
-    "exclude_packages": ["six"]
-  },
   "pferd": {
     "exclude_packages": ["certifi"]
   },
