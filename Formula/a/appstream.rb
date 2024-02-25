@@ -1,8 +1,8 @@
 class Appstream < Formula
   desc "Tools and libraries to work with AppStream metadata"
   homepage "https://www.freedesktop.org/wiki/Distributions/AppStream/"
-  url "https://github.com/ximion/appstream/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "3a6877c887627aed515e9802f63ac7bd83fffab4c2cad33c809c692c4bd8da48"
+  url "https://github.com/ximion/appstream/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "77e271f47167ae37a68111b951c3c07e4261579e69047747044f7924c8219d14"
   license "LGPL-2.1-or-later"
 
   bottle do
