@@ -777,9 +777,6 @@
   "trailscraper": {
     "extra_packages": ["setuptools"]
   },
-  "translate-toolkit": {
-    "exclude_packages": ["lxml"]
-  },
   "trezor-agent": {
     "exclude_packages": ["certifi", "cryptography", "pillow"],
     "extra_packages": ["ledger-agent", "keepkey-agent"]
