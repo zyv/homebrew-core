@@ -714,9 +714,6 @@
   "shub": {
     "exclude_packages": ["certifi"]
   },
-  "shyaml": {
-    "exclude_packages": ["PyYAML"]
-  },
   "sickchill": {
     "exclude_packages": ["certifi", "cryptography"]
   },
