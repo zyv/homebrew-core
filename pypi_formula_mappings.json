@@ -557,9 +557,7 @@
     "extra_packages": ["wheel"]
   },
   "platformio": {
-    "exclude_packages": [
-      "certifi", "click", "packaging", "tabulate", "typing-extensions", "uvicorn"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "pocsuite3": {
     "package_name": "pocsuite3[complete]",
