@@ -802,10 +802,7 @@
     "exclude_packages": ["lxml"]
   },
   "trezor-agent": {
-    "exclude_packages": [
-      "certifi", "click", "cffi", "cryptography", "docutils", "pycparser",
-      "pillow", "six", "typing-extensions"
-    ],
+    "exclude_packages": ["certifi", "cryptography", "pillow"],
     "extra_packages": ["ledger-agent", "keepkey-agent"]
   },
   "trzsz": {
