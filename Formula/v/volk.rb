@@ -1,8 +1,8 @@
 class Volk < Formula
   desc "Vector Optimized Library of Kernels"
   homepage "https://www.libvolk.org/"
-  url "https://github.com/gnuradio/volk/releases/download/v3.1.1/volk-3.1.1.tar.gz"
-  sha256 "d8c25fad82243d69a653bb989eced8e404b12d7caec6baee16675ef9f77c27fa"
+  url "https://github.com/gnuradio/volk/releases/download/v3.1.2/volk-3.1.2.tar.gz"
+  sha256 "eded90e8a3958ee39376f17c1f9f8d4d6ad73d960b3dd98cee3f7ff9db529205"
   license "LGPL-3.0-or-later"
 
   bottle do
