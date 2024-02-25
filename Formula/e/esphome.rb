@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/8b/fb/4d0bc9455f7d26692a470bb3ed8875f962c054cd2da6886aa755c9899078/esphome-2024.2.0.tar.gz"
-  sha256 "d74db299acf08d410d0c2b1666f4026ab2e3fc1b3c1552ed0df619b11f56ab79"
+  url "https://files.pythonhosted.org/packages/c6/52/9a42b50185859c67f004eb5b9e5d64b71b4114a00396343766afc23fd828/esphome-2024.2.1.tar.gz"
+  sha256 "65fa0bf0f855bae5abb2c645c5747cc5ae006ba62f2f6b86aa98d0b78847e202"
   license "MIT"
 
   bottle do
