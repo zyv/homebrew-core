@@ -20,8 +20,13 @@ class Shyaml < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b372f564fbc35d834bce20b9ed36af9f3a5e7bab5cb4895c09425691aa44fa2"
   end
 
+  depends_on "libyaml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
 
   def install
     # Remove unneeded/broken d2to1: https://github.com/0k/shyaml/pull/67
