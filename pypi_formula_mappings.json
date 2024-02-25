@@ -429,10 +429,7 @@
     "exclude_packages": ["pillow"]
   },
   "llm": {
-    "exclude_packages": [
-      "click", "certifi", "pluggy", "Pygments", "python-dateutil", "PyYAML",
-      "setuptools", "six", "sqlite-utils", "tabulate", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "localstack": {
     "exclude_packages": ["certifi", "cryptography"]
