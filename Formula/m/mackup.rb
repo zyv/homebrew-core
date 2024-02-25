@@ -6,6 +6,7 @@ class Mackup < Formula
   url "https://files.pythonhosted.org/packages/47/98/87dfab0ae5d1abad48a56825585dcd406cdc183dbce930e24ef8439769ba/mackup-0.8.40.tar.gz"
   sha256 "d267c38719679d4bd162d7f0d0743a51b4da98a5d454d3ec7bb2f3f22e6cadaf"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/lra/mackup.git", branch: "master"
 
   bottle do
