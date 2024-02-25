@@ -858,8 +858,7 @@
     "extra_packages": ["graphviz"]
   },
   "xonsh": {
-    "package_name": "xonsh[ptk,pygments,proctitle]",
-    "exclude_packages": ["Pygments"]
+    "package_name": "xonsh[ptk,pygments,proctitle]"
   },
   "yamale": {
     "exclude_packages": ["PyYAML"]
