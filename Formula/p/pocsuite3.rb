@@ -18,16 +18,14 @@ class Pocsuite3 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e917d9185bd4f64fc945a705eb1c40582904391ee8498dcb1241dc7b3e16c11c"
   end
 
-  depends_on "cffi"
-  depends_on "pycparser"
+  depends_on "libyaml"
   depends_on "python-certifi"
   depends_on "python-cryptography"
-  depends_on "python-lxml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
-  depends_on "six"
 
   uses_from_macos "libffi"
+  uses_from_macos "libxml2", since: :ventura
+  uses_from_macos "libxslt"
 
   on_linux do
     depends_on "pkg-config" => :build
@@ -73,6 +71,21 @@ class Pocsuite3 < Formula
     sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
   end
 
+  resource "jq" do
+    url "https://files.pythonhosted.org/packages/22/50/ab53cc23eddad14a28920e95523b9f39849d9e3139836ec8fcbb7e8e3517/jq-1.6.0.tar.gz"
+    sha256 "c7711f0c913a826a00990736efa6ffc285f8ef433414516bb14b7df971d6c1ea"
+  end
+
+  resource "lxml" do
+    url "https://files.pythonhosted.org/packages/2b/b4/bbccb250adbee490553b6a52712c46c20ea1ba533a643f1424b27ffc6845/lxml-5.1.0.tar.gz"
+    sha256 "3eea6ed6e6c918e468e693c41ef07f3c3acc310b70ddd9cc72d9ef84bc9564ca"
+  end
+
+  resource "mmh3" do
+    url "https://files.pythonhosted.org/packages/63/96/aa247e82878b123468f0079ce2ac77e948315bab91ce45d2934a62e0af95/mmh3-4.1.0.tar.gz"
+    sha256 "a1cf25348b9acd229dda464a094d6170f47d2850a1fcb762a3b6172d2ce6ca4a"
+  end
+
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
     sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
@@ -88,6 +101,11 @@ class Pocsuite3 < Formula
     sha256 "7a710b79baddd65b806402e14766c721aee8fb83381769c27920f26476276c1e"
   end
 
+  resource "pyopenssl" do
+    url "https://files.pythonhosted.org/packages/eb/81/022190e5d21344f6110064f6f52bf0c3b9da86e9e5a64fc4a884856a577d/pyOpenSSL-24.0.0.tar.gz"
+    sha256 "6aa33039a93fffa4563e655b61d11364d01264be8ccb49906101e02a334530bf"
+  end
+
   resource "pysocks" do
     url "https://files.pythonhosted.org/packages/bd/11/293dd436aea955d45fc4e8a35b6ae7270f5b8e00b53cf6c024c83b657a11/PySocks-1.7.1.tar.gz"
     sha256 "3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0"
@@ -96,6 +114,11 @@ class Pocsuite3 < Formula
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
     sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   resource "requests" do
@@ -111,6 +134,11 @@ class Pocsuite3 < Formula
   resource "scapy" do
     url "https://files.pythonhosted.org/packages/67/a1/2a60d5b6f0fed297dd0c0311c887d5e8a30ba1250506585b897e5a662f4c/scapy-2.5.0.tar.gz"
     sha256 "5b260c2b754fd8d409ba83ee7aee294ecdbb2c235f9f78fe90bc11cb6e5debc2"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "termcolor" do

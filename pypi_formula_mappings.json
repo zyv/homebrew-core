@@ -574,8 +574,8 @@
     ]
   },
   "pocsuite3": {
-    "exclude_packages": ["certifi", "cffi", "cryptography", "lxml", "pycparser", "PyYAML", "six"],
-    "extra_packages": ["pyOpenSSL", "jq"]
+    "package_name": "pocsuite3[complete]",
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "poetry": {
     "exclude_packages": [
