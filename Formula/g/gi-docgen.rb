@@ -9,13 +9,14 @@ class GiDocgen < Formula
   head "https://gitlab.gnome.org/GNOME/gi-docgen.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8ffaa25a68185527d542c6bf763029ba7596c65511472cbb89d63fd4d25c8982"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ef0803489a89d5c0bc4c28062ccd034e292c7ed39845a741f6eee2e443226025"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "86c1ed75f3b0141ca6529d68bfad595d3c0c65fc83d3d90e9a4d1f236ff8d824"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2ab5eb00b893d72ca66ad946724d4d698efdd99f1a4c3463ade278c9024af644"
-    sha256 cellar: :any_skip_relocation, ventura:        "28715df65c4ce5e659d870f9c682930109ff988c00f5066ba9775e04e856c45e"
-    sha256 cellar: :any_skip_relocation, monterey:       "482c9adda5ff0f413b8dfad80c473c69707652605e30329d9ea7058b8d192e19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a371787a3b4b7258835b0203dc0ece4ce6bda83a1e18304223524437936150ae"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "986986e359d16511f87f9e124302cdaf4ada20383c9a9a5fa686c9e96c73e9a3"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8d0161100d9410cc75d8e3d09e1fc26d035a43f7c9e77bb8b839db5295c7a034"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9febe8f59581d845494d6481bfd8be96f33a879477b9597ca4cd19f778ba50af"
+    sha256 cellar: :any_skip_relocation, sonoma:         "2a33bc78dcc67ff940859c08bedecacc188ce74f54ad890078502a368a43245a"
+    sha256 cellar: :any_skip_relocation, ventura:        "1f6790bf85d2ebc937b28cb4b87c0a7dc0cada0f6bef555b799e131f6a098c7c"
+    sha256 cellar: :any_skip_relocation, monterey:       "d26aad3323d97e0fa83b4cabd152cff71ce4795754062ac166c92ef0c9044371"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8dff7c9f59078159d790d9261aae23e9bd7ebd475adba956e973b047b70dd366"
   end
 
   depends_on "python@3.12"
