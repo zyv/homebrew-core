@@ -1,4 +1,6 @@
 class SaltLint < Formula
+  include Language::Python::Virtualenv
+
   desc "Check for best practices in SaltStack"
   homepage "https://github.com/warpnet/salt-lint"
   url "https://files.pythonhosted.org/packages/e5/e9/4df64ca147c084ca1cdbea9210549758d07f4ed94ac37d1cd1c99288ef5c/salt-lint-0.9.2.tar.gz"
@@ -16,17 +18,21 @@ class SaltLint < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c078eb6a20855ba5acd4eab424ce00a363abafe2f257f0b9fc8e270ca9b0fa3"
   end
 
-  depends_on "python-setuptools" => :build
-  depends_on "python-pathspec"
+  depends_on "libyaml"
   depends_on "python@3.12"
-  depends_on "pyyaml"
 
-  def python3
-    "python3.12"
+  resource "pathspec" do
+    url "https://files.pythonhosted.org/packages/ca/bc/f35b8446f4531a7cb215605d100cd88b7ac6f44ab3fc94870c120ab3adbf/pathspec-0.12.1.tar.gz"
+    sha256 "a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712"
+  end
+
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do
