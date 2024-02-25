@@ -354,10 +354,7 @@
     "exclude_packages": ["certifi", "pyinstaller", "pyparsing"]
   },
   "hatch": {
-    "exclude_packages": [
-      "certifi", "click", "cryptography", "filelock", "hatchling", "keyring",
-      "Pygments", "virtualenv"
-    ]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "howdoi": {
     "exclude_packages": ["certifi", "cryptography"]
