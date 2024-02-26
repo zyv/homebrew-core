@@ -190,9 +190,6 @@
   "cruft": {
     "exclude_packages": ["certifi"]
   },
-  "crytic-compile": {
-    "exclude_packages": ["solc-select", "toml"]
-  },
   "cyclonedx-python": "cyclonedx-bom",
   "cycode": {
     "exclude_packages": ["certifi"]

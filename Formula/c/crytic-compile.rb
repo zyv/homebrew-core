@@ -19,20 +19,30 @@ class CryticCompile < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "b0503a4c574aaa345a77b00df4a9dab319e262ef88aec086f406aba6018e3725"
   end
 
-  depends_on "python-toml"
   depends_on "python@3.12"
-  depends_on "solc-select"
 
   resource "cbor2" do
-    url "https://files.pythonhosted.org/packages/bb/66/b09bf8421645852616044d3de9e632e1131c059f928a53bf46b1bc08e3ec/cbor2-5.6.0.tar.gz"
-    sha256 "9d94e2226f8f5792fdba5ab20e07b9bfe02e76c10c3ca126418cd4310439d002"
+    url "https://files.pythonhosted.org/packages/ca/39/0d0a29671be102bd0c717c60f9c805b46042ff98d4a63282cfaff3704b45/cbor2-5.6.2.tar.gz"
+    sha256 "b7513c2dea8868991fad7ef8899890ebcf8b199b9b4461c3c11d7ad3aef4820d"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
+    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
+  end
+
+  resource "pycryptodome" do
+    url "https://files.pythonhosted.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz"
+    sha256 "09609209ed7de61c2b560cc5c8c4fbf892f8b15b1faf7e4cbffac97db1fffda7"
+  end
+
+  resource "solc-select" do
+    url "https://files.pythonhosted.org/packages/60/a0/2a2bfbbab1d9bd4e1a24e3604c30b5d6f84219238f3c98f06191faf5d019/solc-select-1.0.4.tar.gz"
+    sha256 "db7b9de009af6de3a5416b80bbe5b6d636bf314703c016319b8c1231e248a6c7"
   end
 
   def install
     virtualenv_install_with_resources
-    site_packages = Language::Python.site_packages("python3.12")
-    solc_select = Formula["solc-select"].opt_libexec
-    (libexec/site_packages/"homebrew-solc-select.pth").write solc_select/site_packages
   end
 
   test do
