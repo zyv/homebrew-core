@@ -680,10 +680,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "search-that-hash": {
-    "exclude_packages": [
-      "certifi", "click", "commonmark", "name-that-hash", "Pygments",
-      "pyparsing", "rich", "toml", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "semgrep": {
     "package_name": "semgrep",
