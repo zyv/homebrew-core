@@ -163,7 +163,7 @@
     "exclude_packages": ["certifi"]
   },
   "cloudsplaining": {
-    "exclude_packages": ["certifi", "click", "markdown", "markupsafe", "pyyaml", "six"]
+    "exclude_packages": ["certifi"]
   },
   "codelimit": {
     "exclude_packages": ["certifi", "click", "Pygments", "typing-extensions", "six"]
