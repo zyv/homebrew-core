@@ -212,7 +212,7 @@ jobs:
               keep_if_no_match: true
 
             - label: CI-skip-recursive-dependents
-              path: Formula/.+/(ca-certificates|curl|gettext|openssl@(3|1.1)|sqlite).rb
+              path: Formula/.+/(ca-certificates|curl|gettext|openssl@3|sqlite).rb
               keep_if_no_match: true
 
             - label: CI-linux-self-hosted
