@@ -1,8 +1,8 @@
 class Sh4d0wup < Formula
   desc "Signing-key abuse and update exploitation framework"
   homepage "https://github.com/kpcyrd/sh4d0wup"
-  url "https://github.com/kpcyrd/sh4d0wup/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "5f74ad2cfc4babf0a718003e9940892250715f413efa321e0c53aedaed568f65"
+  url "https://github.com/kpcyrd/sh4d0wup/archive/refs/tags/v0.9.2.tar.gz"
+  sha256 "0c801c4c0a45453e6df62c96645220f4e1aff64ceb9ec82e5683dafb79e931ba"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -15,7 +15,7 @@ class Sh4d0wup < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6ce00ce216375ef4eef7f499ff6d0ea0639923dd3e46df43d5e661c86e2ac80"
   end
 
-  depends_on "llvm" => :build # for libclang
+  depends_on "llvm" => :build
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "pgpdump" => :test
@@ -25,6 +25,10 @@ class Sh4d0wup < Formula
   depends_on "zstd"
 
   def install
+    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
+    # libunwind due to it being present in a library search path.
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib if DevelopmentTools.clang_build_version >= 15
+
     # Ensure that the `openssl` crate picks up the intended library.
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
     ENV["OPENSSL_NO_VENDOR"] = "1"
