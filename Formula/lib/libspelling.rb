@@ -4,6 +4,7 @@ class Libspelling < Formula
   url "https://gitlab.gnome.org/chergert/libspelling/-/archive/0.2.0/libspelling-0.2.0.tar.bz2"
   sha256 "5ec7852d8e27f0dad3b1b6fcb49b1fe5d33aa74cc12d6366e2f84efec05e925c"
   license "LGPL-2.1-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_sonoma:   "7b1e4294e1d6226a6b57be78e11817c6dfec208034853b30c70f1f29c9655ab3"
