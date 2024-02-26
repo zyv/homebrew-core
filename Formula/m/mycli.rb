@@ -8,14 +8,14 @@ class Mycli < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e6dcedb30b4c5b17514f555a3d8ca3e01f30b8f4f4a4708cebc8987d760e1df0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "55ef9da00fce607b4feb3734102ed94ece28b231a162556e017d026f8e103fc7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3cca529f74fcc3495889acb3796162a47964a74e578e5c12dc8d62b7b398db15"
-    sha256 cellar: :any_skip_relocation, sonoma:         "b87c7b6dbaad38df969f89ee554517dcf824da5140756df041084e740de85a58"
-    sha256 cellar: :any_skip_relocation, ventura:        "8464103a20c6c894adfad7794ce04f4d1d94089e4c8de3a32a2849f17a6a5da3"
-    sha256 cellar: :any_skip_relocation, monterey:       "332f906e978fa29a5a7bd749943acb5b3d51387438d0fd7788fdcaa2ad38272b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "71f1cdd63d73a4f04c0c34515e17dcec4a773173346c51b6ab9907484b14005e"
+    rebuild 3
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "55839219b11a47f870256aa92f04f008567560969712106744d6dd3d82037197"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "acd1178330cddc636dedfc222eee22554ce9d887482a356c00312f5495803245"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "15cfd4b9afe0d3187fe2ad0a6fb5d721464bf98122a54d57940121473b9e9485"
+    sha256 cellar: :any_skip_relocation, sonoma:         "1aa1ee1484c24727d310ca768868d8b03dd639aeae7264909359c28ef2dbb8a6"
+    sha256 cellar: :any_skip_relocation, ventura:        "3979427a1cc50d42a84fcbffe661071fd756c55cb97d1380fca8dfe480d42a40"
+    sha256 cellar: :any_skip_relocation, monterey:       "67022c9a86635ac70f818f69da6186e762a34b804024653c851ff68ebd453aa9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf58acf194f18a49188de5e268b3947e33f2a9ac299dc4c7122fec504aaed54b"
   end
 
   depends_on "python-cryptography"
