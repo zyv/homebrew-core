@@ -23,6 +23,10 @@ class Precomp < Formula
   depends_on "cmake" => :build
 
   def install
+    # https://github.com/schnaader/precomp-cpp/pull/146
+    inreplace "contrib/liblzma/rangecoder/range_encoder.h", "#include \"price.h\"",
+      "#include \"price.h\"\n#include <assert.h>"
+
     system "cmake", ".", *std_cmake_args
     system "make"
     bin.install "precomp"
