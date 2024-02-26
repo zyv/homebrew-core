@@ -3,8 +3,8 @@ class Poetry < Formula
 
   desc "Python package management tool"
   homepage "https://python-poetry.org/"
-  url "https://files.pythonhosted.org/packages/3f/b0/344a0b72c84dc30dbecb324a34470f84724aada5bf1dab55cb22ba1525de/poetry-1.8.0.tar.gz"
-  sha256 "27676b30e17c44b836cc002bf3cf8472f01fce886bddb4987caf14aeb4663165"
+  url "https://files.pythonhosted.org/packages/91/f3/aaeffc4ac7c1637ac249cbb5bc58d5a058c71a95c3f6d03b62360dbc326a/poetry-1.8.1.tar.gz"
+  sha256 "23519cc45eb3cf48e899145bc762425a141e3afd52ecc53ec443ca635122327f"
   license "MIT"
   head "https://github.com/python-poetry/poetry.git", branch: "master"
 
