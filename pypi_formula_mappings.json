@@ -478,10 +478,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "mycli": {
-    "exclude_packages": [
-      "cffi", "click", "cryptography", "pycparser", "Pygments", "six",
-      "sqlparse", "tabulate"
-    ]
+    "exclude_packages": ["cryptography"]
   },
   "nbdime": {
     "exclude_packages": ["certifi", "jupyter-server", "nbconvert", "pyyaml", "six"]
