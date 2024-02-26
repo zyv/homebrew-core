@@ -9,6 +9,7 @@ class QtAT5 < Formula
   mirror "https://mirrors.ocf.berkeley.edu/qt/archive/qt/5.15/5.15.12/single/qt-everywhere-opensource-src-5.15.12.tar.xz"
   sha256 "93f2c0889ee2e9cdf30c170d353c3f829de5f29ba21c119167dee5995e48ccce"
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
+  revision 1
 
   livecheck do
     url "https://download.qt.io/official_releases/qt/5.15/"
