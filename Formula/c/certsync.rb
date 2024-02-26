@@ -8,13 +8,14 @@ class Certsync < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8471628c6b02b96d656fffe5740d7b078c3660323105fbe4629f7c5954381258"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a38e1077cc8ae26ad2e9db31bb2e62b83569cbe4f5d641fcc59e4608d5a2524b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "04dce6540aebd41d985b3f620b2ddb4a3c2ddfa40550f88f7038485c67e3de81"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2c8a00c5a7942677e532a880b84e264de24e04710f510fc467e68e6b3d31f004"
-    sha256 cellar: :any_skip_relocation, ventura:        "ec4d5a0dd42855b5ca34d9cc70fe8e1f290e2a219f458815e4ff3e79f8d77ca2"
-    sha256 cellar: :any_skip_relocation, monterey:       "68a25551461d8a78f62c09d9ce9c46d1c2a5027415e32e79ff301b6414d70f54"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ff1de24eba7da12dfb1d3828549b5373bfd00b8cc3a9beaa3caf67c9e6db7c2f"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5b5762ebf1ef4958a2715a09edc7e3ca3f0e0b9bdb75549cdf53bf1d1a51a706"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "57d00b93be370af96b669dee47d90107ac97f5d9a2fcad52a61360047fd22126"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "29949d4c7b3a28276800c0d7a9cad13fdf9ba069f374ce09855f6747bb6dbbeb"
+    sha256 cellar: :any_skip_relocation, sonoma:         "2011db6a82c9616e3b30dc0d8393589f920a74debc537240727ca41db3569e16"
+    sha256 cellar: :any_skip_relocation, ventura:        "80e1443ec78b2e4ccef181bdf12de21d9555c71b8069e6000372f15b851a5b00"
+    sha256 cellar: :any_skip_relocation, monterey:       "11f28ea7d5253cdd34a76d43fab50c0b3ce737e1dea571ad0ac4f6ecdbcfd5e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49de264b89d0fc16a6644f5f40502f5b49beb0002c1a1b97cc0842a798c20345"
   end
 
   depends_on "python-certifi"
