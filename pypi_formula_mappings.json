@@ -9,10 +9,7 @@
     "exclude_packages": ["certifi"]
   },
   "ansible": {
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "jinja2", "lxml", "markupsafe", "pycparser",
-      "pyparsing", "python-dateutil", "pytz", "pyyaml", "six", "packaging"
-    ],
+    "exclude_packages": ["certifi", "cryptography"],
     "extra_packages": [
       "apache-libcloud", "boto3", "dnspython", "docker",
       "junos-eznc", "jxmlease", "kerberos", "ntc-templates", "openshift",
