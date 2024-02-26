@@ -4,8 +4,8 @@
 class Mu < Formula
   desc "Tool for searching e-mail messages stored in the maildir-format"
   homepage "https://www.djcbsoftware.nl/code/mu/"
-  url "https://github.com/djcb/mu/releases/download/v1.10.8/mu-1.10.8.tar.xz"
-  sha256 "6b11d8add2a7eeb0ebc4a5c7a6b9a9b3e1be8c5175c0c1c019a7ad8d7e363589"
+  url "https://github.com/djcb/mu/releases/download/v1.12.0/mu-1.12.0.tar.xz"
+  sha256 "55072bea9fe378c14728bd0c0d199f6ed62847b0031bd908eb277c6d3621e7cd"
   license "GPL-3.0-or-later"
   head "https://github.com/djcb/mu.git", branch: "master"
 
@@ -33,23 +33,15 @@ class Mu < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "texinfo" => :build
   depends_on "gettext"
   depends_on "glib"
   depends_on "gmime"
-  depends_on "guile" # Possible opportunistic linkage. TODO: Check if this can be removed.
   depends_on "xapian"
-
-  on_system :linux, macos: :ventura_or_newer do
-    depends_on "texinfo" => :build
-  end
 
   conflicts_with "mu-repo", because: "both install `mu` binaries"
 
   fails_with gcc: "5"
-
-  # upstream bug report, https://github.com/djcb/mu/issues/2531
-  # reverts https://github.com/djcb/mu/pull/2522
-  patch :DATA
 
   def install
     system "meson", "setup", "build", "-Dlispdir=#{elisp}", *std_meson_args
@@ -97,20 +89,3 @@ class Mu < Formula
     EOS
   end
 end
-
-__END__
-diff --git a/guile/meson.build b/guile/meson.build
-index 933553c..ca051d1 100644
---- a/guile/meson.build
-+++ b/guile/meson.build
-@@ -73,9 +73,7 @@ lib_guile_mu = shared_module(
-   [ 'mu-guile.cc',
-     'mu-guile-message.cc' ],
-   dependencies: [guile_dep, glib_dep, lib_mu_dep, config_h_dep, thread_dep ],
--  install: true,
--  install_dir: guile_extension_dir
--)
-+  install: true)
-
- if makeinfo.found()
-   custom_target('mu_guile_info',
