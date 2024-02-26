@@ -110,7 +110,7 @@
   },
   "buku": {
     "package_name": "buku[server]",
-    "exclude_packages": ["certifi", "cffi", "click", "cryptography", "Jinja2", "MarkupSafe", "pycparser", "python-dateutil", "six", "urllib3"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "bzt": {
     "exclude_packages": ["certifi", "lxml", "numpy", "six", "Cython", "PyYAML", "psutil", "pytz"]
