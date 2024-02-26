@@ -1,8 +1,8 @@
 class Tfautomv < Formula
   desc "Generate Terraform moved blocks automatically for painless refactoring"
   homepage "https://tfautomv.dev/"
-  url "https://github.com/busser/tfautomv/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "e45cc34160e6ea89e41f07126174fcb5e01ec28263651dad1bf703343e9988f9"
+  url "https://github.com/busser/tfautomv/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "96f1b4ef04dca075e38ff8d5b09a9b9bd2dbf73625e25c4bbdf1757981aab778"
   license "Apache-2.0"
   head "https://github.com/busser/tfautomv.git", branch: "main"
 
