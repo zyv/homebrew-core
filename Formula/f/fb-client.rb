@@ -1,5 +1,6 @@
 class FbClient < Formula
   include Language::Python::Shebang
+  include Language::Python::Virtualenv
 
   desc "Shell-script client for https://paste.xinu.at"
   homepage "https://paste.xinu.at"
@@ -25,12 +26,15 @@ class FbClient < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "648d9e52376f1d0bceebf52a373fa82d90fa0abab0b191b56007596a73019f6e"
   end
 
-  depends_on "pkg-config" => :build
-  depends_on "python-setuptools" => :build
-  depends_on "python-pycurl"
+  depends_on "curl"
   depends_on "python@3.12"
 
   conflicts_with "spotbugs", because: "both install a `fb` binary"
+
+  resource "pycurl" do
+    url "https://files.pythonhosted.org/packages/c9/5a/e68b8abbc1102113b7839e708ba04ef4c4b8b8a6da392832bb166d09ea72/pycurl-7.45.3.tar.gz"
+    sha256 "8c2471af9079ad798e1645ec0b0d3d4223db687379d17dd36a70637449f81d6b"
+  end
 
   resource "pyxdg" do
     url "https://files.pythonhosted.org/packages/b0/25/7998cd2dec731acbd438fbf91bc619603fc5188de0a9a17699a781840452/pyxdg-0.28.tar.gz"
@@ -38,18 +42,13 @@ class FbClient < Formula
   end
 
   def install
-    python3 = "python3.12"
-    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor"/Language::Python.site_packages(python3)
-    resources.each do |r|
-      r.stage do
-        system python3, "-m", "pip", "install", *std_pip_args(prefix: libexec/"vendor"), "."
-      end
-    end
+    venv = virtualenv_create(libexec, "python3.12")
+    venv.pip_install resources
 
-    rewrite_shebang detected_python_shebang, "fb"
+    rw_info = python_shebang_rewrite_info(libexec/"bin/python")
+    rewrite_shebang rw_info, "fb"
 
     system "make", "PREFIX=#{prefix}", "install"
-    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
   end
 
   test do
