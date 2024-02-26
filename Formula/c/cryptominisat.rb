@@ -23,8 +23,6 @@ class Cryptominisat < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "python-setuptools" => :build
-  depends_on "python-toml" => :build
   depends_on "python@3.12" => [:build, :test]
   depends_on "boost"
 
@@ -41,7 +39,7 @@ class Cryptominisat < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
   end
 
   test do
