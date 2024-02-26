@@ -4,8 +4,8 @@ class MetaPackageManager < Formula
 
   desc "Wrapper around all package managers with a unifying CLI"
   homepage "https://kdeldycke.github.io/meta-package-manager/"
-  url "https://files.pythonhosted.org/packages/3a/d2/f7a361dfa7f77d5b3d902d75f52acc45cc2a6771d5b9ac490b96f72dca2d/meta_package_manager-5.14.2.tar.gz"
-  sha256 "29f89d1fe1420967096a6c4433cef3985ca3a7fae98a3c449392fb0c81ae3e16"
+  url "https://files.pythonhosted.org/packages/ea/32/a264dab7e8104720b9284c9e881eb47cd2d2ebbf8911bc08c3ec09cb49f2/meta_package_manager-5.15.0.tar.gz"
+  sha256 "ab2bf53f4e2e798a14197ba8f40d81daea638644cb11911f189b3fd07a58f821"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -54,8 +54,8 @@ class MetaPackageManager < Formula
   end
 
   resource "click-extra" do
-    url "https://files.pythonhosted.org/packages/29/02/dd79eefde09f55b68a943f65ee33522bbc1906a6e2ec83e4369b2b40eed2/click_extra-4.7.3.tar.gz"
-    sha256 "ce4bff859283fb7dc5c8da023bf286e3171ece3555dcb94809843f870d50085c"
+    url "https://files.pythonhosted.org/packages/34/11/238818a752d941fb4999d324ae462448108c8dd2bf2183ede0a2eeeb55c5/click_extra-4.7.4.tar.gz"
+    sha256 "7244e8ad8861c25472cda7d5563cd14d97306272f2335dbe335e567d50ba10fb"
   end
 
   resource "cloup" do
