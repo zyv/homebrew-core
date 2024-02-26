@@ -3,8 +3,8 @@ class Dolphie < Formula
 
   desc "Feature-rich top tool for monitoring MySQL"
   homepage "https://github.com/charles-001/dolphie"
-  url "https://files.pythonhosted.org/packages/ab/37/61ae4b07e2107c70f6756279932d82a4c243b2c8ab21b680687deeffce56/dolphie-4.2.2.tar.gz"
-  sha256 "f8727d86e885cc51d66b7afef747b43ad30000f9d7b22d232de928a667ca4c3a"
+  url "https://files.pythonhosted.org/packages/1d/e8/0db250170b3ca7750a9c8716e827de75a0c478d2203e1003a2d8f3e7e0d6/dolphie-4.3.0.tar.gz"
+  sha256 "9617c2b4d36c2d4f3ad462ebcc3b7c8e41251372627ac21ee5f8382011189329"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -93,8 +93,8 @@ class Dolphie < Formula
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/8f/d3/b97d99dbcf86d4a1d8a51d5ab021e8cc5831703ea34abaeba30e354addce/textual-0.49.0.tar.gz"
-    sha256 "a66f981bde8f64c5cbb524d029946136d85602e82b595f4f5793f7bdc2e965b7"
+    url "https://files.pythonhosted.org/packages/bb/ce/b224ccc05260871da8df640e7cd8ca0a5e38721fddb6733650195402841e/textual-0.52.1.tar.gz"
+    sha256 "4232e5c2b423ed7c63baaeb6030355e14e1de1b9df096c9655b68a1e60e4de5f"
   end
 
   resource "textual-autocomplete" do
@@ -103,8 +103,8 @@ class Dolphie < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
-    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
+    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
+    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
   end
 
   resource "uc-micro-py" do
