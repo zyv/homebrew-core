@@ -126,7 +126,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "certsync": {
-    "exclude_packages": ["certifi", "cffi", "click", "cryptography", "markupsafe", "pycparser", "six"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "cf2tf": {
     "exclude_packages": ["certifi"]
