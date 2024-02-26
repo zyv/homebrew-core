@@ -2,8 +2,8 @@ class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
   # Use the `-full` tarball to avoid having to download during the build.
-  url "https://github.com/JuliaLang/julia/releases/download/v1.10.1/julia-1.10.1-full.tar.gz"
-  sha256 "6ba58b55fc56e7d7cb854d5f3c7b8cfb6a209850d82ef74cdf76878d841612a4"
+  url "https://github.com/JuliaLang/julia/releases/download/v1.10.2/julia-1.10.2-full.tar.gz"
+  sha256 "62468720afbc410eb4f262ed2433a92132627872c9f690b704dc045ccb155401"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
   head "https://github.com/JuliaLang/julia.git", branch: "master"
 
@@ -91,24 +91,25 @@ class Julia < Formula
     args << "MACOSX_VERSION_MIN=#{MacOS.version}" if OS.mac?
 
     # Set MARCH and JULIA_CPU_TARGET to ensure Julia works on machines we distribute to.
-    # Values adapted from https://github.com/JuliaCI/julia-buildbot/blob/master/master/inventory.py,
+    # Values adapted from https://github.com/JuliaCI/julia-buildkite/blob/main/utilities/build_envs.sh,
     # then extended.
     args << "MARCH=#{Hardware.oldest_cpu}" if Hardware::CPU.intel?
 
     cpu_targets = %w[generic]
     if Hardware::CPU.arm?
-      # Cortex A57, Thunder-X2, Nvidia Carmel,
-      # Neoverse V1/V2, Cortex A510/A710/A715/X2/X3
+      # Cortex A57, Thunder-X2, Nvidia Carmel, Neoverse V1/V2,
+      # Cortex A510/A710/A715/X2/X3
       if OS.linux?
-        cpu_targets += %w[cortex-a57,base(0) thunderx2t99,base(0) armv8.2-a,crypto,fullfp16,lse,rdm,base(1)
-                          neoverse-512tvb,base(3) armv8.5-a,sve2,sve2-bitperm,i8mm,bf16,base(4)]
+        cpu_targets += %w[cortex-a57 thunderx2t99 carmel,clone_all neoverse-512tvb,base(3)
+                          armv8.5-a,sve2,sve2-bitperm,i8mm,bf16,base(3)]
       end
       cpu_targets += %w[apple-m1,clone_all]
     end
     if Hardware::CPU.intel?
-      cpu_targets += ["#{Hardware.oldest_cpu},clone_all"]
-      cpu_targets += %w[sandybridge,-xsaveopt,base(1) haswell,-rdrnd,base(1) skylake,base(1)]
-      cpu_targets += %w[alderlake,base(4) sapphirerapids,base(4) znver4,base(4)] if OS.linux?
+      cpu_targets += ["#{Hardware.oldest_cpu},aes,clone_all"]
+      cpu_targets += %w[sandybridge,-xsaveopt,base(1) haswell,-rdrnd,base(1)
+                        skylake,-rdrnd,clone_all]
+      cpu_targets += %w[x86-64-v4,-rdrnd,base(4)] if OS.linux?
     end
     args << "JULIA_CPU_TARGET=#{cpu_targets.join(";")}"
     user = begin
