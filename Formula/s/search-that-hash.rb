@@ -118,10 +118,6 @@ class SearchThatHash < Formula
     sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
-  def python3
-    "python3.12"
-  end
-
   def install
     # Switch build-system to poetry-core to avoid rust dependency on Linux.
     # Remove when merged/released: https://github.com/HashPals/Search-That-Hash/pull/184
@@ -129,10 +125,6 @@ class SearchThatHash < Formula
     inreplace "pyproject.toml", 'build-backend = "poetry.masonry.api"', 'build-backend = "poetry.core.masonry.api"'
 
     virtualenv_install_with_resources
-
-    site_packages = Language::Python.site_packages(python3)
-    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-    (prefix/site_packages/"homebrew-search_that_hash.pth").write pth_contents
   end
 
   test do
@@ -140,7 +132,5 @@ class SearchThatHash < Formula
     output = shell_output("#{bin}/sth --text #{hash}")
     assert_match "#{hash}\n", output
     assert_match "Text : password\nType : MD5\n", output
-
-    system python3, "-c", "from search_that_hash import api"
   end
 end
