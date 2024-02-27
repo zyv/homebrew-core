@@ -1,8 +1,8 @@
 class Libbsd < Formula
   desc "Utility functions from BSD systems"
   homepage "https://libbsd.freedesktop.org/"
-  url "https://libbsd.freedesktop.org/releases/libbsd-0.11.8.tar.xz"
-  sha256 "55fdfa2696fb4d55a592fa9ad14a9df897c7b0008ddb3b30c419914841f85f33"
+  url "https://libbsd.freedesktop.org/releases/libbsd-0.12.0.tar.xz"
+  sha256 "f741a3bc75162ba19f2f6666076a7961cd75dc93c234e9be4594da1e6f848cfb"
   license "BSD-3-Clause"
 
   livecheck do
