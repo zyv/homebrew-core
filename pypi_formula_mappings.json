@@ -182,7 +182,7 @@
     "exclude_packages": ["certifi"]
   },
   "credstash": {
-    "exclude_packages": ["cffi", "cryptography", "pycparser", "six"]
+    "exclude_packages": ["cryptography"]
   },
   "cruft": {
     "exclude_packages": ["certifi"]
