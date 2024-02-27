@@ -10,13 +10,14 @@ class Credstash < Formula
   head "https://github.com/fugue/credstash.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d02c61285d4d857d8876273c23711aabc066492fca692763eed3912a1f697ca8"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6b138f35a1eb341186dd6dc41c2b1540039dc518bca8e5d8c3d577ee15364b7e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "372cc126899ab73e28ee0ccefb7721ec1e450535f9533c896b8b3ff211a4314b"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f73d4bd50d29a0994bbd04d77071f435bb26bdd87ddaa6c1110bc9b37ba5f43b"
-    sha256 cellar: :any_skip_relocation, ventura:        "9b33377f180d5f5feb8468f613941c3a3d56e841c1dca8830719cc19339c2380"
-    sha256 cellar: :any_skip_relocation, monterey:       "1824bdc223addab4fb427d95bb216749c1289123fd39a2ecf9640faa76a7a6a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8f89c12787051c8f50e274981484d7e5632ac128612c3be813958d2d5ce58c4"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "580e1ab92587f434de9ab6919e5a1f3b5157dada866c874209dfd5793d539695"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f9d6ac074cdf858ddad834f040396d2a3f27f330ce5366d6d656dd59a07b5d09"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a77fa7f16ccbdedef39fcf492a8d41eb681b6fdc12912bf2decedf9e56d6067e"
+    sha256 cellar: :any_skip_relocation, sonoma:         "1a2891381f0842f997e9e76e6b6c7d7b66525e520c1f8e25f0b90a8d895e15fa"
+    sha256 cellar: :any_skip_relocation, ventura:        "5514de528c11cd086bc0d6cf427c0252d18cab00372d9877dfd942599dee19f4"
+    sha256 cellar: :any_skip_relocation, monterey:       "a640a6cb1cb658eb3d7558390d965d80f03afd2ded2cf3c4e9db7859f356348d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "862e054287f07b02d9fdaac6ed7722cf33a5ad27d68f6d0408df473eb6bc4be3"
   end
 
   depends_on "python-cryptography"
