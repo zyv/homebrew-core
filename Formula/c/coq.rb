@@ -13,13 +13,13 @@ class Coq < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "709a6613c6569951c7889dc2103c6d1c7c036b6dacdb2608b63ef9779a9a0cde"
-    sha256 arm64_ventura:  "27bd72f63d9dd93aa9d1557a00ad2bbfa0e6b282f6d2f87d67d5dab884f03648"
-    sha256 arm64_monterey: "79e5142487fe49356360877cf51bdaf26a0165439d266a06da219f75849326d9"
-    sha256 sonoma:         "384adbfe9bc3d85e053e95872d93ed34715d9918c0338d3be879bd736263f54f"
-    sha256 ventura:        "a5ba5b159aa6171568a73745fab0c0e8f8904c5c3b3c30aa3db5185ce23a6cee"
-    sha256 monterey:       "a5d4ae60a2042c4d28bf0e9b85ca8b7be99e8ece75a252315d556facae44d52e"
-    sha256 x86_64_linux:   "9354a56b2c31bbbcf55952dc52a1e959b429d7ae0d5d168cdd8d76a1487c2d21"
+    sha256 arm64_sonoma:   "7f13ef92eeff6e21d81bbed374013088f38246d9450bc8634d2b243736c0146c"
+    sha256 arm64_ventura:  "aa0333fdf567061b8e610f4adb7fe7e893e344c4488dc17a86009c7716f7a617"
+    sha256 arm64_monterey: "d338d4f1236f9373f1365fc2ce71fe22dcd695e2b4f521d9339e4955ec06906e"
+    sha256 sonoma:         "3fe57eb1deebee70fe6d3b5e24a7aacf60d90c7a7941db292e70a1611ce0236e"
+    sha256 ventura:        "b62c26db868ad4cc07b48fb8be5b1abc0cf7534e7758cdd9959f5c43c105f343"
+    sha256 monterey:       "96ce2e5bde5e1b56f5e90b7a71ed68600d57004baabb8c541a6b2d28756be9a4"
+    sha256 x86_64_linux:   "0a3e56daf611ef10e0904a4d3960a2653ebbd1fbef064a3f1514d5efb5f19269"
   end
 
   depends_on "dune" => :build
