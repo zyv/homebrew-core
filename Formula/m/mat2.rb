@@ -6,6 +6,7 @@ class Mat2 < Formula
   url "https://files.pythonhosted.org/packages/d5/e4/f02d057fe6cf32b68e402c5f86276244105da40161e84ef785b2ae0bf809/mat2-0.13.4.tar.gz"
   sha256 "744aeee924c9898a397fe930593b803c540389bf39cd24553b99a89acc2f5901"
   license "LGPL-3.0-or-later"
+  revision 1
 
   bottle do
     rebuild 2
