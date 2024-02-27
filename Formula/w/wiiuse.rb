@@ -16,6 +16,10 @@ class Wiiuse < Formula
 
   depends_on "cmake" => :build
 
+  on_linux do
+    depends_on "bluez"
+  end
+
   def install
     args = %w[
       -DBUILD_EXAMPLE=NO
