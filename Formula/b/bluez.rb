@@ -6,7 +6,8 @@ class Bluez < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "98a7809b56b565da1e22391dbb49f1ec2fe2562d1d9f753917686bf4003842a3"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "58a82a368570192171ed97f00f4647950824ab947ccc6f12a1f88711eb58ccc7"
   end
 
   depends_on "pkg-config" => :build
@@ -17,7 +18,7 @@ class Bluez < Formula
   depends_on "systemd" # for libudev
 
   def install
-    system "./configure", *std_configure_args, "--disable-testing", "--disable-manpages"
+    system "./configure", "--disable-testing", "--disable-manpages", "--enable-library", *std_configure_args
     system "make"
     system "make", "install"
   end
