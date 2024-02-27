@@ -47,16 +47,8 @@ class NameThatHash < Formula
     sha256 "5cb5123b5cf9ee70584244246816e9114227e0b98ad9176eede6ad54bf5403fa"
   end
 
-  def python3
-    "python3.12"
-  end
-
   def install
     virtualenv_install_with_resources
-
-    site_packages = Language::Python.site_packages(python3)
-    pth_contents = "import site; site.addsitedir('#{libexec/site_packages}')\n"
-    (prefix/site_packages/"homebrew-name_that_hash.pth").write pth_contents
   end
 
   test do
@@ -64,7 +56,5 @@ class NameThatHash < Formula
     output = shell_output("#{bin}/nth --text #{hash}")
     assert_match "#{hash}\n", output
     assert_match "MD5, HC: 0 JtR: raw-md5 Summary: Used for Linux Shadow files.\n", output
-
-    system python3, "-c", "from name_that_hash import runner"
   end
 end
