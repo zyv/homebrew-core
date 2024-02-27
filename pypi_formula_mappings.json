@@ -95,9 +95,7 @@
     "exclude_packages": ["numpy", "pillow"],
     "extra_packages": ["capstone", "gnupg", "matplotlib", "pycryptodome"]
   },
-  "black": {
-    "package_name": "black[d]"
-  },
+  "black": "black[d]",
   "borgmatic": {
     "extra_packages": ["ruamel.yaml.clib"],
     "exclude_packages": ["certifi"]
@@ -200,9 +198,7 @@
   "detect-secrets": {
     "exclude_packages": ["certifi"]
   },
-  "diffoscope": {
-    "package_name": "diffoscope[cmdline]"
-  },
+  "diffoscope": "diffoscope[cmdline]",
   "dnsrobocert": {
     "exclude_packages": ["certifi", "cryptography"]
   },
@@ -479,9 +475,7 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["setuptools"]
   },
-  "nvchecker": {
-    "package_name": "nvchecker[pypi]"
-  },
+  "nvchecker": "nvchecker[pypi]",
   "oci-cli": {
     "exclude_packages": ["certifi", "cryptography"]
   },
@@ -812,9 +806,7 @@
   "xdot": {
     "extra_packages": ["graphviz"]
   },
-  "xonsh": {
-    "package_name": "xonsh[ptk,pygments,proctitle]"
-  },
+  "xonsh": "xonsh[ptk,pygments,proctitle]",
   "ykman": {
     "exclude_packages": ["cffi", "click", "cryptography", "keyring", "pycparser"]
   },
