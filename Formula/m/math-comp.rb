@@ -7,13 +7,13 @@ class MathComp < Formula
   head "https://github.com/math-comp/math-comp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cf9910e17e82f0da672a0ab92f12291f36fd3dc39b43321f34d37017fbdca828"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "59f6e0cae487a24cba303a7e513d8ebba1d639fe34013d935206f66cc86616c3"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "832f1814f6ecb2c9477e0551fa184e711d61dd6e4165218ca205fb190c8109a8"
-    sha256 cellar: :any_skip_relocation, sonoma:         "d48a062a31d521a6f9bbc821b101cf7c194116bc168d3e4d99f0487842b3304a"
-    sha256 cellar: :any_skip_relocation, ventura:        "d6528d8f8c3b631ebe20afaf72c33bd879abde7bef5f988237a0bd90c21c7f8c"
-    sha256 cellar: :any_skip_relocation, monterey:       "6849eebc16e35a589a9ef05988c858faaf2d3a35217e9a1b219f3d8f2605e630"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "03d1f37344e58080999eb20598ad651910a325d998821b254792ec204383b129"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "66379c29b12dc6f562e9585acbeb4142bee6db14d83fcc527893bc58c6211c84"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "58fd08d2af21352002fb658f616a2c8d0f988d4406df69657f45b50ff3674c2f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "797de6bb4bbea997cf414016713da50500eec597a02bf67435790459ad42d2bb"
+    sha256 cellar: :any_skip_relocation, sonoma:         "1c53ebdc42550b17ae344a716831ca21bc2fb1b08f4ee64f709d2f659d865e6d"
+    sha256 cellar: :any_skip_relocation, ventura:        "1191f9038fc3cc50464f67c2e952f72246eb0e1b96326cacc8cfb0887d964869"
+    sha256 cellar: :any_skip_relocation, monterey:       "c861c3eee22ed6e5b01ed97255157a8a66f0bb226a953feedd024d4a3167faea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16c1184a7077b4595c361bcf6fa89f5f008923636f72a47fb8b145df3faa57d1"
   end
 
   depends_on "ocaml" => :build
