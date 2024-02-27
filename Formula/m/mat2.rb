@@ -1,4 +1,6 @@
 class Mat2 < Formula
+  include Language::Python::Virtualenv
+
   desc "Metadata anonymization toolkit"
   homepage "https://0xacab.org/jvoisin/mat2"
   url "https://files.pythonhosted.org/packages/d5/e4/f02d057fe6cf32b68e402c5f86276244105da40161e84ef785b2ae0bf809/mat2-0.13.4.tar.gz"
@@ -23,8 +25,12 @@ class Mat2 < Formula
   depends_on "poppler"
   depends_on "py3cairo"
   depends_on "pygobject3"
-  depends_on "python-mutagen"
   depends_on "python@3.12"
+
+  resource "mutagen" do
+    url "https://files.pythonhosted.org/packages/81/e6/64bc71b74eef4b68e61eb921dcf72dabd9e4ec4af1e11891bbd312ccbb77/mutagen-1.47.0.tar.gz"
+    sha256 "719fadef0a978c31b4cf3c956261b3c58b6948b32023078a2117b1de09f0fc99"
+  end
 
   # patch man1 file layout, remove in next release
   # https://0xacab.org/jvoisin/mat2/-/merge_requests/111
@@ -33,12 +39,8 @@ class Mat2 < Formula
     sha256 "4c1c57ca8fe1eabea41d66f3ef9bd4eb2bac8ac181fceeefece4b92b5be9658d"
   end
 
-  def python3
-    which("python3.12")
-  end
-
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
   end
 
   test do

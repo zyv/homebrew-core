@@ -442,6 +442,9 @@
     "exclude_packages": ["certifi", "pillow"],
     "extra_packages": ["pyproj"]
   },
+  "mat2": {
+    "exclude_packages": ["pygobject"]
+  },
   "mathlibtools": {
     "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser", "PyYAML"]
   },
