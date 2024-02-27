@@ -4,6 +4,7 @@ class F3d < Formula
   url "https://github.com/f3d-app/f3d/archive/refs/tags/v2.3.0.tar.gz"
   sha256 "9c2906b62f3066f075effbabd6501964391e8a8ffad6ed773c33db12580cc466"
   license "BSD-3-Clause"
+  revision 1
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
   # labeled as "pre-release" on GitHub before the version is released, so it's
@@ -29,6 +30,12 @@ class F3d < Formula
   depends_on "assimp"
   depends_on "opencascade"
   depends_on "vtk"
+
+  # Upstream fix for https://github.com/f3d-app/f3d/issues/1087
+  patch do
+    url "https://github.com/f3d-app/f3d/commit/a5ecb6bd.patch?full_index=1"
+    sha256 "62856957da64bdf56243c11573b79a624979d9952f64c613c7fe8d5f0ab484dc"
+  end
 
   def install
     args = %W[
