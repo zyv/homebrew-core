@@ -8,6 +8,16 @@ class PassImport < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/roddhjav/pass-import.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "490ac99e17f182fcd233b72bafcdde38ff4d7123d466a61d1909925c2a9e7d89"
+    sha256 cellar: :any,                 arm64_ventura:  "38fc66c3299ecd2966773195a182dbc22395b2f91d62590d83ec153e2ef03946"
+    sha256 cellar: :any,                 arm64_monterey: "1a0d87d58448c8945bd23c1b7a56f2afdfd91a35b94d18112f755ca6a06ec1a8"
+    sha256 cellar: :any,                 sonoma:         "1a5db64090bc6e37ce6f672406778e6e3a43b1ca3c98cdbb48f400949cf7774e"
+    sha256 cellar: :any,                 ventura:        "0b82daec994db8a7eeeebd1b2e27f0ee619d5dbeb911b6acc9e2d63a1befc1d7"
+    sha256 cellar: :any,                 monterey:       "627a0f30024e874e8dca96f1b8e3766fa27060124fe462c3a4ce655e8f12bb42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7aab526c1f56101cf9198009a8360c6a99fedb048d9c88091cc38da15e25fc9f"
+  end
+
   depends_on "libyaml"
   depends_on "python-certifi"
   depends_on "python@3.12"
