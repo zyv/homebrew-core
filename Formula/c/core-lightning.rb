@@ -1,8 +1,8 @@
 class CoreLightning < Formula
   desc "Lightning Network implementation focusing on spec compliance and performance"
   homepage "https://github.com/ElementsProject/lightning"
-  url "https://github.com/ElementsProject/lightning/releases/download/v23.11.2/clightning-v23.11.2.zip"
-  sha256 "9f5fbd438f7737f379b2beec569ce139bb5b2a911e8ec35452185b60fba4bde8"
+  url "https://github.com/ElementsProject/lightning/releases/download/v24.02/clightning-v24.02.zip"
+  sha256 "86e77a354d9aa4024d7f67a9364fb79f04d4991cb90df34e6221a9e34d87e229"
   license "MIT"
 
   livecheck do
