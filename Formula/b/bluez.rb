@@ -5,6 +5,10 @@ class Bluez < Formula
   sha256 "499d7fa345a996c1bb650f5c6749e1d929111fa6ece0be0e98687fee6124536e"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "98a7809b56b565da1e22391dbb49f1ec2fe2562d1d9f753917686bf4003842a3"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "dbus"
   depends_on "glib"
