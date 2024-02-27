@@ -139,11 +139,8 @@
     "extra_packages": ["pip==22.3.1", "wheel"]
   },
   "charmcraft": {
-    "extra_packages": ["appdirs", "pydantic"],
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "keyring", "pycparser", "PyYAML",
-      "pytz", "six", "tabulate", "typing-extensions", "packaging"
-    ]
+    "extra_packages": ["appdirs", "keyring", "pydantic"],
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "chatblade": {
     "exclude_packages": ["certifi"]
@@ -560,9 +557,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "poetry": {
-    "exclude_packages": [
-      "certifi", "cffi", "keyring", "packaging", "pycparser", "six", "virtualenv"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "prowler": {
     "exclude_packages": ["certifi", "cryptography"]
