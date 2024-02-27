@@ -8,13 +8,14 @@ class Keyring < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "036f54c565a93f9f0b909b69cd45ff1f72dfe81cc2876960d6a3fd905982d1f4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4613f7464bdbb9f507d0ad52d856ac09867053f54db651b82a6e3f60e83376df"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b59e21e3fc9edce1dc5aec35ccdef53d84e9afba9a5d02e76eade3aac190878c"
-    sha256 cellar: :any_skip_relocation, sonoma:         "179dbca134482ef6704d5659448e5a94cf020b5b5524b2bcd49c6b953889bfdd"
-    sha256 cellar: :any_skip_relocation, ventura:        "8744251e993d35ad520223cb0ef42c1c17e08c05c2f9eb478064dac88d8b3be3"
-    sha256 cellar: :any_skip_relocation, monterey:       "6e4abd8454ae73eb8589945406fa20ae7ef6fae82d683a440f018b154c29f13f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8a1500909e30e1a614a4a4127a53ea0503482d534a2bf28e0370803d6618192"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d08b487a5a1172b44b65495bf9a99e1e56d89f29755dfdb0a912ea38fefba5ce"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a47b6d3942a8df2bd420f63a2f6c9c3977ff8eb17a25082dc765dc698a8280f6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "46a7321e4041d80a087470009c21b37e5a637ce0c899366de395f6d09328c451"
+    sha256 cellar: :any_skip_relocation, sonoma:         "2a9a23bbf942cd409f3b059820e20b205a9fe671f84fdb625414d28a5df69a8a"
+    sha256 cellar: :any_skip_relocation, ventura:        "9f389493905aef2527302f04b3ceb84204ba36856994d542c99e740288e1330d"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa654c84b3afb735b167b7e136c9280880edb73e0a89b8a93ed32ae143fccaa8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1810591f26ae54391a5f7d117b6764b6d2fc393f5f503280c07bcb7c6789551b"
   end
 
   depends_on "python@3.12"
