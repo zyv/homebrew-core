@@ -17,7 +17,7 @@ class Bluez < Formula
   depends_on "systemd" # for libudev
 
   def install
-    system "./configure", *std_configure_args, "--disable-testing", "--disable-manpages"
+    system "./configure", "--disable-testing", "--disable-manpages", "--enable-library", *std_configure_args
     system "make"
     system "make", "install"
   end
