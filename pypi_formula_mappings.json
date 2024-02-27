@@ -136,11 +136,8 @@
     "extra_packages": ["pip==22.3.1", "wheel"]
   },
   "charmcraft": {
-    "extra_packages": ["appdirs", "pydantic"],
-    "exclude_packages": [
-      "certifi", "cffi", "cryptography", "keyring", "pycparser", "PyYAML",
-      "pytz", "six", "tabulate", "typing-extensions", "packaging"
-    ]
+    "extra_packages": ["appdirs", "keyring", "pydantic"],
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "chatblade": {
     "exclude_packages": ["certifi"]
