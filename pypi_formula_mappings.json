@@ -808,7 +808,8 @@
   },
   "xonsh": "xonsh[ptk,pygments,proctitle]",
   "ykman": {
-    "exclude_packages": ["cffi", "click", "cryptography", "keyring", "pycparser"]
+    "exclude_packages": ["cryptography"],
+    "extra_packages": ["jeepney", "secretstorage"]
   },
   "yle-dl": {
     "exclude_packages": ["certifi"]
