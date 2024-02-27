@@ -1,8 +1,8 @@
 class Mqttui < Formula
   desc "Subscribe to a MQTT Topic or publish something quickly from the terminal"
   homepage "https://github.com/EdJoPaTo/mqttui"
-  url "https://github.com/EdJoPaTo/mqttui/archive/refs/tags/v0.19.0.tar.gz"
-  sha256 "76d39f14920eb1cf1a65239f1e54c840f20b35c2be96f074819be5175427a7e7"
+  url "https://github.com/EdJoPaTo/mqttui/archive/refs/tags/v0.20.0.tar.gz"
+  sha256 "f6b625ae76fcabb4b3c31b8b0302debc4df4d34934da6152dcc6f8d26a17a57d"
   license "GPL-3.0-or-later"
 
   bottle do
