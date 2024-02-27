@@ -7,7 +7,7 @@ class FbClient < Formula
   url "https://paste.xinu.at/data/client/fb-2.3.0.tar.gz"
   sha256 "1164eca06eeacb4210d462c4baf1c4004272a6197d873d61166e7793539d1983"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
   head "https://git.server-speed.net/users/flo/fb", using: :git, branch: "master"
 
   livecheck do
