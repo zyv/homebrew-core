@@ -6,15 +6,13 @@ class Mqttui < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5bd6ff528221a513feb78382cbbe148c460c51f460e195a4c0d4f220fc014e0d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e9fe6bb6a5753349aecc5cc9de4417502ac4a657eb4a97d3c1ca161ae1c7dfd3"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "992bd414eb11c5e87b9df377c7764b988f859635639274327f97a658196afbda"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "549bee00ce591da8f9ffa26555f41edc109f542429c4fa33319a7049f1a51dd1"
-    sha256 cellar: :any_skip_relocation, sonoma:         "383153a910998cd36d91361bbd0cdb1fd6aff62d94ddb89e6b798565dc5ebaac"
-    sha256 cellar: :any_skip_relocation, ventura:        "e1b637bda078e18ab98ee9ab126d36908797370ddb6d2303c4e44084cbae0e41"
-    sha256 cellar: :any_skip_relocation, monterey:       "415c21b31f21aa9373e0ce1ac136f77a94289209cf14e1a3f4565a2364dccec9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "e8ab86d2f5ddd55fcc8dff7b9b51e584859e43c78b10a8623f893aebec822e3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89c18d14925c763052ce84b59f259a947856a73dfd70337c30f1cdfde8ae42dc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dc1ecf38a0c15a40acce2ff5f24dddecddf31b5aa2d3b332efaaef184fa63e5b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "61f13c60faa0c57f90afb40e151c42c6fa843e326df82b43665d2716c3847377"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "18ff367e6981866441b190892f88a25bd80efe3d87716ef6b2e4f946c7e5b49d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "c65308fee148c4a903e4c1e09d9fdc1e8900f85d2497ee807649f4f8158aac61"
+    sha256 cellar: :any_skip_relocation, ventura:        "7be13e1176425e4674e415bddeb26005223c05aa59bbef4432b079182421b702"
+    sha256 cellar: :any_skip_relocation, monterey:       "7b0b60ec724574c87292b3e3a039867bafaf9db4a24fc2a8df30448f3594d0f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6759e1023e380f6806be749913a65fcc97c19fb0e45323551ee20f3c36a3f27"
   end
 
   depends_on "rust" => :build
