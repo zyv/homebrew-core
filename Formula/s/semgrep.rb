@@ -226,12 +226,9 @@ class Semgrep < Formula
     end
 
     ENV["SEMGREP_SKIP_BIN"] = "1"
-    python_path = "cli"
-    cd python_path do
-      venv = virtualenv_create(libexec, Formula["python@3.11"].bin/"python3.11")
-      venv.pip_install resources.reject { |r| r.name == "ocaml-tree-sitter" }
-      venv.pip_install_and_link buildpath/python_path
-    end
+    venv = virtualenv_create(libexec, "python3.11")
+    venv.pip_install resources
+    venv.pip_install_and_link buildpath/"cli"
 
     generate_completions_from_executable(bin/"semgrep", shells: [:fish, :zsh], shell_parameter_format: :click)
   end
