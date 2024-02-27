@@ -10,13 +10,13 @@ class AwsGoogleAuth < Formula
   head "https://github.com/cevoaustralia/aws-google-auth.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cab988a28c7f4b89345c94e14817edce836d857c1c8b2626648ba628b79d28a2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f6600562da29af345ac983454c838c37263cfe6061aa59b2be95062704e974d7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e55b85436c2ef4bd7a15775d20723242e9fe82f546e56dad98489d4dd7d462df"
-    sha256 cellar: :any_skip_relocation, sonoma:         "da8e029980da2e1eec5b2025c16a9306c5671e3bc26d4c8fb303b43ef1969dec"
-    sha256 cellar: :any_skip_relocation, ventura:        "28818f276d339655e71fddcab24d87ef321d574715cf5fde5b54dac899d6643b"
-    sha256 cellar: :any_skip_relocation, monterey:       "69837678c48131b581457e65649bd10b9325601660731cfe1610a527eed166e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e9b02955f390c24d9eddb0587169c8d6f5e95b6402e028ccdc3701c3011feb8a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4664b8792aefe5eaed48d74509c1b02a73fe30da92d315f701d40814d6c1ec52"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "16a68508adfa0c08903b2edbb87b1c743be219b7cb7683ffbac27aa8f28dc782"
+    sha256 cellar: :any,                 arm64_monterey: "f5023187addf91a13c9d11365bf609f92276d5210df64c57964b0a982723e336"
+    sha256 cellar: :any_skip_relocation, sonoma:         "afd28a00f1c3ec01867d3d42b1a8163b4a2d34da63facab211b59c7fa31ffbb2"
+    sha256 cellar: :any_skip_relocation, ventura:        "1d078b1e597737c472210e65dfd042999303b9b4e45749d5b6f201ddd8426ca0"
+    sha256 cellar: :any,                 monterey:       "07fff2078418a71420eab103f4e4ab43de38d46fce2e5441e8ec31dca18396a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f98f7060a9106d76e50c579df000f69501cc0f18845e258177355ffbad237380"
   end
 
   depends_on "pillow"
