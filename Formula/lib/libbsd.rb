@@ -11,7 +11,7 @@ class Libbsd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c5b54c2fe0275d2fd97145ca6f5f772c4a46da02cc9b212835a6c7d8a528e009"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "aaf6688e821cb7bd671ccf9c5a7dcdd1b20d9e26e7d746ea9214af6ba7060156"
   end
 
   depends_on "libmd"
