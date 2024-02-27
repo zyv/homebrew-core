@@ -6,6 +6,7 @@ class Nvchecker < Formula
   url "https://files.pythonhosted.org/packages/0b/e2/1d749d02d1625529571cc01aad4e3e23d834fbe58bfca1a2bf3bb86a8b65/nvchecker-2.13.1.tar.gz"
   sha256 "50594215ebf23f12795886f424b963b3e6fab26407a4f9afc111df4498304ee3"
   license "MIT"
+  revision 1
 
   bottle do
     rebuild 1
