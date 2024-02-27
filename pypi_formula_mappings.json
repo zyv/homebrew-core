@@ -513,6 +513,9 @@
   "parliament": {
     "extra_packages": ["setuptools"]
   },
+  "pass-import": {
+    "exclude_packages": ["certifi"]
+  },
   "pdm": {
     "exclude_packages": ["certifi"],
     "extra_packages": ["wheel"]
