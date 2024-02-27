@@ -32,7 +32,7 @@ class LlvmAT15 < Formula
   # We intentionally use Make instead of Ninja.
   # See: Homebrew/homebrew-core/issues/35513
   depends_on "cmake" => :build
-  depends_on "python@3.11" => :build
+  depends_on "python@3.12" => :build
   depends_on "zstd"
 
   uses_from_macos "python" => :test
@@ -51,7 +51,7 @@ class LlvmAT15 < Formula
   fails_with gcc: "5"
 
   def install
-    python3 = "python3.11"
+    python3 = "python3.12"
 
     # The clang bindings need a little help finding our libclang.
     inreplace "clang/bindings/python/clang/cindex.py",
