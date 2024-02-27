@@ -731,9 +731,6 @@
   "terminator": {
     "exclude_packages": ["psutil"]
   },
-  "texttest": {
-    "exclude_packages": ["psutil"]
-  },
   "theharvester": {
     "exclude_packages": ["certifi"]
   },
