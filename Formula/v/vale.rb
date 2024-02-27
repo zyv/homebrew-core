@@ -1,8 +1,8 @@
 class Vale < Formula
   desc "Syntax-aware linter for prose"
   homepage "https://vale.sh/"
-  url "https://github.com/errata-ai/vale/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "17722be52a8ab919e26adeb077818de47ef275141a047aee789c9516d9c96ea7"
+  url "https://github.com/errata-ai/vale/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "8fd17d0f66c5d2113f4f789c32775df8bcca60601e650b2432457d5a427147ec"
   license "MIT"
 
   bottle do
