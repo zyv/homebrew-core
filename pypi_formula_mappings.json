@@ -64,9 +64,6 @@
   "aws-sso-util": {
     "exclude_packages": ["certifi"]
   },
-  "awscli@1": {
-    "exclude_packages": ["six", "PyYAML", "docutils"]
-  },
   "awscli-local": {
     "exclude_packages": ["six"]
   },
