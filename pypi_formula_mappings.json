@@ -150,7 +150,7 @@
     ]
   },
   "checkdmarc": {
-    "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "checkov": {
     "exclude_packages": ["certifi", "numpy"]
