@@ -1,8 +1,8 @@
 class Pciutils < Formula
   desc "PCI utilities"
   homepage "https://github.com/pciutils/pciutils"
-  url "https://github.com/pciutils/pciutils/archive/refs/tags/v3.10.0.tar.gz"
-  sha256 "e579d87f1afe2196db7db648857023f80adb500e8194c4488c8b47f9a238c1c6"
+  url "https://github.com/pciutils/pciutils/archive/refs/tags/v3.11.1.tar.gz"
+  sha256 "464644e3542a8d3aaf5373a2be6cb9ddfaa583cb39fbafbbedc10ca458fb48a1"
   license "GPL-2.0-or-later"
 
   bottle do
