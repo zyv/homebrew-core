@@ -3,8 +3,8 @@ class Localstack < Formula
 
   desc "Fully functional local AWS cloud stack"
   homepage "https://localstack.cloud/"
-  url "https://files.pythonhosted.org/packages/5f/e2/8666dd0baa386ce30381d017dbcbfe966fc2b681f01f20627bdbddd2b06f/localstack-3.1.0.tar.gz"
-  sha256 "927487cccce7e6f50c8c49eff700ed70678724568df171b7961225f7fac363f5"
+  url "https://files.pythonhosted.org/packages/45/2e/20d26b05cbf65fa96b48a57af249cbb1c3725f7ac74ea9abbdc7d9af25f2/localstack-3.2.0.tar.gz"
+  sha256 "df50d82f5fa6ceae7e78d35bc9a46e00f4c5ae0c5ecc3563be9030a1199c7124"
   license "Apache-2.0"
 
   bottle do
@@ -25,8 +25,8 @@ class Localstack < Formula
   depends_on "python@3.12"
 
   resource "cachetools" do
-    url "https://files.pythonhosted.org/packages/10/21/1b6880557742c49d5b0c4dcf0cf544b441509246cdd71182e0847ac859d5/cachetools-5.3.2.tar.gz"
-    sha256 "086ee420196f7b2ab9ca2db2520aca326318b68fe5ba8bc4d49cca91add450f2"
+    url "https://files.pythonhosted.org/packages/b3/4d/27a3e6dd09011649ad5210bdf963765bc8fa81a0827a4fc01bafd2705c5b/cachetools-5.3.3.tar.gz"
+    sha256 "ba29e2dfa0b8b556606f097407ed1aa62080ee108ab0dc5ec9d6a723a007d105"
   end
 
   resource "charset-normalizer" do
@@ -65,13 +65,13 @@ class Localstack < Formula
   end
 
   resource "localstack-core" do
-    url "https://files.pythonhosted.org/packages/67/82/757e3ad0e266219fdb1d03822a29abb2d8448f1f1d618248a89978fc75f1/localstack-core-3.1.0.tar.gz"
-    sha256 "0934f6b51115b9324c8601d91f202f740b57de7231dbc242ba8a6d90616cb94b"
+    url "https://files.pythonhosted.org/packages/56/08/0cea4c7c57492d5d3a576fba11c638e48a25567006bf195b41f2c0dca16a/localstack-core-3.2.0.tar.gz"
+    sha256 "2e22c4984ec37bf116b9ce88ccb528ba02e68d5c0e065ffa8ed5b79de2ddc036"
   end
 
   resource "localstack-ext" do
-    url "https://files.pythonhosted.org/packages/2d/ab/19f3905e6dcfc4e49dd919280e00c8c6e9db0d00e99abc1a83b02c09ba0f/localstack-ext-3.1.0.tar.gz"
-    sha256 "144f46f2b4fbc6e0f2f112184b4c6ce3cf340ab5dfdf8d835b9690ff7b2b66a2"
+    url "https://files.pythonhosted.org/packages/63/18/35bceab7e748f9977dc8d572a83c181e7505c3a72cfb31e56a0e24107290/localstack-ext-3.2.0.tar.gz"
+    sha256 "e77a5bb7b90d698411b0b6fe388f202f0477701135f1928b6661b868fd7ff771"
   end
 
   resource "markdown-it-py" do
