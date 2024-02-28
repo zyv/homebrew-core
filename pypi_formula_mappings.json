@@ -238,11 +238,7 @@
   },
   "dvc": {
     "package_name": "dvc[all]",
-    "exclude_packages": [
-      "argcomplete", "certifi", "cffi", "click", "cryptography", "numpy", "packaging",
-      "protobuf", "psutil", "pyarrow", "pycparser", "pygit2", "Pygments", "pyparsing",
-      "PyYAML", "six", "tabulate", "typing-extensions"
-    ]
+    "exclude_packages": ["certifi", "cryptography", "numpy", "protobuf", "pyarrow"]
   },
   "dxpy": {
     "exclude_packages": ["cryptography", "certifi"]
