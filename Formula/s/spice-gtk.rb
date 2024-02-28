@@ -28,7 +28,7 @@ class SpiceGtk < Formula
   depends_on "libtool" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkg-config" => [:build, :test]
   depends_on "python@3.12" => :build
   depends_on "six" => :build
   depends_on "vala" => :build
@@ -47,6 +47,7 @@ class SpiceGtk < Formula
   depends_on "openssl@3"
   depends_on "opus"
   depends_on "pango"
+  depends_on "phodav"
   depends_on "pixman"
   depends_on "python-pyparsing"
   depends_on "spice-protocol"
@@ -75,21 +76,9 @@ class SpiceGtk < Formula
         return spice_session_new() ? 0 : 1;
       }
     EOS
+    ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["icu4c"].lib}/pkgconfig"
     system ENV.cc, "test.cpp",
-                   "-I#{Formula["at-spi2-core"].include}/atk-1.0",
-                   "-I#{Formula["cairo"].include}/cairo",
-                   "-I#{Formula["gdk-pixbuf"].include}/gdk-pixbuf-2.0",
-                   "-I#{Formula["glib"].include}/glib-2.0",
-                   "-I#{Formula["glib"].lib}/glib-2.0/include",
-                   "-I#{Formula["gtk+3"].include}/gtk-3.0",
-                   "-I#{Formula["harfbuzz"].opt_include}/harfbuzz",
-                   "-I#{Formula["pango"].include}/pango-1.0",
-                   "-I#{Formula["spice-protocol"].include}/spice-1",
-                   "-I#{include}/spice-client-glib-2.0",
-                   "-I#{include}/spice-client-gtk-3.0",
-                   "-L#{lib}",
-                   "-lspice-client-glib-2.0",
-                   "-lspice-client-gtk-3.0",
+                   *shell_output("pkg-config --cflags --libs spice-client-gtk-3.0 ").chomp.split,
                    "-o", "test"
     system "./test"
   end
