@@ -11,13 +11,13 @@ class Rsyslog < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "f4870a6faba469a138a4c99aebff2abfbffd6d7586983c37202cee040d9df2f5"
-    sha256 arm64_ventura:  "35e05d70db97b8fd3be6bb5dbbd5a3ef934aa379ca45b32a81b1442799c08da9"
-    sha256 arm64_monterey: "f887391f6e8b0b60ad8fa83da33ff11f92bf3cae23d0b78c27172e3f2b877459"
-    sha256 sonoma:         "a20430184242a7d49cb2f02d1203d0ba121be8f58c1fd06beda38fc68ab25c67"
-    sha256 ventura:        "c48512f527aa601214707434e148431294261e73b75c5747eefe5d7a164b44ad"
-    sha256 monterey:       "d6f1a51adf6e9fee39fcac1e5a88d67e2478c7027a122d3a0120b19ffbf30650"
-    sha256 x86_64_linux:   "80843b03b0578be7f6c84aec1d427d009757770fef995ec8bf95eea270a07935"
+    sha256 arm64_sonoma:   "196ed6954bda8be483d4003a02a73f7a3f23f7ab7fae7a92a862b1cbed148ac7"
+    sha256 arm64_ventura:  "cdc3f7386313663a95c106e3fa8b746d776cd2888a581cc2c6cbf1c432c91293"
+    sha256 arm64_monterey: "a528e1ca20a46dc99cfa05dc581567ab00b66331066c0a3f6bd80a06505c9126"
+    sha256 sonoma:         "fe3a648f7fe0069483813b42acf80f4fc71a077d4f52c443a77cdd2a99a12e9d"
+    sha256 ventura:        "b6a398627abeaf67865dbf7b151658f3220b0d6042ec861554cab478972dbe61"
+    sha256 monterey:       "a259eb0b72b9eb01b265a2facc42a71d4da9ae0d75bd2dc44d19f43573b24bdb"
+    sha256 x86_64_linux:   "c0fa01823786a057d0ae0ca52f4b897bc9b8010a31e83c93a15743f4dd8f704e"
   end
 
   depends_on "pkg-config" => :build
