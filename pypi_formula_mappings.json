@@ -381,11 +381,7 @@
   },
   "jupyterlab": {
     "extra_packages": ["hatch-jupyter-builder", "hatch-nodejs-version", "jupyter-console", "notebook"],
-    "exclude_packages": [
-      "certifi", "cffi", "hatchling", "ipython", "jinja2", "markupsafe", "packaging",
-      "psutil", "pycparser", "pygments", "python-dateutil", "pyyaml", "requests",
-      "six"
-    ]
+    "exclude_packages": ["certifi"]
   },
   "keepkey-agent": {
     "exclude_packages": ["cffi", "cryptography", "docutils", "pycparser", "six"]
