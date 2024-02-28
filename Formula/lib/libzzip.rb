@@ -1,10 +1,9 @@
 class Libzzip < Formula
   desc "Library providing read access on ZIP-archives"
   homepage "https://github.com/gdraheim/zziplib"
-  url "https://github.com/gdraheim/zziplib/archive/refs/tags/v0.13.72.tar.gz"
-  sha256 "93ef44bf1f1ea24fc66080426a469df82fa631d13ca3b2e4abaeab89538518dc"
+  url "https://github.com/gdraheim/zziplib/archive/refs/tags/v0.13.73.tar.gz"
+  sha256 "2aa9d317f70060101064863e4e8fe698c32301e2d293d2b4964608cf2d5b2d8b"
   license any_of: ["LGPL-2.0-or-later", "MPL-1.1"]
-  revision 1
 
   bottle do
     rebuild 3
