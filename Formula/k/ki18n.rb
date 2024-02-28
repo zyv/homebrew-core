@@ -1,17 +1,14 @@
 class Ki18n < Formula
   desc "KDE Gettext-based UI text internationalization"
   homepage "https://api.kde.org/frameworks/ki18n/html/index.html"
+  url "https://download.kde.org/stable/frameworks/6.0/ki18n-6.0.0.tar.xz"
+  sha256 "15cbfb73ef1d3954d6206755b6e6a9c86ea27be4b4db0c843d38494851bcc354"
   license all_of: [
     "BSD-3-Clause",
     "LGPL-2.0-or-later",
     any_of: ["LGPL-2.1-only", "LGPL-3.0-only"],
   ]
-
-  stable do
-    url "https://download.kde.org/stable/frameworks/5.115/ki18n-5.115.0.tar.xz"
-    sha256 "d4fc34762137b5f90df78294370ffb345b6932552137359d15cdd157dbd7d6fd"
-    depends_on "qt@5"
-  end
+  head "https://invent.kde.org/frameworks/ki18n.git", branch: "master"
 
   livecheck do
     url "https://download.kde.org/stable/frameworks/"
@@ -28,30 +25,23 @@ class Ki18n < Formula
     sha256 x86_64_linux:   "3d33b503c316011aff0c1d30cc2b6070fbbba597629d0f20a1cb8ba37eee2dda"
   end
 
-  head do
-    url "https://invent.kde.org/frameworks/ki18n.git", branch: "master"
-    depends_on "qt"
-  end
-
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
   depends_on "extra-cmake-modules" => [:build, :test]
   depends_on "pkg-config" => :build
   depends_on "gettext"
   depends_on "iso-codes"
+  depends_on "qt"
 
   uses_from_macos "python" => :build, since: :catalina
 
   fails_with gcc: "5"
 
   def install
-    # TODO: Change to only use Python3_EXECUTABLE when KDE 6 (Qt 6) is released
-    python_variable = build.head? ? "Python3_EXECUTABLE" : "PYTHON_EXECUTABLE"
-
     args = %W[
       -DBUILD_QCH=ON
       -DBUILD_WITH_QML=ON
-      -D#{python_variable}=#{which("python3")}
+      -DPython3_EXECUTABLE=#{which("python3")}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
@@ -63,7 +53,7 @@ class Ki18n < Formula
   end
 
   test do
-    qt = Formula[build.head? ? "qt" : "qt@5"]
+    qt = Formula["qt"]
     qt_major = qt.version.major
 
     (testpath/"CMakeLists.txt").write <<~EOS
@@ -86,12 +76,13 @@ class Ki18n < Formula
 
     cp_r (pkgshare/"autotests"), testpath
 
-    args = %W[-DQt#{qt_major}_DIR=#{qt.opt_lib}/cmake/Qt#{qt_major}]
-    if OS.mac?
-      args += %W[
+    args = if OS.mac?
+      %W[
         -DLibIntl_INCLUDE_DIRS=#{Formula["gettext"].include}
         -DLibIntl_LIBRARIES=#{Formula["gettext"].lib}/libintl.dylib
       ]
+    else
+      []
     end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
