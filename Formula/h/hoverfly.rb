@@ -1,8 +1,8 @@
 class Hoverfly < Formula
   desc "API simulations for development and testing"
   homepage "https://hoverfly.io/"
-  url "https://github.com/SpectoLabs/hoverfly/archive/refs/tags/v1.6.3.tar.gz"
-  sha256 "b239c8207dd2f1c3c55b35bbcc2f85106c7dfd87f6eb1398b7db5d203dd6a839"
+  url "https://github.com/SpectoLabs/hoverfly/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "cf8cdfdcb92f623a5c75c6ec91287ab921a3d4ef10b9bb2a838d82ffd3685716"
   license "Apache-2.0"
   head "https://github.com/SpectoLabs/hoverfly.git", branch: "master"
 
