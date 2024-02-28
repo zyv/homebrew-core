@@ -20,16 +20,15 @@ class AwscliLocal < Formula
   depends_on "awscli" => :test # awscli-local can work with any version of awscli
   depends_on "localstack"
   depends_on "python@3.12"
-  depends_on "six"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/b5/5c/1d529b3dde18e48778f0b4a39c1b8309a1d4346103aa81d69fe1eb3f65f1/boto3-1.34.11.tar.gz"
-    sha256 "31c130a40ec0631059b77d7e87f67ad03ff1685a5b37638ac0c4687026a3259d"
+    url "https://files.pythonhosted.org/packages/e2/8e/75c1e586b46f0f324175253a35265769d60f66934b8a397a027aa7d1a989/boto3-1.34.51.tar.gz"
+    sha256 "2cd9463e738a184cbce8a6824027c22163c5f73e277a35ff5aa0fb0e845b4301"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/41/19/6a5eda9547aca880db17f685f385ca48d09df8dde0ee6dc738c7cfb06c21/botocore-1.34.11.tar.gz"
-    sha256 "51905c3d623c60df5dc5794387de7caf886d350180a01a3dfa762e903edb45a9"
+    url "https://files.pythonhosted.org/packages/74/75/fe7eb7a170d9a1a8a2ae93e5bfaa17cbbb308e90da7bfaa28145252fd307/botocore-1.34.51.tar.gz"
+    sha256 "5086217442e67dd9de36ec7e87a0c663f76b7790d5fb6a12de565af95e87e319"
   end
 
   resource "jmespath" do
@@ -50,6 +49,11 @@ class AwscliLocal < Formula
   resource "s3transfer" do
     url "https://files.pythonhosted.org/packages/a0/b5/4c570b08cb85fdcc65037b5229e00412583bb38d974efecb7ec3495f40ba/s3transfer-0.10.0.tar.gz"
     sha256 "d0c8bbf672d5eebbe4e57945e23b972d963f07d82f661cabf678a5c88831595b"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   resource "urllib3" do

@@ -64,9 +64,6 @@
   "aws-sso-util": {
     "exclude_packages": ["certifi"]
   },
-  "awscli-local": {
-    "exclude_packages": ["six"]
-  },
   "awscurl": {
     "exclude_packages": ["certifi", "cffi", "cryptography", "pycparser"]
   },
