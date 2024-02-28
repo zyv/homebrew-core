@@ -1,18 +1,15 @@
 class Karchive < Formula
   desc "Reading, creating, and manipulating file archives"
   homepage "https://api.kde.org/frameworks/karchive/html/index.html"
+  url "https://download.kde.org/stable/frameworks/6.0/karchive-6.0.0.tar.xz"
+  sha256 "75a591d9648026eb86826974e6f3882e7f620592ecef8fabeb19206e63b04e50"
   license all_of: [
     "BSD-2-Clause",
     "LGPL-2.0-only",
     "LGPL-2.0-or-later",
     any_of: ["LGPL-2.0-only", "LGPL-3.0-only"],
   ]
-
-  stable do
-    url "https://download.kde.org/stable/frameworks/5.115/karchive-5.115.0.tar.xz"
-    sha256 "e89951c58beca1f9802b9a3a8b8b2beff9b534d2de433ad7947258dd27d6b475"
-    depends_on "qt@5"
-  end
+  head "https://invent.kde.org/frameworks/karchive.git", branch: "master"
 
   livecheck do
     url "https://download.kde.org/stable/frameworks/"
@@ -29,16 +26,11 @@ class Karchive < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "85386f99944fb030743db5b0e2042dc1aa4b62d57f6ff2122022af1134f9c755"
   end
 
-  head do
-    url "https://invent.kde.org/frameworks/karchive.git", branch: "master"
-    depends_on "qt"
-  end
-
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
   depends_on "extra-cmake-modules" => [:build, :test]
   depends_on "pkg-config" => :build
-
+  depends_on "qt"
   depends_on "xz"
   depends_on "zstd"
 
@@ -56,23 +48,26 @@ class Karchive < Formula
   end
 
   test do
-    ENV.delete "CPATH"
-    args = std_cmake_args + %W[
-      -DQt5Core_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5Core
-      -DQT_MAJOR_VERSION=5
-    ]
-    args << "-DCMAKE_BUILD_RPATH=#{lib}" if OS.linux?
+    cp_r (pkgshare/"examples").children, testpath
 
-    %w[bzip2gzip
-       helloworld
-       tarlocalfiles
-       unzipper].each do |test_name|
-      mkdir test_name.to_s do
-        system "cmake", (pkgshare/"examples/#{test_name}"), *args
-        system "cmake", "--build", "."
-      end
+    examples = %w[
+      bzip2gzip
+      helloworld
+      tarlocalfiles
+      unzipper
+    ]
+
+    examples.each do |example|
+      inreplace testpath/example/"CMakeLists.txt", /^project\(/, <<~EOS
+        cmake_minimum_required(VERSION #{Formula["cmake"].version})
+        \\0
+      EOS
+
+      system "cmake", "-S", example, "-B", example, *std_cmake_args
+      system "cmake", "--build", example
     end
 
+    ENV["LC_ALL"] = "en_US.UTF-8"
     assert_match "The whole world inside a hello.", shell_output("helloworld/helloworld 2>&1")
     assert_predicate testpath/"hello.zip", :exist?
 
