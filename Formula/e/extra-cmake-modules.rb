@@ -1,14 +1,10 @@
 class ExtraCmakeModules < Formula
   desc "Extra modules and scripts for CMake"
   homepage "https://api.kde.org/frameworks/extra-cmake-modules/html/index.html"
+  url "https://download.kde.org/stable/frameworks/6.0/extra-cmake-modules-6.0.0.tar.xz"
+  sha256 "23992bf19db717156b7d6dd13118caa79fd57f090beb062e8308db3c09f70d0c"
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "MIT"]
   head "https://invent.kde.org/frameworks/extra-cmake-modules.git", branch: "master"
-
-  stable do
-    url "https://download.kde.org/stable/frameworks/5.115/extra-cmake-modules-5.115.0.tar.xz"
-    sha256 "ee3e35f6a257526b8995a086dd190528a8ef4b3854b1e457b8122701b0ce45ee"
-    depends_on "qt@5" => :build
-  end
 
   livecheck do
     url "https://download.kde.org/stable/frameworks/"
@@ -32,7 +28,6 @@ class ExtraCmakeModules < Formula
     args = %w[
       -DBUILD_HTML_DOCS=ON
       -DBUILD_MAN_DOCS=ON
-      -DBUILD_QTHELP_DOCS=ON
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
