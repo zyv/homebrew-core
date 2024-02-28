@@ -7,11 +7,11 @@ class Chronograf < Formula
   head "https://github.com/influxdata/chronograf.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7a25c0fb19478a91aba0d01425493570f4688706eb747322985e5460ce41a00a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9e3bea8e695c8d0cec4e82ebf5ea5a4a1087c07e11fe63560b053cbcd58191a9"
-    sha256 cellar: :any_skip_relocation, ventura:        "988b458e02d84790b924e821fd3b8811c1dff0abde7b7889e16addef16b94f01"
-    sha256 cellar: :any_skip_relocation, monterey:       "bf9ba175b2a8cc8667d5d87896b4451191d6e7a97815b590f99b3eb6e0d59ad2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60df6e8ac060c779920a4dd7e4b2bae17bbed21a05f976875089fe16f7c11744"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "57f2f887d22988e5ea7cd36ff4c88cb705a8e02b4f4dde355f2b36a8a456c97d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0579baf1d2eb36ee8a14daaacfd76bec6e95e1cd1e31564816eef3a8e0cf8aa4"
+    sha256 cellar: :any_skip_relocation, ventura:        "fa6b69b55e5e21ef46572c4bc24683f0966cd7afb0628d07b9ffee62803b2d31"
+    sha256 cellar: :any_skip_relocation, monterey:       "5639a8a4f20d846c826ce0642ef986df262b4b5ed89bb8199f0ca7c9d6d0414d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6fa5a13c0a1406a73e317b3945bc7be3375e1e372cd3f37e4878bd37e21851df"
   end
 
   depends_on "go" => :build
