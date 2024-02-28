@@ -1,13 +1,10 @@
 class Threadweaver < Formula
   desc "Helper for multithreaded programming"
   homepage "https://api.kde.org/frameworks/threadweaver/html/index.html"
+  url "https://download.kde.org/stable/frameworks/6.0/threadweaver-6.0.0.tar.xz"
+  sha256 "ba9daec6e0697fdc2accf74a46a6d59403e5e340d280bce916fd6356a668ddb3"
   license "LGPL-2.0-or-later"
-
-  stable do
-    url "https://download.kde.org/stable/frameworks/5.115/threadweaver-5.115.0.tar.xz"
-    sha256 "9fd08658f5b5bf3879217834ed392da245f16ae1199795f72423336d48d24eb8"
-    depends_on "qt@5"
-  end
+  head "https://invent.kde.org/frameworks/threadweaver.git", branch: "master"
 
   livecheck do
     url "https://download.kde.org/stable/frameworks/"
@@ -24,14 +21,10 @@ class Threadweaver < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0ace1ba956040585ecbe6abeed859f4dfade258917f8059073d9da0fc72f0e9"
   end
 
-  head do
-    url "https://invent.kde.org/frameworks/threadweaver.git", branch: "master"
-    depends_on "qt"
-  end
-
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
   depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "qt"
 
   fails_with gcc: "5"
 
@@ -44,12 +37,23 @@ class Threadweaver < Formula
   end
 
   test do
-    ENV.delete "CPATH"
-    qt5_args = ["-DQt5Core_DIR=#{Formula["qt@5"].opt_lib}/cmake/Qt5Core"]
-    qt5_args << "-DCMAKE_BUILD_RPATH=#{Formula["qt@5"].opt_lib};#{lib}" if OS.linux?
-    system "cmake", (pkgshare/"examples/HelloWorld"), *std_cmake_args, *qt5_args
+    cp_r (pkgshare/"examples/HelloWorld").children, testpath
+
+    kf = "KF#{version.major}"
+    (testpath/"CMakeLists.txt").unlink
+    (testpath/"CMakeLists.txt").write <<~EOS
+      cmake_minimum_required(VERSION #{Formula["cmake"].version})
+      project(HelloWorld LANGUAGES CXX)
+      find_package(ECM REQUIRED NO_MODULE)
+      find_package(#{kf}ThreadWeaver REQUIRED NO_MODULE)
+      add_executable(ThreadWeaver_HelloWorld HelloWorld.cpp)
+      target_link_libraries(ThreadWeaver_HelloWorld #{kf}::ThreadWeaver)
+    EOS
+
+    system "cmake", "-S", ".", "-B", ".", *std_cmake_args
     system "cmake", "--build", "."
 
+    ENV["LC_ALL"] = "en_US.UTF-8"
     assert_equal "Hello World!", shell_output("./ThreadWeaver_HelloWorld 2>&1").strip
   end
 end
