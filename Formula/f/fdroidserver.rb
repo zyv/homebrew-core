@@ -286,6 +286,11 @@ class Fdroidserver < Formula
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
   end
 
+  resource "sdkmanager" do
+    url "https://files.pythonhosted.org/packages/c7/7f/896d48e75f68f685c0a4fae0f5104d5cdee3c2d376ff4cfa5e78a8b5809e/sdkmanager-0.6.6.tar.gz"
+    sha256 "639d91085c921665cdcbb104c24fe41ad7227590cdb1ffc2b0bd4e23b6d31b37"
+  end
+
   resource "six" do
     url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
     sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
