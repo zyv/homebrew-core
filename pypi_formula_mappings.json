@@ -355,9 +355,6 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["requests"]
   },
-  "jc": {
-    "exclude_packages": ["Pygments"]
-  },
   "jello": {
     "exclude_packages": ["Pygments"]
   },
