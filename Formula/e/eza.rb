@@ -1,8 +1,8 @@
 class Eza < Formula
   desc "Modern, maintained replacement for ls"
   homepage "https://github.com/eza-community/eza"
-  url "https://github.com/eza-community/eza/archive/refs/tags/v0.18.4.tar.gz"
-  sha256 "2200bc1c07511c105961dcb3fe1682cc9067d55280dac990de7623aff86cab1a"
+  url "https://github.com/eza-community/eza/archive/refs/tags/v0.18.5.tar.gz"
+  sha256 "9229b2111063577a0cb8650db270d0ae6bcc1b437dbacf814786f77c67b1003d"
   license "MIT"
 
   bottle do
