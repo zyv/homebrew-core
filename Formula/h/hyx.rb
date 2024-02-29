@@ -1,8 +1,8 @@
 class Hyx < Formula
   desc "Powerful hex editor for the console"
   homepage "https://yx7.cc/code/"
-  url "https://yx7.cc/code/hyx/hyx-2021.06.09.tar.xz"
-  sha256 "8d4f14e58584d6cc8f04e43ca38042eed218882a389249c20b086730256da5eb"
+  url "https://yx7.cc/code/hyx/hyx-2024.02.29.tar.xz"
+  sha256 "76e7f1df3b1a6de7aded1a7477ad0c22e36a8ac21077a52013b5836583479771"
   license "MIT"
 
   livecheck do
@@ -26,13 +26,8 @@ class Hyx < Formula
   uses_from_macos "expect" => :test
 
   def install
-    # CFLAGS set here because the defaults are not compatible with Clang.
-    # Issue reported upstream via email to lorenz@yx7@.cc on 2022-07-19.
-    ENV["CFLAGS"] = "-O2 -D_FORTIFY_SOURCE=2 -fstack-protector-all"
     system "make"
-
     bin.install "hyx"
-    doc.install "license.txt"
   end
 
   test do
