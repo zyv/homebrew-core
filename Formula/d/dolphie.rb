@@ -3,8 +3,8 @@ class Dolphie < Formula
 
   desc "Feature-rich top tool for monitoring MySQL"
   homepage "https://github.com/charles-001/dolphie"
-  url "https://files.pythonhosted.org/packages/6b/a5/fc9f56eca3a68cc1a8dd0912083ccb8106253f9ebdaa728507eca08023d4/dolphie-4.3.1.tar.gz"
-  sha256 "efc7525cb668b9ac7b852fa59f24ac27fa8af83f6fd73a561ecd6a03e07b15e1"
+  url "https://files.pythonhosted.org/packages/bb/1e/b27080ad810502b01e101a830986bf37ba734c8370c30f2141222bdc41dd/dolphie-4.3.2.tar.gz"
+  sha256 "4cf6f6d55465a0ad26b992942fcf0bf029c23fe922af2c8e0b40d1090e3ac73e"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -82,8 +82,8 @@ class Dolphie < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/a7/ec/4a7d80728bd429f7c0d4d51245287158a1516315cadbb146012439403a9d/rich-13.7.0.tar.gz"
-    sha256 "5cb5123b5cf9ee70584244246816e9114227e0b98ad9176eede6ad54bf5403fa"
+    url "https://files.pythonhosted.org/packages/b3/01/c954e134dc440ab5f96952fe52b4fdc64225530320a910473c1fe270d9aa/rich-13.7.1.tar.gz"
+    sha256 "9be308cb1fe2f1f57d67ce99e95af38a1e2bc71ad9813b0e247cf7ffbcc3a432"
   end
 
   resource "sqlparse" do
