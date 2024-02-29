@@ -58,7 +58,10 @@ jobs:
         run: gh pr edit --add-label workflows '${{ github.event.number }}'
 
   limit-pull-requests:
-    if: always() && github.repository_owner == 'Homebrew'
+    if: >
+      always() && github.repository_owner == 'Homebrew' &&
+      (github.event_name == 'pull_request_target' &&
+       github.event.action == 'opened')
     runs-on: ubuntu-latest
     steps:
       - uses: Homebrew/actions/limit-pull-requests@master
