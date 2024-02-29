@@ -6,13 +6,13 @@ class Cnats < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "540a06359b710df6c06be5c773401d82cb997b97f27747214020a94a22b1874a"
-    sha256 cellar: :any,                 arm64_ventura:  "ef43f1e9688dc45c2bb6b79f505b5542d612b0b565064ef3d2bcac1c76786a61"
-    sha256 cellar: :any,                 arm64_monterey: "c9881e81a1a301cf63e09368f14c331e0b24ab1b56cbc8521e5493b664ba6a49"
-    sha256 cellar: :any,                 sonoma:         "4c4b827bc06eae5d47fe5f359ae0d6f0ac56b6ed8b73b64f086cc8a36f039cc7"
-    sha256 cellar: :any,                 ventura:        "db9119864162dfd8b694ff85e5c19a3c509d94fc8d24cda8e87de1b9cca500b9"
-    sha256 cellar: :any,                 monterey:       "a21f6d4f642ee02748db435d8b74f9ab1d15037e0823b275c436ce81dfc4662e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8269ed0b3b57acaeed56a0dac0fe5b24ae780a3db8fb7477e8b7e2f9be25df1b"
+    sha256 cellar: :any,                 arm64_sonoma:   "13142ae064870e4d1aa55100c189587168328402ac75f7c9753cdf210c2e74d4"
+    sha256 cellar: :any,                 arm64_ventura:  "947d31d16d7489328169ebf365f50cc78337cf6cac62ed4899e4229710c83fe0"
+    sha256 cellar: :any,                 arm64_monterey: "3e94f005ba81ce781ddbc7cb9c783763d0032ae29b9ade35a374982aedc41241"
+    sha256 cellar: :any,                 sonoma:         "1984bb01930159df454e79f89f21930def293360c0fb60fad3a3bb50980ac9f3"
+    sha256 cellar: :any,                 ventura:        "610d750a44981068ab4c8913608c7ba8bb9ffab6cc492b8a32f189734c3cef7e"
+    sha256 cellar: :any,                 monterey:       "a14599f489c88a0702ebf96eb0e3ff62ccf7cdffb00bfe545983dac0f406c0eb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6b8391012e32cb1bcd132de9c60325ce55b1c197c2db46660099609e3286bca"
   end
 
   depends_on "cmake" => :build
