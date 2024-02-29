@@ -1,8 +1,8 @@
 class Cnats < Formula
   desc "C client for the NATS messaging system"
   homepage "https://github.com/nats-io/nats.c"
-  url "https://github.com/nats-io/nats.c/archive/refs/tags/v3.7.0.tar.gz"
-  sha256 "6570e3c1be5d4d6040fd620d2318299e59045b7dc6c88d49c6168a3088d44ea2"
+  url "https://github.com/nats-io/nats.c/archive/refs/tags/v3.8.0.tar.gz"
+  sha256 "465811380cdc6eab3304e40536d03f99977a69c0e56fcf566000c29dd075e4dd"
   license "Apache-2.0"
 
   bottle do
@@ -22,9 +22,14 @@ class Cnats < Formula
   depends_on "protobuf-c"
 
   def install
-    system "cmake", ".", "-DCMAKE_INSTALL_PREFIX=#{prefix}",
-                         "-DBUILD_TESTING=OFF", *std_cmake_args
-    system "make", "install"
+    args = %W[
+      -DCMAKE_INSTALL_PREFIX=#{prefix}
+      -DBUILD_TESTING=OFF
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
