@@ -1,8 +1,8 @@
 class Kics < Formula
   desc "Detect vulnerabilities, compliance issues, and misconfigurations"
   homepage "https://kics.io/"
-  url "https://github.com/Checkmarx/kics/archive/refs/tags/v1.7.12.tar.gz"
-  sha256 "bf6eafd535a45c49ba9bf934c39ae871c80a82945c77393c3dbc804cae629be0"
+  url "https://github.com/Checkmarx/kics/archive/refs/tags/v1.7.13.tar.gz"
+  sha256 "6262632cb70fd4d642deb66b1c02ae2825bde34d9020632a9a627c94350650cf"
   license "Apache-2.0"
   head "https://github.com/Checkmarx/kics.git", branch: "master"
 
@@ -45,8 +45,17 @@ class Kics < Formula
   test do
     ENV["KICS_QUERIES_PATH"] = pkgshare/"assets/queries"
     ENV["DISABLE_CRASH_REPORT"] = "0"
+    ENV["NO_COLOR"] = "1"
 
-    assert_match "Files scanned: 0", shell_output("#{bin}/kics scan -p #{testpath}")
+    assert_match <<~EOS, shell_output("#{bin}/kics scan -p #{testpath}")
+      Results Summary:
+      HIGH: 0
+      MEDIUM: 0
+      LOW: 0
+      INFO: 0
+      TOTAL: 0
+    EOS
+
     assert_match version.to_s, shell_output("#{bin}/kics version")
   end
 end
