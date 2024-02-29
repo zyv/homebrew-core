@@ -27,9 +27,7 @@ class Rpm2cpio < Formula
   depends_on "libarchive"
   depends_on "xz"
 
-  on_linux do
-    conflicts_with "rpm", because: "both install `rpm2cpio` binaries"
-  end
+  conflicts_with "rpm", because: "both install `rpm2cpio` binaries"
 
   def install
     tar = OS.mac? ? "tar" : "bsdtar"
