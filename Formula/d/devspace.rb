@@ -1,9 +1,8 @@
 class Devspace < Formula
   desc "CLI helps develop/deploy/debug apps with Docker and k8s"
   homepage "https://devspace.sh/"
-  url "https://github.com/loft-sh/devspace.git",
-      tag:      "v6.3.11",
-      revision: "e6293eb64be9590f2947e4315e5c8c3a91c48a66"
+  url "https://github.com/devspace-sh/devspace/archive/refs/tags/v6.3.12.tar.gz"
+  sha256 "b4ce4b4b673f26f30cdc06a53dca607656b576657151f07b75253778994220e5"
   license "Apache-2.0"
   head "https://github.com/loft-sh/devspace.git", branch: "master"
 
@@ -26,11 +25,7 @@ class Devspace < Formula
   depends_on "kubernetes-cli"
 
   def install
-    ldflags = %W[
-      -s -w
-      -X main.commitHash=#{Utils.git_head}
-      -X main.version=#{version}
-    ]
+    ldflags = "-s -w -X main.commitHash=#{tap.user} -X main.version=#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags)
 
     generate_completions_from_executable(bin/"devspace", "completion")
@@ -42,5 +37,7 @@ class Devspace < Formula
 
     init_help_output = "Initializes a new devspace project"
     assert_match init_help_output, shell_output("#{bin}/devspace init --help")
+
+    assert_match version.to_s, shell_output("#{bin}/devspace version")
   end
 end
