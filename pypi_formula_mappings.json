@@ -633,7 +633,7 @@
     "exclude_packages": ["numpy"]
   },
   "scoutsuite": {
-    "exclude_packages": ["certifi", "cryptography", "pyparsing", "pytz", "pyyaml", "six", "typing-extensions"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "scrapy": {
     "exclude_packages": ["certifi", "cryptography"]
