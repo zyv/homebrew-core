@@ -9,14 +9,14 @@ class Scoutsuite < Formula
   head "https://github.com/nccgroup/ScoutSuite.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "20b64fde2a160f659e0705fe090fec9cf326c3e8f32a666d47a0f20103969f61"
-    sha256 cellar: :any,                 arm64_ventura:  "a7aa6bdc9510701f964bafea6e82fe3b6d9c86d1b96fe3ecea3aa6222fd6f946"
-    sha256 cellar: :any,                 arm64_monterey: "d7285719ca35388412911cb35b12f0ce9d4f561c81243475706470fee4aad9be"
-    sha256 cellar: :any,                 sonoma:         "8918787e0675437f5882e4ca020272b2f13cef97340f81079fd0c68a0a49c195"
-    sha256 cellar: :any,                 ventura:        "30c8b59afd96176376973232b7799548ddfd9366bc7547ae09287c00cdce2625"
-    sha256 cellar: :any,                 monterey:       "d6482e7e7e9d6789de6bfb82500685b4e1e83f829ae8ff2a966e5f66ea797a4a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "196a22fe255cb51c5c995c1fb99b3c367f35b7c0d070cce1e41b143a0f38dcf4"
+    rebuild 2
+    sha256 cellar: :any,                 arm64_sonoma:   "10959598e0a8ce38e8897f3d6650069eb0cbf6f1d6456698c67f23708ac8200b"
+    sha256 cellar: :any,                 arm64_ventura:  "90ae45d3e36a70d75446f1ab3bebde38a866abb997149a0b1ecf040bfb1bb6b0"
+    sha256 cellar: :any,                 arm64_monterey: "7039053caefe0c0bdf0f97a06e16cefb1968f74342fabe167f44282543c3d94d"
+    sha256 cellar: :any,                 sonoma:         "bb69f12eb4845d7f39b1177eb64708fd2aefc29fa173fe2590fa47361e140b75"
+    sha256 cellar: :any,                 ventura:        "d01a49f953a0ae2637de17326f1a9027fa017f69bc089e10f5d6965668663fb3"
+    sha256 cellar: :any,                 monterey:       "ebc341e68134782214df9f926e31355075a7ad591eb2e298ac7202c0573b5e7e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "43d3044acbe34f325f988ee9d64421f8b39326611c186c71495eec638c5b188a"
   end
 
   depends_on "rust" => :build # for pydantic-core
