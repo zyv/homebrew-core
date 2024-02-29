@@ -1,8 +1,8 @@
 class Sshs < Formula
   desc "Graphical command-line client for SSH"
   homepage "https://github.com/quantumsheep/sshs"
-  url "https://github.com/quantumsheep/sshs/archive/refs/tags/4.1.1.tar.gz"
-  sha256 "6869fbbc2a8eefb15ddcd9f6a930fed824e791df90351278c1125518422680a6"
+  url "https://github.com/quantumsheep/sshs/archive/refs/tags/4.2.0.tar.gz"
+  sha256 "344903ceccff1b1a112a3d0bb6ec4d1cb6319ffa0b9ec18873f2e3e10586b543"
   license "MIT"
 
   bottle do
