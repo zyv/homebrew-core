@@ -553,7 +553,6 @@ enzyme
 epr
 erdtree
 erg
-erigon
 erlang
 erlang@24
 erlang@25
