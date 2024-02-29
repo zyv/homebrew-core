@@ -37,13 +37,17 @@ class Pkl < Formula
     # Need to set this so that native-image passes through env vars when calling out to the C toolchain.
     # This is only needed for GraalVM 23.0, which is only used when building for macOS/aarch64.
     ENV["NATIVE_IMAGE_DEPRECATED_BUILDER_SANITATION"] = "true" if OS.mac? && Hardware::CPU.arm?
+
     arch = Hardware::CPU.arm? ? "aarch64" : "amd64"
     job_name = "#{OS.mac? ? "mac" : "linux"}Executable#{arch.capitalize}"
-    system "./gradlew", "--info", "--stacktrace", "-DreleaseBuild=true", job_name
+
+    system "./gradlew", "-DreleaseBuild=true", job_name
     bin.install "pkl-cli/build/executable/pkl-#{OS.mac? ? "macos" : "linux"}-#{arch}" => "pkl"
   end
 
   test do
     assert_equal "1", pipe_output("#{bin}/pkl eval -x bar -", "bar = 1")
+
+    assert_match version.to_s, shell_output("#{bin}/pkl --version")
   end
 end
