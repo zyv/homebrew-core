@@ -8,14 +8,13 @@ class Codelimit < Formula
   license "ISC"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "936360999c6f3c5e67f9533512496ae288d3af5e9a4325ba635ae014ccb58225"
-    sha256 cellar: :any,                 arm64_ventura:  "68875449c22f2fd61de57b5bf501db548a26b12fd3fe4a60618de8682768195a"
-    sha256 cellar: :any,                 arm64_monterey: "c9df60c494afdd1af381780e907d76a8fe27edd102f4a1a6c76f3766f97ad3b2"
-    sha256 cellar: :any,                 sonoma:         "74e6b1f2edf550545c38cb4b1856303a525b9b7a7f3bc35e1f47cdcff12da5fc"
-    sha256 cellar: :any,                 ventura:        "5503d5c210f35962277b9c21d926d173b4f753ec6e85de32a4b8b66897a73b89"
-    sha256 cellar: :any,                 monterey:       "f777288b4681d7f3b69ae86f3b584650ab12ebab84de5773366809283d9890f3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98c93048ecd3f0f478e41f3ef5381fc843da7af54542f05f2f6d734672994f44"
+    sha256 cellar: :any,                 arm64_sonoma:   "76d89256fdf039571b6221da922006e713a99e3ae4d21dd8efa04701253a83e3"
+    sha256 cellar: :any,                 arm64_ventura:  "fd80ffaba3a211499e069069c83f18bd7ba05fc4bc6d0a031c26d17d7014aa8e"
+    sha256 cellar: :any,                 arm64_monterey: "92ae99cd541858f4413f968d53d37d02d5005b5757cc3ee28219341b22e7b8cb"
+    sha256 cellar: :any,                 sonoma:         "e852b5ab8e77a8b5c929ad7b880a281d6dee11acf91eba363fa233bf26d4a4b7"
+    sha256 cellar: :any,                 ventura:        "e7ce4c56f0c07a9d398d3e204f486735c0670fbec4d1a028e1cb08161875886a"
+    sha256 cellar: :any,                 monterey:       "cebc3483b89385461c271f20df0077cc64387dc42d58523075a32ae8ddd6d829"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "04086cde11d3e9e8c7e9ef4bc91bd3754d4877cfd13eb46273bc39d253549a4f"
   end
 
   depends_on "libyaml"
