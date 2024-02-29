@@ -1,8 +1,8 @@
 class Bartib < Formula
   desc "Simple timetracker for the command-line"
   homepage "https://github.com/nikolassv/bartib"
-  url "https://github.com/nikolassv/bartib/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "51ee91f0ebcdba8a3e194d1f800aab942d99b1be1241d9d29f85615a89c87e6e"
+  url "https://github.com/nikolassv/bartib/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "29fcfb9fc2a64c11023d4be9904e2c70e49ec1f6c9f8ce4c6ee9d73825d2f6f4"
   license "GPL-3.0-only"
 
   bottle do
@@ -34,10 +34,10 @@ class Bartib < Formula
     sleep 2
     system bin/"bartib", "stop"
     expected =<<~EOS.strip
-      \e[1mproject.......... 0s\e[0m
-          task BrewTest 0s
+      \e[1mproject.......... <1m\e[0m
+          task BrewTest <1m
 
-      \e[1mTotal............ 0s\e[0m
+      \e[1mTotal............ <1m\e[0m
     EOS
     assert_equal expected, shell_output(bin/"bartib report").strip
   end
