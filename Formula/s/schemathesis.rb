@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/33/b9/9cb1dfb8248a120d15cd63b3bd91c7d998b0296d315ed75bd3a89f2a60d8/schemathesis-3.25.4.tar.gz"
-  sha256 "8c0fdd700b856feb2d9743a29d319ed3cb9123b79f2ad203e9b6b1e05fe83f9e"
+  url "https://files.pythonhosted.org/packages/64/05/e4b6633089f377215dfd15c85b8ceda5e43d13b43bcf701ea17ec2c63085/schemathesis-3.25.5.tar.gz"
+  sha256 "dc9e19129736c05d9a75bf8b3db2224fe50c81edc0ca3a14a5f0deb80f07c4ec"
   license "MIT"
 
   bottle do
@@ -73,8 +73,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/d0/11/75411b21cf76a2ec5a96fcc6521faa714a04aef8bd5e930670edd82427ee/hypothesis-6.98.12.tar.gz"
-    sha256 "584ef03a847464b0d14a63e53fcc3335a75b1f1eb3bcc770a03ff950ee4e279e"
+    url "https://files.pythonhosted.org/packages/c5/df/141615940fa9ffee1ef61bd698e39962777cdbfa55265a83ab561f11211e/hypothesis-6.98.15.tar.gz"
+    sha256 "1e31210951511b24ce8b3b6e04d791c466385a30ac3af571bf2223954b025d77"
   end
 
   resource "hypothesis-graphql" do
@@ -83,8 +83,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis-jsonschema" do
-    url "https://files.pythonhosted.org/packages/d0/63/c52f4e5f224a1321da2777ab5a75685495ba72f4e303c1f8d4badce96f65/hypothesis-jsonschema-0.23.0.tar.gz"
-    sha256 "c3cc5ecddd78efcb5c10cc3fbcf06aa4d32d8300d0babb8c6f89485f7a503aef"
+    url "https://files.pythonhosted.org/packages/4f/ad/2073dd29d8463a92c243d0c298370e50e0d4082bc67f156dc613634d0ec4/hypothesis-jsonschema-0.23.1.tar.gz"
+    sha256 "f4ac032024342a4149a10253984f5a5736b82b3fe2afb0888f3834a31153f215"
   end
 
   resource "idna" do
@@ -173,8 +173,8 @@ class Schemathesis < Formula
   end
 
   resource "sniffio" do
-    url "https://files.pythonhosted.org/packages/cd/50/d49c388cae4ec10e8109b1b833fd265511840706808576df3ada99ecb0ac/sniffio-1.3.0.tar.gz"
-    sha256 "e60305c5e5d314f5389259b7f22aaa33d8f7dee49763119234af3755c55b9101"
+    url "https://files.pythonhosted.org/packages/a2/87/a6771e1546d97e7e041b6ae58d80074f81b7d5121207425c964ddf5cfdbd/sniffio-1.3.1.tar.gz"
+    sha256 "f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc"
   end
 
   resource "sortedcontainers" do
