@@ -5,6 +5,16 @@ class Pkl < Formula
   sha256 "810f6018562ec9b54a43ba3cea472a6d6242e15da15b73a94011e1f8abc34927"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "258e24047f0819094d0675c13264590c943fa50dbcd0804b2702a4cd77b1f1a4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f1e39d973ef23ab2ca35d36bcc9ee73a91e3fb28028f8bebabaccb91dfc6ba6c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bdd07ad1623b10e1246d2a029812e74d23f9881acfb7d620fac87fe1ff15fba2"
+    sha256 cellar: :any_skip_relocation, sonoma:         "d27479533299925620e258ce90054550499fa5f22f6f9be6b55c7a71d8c57f19"
+    sha256 cellar: :any_skip_relocation, ventura:        "9bf5000de455b890618e5133809982134e2a6f8864838919ce0548984410643b"
+    sha256 cellar: :any_skip_relocation, monterey:       "255d6a47be95fc0e2fba5462858bc03bfc32ec44c7bdbbbdf5d1d3bd4439c200"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6dd0de922f67ed3abaa3d19d9b03228317766a663844fdd3f4a0a5e19257bc87"
+  end
+
   depends_on "openjdk" => :build
 
   uses_from_macos "zlib"
