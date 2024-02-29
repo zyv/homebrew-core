@@ -15,7 +15,11 @@ class Rpm < Formula
   end
 
   bottle do
-    sha256 x86_64_linux: "84a6f8905a17d3797cd84a3d38874b951c7c00418fba684a6763022dc0119b8e"
+    sha256 arm64_sonoma:  "293ed8ed214f5f4bb6be87e38d7402d16a9ad5a197a310864a926bd443d247ce"
+    sha256 arm64_ventura: "f89c2a59eba2d3ba9c49ed5f789922a3ea434a1b463368ccb2ec232ce2c10ec8"
+    sha256 sonoma:        "512ac33fae3b71ed269e1824e84589a935b875720679d14794891354fbb62b84"
+    sha256 ventura:       "f15f6180f92ee0f5da9f430d1dd9d9c94d8d1edc3361958a7d971c92dabfea82"
+    sha256 x86_64_linux:  "0e48055f9f4476e08991b874320681dca27610ac55e8e7ca8a770769ec92aeb6"
   end
 
   depends_on "cmake" => :build
