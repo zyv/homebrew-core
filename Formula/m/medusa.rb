@@ -1,8 +1,8 @@
 class Medusa < Formula
   desc "Solidity smart contract fuzzer powered by go-ethereum"
   homepage "https://github.com/crytic/medusa"
-  url "https://github.com/crytic/medusa/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "17163cb9c5f73eac3d896d91622a6fbd24c5c0a516b4248d679b26b35df1849a"
+  url "https://github.com/crytic/medusa/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "d4c6bc58f2ee51b93007cf678cc3ed07f15317a892faca3b4098c30afa4e537f"
   license "AGPL-3.0-only"
   head "https://github.com/crytic/medusa.git", branch: "master"
 
@@ -44,7 +44,7 @@ class Medusa < Formula
       }
     EOS
 
-    fuzz_output = shell_output("#{bin}/medusa fuzz --target #{testpath} --assertion-mode --test-limit 100")
+    fuzz_output = shell_output("#{bin}/medusa fuzz --compilation-target #{testpath} --test-limit 100", 7)
     assert_match(/PASSED.*assert_true/, fuzz_output)
     assert_match(/FAILED.*assert_false/, fuzz_output)
   end
