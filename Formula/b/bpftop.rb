@@ -6,6 +6,10 @@ class Bpftop < Formula
   license "Apache-2.0"
   head "https://github.com/Netflix/bpftop.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fc3d55fdd8ad8e953e06d61441173a6472182768f55d6d96764b1467fa037aca"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "elfutils"
