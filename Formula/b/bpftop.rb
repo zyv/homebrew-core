@@ -1,13 +1,13 @@
 class Bpftop < Formula
   desc "Dynamic real-time view of running eBPF programs"
   homepage "https://github.com/Netflix/bpftop"
-  url "https://github.com/Netflix/bpftop/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "5a63eb4963fbde83969099434dee2d8408dde82e1bee6ff4c88f395f45934c3c"
+  url "https://github.com/Netflix/bpftop/archive/refs/tags/v0.2.3.tar.gz"
+  sha256 "0cca2b54308e7cda18b17915c74a564cdd7a69b0273b1db670bc54b01eaab648"
   license "Apache-2.0"
   head "https://github.com/Netflix/bpftop.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fc3d55fdd8ad8e953e06d61441173a6472182768f55d6d96764b1467fa037aca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fb8ce78a248225379bc69d7afb28423a79724b032557b99536b731de869e36d3"
   end
 
   depends_on "pkg-config" => :build
