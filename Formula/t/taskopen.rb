@@ -6,6 +6,16 @@ class Taskopen < Formula
   license "GPL-2.0-only"
   head "https://github.com/jschlatow/taskopen.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "04d6f502161c71985dff812e6982066a9e7c01598db1e2c5369289ef583b4d79"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "000cc5761a934d64c4898c38f12af4268d6b9e4ae4378a18f32e149d99d7b7dc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c09373978bc107c459f01089e5b077ba52f1d0e8ea536358d66936e2bc335b4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "d5b2b331014ff8389a4de1583532276ee67c8d7d9cba3d2c893afc71c0e50db3"
+    sha256 cellar: :any_skip_relocation, ventura:        "ec7a107ad125ab7bffe3741676c3830aa298fba8af48be31c709044068380e95"
+    sha256 cellar: :any_skip_relocation, monterey:       "7342cd21d4b7db947d0edfd896f3bacd9d1843dc9658682937034b16ad5f9dec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f441e77e29f47176276825a3b92a2832a3628311f73cd8c237eaf3a03cae3af"
+  end
+
   depends_on "nim" => :build
   depends_on "task"
 
