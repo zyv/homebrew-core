@@ -94,6 +94,7 @@ autorestic
 avrdude
 awk
 aws-amplify
+aws-auth
 aws-cdk
 aws-elasticbeanstalk
 aws-es-proxy
@@ -118,6 +119,7 @@ ballerina
 bandicoot
 bandwhich
 bareos-client
+bartib
 bartycrouch
 base16384
 bash_unit
@@ -202,6 +204,7 @@ caire
 calc
 calcurse
 calicoctl
+canfigger
 capnp
 capstone
 cargo-about
@@ -278,7 +281,6 @@ circumflex
 citus
 clair
 clamav
-clarinet
 clazy
 clblast
 clhep
@@ -304,6 +306,7 @@ clusterawsadm
 clusterctl
 cmctl
 cmu-pocketsphinx
+cnats
 cntb
 cobalt
 cocoapods
@@ -312,6 +315,7 @@ coconut
 code-cli
 code-minimap
 code-server
+codelimit
 codec2
 coder
 codespell
@@ -436,6 +440,7 @@ diesel
 diffoscope
 difftastic
 digdag
+direnv
 direvent
 dislocker
 distrobox
@@ -713,6 +718,7 @@ go-feature-flag-relay-proxy
 go-md2man
 go-task
 goaccess
+goawk
 goctl
 goffice
 gofumpt
@@ -791,6 +797,7 @@ huggingface-cli
 hugo
 hyperfine
 hypre
+hyx
 i2p
 iamy
 igraph
@@ -828,6 +835,7 @@ jena
 jenkins
 jenkins-job-builder
 jenkins-lts
+jet
 jetty
 jetty-runner
 jfrog-cli
@@ -838,6 +846,7 @@ jnethack
 jose
 jpeg-turbo
 jql
+jreleaser
 jrnl
 jruby
 jsonnet
@@ -1021,6 +1030,7 @@ mockery
 mockserver
 moco
 modsecurity
+mold
 molecule
 mongo-cxx-driver
 mongocli
@@ -1106,6 +1116,7 @@ onedrive
 ooniprobe
 opa
 open-adventure
+open-image-denoise
 open-mpi
 opendetex
 openh264
@@ -1160,6 +1171,7 @@ pfetch-rs
 pgbadger
 pgbouncer
 pgloader
+pgpool-ii
 pgroonga
 pgweb
 phoronix-test-suite
@@ -1175,6 +1187,7 @@ picard-tools
 pidgin
 pig
 pillow
+pip-audit
 pipdeptree
 pipenv
 pkgconf
@@ -1216,6 +1229,7 @@ psalm
 pter
 ptpython
 pueue
+pure
 purescript
 purescript-language-server
 pushpin
@@ -1229,9 +1243,12 @@ pyinstaller
 pylint
 pyoxidizer
 pyright
+python-build
+python-dateutil
 python-cryptography
 python-mako
 python-matplotlib
+python-setuptools
 qbe
 qbs
 qcachegrind
@@ -1268,6 +1285,7 @@ release-it
 remind
 reminiscence
 renovate
+repo
 reposurgeon
 restic
 resvg
@@ -1291,6 +1309,7 @@ rswift
 rsyncy
 rubberband
 ruff
+ruff-lsp
 rust-analyzer
 rustup-init
 rye
@@ -1306,6 +1325,7 @@ scala
 scala@2.12
 scala@2.13
 scalingo
+scamper
 scarb
 sccache
 schemathesis
@@ -1495,6 +1515,7 @@ ttdl
 typedb
 typescript-language-server
 typos-cli
+typstfmt
 tz
 uffizzi
 ugit
@@ -1502,6 +1523,7 @@ ugrep
 uni
 universal-ctags
 usb.ids
+usbredir
 uv
 v2ray
 vala
@@ -1530,6 +1552,7 @@ volatility
 volk
 volta
 vpn-slice
+vrc-get
 vsearch
 vsh
 vte3
