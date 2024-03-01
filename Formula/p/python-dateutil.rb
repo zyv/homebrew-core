@@ -1,8 +1,8 @@
 class PythonDateutil < Formula
   desc "Useful extensions to the standard Python datetime features"
   homepage "https://github.com/dateutil/dateutil"
-  url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
-  sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
+  url "https://files.pythonhosted.org/packages/d9/77/bd458a2e387e98f71de86dcc2ca2cab64489736004c80bc12b70da8b5488/python-dateutil-2.9.0.tar.gz"
+  sha256 "78e73e19c63f5b20ffa567001531680d939dc042bf7850431877645523c66709"
   license "Apache-2.0"
 
   bottle do
@@ -24,6 +24,11 @@ class PythonDateutil < Formula
 
   def pythons
     deps.map(&:to_formula).sort_by(&:version).filter { |f| f.name.start_with?("python@") }
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
   def install
