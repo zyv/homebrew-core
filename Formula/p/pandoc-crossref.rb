@@ -5,7 +5,7 @@ class PandocCrossref < Formula
   version "0.3.17.0c"
   sha256 "9c391e87acc711b495a754623374734f38e5bd2849eacbcf03f011fd62399b64"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8ee6a65ce4fa214d8015ed938211a68b485cc18b070568463bf620f84f7b153a"
