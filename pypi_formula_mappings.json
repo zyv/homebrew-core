@@ -310,7 +310,8 @@
     "exclude_packages": ["certifi"]
   },
   "gyb": {
-    "exclude_packages": ["certifi", "pyinstaller", "pyparsing"]
+    "exclude_packages": ["certifi", "cryptography"],
+    "extra_packages": ["pyinstaller"]
   },
   "hatch": {
     "exclude_packages": ["certifi", "cryptography"]
