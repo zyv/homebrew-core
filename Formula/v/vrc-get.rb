@@ -1,8 +1,8 @@
 class VrcGet < Formula
   desc "Open Source alternative of Command-line client of VRChat Package Manager"
   homepage "https://github.com/anatawa12/vrc-get"
-  url "https://github.com/anatawa12/vrc-get/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "585c3efec6ff57b03ad820da5387b63af26b54b0202d4e82dbb9d977c0d0aef3"
+  url "https://github.com/anatawa12/vrc-get/archive/refs/tags/v1.7.1.tar.gz"
+  sha256 "6698ba5e50367b6e966699210fdeb6af543c6e82d08eb9ba9040837e745dc404"
   license "MIT"
   head "https://github.com/anatawa12/vrc-get.git", branch: "master"
 
