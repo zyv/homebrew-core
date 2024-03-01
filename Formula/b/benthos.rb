@@ -7,13 +7,13 @@ class Benthos < Formula
   head "https://github.com/benthosdev/benthos.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "7e2a6e85cf9be17ab4a1867013a30f66c5d9f1e6369c1fe86fc0d792e0621939"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ccf23d7511fdb6565ab3e0c1eaee26823cd3315ff0808cfab6b88027f20bebb8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "fbc49ef8dc539db884c6b5271ab95749109cc2f98d04b5dc9f4368e254c63b02"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e4044b232481b8e447ce573404ca2d310ddd003676c3af63f06b77f714354922"
-    sha256 cellar: :any_skip_relocation, ventura:        "12713c1f6668f882f37833e1216ae83691e7042acf8bd00e54e8864c9c17b7c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "6b264dd2592e3a4e0ea45d85da471fcaaaa65ef91d47987c6761907a3dcf382a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8ca1133627f3e5174f64267be3c1498a8adee91015bdd6afcfe8f08956d8b89"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4668b2aaa9d2da3b92567ee5b6dde33ac6e5618c8e24e234666b8ee9d159f272"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "747fd97d206aaa6c45751520a8bc2212060d63d5f29416c0d74b63e85e3dfe84"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "eb9aa3a2be442762cdbd12a8c31561238a11302070dcdabaf117e697b02ff0d4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "60bf4a00b4d3125819bc8ead2b823f2d1b91e53c029151334a2100129b3eae20"
+    sha256 cellar: :any_skip_relocation, ventura:        "cbb70233bf2f9425065d0db8d76355a067912e93be84335aad99e9d055166fb4"
+    sha256 cellar: :any_skip_relocation, monterey:       "09c1797a81e6178277c1cc77d91bea218436b2a9b84c3afa51cdccf25cdab00c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f508ba87277721785b54fd0a6b19d139acb21d54aafcfc5bd261c4e0f19c9093"
   end
 
   depends_on "go" => :build
