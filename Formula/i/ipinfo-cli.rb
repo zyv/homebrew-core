@@ -1,8 +1,8 @@
 class IpinfoCli < Formula
   desc "Official CLI for the IPinfo IP Address API"
   homepage "https://ipinfo.io/"
-  url "https://github.com/ipinfo/cli/archive/refs/tags/ipinfo-3.3.0.tar.gz"
-  sha256 "18069e115c78a7a167311ad02de354c8e8d71dc63d838d94635f439eb64585f0"
+  url "https://github.com/ipinfo/cli/archive/refs/tags/ipinfo-3.3.1.tar.gz"
+  sha256 "b3acdfdfdebe64b34c7a1aa80de25fd7178a51105e588ad0d205870ca9d15cfb"
   license "Apache-2.0"
 
   livecheck do
