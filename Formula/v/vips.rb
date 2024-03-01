@@ -4,7 +4,7 @@ class Vips < Formula
   url "https://github.com/libvips/libvips/releases/download/v8.15.1/vips-8.15.1.tar.xz"
   sha256 "06811f5aed3e7bc03e63d05537ff4b501de5283108c8ee79396c60601a00830c"
   license "LGPL-2.1-or-later"
-  revision 2
+  revision 3
 
   livecheck do
     url :stable
