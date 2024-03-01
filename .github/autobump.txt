@@ -57,7 +57,6 @@ appium
 appstream
 apr
 apt
-aptos
 arb
 archi-steam-farm
 argc
@@ -168,6 +167,7 @@ bosh-cli
 botan
 botan@2
 bottom
+bpftop
 brev
 brew-php-switcher
 brogue
@@ -266,7 +266,6 @@ checkdmarc
 checkmake
 checkstyle
 cherrytree
-chezmoi
 chkrootkit
 choose-rust
 chromaprint
@@ -398,7 +397,6 @@ daq
 darkstat
 dart-sdk
 dartsim
-dasel
 datafusion
 datalad
 datasette
@@ -599,7 +597,6 @@ feh
 felinks
 fend
 fennel
-ferium
 feroxbuster
 ffsend
 ffuf
@@ -620,11 +617,9 @@ flatbuffers
 fleet-cli
 flint
 flix
-flow-cli
 flowpipe
 fluent-bit
 flume
-flyctl
 flyscrape
 flyway
 fmt
@@ -675,7 +670,6 @@ gegl
 genact
 geph4
 gf
-gh
 ghostunnel
 ghq
 ghz
@@ -748,7 +742,6 @@ gradle
 gradle-completion
 gradle-profiler
 grafana
-grafana-agent
 grails
 greed
 greenmask
@@ -886,7 +879,6 @@ kor
 kotlin
 krakend
 krew
-ktlint
 kube-linter
 kubeaudit
 kubebuilder
@@ -915,7 +907,6 @@ ld-find-code-refs
 ldeep
 lean-cli
 leapp-cli
-lefthook
 lego
 leiningen
 lerna
@@ -1023,11 +1014,9 @@ miniserve
 minizinc
 minizip
 minuit2
-mise
 mmark
 mmctl
 mmv
-moar
 mockery
 mockserver
 moco
@@ -1049,7 +1038,6 @@ mruby
 muffet
 murex
 mutt
-mx
 mydumper
 mypy
 mysqltuner
@@ -1180,7 +1168,6 @@ php-code-sniffer
 php-cs-fixer
 phpmd
 phpmyadmin
-phpstan
 phpunit
 phylum-cli
 pianod
@@ -1226,7 +1213,6 @@ proxytunnel
 prqlc
 prr
 psalm
-pstoedit
 pter
 ptpython
 pueue
@@ -1234,7 +1220,6 @@ purescript
 purescript-language-server
 pushpin
 pwntools
-px
 py-spy
 py3cairo
 pyenv
@@ -1265,7 +1250,6 @@ rancher-cli
 rattler-build
 rav1e
 raven
-rbspy
 rbw
 rclone
 rcs
