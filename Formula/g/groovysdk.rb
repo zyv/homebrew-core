@@ -1,8 +1,9 @@
 class Groovysdk < Formula
   desc "SDK for Groovy: a Java-based scripting language"
+  # TODO: remove `groovy-raw-#{version}-raw.jar` workaround when bump
   homepage "https://www.groovy-lang.org/"
-  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-sdk-4.0.18.zip"
-  sha256 "dbf8750c418de2e7aecec0cc84ffa24f72967578e16ddc7ccc559fb65239259c"
+  url "https://groovy.jfrog.io/artifactory/dist-release-local/groovy-zips/apache-groovy-sdk-4.0.19.zip"
+  sha256 "b14670abfe74d2d79aca091cfecab5629b5c662b8d0310c42a143f342520b541"
   license "Apache-2.0"
 
   livecheck do
@@ -27,6 +28,9 @@ class Groovysdk < Formula
   def install
     # We don't need Windows' files.
     rm_f Dir["bin/*.bat"]
+
+    # workaround to fix startup issue, see discussions in https://issues.apache.org/jira/browse/GROOVY-11328
+    rm_f "lib/groovy-raw-#{version}-raw.jar"
 
     prefix.install_metafiles
     bin.install Dir["bin/*"]
