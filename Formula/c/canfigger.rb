@@ -7,16 +7,13 @@ class Canfigger < Formula
   head "https://github.com/andy5995/canfigger.git", branch: "trunk"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "46a2b87b742481550bbaad9f0a95493357147d4666cc93f90b47f2a8194c7006"
-    sha256 cellar: :any,                 arm64_ventura:  "88a1d1876a2750cab34159cf6d8a98db78db4e5825971ae02d04abd3d0338b76"
-    sha256 cellar: :any,                 arm64_monterey: "1d7a8ff435adffd2eb0f02c510a0bab42cf4524cb21c167c81ef8dd47f29e3aa"
-    sha256 cellar: :any,                 arm64_big_sur:  "5d687946bd99e626086e252379010085cc1b988b75c47acaf4718eb340018ca7"
-    sha256 cellar: :any,                 sonoma:         "b31b096bc868e74f81f8e783e2bafcb79c6233b57951b3eb00ab376a06b4c2f3"
-    sha256 cellar: :any,                 ventura:        "6d1522e15b022a559dce8a183722f7376e7f2e95bde9e936c984d8af3106d128"
-    sha256 cellar: :any,                 monterey:       "0d9d2b353ff46ffef823eb199c8ea03d1c31f6bb627ff450ff7f96b8415ede65"
-    sha256 cellar: :any,                 big_sur:        "ea8085a8731d33a9206068fb9df16dc80a7a17be1610e6f5597cfd774845c3af"
-    sha256 cellar: :any,                 catalina:       "f05d18c0525c516674de0daf6d1c2322b12083785bdc8846f003d1e1b58d1b5c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ecec5f6717c2899f7f0a0875d0e49c0c2ad247b28641f51436b94e4e4995ce4"
+    sha256 cellar: :any,                 arm64_sonoma:   "d55f2ee425decbb379da3105d48ec055a42b87f72efbffa6a875d53e74faebfb"
+    sha256 cellar: :any,                 arm64_ventura:  "ca6dbe2e1c9d8841cf927367e9f472b1fed91d84ada7ac1295e78e7c135f6341"
+    sha256 cellar: :any,                 arm64_monterey: "4fa68580783fc78146550db423b46e27004fe2c83ff54135159e750b399f06e5"
+    sha256 cellar: :any,                 sonoma:         "ae03386506e951da6525a8c437c62aee6e232ab8a52ab14bcb7c63de103d4903"
+    sha256 cellar: :any,                 ventura:        "163c84d05419a4c6f58fbfaa5923ef2bea68a5c7fb8e89bb7080323840ffe6a5"
+    sha256 cellar: :any,                 monterey:       "2481309bc1cc7485ae7fca15bcb396498b19a5ef370cb3a71c9e608b8bc16fd7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1b3630e0553221aa87402808455550585ca65a0549a6ca12f1c6d1fa85366596"
   end
 
   depends_on "meson" => :build
