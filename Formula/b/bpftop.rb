@@ -7,7 +7,7 @@ class Bpftop < Formula
   head "https://github.com/Netflix/bpftop.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fc3d55fdd8ad8e953e06d61441173a6472182768f55d6d96764b1467fa037aca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fb8ce78a248225379bc69d7afb28423a79724b032557b99536b731de869e36d3"
   end
 
   depends_on "pkg-config" => :build
