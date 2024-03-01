@@ -7,6 +7,16 @@ class NpmCheckUpdates < Formula
   sha256 "402aa38038c9ab833749a11e15b69018e48fc6fc6630c68932e8dd957f948391"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1f919cc20d95454be2d3953b087036c6aa11dab36c459b3baf81dd8c42a9e5a6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1f919cc20d95454be2d3953b087036c6aa11dab36c459b3baf81dd8c42a9e5a6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1f919cc20d95454be2d3953b087036c6aa11dab36c459b3baf81dd8c42a9e5a6"
+    sha256 cellar: :any_skip_relocation, sonoma:         "aee491cc5b7990900c363b48ec56171aefb518dbc569d3896cd20d73e2b86ba7"
+    sha256 cellar: :any_skip_relocation, ventura:        "aee491cc5b7990900c363b48ec56171aefb518dbc569d3896cd20d73e2b86ba7"
+    sha256 cellar: :any_skip_relocation, monterey:       "aee491cc5b7990900c363b48ec56171aefb518dbc569d3896cd20d73e2b86ba7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f919cc20d95454be2d3953b087036c6aa11dab36c459b3baf81dd8c42a9e5a6"
+  end
+
   depends_on "node"
 
   def install
