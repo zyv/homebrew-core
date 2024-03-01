@@ -10,6 +10,16 @@ class Liborigin < Formula
     regex(%r{url=.*?/liborigin[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "28bd38fca29a6137db214a6d8c4b151705d5d1028e844aa3c004eb253bf8627b"
+    sha256 cellar: :any,                 arm64_ventura:  "ca63266ed035f00907bd903e8005eea61a165897074fa66ed6b265456ebd9ac1"
+    sha256 cellar: :any,                 arm64_monterey: "0622ef79242ba03c3ed38ec3a42b05c94488369371cfd7d0efb2e6b0b26b08ad"
+    sha256 cellar: :any,                 sonoma:         "7984988756f10f27e88653cc4f61d69abdc8241d1f3c49da9f1be8d0b6a2e83d"
+    sha256 cellar: :any,                 ventura:        "2486e161b330f0af0015f9234f5ca3d45f192aa88f0b18c9cb8f0718c2135ed3"
+    sha256 cellar: :any,                 monterey:       "08d242356b0df10fcea02d69bd93f039e3c1fcecf170eb3b497f53d99e6a73a4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ab6103c2fb90a0349ce227ec251c72188cc0a0c77dc145305383c8f589e9eb4"
+  end
+
   depends_on "cmake" => :build
 
   def install
