@@ -1,8 +1,8 @@
 class Elfutils < Formula
   desc "Libraries and utilities for handling ELF objects"
   homepage "https://fedorahosted.org/elfutils/"
-  url "https://sourceware.org/elfutils/ftp/0.190/elfutils-0.190.tar.bz2"
-  sha256 "8e00a3a9b5f04bc1dc273ae86281d2d26ed412020b391ffcc23198f10231d692"
+  url "https://sourceware.org/elfutils/ftp/0.191/elfutils-0.191.tar.bz2"
+  sha256 "df76db71366d1d708365fc7a6c60ca48398f14367eb2b8954efc8897147ad871"
   license all_of: ["GPL-2.0-or-later", "GPL-3.0-or-later", "LGPL-2.0-only"]
 
   livecheck do
