@@ -365,7 +365,7 @@
     "exclude_packages": ["certifi"]
   },
   "keepkey-agent": {
-    "exclude_packages": ["cffi", "cryptography", "docutils", "pycparser", "six"]
+    "exclude_packages": ["cryptography"]
   },
   "keyring": {
     "package_name": "keyring[completion]",
