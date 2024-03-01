@@ -541,15 +541,19 @@
     "exclude_packages": ["packaging", "pyparsing", "sip", "toml"]
   },
   "python@3.8": {
+    "package_name": "",
     "extra_packages": ["setuptools", "pip", "wheel"]
   },
   "python@3.9": {
+    "package_name": "",
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
   },
   "python@3.10": {
+    "package_name": "",
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
   },
   "python@3.11": {
+    "package_name": "",
     "extra_packages": ["flit-core", "setuptools", "pip", "wheel"]
   },
   "python@3.12": {
