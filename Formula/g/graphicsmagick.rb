@@ -4,7 +4,7 @@ class Graphicsmagick < Formula
   url "https://downloads.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.42/GraphicsMagick-1.3.42.tar.xz"
   sha256 "484fccfd2b2faf6c2ba9151469ece5072bcb91ba4ed73e75ed3d8e46c759d557"
   license "MIT"
-  revision 1
+  revision 2
   head "http://hg.code.sf.net/p/graphicsmagick/code", using: :hg
 
   livecheck do
