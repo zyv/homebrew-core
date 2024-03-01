@@ -6,6 +6,16 @@ class Mmdbinspect < Formula
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/maxmind/mmdbinspect.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dd2ecd32e2d64c6d4b35cfbdf57eeb8cf2c4f79385da300fa791b9e6cac0c449"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "258a073b818c60576f4042913ee4053c632deae2ca47435ed930ebd5057ba945"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "08aa384d6799f3e05954f79ed0f1c92a0bbb96f0fc731aff03978f8a5e687d61"
+    sha256 cellar: :any_skip_relocation, sonoma:         "138f33a523623a3dafb7a96da79b98987f58abd46ac50bb8b87469bd9d81a289"
+    sha256 cellar: :any_skip_relocation, ventura:        "5a8fd7d5ea482aee83bd485cd07782368efaa034643b8829e8a965906a6c233f"
+    sha256 cellar: :any_skip_relocation, monterey:       "16793974693aa4a49b65689bd728af00fd109c1b6c6476c27c9ad7d4ce591eba"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ec2a1905e63afdb38e62d24f3f4841e81ddf75f09ec102becab9415b10a81a23"
+  end
+
   depends_on "go" => :build
 
   def install
