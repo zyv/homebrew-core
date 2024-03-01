@@ -1,5 +1,6 @@
 class Gyb < Formula
   include Language::Python::Virtualenv
+
   desc "CLI for backing up and restoring Gmail messages"
   homepage "https://github.com/GAM-team/got-your-back/"
   url "https://github.com/GAM-team/got-your-back/archive/refs/tags/v1.80.tar.gz"
@@ -17,15 +18,17 @@ class Gyb < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "4bf46d6ec62b1f3cfbaf289b797c831811d1bb13691811d62ddee6584cea79bf"
   end
 
-  depends_on "pyinstaller" => :build
   depends_on "python-certifi" => :build
-  depends_on "python-pyparsing" => :build
-  depends_on "python-setuptools" => :build
+  depends_on "python-cryptography" => :build
   depends_on "python@3.12" => :build
-  depends_on "rust" => :build # for cryptography
-  depends_on "six" => :build
+  depends_on "openssl@3"
 
   uses_from_macos "zlib"
+
+  resource "altgraph" do
+    url "https://files.pythonhosted.org/packages/de/a8/7145824cf0b9e3c28046520480f207df47e927df83aa9555fb47f8505922/altgraph-0.17.4.tar.gz"
+    sha256 "1b5afbb98f6c4dcadb2e2ae6ab9fa994bbb8c1d75f4fa96d340f9437ae454406"
+  end
 
   resource "cachetools" do
     url "https://files.pythonhosted.org/packages/10/21/1b6880557742c49d5b0c4dcf0cf544b441509246cdd71182e0847ac859d5/cachetools-5.3.2.tar.gz"
@@ -77,9 +80,19 @@ class Gyb < Formula
     sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
   end
 
+  resource "macholib" do
+    url "https://files.pythonhosted.org/packages/95/ee/af1a3842bdd5902ce133bd246eb7ffd4375c38642aeb5dc0ae3a0329dfa2/macholib-1.16.3.tar.gz"
+    sha256 "07ae9e15e8e4cd9a788013d81f5908b3609aa76f9b1421bae9c4d7606ec86a30"
+  end
+
   resource "oauthlib" do
     url "https://files.pythonhosted.org/packages/6d/fa/fbf4001037904031639e6bfbfc02badfc7e12f137a8afa254df6c4c8a670/oauthlib-3.2.2.tar.gz"
     sha256 "9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918"
+  end
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
+    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
   end
 
   resource "protobuf" do
@@ -97,6 +110,21 @@ class Gyb < Formula
     sha256 "5bd01446b736eb9d31512a30d46c1ac3395d676c6f3cafa4c03eb54b9925631c"
   end
 
+  resource "pyinstaller" do
+    url "https://files.pythonhosted.org/packages/83/5c/752340e73c195e21112eaec094d2d176705e4c18dc42a8357b68bb0dd693/pyinstaller-6.4.0.tar.gz"
+    sha256 "1bf608ed947b58614711275a7ff169289b32560dc97ec748ebd5fa8bdec80649"
+  end
+
+  resource "pyinstaller-hooks-contrib" do
+    url "https://files.pythonhosted.org/packages/c4/d0/276175694985ae97497f176591a724c226257ad93acf1901896a218aed76/pyinstaller-hooks-contrib-2024.1.tar.gz"
+    sha256 "51a51ea9e1ae6bd5ffa7ec45eba7579624bf4f2472ff56dba0edc186f6ed46a6"
+  end
+
+  resource "pyparsing" do
+    url "https://files.pythonhosted.org/packages/37/fe/65c989f70bd630b589adfbbcd6ed238af22319e90f059946c26b4835e44b/pyparsing-3.1.1.tar.gz"
+    sha256 "ede28a1a32462f5a9705e07aea48001a08f7cf81a021585011deba701581a0db"
+  end
+
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
     sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
@@ -112,6 +140,16 @@ class Gyb < Formula
     sha256 "e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"
   end
 
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
+    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
   resource "uritemplate" do
     url "https://files.pythonhosted.org/packages/d2/5a/4742fdba39cd02a56226815abfa72fe0aa81c33bed16ed045647d6000eba/uritemplate-4.1.1.tar.gz"
     sha256 "4346edfc5c3b79f694bccd6d6099a322bbeb628dbf2cd86eea55a456ce5124f0"
@@ -122,20 +160,14 @@ class Gyb < Formula
     sha256 "df7aa8afb0148fa78488e7899b2c59b5f4ffcfa82e6c54ccb9dd37c1d7b52d54"
   end
 
-  def python3
-    "python3.12"
-  end
-
   def install
     # change user config location from default of executable own path
     inreplace "gyb.py", "default=getProgPath()",
                         "default='#{pkgetc}'"
-    venv = virtualenv_create(buildpath, python3)
+    venv = virtualenv_create(buildpath, "python3.12")
     venv.pip_install resources
 
-    ENV.append_path "PYTHONPATH", buildpath/Language::Python.site_packages(python3)
-    pyinstaller = Formula["pyinstaller"].opt_bin/"pyinstaller"
-    system pyinstaller, "gyb.spec"
+    system "bin/pyinstaller", "gyb.spec"
     bin.install "dist/gyb"
   end
 
