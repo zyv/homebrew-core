@@ -3,8 +3,8 @@ require "language/node"
 class JoplinCli < Formula
   desc "Note taking and to-do application with synchronization capabilities"
   homepage "https://joplinapp.org/"
-  url "https://registry.npmjs.org/joplin/-/joplin-2.13.2.tgz"
-  sha256 "6e451a05708065b7f4f839449705452d2cf9dbe5f287ba5f0cf17511dae4d8ed"
+  url "https://registry.npmjs.org/joplin/-/joplin-2.14.1.tgz"
+  sha256 "76241726ebe5f53261d5723d289067e891d546a7689b3371a172faf3675ba286"
   license "MIT"
 
   bottle do
@@ -16,6 +16,8 @@ class JoplinCli < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "python-setuptools" => :build # for node-gyp
+  depends_on "python@3.12" => :build
   depends_on "node"
   depends_on "sqlite"
   depends_on "vips"
@@ -27,6 +29,9 @@ class JoplinCli < Formula
   on_linux do
     depends_on "libsecret"
   end
+
+  # need node-addon-api v7+, see https://github.com/lovell/sharp/issues/3920
+  patch :DATA
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
@@ -44,6 +49,12 @@ class JoplinCli < Formula
       ln_sf terminal_notifier_app.relative_path_from(terminal_notifier_dir), terminal_notifier_dir
     end
 
+    if OS.linux?
+      node_modules = libexec/"lib/node_modules/joplin/node_modules"
+      (node_modules/"@img/sharp-libvips-linuxmusl-x64/lib/libvips-cpp.so.42").unlink
+      (node_modules/"@img/sharp-linuxmusl-x64/lib/sharp-linuxmusl-x64.node").unlink
+    end
+
     # Replace universal binaries with their native slices
     deuniversalize_machos libexec/"lib/node_modules/joplin/node_modules/fsevents/fsevents.node"
   end
@@ -56,3 +67,24 @@ class JoplinCli < Formula
     assert_match "joplin #{version}", shell_output("#{bin}/joplin version")
   end
 end
+
+__END__
+diff --git a/package.json b/package.json
+index cad3df9..5d033d4 100644
+--- a/package.json
++++ b/package.json
+@@ -51,6 +51,7 @@
+     "image-type": "3.1.0",
+     "keytar": "7.9.0",
+     "md5": "2.3.0",
++    "node-addon-api": "^7.1.0",
+     "node-rsa": "1.1.1",
+     "open": "8.4.2",
+     "proper-lockfile": "4.1.2",
+@@ -79,4 +80,4 @@
+     "temp": "0.9.4",
+     "typescript": "5.2.2"
+   }
+-}
+\ No newline at end of file
++}
