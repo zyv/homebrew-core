@@ -1,8 +1,8 @@
 class Swiftgen < Formula
   desc "Swift code generator for assets, storyboards, Localizable.strings, etc."
   homepage "https://github.com/SwiftGen/SwiftGen"
-  url "https://github.com/SwiftGen/SwiftGen/archive/refs/tags/6.6.2.tar.gz"
-  sha256 "73b73e32ce22554c9db44c8edf0fa0ada33b413c73e8f991eebfaac4073df3de"
+  url "https://github.com/SwiftGen/SwiftGen/archive/refs/tags/6.6.3.tar.gz"
+  sha256 "f529be194f0ffcc85a76a6770fe3578b49e7e56ba872ce1e3aaba75982b09d32"
   license "MIT"
   head "https://github.com/SwiftGen/SwiftGen.git", branch: "stable"
 
@@ -11,23 +11,18 @@ class Swiftgen < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "3c158aecb7ced0c489ef11f6a4c15a9d1449a40ad554388a0310116f510ec316"
   end
 
-  # https://github.com/SwiftGen/SwiftGen/issues/1030
-  disable! date: "2024-02-22", because: :does_not_build
-
   depends_on xcode: ["13.3", :build]
   depends_on :macos
 
   uses_from_macos "ruby" => :build, since: :high_sierra
 
-  resource("testdata") do
-    url "https://github.com/SwiftGen/SwiftGen/archive/refs/tags/6.6.2.tar.gz"
-    sha256 "73b73e32ce22554c9db44c8edf0fa0ada33b413c73e8f991eebfaac4073df3de"
-  end
-
   def install
     # Install bundler (needed for our rake tasks)
     ENV["GEM_HOME"] = buildpath/"gem_home"
-    system "gem", "install", "bundler"
+
+    # we use the macOS ruby (2.6.10p210 (2022-04-12 revision 67958)) this is the last supported bundler version
+    system "gem", "install", "bundler", "-v 2.4.22"
+
     ENV.prepend_path "PATH", buildpath/"gem_home/bin"
     system "bundle", "install", "--without", "development", "release"
 
@@ -41,6 +36,11 @@ class Swiftgen < Formula
   end
 
   test do
+    resource("testdata") do
+      url "https://github.com/SwiftGen/SwiftGen/archive/refs/tags/6.6.3.tar.gz"
+      sha256 "f529be194f0ffcc85a76a6770fe3578b49e7e56ba872ce1e3aaba75982b09d32"
+    end
+
     # prepare test data
     resource("testdata").stage testpath
     fixtures = testpath/"Sources/TestUtils/Fixtures"
