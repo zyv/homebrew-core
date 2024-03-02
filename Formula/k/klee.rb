@@ -4,10 +4,9 @@ class Klee < Formula
 
   desc "Symbolic Execution Engine"
   homepage "https://klee-se.org"
-  url "https://github.com/klee/klee/archive/refs/tags/v3.0.tar.gz"
-  sha256 "204ebf0cb739886f574b1190b04fa9ed9088770c0634984782e9633d1aa4bdc9"
+  url "https://github.com/klee/klee/archive/refs/tags/v3.1.tar.gz"
+  sha256 "ae3d97209fa480ce6498ffaa7eaa7ecbbe22748c739cb7b2389391d0d9c940f7"
   license "NCSA"
-  revision 2
   head "https://github.com/klee/klee.git", branch: "master"
 
   bottle do
@@ -94,7 +93,9 @@ class Klee < Formula
     args = %W[
       -DKLEE_RUNTIME_BUILD_TYPE=Release
       -DKLEE_LIBCXX_DIR=#{libcxx_install_dir}
-      -DKLEE_LIBCXX_INCLUDE_DIR=#{libcxx_install_dir}/include/c++/v1
+      -DKLEE_LIBCXX_BC_PATH=#{libcxx_install_dir}/lib
+      -DKLEE_LIBCXX_INCLUDE_DIR=#{libcxx_install_dir}/include
+      -DKLEE_LIBCXX_INCLUDE_PATH=#{libcxx_install_dir}/include/c++/v1
       -DKLEE_LIBCXXABI_SRC_DIR=#{libcxx_src_dir}/libcxxabi
       -DLLVM_CONFIG_BINARY=#{llvm.opt_bin}/llvm-config
       -DM32_SUPPORTED=OFF
