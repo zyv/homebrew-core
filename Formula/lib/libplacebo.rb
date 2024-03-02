@@ -24,6 +24,11 @@ class Libplacebo < Formula
       url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
       sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
     end
+
+    resource "markupsafe" do
+      url "https://files.pythonhosted.org/packages/6d/7c/59a3248f411813f8ccba92a55feaac4bf360d29e2ff05ee7d8e1ef2d7dbf/MarkupSafe-2.1.3.tar.gz"
+      sha256 "af598ed32d6ae86f1b747b82783958b1a4ab8f617b06fe68795c7f026abbdcad"
+    end
   end
 
   bottle do
@@ -44,7 +49,6 @@ class Libplacebo < Formula
   depends_on "vulkan-headers" => :build
 
   depends_on "little-cms2"
-  depends_on "python-markupsafe"
   depends_on "shaderc"
   depends_on "vulkan-loader"
 
