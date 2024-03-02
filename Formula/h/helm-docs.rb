@@ -1,8 +1,8 @@
 class HelmDocs < Formula
   desc "Tool for automatically generating markdown documentation for helm charts"
   homepage "https://github.com/norwoodj/helm-docs"
-  url "https://github.com/norwoodj/helm-docs/archive/refs/tags/v1.13.0.tar.gz"
-  sha256 "628f1f9dac58eebba1f960863cdbf8045c9ec8fa740e32c7c15ac5edbf9963eb"
+  url "https://github.com/norwoodj/helm-docs/archive/refs/tags/v1.13.1.tar.gz"
+  sha256 "b1a0eba4120614f3ddc4d5cbe1133dcfc44ef746543c49a3e07168d2db55827d"
   license "GPL-3.0-or-later"
 
   # This repository originally used a date-based version format like `19.0110`
