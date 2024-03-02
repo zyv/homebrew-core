@@ -179,7 +179,6 @@
   "cruft": {
     "exclude_packages": ["certifi"]
   },
-  "cyclonedx-python": "cyclonedx-bom",
   "cycode": {
     "exclude_packages": ["certifi"]
   },
@@ -263,7 +262,6 @@
   "flit": {
     "exclude_packages": ["certifi", "docutils", "flit-core"]
   },
-  "fobis": "fobis-py",
   "gallery-dl": {
     "exclude_packages": ["certifi"]
   },
@@ -278,7 +276,6 @@
     "extra_packages": ["setuptools"]
   },
   "gimme-aws-creds": {
-    "package_name": "gimme-aws-creds",
     "exclude_packages": ["certifi", "cffi", "cryptography", "keyring", "six"],
     "extra_packages": ["pyobjc-framework-localauthentication"]
   },
@@ -327,7 +324,6 @@
     "exclude_packages": ["certifi"]
   },
   "huggingface-cli": {
-    "package_name": "huggingface-hub",
     "exclude_packages": ["certifi"]
   },
   "img2pdf": {
@@ -516,7 +512,6 @@
   "prowler": {
     "exclude_packages": ["certifi", "cryptography"]
   },
-  "psutils": "pspdfutils",
   "pwntools": {
     "exclude_packages": ["certifi", "cryptography"]
   },
@@ -568,7 +563,6 @@
     "extra_packages": ["setuptools-rust"]
   },
   "python-jinja": {
-    "package_name": "jinja2",
     "exclude_packages": ["markupsafe"]
   },
   "python-lsp-server": {
@@ -586,7 +580,6 @@
     "exclude_packages": ["numpy", "ply", "setuptools"]
   },
   "raven": {
-    "package_name": "raven-cycode",
     "exclude_packages": ["certifi"]
   },
   "rawdog": {
@@ -618,7 +611,6 @@
     "exclude_packages": ["ruff", "packaging", "typing-extensions"]
   },
   "sail": {
-    "package_name": "sailed-io",
     "exclude_packages": ["certifi", "cryptography"]
   },
   "sceptre": {
