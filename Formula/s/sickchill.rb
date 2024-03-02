@@ -3,8 +3,8 @@ class Sickchill < Formula
 
   desc "Automatic Video Library Manager for TV Shows"
   homepage "https://sickchill.github.io"
-  url "https://files.pythonhosted.org/packages/73/af/eb904911511036c7d5c1238a450893b5d7d6442d716e4037c28bd8b3ab41/sickchill-2024.2.20.204434.tar.gz"
-  sha256 "83f02fbc0bc936395d73f15c36bb9413dc2d3daa74ea3c74737e06861c4395ff"
+  url "https://files.pythonhosted.org/packages/31/fc/337b2989dc67bbb505cea34a05c029cbba3056311177586835f704ddc13a/sickchill-2024.3.1.tar.gz"
+  sha256 "e7079bb77b415eb6697a63d9018db1ad317d06ad285d0d77893747cbf000aa17"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -161,8 +161,8 @@ class Sickchill < Formula
   end
 
   resource "markdown2" do
-    url "https://files.pythonhosted.org/packages/3c/e4/87a454674ac303e2ca6c25713845d2ae1b59c1a88576054cbec25aaebad1/markdown2-2.4.12.tar.gz"
-    sha256 "1bc8692696954d597778e0e25713c14ca56d87992070dedd95c17eddaf709204"
+    url "https://files.pythonhosted.org/packages/74/89/a6bb59171d0bd5a3b19deb834ec29378a7c8e05bcb0a4dd4e5cb418ea03b/markdown2-2.4.13.tar.gz"
+    sha256 "18ceb56590da77f2c22382e55be48c15b3c8f0c71d6398def387275e6c347a9f"
   end
 
   resource "markupsafe" do
@@ -171,8 +171,8 @@ class Sickchill < Formula
   end
 
   resource "msgpack" do
-    url "https://files.pythonhosted.org/packages/c2/d5/5662032db1571110b5b51647aed4b56dfbd01bfae789fa566a2be1f385d1/msgpack-1.0.7.tar.gz"
-    sha256 "572efc93db7a4d27e404501975ca6d2d9775705c2d922390d878fcf768d92c87"
+    url "https://files.pythonhosted.org/packages/08/4c/17adf86a8fbb02c144c7569dc4919483c01a2ac270307e2d59e1ce394087/msgpack-1.0.8.tar.gz"
+    sha256 "95c02b0e27e706e48d0e5426d1710ca78e0f0628d6e89d5b5a5b91a5f12274f3"
   end
 
   resource "new-rtorrent-python" do
@@ -221,8 +221,8 @@ class Sickchill < Formula
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
-    sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
+    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
+    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
   end
 
   resource "python-slugify" do
@@ -246,8 +246,8 @@ class Sickchill < Formula
   end
 
   resource "qbittorrent-api" do
-    url "https://files.pythonhosted.org/packages/79/de/f1e129f4b4fb959c5f6ef3760f8675a41bcc93db54945250cfd702208eba/qbittorrent-api-2024.1.58.tar.gz"
-    sha256 "e89c94f66af4c5f44b07b00939c9cf73e3e91741168bf47f5b2de508a6a70260"
+    url "https://files.pythonhosted.org/packages/01/5f/c5f6e791ffbf0eb7ac8fde3d16b383a58aa97aa15355e86bed2847ba8baa/qbittorrent-api-2024.2.59.tar.gz"
+    sha256 "db6eef9ce26661cadb61df0c8d31bc73cdac7f76b034e17f6f101bcb426549f0"
   end
 
   resource "rarfile" do
@@ -332,8 +332,8 @@ class Sickchill < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
-    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
+    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
+    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
   end
 
   resource "unidecode" do
