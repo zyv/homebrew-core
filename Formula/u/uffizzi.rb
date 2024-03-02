@@ -1,8 +1,8 @@
 class Uffizzi < Formula
   desc "Self-serve developer platforms in minutes, not months with k8s virtual clusters"
   homepage "https://uffizzi.com"
-  url "https://github.com/UffizziCloud/uffizzi_cli/archive/refs/tags/v2.4.6.tar.gz"
-  sha256 "ceab3ca9975454cfea1acaa760194ff91a0c7b26adfdfadce44f2cd3c475a04f"
+  url "https://github.com/UffizziCloud/uffizzi_cli/archive/refs/tags/v2.4.7.tar.gz"
+  sha256 "5787b48ff15c3e1aa3fb341600184a456aa5622656a6412badf067b62b2f4bfb"
   license "Apache-2.0"
 
   livecheck do
@@ -66,8 +66,8 @@ class Uffizzi < Formula
   end
 
   resource "thor" do
-    url "https://rubygems.org/gems/thor-1.3.0.gem"
-    sha256 "1adc7f9e5b3655a68c71393fee8bd0ad088d14ee8e83a0b73726f23cbb3ca7c3"
+    url "https://rubygems.org/gems/thor-1.3.1.gem"
+    sha256 "fa7e3471d4f6a27138e3d9c9b0d4daac9c3d7383927667ae83e9ab42ae7401ef"
   end
 
   resource "concurrent-ruby" do
@@ -161,13 +161,13 @@ class Uffizzi < Formula
   end
 
   resource "activesupport" do
-    url "https://rubygems.org/gems/activesupport-7.1.3.gem"
-    sha256 "fbfc137f1ab0e3909bd3de3e2a965245abf0381a2a7e283fa766cee6f5e0f927"
+    url "https://rubygems.org/gems/activesupport-7.1.3.2.gem"
+    sha256 "ad8445b7ae4a6d3acc5f88c8c5f437eb0b54062032aaf44856c7b6d3855b8b2e"
   end
 
   resource "uffizzi-cli" do
-    url "https://rubygems.org/gems/uffizzi-cli-2.4.6.gem"
-    sha256 "7e5f366655933c94a62311515fe71b6db6ab129af9938c23b348246c07b5e94e"
+    url "https://rubygems.org/gems/uffizzi-cli-2.4.7.gem"
+    sha256 "fa3364b0e8888eeead5787c626dd71d5e1aae1dfb6466fc2c40c842028c46b1b"
   end
 
   def install
