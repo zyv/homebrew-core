@@ -253,6 +253,7 @@ cfn-lint
 cfonts
 cfr-decompiler
 cfssl
+cgal
 cgl
 cgrep
 chain-bench
@@ -315,8 +316,8 @@ coconut
 code-cli
 code-minimap
 code-server
-codelimit
 codec2
+codelimit
 coder
 codespell
 cog
@@ -335,6 +336,7 @@ condure
 conftest
 consul-template
 container-diff
+container-structure-test
 contentful-cli
 convco
 convox
@@ -398,6 +400,7 @@ daemon
 dafny
 dagger
 daq
+darkhttpd
 darkstat
 dart-sdk
 dartsim
@@ -586,6 +589,7 @@ falco
 falcoctl
 fantom
 fastfec
+fastfetch
 fastlane
 fastnetmon
 fastp
@@ -668,6 +672,7 @@ gator
 gatsby-cli
 gau
 gcovr
+gcsfuse
 gdal
 gdu
 geeqie
@@ -690,19 +695,25 @@ git-credential-oauth
 git-delta
 git-lfs
 git-town
+git-xargs
 gitbackup
 gitbucket
 gitea
+github-markdown-toc
 gitlab-ci-local
 gitlab-runner
 gitleaks
+gitoxide
 gitql
 gitsign
 gjs
 glassfish
+glasskube
 gleam
 glfw
+glib-networking
 glibmm
+glm
 global
 glooctl
 gmailctl
@@ -753,6 +764,7 @@ greed
 greenmask
 grin
 gromacs
+groonga
 groovy
 groovysdk
 grpc
@@ -769,6 +781,7 @@ hapi-fhir-cli
 haproxy
 hasura-cli
 hcloud
+hcxtools
 heartbeat
 helm
 helm-docs
@@ -784,6 +797,7 @@ himalaya
 hive
 hivemind
 hledger
+hoverfly
 hpack
 htmldoc
 htmlq
@@ -802,6 +816,7 @@ i2p
 iamy
 igraph
 igv
+ijq
 imagemagick
 imagemagick@6
 imap-backup
@@ -843,6 +858,7 @@ jhipster
 jj
 jmeter
 jnethack
+joplin-cli
 jose
 jpeg-turbo
 jql
@@ -875,9 +891,11 @@ keydb
 ki
 kickstart
 kics
+kin
 kind
 kiota
 kitchen-sync
+klee
 kn
 knot
 knot-resolver
@@ -897,6 +915,7 @@ kubeconform
 kubefirst
 kubergrunt
 kubernetes-cli
+kubescape
 kubeseal
 kubespy
 kubevela
@@ -923,9 +942,11 @@ lexbor
 lexicon
 lf
 libadwaita
+libbsd
 libdap
 libepoxy
 libffi
+libfontenc
 libgedit-gtksourceview
 libgetdata
 libgit2@1.6
@@ -949,16 +970,19 @@ libsais
 libsecret
 libshumate
 libsndfile
+libstrophe
 libucl
 libunwind
 libxext
 libxkbfile
 libxvmc
 libzim
+libzzip
 lighttpd
 lima
 linkerd
 linode-cli
+linux-headers@5.15
 liquibase
 livekit
 llm
@@ -974,6 +998,7 @@ lsof
 luau
 luit
 lunzip
+luv
 lux
 lychee
 lzip
@@ -1006,12 +1031,14 @@ memcached
 mercurial
 mesa
 meson
+meta-package-manager
 metabase
 metals
 metricbeat
 micro
 micromamba
 micronaut
+microsocks
 mighttpd2
 mill
 millet
@@ -1023,6 +1050,7 @@ miniserve
 minizinc
 minizip
 minuit2
+mlx
 mmark
 mmctl
 mmv
@@ -1044,7 +1072,9 @@ mpd
 mpg123
 mpich
 mpv
+mqttui
 mruby
+mu
 muffet
 murex
 mutt
@@ -1125,6 +1155,7 @@ openjdk
 openjdk@11
 openjdk@17
 openjdk@8
+openjpeg
 openjph
 openlibm
 openrtsp
@@ -1138,6 +1169,7 @@ operator-sdk
 optipng
 or-tools
 oras
+orc
 orc-tools
 ord
 organize-tool
@@ -1157,10 +1189,12 @@ pacapt
 packetbeat
 pandoc-crossref
 pari
+partio
 passenger
 patat
 patchelf
 payara
+pciutils
 pdal
 pdftk-java
 pdm
@@ -1198,6 +1232,7 @@ pmix
 pmtiles
 pngquant
 pnpm
+po4a
 pocketbase
 podman
 poetry
@@ -1214,6 +1249,7 @@ prettier
 principalmapper
 procs
 proftpd
+proj
 prometheus
 prometheus-cpp
 proto
@@ -1244,8 +1280,8 @@ pylint
 pyoxidizer
 pyright
 python-build
-python-dateutil
 python-cryptography
+python-dateutil
 python-mako
 python-matplotlib
 python-setuptools
@@ -1257,6 +1293,7 @@ qjackctl
 qpdf
 qpid-proton
 quantlib
+quantum++
 questdb
 quick-lint-js
 quicktype
@@ -1297,6 +1334,7 @@ risor
 rizin
 rke
 roadrunner
+rocksdb
 rojo
 rollup
 rosa-cli
@@ -1307,6 +1345,7 @@ rpmspectool
 rqlite
 rswift
 rsyncy
+rsyslog
 rubberband
 ruff
 ruff-lsp
@@ -1329,6 +1368,7 @@ scamper
 scarb
 sccache
 schemathesis
+scip
 scorecard
 scotch
 scrapy
@@ -1393,6 +1433,7 @@ solr
 sonarqube
 sonarqube-lts
 sonobuoy
+soplex
 spglib
 spicetify-cli
 spidermonkey
@@ -1407,6 +1448,7 @@ sqlmap
 sqlpage
 sqlx-cli
 squashfuse
+squealer
 squid
 src
 srtp
@@ -1457,6 +1499,7 @@ talhelper
 talisman
 tanka
 taplo
+tcl-tk
 tcsh
 tctl
 tealdeer
@@ -1501,6 +1544,7 @@ tomcat@9
 tomee-plus
 tomee-webprofile
 topgrade
+toxiproxy
 trader
 traefik
 trafficserver
@@ -1532,6 +1576,7 @@ vale
 vapoursynth
 vault-cli
 vcluster
+vcsh
 veclibfort
 velero
 verapdf
@@ -1570,6 +1615,7 @@ wasm-tools
 wasmer
 wasmtime
 watchexec
+wavpack
 web-ext
 webdis
 webkitgtk
