@@ -307,8 +307,11 @@
     "exclude_packages": ["certifi"]
   },
   "gyb": {
-    "exclude_packages": ["certifi", "cryptography"],
-    "extra_packages": ["pyinstaller"]
+    "package_name": "",
+    "exclude_packages": ["certifi"],
+    "extra_packages": [
+      "google-api-python-client", "google-auth", "google-auth-httplib2", "google-auth-oauthlib", "httplib2"
+    ]
   },
   "hatch": {
     "exclude_packages": ["certifi", "cryptography"]
