@@ -1,9 +1,9 @@
 class Testdisk < Formula
   desc "Powerful free data recovery utility"
   homepage "https://www.cgsecurity.org/wiki/TestDisk"
-  url "https://www.cgsecurity.org/testdisk-7.1.tar.bz2"
-  sha256 "1413c47569e48c5b22653b943d48136cb228abcbd6f03da109c4df63382190fe"
-  license "GPL-2.0"
+  url "https://www.cgsecurity.org/testdisk-7.2.tar.bz2"
+  sha256 "f8343be20cb4001c5d91a2e3bcd918398f00ae6d8310894a5a9f2feb813c283f"
+  license "GPL-2.0-or-later"
 
   livecheck do
     url "https://www.cgsecurity.org/wiki/TestDisk_Download"
@@ -32,10 +32,7 @@ class Testdisk < Formula
   end
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    system "./configure", "--disable-silent-rules", *std_configure_args.reject { |s| s["disable-debug"] }
     system "make", "install"
   end
 
