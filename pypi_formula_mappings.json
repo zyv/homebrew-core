@@ -105,6 +105,10 @@
     "exclude_packages": ["certifi", "Cython", "numpy"],
     "extra_packages": ["setuptools"]
   },
+  "cassandra": {
+    "package_name": "",
+    "extra_packages": ["cassandra-driver"]
+  },
   "ccm": {
     "extra_packages": ["cassandra-driver", "setuptools"]
   },
