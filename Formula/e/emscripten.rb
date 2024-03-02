@@ -57,7 +57,7 @@ class Emscripten < Formula
   # Then use the listed binaryen_revision for the revision below.
   resource "binaryen" do
     url "https://github.com/WebAssembly/binaryen.git",
-        revision: "feb8f24128c0c3bd53862b2f39acc5116f8ae87e"
+        revision: "2ca9638354e4a5f260ced04d186808fc8b498986"
   end
 
   # emscripten does not support using the stable version of LLVM.
@@ -65,8 +65,8 @@ class Emscripten < Formula
   # See binaryen resource above for instructions on how to update this.
   # Then use the listed llvm_project_revision for the tarball below.
   resource "llvm" do
-    url "https://github.com/llvm/llvm-project/archive/e769fb8699e3fa8e40623764f7713bfc783b0330.tar.gz"
-    sha256 "3b58a16f3ec7eb9cb510d4d941465ed1ac11b9893435f3c5a3c4a476dc3b94f8"
+    url "https://github.com/llvm/llvm-project/archive/6c7805d5d186a6d1263f90b8033ad85e2d2633d7.tar.gz"
+    sha256 "ca16158a37923eba027cc6354539caee53fd980530c844ab531e7aceb3da98e6"
   end
 
   def install
