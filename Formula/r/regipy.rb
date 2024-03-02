@@ -3,8 +3,8 @@ class Regipy < Formula
 
   desc "Offline registry hive parsing tool"
   homepage "https://github.com/mkorman90/regipy"
-  url "https://files.pythonhosted.org/packages/e0/f2/61846ba036f840b3cfe9b412dca3ef629bdc7506faafbd56b2c8de987950/regipy-3.1.6.tar.gz"
-  sha256 "edc9fd8501f3374afd49020550bf361235e569959712825fbd2f444d2aeca8d9"
+  url "https://files.pythonhosted.org/packages/ac/0a/958a8a5e6a29f350b175217a685d609c145d33d051861001a5967cfdf00f/regipy-4.0.0.tar.gz"
+  sha256 "d0cdbc1bdf0356c1911a2a568248ed8729ff3a4a21fa143a72c4b9c9b5c8afa5"
   license "MIT"
   head "https://github.com/mkorman90/regipy.git", branch: "master"
 
@@ -61,11 +61,11 @@ class Regipy < Formula
       sha256 "b1582ab413f089e746da0528c2394f077d6f53dd4e68b877ffb2667bd027b0b0"
     end
 
-    resource("homebrew-test_hive").stage do
-      system bin/"registry-plugins-run", "-p", "computer_name", "-o", "out.json", "SYSTEM"
-      h = JSON.parse(File.read("out.json"))
-      assert_equal h["computer_name"][0]["name"], "WKS-WIN732BITA"
-      assert_equal h["computer_name"][1]["name"], "WIN-V5T3CSP8U4H"
-    end
+    testpath.install resource("homebrew-test_hive")
+
+    system bin/"regipy-plugins-run", "-p", "computer_name", "-o", "out.json", "SYSTEM"
+    h = JSON.parse(File.read("out.json"))
+    assert_equal h["computer_name"][0]["name"], "WKS-WIN732BITA"
+    assert_equal h["computer_name"][1]["name"], "WIN-V5T3CSP8U4H"
   end
 end
