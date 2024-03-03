@@ -689,7 +689,6 @@ gifski
 ginac
 git-absorb
 git-annex
-git-cliff
 git-codereview
 git-credential-oauth
 git-delta
