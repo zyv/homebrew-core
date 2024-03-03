@@ -8,14 +8,13 @@ class Sickchill < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9d09aedaf661ffc5027723c7f05dcb52cf62c14c3cc878a98922d558d595d8a6"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "94ba11078b1361f083c749d53c0273840767c061fe044aa278157a128bc0055c"
-    sha256 cellar: :any,                 arm64_monterey: "51bbbe2f33764a962752613ea7cdd759572b93ae6e6e8f84ea96b53896ca125d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e23efd3f1111028a4b2c042aa4cd29727de52d210ca0bd2ebf4d4a85f7e1ebc9"
-    sha256 cellar: :any_skip_relocation, ventura:        "1ed3fcd1f670f531872c29b19dc4ee8e56f3f18ee710ae0893ee247afa5146c8"
-    sha256 cellar: :any,                 monterey:       "6df49cd8ddf1f54516874736ebe028f60b6785175203448c7726e13e7902645d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5931922ae5e28f137aad8ae626e132fe3eb8286a571b028b50adec09c85b08cc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2166c7af8db9e100863064210a48c6e3c75c4e7a7fa48d9a178a2d5c2fdcf42d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e697fcd45ddbda231915bcfa276c3896ca105c8fd49675078ba12bbeb26c79f9"
+    sha256 cellar: :any,                 arm64_monterey: "2e8e564ebeb651c90671644c491050815a28c32f799c2e45d15531f2c4fe4f6c"
+    sha256 cellar: :any_skip_relocation, sonoma:         "67bcc0cbd4448ea3b1c44f65ed8e64511f5b58920d37af0e3aa61a6a61649792"
+    sha256 cellar: :any_skip_relocation, ventura:        "048ca54cef8b86546d69306c06ecf4f6402b9b362ba7783f7ccb671570cca806"
+    sha256 cellar: :any,                 monterey:       "9c9c36235d86700cd43f9810108240a29fe5ccd82e8ea80ed677fd7e8e3f7703"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2289f697ffcc643da6c2d19987e36a8286e9d38b532f8da7072b1a8b51c11b8"
   end
 
   depends_on "python-certifi"
