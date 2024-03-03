@@ -1,8 +1,8 @@
 class Sponge < Formula
   desc "Soak up standard input and write to a file"
   homepage "https://joeyh.name/code/moreutils/"
-  url "https://git.joeyh.name/index.cgi/moreutils.git/snapshot/moreutils-0.68.tar.gz"
-  sha256 "5eb14bc7bc1407743478ebdbd83772bf3b927fd949136a2fbbde96fa6000b6e7"
+  url "https://git.joeyh.name/index.cgi/moreutils.git/snapshot/moreutils-0.69.tar.gz"
+  sha256 "0f795d25356ca61544966646fb707d5be0b9864116be0269df5433f62d4e05d1"
   license "GPL-2.0-only"
   head "https://git.joeyh.name/git/moreutils.git", branch: "master"
 
