@@ -3,10 +3,9 @@ class Nox < Formula
 
   desc "Flexible test automation for Python"
   homepage "https://nox.thea.codes/"
-  url "https://files.pythonhosted.org/packages/e7/3b/529fa8920b18b92085ed5923caee4aee112c65a7af99b34bd5a868b82e3e/nox-2023.4.22.tar.gz"
-  sha256 "46c0560b0dc609d7d967dc99e22cb463d3c4caf54a5fda735d6c11b5177e3a9f"
+  url "https://files.pythonhosted.org/packages/8a/6b/2c02879d29704b74586a89900c48d9744780a5aad771f1d182c7394cfd57/nox-2024.3.2.tar.gz"
+  sha256 "f521ae08a15adbf5e11f16cb34e8d0e6ea521e0b92868f684e91677deb974553"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     rebuild 1
@@ -52,8 +51,8 @@ class Nox < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/94/d7/adb787076e65dc99ef057e0118e25becf80dd05233ef4c86f07aa35f6492/virtualenv-20.25.0.tar.gz"
-    sha256 "bf51c0d9c7dd63ea8e44086fa1e4fb1093a31e963b86959257378aef020e1f1b"
+    url "https://files.pythonhosted.org/packages/93/4f/a7737e177ab67c454d7e60d48a5927f16cd05623e9dd888f78183545d250/virtualenv-20.25.1.tar.gz"
+    sha256 "e08e13ecdca7a0bd53798f356d5831434afa5b07b93f0abdf0797b7a06ffe197"
   end
 
   def install
