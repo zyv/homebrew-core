@@ -1,10 +1,9 @@
 class Pqiv < Formula
   desc "Powerful image viewer with minimal UI"
   homepage "https://github.com/phillipberndt/pqiv"
-  url "https://github.com/phillipberndt/pqiv/archive/refs/tags/2.12.tar.gz"
-  sha256 "1538128c88a70bbad2b83fbde327d83e4df9512a2fb560eaf5eaf1d8df99dbe5"
-  license "GPL-3.0"
-  revision 7
+  url "https://github.com/phillipberndt/pqiv/archive/refs/tags/2.13.tar.gz"
+  sha256 "5dfe9272460edcc50e512dd3fec5eae6e2344dccd35ef6ee95fb747458dd5e9d"
+  license "GPL-3.0-or-later"
   head "https://github.com/phillipberndt/pqiv.git", branch: "master"
 
   bottle do
