@@ -10,6 +10,10 @@ class ScalaAT33 < Formula
     regex(%r{href=.*?download/v?(3\.3(?:\.\d+)+)\.html}i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "a4f166a3db595429364d57bc9946e248247cab3249054bbd66cccee7d3fa8574"
+  end
+
   keg_only :versioned_formula
 
   depends_on "openjdk"
