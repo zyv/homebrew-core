@@ -1,11 +1,10 @@
 class Gdb < Formula
   desc "GNU debugger"
   homepage "https://www.gnu.org/software/gdb/"
-  url "https://ftp.gnu.org/gnu/gdb/gdb-14.1.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gdb/gdb-14.1.tar.xz"
-  sha256 "d66df51276143451fcbff464cc8723d68f1e9df45a6a2d5635a54e71643edb80"
+  url "https://ftp.gnu.org/gnu/gdb/gdb-14.2.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gdb/gdb-14.2.tar.xz"
+  sha256 "2d4dd8061d8ded12b6c63f55e45344881e8226105f4d2a9b234040efa5ce7772"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   bottle do
@@ -47,16 +46,13 @@ class Gdb < Formula
   def install
     args = %W[
       --enable-targets=all
-      --prefix=#{prefix}
-      --disable-debug
-      --disable-dependency-tracking
       --with-lzma
       --with-python=#{Formula["python@3.12"].opt_bin}/python3.12
       --disable-binutils
     ]
 
     mkdir "build" do
-      system "../configure", *args
+      system "../configure", *args, *std_configure_args
       system "make"
 
       # Don't install bfd or opcodes, as they are provided by binutils
