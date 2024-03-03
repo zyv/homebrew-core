@@ -6,15 +6,13 @@ class FontsEncodings < Formula
   license :public_domain
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "25349d15a665e08f3034aadd98d62e3c27c329c4e8d9577e9f7f067d65b23486"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8c0127299540c1452cdb1849cdd5ba8b33eb24c9d79aa722aa21b64977c9fd9d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8c0127299540c1452cdb1849cdd5ba8b33eb24c9d79aa722aa21b64977c9fd9d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "8c0127299540c1452cdb1849cdd5ba8b33eb24c9d79aa722aa21b64977c9fd9d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "25349d15a665e08f3034aadd98d62e3c27c329c4e8d9577e9f7f067d65b23486"
-    sha256 cellar: :any_skip_relocation, ventura:        "8c0127299540c1452cdb1849cdd5ba8b33eb24c9d79aa722aa21b64977c9fd9d"
-    sha256 cellar: :any_skip_relocation, monterey:       "8c0127299540c1452cdb1849cdd5ba8b33eb24c9d79aa722aa21b64977c9fd9d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "8c0127299540c1452cdb1849cdd5ba8b33eb24c9d79aa722aa21b64977c9fd9d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f04de4d8394265ab50eb42d0e7b895547fd0032cc87d5180544e921c4487f44"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "59c87e4e30083b75e3018ad22f97910fad4e0a836078f4004dd317e5fe15a0bd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "59c87e4e30083b75e3018ad22f97910fad4e0a836078f4004dd317e5fe15a0bd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "59c87e4e30083b75e3018ad22f97910fad4e0a836078f4004dd317e5fe15a0bd"
+    sha256 cellar: :any_skip_relocation, sonoma:         "59c87e4e30083b75e3018ad22f97910fad4e0a836078f4004dd317e5fe15a0bd"
+    sha256 cellar: :any_skip_relocation, ventura:        "59c87e4e30083b75e3018ad22f97910fad4e0a836078f4004dd317e5fe15a0bd"
+    sha256 cellar: :any_skip_relocation, monterey:       "59c87e4e30083b75e3018ad22f97910fad4e0a836078f4004dd317e5fe15a0bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1db746be5c88ea8ceebfc07dd720c2f004b4e82e1c86fb311314ad0698ff8a20"
   end
 
   depends_on "font-util"   => :build
