@@ -29,6 +29,10 @@ class Vorbisgain < Formula
   depends_on "libvorbis"
 
   def install
+    # fix implicit-function-declaration errors
+    ENV.append_to_cflags "-DGWINSZ_IN_SYS_IOCTL"
+    inreplace "misc.c", "#include <string.h>", "#include <string.h>\n#include <unistd.h>"
+
     system "./configure", "--prefix=#{prefix}", "--mandir=#{man}"
     system "make", "install"
   end
