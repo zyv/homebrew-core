@@ -12,13 +12,13 @@ class Quictls < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "b935d3c20432ee4c30287c619ef15e7eb04c53375cfd910a0094c20edf0aa5e9"
-    sha256 arm64_ventura:  "f06a54674f3eeff0a011313c8cbf778315a2d555c1aaa9799801dcba4bab5b75"
-    sha256 arm64_monterey: "8072b1e4965fe8b271539f927a03d550758268e8841842f6a4b6298da5505140"
-    sha256 sonoma:         "28b6d5895cb7fbe3a9d09ec1908526f71b91a50754d825108d8b9a61b43ec2e2"
-    sha256 ventura:        "80fd4424f7bee7218208a8153218e2fc4493db774ec79bd2496dabd8d598bfda"
-    sha256 monterey:       "3b8c85997c5cfe55f90facef8aff805465e23c2c661b294fac88b74df6c344fe"
-    sha256 x86_64_linux:   "63edb370864adcb173929b83dc3e2a6d56386ada55f56f0657d41b611b4e3270"
+    sha256 arm64_sonoma:   "08beb28e31675db80511b2b696cf68449b213ac987563ee3375ab1aad920e48d"
+    sha256 arm64_ventura:  "b33b84c2685bcffc0e842ee5c759d7d0bbde83609d8f85ea3f7c96d2ef39c66a"
+    sha256 arm64_monterey: "15fef5e6c9c440c9d247845902723cce3ab285bf977441e2762b4f972611f66f"
+    sha256 sonoma:         "37515eb8535ec78718c285f85b4e00d48200169e06a47989510d2ca4d4a2f3b2"
+    sha256 ventura:        "c44036f24d7f2b57f823b484b0c31d7686f9f213b3acab040b231097f72bb8ef"
+    sha256 monterey:       "22ae5e6a9455b9a4ec03566f8bcf74d8b62f35d87ca00a94b5696defb902056a"
+    sha256 x86_64_linux:   "163a9a537be0d3df35db03097596b0761184852ed0b3cd1f2810d1edaf1746e2"
   end
 
   keg_only "it conflicts with OpenSSL"
