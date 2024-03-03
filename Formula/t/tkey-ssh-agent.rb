@@ -12,14 +12,13 @@ class TkeySshAgent < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b00f8db7fb3ec5aea7d08770da1a30de735ea365845c0dba0bd70c039116d82a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ee703b7d46264fb1adce0b6187d19719cd2210be3fd183bc1fa34ce0b33ed8c"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "bdba6e501630f4265b5905162e3c7adc3ce7360451422660b6ddf3872630b901"
-    sha256 cellar: :any_skip_relocation, ventura:        "155165d00aac01bbad4dae356ad2c240ad33d53458da154e8f8173d5ebbbcfce"
-    sha256 cellar: :any_skip_relocation, monterey:       "95d87b785d72bfe0ef2bf50601c2f780c6096119734b6d81962c3f035066f0ec"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4947e759c1abfe46536aadfe8f2ab7b1651a3568b6b49a1cecced1d81b576238"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ea710fcd774b3c3f75da1f62462b0137952f8f6b4f9fc50350a45a5830fb18e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d1693eb4c1246a0d6afd2dd24902f34cf8e8f92e3009c0b95325e29f1e576e0e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "79f70b9d9de1d77985992cb64e3a455e6863a7a2a0697b1295a31bada78b544d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4b0c368897a67c585ec79ccef5e95940637a8bbcf47db37037b6f29f652606f8"
+    sha256 cellar: :any_skip_relocation, sonoma:         "8f62ea8147b984c3efb65831704ab4c8de14c65622ad5fb94ee3aeebfc561fb0"
+    sha256 cellar: :any_skip_relocation, ventura:        "9ef52e8c902faaa44b64409de0baea593a7ac1075ab179308cf926109deba6b7"
+    sha256 cellar: :any_skip_relocation, monterey:       "60d5a0a4f086a93f1c994209604cfa2a4e4b304b6e6b8025f5d1561551009c6a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6330e99e8ada1967925e768f19ab93405c445a18876baddd43d8d8cd9d91a3c0"
   end
 
   depends_on "go" => :build
