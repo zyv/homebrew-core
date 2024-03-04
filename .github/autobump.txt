@@ -1481,6 +1481,7 @@ src
 srtp
 sshs
 sslyze
+stackql
 stanford-corenlp
 starship
 staticcheck
