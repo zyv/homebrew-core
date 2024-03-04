@@ -2,10 +2,9 @@ class Makepkg < Formula
   desc "Compile and build packages suitable for installation with pacman"
   homepage "https://wiki.archlinux.org/index.php/makepkg"
   url "https://gitlab.archlinux.org/pacman/pacman.git",
-      tag:      "v6.0.2",
-      revision: "c2d4568d35173f92c17b6b93222bc101a63c9928"
+      tag:      "v6.1.0",
+      revision: "e3dc296ba35d5039775c6e53decc7296b3bce396"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://gitlab.archlinux.org/pacman/pacman.git", branch: "master"
 
   bottle do
@@ -40,10 +39,6 @@ class Makepkg < Formula
     depends_on "gettext"
   end
 
-  # Submitted upstream: https://www.mail-archive.com/pacman-dev@lists.archlinux.org/msg00896.html
-  # Remove when these fixes have been merged.
-  patch :DATA
-
   def install
     ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
 
@@ -73,42 +68,3 @@ class Makepkg < Formula
     assert_match "md5sums=('e232a2683c0", pipe_output("#{bin}/makepkg -dg 2>&1")
   end
 end
-
-__END__
-diff --git a/meson.build b/meson.build
-index 76b9d2aa..e904056a 100644
---- a/meson.build
-+++ b/meson.build
-@@ -175,7 +175,8 @@ foreach type : [
-   endif
- endforeach
- 
--if conf.has('HAVE_STRUCT_STATVFS_F_FLAG')
-+os = host_machine.system()
-+if conf.has('HAVE_STRUCT_STATVFS_F_FLAG') and not os.startswith('darwin')
-   conf.set('FSSTATSTYPE', 'struct statvfs')
- elif conf.has('HAVE_STRUCT_STATFS_F_FLAGS')
-   conf.set('FSSTATSTYPE', 'struct statfs')
-@@ -235,7 +236,6 @@ if file_seccomp.enabled() or ( file_seccomp.auto() and filever.version_compare('
-   filecmd = 'file -S'
- endif
- 
--os = host_machine.system()
- if os.startswith('darwin')
-   inodecmd = '/usr/bin/stat -f \'%i %N\''
-   strip_binaries = ''
-diff --git a/lib/libalpm/util.c b/lib/libalpm/util.c
-index 299d287e..fa8ccb79 100644
---- a/lib/libalpm/util.c
-+++ b/lib/libalpm/util.c
-@@ -93,6 +93,10 @@ char *strsep(char **str, const char *delims)
- }
- #endif
- 
-+#ifndef MSG_NOSIGNAL
-+#define MSG_NOSIGNAL 0
-+#endif
-+
- int _alpm_makepath(const char *path)
- {
- 	return _alpm_makepath_mode(path, 0755);
