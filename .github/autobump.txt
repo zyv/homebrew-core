@@ -1244,6 +1244,7 @@ picard-tools
 pidgin
 pig
 pillow
+pint
 pip-audit
 pipdeptree
 pipenv
