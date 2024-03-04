@@ -900,6 +900,7 @@ kin
 kind
 kiota
 kitchen-sync
+kitex
 klee
 kn
 knot
