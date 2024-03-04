@@ -1188,6 +1188,7 @@ openvdb
 openvpn
 operator-sdk
 optipng
+opus
 or-tools
 oras
 orc
