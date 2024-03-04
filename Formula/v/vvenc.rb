@@ -1,8 +1,8 @@
 class Vvenc < Formula
   desc "Fraunhofer Versatile Video Encoder"
   homepage "https://github.com/fraunhoferhhi/vvenc"
-  url "https://github.com/fraunhoferhhi/vvenc/archive/refs/tags/v1.11.0.tar.gz"
-  sha256 "b586bbfd8c2e539b1308cb1af13b7e595d6464973339dcef9414c503e663a09f"
+  url "https://github.com/fraunhoferhhi/vvenc/archive/refs/tags/v1.11.1.tar.gz"
+  sha256 "4f0c8ac3f03eb970bee7a0cacc57a886ac511d58f081bb08ba4bce6f547d92fa"
   license "BSD-3-Clause-Clear"
   head "https://github.com/fraunhoferhhi/vvenc.git", branch: "master"
 
