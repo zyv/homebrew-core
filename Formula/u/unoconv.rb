@@ -1,5 +1,5 @@
 class Unoconv < Formula
-  include Language::Python::Shebang
+  include Language::Python::Virtualenv
 
   desc "Convert between any document format supported by OpenOffice"
   homepage "https://github.com/unoconv/unoconv"
@@ -20,13 +20,16 @@ class Unoconv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "8167e5b24c8d2ce044195a705f0b5df7b78bb34c9f86de6d5764a3e252938c71"
   end
 
-  depends_on "python-setuptools"
   depends_on "python@3.12"
 
-  def install
-    rewrite_shebang detected_python_shebang, "unoconv"
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
+    sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
+  end
 
-    system "make", "install", "prefix=#{prefix}"
+  def install
+    virtualenv_install_with_resources
+    man1.install "doc/unoconv.1"
   end
 
   def caveats
