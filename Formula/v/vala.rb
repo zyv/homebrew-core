@@ -1,8 +1,8 @@
 class Vala < Formula
   desc "Compiler for the GObject type system"
   homepage "https://wiki.gnome.org/Projects/Vala"
-  url "https://download.gnome.org/sources/vala/0.56/vala-0.56.14.tar.xz"
-  sha256 "9382c268ca9bdc02aaedc8152a9818bf3935273041f629c56de410e360a3f557"
+  url "https://download.gnome.org/sources/vala/0.56/vala-0.56.15.tar.xz"
+  sha256 "535b6452ed310fd5fb5c7dd6794b6213dac3b48e645e5bff3173741ec2cb3f2b"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -15,6 +15,7 @@ class Vala < Formula
     sha256 x86_64_linux:   "67f2ba93201fc7b94bc3281ad8613a1573c83000719937736f54bb33ec6e82fb"
   end
 
+  depends_on "gobject-introspection" => :build
   depends_on "glib"
   depends_on "graphviz"
   depends_on "pkg-config"
