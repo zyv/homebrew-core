@@ -7,14 +7,13 @@ class NicotinePlus < Formula
   head "https://github.com/nicotine-plus/nicotine-plus.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0278cdcb03b270a7554386af39013a5261c4074c4e707027a0fcd4451fa1fccd"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2bc43fb01c74f583bcbf8c3f2a95a8f288822d18280c3044fafd8c11e32ed489"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d65e6d892d41983202678c4a3b4727c953bff0404a0fe39ced8cc4a67630632a"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2b3afc6cc64ba47d861e1a6ca816d7772b7ad58488701a9c23a82b80a6829f6c"
-    sha256 cellar: :any_skip_relocation, ventura:        "4c5dcf9e3a43915859a934a6b595ded6635b29d96ead15d62f913f8b0f96b6f0"
-    sha256 cellar: :any_skip_relocation, monterey:       "9bab9615e731475b5d0354206947096cd509895d6ff2a87a3dbd6eb367acb250"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a35625dd14980819b3e368b908fbbd1fef28bddc60d7b844666e01e8e7ed98b1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5565fe37bf69ffd2fae40f60264bad93d78d38514970992e4e419b4fd3d93cd5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "332cec3c9bc5097df8eec71592de7b306a1523df6a133b6ca74013111fe8c430"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "81508c19a88029ce215135865bd25a7a7f99ac640d48bd4d6ba12beee2b8cdd0"
+    sha256 cellar: :any_skip_relocation, sonoma:         "5911076dbbdfd23d02055f2eeb6312b9f2a504534c091f31cbf79f55fca2631a"
+    sha256 cellar: :any_skip_relocation, ventura:        "af4b07dde9b61feb8ac719bac9d7bf1e98982ccf8c3d37e42816d4bf9c6d66b5"
+    sha256 cellar: :any_skip_relocation, monterey:       "cb11d4103518471e4aa97d0d5236feaa22f9bd6c6846380d1e267411293f223e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78f419828edaf51c818c4458e30eab56f3009b3e2422a98145ea5b0a0af3bd0d"
   end
 
   depends_on "python-setuptools" => :build
