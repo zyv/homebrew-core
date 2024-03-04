@@ -1,8 +1,8 @@
 class Liblouis < Formula
   desc "Open-source braille translator and back-translator"
   homepage "https://liblouis.io"
-  url "https://github.com/liblouis/liblouis/releases/download/v3.28.0/liblouis-3.28.0.tar.gz"
-  sha256 "69eddef2cf2118748a1d548cab3671ba31140c37dd821a2d893d95bc2796e1b0"
+  url "https://github.com/liblouis/liblouis/releases/download/v3.29.0/liblouis-3.29.0.tar.gz"
+  sha256 "4e73d86bbfe1a9af5447b3ddd607243b50414989ec290bfb467b9b774675c8f5"
   license all_of: ["GPL-3.0-or-later", "LGPL-2.1-or-later"]
 
   bottle do
