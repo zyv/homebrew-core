@@ -1,15 +1,10 @@
 class C2048 < Formula
   desc "Console version of 2048"
   homepage "https://github.com/mevdschee/2048.c"
-  url "https://github.com/mevdschee/2048.c.git",
-      revision: "6c04517bb59c28f3831585da338f021bc2ea86d6"
-  version "0.20221023"
+  url "https://github.com/mevdschee/2048.c/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "13d3fb3f2fd12f188d54f0a2d6809f89b5cc5e630d4f5a5b758386c0f63878ed"
   license "MIT"
   head "https://github.com/mevdschee/2048.c.git", branch: "main"
-
-  livecheck do
-    skip "No version information available"
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dbd85875750479ff4df41f6b5ebce81f6f101296205a96a64bdf5b861101a8f2"
@@ -25,17 +20,7 @@ class C2048 < Formula
 
   def install
     system "make"
-    bin.install "2048"
-  end
-
-  def caveats
-    <<~EOS
-      The game supports different color schemes.
-      For the black-to white:
-        2048 blackwhite
-      For the blue-to-red:
-        2048 bluered
-    EOS
+    system "make", "install", "PREFIX=#{prefix}"
   end
 
   test do
