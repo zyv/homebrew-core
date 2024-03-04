@@ -1,4 +1,6 @@
 class Diceware < Formula
+  include Language::Python::Virtualenv
+
   desc "Passphrases to remember"
   homepage "https://github.com/ulif/diceware"
   url "https://files.pythonhosted.org/packages/2f/7b/2ebe60ee2360170d93f1c3f1e4429353c8445992fc2bc501e98013697c71/diceware-0.10.tar.gz"
@@ -16,15 +18,15 @@ class Diceware < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "c94513ee25d0bc75a5199e701e03b294d2bede4eefbdf625408a9aa7329ddee8"
   end
 
-  depends_on "python-setuptools" # remove for v0.11+
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
+    sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    virtualenv_install_with_resources
     man1.install "diceware.1"
   end
 
