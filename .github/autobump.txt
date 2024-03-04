@@ -985,6 +985,7 @@ libsndfile
 libstrophe
 libucl
 libunwind
+libvirt
 libxaw3d
 libxcursor
 libxext
