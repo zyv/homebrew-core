@@ -3,8 +3,8 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/0c/9b/c3ac437fd7b16a8c84daa6ed2873b2edb49c112b8b6a044fc963c66f9c02/dvc-3.48.1.tar.gz"
-  sha256 "13b34b2ecf7af03fc4a9c9280feb4c41e7cb7c499d6a49997eec7676b64f74b9"
+  url "https://files.pythonhosted.org/packages/88/a8/05376e4acce2f2184bbe9b75c4d5b98da44f9fe36824fb168b4940518709/dvc-3.48.2.tar.gz"
+  sha256 "7c0fe758fc19d0c52a0e015b74a6119655f2bd9305ec866b6cafb726eeab2c38"
   license "Apache-2.0"
 
   bottle do
@@ -284,8 +284,8 @@ class Dvc < Formula
   end
 
   resource "dvc-s3" do
-    url "https://files.pythonhosted.org/packages/89/a5/fd9057fe138bedaaab8ef5b8613a915dbd8e8f123f81de5044d3ecd70199/dvc-s3-3.0.1.tar.gz"
-    sha256 "6b1d96b237efbb886817df5e0cf4f6b1b161977d30b98b46744a276020a424c6"
+    url "https://files.pythonhosted.org/packages/af/a6/302a85a3a257bbb0cc638b00a32619f10f1f761c4335f7da88758a73b2e9/dvc-s3-3.1.0.tar.gz"
+    sha256 "d320f916c8a741ab7771b998e6d7829454b4284194bc40f6021fc909b4ed67fb"
   end
 
   resource "dvc-ssh" do
@@ -394,8 +394,8 @@ class Dvc < Formula
   end
 
   resource "google-cloud-storage" do
-    url "https://files.pythonhosted.org/packages/16/88/fc34f8c177ad56408d42f4b54c10402366d309737fae206d59fa16a4a27a/google-cloud-storage-2.14.0.tar.gz"
-    sha256 "2d23fcf59b55e7b45336729c148bb1c464468c69d5efbaee30f7201dd90eb97e"
+    url "https://files.pythonhosted.org/packages/e6/41/ffa205e62a644ab63fecb795d139bc94ceee255f341b1fd33fa070e23461/google-cloud-storage-2.15.0.tar.gz"
+    sha256 "7560a3c48a03d66c553dc55215d35883c680fe0ab44c23aa4832800ccc855c74"
   end
 
   resource "google-crc32c" do
@@ -634,8 +634,8 @@ class Dvc < Formula
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/d9/77/bd458a2e387e98f71de86dcc2ca2cab64489736004c80bc12b70da8b5488/python-dateutil-2.9.0.tar.gz"
-    sha256 "78e73e19c63f5b20ffa567001531680d939dc042bf7850431877645523c66709"
+    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
+    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
   end
 
   resource "pyyaml" do
