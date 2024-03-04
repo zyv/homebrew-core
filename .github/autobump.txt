@@ -252,6 +252,7 @@ cfitsio
 cfn-lint
 cfonts
 cfr-decompiler
+cfripper
 cfssl
 cgal
 cgl
