@@ -3,8 +3,8 @@ require "language/node"
 class Renovate < Formula
   desc "Automated dependency updates. Flexible so you don't need to be"
   homepage "https://github.com/renovatebot/renovate"
-  url "https://registry.npmjs.org/renovate/-/renovate-37.225.0.tgz"
-  sha256 "d49095ba6351a1c60a98fa111ca901a23d7a8934576d03ad66ddc8e778d3cb43"
+  url "https://registry.npmjs.org/renovate/-/renovate-37.226.0.tgz"
+  sha256 "88f1e08e16e291f5474d637920b55a39763c5583614c45276a77d81536ce1a79"
   license "AGPL-3.0-only"
 
   # There are thousands of renovate releases on npm and page the `Npm` strategy
