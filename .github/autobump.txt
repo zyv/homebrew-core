@@ -1667,6 +1667,7 @@ woof-doom
 wumpus
 wxwidgets
 x3270
+xauth
 xbyak
 xcbeautify
 xclogparser
