@@ -830,6 +830,7 @@ influxdb-cli
 influxdb@1
 inxi
 ioctl
+ipfs
 ipinfo-cli
 ipmiutil
 ipopt
