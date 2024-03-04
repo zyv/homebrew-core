@@ -1,8 +1,8 @@
 class Dnsx < Formula
   desc "DNS query and resolution tool"
   homepage "https://github.com/projectdiscovery/dnsx"
-  url "https://github.com/projectdiscovery/dnsx/archive/refs/tags/v1.1.6.tar.gz"
-  sha256 "5fc857feceac3438ab1a3d9a577412ad153be5206887d4396247f87939be8e9c"
+  url "https://github.com/projectdiscovery/dnsx/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "45c48c4b925efe8388523e4e2e73bbfb7508df8f1fd238c176698674954ea505"
   license "MIT"
   head "https://github.com/projectdiscovery/dnsx.git", branch: "master"
 
@@ -24,8 +24,8 @@ class Dnsx < Formula
 
   test do
     (testpath/"domains.txt").write "docs.brew.sh"
-    expected_output = "docs.brew.sh [homebrew.github.io]"
+    expected_output = "docs.brew.sh [CNAME] [homebrew.github.io]"
     assert_equal expected_output,
-      shell_output("#{bin}/dnsx -silent -l #{testpath}/domains.txt -cname -resp").strip
+      shell_output("#{bin}/dnsx -no-color -silent -l #{testpath}/domains.txt -cname -resp").strip
   end
 end
