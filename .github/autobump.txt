@@ -970,6 +970,7 @@ libksba
 liblinear
 libmicrohttpd
 libnfs
+libnice
 liboqs
 libpano
 libphonenumber

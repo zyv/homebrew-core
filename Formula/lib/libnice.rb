@@ -1,8 +1,8 @@
 class Libnice < Formula
   desc "GLib ICE implementation"
   homepage "https://wiki.freedesktop.org/nice/"
-  url "https://libnice.freedesktop.org/releases/libnice-0.1.21.tar.gz"
-  sha256 "72e73a2acf20f59093e21d5601606e405873503eb35f346fa621de23e99b3b39"
+  url "https://libnice.freedesktop.org/releases/libnice-0.1.22.tar.gz"
+  sha256 "a5f724cf09eae50c41a7517141d89da4a61ec9eaca32da4a0073faed5417ad7e"
   license any_of: ["LGPL-2.1-only", "MPL-1.1"]
 
   livecheck do
