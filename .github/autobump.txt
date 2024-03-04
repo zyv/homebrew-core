@@ -1067,6 +1067,7 @@ miniserve
 minizinc
 minizip
 minuit2
+mkfontscale
 mlx
 mmark
 mmctl
