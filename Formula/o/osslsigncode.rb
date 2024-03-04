@@ -1,8 +1,8 @@
 class Osslsigncode < Formula
   desc "OpenSSL based Authenticode signing for PE/MSI/Java CAB files"
   homepage "https://github.com/mtrojnar/osslsigncode"
-  url "https://github.com/mtrojnar/osslsigncode/archive/refs/tags/2.7.tar.gz"
-  sha256 "00fc2b43395d89a2d07ebbd4981e7a9dbc676c7115d122a1385441c0294239b8"
+  url "https://github.com/mtrojnar/osslsigncode/archive/refs/tags/2.8.tar.gz"
+  sha256 "d275d86bf0a8094e2c2ea451065299f965238be3cfaf3af6aff276302d759354"
   license "GPL-3.0-or-later"
 
   bottle do
