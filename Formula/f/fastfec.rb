@@ -2,8 +2,8 @@ class Fastfec < Formula
   desc "Extremely fast FEC filing parser written in C"
   homepage "https://www.washingtonpost.com/fastfec/"
   # Check whether PCRE linking issue is fixed in Zig at version bump.
-  url "https://github.com/washingtonpost/FastFEC/archive/refs/tags/0.1.9.tar.gz"
-  sha256 "1f6611b76c54005580d937cbac75b57783a33aa18eb32e4906ae919f6a1f0c0e"
+  url "https://github.com/washingtonpost/FastFEC/archive/refs/tags/0.2.0.tar.gz"
+  sha256 "d983cf9e7272700fc24642118759d6ab4185fca74b193851fa6a21e3c73964ab"
   license "MIT"
 
   bottle do
@@ -28,18 +28,6 @@ class Fastfec < Formula
     depends_on "pcre" # PCRE2 issue: https://github.com/washingtonpost/FastFEC/issues/57
   end
 
-  resource "homebrew-13360" do
-    url "https://docquery.fec.gov/dcdev/posted/13360.fec"
-    sha256 "b7e86309f26af66e21b28aec7bd0f7844d798b621eefa0f7601805681334e04c"
-  end
-
-  # Fix install_name rewriting for bottling.
-  # https://github.com/washingtonpost/FastFEC/pull/56
-  patch do
-    url "https://github.com/washingtonpost/FastFEC/commit/36cf7e84083ac2c6dbd1694107e2c0a3fdc800ae.patch?full_index=1"
-    sha256 "d00cc61ea7bd1ab24496265fb8cf203de7451ef6b77a69822becada3f0e14047"
-  end
-
   def install
     # Set `vendored-pcre` to `false` unconditionally when `pcre` linkage is fixed upstream.
     system "zig", "build", "-Dvendored-pcre=#{OS.linux?}"
@@ -48,6 +36,11 @@ class Fastfec < Formula
   end
 
   test do
+    resource "homebrew-13360" do
+      url "https://docquery.fec.gov/dcdev/posted/13360.fec"
+      sha256 "b7e86309f26af66e21b28aec7bd0f7844d798b621eefa0f7601805681334e04c"
+    end
+
     testpath.install resource("homebrew-13360")
     system bin/"fastfec", "--no-stdin", "13360.fec"
     %w[F3XA header SA11A1 SA17 SB23 SB29].each do |name|
