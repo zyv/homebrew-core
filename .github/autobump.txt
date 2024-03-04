@@ -1680,6 +1680,7 @@ xh
 xkbcomp
 xkeyboardconfig
 xmake
+xmrig
 xonsh
 xplr
 xray
