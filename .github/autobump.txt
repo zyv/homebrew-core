@@ -1025,6 +1025,7 @@ mage
 mailpit
 mailutils
 makedepend
+makepkg
 manifest-tool
 mapcidr
 marked
