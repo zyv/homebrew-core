@@ -748,9 +748,6 @@
   "virt-manager": {
     "exclude_packages": ["certifi"]
   },
-  "virtualenvwrapper": {
-    "exclude_packages": ["virtualenv"]
-  },
   "virtualfish": {
     "extra_packages": ["setuptools"]
   },
