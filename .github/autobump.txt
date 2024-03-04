@@ -378,6 +378,7 @@ crystalline
 csfml
 csprecon
 css-crush
+csview
 csvkit
 csvlens
 csvq
