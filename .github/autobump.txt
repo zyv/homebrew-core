@@ -936,6 +936,7 @@ latex2html
 latexml
 lazydocker
 ld-find-code-refs
+ldc
 ldeep
 lean-cli
 leapp-cli
