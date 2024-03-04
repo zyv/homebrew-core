@@ -972,6 +972,7 @@ liblouis
 libmicrohttpd
 libnfs
 libnice
+libopenmpt
 liboqs
 libpano
 libphonenumber
