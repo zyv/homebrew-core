@@ -1,8 +1,8 @@
 class EditorconfigChecker < Formula
   desc "Tool to verify that your files are in harmony with your .editorconfig"
   homepage "https://github.com/editorconfig-checker/editorconfig-checker"
-  url "https://github.com/editorconfig-checker/editorconfig-checker/archive/refs/tags/2.8.0.tar.gz"
-  sha256 "639ed029204ba548854ff64f432f01f732fccb161a29c7477b70911576840ac4"
+  url "https://github.com/editorconfig-checker/editorconfig-checker/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "ecc26b1c83b8d2df1c8a46b2cf5e5f2a7bfe8b530c00e9344fdfb11d8343ffcd"
   license "MIT"
   head "https://github.com/editorconfig-checker/editorconfig-checker.git", branch: "main"
 
@@ -19,7 +19,8 @@ class EditorconfigChecker < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-X main.version=#{version}"), "./cmd/editorconfig-checker/main.go"
+    ldflags = "-s -w -X main.version=#{version}"
+    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/editorconfig-checker/main.go"
   end
 
   test do
@@ -28,6 +29,7 @@ class EditorconfigChecker < Formula
     EOS
 
     system bin/"editorconfig-checker", testpath/"version.txt"
+
     assert_match version.to_s, shell_output("#{bin}/editorconfig-checker --version")
   end
 end
