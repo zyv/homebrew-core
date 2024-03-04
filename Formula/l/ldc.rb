@@ -12,13 +12,13 @@ class Ldc < Formula
   end
 
   bottle do
-    sha256                               arm64_sonoma:   "a702c014b40a7ae93e5aa3d40d53fe48a7967c04ca0039fbdb935d259790153f"
-    sha256                               arm64_ventura:  "ad0c37af554a276e470c09b626b00b2a716406f27a3e6b9979d3ef4348c36b9d"
-    sha256                               arm64_monterey: "34c09ba60abe8ef72796c710cbd2e6205fe42e5540c7ff213264f86a1fe3ca65"
-    sha256                               sonoma:         "a28a1d85609f977f1cf4c579f50c819034c027b63c202773130dd79f829d5876"
-    sha256                               ventura:        "e2cea208a0e283ac522b81cb82e8871c207928f08b9d943c43560b6e6c8ce187"
-    sha256                               monterey:       "32631d3cbc2403b2f00a0ed1821baf90db46785992ec891591ead9ce8df02c3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d60cc5db0c1b94d4d7c758ff01b2202566060e3c5388ddc086188bccc18c4774"
+    sha256                               arm64_sonoma:   "a6608742b2a6463f7e3679d007c6767178ae37545a5c6b45808afaf168bacaad"
+    sha256                               arm64_ventura:  "a45760c5605c942fa57c120a5e4872340768dbf03231e8ab60e0aff048de199e"
+    sha256                               arm64_monterey: "b4211bd6f90b1e79e56b0c079dcd6df4c9fee40f855893d58135159624ef2749"
+    sha256                               sonoma:         "0c32c34dd6547a57cc9b7e5314a7dd67329a2acce72efcbe11a0a408026a217e"
+    sha256                               ventura:        "1b349064dc40cd433413262044ffd1b6d037a4c790bdf6dad294dc13d041bd7c"
+    sha256                               monterey:       "ae0dd916281e3ce60fa7b4d11f77b38290afb4a8609bb427adac5fc81c3c86a7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c001131cb1b1b7bfc8fe09d00d20e384ab9e636828aa75caaf053b10e59d4c82"
   end
 
   depends_on "cmake" => :build
