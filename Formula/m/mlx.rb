@@ -3,8 +3,8 @@ class Mlx < Formula
 
   desc "Array framework for Apple silicon"
   homepage "https://github.com/ml-explore/mlx"
-  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "7c66d3e3b7bd6dad1909cb2b78c510580549e0ba5bf75d7066096a40c68fed9a"
+  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "db21d9c09f6dec25d8afe9efd2c077a1c20b86e663ecb064ccce32398eee7f18"
   license "MIT"
   head "https://github.com/ml-explore/mlx.git", branch: "main"
 
@@ -21,8 +21,8 @@ class Mlx < Formula
   depends_on "python@3.12"
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
-    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
+    url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
+    sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
   end
 
   def python3
