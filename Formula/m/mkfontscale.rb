@@ -1,8 +1,8 @@
 class Mkfontscale < Formula
   desc "Create an index of scalable font files for X"
   homepage "https://www.x.org/"
-  url "https://www.x.org/releases/individual/app/mkfontscale-1.2.2.tar.xz"
-  sha256 "8ae3fb5b1fe7436e1f565060acaa3e2918fe745b0e4979b5593968914fe2d5c4"
+  url "https://www.x.org/releases/individual/app/mkfontscale-1.2.3.tar.xz"
+  sha256 "2921cdc344f1acee04bcd6ea1e29565c1308263006e134a9ee38cf9c9d6fe75e"
   license "X11"
 
   bottle do
