@@ -968,6 +968,7 @@ libint
 libjwt
 libksba
 liblinear
+liblouis
 libmicrohttpd
 libnfs
 liboqs
