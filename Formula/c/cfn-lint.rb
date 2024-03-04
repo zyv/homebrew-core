@@ -3,8 +3,8 @@ class CfnLint < Formula
 
   desc "Validate CloudFormation templates against the CloudFormation spec"
   homepage "https://github.com/aws-cloudformation/cfn-lint/"
-  url "https://files.pythonhosted.org/packages/8a/88/b1595540abedcc676ca882681546b2c9585a475d9ed4cd555db986ce4374/cfn-lint-0.85.3.tar.gz"
-  sha256 "efed015205051664285f0aedac106209c80f8b251b231fce93d0911db0e07cec"
+  url "https://files.pythonhosted.org/packages/20/d7/37f4a30ffe0b11a7a516b0d0092cd675c0fb5da92b70d4c5916fab91b302/cfn-lint-0.86.0.tar.gz"
+  sha256 "7216e9c10dd27af73821d0ae79b17406cd89f5dfbc25feb5d2ba756eb6e9a651"
   license "MIT-0"
 
   bottle do
@@ -37,13 +37,13 @@ class CfnLint < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/dc/d1/23a7ed157ca950a344b2ef814db01c175f970320c4bf1be364ca0c1afdd2/boto3-1.34.50.tar.gz"
-    sha256 "290952be7899560039cb0042e8a2354f61a7dead0d0ca8bea6ba901930df0468"
+    url "https://files.pythonhosted.org/packages/97/3f/a32a699fef1dd2d9995c4d00120fa38a17b162266d6ee52315aae29928be/boto3-1.34.55.tar.gz"
+    sha256 "9a6d59e035fac4366dbdaf909c4f66fc817dfbec044fa71564dcf036ad46bb19"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/48/af/d038bd03233fe5c009fd67e8e1bfa6536c3b2ab91737cc629acbff464aa3/botocore-1.34.50.tar.gz"
-    sha256 "33ab82cb96c4bb684f0dbafb071808e4817d83debc88b223e7d988256370c6d7"
+    url "https://files.pythonhosted.org/packages/fc/54/ed71b69fb2ea30ebdfa122cd81d14faf79aa3346edfed2912c5105205c18/botocore-1.34.55.tar.gz"
+    sha256 "bb333e3845bfe65600f36bf92d09668306e224fa9f4e4f87b77f6957192ae59f"
   end
 
   resource "jmespath" do
@@ -102,8 +102,8 @@ class CfnLint < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/a7/2d/6308c04382ebdf15f1add7f0ec5e518ab23a0958363a8b3399f09c314fc0/pydantic-2.6.2.tar.gz"
-    sha256 "a09be1c3d28f3abe37f8a78af58284b236a92ce520105ddc91a6d29ea1176ba7"
+    url "https://files.pythonhosted.org/packages/3c/6c/5d3b1c9615726a69a9a1f992e63f8fd0a2d19ae726c15eb9154fdce48217/pydantic-2.6.3.tar.gz"
+    sha256 "e07805c4c7f5c6826e33a1d4c9d47950d7eaf34868e2690f8594d2e30241f11f"
   end
 
   resource "pydantic-core" do
@@ -112,8 +112,8 @@ class CfnLint < Formula
   end
 
   resource "python-dateutil" do
-    url "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
-    sha256 "0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"
+    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
+    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
   end
 
   resource "pyyaml" do
