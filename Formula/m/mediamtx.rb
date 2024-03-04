@@ -1,8 +1,8 @@
 class Mediamtx < Formula
   desc "Zero-dependency real-time media server and media proxy"
   homepage "https://github.com/bluenviron/mediamtx"
-  url "https://github.com/bluenviron/mediamtx/archive/refs/tags/v1.5.1.tar.gz"
-  sha256 "01367a6cf96f4bcb959f0cba82e9e88b4560be8caf3f4019a6416e7d2f7dac4a"
+  url "https://github.com/bluenviron/mediamtx/archive/refs/tags/v1.6.0.tar.gz"
+  sha256 "7eb2f94e6246bde435f19cfb56ac69926b7d700206c8491e0dd9c69e4324fe92"
   license "MIT"
 
   bottle do
@@ -18,6 +18,8 @@ class Mediamtx < Formula
   depends_on "go" => :build
 
   def install
+    system "go", "generate", "./..."
+
     ldflags = "-s -w -X github.com/bluenviron/mediamtx/internal/core.version=#{version}"
     system "go", "build", *std_go_args(ldflags: ldflags)
 
