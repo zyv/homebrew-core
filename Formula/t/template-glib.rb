@@ -1,8 +1,8 @@
 class TemplateGlib < Formula
   desc "GNOME templating library for GLib"
   homepage "https://gitlab.gnome.org/GNOME/template-glib"
-  url "https://download.gnome.org/sources/template-glib/3.36/template-glib-3.36.1.tar.xz"
-  sha256 "3b167a17385ad745afbe20fadf8106c66d30c5bd746d5aa1d9bdb7e803f6a503"
+  url "https://download.gnome.org/sources/template-glib/3.36/template-glib-3.36.2.tar.xz"
+  sha256 "0020f3a401888ce763b3a17508c2f58e91972a483a0c547afdb7ccbe25619948"
   license "LGPL-2.1-or-later"
 
   bottle do

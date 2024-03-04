@@ -1534,6 +1534,7 @@ teip
 tektoncd-cli
 teku
 telegraf
+template-glib
 tendermint
 tengo
 termshark
