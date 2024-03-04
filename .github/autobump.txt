@@ -1203,6 +1203,7 @@ osctrl-cli
 osm
 osm2pgsql
 ospray
+osslsigncode
 osv-scanner
 ott
 oxipng
