@@ -637,6 +637,7 @@ fnm
 folderify
 fontconfig
 fontforge
+fonts-encodings
 fonttools
 fop
 forcecli
@@ -679,6 +680,7 @@ geeqie
 gegl
 genact
 geph4
+gettext
 gf
 ghostunnel
 ghq
@@ -771,6 +773,7 @@ grpc-swift
 grype
 gsmartcontrol
 gsoap
+gtk-gnutella
 gupnp
 gupnp-tools
 hackrf
@@ -841,6 +844,7 @@ ivykis
 jackett
 jadx
 jaq
+jasper
 java-service-wrapper
 jc
 jd
@@ -860,6 +864,7 @@ jnethack
 joplin-cli
 jose
 jpeg-turbo
+jpeg-xl
 jql
 jreleaser
 jrnl
@@ -942,6 +947,7 @@ lexicon
 lf
 libadwaita
 libbsd
+libcouchbase
 libdap
 libepoxy
 libffi
@@ -955,7 +961,9 @@ libgsf
 libhandy
 libint
 libjwt
+libksba
 liblinear
+libmicrohttpd
 libnfs
 liboqs
 libpano
@@ -972,6 +980,8 @@ libsndfile
 libstrophe
 libucl
 libunwind
+libxaw3d
+libxcursor
 libxext
 libxkbfile
 libxvmc
@@ -1018,6 +1028,7 @@ maven
 mavsdk
 mawk
 maxwell
+md4c
 mdbook
 mdcat
 mdless
@@ -1064,6 +1075,7 @@ mongocli
 mongodb-atlas-cli
 monika
 monolith
+moon
 morse
 moto
 mpc
@@ -1119,11 +1131,13 @@ node-sass
 node@18
 node@20
 notcurses
+npth
 nsq
 nuclei
 numactl
 numbat
 numcpp
+numpy
 nushell
 nvc
 oauth2_proxy
@@ -1149,6 +1163,7 @@ open-image-denoise
 open-mpi
 opendetex
 openh264
+openimageio
 openiothub-server
 openjdk
 openjdk@11
@@ -1156,7 +1171,9 @@ openjdk@17
 openjdk@8
 openjpeg
 openjph
+openldap
 openlibm
+openrct2
 openrtsp
 opensearch
 openshift-cli
@@ -1186,6 +1203,7 @@ ott
 oxipng
 pacapt
 packetbeat
+pandoc
 pandoc-crossref
 pari
 partio
@@ -1194,6 +1212,7 @@ patat
 patchelf
 payara
 pciutils
+pcsc-lite
 pdal
 pdftk-java
 pdm
@@ -1240,6 +1259,7 @@ popeye
 postgis
 postgrest
 powerman
+pqiv
 pre-commit
 presenterm
 prestd
@@ -1296,10 +1316,12 @@ quantum++
 questdb
 quick-lint-js
 quicktype
+quictls
 qxmpp
 rabbitmq
 radamsa
 rancher-cli
+rapidfuzz-cpp
 rattler-build
 rav1e
 raven
@@ -1654,6 +1676,7 @@ xplr
 xray
 xrootd
 xterm
+xz
 yaegi
 yamllint
 ykman
