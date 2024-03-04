@@ -481,6 +481,7 @@ doltgres
 dooit
 doppler
 dosbox-staging
+dosbox-x
 dotenv-linter
 double-conversion
 doxygen
