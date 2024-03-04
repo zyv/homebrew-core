@@ -1,9 +1,9 @@
 class Metview < Formula
   desc "Meteorological workstation software"
   homepage "https://metview.readthedocs.io/en/latest/"
-  url "https://confluence.ecmwf.int/download/attachments/51731119/MetviewBundle-2024.2.0-Source.tar.gz"
-  version "5.21.1"
-  sha256 "0493e43f475eccbaa722794b58f4d6793c2d57d76887f3dda1801dd275bfb4c0"
+  url "https://confluence.ecmwf.int/download/attachments/51731119/MetviewBundle-2024.2.1-Source.tar.gz"
+  version "5.21.2"
+  sha256 "96ca4011c8cc19a007a0b462610f806d44f34550d0b27818f37454f097a886b8"
   license "Apache-2.0"
 
   livecheck do
