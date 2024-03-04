@@ -784,6 +784,7 @@ halide
 hapi-fhir-cli
 haproxy
 hasura-cli
+haxe
 hcloud
 hcxtools
 heartbeat
