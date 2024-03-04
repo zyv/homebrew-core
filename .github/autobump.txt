@@ -1309,6 +1309,7 @@ python-dateutil
 python-mako
 python-matplotlib
 python-setuptools
+python-trove-classifiers
 qbe
 qbs
 qcachegrind
