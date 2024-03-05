@@ -694,6 +694,7 @@ ginac
 git-absorb
 git-annex
 git-codereview
+git-cola
 git-credential-oauth
 git-delta
 git-lfs
