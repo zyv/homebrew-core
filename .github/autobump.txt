@@ -768,6 +768,7 @@ grafana
 grails
 greed
 greenmask
+grex
 grin
 gromacs
 groonga
