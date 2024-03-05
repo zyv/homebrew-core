@@ -7,13 +7,13 @@ class EditorconfigChecker < Formula
   head "https://github.com/editorconfig-checker/editorconfig-checker.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "53b50965fa2e05ee16d5a05a6adf893a00d7138af4467962769f5dfaf09ffad0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "53b50965fa2e05ee16d5a05a6adf893a00d7138af4467962769f5dfaf09ffad0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "53b50965fa2e05ee16d5a05a6adf893a00d7138af4467962769f5dfaf09ffad0"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f451b76a60b9180dbad41e6155023251fdf347fd53650f7400282babbf4dc81f"
-    sha256 cellar: :any_skip_relocation, ventura:        "f451b76a60b9180dbad41e6155023251fdf347fd53650f7400282babbf4dc81f"
-    sha256 cellar: :any_skip_relocation, monterey:       "f451b76a60b9180dbad41e6155023251fdf347fd53650f7400282babbf4dc81f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "49e48015bb1be45cd723513f9931c29730f259b8874dec02f81f465bd6cff3be"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "43966986aa94821818726dd456caa889c77a2c5d9f6d8698d80bfd6059ae1635"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "43966986aa94821818726dd456caa889c77a2c5d9f6d8698d80bfd6059ae1635"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "43966986aa94821818726dd456caa889c77a2c5d9f6d8698d80bfd6059ae1635"
+    sha256 cellar: :any_skip_relocation, sonoma:         "20470e47d0e9da292dfb756dbbe768b153f530d1825c490dfa2f406d87b2e41e"
+    sha256 cellar: :any_skip_relocation, ventura:        "20470e47d0e9da292dfb756dbbe768b153f530d1825c490dfa2f406d87b2e41e"
+    sha256 cellar: :any_skip_relocation, monterey:       "20470e47d0e9da292dfb756dbbe768b153f530d1825c490dfa2f406d87b2e41e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0edbd9ac928bf3e13c882cc0e0cd7d6bc4b4fc6325118bebd3c67517abb8d3bf"
   end
 
   depends_on "go" => :build
