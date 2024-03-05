@@ -266,6 +266,7 @@
   "flit": {
     "exclude_packages": ["certifi", "docutils", "flit-core"]
   },
+  "fonttools": "fonttools[woff]",
   "gallery-dl": {
     "exclude_packages": ["certifi"]
   },
