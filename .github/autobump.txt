@@ -1036,6 +1036,7 @@ marp-cli
 massdriver
 matplotplusplus
 matterbridge
+maturin
 maven
 mavsdk
 mawk
