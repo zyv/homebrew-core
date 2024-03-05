@@ -1,8 +1,8 @@
 class Fend < Formula
   desc "Arbitrary-precision unit-aware calculator"
   homepage "https://printfn.github.io/fend"
-  url "https://github.com/printfn/fend/archive/refs/tags/v1.4.3.tar.gz"
-  sha256 "6ff204f937bcdb58e29ed2f076efa82aa323e39ab615c4ce87b5358e2237edc2"
+  url "https://github.com/printfn/fend/archive/refs/tags/v1.4.4.tar.gz"
+  sha256 "2c8b05feaa06cfeb36ce7d854c0d79a9baca61db9ffd64c017528fd8b1594f61"
   license "GPL-3.0-or-later"
   head "https://github.com/printfn/fend.git", branch: "main"
 
@@ -22,9 +22,18 @@ class Fend < Formula
   end
 
   depends_on "pandoc" => :build
+  depends_on "pkg-config" => :build
   depends_on "rust" => :build
 
+  on_linux do
+    depends_on "openssl@3"
+  end
+
   def install
+    # Ensure that the `openssl` crate picks up the intended library.
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+    ENV["OPENSSL_NO_VENDOR"] = "1"
+
     system "cargo", "install", *std_cargo_args(path: "cli")
     system "./documentation/build.sh"
     man1.install "documentation/fend.1"
