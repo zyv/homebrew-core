@@ -1501,6 +1501,7 @@ starship
 staticcheck
 statix
 stdman
+steamguard-cli
 steampipe
 stellar-core
 step
