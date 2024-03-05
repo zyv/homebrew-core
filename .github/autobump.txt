@@ -1233,6 +1233,7 @@ payara
 pciutils
 pcsc-lite
 pdal
+pdfcpu
 pdftk-java
 pdm
 pdns
