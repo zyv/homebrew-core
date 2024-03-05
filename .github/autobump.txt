@@ -1612,6 +1612,7 @@ v2ray
 vala
 valabind
 vale
+vapor
 vapoursynth
 vault-cli
 vcluster
