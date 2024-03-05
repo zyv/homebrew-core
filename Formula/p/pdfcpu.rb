@@ -1,8 +1,8 @@
 class Pdfcpu < Formula
   desc "PDF processor written in Go"
   homepage "https://pdfcpu.io"
-  url "https://github.com/pdfcpu/pdfcpu/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "dc51a082c40d00533c326194bc1a9d85166920ec065656d08980b521e9b9f43b"
+  url "https://github.com/pdfcpu/pdfcpu/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "e36b1b03ff77fc2b9aa7ab4becfd2e0db271da0d5c56f6eb9b9ac844a04a00c1"
   license "Apache-2.0"
 
   bottle do
@@ -24,11 +24,16 @@ class Pdfcpu < Formula
 
   test do
     info_output = shell_output("#{bin}/pdfcpu info #{test_fixtures("test.pdf")}")
-    assert_match "PDF version: 1.6", info_output
-    assert_match "Page count: 1", info_output
-    assert_match "Page size: 500.00 x 800.00 points", info_output
-    assert_match "Encrypted: No", info_output
-    assert_match "Permissions: Full access", info_output
+    assert_match <<~EOS, info_output
+      installing user font:
+      Roboto-Regular
+      #{test_fixtures("test.pdf")}:
+                    Source: #{test_fixtures("test.pdf")}
+               PDF version: 1.6
+                Page count: 1
+                Page sizes: 500.00 x 800.00 points
+    EOS
+
     assert_match "validation ok", shell_output("#{bin}/pdfcpu validate #{test_fixtures("test.pdf")}")
   end
 end
