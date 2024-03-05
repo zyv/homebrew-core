@@ -361,7 +361,7 @@
     "extra_packages": ["setuptools"]
   },
   "jupyterlab": {
-    "extra_packages": ["hatch-jupyter-builder", "hatch-nodejs-version", "jupyter-console", "notebook"],
+    "extra_packages": ["appnope", "hatch-jupyter-builder", "hatch-nodejs-version", "jupyter-console", "notebook"],
     "exclude_packages": ["certifi"]
   },
   "keepkey-agent": {
