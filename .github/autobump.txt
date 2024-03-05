@@ -814,6 +814,7 @@ httpx
 httpyac
 huggingface-cli
 hugo
+hwatch
 hyperfine
 hypre
 hyx
