@@ -1674,6 +1674,7 @@ wildfly-as
 wimlib
 wireguard-go
 wiremock-standalone
+witness
 wolfssl
 woodpecker-cli
 woof-doom
