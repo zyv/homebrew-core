@@ -9,14 +9,13 @@ class Psutils < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8bdc4453807c4ed3b080777b885e659276cc38fa010ea9285e1416333df88766"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2c1871b1b0e7a67f4bbc8566748726d99788dec7eb38b21cc9786b9f96b2757c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "02a85e130e4b7d78bd19412bc07253f9de211c3f38bf99e9c9354be247dc5617"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8f31f997bc29be3b8d527f2be7bc1ade95c0c569f4ba7f390a7b86b222e73494"
-    sha256 cellar: :any_skip_relocation, ventura:        "52fb31fd98fc9064ce67791855a0115e4bc28a1eadc273e2f157fe8aea5d1934"
-    sha256 cellar: :any_skip_relocation, monterey:       "67cd662a7d69f556d04b9f62f0a38a6a0ea933b6907b3b5007188ef4112a6f71"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d29d669346ddec8212ac20c56905df4df2e7e2b5715331c9e184fc1ab65ef2ed"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9ae0aa9c3d86ce7b80cfbcee48c2a4849ddfe5b827d2a3f319bc72d0ae90bb20"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bce0efd79698f7e24eb69835c12e718f3f371a65ebd6848c756899cd15d40330"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "796456a0c27fdddc8c80134ce8a585965659f83243d00e3c8326e6aa8e1e3b8d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "b597434b7a83b617e206e2b8db798b928f4de94d849d14b4e45d11b99f9936c5"
+    sha256 cellar: :any_skip_relocation, ventura:        "9356f545cab5c06e5f1b4bc019df52c0522120478884650b2e1be32905c86536"
+    sha256 cellar: :any_skip_relocation, monterey:       "fe2c07cd5246ad231d8a520eda16e27d5d6908ff2cc3897f45bdd74d74053605"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dec83b119ca6ba048d42bcf0c65366a71969834290d1d66078c7f0b2040d6d72"
   end
 
   depends_on "libpaper"
