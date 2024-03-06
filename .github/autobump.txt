@@ -1482,6 +1482,7 @@ sonarqube
 sonarqube-lts
 sonobuoy
 soplex
+spack
 spglib
 spicetify-cli
 spidermonkey
