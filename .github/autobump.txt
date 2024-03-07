@@ -870,6 +870,7 @@ jhipster
 jj
 jmeter
 jnethack
+joker
 joplin-cli
 jose
 jpeg-turbo
