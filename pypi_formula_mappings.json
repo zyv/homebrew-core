@@ -189,9 +189,6 @@
   "cookiecutter": {
     "exclude_packages": ["certifi"]
   },
-  "cpplint": {
-    "extra_packages": ["setuptools"]
-  },
   "credstash": {
     "exclude_packages": ["cryptography"]
   },
