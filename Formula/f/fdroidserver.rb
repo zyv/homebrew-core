@@ -5,20 +5,22 @@ class Fdroidserver < Formula
   homepage "https://f-droid.org"
   # TODO: Remove `androguard==3.3.5` from pypi_formula_mappings.json in the next release.
   # Ref: https://github.com/f-droid/fdroidserver/commit/2f84ce36da2aa79c1583832cd475b1d0be14cca5
+  # Ensure `sdkmanager` resource is present. It will be grabbed by `pip` starting in the next release.
+  # Ref: https://github.com/f-droid/fdroidserver/commit/0dd5a7db648133e3f5ea2dfe1acc381b0541738b
   url "https://files.pythonhosted.org/packages/75/72/ea1e1e9d7d0ade051279b8676e6025f8c14dd64a5edeb76f2208e23c7720/fdroidserver-2.2.1.tar.gz"
   sha256 "6dcba0b747bfc9ebe4d441c56cf0c8aeab70a58cd0d1248462892e933a382302"
   license "AGPL-3.0-or-later"
   revision 4
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sonoma:   "bb70d240b6be5d3dddcc1937834bc82267093d4abc35a8e0474e18be17596215"
-    sha256 cellar: :any,                 arm64_ventura:  "3e3337968d169b2654b5b860f1f374aaa424f9474fdc0fe5c67c53b30e758d21"
-    sha256 cellar: :any,                 arm64_monterey: "e93eae89ffc62de7d33549c458fa0668a7f5a47972d3282e93f11d797d37d721"
-    sha256 cellar: :any,                 sonoma:         "a8e43fdea7d2a37cde37bec751e986d17ec925dac84529108e5de8cefd6a9f75"
-    sha256 cellar: :any,                 ventura:        "684c763c29353749643cd59494cfb4a81bea6111c3927546ac82a2933a5eeeee"
-    sha256 cellar: :any,                 monterey:       "33ebe35bb77e43ec81232a5ee9b57ed6d44d42969af53ffc9ceadbfa59009d88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0c73786b50510559ea96b638f4430dbeebf3a81bdc35c506ff68254496497900"
+    rebuild 3
+    sha256 cellar: :any,                 arm64_sonoma:   "472c209ede812bf37c4ce2dc3477d562a1e910780192d6d4961bc2ba24760f96"
+    sha256 cellar: :any,                 arm64_ventura:  "2cb51cc2ba134af20234be792557fe14a60177526583bb81e6e1e8432a83f8ca"
+    sha256 cellar: :any,                 arm64_monterey: "540d7df6f2c08a86a4c8d25a620fa0ff5e9ace84ab736a7ed84b6a37841d6b08"
+    sha256 cellar: :any,                 sonoma:         "511e5d8f771cc16dace7be0a19875a3ce9f2951f698144bb1f28179c3df6fcb0"
+    sha256 cellar: :any,                 ventura:        "0fc47ce46399bf2275a88796dc7007f4d4e7764769a9e6839036a4f665367741"
+    sha256 cellar: :any,                 monterey:       "85bda0af3442541b6bfd64b7fec33ea02c53ab0a81eb2ff674ef5cadd86ed311"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d04139d5f911c2c6e6312f8659bd832d02aed9543e780341a1f9b6f3fe62e3d"
   end
 
   depends_on "ninja" => :build
@@ -285,6 +287,11 @@ class Fdroidserver < Formula
   resource "ruamel-yaml-clib" do
     url "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa0240c53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz"
     sha256 "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
+  end
+
+  resource "sdkmanager" do
+    url "https://files.pythonhosted.org/packages/c7/7f/896d48e75f68f685c0a4fae0f5104d5cdee3c2d376ff4cfa5e78a8b5809e/sdkmanager-0.6.6.tar.gz"
+    sha256 "639d91085c921665cdcbb104c24fe41ad7227590cdb1ffc2b0bd4e23b6d31b37"
   end
 
   resource "setuptools" do
