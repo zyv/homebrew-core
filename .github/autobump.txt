@@ -857,6 +857,7 @@ immortal
 influxdb
 influxdb-cli
 influxdb@1
+inlyne
 inxi
 ioctl
 ipfs
