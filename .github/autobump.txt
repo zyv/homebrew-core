@@ -1383,6 +1383,7 @@ pyinstaller
 pylint
 pyoxidizer
 pyright
+pyside@2
 python-build
 python-cryptography
 python-dateutil
