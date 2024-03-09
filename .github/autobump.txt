@@ -1397,6 +1397,7 @@ qbs
 qcachegrind
 qd
 qjackctl
+qmmp
 qpdf
 qpid-proton
 qsv
