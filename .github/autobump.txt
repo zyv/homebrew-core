@@ -1840,6 +1840,7 @@ yamale
 yamllint
 ykman
 yle-dl
+yo
 yosys
 youtubedr
 yq
