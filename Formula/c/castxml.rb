@@ -4,6 +4,7 @@ class Castxml < Formula
   url "https://github.com/CastXML/CastXML/archive/refs/tags/v0.6.5.tar.gz"
   sha256 "fea4754bdb1fb4496fec12352e2bd07854843aa757e85d0553f224ff0111c482"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/CastXML/castxml.git", branch: "master"
 
   livecheck do
