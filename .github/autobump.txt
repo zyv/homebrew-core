@@ -343,7 +343,6 @@ commitlint
 composer
 conan
 conan@1
-conda-lock
 conda-zsh-completion
 conduit
 condure
