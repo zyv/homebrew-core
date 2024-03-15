@@ -2,8 +2,10 @@ class Rust < Formula
   desc "Safe, concurrent, practical language"
   homepage "https://www.rust-lang.org/"
   license any_of: ["Apache-2.0", "MIT"]
+  revision 1
 
   stable do
+    # TODO: On 1.78.0 release, switch to `llvm` 18.
     url "https://static.rust-lang.org/dist/rustc-1.77.2-src.tar.gz"
     sha256 "c61457ef8f596638fddbc7716778b2f6b99ff12513a3b0f13994c3bc521638c3"
 
@@ -34,7 +36,7 @@ class Rust < Formula
 
   depends_on "libgit2"
   depends_on "libssh2"
-  depends_on "llvm"
+  depends_on "llvm@17"
   depends_on macos: :sierra
   depends_on "openssl@3"
   depends_on "pkg-config"
@@ -112,7 +114,7 @@ class Rust < Formula
       --prefix=#{prefix}
       --sysconfdir=#{etc}
       --tools=#{tools.join(",")}
-      --llvm-root=#{Formula["llvm"].opt_prefix}
+      --llvm-root=#{Formula["llvm@17"].opt_prefix}
       --enable-llvm-link-shared
       --enable-vendor
       --disable-cargo-native-static
