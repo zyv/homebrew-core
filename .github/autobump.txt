@@ -1735,6 +1735,7 @@ veclibfort
 velero
 verapdf
 vercel-cli
+vet
 vgrep
 victoriametrics
 video-compare
