@@ -3,19 +3,19 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.28.tar.gz"
-  sha256 "7aff52e4db9ef2ad4f74faddb8bdac30e39234497173216c22177e479cd9b41c"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.29.tar.gz"
+  sha256 "0b977120ebf5a7746515312214a8aef7a174c1877cdbc423afb9fff59df4d078"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "b78d6627a1ac0220ce7e04678da6e9df80ce349f5505fc52ab5bf3aa1637b423"
-    sha256 cellar: :any,                 arm64_ventura:  "6ba054beb4b5db38220c6fe1558671a0a19771d62757b65858da6891fdb36e40"
-    sha256 cellar: :any,                 arm64_monterey: "fc70e6630ab0c661b3412c191a5e963950971992989e1371c1845881644afb62"
-    sha256 cellar: :any,                 sonoma:         "b031b73cbcf0a82530622ad3349e5e907b7d4f5f296d778d5f54907b9bcdaff9"
-    sha256 cellar: :any,                 ventura:        "9a7593a18212a4f0fff90ee7ae5dbc70093c6acb08fc876b033a901a424e0f5c"
-    sha256 cellar: :any,                 monterey:       "342d823424f0cea407f4392ef852122b07779353abadebbb94082af4380fcd2f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ae2ace57cc685dc28b732d90660758056c91110f086d9704a1e2890aabf64819"
+    sha256 cellar: :any,                 arm64_sonoma:   "cc365ff37a9cdc2946b8bf82e674f513e0ba91526ff6e659c48c7e52cf89f69b"
+    sha256 cellar: :any,                 arm64_ventura:  "8d31a6ab1668d8af70dda05e6b2715549f61227ea1d4b0123ac15714dcd90db9"
+    sha256 cellar: :any,                 arm64_monterey: "2f6f8af9ac01c4f984aa27999e03fede48cc9e53c8a99318b846998c2ce06e38"
+    sha256 cellar: :any,                 sonoma:         "93633ac41058da5887a1365933cc9844827e869f3c11d2d7d962441fa1ef3853"
+    sha256 cellar: :any,                 ventura:        "d702908e4d1c7c6f2ef0be71c26fdfb93fe1c1472d4657ac5a3c8e89ad058bed"
+    sha256 cellar: :any,                 monterey:       "0c8414707f8771f726e55f8a2c16d6e5f20e6788287e88ee7cf03fb45f7edc93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5dd02f35fc7c95d6ae4c243d8ff9c0703ef5e4839587cc17a0ac51f9db453621"
   end
 
   # `pkg-config`, `rust`, and `openssl@3` are for cryptography.
@@ -88,8 +88,8 @@ class Awscli < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/03/20/630783571e76e5fa5f3e9f29398ca3ace377207b8196b54e0ffdf09f12c1/setuptools-67.8.0.tar.gz"
-    sha256 "62642358adc77ffa87233bc4d2354c4b2682d214048f500964dbe760ccedf102"
+    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
+    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
   end
 
   resource "six" do
@@ -108,8 +108,8 @@ class Awscli < Formula
   end
 
   resource "wheel" do
-    url "https://files.pythonhosted.org/packages/7a/b0/29c0c8c6f8cebeb0de4c17bc44365cba0b35cb4246e4a27a7e12ecf92d73/wheel-0.38.1.tar.gz"
-    sha256 "ea041edf63f4ccba53ad6e035427997b3bb10ee88a4cd014ae82aeb9eea77bb9"
+    url "https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz"
+    sha256 "465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85"
   end
 
   def python3
@@ -131,6 +131,10 @@ class Awscli < Formula
       ENV.prepend "CFLAGS", "-I./build/temp.linux-x86_64-#{python_version}/deps/install/include"
       ENV.prepend "LDFLAGS", "-L./build/temp.linux-x86_64-#{python_version}/deps/install/lib"
     end
+
+    # Work around ruamel.yaml.clib not building on Xcode 15.3, remove after a new release
+    # has resolved: https://sourceforge.net/p/ruamel-yaml-clib/tickets/32/
+    ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
 
     # The `awscrt` resource requires `setuptools` & `wheel`, so they must be installed first
     venv = virtualenv_create(libexec, "python3.11", system_site_packages: false)
