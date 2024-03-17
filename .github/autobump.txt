@@ -816,6 +816,7 @@ groovysdk
 grpc
 grpc-swift
 grype
+gsettings-desktop-schemas
 gsmartcontrol
 gsoap
 gtk-gnutella
