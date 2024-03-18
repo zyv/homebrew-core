@@ -1398,6 +1398,7 @@ proxsuite
 proxytunnel
 prqlc
 prr
+prs
 psalm
 pter
 ptpython
