@@ -284,6 +284,7 @@ checkmake
 checkov
 checkstyle
 cherrytree
+chezmoi
 chkrootkit
 choose-rust
 chromaprint
