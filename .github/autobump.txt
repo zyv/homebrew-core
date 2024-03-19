@@ -1559,6 +1559,7 @@ signal-cli
 signmykey
 sile
 silicon
+simple-scan
 sing-box
 singular
 singularity
