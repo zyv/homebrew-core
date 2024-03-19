@@ -1871,3 +1871,4 @@ zpaqfranz
 zsh-vi-mode
 zstd
 zydis
+uvicorn
