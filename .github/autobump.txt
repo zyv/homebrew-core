@@ -1103,6 +1103,7 @@ lynis
 lzip
 macchina
 mackup
+mafft
 mage
 mailpit
 mailutils
