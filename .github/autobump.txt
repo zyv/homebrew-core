@@ -1256,6 +1256,7 @@ oh-my-posh
 oha
 oil
 okta-aws-cli
+okta-awscli
 okteto
 ollama
 omega
