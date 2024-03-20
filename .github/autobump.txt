@@ -1787,6 +1787,7 @@ virustotal-cli
 vite
 vitess
 vivid
+vlang
 vnstat
 volatility
 volk
