@@ -1256,6 +1256,7 @@ oci-cli
 ocp
 ocrmypdf
 octave
+octomap
 odpi
 oh-my-posh
 oha
