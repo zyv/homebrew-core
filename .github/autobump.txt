@@ -1848,6 +1848,7 @@ wimlib
 wireguard-go
 wiremock-standalone
 witness
+wolfmqtt
 wolfssl
 woodpecker-cli
 woof-doom
