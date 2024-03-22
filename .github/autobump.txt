@@ -996,6 +996,7 @@ kubevious
 kubie
 kumactl
 kustomize
+kwctl
 kwok
 kyma-cli
 kyverno
