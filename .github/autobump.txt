@@ -59,6 +59,7 @@ apko
 apktool
 appium
 appstream
+appwrite
 apr
 apt
 aravis
