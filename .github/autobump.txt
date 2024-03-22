@@ -1380,6 +1380,7 @@ pipenv
 pipgrip
 pkgconf
 plantuml
+platformio
 plow
 pmd
 pmix
