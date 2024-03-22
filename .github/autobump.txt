@@ -1621,6 +1621,7 @@ sql-migrate
 sqlancer
 sqlc
 sqlcmd
+sqlfluff
 sqlmap
 sqlpage
 sqlx-cli
