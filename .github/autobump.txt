@@ -824,6 +824,7 @@ gsmartcontrol
 gsoap
 gtk-gnutella
 gtkmm4
+gtranslator
 gupnp
 gupnp-tools
 hackrf
