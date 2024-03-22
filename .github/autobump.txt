@@ -743,6 +743,7 @@ github-markdown-toc
 gitlab-ci-local
 gitlab-runner
 gitleaks
+gitmoji
 gitoxide
 gitql
 gitsign
