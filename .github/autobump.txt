@@ -718,6 +718,7 @@ getmail6
 gettext
 gf
 ghcup
+ghex
 ghostscript
 ghostunnel
 ghq
