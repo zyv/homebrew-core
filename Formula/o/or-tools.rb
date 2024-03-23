@@ -4,6 +4,7 @@ class OrTools < Formula
   url "https://github.com/google/or-tools/archive/refs/tags/v9.9.tar.gz"
   sha256 "8c17b1b5b05d925ed03685522172ca87c2912891d57a5e0d5dcaeff8f06a4698"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/google/or-tools.git", branch: "stable"
 
   livecheck do
@@ -21,7 +22,7 @@ class OrTools < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "10a12171d09df1c69aa0ac061e0beb34f8a462e4366765bd01c4975b136de050"
   end
 
-  depends_on "cmake" => :build
+  depends_on "cmake" => [:build, :test]
   depends_on "pkg-config" => [:build, :test]
   depends_on "abseil"
   depends_on "cbc"
@@ -37,6 +38,12 @@ class OrTools < Formula
   uses_from_macos "zlib"
 
   fails_with gcc: "5"
+
+  # Backport fix for Protobuf 26
+  patch do
+    url "https://github.com/google/or-tools/commit/e0a4dcf5a082e7f90b73708fc7ff4a5e4760ed85.patch?full_index=1"
+    sha256 "db8c40e25f68ea052dc74fc0ed163c1354667059632c8173ff42dc0c6a1f9bad"
+  end
 
   def install
     args = %w[
@@ -54,10 +61,18 @@ class OrTools < Formula
 
   test do
     # Linear Solver & Glop Solver
-    system ENV.cxx, "-std=c++17", pkgshare/"simple_lp_program.cc",
-                    "-I#{include}", "-L#{lib}", "-lortools",
-                    *shell_output("pkg-config --cflags --libs absl_check absl_log").chomp.split,
-                    "-o", "simple_lp_program"
+    (testpath/"CMakeLists.txt").write <<~EOS
+      cmake_minimum_required(VERSION 3.14)
+      project(test LANGUAGES CXX)
+      find_package(ortools CONFIG REQUIRED)
+      add_executable(simple_lp_program #{pkgshare}/simple_lp_program.cc)
+      target_compile_features(simple_lp_program PUBLIC cxx_std_17)
+      target_link_libraries(simple_lp_program PRIVATE ortools::ortools)
+    EOS
+    with_env(CPATH: nil) do
+      system "cmake", "-S", ".", "-B", ".", *std_cmake_args
+      system "cmake", "--build", "."
+    end
     system "./simple_lp_program"
 
     # Routing Solver
