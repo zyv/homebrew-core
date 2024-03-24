@@ -1053,7 +1053,9 @@ libgsf
 libgweather
 libhandy
 libidn2
+libimobiledevice-glue
 libint
+libirecovery
 libjwt
 libksba
 liblinear
