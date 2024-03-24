@@ -1392,6 +1392,7 @@ picard-tools
 pidgin
 pig
 pillow
+pinot
 pint
 pip-audit
 pip-tools
