@@ -1541,6 +1541,7 @@ rubberband
 ruff
 ruff-lsp
 rune
+rure
 rust-analyzer
 rustup-init
 rye
