@@ -684,6 +684,7 @@ forgit
 fork-cleaner
 fortio
 fourmolu
+fred
 freeciv
 freeipmi
 freerdp
