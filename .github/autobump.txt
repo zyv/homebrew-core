@@ -739,6 +739,7 @@ git-codereview
 git-cola
 git-credential-oauth
 git-delta
+git-grab
 git-lfs
 git-split-diffs
 git-town
