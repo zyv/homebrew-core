@@ -1370,6 +1370,7 @@ pciutils
 pcsc-lite
 pdal
 pdfcpu
+pdfgrep
 pdftk-java
 pdm
 pdns
