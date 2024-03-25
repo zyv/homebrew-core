@@ -1528,6 +1528,7 @@ risor
 rizin
 rke
 roadrunner
+roapi
 robin-map
 rocksdb
 rojo
