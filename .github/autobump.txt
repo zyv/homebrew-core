@@ -1062,6 +1062,7 @@ libksba
 liblinear
 liblouis
 libmicrohttpd
+libmxml
 libnfs
 libnice
 libobjc2
