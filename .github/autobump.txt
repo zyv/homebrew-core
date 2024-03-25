@@ -1359,6 +1359,7 @@ osslsigncode
 osv-scanner
 ott
 overmind
+overtls
 oxipng
 p11-kit
 pacapt
