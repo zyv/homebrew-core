@@ -938,6 +938,7 @@ jhipster
 jj
 jmeter
 jnethack
+jnv
 joker
 joplin-cli
 jose
