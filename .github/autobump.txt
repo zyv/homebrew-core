@@ -971,6 +971,7 @@ kalker
 kamel
 kapacitor
 karmadactl
+katana
 kcat
 kcptun
 keptn
