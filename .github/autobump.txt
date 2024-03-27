@@ -730,6 +730,7 @@ geph4
 getmail6
 gettext
 gf
+ggshield
 ghcup
 ghex
 ghostscript
