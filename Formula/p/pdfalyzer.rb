@@ -3,27 +3,26 @@ class Pdfalyzer < Formula
 
   desc "PDF analysis toolkit"
   homepage "https://github.com/michelcrypt4d4mus/pdfalyzer"
-  url "https://files.pythonhosted.org/packages/fd/86/d235c3936af7638eed693648d9bf651930dd384aa50d11250e5db9d6b4ab/pdfalyzer-1.14.6.tar.gz"
-  sha256 "d992de52f060559d0ff0086c0fff05fd86219fb8ffe3a48f8c03a7debee98809"
+  url "https://files.pythonhosted.org/packages/33/ca/ee761d07a8a739784ad4afe566d5cba4563d0dc1a7c3be29fa51b0b6561e/pdfalyzer-1.14.7.tar.gz"
+  sha256 "63c82144d1a250d56d6757e857917e79499e4675d5a258c62c420e411c0f419f"
   license "GPL-3.0-or-later"
   head "https://github.com/michelcrypt4d4mus/pdfalyzer.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "2c0f0b1d48ca01c79926189a57b7114b6fc288fedf2db401c5ec95160fdca9db"
-    sha256 cellar: :any,                 arm64_ventura:  "36cfbd9bd62465957031378a339a88db016dac1fff9b0975537ff8c737501477"
-    sha256 cellar: :any,                 arm64_monterey: "b4fcd09b183e6d61e8a3761f46013dd52f34094231a3858b159876a579041bcd"
-    sha256 cellar: :any,                 sonoma:         "4f17e5f4dda715238dc59cef1cc31c031dbac222091c73e1e09aaf98dc23a8c8"
-    sha256 cellar: :any,                 ventura:        "72ef133b021ef8db56ff91f39f893bb4d0ae4a6095f95c8cdf48f31641b33215"
-    sha256 cellar: :any,                 monterey:       "235d466a63e4ca8b98ec3b6f6afa132be7dc9ace155e36a01453752f6280a803"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6ec12f4c845654ead9fba8340a5ef0a0e7443623fd921e3d94766b812db0904"
+    sha256 cellar: :any,                 arm64_sonoma:   "72af9e8d2a8fe3301e0cc2640c97200e0c8e9771945a0fcc2f33b992c168b644"
+    sha256 cellar: :any,                 arm64_ventura:  "8cb55ed327a31982cd8fa36c6467021cf55f010dcf8456507e0c20526e61ea42"
+    sha256 cellar: :any,                 arm64_monterey: "37656ce77f3bc0a1c78f06e9eb29a11ce9a53ccd761c79db14256bcddb186761"
+    sha256 cellar: :any,                 sonoma:         "964c432248515cf5d639858278105b8a6e270f268b57aa670f6557a273543961"
+    sha256 cellar: :any,                 ventura:        "4e2c3d0d4aabde21147928cc4fb45509656ebc487dddcfb04ab321ce125ed4f1"
+    sha256 cellar: :any,                 monterey:       "12abf1373dac0eb1688e2a60869066e0fdfd6d6c9b76d300f3662051611c946c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc1fc1c027c71d34bd7867b219b33c6f637f612075e905c6b23fdc5a49fa6076"
   end
 
   depends_on "python@3.12"
 
   resource "anytree" do
-    url "https://files.pythonhosted.org/packages/7e/84/51e270f1f117da92025427e5cddd71ee62fc65de8b0391568055eb872d3d/anytree-2.12.0.tar.gz"
-    sha256 "0dde0365cc8b1f3531e927694f39b903c360eadab2be09c50f3426ecca967949"
+    url "https://files.pythonhosted.org/packages/f9/44/2dd9c5d0c3befe899738b930aa056e003b1441bfbf34aab8fce90b2b7dea/anytree-2.12.1.tar.gz"
+    sha256 "244def434ccf31b668ed282954e5d315b4e066c4940b94aff4a7962d85947830"
   end
 
   resource "chardet" do
@@ -77,13 +76,13 @@ class Pdfalyzer < Formula
   end
 
   resource "yara-python" do
-    url "https://files.pythonhosted.org/packages/a4/2b/d36b6399027bb888faed23e3393f4efc3568996a5c386233b364d9e701d5/yara-python-4.2.3.tar.gz"
-    sha256 "31f6f6f2fdca4c5ddfeed7cc6d29afad6af7dc259dde284df2d7ea5ae15ee69a"
+    url "https://files.pythonhosted.org/packages/62/7b/81789fafcc6167fe8cfd94b3813c0971a083cde142731213007e2456f35b/yara-python-4.5.0.tar.gz"
+    sha256 "4feecc56d2fe1d23ecb17cb2d3bc2e3859ebf7a2201d0ca3ae0756a728122b27"
   end
 
   resource "yaralyzer" do
-    url "https://files.pythonhosted.org/packages/27/ab/53c0702f351334c1014eff376d67b31e2628197e3ad75a4824c3858512ca/yaralyzer-0.9.3.tar.gz"
-    sha256 "d8d2fbb8b12733b3d0623c6de3a7c3ec29dcb040cfdb647bdad811fdf94981a6"
+    url "https://files.pythonhosted.org/packages/23/73/9adfae6d87a9faaaaaccf2766e75c364314c127c81366cfecc3cce1d735d/yaralyzer-0.9.4.tar.gz"
+    sha256 "a30f655e7e42221bdb069c2f4c6a8c67d10408f3d0f3e4be08dab7dbf0ffe6ba"
   end
 
   def install
