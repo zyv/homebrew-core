@@ -1103,6 +1103,7 @@ libtiff
 libucl
 libunibreak
 libunwind
+libusbmuxd
 libuv
 libva
 libvirt
