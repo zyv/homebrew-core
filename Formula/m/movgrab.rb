@@ -4,7 +4,7 @@ class Movgrab < Formula
   url "https://github.com/ColumPaget/Movgrab/archive/refs/tags/3.1.2.tar.gz"
   sha256 "30be6057ddbd9ac32f6e3d5456145b09526cc6bd5e3f3fb3999cc05283457529"
   license "GPL-3.0-or-later"
-  revision 6
+  revision 7
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "00bae61b99036c125722e286765989750625ea2e101cb72b423d66b6d0e89885"
@@ -32,7 +32,17 @@ class Movgrab < Formula
 
   # Backport fix for GCC linker library search order
   # Upstream ref: https://github.com/ColumPaget/Movgrab/commit/fab3c87bc44d6ce47f91ded430c3512ebcf7501b
-  patch :DATA
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/6e5fdfd05ce62383c7f3ac4b23ba31f5ffbac5b2/movgrab/linker.patch"
+    sha256 "e23330f110cb8ea2ed29ebc99180250fa5498d53706303b4d1878dc44aa483d3"
+  end
+
+  # build patch to fix pointer conversion issues
+  # upstream bug report, https://github.com/ColumPaget/Movgrab/issues/6
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/ba252015727b6f0fb362fec3edfb7c53a3f888c2/movgrab/pointer-conv.patch"
+    sha256 "9b5c0bb666d92c87966e610e3c2db9736371507b646359b5421f2a4fa7d68222"
+  end
 
   def install
     # workaround for Xcode 14.3
@@ -62,33 +72,3 @@ class Movgrab < Formula
     system "#{bin}/movgrab", "--version"
   end
 end
-
-__END__
-diff --git a/Makefile.in b/Makefile.in
-index 04ea67d..5516051 100755
---- a/Makefile.in
-+++ b/Makefile.in
-@@ -11,7 +11,7 @@ OBJ=common.o settings.o containerfiles.o outputfiles.o servicetypes.o extract_te
-
- all: $(OBJ)
- 	@cd libUseful-2.8; $(MAKE)
--	$(CC) $(FLAGS) -o movgrab main.c $(LIBS) $(OBJ) libUseful-2.8/libUseful-2.8.a
-+	$(CC) $(FLAGS) -o movgrab main.c $(OBJ) libUseful-2.8/libUseful-2.8.a $(LIBS)
-
- clean:
- 	@rm -f movgrab *.o libUseful-2.8/*.o libUseful-2.8/*.a libUseful-2.8/*.so config.log config.status
-diff --git a/libUseful-2.8/DataProcessing.c b/libUseful-2.8/DataProcessing.c
-index 3e188a8..56087a6 100755
---- a/libUseful-2.8/DataProcessing.c
-+++ b/libUseful-2.8/DataProcessing.c
-@@ -420,8 +420,8 @@ switch(val)
-
- if (Data->Cipher)
- {
--Data->enc_ctx=(EVP_CIPHER_CTX *) calloc(1,sizeof(EVP_CIPHER_CTX));
--Data->dec_ctx=(EVP_CIPHER_CTX *) calloc(1,sizeof(EVP_CIPHER_CTX));
-+Data->enc_ctx=EVP_CIPHER_CTX_new();
-+Data->dec_ctx=EVP_CIPHER_CTX_new();
- EVP_CIPHER_CTX_init(Data->enc_ctx);
- EVP_CIPHER_CTX_init(Data->dec_ctx);
- Data->BlockSize=EVP_CIPHER_block_size(Data->Cipher);
