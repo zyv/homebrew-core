@@ -1,8 +1,8 @@
 class JfrogCli < Formula
   desc "Command-line interface for JFrog products"
   homepage "https://www.jfrog.com/confluence/display/CLI/JFrog+CLI"
-  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.54.0.tar.gz"
-  sha256 "1d6758df3c4fe13247e9f58512328960ee2668e4be45a46ede3a0a2b3ad8f803"
+  url "https://github.com/jfrog/jfrog-cli/archive/refs/tags/v2.55.0.tar.gz"
+  sha256 "66f1f4a766ee5aca6a277c693480bead84b0d66288a7fdeb8ff41de43e545a99"
   license "Apache-2.0"
   head "https://github.com/jfrog/jfrog-cli.git", branch: "v2"
 
@@ -20,8 +20,8 @@ class JfrogCli < Formula
 
   # upstream patch PR to support go1.22 build, https://github.com/jfrog/jfrog-cli/pull/2447
   patch do
-    url "https://github.com/jfrog/jfrog-cli/commit/9cba3d265b798f5a7768af2317a12de9c01ab401.patch?full_index=1"
-    sha256 "2c3fb451956d5de0382371612456cfad5b907ac40e2240507a5050ea4df4c797"
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/636ea31/jfrog-cli/jfrog-cli-2.55.0-go-mod.patch"
+    sha256 "9ca953ddabb0e306fe3736af334c984b9aa4ffd1e2c9d2caed54ce5d621ea327"
   end
 
   def install
