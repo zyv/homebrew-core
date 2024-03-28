@@ -1,23 +1,10 @@
 class Quilt < Formula
   desc "Work with series of patches"
   homepage "https://savannah.nongnu.org/projects/quilt"
+  url "https://download.savannah.gnu.org/releases/quilt/quilt-0.68.tar.gz"
+  sha256 "fe8c09de03c106e85b3737c8f03ade147c956b79ed7af485a1c8a3858db38426"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://git.savannah.gnu.org/git/quilt.git", branch: "master"
-
-  stable do
-    url "https://download.savannah.gnu.org/releases/quilt/quilt-0.67.tar.gz"
-    sha256 "3be3be0987e72a6c364678bb827e3e1fcc10322b56bc5f02b576698f55013cc2"
-
-    # This fixes 'quilt refresh' with macOS/BSD awk. In stable, 'quilt refresh'
-    # just appends the whole patch-file content to the file again and again.
-    # This commit is upstream but not included in a stable version yet.
-    # Remove on next release.
-    patch do
-      url "https://git.savannah.nongnu.org/cgit/quilt.git/patch/?id=ce9c68abb7cee0b4fb0d5a7ff7048d0ab3b726f8"
-      sha256 "5b936570d75ea30c892baa481293f1e7b9265d106304f87d05853c61e09b2522"
-    end
-  end
 
   livecheck do
     url "https://download.savannah.gnu.org/releases/quilt/"
