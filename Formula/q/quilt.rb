@@ -12,16 +12,13 @@ class Quilt < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "85ffd84dafa24dda7015974948cd605116a4e225221d8bd7c186c31ea755559f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "85ffd84dafa24dda7015974948cd605116a4e225221d8bd7c186c31ea755559f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "10cd41c30603f01fe89ec6ae643bc44e24bf1cd3f5f484ac2099fbb0e05dbf15"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "66e778f938ed310928846102d07d5055f32ccc16068fa4d0c985e0ada6ea5d59"
-    sha256 cellar: :any_skip_relocation, sonoma:         "85ffd84dafa24dda7015974948cd605116a4e225221d8bd7c186c31ea755559f"
-    sha256 cellar: :any_skip_relocation, ventura:        "85ffd84dafa24dda7015974948cd605116a4e225221d8bd7c186c31ea755559f"
-    sha256 cellar: :any_skip_relocation, monterey:       "10cd41c30603f01fe89ec6ae643bc44e24bf1cd3f5f484ac2099fbb0e05dbf15"
-    sha256 cellar: :any_skip_relocation, big_sur:        "66e778f938ed310928846102d07d5055f32ccc16068fa4d0c985e0ada6ea5d59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cfac0b11eaeeb52b79ac7b5a5ccd6af8b434f963c1365c95fb9e7b125766ff6e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "502671863bf107d3681e09299effd69c594f030f82aa44213efc142c63ac826d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "af866881737fac5051ef085909b232d15486658dd38312db8c22a01c3756ca20"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "367878f8dd8271300992bb0f1d0477e72ed4d0ce6803b05b30c85fbbc8d0acbb"
+    sha256 cellar: :any_skip_relocation, sonoma:         "8e935a3ddbba6609ab5cebc2d17d93350decaf956c79c08364f92cfb697fb037"
+    sha256 cellar: :any_skip_relocation, ventura:        "af866881737fac5051ef085909b232d15486658dd38312db8c22a01c3756ca20"
+    sha256 cellar: :any_skip_relocation, monterey:       "367878f8dd8271300992bb0f1d0477e72ed4d0ce6803b05b30c85fbbc8d0acbb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fa56add5a120e209251cc06d9e9f08d742fd011d8d590bd65c9cfee13c81d87b"
   end
 
   depends_on "coreutils"
