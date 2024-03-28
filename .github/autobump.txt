@@ -673,6 +673,7 @@ flint
 flix
 flowpipe
 fluent-bit
+fluid-synth
 flume
 flyscrape
 flyway
