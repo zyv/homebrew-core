@@ -11,7 +11,7 @@ class WiremockStandalone < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "68eb13d5c6efc4a5ef304651911df0def75c2d51f19ad83c72df2c4c85737332"
+    sha256 cellar: :any_skip_relocation, all: "05899dffdadd5b24d673480f528ae1bd5f02cf359e5ea8fad514efd8f2c73067"
   end
 
   depends_on "openjdk"
