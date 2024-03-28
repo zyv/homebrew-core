@@ -376,6 +376,7 @@ copilot
 core-lightning
 coredns
 corepack
+coreutils
 corral
 corrosion
 cortex
