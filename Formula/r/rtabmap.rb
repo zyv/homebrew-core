@@ -4,6 +4,7 @@ class Rtabmap < Formula
   url "https://github.com/introlab/rtabmap/archive/refs/tags/0.21.4.tar.gz"
   sha256 "242f8da7c5d20f86a0399d6cfdd1a755e64e9117a9fa250ed591c12f38209157"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/introlab/rtabmap.git", branch: "master"
 
   bottle do
@@ -31,6 +32,10 @@ class Rtabmap < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
+    # Replace reference to OpenCV's Cellar path
+    opencv = Formula["opencv"]
+    inreplace lib.glob("rtabmap-*/RTABMap_coreTargets.cmake"), opencv.prefix.realpath, opencv.opt_prefix
   end
 
   test do
