@@ -1844,6 +1844,7 @@ vault-cli
 vcluster
 vcsh
 veclibfort
+veilid
 velero
 verapdf
 vercel-cli
