@@ -1519,6 +1519,7 @@ quick-lint-js
 quicktype
 quictls
 quill
+quilt
 qxmpp
 rabbitmq
 radamsa
