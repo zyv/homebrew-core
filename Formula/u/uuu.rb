@@ -1,8 +1,8 @@
 class Uuu < Formula
   desc "Universal Update Utility, mfgtools 3.0. NXP I.MX Chip image deploy tools"
   homepage "https://github.com/nxp-imx/mfgtools"
-  url "https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.125/uuu_source-uuu_1.5.125.tar.gz"
-  sha256 "085d7f6308ee6b77dfb131fac40704575525adf6da45cdc446c00a0b29e4c21a"
+  url "https://github.com/nxp-imx/mfgtools/releases/download/uuu_1.5.165/uuu_source-uuu_1.5.165.tar.gz"
+  sha256 "6e65fc028afacc94b805ae376e3da3864dcb2570d425037820e716207ab70373"
   license "BSD-3-Clause"
   head "https://github.com/nxp-imx/mfgtools.git", branch: "master"
 
@@ -28,6 +28,7 @@ class Uuu < Formula
   depends_on "libusb"
   depends_on "libzip"
   depends_on "openssl@3"
+  depends_on "tinyxml2"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

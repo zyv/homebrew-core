@@ -1838,6 +1838,7 @@ universal-ctags
 usb.ids
 usbredir
 uutils-coreutils
+uuu
 uv
 uvicorn
 v2ray
