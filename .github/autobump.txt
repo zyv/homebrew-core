@@ -1821,6 +1821,7 @@ trufflehog
 tsduck
 tt
 ttdl
+ttyd
 tygo
 typedb
 typescript
