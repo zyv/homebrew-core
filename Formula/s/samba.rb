@@ -14,13 +14,13 @@ class Samba < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "21f41972a750d87b66cea6e46accd29f96d9149365707a80063f7de7cdb37431"
-    sha256 arm64_ventura:  "ad00adbd52bc052e9ca0a9e3ef6de476ad50311899f30747b083e843e9492a6e"
-    sha256 arm64_monterey: "4657e914d78764c69ea75bcca9c0356d876e8b22eb108f3fc846321109d50279"
-    sha256 sonoma:         "a91d08c0b82653d3bc111f359e877aec954ab84f5717f2a9cd7090f359e15116"
-    sha256 ventura:        "6a54d6c10a3df771c24c578fb0dc1cdc3cb6bea7e7bd902b5e8c4416bcc0ee69"
-    sha256 monterey:       "5dd5b3574a0eb4cd5bbcf3aac502fbb47ebd60b0b567dd4446a21681e85200df"
-    sha256 x86_64_linux:   "46392ec306d82242ae202cf9eb1df626b79bb8a8e7059ed9de83de36919d5d55"
+    sha256 arm64_sonoma:   "f0f495011cfe5fee55b623777ed603177a26828c8e99c336fb7513bc47af4019"
+    sha256 arm64_ventura:  "977eb2b23722a05b3a425159494102436046f0630af76a241d826e43119ab80f"
+    sha256 arm64_monterey: "d64e85b429ab5db0738a335fe26d54842f74bfeeb0e6a4560a4ec288e67d5eb1"
+    sha256 sonoma:         "2e3809b9a75c5e8e4636d30a756f4104d457c5e60a1dcbfc10ccd380a828ed78"
+    sha256 ventura:        "1ae22014935d909d508a8a0ea484419a1370c0eb2cc5ef392f9d8e58d78012a2"
+    sha256 monterey:       "0fd96b96f0bd951cbef433ac1cdb729c40924dbabf58159345016edefa9f071c"
+    sha256 x86_64_linux:   "3fc2a47086bcea9031a614a37879aa2ba21dc6f8fac5f450a6273ffac9ce25bb"
   end
 
   depends_on "bison" => :build
