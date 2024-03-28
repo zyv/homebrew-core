@@ -1,8 +1,8 @@
 class Emqx < Formula
   desc "MQTT broker for IoT"
   homepage "https://www.emqx.io/"
-  url "https://github.com/emqx/emqx/archive/refs/tags/v5.5.1.tar.gz"
-  sha256 "db907d7a42c76c8954bd56de02c168acf35d160873b48b960dbd10b1c8e0026c"
+  url "https://github.com/emqx/emqx/archive/refs/tags/v5.6.0.tar.gz"
+  sha256 "e323f053af0dcccf9bac4b3c49638b7c38c7df2d5bd02bbf6de2fcc5e3bc3f8f"
   license "Apache-2.0"
   head "https://github.com/emqx/emqx.git", branch: "master"
 
