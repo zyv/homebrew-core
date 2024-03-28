@@ -1905,6 +1905,7 @@ wildfly-as
 wimlib
 wireguard-go
 wiremock-standalone
+wireshark
 witness
 wolfmqtt
 wolfssl
