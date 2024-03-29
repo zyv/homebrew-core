@@ -13,14 +13,13 @@ class Coccinelle < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_sonoma:   "ca6145d84ac088d6a9af56409383ee95fcdfc019d565f57a16ab6571b468df10"
-    sha256 arm64_ventura:  "cb7b2f3f20840b99f22efba6538fd4e7a6fa3868aa9f934c5722e26a968dc753"
-    sha256 arm64_monterey: "368b32215f0409f8686364f2d5f9fa6d6ef3896ae1baddba37ad34abc2021a8a"
-    sha256 sonoma:         "6e9fcb9482970a2459a8e6bc4b319cd06d555dbfcd6501ad5cae9d9fc8dad61b"
-    sha256 ventura:        "60b09a4b123954c6a206cfa471c8653622f9567f786eb183241b1cd55f412128"
-    sha256 monterey:       "108f9640319df581d2feb12d6f52540d7f30876d24f48547e2a901ddda474aed"
-    sha256 x86_64_linux:   "1d24df746aee06ce03219fb78ff208b30b7b14c666195e30623c9012c9f825ea"
+    sha256 arm64_sonoma:   "a36c5cfcdf9bf41142f9475fcc6ceb194241befb2e52649a4c71e53fb2602961"
+    sha256 arm64_ventura:  "1393cf374ce5f991413ab0df0463ba44d40c2d82a4799e859d8b09fbab8ed42f"
+    sha256 arm64_monterey: "ef00df9ef65948e04513d222ffdcad06bfc5b3a7637d4bd0db36de3d08f93678"
+    sha256 sonoma:         "3bc8077e579e1115de4e84adea5d2a41a16ad39852e4dde6f275baea83490353"
+    sha256 ventura:        "52d5a623ec3b372e8701375a04422eada24786d089dbeac052cae7a764cc8298"
+    sha256 monterey:       "0a7f4a693f30a6369413d9a4cb80bde37a5c5216cffbe2b7db75681c425b2987"
+    sha256 x86_64_linux:   "8a3a18a838b16ed3fd2adf8dae3cbecc2ae02018f661a0cb89c6db318ddec137"
   end
 
   depends_on "autoconf" => :build
