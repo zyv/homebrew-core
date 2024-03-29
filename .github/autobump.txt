@@ -1501,6 +1501,7 @@ pyright
 pyside@2
 python-build
 python-dateutil
+python-lxml
 python-matplotlib
 python-pyparsing
 python-setuptools
