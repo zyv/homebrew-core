@@ -1,10 +1,9 @@
 class Pnetcdf < Formula
   desc "Parallel netCDF library for scientific data using the OpenMPI library"
   homepage "https://parallel-netcdf.github.io/index.html"
-  url "https://parallel-netcdf.github.io/Release/pnetcdf-1.12.3.tar.gz"
-  sha256 "439e359d09bb93d0e58a6e3f928f39c2eae965b6c97f64e67cd42220d6034f77"
+  url "https://parallel-netcdf.github.io/Release/pnetcdf-1.13.0.tar.gz"
+  sha256 "aba0f1c77a51990ba359d0f6388569ff77e530ee574e40592a1e206ed9b2c491"
   license "NetCDF"
-  revision 1
 
   livecheck do
     url "https://parallel-netcdf.github.io/wiki/Download.html"
@@ -36,16 +35,13 @@ class Pnetcdf < Formula
   end
 
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}",
-                          "--enable-shared"
+    # Work around asm incompatibility with new linker (FB13194320)
+    # https://github.com/Parallel-NetCDF/PnetCDF/issues/139
+    ENV.append "LDFLAGS", "-Wl,-ld_classic" if DevelopmentTools.clang_build_version >= 1500
 
-    cd "src/utils" do
-      # Avoid references to Homebrew shims
-      inreplace ["pnetcdf-config", "pnetcdf_version/Makefile"], Superenv.shims_path, "/usr/bin"
-    end
+    system "./configure", *std_configure_args,
+                          "--disable-silent-rules",
+                          "--enable-shared"
 
     system "make", "install"
   end
