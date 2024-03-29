@@ -3,8 +3,8 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/d2/e2/292c0837717e57694ef8e7f99a513b8631e9e679568d7e04222d1a470b31/pdm-2.13.0.tar.gz"
-  sha256 "7ba25f1cae22038149582773404644eb3321e13d50549e9cb87bdb95fa5c0f1f"
+  url "https://files.pythonhosted.org/packages/59/68/616238c0ab6a1069465ef31c219c1e419e0feff43318203b6efb1c1904a4/pdm-2.13.1.tar.gz"
+  sha256 "8e3c0975edd3ddeca513dac341e02780935139053d44ef6dd5cb462738f05414"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
@@ -62,8 +62,8 @@ class Pdm < Formula
   end
 
   resource "httpcore" do
-    url "https://files.pythonhosted.org/packages/03/9d/2055e6b65592d3a485a1141761ba7047674bbe085cebac0988b30e93c9e6/httpcore-1.0.4.tar.gz"
-    sha256 "cb2839ccfcba0d2d3c1131d3c3e26dfc327326fbe7a5dc0dbfe9f6c9151bb022"
+    url "https://files.pythonhosted.org/packages/17/b0/5e8b8674f8d203335a62fdfcfa0d11ebe09e23613c3391033cbba35f7926/httpcore-1.0.5.tar.gz"
+    sha256 "34a38e2f9291467ee3b44e89dd52615370e152954ba21721378a87b2960f7a61"
   end
 
   resource "httpx" do
