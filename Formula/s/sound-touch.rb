@@ -1,8 +1,8 @@
 class SoundTouch < Formula
   desc "Audio processing library"
   homepage "https://www.surina.net/soundtouch/"
-  url "https://codeberg.org/soundtouch/soundtouch/archive/2.3.2.tar.gz"
-  sha256 "ed714f84a3e748de87b24f385ec69d3bdc51ca47b7f4710d2048b84b2761e7ff"
+  url "https://codeberg.org/soundtouch/soundtouch/archive/2.3.3.tar.gz"
+  sha256 "43b23dfac2f64a3aff55d64be096ffc7b73842c3f5665caff44975633a975a99"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -23,6 +23,8 @@ class SoundTouch < Formula
   depends_on "libtool" => :build
 
   def install
+    ENV.append "CXXFLAGS", "-std=c++14"
+
     system "/bin/sh", "bootstrap"
     args = %W[
       --disable-dependency-tracking
