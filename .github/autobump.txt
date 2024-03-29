@@ -1126,6 +1126,7 @@ libzzip
 lighthouse
 lighttpd
 lima
+link-grammar
 linkerd
 linode-cli
 linux-headers@5.15

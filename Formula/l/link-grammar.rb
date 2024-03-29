@@ -1,8 +1,8 @@
 class LinkGrammar < Formula
   desc "Carnegie Mellon University's link grammar parser"
   homepage "https://github.com/opencog/link-grammar"
-  url "https://github.com/opencog/link-grammar/archive/refs/tags/link-grammar-5.12.3.tar.gz"
-  sha256 "e0cd1b94cc9af20e5bd9a04604a714e11efe21ae5e453b639cdac050b6ac4150"
+  url "https://github.com/opencog/link-grammar/archive/refs/tags/link-grammar-5.12.4.tar.gz"
+  sha256 "dd24e4d64177c389bb023c5acb0fd3d73fb000ecce4938ebe872e3f0011d56e3"
   license "LGPL-2.1-or-later"
   head "https://github.com/opencog/link-grammar.git", branch: "master"
 
@@ -29,12 +29,6 @@ class LinkGrammar < Formula
   uses_from_macos "flex" => :build
   uses_from_macos "libedit"
   uses_from_macos "sqlite"
-
-  # upstream build patch ref, https://github.com/opencog/link-grammar/pull/1473
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/6de1efe/link-grammar/5.12.3.patch"
-    sha256 "20d2c503ee2b50198d09ce5b69e39b4b88d9e8df849621e7b9f493f45c78ed1d"
-  end
 
   def install
     # Fix compile with newer Clang
