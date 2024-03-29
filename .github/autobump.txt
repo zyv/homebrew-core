@@ -1251,6 +1251,7 @@ muffet
 mujs
 murex
 mutt
+mx
 mycli
 mydumper
 mypy
