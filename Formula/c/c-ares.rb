@@ -1,11 +1,11 @@
 class CAres < Formula
   desc "Asynchronous DNS library"
   homepage "https://c-ares.org/"
-  url "https://c-ares.org/download/c-ares-1.27.0.tar.gz"
-  mirror "https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.27.0.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/dns/c-ares-1.27.0.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/dns/legacy/c-ares-1.27.0.tar.gz"
-  sha256 "0a72be66959955c43e2af2fbd03418e82a2bd5464604ec9a62147e37aceb420b"
+  url "https://c-ares.org/download/c-ares-1.28.0.tar.gz"
+  mirror "https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.28.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/dns/c-ares-1.28.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/dns/legacy/c-ares-1.28.0.tar.gz"
+  sha256 "3c92febbdebdfe9dea0e037083f55357745e0df34243f9660eed8757db617430"
   license "MIT"
   head "https://github.com/c-ares/c-ares.git", branch: "main"
 
