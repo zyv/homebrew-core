@@ -1,8 +1,8 @@
 class Mikutter < Formula
   desc "Extensible Twitter client"
   homepage "https://mikutter.hachune.net/"
-  url "https://mikutter.hachune.net/bin/mikutter-5.0.6.tar.gz", using: :homebrew_curl
-  sha256 "078944d3790679d8d91c4f4fd006ec66aa71adff2686c969c20b87faff82de08"
+  url "https://mikutter.hachune.net/bin/mikutter-5.0.7.tar.gz", using: :homebrew_curl
+  sha256 "34dcabb98572c5c3b5707ebdee41019bf277fa3e20f7e061088b5b1d1aaea39a"
   license "MIT"
   head "git://mikutter.hachune.net/mikutter.git", branch: "develop"
 
@@ -195,8 +195,8 @@ class Mikutter < Formula
 
   # needed by atk
   resource "rake" do
-    url "https://rubygems.org/downloads/rake-13.0.6.gem"
-    sha256 "5ce4bf5037b4196c24ac62834d8db1ce175470391026bd9e557d669beeb19097"
+    url "https://rubygems.org/downloads/rake-13.1.0.gem"
+    sha256 "be6a3e1aa7f66e6c65fa57555234eb75ce4cf4ada077658449207205474199c6"
   end
 
   resource "red-colors" do
