@@ -1869,6 +1869,7 @@ vet
 vgrep
 victoriametrics
 video-compare
+vim
 vineyard
 vips
 virgil
