@@ -4,6 +4,7 @@ class PetscComplex < Formula
   url "https://web.cels.anl.gov/projects/petsc/download/release-snapshots/petsc-3.20.5.tar.gz"
   sha256 "fb4e637758737af910b05f30a785245633916cd0a929b7b6447ad1028da4ea5a"
   license "BSD-2-Clause"
+  revision 1
 
   livecheck do
     formula "petsc"
@@ -19,10 +20,9 @@ class PetscComplex < Formula
     sha256 x86_64_linux:   "88b9f2b79b8a1df0e82002356c021bd3ac12a47d6a5e00d3d3bc848011905677"
   end
 
-  depends_on "hdf5"
+  depends_on "hdf5-mpi"
   depends_on "hwloc"
   depends_on "metis"
-  depends_on "netcdf"
   depends_on "open-mpi"
   depends_on "openblas"
   depends_on "scalapack"
