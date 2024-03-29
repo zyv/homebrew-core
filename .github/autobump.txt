@@ -1937,6 +1937,7 @@ xgboost
 xh
 xkbcomp
 xkeyboardconfig
+xlsxio
 xmake
 xmlrpc-c
 xmrig
