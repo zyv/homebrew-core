@@ -47,6 +47,13 @@ class Curl < Formula
   uses_from_macos "krb5"
   uses_from_macos "zlib"
 
+  # Fixes `curl: (23) Failed writing received data to disk/application`
+  # Remove in next release
+  patch do
+    url "https://github.com/curl/curl/commit/b30d694a027eb771c02a3db0dee0ca03ccab7377.patch?full_index=1"
+    sha256 "da4ae2efdf05169938c2631ba6e7bca45376f1d67abc305cf8b6a982c618df4d"
+  end
+
   def install
     tag_name = "curl-#{version.to_s.tr(".", "_")}"
     if build.stable? && stable.mirrors.grep(/github\.com/).first.exclude?(tag_name)
