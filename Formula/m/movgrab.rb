@@ -7,13 +7,13 @@ class Movgrab < Formula
   revision 7
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "00bae61b99036c125722e286765989750625ea2e101cb72b423d66b6d0e89885"
-    sha256 cellar: :any,                 arm64_ventura:  "2125f5ed70f10bc4a52fe12c2039bac9c5962fbc11279649a4afcb74edafbe25"
-    sha256 cellar: :any,                 arm64_monterey: "6862be98fc9700fe5387119419841f26933e19914cb5cc29cc1740ddbc7f5c91"
-    sha256 cellar: :any,                 sonoma:         "19b7eca42fa3da28533ebc1fcd5d591829945c9437e95856eeeb0e7866da7f91"
-    sha256 cellar: :any,                 ventura:        "be017c6a743b1e9e2da0fd70e84929e5c4922b86d4320c0a3bb9f0cd866904e3"
-    sha256 cellar: :any,                 monterey:       "2e6696b7eba9cfd5ddc641e08bca87e98f03005673f17d4be0a42888598ccac5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a8dcd83d074d217a70c8e52ab8fb1eaf827c83c104af436ec1bbd3e0b71bcafb"
+    sha256 cellar: :any,                 arm64_sonoma:   "c04859b004d24cb057ef9bec210fbe2e5959d4344ba1c0bfa0d555f48797e76f"
+    sha256 cellar: :any,                 arm64_ventura:  "a1eb0df51a2bb3d1f5e689eee0c4e1d4c25f186e62e3215ddcfc6c26eee887fa"
+    sha256 cellar: :any,                 arm64_monterey: "364748c6707826fda84e14d5bdbc0ce0f35a1b23a5f3338e6023b4a06b4e3897"
+    sha256 cellar: :any,                 sonoma:         "c5c92bb08bb792fd166306b26154fe60e5cad236c152dbe5c7239fe1ac92f55b"
+    sha256 cellar: :any,                 ventura:        "247b1e77ca8f379ccae10a44961cb89574ea3bf3dd5e75cf8ae75187df5cc5a4"
+    sha256 cellar: :any,                 monterey:       "a76df40c5dd3e8ba646a55e44041b380f226c492e9e90ed03dade2794a8e51af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "61963349a8e6379b370104ac522acbb4cf912ce67a8db566f7d42a6bb50c1895"
   end
 
   depends_on "libressl"
