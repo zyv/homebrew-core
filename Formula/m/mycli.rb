@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/20/9b/8909b7ce779ca87b10826e01a6073890937e44e44a60b1f4d2ee71f44ce6/mycli-1.27.0.tar.gz"
-  sha256 "a71db5bd9c1a7d0006f4f2ff01548ce75637d3f50ca3a7e77b950b5b46aff7cd"
+  url "https://files.pythonhosted.org/packages/b1/3e/0f7c525b6e81d6283962048d17132bed01c66714dfa37f4a82a7561c3f3e/mycli-1.27.1.tar.gz"
+  sha256 "e9f527a3e6192e7b87fe7b708aa3bd5b1eb7ac3489c1c159567e5ff5c98ca899"
   license "BSD-3-Clause"
 
   bottle do
@@ -69,8 +69,8 @@ class Mycli < Formula
   end
 
   resource "sqlglot" do
-    url "https://files.pythonhosted.org/packages/55/72/ef1432e9e85a8234db1a03afb250f445acc2dc378efe49bdde03c33f34a1/sqlglot-21.2.1.tar.gz"
-    sha256 "e36170327d7faf60e5a48f60357835d69c888b852421edc3a4160cb02a84b700"
+    url "https://files.pythonhosted.org/packages/40/09/501eb48a5992f832f76a0c8b3ad38d26fa29f626c7d72b1439e299b435bc/sqlglot-23.3.0.tar.gz"
+    sha256 "50f2a52fe82b5fa8531c0bfe4d9a11e336515db7aa835e80bb990eb9b11e8e7b"
   end
 
   resource "sqlparse" do
