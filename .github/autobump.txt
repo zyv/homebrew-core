@@ -1249,6 +1249,7 @@ muffet
 mujs
 murex
 mutt
+mycli
 mydumper
 mypy
 mysqltuner
