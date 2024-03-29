@@ -1613,6 +1613,7 @@ scrcpy
 scummvm
 scummvm-tools
 scw
+sdb
 sdl2
 seam
 seaweedfs
