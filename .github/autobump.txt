@@ -1713,7 +1713,6 @@ sslh
 stackql
 stanford-corenlp
 star
-starship
 staticcheck
 statix
 stdman
