@@ -1754,6 +1754,7 @@ syft
 syncthing
 sysdig
 sysstat
+systemc
 systemd
 tailscale
 tailwindcss
