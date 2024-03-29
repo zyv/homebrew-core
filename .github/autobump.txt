@@ -339,6 +339,7 @@ cmu-pocketsphinx
 cnats
 cntb
 cobalt
+coccinelle
 cocoapods
 cocogitto
 coconut
