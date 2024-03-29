@@ -1,9 +1,9 @@
 class Hive < Formula
   desc "Hadoop-based data summarization, query, and analysis"
   homepage "https://hive.apache.org"
-  url "https://www.apache.org/dyn/closer.lua?path=hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz"
-  sha256 "0c9b6a6359a7341b6029cc9347435ee7b379f93846f779d710b13f795b54bb16"
+  url "https://www.apache.org/dyn/closer.lua?path=hive/hive-4.0.0/apache-hive-4.0.0-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/hive/hive-4.0.0/apache-hive-4.0.0-bin.tar.gz"
+  sha256 "83eb88549ae88d3df6a86bb3e2526c7f4a0f21acafe21452c18071cee058c666"
   license "Apache-2.0"
 
   bottle do
@@ -22,7 +22,7 @@ class Hive < Formula
 
     # Hadoop currently supplies a newer version
     # and two versions on the classpath causes problems
-    rm libexec/"lib/guava-19.0.jar"
+    rm_f libexec/"lib/guava-*.jar"
     guava = (Formula["hadoop"].opt_libexec/"share/hadoop/common/lib").glob("guava-*-jre.jar")
     ln_s guava.first, libexec/"lib"
 
