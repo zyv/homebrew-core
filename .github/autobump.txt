@@ -1690,6 +1690,7 @@ spicetify-cli
 spidermonkey
 sponge
 spotbugs
+spotify_player
 spotify-tui
 sql-migrate
 sqlancer
