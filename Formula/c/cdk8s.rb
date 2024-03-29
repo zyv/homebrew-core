@@ -3,8 +3,8 @@ require "language/node"
 class Cdk8s < Formula
   desc "Define k8s native apps and abstractions using object-oriented programming"
   homepage "https://cdk8s.io/"
-  url "https://registry.npmjs.org/cdk8s-cli/-/cdk8s-cli-2.198.65.tgz"
-  sha256 "443887a460097dbb51948fca50c006c699c7dad2befee3ca40066c67c4706936"
+  url "https://registry.npmjs.org/cdk8s-cli/-/cdk8s-cli-2.198.88.tgz"
+  sha256 "d038b21516d494afb657ce1f525ee5205ca59c10a90348297b04e1dffe3beaa1"
   license "Apache-2.0"
 
   bottle do
@@ -25,7 +25,7 @@ class Cdk8s < Formula
   end
 
   test do
-    assert_match "Cannot initialize a project in a non-empty directory",
-      shell_output("#{bin}/cdk8s init python-app 2>&1", 1)
+    output = shell_output("#{bin}/cdk8s init python-app 2>&1", 1)
+    assert_match "Initializing a project from the python-app template", output
   end
 end
