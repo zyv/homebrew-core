@@ -9,13 +9,13 @@ class Pdm < Formula
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0660c57e9c9382a4a0acb7e5f31735625b968ff794b5190ce7fed1933894626f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "103f049131df5c4f526a19d84eb3c7f965a9c8c4824f8d32b896f78b62d5fd6f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "68ae2f8345c0ccad3402f2550362e9e207e7c76b99c6b2828a56c26a8fbfc618"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3b752b693b57be167ec5822d59baac547021dce093ea1ed9b1f46556be964198"
-    sha256 cellar: :any_skip_relocation, ventura:        "d04c38a8f0a8386f346be817330d481bb69c4481cba0dff97c5c91b3eedddf6d"
-    sha256 cellar: :any_skip_relocation, monterey:       "c1058cf12d13d0c8817f4d801ff4d2edb1113843e9699254c3b6d95084bff209"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e386e7796d5d3cfd98cc94e2554191481540a0ca8b1c96250880e9580fec2b10"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9be75e215e640eafa1aff9804cb3e37af41c765718b59130bd768e16d7a3b740"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ebfe1615e80d8dd0a48978846149b79266d06f0fbd5fc9312f92340552311c9c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8fd2712f77aa5191fcb5b9b0633375c2d4000951143b8074cf332ec78602b9a9"
+    sha256 cellar: :any_skip_relocation, sonoma:         "198499ab36a0e2cf25606634a0e0491e5bafafdb70be3bae09b4103844b75666"
+    sha256 cellar: :any_skip_relocation, ventura:        "60326d5ed283fca9c51eb36f6cf1999f996ee8908154839d7c0b210b68c47b20"
+    sha256 cellar: :any_skip_relocation, monterey:       "09e23e056861fabf476d18b66302d3b5206009d41b1e19961efcc0341af64768"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "25e4acc7420fde1c1b52428f62ee603994be263d560c33dc324b2c0199469084"
   end
 
   depends_on "certifi"
