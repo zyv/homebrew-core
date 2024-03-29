@@ -857,6 +857,7 @@ halide
 hapi-fhir-cli
 haproxy
 harfbuzz
+haskell-stack
 hasura-cli
 haxe
 hbase
