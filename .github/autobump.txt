@@ -1062,6 +1062,7 @@ libdap
 libdeflate
 libdnet
 libepoxy
+libfabric
 libffi
 libfontenc
 libgedit-gtksourceview
