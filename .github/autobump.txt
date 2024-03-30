@@ -1795,6 +1795,7 @@ thanos
 theharvester
 thrift
 thriftgo
+tig
 tika
 tile38
 timg
