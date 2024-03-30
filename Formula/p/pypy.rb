@@ -2,7 +2,7 @@ class Pypy < Formula
   desc "Highly performant implementation of Python 2 in Python"
   homepage "https://pypy.org/"
   url "https://downloads.python.org/pypy/pypy2.7-v7.3.15-src.tar.bz2"
-  sha256 "9e1a10d75eea8830f95035063e107bc7e4252a0b473407c929bf3d132ce6737f"
+  sha256 "a66ddaed39544a35bb7ab7a17dbf673a020c7cb3a614bd2b61a54776888daf2c"
   license "MIT"
   head "https://github.com/pypy/pypy.git", branch: "main"
 
@@ -71,6 +71,10 @@ class Pypy < Formula
   patch :DATA
 
   def install
+    # Work-around for build issue with Xcode 15.3
+    # upstream bug report, https://github.com/pypy/pypy/issues/4931
+    ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
+
     # The `tcl-tk` library paths are hardcoded and need to be modified for non-/usr/local prefix
     inreplace "lib_pypy/_tkinter/tklib_build.py" do |s|
       s.gsub! "/usr/local/opt/tcl-tk/", Formula["tcl-tk"].opt_prefix/""
