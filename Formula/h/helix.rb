@@ -1,8 +1,8 @@
 class Helix < Formula
   desc "Post-modern modal text editor"
   homepage "https://helix-editor.com"
-  url "https://github.com/helix-editor/helix/releases/download/23.10/helix-23.10-source.tar.xz"
-  sha256 "4e7bcac200b1a15bc9f196bdfd161e4e448dc670359349ae14c18ccc512153e8"
+  url "https://github.com/helix-editor/helix/releases/download/24.03/helix-24.03-source.tar.xz"
+  sha256 "c59a5988f066c2ab90132e03a0e6b35b3dd89f48d3d78bf0ec81bd7d88c7677e"
   license "MPL-2.0"
   head "https://github.com/helix-editor/helix.git", branch: "master"
 
@@ -33,7 +33,7 @@ class Helix < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/hx -V")
+    assert_match "post-modern text editor", shell_output("#{bin}/hx --help")
     assert_match "✓", shell_output("#{bin}/hx --health")
   end
 end
