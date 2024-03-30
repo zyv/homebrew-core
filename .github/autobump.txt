@@ -1624,7 +1624,6 @@ sdl2
 seam
 seaweedfs
 selene
-selenium-server
 semgrep
 sentencepiece
 seqkit
