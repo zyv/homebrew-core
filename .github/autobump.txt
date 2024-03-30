@@ -1687,6 +1687,7 @@ sonarqube
 sonarqube-lts
 sonobuoy
 soplex
+sound-touch
 sourcery
 spack
 spglib
