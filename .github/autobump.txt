@@ -180,6 +180,7 @@ bmake
 bnd
 boolector
 bore-cli
+borgbackup
 borgmatic
 bosh-cli
 botan

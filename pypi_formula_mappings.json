@@ -91,6 +91,10 @@
     "extra_packages": ["capstone", "gnupg", "matplotlib", "pycryptodome"]
   },
   "black": "black[d]",
+  "borgbackup": {
+    "package_name": "",
+    "extra_packages": ["msgpack", "packaging"]
+  },
   "borgmatic": {
     "extra_packages": ["ruamel-yaml-clib"],
     "exclude_packages": ["certifi"]
