@@ -1,8 +1,8 @@
 class Gotpm < Formula
   desc "CLI for using TPM 2.0"
   homepage "https://github.com/google/go-tpm-tools"
-  url "https://github.com/google/go-tpm-tools/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "90432420aebe2bfd69fe0180562196861416eec3277d5bd96c5789a8876a6411"
+  url "https://github.com/google/go-tpm-tools/archive/refs/tags/v0.4.4.tar.gz"
+  sha256 "9bc935311f2ad3c48763a0e1c77f777b9a8e3db696c7bfea99946ca2ea45fc6e"
   license "Apache-2.0"
 
   bottle do
