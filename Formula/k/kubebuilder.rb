@@ -2,8 +2,8 @@ class Kubebuilder < Formula
   desc "SDK for building Kubernetes APIs using CRDs"
   homepage "https://github.com/kubernetes-sigs/kubebuilder"
   url "https://github.com/kubernetes-sigs/kubebuilder.git",
-      tag:      "v3.14.0",
-      revision: "11053630918ac421cb6eb6f0a3225e2a2ad49535"
+      tag:      "v3.14.1",
+      revision: "cc338d729c2a578ae491860e3eb71e63864b1390"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/kubebuilder.git", branch: "master"
 
