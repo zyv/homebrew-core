@@ -1,9 +1,19 @@
 class Lnav < Formula
   desc "Curses-based tool for viewing and analyzing log files"
   homepage "https://lnav.org/"
-  url "https://github.com/tstack/lnav/releases/download/v0.12.0/lnav-0.12.0.tar.gz"
-  sha256 "a6f51a5019df1870c6a5889e337cf2cfc1365b04d81a0602f7f071ec971f5997"
   license "BSD-2-Clause"
+
+  stable do
+    url "https://github.com/tstack/lnav/releases/download/v0.12.1/lnav-0.12.1.tar.gz"
+    sha256 "d4565fbe29ad00e1e00efc6bff68e2068e102ace95ff296610d2bd6c04b13d67"
+
+    # patch to fix static init issue running on 12-arm
+    # upstream release request, https://github.com/tstack/lnav/issues/1250
+    patch do
+      url "https://github.com/tstack/lnav/commit/884e6b7415c562621487abe922fd3042da71ff32.patch?full_index=1"
+      sha256 "a6e6bf235159f3a4a3af82a01099b4aaf70e102f84e925d8d2f8d867b0d7f2b6"
+    end
+  end
 
   livecheck do
     url :stable
