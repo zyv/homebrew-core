@@ -6,8 +6,13 @@ class Pycparser < Formula
   license "BSD-3-Clause"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "9de5a8333f6bd80fbabc628432c7cf04ef5642d4e03f42fc542483537af50476"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "493634a14bdd3491626f9b76d04161cdaa045165fb8efffa9bf780efd823d844"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "493634a14bdd3491626f9b76d04161cdaa045165fb8efffa9bf780efd823d844"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "493634a14bdd3491626f9b76d04161cdaa045165fb8efffa9bf780efd823d844"
+    sha256 cellar: :any_skip_relocation, sonoma:         "493634a14bdd3491626f9b76d04161cdaa045165fb8efffa9bf780efd823d844"
+    sha256 cellar: :any_skip_relocation, ventura:        "493634a14bdd3491626f9b76d04161cdaa045165fb8efffa9bf780efd823d844"
+    sha256 cellar: :any_skip_relocation, monterey:       "493634a14bdd3491626f9b76d04161cdaa045165fb8efffa9bf780efd823d844"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0f591e2eca1cf20abf29c606294f0f8b1b2efde60a4cade17da0ea7440cfff7e"
   end
 
   depends_on "python@3.11" => [:build, :test]
