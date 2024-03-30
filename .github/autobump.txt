@@ -1495,6 +1495,7 @@ pushpin
 pwntools
 py-spy
 py3cairo
+pycparser
 pyenv
 pyflow
 pygit2
