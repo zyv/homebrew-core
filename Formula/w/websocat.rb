@@ -1,8 +1,8 @@
 class Websocat < Formula
   desc "Command-line client for WebSockets"
   homepage "https://github.com/vi/websocat"
-  url "https://github.com/vi/websocat/archive/refs/tags/v1.12.0.tar.gz"
-  sha256 "ca6ab2bc71a9c641fbda7f15d4956f2e19ca32daba9b284d26587410944a3adb"
+  url "https://github.com/vi/websocat/archive/refs/tags/v1.13.0.tar.gz"
+  sha256 "43800f8df38ede8b5bffe825e633c0db6a3c36cfe26c23e882bcfc028d3119c7"
   license "MIT"
 
   livecheck do
