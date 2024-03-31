@@ -59,6 +59,7 @@ apidoc
 apko
 apktool
 appium
+apprise
 appstream
 appwrite
 apr
