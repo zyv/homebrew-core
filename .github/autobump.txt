@@ -571,6 +571,7 @@ ecflow-ui
 echidna
 ecl
 ed
+editorconfig
 editorconfig-checker
 efl
 efm-langserver
