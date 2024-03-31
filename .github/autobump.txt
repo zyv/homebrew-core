@@ -431,6 +431,7 @@ cyclonedx-python
 cycode
 cypher-shell
 cyrus-sasl
+cython
 czg
 czkawka
 d2
