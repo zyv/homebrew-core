@@ -1,10 +1,9 @@
 class Ballerburg < Formula
   desc "Castle combat game"
   homepage "https://baller.tuxfamily.org/"
-  url "https://download.tuxfamily.org/baller/ballerburg-1.2.1.tar.gz"
-  sha256 "3f4ad9465f01c256dd1b37cc62c9fd8cbca372599753dbb21726629f042a6e62"
+  url "https://download.tuxfamily.org/baller/ballerburg-1.2.2.tar.gz"
+  sha256 "8e001efa44b70a9a51041a6ce39a2b01d9d3135d2ec54ca54196fc34f164914e"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://git.tuxfamily.org/baller/baller.git", branch: "master"
 
   livecheck do
