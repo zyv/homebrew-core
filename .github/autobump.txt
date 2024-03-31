@@ -1574,6 +1574,7 @@ resvg
 revive
 rhit
 riemann
+riemann-client
 rio
 risor
 rizin
