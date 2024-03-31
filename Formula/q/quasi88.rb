@@ -1,8 +1,8 @@
 class Quasi88 < Formula
   desc "PC-8801 emulator"
   homepage "https://www.eonet.ne.jp/~showtime/quasi88/"
-  url "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-0.7.0.tgz"
-  sha256 "62bc2aa09dd19ec1d15386d96bd71148c2cdf2a0bd012529643a568a77faa714"
+  url "https://www.eonet.ne.jp/~showtime/quasi88/release/quasi88-0.7.1.tgz"
+  sha256 "a9e7097e26cee6605ca3a467f6167b624dca4d11e3d99fd5c9886894b42cc05e"
 
   livecheck do
     url "https://www.eonet.ne.jp/~showtime/quasi88/download.html"
@@ -22,6 +22,8 @@ class Quasi88 < Formula
   depends_on "sdl12-compat"
 
   def install
+    ENV.deparallelize
+
     args = %W[
       X11_VERSION=
       SDL_VERSION=1

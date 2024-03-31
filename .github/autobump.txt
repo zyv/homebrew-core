@@ -1525,6 +1525,7 @@ qpid-proton
 qsv
 quantlib
 quantum++
+quasi88
 questdb
 quick-lint-js
 quicktype
