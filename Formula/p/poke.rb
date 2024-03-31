@@ -1,8 +1,8 @@
 class Poke < Formula
   desc "Extensible editor for structured binary data"
   homepage "https://jemarch.net/poke"
-  url "https://ftp.gnu.org/gnu/poke/poke-3.3.tar.gz"
-  sha256 "0080459de85063c83b689ffcfba36872236803c12242d245a42ee793594f956e"
+  url "https://ftp.gnu.org/gnu/poke/poke-4.0.tar.gz"
+  sha256 "02bab22cb1fa6153a1b6a927c8bb3cd58d508543c144842a6d7ee74f19973a77"
   license "GPL-3.0-or-later"
 
   bottle do
