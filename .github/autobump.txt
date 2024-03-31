@@ -1840,6 +1840,7 @@ tree
 tree-sitter
 triangle
 trino
+trippy
 trivy
 trojan-go
 trufflehog
