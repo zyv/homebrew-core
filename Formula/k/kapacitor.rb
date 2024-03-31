@@ -6,14 +6,14 @@ class Kapacitor < Formula
 
   stable do
     url "https://github.com/influxdata/kapacitor.git",
-        tag:      "v1.6.6",
-        revision: "79897085a4802304bb2fb052035bac4d16913302"
+        tag:      "v1.7.3",
+        revision: "43be9330273f227c6b5495a97019483577c542a7"
 
-    # build patch to upgrade flux so that it can be built with rust 1.66.0
-    # upstream bug report, https://github.com/influxdata/kapacitor/issues/2769
+    # build patch to upgrade flux so that it can be built with rust 1.72.0+
+    # upstream PR ref, https://github.com/influxdata/kapacitor/pull/2811
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/38549b7/kapacitor/1.6.6.patch"
-      sha256 "32bba2e397d25afb7fed8128f5f924e0fd3368371b959b7ef2a68260f32110e4"
+      url "https://github.com/influxdata/kapacitor/commit/1bc086f38b5164813c0f5b0989045bd21d543377.patch?full_index=1"
+      sha256 "38ab4f97dfed87cde492c0f1de372dc6563bcdda10741cace7a99f8d3ab777b6"
     end
   end
 
