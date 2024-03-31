@@ -626,6 +626,7 @@ exodriver
 exploitdb
 eza
 f2
+f3d
 faas-cli
 fabric
 fabric-installer
