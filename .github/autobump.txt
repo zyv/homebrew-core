@@ -1462,6 +1462,7 @@ po4a
 pocketbase
 podman
 poetry
+poke
 ponyc
 popeye
 postgis
