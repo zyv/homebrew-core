@@ -1,10 +1,8 @@
 class Mlx < Formula
-  include Language::Python::Virtualenv
-
   desc "Array framework for Apple silicon"
   homepage "https://github.com/ml-explore/mlx"
-  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "42e616f2e84e9f7bd43353b5ec346debf07b5219043c46b26bb89ee1d151d446"
+  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "eac63ca7933fda7fda753537975cce6705801ee3231471e48abe35117eb62b05"
   license "MIT"
   head "https://github.com/ml-explore/mlx.git", branch: "main"
 
@@ -14,16 +12,10 @@ class Mlx < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "pybind11" => :build
   depends_on xcode: ["14.3", :build]
   depends_on arch: :arm64
   depends_on :macos
   depends_on "python@3.12"
-
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
-    sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
-  end
 
   def python3
     "python3.12"
@@ -42,16 +34,11 @@ class Mlx < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
-    venv_root = buildpath/"venv"
-    site_packages = Language::Python.site_packages(python3)
-    ENV.prepend_create_path "PYTHONPATH", venv_root/site_packages
-    venv = virtualenv_create(venv_root, python3)
-    venv.pip_install resource("setuptools")
-
     env = { PYPI_RELEASE: version.to_s }
     env["DEV_RELEASE"] = "1" if build.head?
+    env["MACOSX_DEPLOYMENT_TARGET"] = "#{MacOS.version.major}.#{MacOS.version.minor.to_i}" if OS.mac?
     with_env(env) do
-      system python3, *Language::Python.setup_install_args(prefix, python3)
+      system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
     end
   end
 
