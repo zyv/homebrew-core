@@ -836,6 +836,7 @@ greed
 greenmask
 grex
 grin
+grokj2k
 gromacs
 groonga
 groovy
