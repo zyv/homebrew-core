@@ -1639,6 +1639,7 @@ sentencepiece
 seqkit
 ser2net
 serverless
+sh4d0wup
 shaderc
 shadowenv
 shadowsocks-rust
