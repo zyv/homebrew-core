@@ -1280,6 +1280,7 @@ neonctl
 neosync
 nerdctl
 nest
+nestopia-ue
 netdata
 nethogs
 netlify-cli
