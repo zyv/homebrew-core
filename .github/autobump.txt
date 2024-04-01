@@ -1187,6 +1187,7 @@ makedepend
 makensis
 makepkg
 manifest-tool
+mantra
 mapcidr
 marked
 marp-cli
