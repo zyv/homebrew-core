@@ -7,7 +7,7 @@ class Tup < Formula
   head "https://github.com/gittup/tup.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fe803cdb793a0521d4b711bbbdb150d404916e997dfba17146390219910f3383"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "677b1e4dbb495cf13c2b30dd7267cff734c22226cb3720f154c6c7e552036033"
   end
 
   depends_on "pkg-config" => :build
