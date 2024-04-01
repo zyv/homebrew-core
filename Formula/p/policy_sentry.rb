@@ -8,6 +8,16 @@ class PolicySentry < Formula
   license "MIT"
   head "https://github.com/salesforce/policy_sentry.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "09dcbbcc2259480f88f03589f660e80a54d0961a313524da2d3236d8fd4786b7"
+    sha256 cellar: :any,                 arm64_ventura:  "dc43c9b27a9b16c37352e62038cd7715819cf375204d56a6a6e53244c84fdcb6"
+    sha256 cellar: :any,                 arm64_monterey: "282344012f2a60e1f5b3ae2c423d42a7a950f9057d3b0ea6e2b604c49b131374"
+    sha256 cellar: :any,                 sonoma:         "f5f5794a014fda176f8cb6f05271b9eff9325a1e797ab494b2f12d1b13d6d1ff"
+    sha256 cellar: :any,                 ventura:        "79ee086d692d161cb59e8cc3cc9334c0bdd8213ef7ca052837be77805d9fed2e"
+    sha256 cellar: :any,                 monterey:       "b7721501bea2fb948897c4de00026b2c768ad1f3e8790ccceb5dba78444cd002"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "baf1056455546e551657790224877871fd24043d18ae14e3b0d2afb7ef2a695d"
+  end
+
   depends_on "certifi"
   depends_on "libyaml"
   depends_on "python@3.12"
