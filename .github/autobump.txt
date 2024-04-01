@@ -1849,6 +1849,7 @@ tsduck
 tt
 ttdl
 ttyd
+tup
 tygo
 typedb
 typescript
