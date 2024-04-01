@@ -1630,6 +1630,7 @@ scarb
 sccache
 schemathesis
 scip
+scm-manager
 scons
 scorecard
 scotch
