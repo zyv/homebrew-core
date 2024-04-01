@@ -7,13 +7,13 @@ class Gitu < Formula
   head "https://github.com/altsem/gitu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "65253bfb5da1073df72e62df30f34fd3b07e6838ea52d3de045c18452cbd92ce"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cd6961efcb521e8789921bae7dc8483c31498961a49adb2ce34555c614bca9df"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "70554ba41d63903d1c611f5c14f63595b1dabc7fb50d7936df28371fca9282b1"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3e7e63f7d4109e51fb7e2f557b537aa5f8f79278545ad7176166e3fc3571c62c"
-    sha256 cellar: :any_skip_relocation, ventura:        "70db96fa8bbf8795824725f39eed12dfc7b5152e434d878c6743a259a651040f"
-    sha256 cellar: :any_skip_relocation, monterey:       "66612931bb30b74d8cf81f851b95c9e17269303588c2c44013f9665b2a06b192"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4903e9f65c3ad653d2f02b078ab14ffce04cb0ea848424f70c96935eedaf3fd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d464c21d70e4ee23c8272d023fd22e40a013fa9f02e0085cefdd17981d21ce58"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dab07d4ebea84e130b1dd61f16e749ca29ca92b0b0bf6ffae1b2c65910298533"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0f37eae2397961feaeabc9b9c65b639da9cc3ec08fb2ba026128e7e79e396779"
+    sha256 cellar: :any_skip_relocation, sonoma:         "deb0ddf65010f162869e0cb6837a3cb8fabf85029b723ef7607fc73b156267c2"
+    sha256 cellar: :any_skip_relocation, ventura:        "01f223baf4159f445f3545e99764f92da954fbe037b5b10b804894d60079ddbb"
+    sha256 cellar: :any_skip_relocation, monterey:       "fa6293a660df3ec4259c4434aa7e380ff875d26fde1392f6f09981abef105e48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0218ffccdb78c0be71f299935ad6e40adaec867776a3514e5e67c4e8f7ec360"
   end
 
   depends_on "rust" => :build
