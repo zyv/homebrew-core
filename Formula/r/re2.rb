@@ -1,11 +1,10 @@
 class Re2 < Formula
   desc "Alternative to backtracking PCRE-style regular expression engines"
   homepage "https://github.com/google/re2"
-  url "https://github.com/google/re2/archive/refs/tags/2024-03-01.tar.gz"
-  version "20240301"
-  sha256 "7b2b3aa8241eac25f674e5b5b2e23d4ac4f0a8891418a2661869f736f03f57f4"
+  url "https://github.com/google/re2/archive/refs/tags/2024-04-01.tar.gz"
+  version "20240401"
+  sha256 "3f6690c3393a613c3a0b566309cf04dc381d61470079b653afc47c67fb898198"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/google/re2.git", branch: "main"
 
   # The `strategy` block below is used to massage upstream tags into the
