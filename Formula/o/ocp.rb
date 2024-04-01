@@ -1,19 +1,10 @@
 class Ocp < Formula
   desc "UNIX port of the Open Cubic Player"
   homepage "https://stian.cubic.org/project-ocp.php"
+  url "https://stian.cubic.org/ocp/ocp-0.2.108.tar.xz"
+  sha256 "d7b983966f6bf7285c1554181edcfdcd2017f9629c41ee38b698a89b65f3b1ea"
   license "GPL-2.0-or-later"
   head "https://github.com/mywave82/opencubicplayer.git", branch: "master"
-
-  stable do
-    url "https://stian.cubic.org/ocp/ocp-0.2.107.tar.xz"
-    sha256 "7627e4fe3acf7ffd7108ac2a6bf53e8a28de7a220c054338c8642c4e37d94626"
-
-    # Backport fix for label in front of variable. Remove in the next release.
-    patch do
-      url "https://github.com/mywave82/opencubicplayer/commit/93ec77fa19226a42972d599a2037e2b0cbd2ac00.patch?full_index=1"
-      sha256 "fef3fde17c923a732aa831825ba84efa9d3b6652b40964dfad5a07ad33b511ce"
-    end
-  end
 
   livecheck do
     url :homepage
@@ -51,6 +42,7 @@ class Ocp < Formula
     depends_on "util-linux" => :build # for `hexdump`
   end
 
+  # pin to 15.0.6 to use precompiled fonts
   resource "unifont" do
     url "https://ftp.gnu.org/gnu/unifont/unifont-15.0.06/unifont-15.0.06.tar.gz"
     sha256 "36668eb1326d22e1466b94b3929beeafd10b9838bf3d41f4e5e3b52406ae69f1"
