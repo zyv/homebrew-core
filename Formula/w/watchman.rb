@@ -1,8 +1,8 @@
 class Watchman < Formula
   desc "Watch files and take action when they change"
   homepage "https://github.com/facebook/watchman"
-  url "https://github.com/facebook/watchman/archive/refs/tags/v2024.03.25.00.tar.gz"
-  sha256 "8cc7b3e67156a503c508e209ebca8126d561fcfe7a1923f17b216a1f6b667369"
+  url "https://github.com/facebook/watchman/archive/refs/tags/v2024.04.01.00.tar.gz"
+  sha256 "731b5efc83b5f619f893f04c7b793caa6fcd2e7f38cf9cc4cee6a7d1df5f5007"
   license "MIT"
   head "https://github.com/facebook/watchman.git", branch: "main"
 
@@ -39,6 +39,10 @@ class Watchman < Formula
   depends_on "openssl@3"
   depends_on "pcre2"
   depends_on "python@3.12"
+
+  on_linux do
+    depends_on "libunwind"
+  end
 
   fails_with gcc: "5"
 
