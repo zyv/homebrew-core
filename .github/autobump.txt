@@ -1404,6 +1404,7 @@ packetbeat
 pandoc
 pandoc-crossref
 pango
+parallel
 pari
 partio
 passenger
