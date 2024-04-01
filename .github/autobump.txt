@@ -1545,6 +1545,7 @@ quilt
 qxmpp
 rabbitmq
 radamsa
+radare2
 rancher-cli
 rapidfuzz-cpp
 ratchet
