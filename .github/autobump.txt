@@ -1963,6 +1963,7 @@ woodpecker-cli
 woof-doom
 wstunnel
 wumpus
+wxmaxima
 wxwidgets
 x3270
 xa
