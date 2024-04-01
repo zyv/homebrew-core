@@ -214,6 +214,7 @@ byobu
 byteman
 bzt
 c-ares
+c-blosc2
 c2rust
 c3c
 c7n
