@@ -1430,6 +1430,7 @@ pgbouncer
 pgloader
 pgpool-ii
 pgroonga
+pgrouting
 pgweb
 phoronix-test-suite
 php
