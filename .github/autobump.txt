@@ -1050,6 +1050,7 @@ lazydocker
 ld-find-code-refs
 ldc
 ldeep
+leaf-proxy
 lean-cli
 leapp-cli
 leetup
