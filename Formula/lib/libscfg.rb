@@ -6,6 +6,16 @@ class Libscfg < Formula
   license "MIT"
   head "https://git.sr.ht/~emersion/libscfg", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "6d14be1b7b275a2200ee9b3805b4e54263a61f59f052103741d54ea9e9e59725"
+    sha256 cellar: :any,                 arm64_ventura:  "151dba4fa8ab28312b907dd4598df11c81cd8ed0986987faff0fce50263c49c5"
+    sha256 cellar: :any,                 arm64_monterey: "e072b64d3301ffa6537dfd489761f376718445c727ae4a29f8d98e06d9f8de11"
+    sha256 cellar: :any,                 sonoma:         "f46bf808c8969460ddbe01818be5a33f0572fe1804be3725e2907499fa820470"
+    sha256 cellar: :any,                 ventura:        "bee4bac2d9a37bb294bb16acbc35f857ff2e6990c793391802bcebcfabfaff25"
+    sha256 cellar: :any,                 monterey:       "d30ecbf9f5ad0e9c5864a8a5c3412311b983a74bf8dd439f0d5948aa9fb39c03"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fdab5431a3a4c023c5f31b1728107a988eee126552f1860ffbd2ef588edb1243"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
 
