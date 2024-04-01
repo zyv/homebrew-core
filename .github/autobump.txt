@@ -808,6 +808,7 @@ go-md2man
 go-task
 goaccess
 goawk
+gobject-introspection
 goctl
 goffice
 gofumpt
