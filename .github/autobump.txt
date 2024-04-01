@@ -778,6 +778,7 @@ gitmoji
 gitoxide
 gitql
 gitsign
+gitu
 gjs
 glances
 glassfish
