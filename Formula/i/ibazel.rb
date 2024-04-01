@@ -7,13 +7,13 @@ class Ibazel < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "327eb4aa65bc834e884f76b5af270bfc5145ea1f4388c54fe7535ae1255b642c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "399db101ac48b5a109cf803e4fe27f433213b49c459abe4e26a080700904ee60"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "53489f1fdcd03db40ca83cbde1cb7b3d77d3402a1768c249f2c848af4e938470"
-    sha256 cellar: :any_skip_relocation, sonoma:         "4639defe58380b5824d980f2738ab145e7dadb996de0276259fae5c3dceddf49"
-    sha256 cellar: :any_skip_relocation, ventura:        "adfa8dfab533aa4082cebeb011b5170c0d4a859357fde36e8dd67be019b7367d"
-    sha256 cellar: :any_skip_relocation, monterey:       "804a47113c9b4c603fe6a78c8854179adcdd720f123341d396dee31fce120b1b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce6f8c1bdf830475aa19d04cead3b3d13e2827c53626cf289b3a4cf8920c1162"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1030050c20f2824c410de9d0e01ff4a36b96a15787cc93726c064d7ee462dfaa"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "47279d9d1a55e2ea050bfa1ad65cdc353be0a7eee129ee8118a2bbb25db00232"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "aff4781602399966187dc11e1faf0972c1fe5f2b503681ee85e1fadd16f645f4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "6c99c7e54aa6925ff14bf44a1a99ce4c60587547170494a332b7734d172c7759"
+    sha256 cellar: :any_skip_relocation, ventura:        "b29223b3772b99d5e693e95951bcf9a940a157d01c54156f889a6085bcff146d"
+    sha256 cellar: :any_skip_relocation, monterey:       "9a1f28da8705ee68bcec9d9a7386a51518d61195db1e2b303768689e53a36738"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4aeb030a3da8a41e9ea99dc7b6d8a73d81fa453b9425c95366538071525d80be"
   end
 
   depends_on "bazelisk" => [:build, :test]
