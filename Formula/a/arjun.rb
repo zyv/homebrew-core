@@ -3,8 +3,8 @@ class Arjun < Formula
 
   desc "HTTP parameter discovery suite"
   homepage "https://github.com/s0md3v/Arjun"
-  url "https://files.pythonhosted.org/packages/2a/f9/ac1bb63ab98f637239c665c33d39d1425bcc18ac2b2df2d079a54a74ce81/arjun-2.2.4.tar.gz"
-  sha256 "8e4baefaaf736d4e1bd51e40ad764118261aeac73aa820d3149a472a06080fcb"
+  url "https://files.pythonhosted.org/packages/40/68/4d1066a053d699640de07e0041a48d62d7933ccf74639a255c8f63583abd/arjun-2.2.5.tar.gz"
+  sha256 "17cc2b0e90cfb63225168bc43d70b316f7847d1d9e60fc5631d56f6ccf8a6939"
   license "AGPL-3.0-only"
 
   bottle do
