@@ -910,6 +910,7 @@ hysteria
 hyx
 i2p
 iamy
+ibazel
 ignite
 igraph
 igv
