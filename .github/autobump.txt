@@ -1897,6 +1897,7 @@ velero
 verapdf
 vercel-cli
 vet
+vfox
 vgrep
 victoriametrics
 video-compare
