@@ -249,6 +249,7 @@ cargo-outdated
 cargo-release
 cargo-watch
 cargo-zigbuild
+cariddi
 carla
 carrot2
 cask
