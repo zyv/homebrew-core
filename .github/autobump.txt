@@ -1465,6 +1465,7 @@ pnpm
 po4a
 pocketbase
 podman
+podsync
 poetry
 poke
 ponyc
