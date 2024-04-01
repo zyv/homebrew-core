@@ -980,6 +980,7 @@ jruby
 json-fortran
 jsonnet
 jsvc
+jtbl
 juju
 jupyterlab
 just
