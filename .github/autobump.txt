@@ -1781,6 +1781,7 @@ sysstat
 systemc
 systemd
 tailscale
+tailspin
 tailwindcss
 talhelper
 talisman
