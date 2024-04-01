@@ -1080,6 +1080,7 @@ libgr
 libgsf
 libgweather
 libhandy
+libical
 libidn2
 libimobiledevice-glue
 libint
