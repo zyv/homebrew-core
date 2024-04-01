@@ -1,8 +1,9 @@
 class Ibazel < Formula
   desc "Tools for building Bazel targets when source files change"
   homepage "https://github.com/bazelbuild/bazel-watcher"
-  url "https://github.com/bazelbuild/bazel-watcher/archive/refs/tags/v0.24.0.tar.gz"
-  sha256 "bc0ac30e84aa8b8a18ae1fc69d9ef6c575a9fa28239f36b6d14d3603e2b1d667"
+  # Tag may change on next release: https://github.com/bazelbuild/bazel-watcher/issues/652
+  url "https://github.com/bazelbuild/bazel-watcher/archive/refs/tags/V0.25.1.tar.gz"
+  sha256 "8faa43a7d79e5991ca79cead0c91187c5b1c61aed0f86d726401bff91abf9d20"
   license "Apache-2.0"
 
   bottle do
@@ -15,15 +16,8 @@ class Ibazel < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ce6f8c1bdf830475aa19d04cead3b3d13e2827c53626cf289b3a4cf8920c1162"
   end
 
+  depends_on "bazelisk" => [:build, :test]
   depends_on "go" => [:build, :test]
-
-  on_macos do
-    depends_on "bazel" => [:build, :test]
-  end
-
-  on_linux do
-    depends_on "bazelisk" => [:build, :test]
-  end
 
   # bazel 6.x support issue, https://github.com/bazelbuild/bazel-watcher/issues/616
   # patch to use bazel 6.4.0, upstream PR, https://github.com/bazelbuild/bazel-watcher/pull/575
