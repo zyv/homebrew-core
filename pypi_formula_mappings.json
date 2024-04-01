@@ -549,6 +549,9 @@
   "poetry": {
     "exclude_packages": ["certifi", "cryptography"]
   },
+  "policy_sentry": {
+    "exclude_packages": ["certifi"]
+  },
   "prowler": {
     "exclude_packages": ["certifi", "cryptography"]
   },
