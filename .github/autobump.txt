@@ -1101,6 +1101,7 @@ libint
 libirecovery
 libjwt
 libksba
+liblc3
 liblinear
 liblouis
 libmicrohttpd
