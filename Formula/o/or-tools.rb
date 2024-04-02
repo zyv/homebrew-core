@@ -68,8 +68,15 @@ class OrTools < Formula
       target_compile_features(simple_lp_program PUBLIC cxx_std_17)
       target_link_libraries(simple_lp_program PRIVATE ortools::ortools)
     EOS
-    with_env(CPATH: nil) do
-      system "cmake", "-S", ".", "-B", ".", *std_cmake_args
+    cmake_args = []
+    build_env = {}
+    if OS.mac?
+      build_env["CPATH"] = nil
+    else
+      cmake_args << "-DCMAKE_BUILD_RPATH=#{lib};#{HOMEBREW_PREFIX}/lib"
+    end
+    with_env(build_env) do
+      system "cmake", "-S", ".", "-B", ".", *cmake_args, *std_cmake_args
       system "cmake", "--build", "."
     end
     system "./simple_lp_program"
