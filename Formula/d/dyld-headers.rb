@@ -1,8 +1,8 @@
 class DyldHeaders < Formula
   desc "Header files for the dynamic linker"
   homepage "https://opensource.apple.com/"
-  url "https://github.com/apple-oss-distributions/dyld/archive/refs/tags/dyld-1125.5.tar.gz"
-  sha256 "312990a7bf1fa6a9a86c9990d9b7130e451a44697f516e4aacef35f6789112d4"
+  url "https://github.com/apple-oss-distributions/dyld/archive/refs/tags/dyld-1160.6.tar.gz"
+  sha256 "72e2d89bc7af55721408e0b79f7711ca18d3bc128c74dbe3c95049aae7a2f85d"
   license "APSL-2.0"
 
   bottle do
