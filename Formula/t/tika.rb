@@ -1,9 +1,9 @@
 class Tika < Formula
   desc "Content analysis toolkit"
   homepage "https://tika.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=tika/2.9.1/tika-app-2.9.1.jar"
-  mirror "https://archive.apache.org/dist/tika/2.9.1/tika-app-2.9.1.jar"
-  sha256 "ae6c37cf93a849453f53b03e7a0f7d21ccf1144ace31186f328761874597a759"
+  url "https://www.apache.org/dyn/closer.lua?path=tika/2.9.2/tika-app-2.9.2.jar"
+  mirror "https://archive.apache.org/dist/tika/2.9.2/tika-app-2.9.2.jar"
+  sha256 "87e06f88c801fcb2beae5f15e707241edb14da468a154ad78be4e31ff982c3da"
   license "Apache-2.0"
 
   bottle do
@@ -19,9 +19,9 @@ class Tika < Formula
   depends_on "openjdk"
 
   resource "server" do
-    url "https://www.apache.org/dyn/closer.lua?path=tika/2.9.1/tika-server-standard-2.9.1.jar"
-    mirror "https://archive.apache.org/dist/tika/2.9.1/tika-server-standard-2.9.1.jar"
-    sha256 "4e38d309c9396892ae14b4337cdf13f90f83da81b3b8123d72fde08fea2120bd"
+    url "https://www.apache.org/dyn/closer.lua?path=tika/2.9.2/tika-server-standard-2.9.2.jar"
+    mirror "https://archive.apache.org/dist/tika/2.9.2/tika-server-standard-2.9.2.jar"
+    sha256 "379cdb319b80618d166057beecdb445b677d099c438ec026e5810239c1cd03d5"
   end
 
   def install
