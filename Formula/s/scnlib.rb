@@ -4,7 +4,7 @@ class Scnlib < Formula
   url "https://github.com/eliaskosunen/scnlib/archive/refs/tags/v2.0.2.tar.gz"
   sha256 "a485076b8710576cf05fbc086d39499d16804575c0660b0dfaeeaf7823660a17"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/eliaskosunen/scnlib.git", branch: "master"
 
   bottle do
@@ -19,10 +19,10 @@ class Scnlib < Formula
   depends_on "cmake" => :build
   depends_on "simdutf"
 
-  # patch to support simdutf 5.0.0, https://github.com/eliaskosunen/scnlib/pull/102
+  # patch to support simdutf 5.2.2, https://github.com/eliaskosunen/scnlib/pull/102
   patch do
-    url "https://github.com/eliaskosunen/scnlib/commit/5398f91aa42f5bc88bab00447e51ad0eab65300d.patch?full_index=1"
-    sha256 "43d2f868589515d7369ce35d5a9700f17275a54b670b6928c6be344735c1ae9b"
+    url "https://github.com/eliaskosunen/scnlib/commit/f958f10131434ea76775e068648f7d6dd2b94924.patch?full_index=1"
+    sha256 "d952732c35bb6e345179ec19a32e88edd5f840719b4d3a5bb77b0c84344cda6c"
   end
 
   def install
