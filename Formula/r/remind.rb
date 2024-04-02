@@ -1,8 +1,8 @@
 class Remind < Formula
   desc "Sophisticated calendar and alarm"
   homepage "https://dianne.skoll.ca/projects/remind/"
-  url "https://dianne.skoll.ca/projects/remind/download/remind-04.03.05.tar.gz"
-  sha256 "fbd0e7a5ebb039ec29096f28253c9dfaa8448743e30ca1201b75860c3667c996"
+  url "https://dianne.skoll.ca/projects/remind/download/remind-04.03.06.tar.gz"
+  sha256 "320a7e30fc57559bcbe3f02ba3b2894deb1cd9cdf4a3d173427f24289b79210e"
   license "GPL-2.0-only"
   head "https://git.skoll.ca/Skollsoft-Public/Remind.git", branch: "master"
 
@@ -23,9 +23,6 @@ class Remind < Formula
 
   conflicts_with "rem", because: "both install `rem` binaries"
 
-  # emailed upstream about the patch
-  patch :DATA
-
   def install
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
@@ -37,20 +34,3 @@ class Remind < Formula
       shell_output("#{bin}/remind reminders 2015-01-01")
   end
 end
-
-__END__
-diff --git a/src/queue.c b/src/queue.c
-index 86fae8d..81fe80c 100644
---- a/src/queue.c
-+++ b/src/queue.c
-@@ -637,8 +637,10 @@ static void CheckInitialFile(void)
-     /* If date has rolled around, or file has changed, spawn a new version. */
-     time_t tim = FileModTime;
-     int y, m, d;
-+#ifdef USE_INOTIFY
-     char buf[sizeof(struct inotify_event) + NAME_MAX + 1];
-     int n;
-+#endif
-
- #ifdef USE_INOTIFY
-     /* If there are any inotify events, reread */
