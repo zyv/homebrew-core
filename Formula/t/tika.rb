@@ -7,13 +7,7 @@ class Tika < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "14adb5a15982895adf1a7822a1297517990fd592b406a58793b32917b201e02f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "14adb5a15982895adf1a7822a1297517990fd592b406a58793b32917b201e02f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "14adb5a15982895adf1a7822a1297517990fd592b406a58793b32917b201e02f"
-    sha256 cellar: :any_skip_relocation, sonoma:         "14adb5a15982895adf1a7822a1297517990fd592b406a58793b32917b201e02f"
-    sha256 cellar: :any_skip_relocation, ventura:        "14adb5a15982895adf1a7822a1297517990fd592b406a58793b32917b201e02f"
-    sha256 cellar: :any_skip_relocation, monterey:       "14adb5a15982895adf1a7822a1297517990fd592b406a58793b32917b201e02f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d84213fc6dadb86eb062b5cd5bf6c003af618eff3cc368e4b0e11ca7e9388348"
+    sha256 cellar: :any_skip_relocation, all: "ef11546bb8c34e9bf78871f9838b5d9afc65c0bae5ba1ddcab64d9211e834ed2"
   end
 
   depends_on "openjdk"
