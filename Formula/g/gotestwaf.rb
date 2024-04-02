@@ -1,8 +1,8 @@
 class Gotestwaf < Formula
   desc "Tool for API and OWASP attack simulation"
   homepage "https://lab.wallarm.com/test-your-waf-before-hackers/"
-  url "https://github.com/wallarm/gotestwaf/archive/refs/tags/v0.4.17.tar.gz"
-  sha256 "bc4c1b8a7fc8b6db2df82ca56942b8d333bd17d75e0e93b4e110663370cef717"
+  url "https://github.com/wallarm/gotestwaf/archive/refs/tags/v0.4.18.tar.gz"
+  sha256 "97f0c0f3eeaf1811757d2c0d7e1732d1255b6c2ad4565f9eb5d5ead3c723c037"
   license "MIT"
   head "https://github.com/wallarm/gotestwaf.git", branch: "master"
 
