@@ -7,12 +7,12 @@ class Rpcgen < Formula
   license :cannot_represent
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "632f111183949b67cdd6ae0d09dcd163456dbc8ac3c404b2d7b357b3f64ee869"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b826f320d3f8cf37b7a4d5ac2ab65f31672af8a1114f99ddac98c8ac70b9b2f0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "52f4353e3908706487141b09bdc5e30c24fddf1189c819dfbba09e810d2f50af"
-    sha256 cellar: :any_skip_relocation, sonoma:         "d2c65967becdac24363421d8a162f8a41de3914d148b9b17921a366626f01e89"
-    sha256 cellar: :any_skip_relocation, ventura:        "5f2fe33def023209592904ededfe4dab17fb97ee251aaab96440473195d1d4b0"
-    sha256 cellar: :any_skip_relocation, monterey:       "ba85e2a510a78d09e64b8d2cf051ffaa8eeee41e851e22ab0cc2a2953faa3e4a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2aa2b37b018f9b8c632f6e96c4ff9634aef1c4ffef6e9c1ac00bd75dab10645b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b59addafc7f3c0fd4787c6f1e3554357824f997e24e40641a2dc2633247c079c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e59264d3f987d9be7c4d3d04c7276415a8799df058a63e5d66d495664ff06e69"
+    sha256 cellar: :any_skip_relocation, sonoma:         "1da310e51ec996b0877bec5a0c581b1b1bab5a59fb74f84dc443f3d8c5490206"
+    sha256 cellar: :any_skip_relocation, ventura:        "e28fb292cc658a7a9bdb056873e5d1c7402b1928acbf1807f30dd50edadf15ae"
+    sha256 cellar: :any_skip_relocation, monterey:       "1ce524e3d98a534ccc5c41d77ba283fe38e3a47bdc759696e6ccb1038af28aea"
   end
 
   keg_only :provided_by_macos
