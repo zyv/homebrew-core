@@ -1885,6 +1885,7 @@ typst
 typstfmt
 tz
 tzdiff
+u-boot-tools
 uffizzi
 ugit
 ugrep
