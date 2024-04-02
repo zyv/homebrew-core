@@ -1069,6 +1069,7 @@ libadwaita
 libaec
 libassuan
 libavif
+libbpf
 libbsd
 libclc
 libcoap
