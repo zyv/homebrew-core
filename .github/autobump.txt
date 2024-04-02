@@ -1585,6 +1585,7 @@ regclient
 regina-rexx
 regipy
 regula
+rekor-cli
 release-it
 remind
 reminiscence
