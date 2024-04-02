@@ -119,6 +119,7 @@ aws-sam-cli
 aws-sso-cli
 awscli
 awscli@1
+awslogs
 axel
 azcopy
 b2-tools
