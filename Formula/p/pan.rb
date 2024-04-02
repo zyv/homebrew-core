@@ -1,10 +1,9 @@
 class Pan < Formula
   desc "Usenet newsreader that's good at both text and binaries"
-  homepage "https://pan.rebelbase.com"
-  url "https://gitlab.gnome.org/GNOME/pan/-/archive/v0.155/pan-v0.155.tar.bz2"
-  sha256 "3624ac3171fa8089825ce55b62b053db4f86d592f717c4d874c48ce0e885dff2"
+  homepage "https://gitlab.gnome.org/GNOME/pan"
+  url "https://gitlab.gnome.org/GNOME/pan/-/archive/v0.157/pan-v0.157.tar.bz2"
+  sha256 "1ab5f59a9e1e9cb9bfe978be55fda812d5b46936c1c14d9dae30a555c665eb51"
   license "GPL-2.0-only"
-  revision 1
 
   bottle do
     sha256 arm64_sonoma:   "c08c401b97e32d8934db82f16c2b0e074227dd24925a4f39d6a51998e80be842"
@@ -16,9 +15,7 @@ class Pan < Formula
     sha256 x86_64_linux:   "9b26beb9076367133889cbe9b8204c503e10c087bc9f15159fbd074a5f062392"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "itstool" => :build
+  depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
   depends_on "cairo"
@@ -34,17 +31,9 @@ class Pan < Formula
   depends_on "pango"
 
   def install
-    # use brew name for gtk3 version of tool update-icon-cache
-    inreplace "pan/icons/Makefile.am", "gtk-update-icon-cache", "gtk3-update-icon-cache"
-
-    ENV.append "CXXFLAGS", "-std=c++11"
-
-    system "NOCONFIGURE=1 ./autogen.sh"
-    system "./configure", *std_configure_args,
-                          "--disable-silent-rules",
-                          "--with-gnutls"
-    system "make"
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
