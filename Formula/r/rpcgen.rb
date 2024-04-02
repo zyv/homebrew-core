@@ -1,9 +1,10 @@
 class Rpcgen < Formula
   desc "Protocol Compiler"
   homepage "https://opensource.apple.com/"
-  url "https://github.com/apple-oss-distributions/developer_cmds/archive/refs/tags/developer_cmds-68.tar.gz"
-  sha256 "6f9e01612453ea37b8af384e1160e13215ecbdc2c2bd8631e3b872219ab1a0f0"
+  url "https://github.com/apple-oss-distributions/developer_cmds/archive/refs/tags/developer_cmds-79.tar.gz"
+  sha256 "f44448b61edf1c93fda47a4ce21a47836c633ecb3627d293c820ac099a5cb9b0"
   # Sun-RPC license issue, https://github.com/spdx/license-list-XML/issues/906
+  license :cannot_represent
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "632f111183949b67cdd6ae0d09dcd163456dbc8ac3c404b2d7b357b3f64ee869"
