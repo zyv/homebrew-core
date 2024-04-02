@@ -8,13 +8,13 @@ class Ode < Formula
   head "https://bitbucket.org/odedevs/ode.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "270ce81f43aed519ba13d83987b7506873cc60163d0f09b09e6b4cd64c4c62d2"
-    sha256 cellar: :any,                 arm64_ventura:  "26093d917736df12a0510654e0bc4d602d521a3c9c3dd09113401897f3acc317"
-    sha256 cellar: :any,                 arm64_monterey: "b1da27ab0578179b232494c19eca7908d8a77da515894be35c93baa001d913c7"
-    sha256 cellar: :any,                 sonoma:         "97d4f2c4c7e43015b3f5dffd884312f123818801e25f38a86e470d8a24e5f6b7"
-    sha256 cellar: :any,                 ventura:        "08c2d6e501581a2e3bf1bd7975f00912d632ced10673d0372dd55489b2328850"
-    sha256 cellar: :any,                 monterey:       "1d9407a8b74ce382bc76489d37f2b33e21830aae7b8dc11c2f9068190c022617"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "389509a9254588ea10f1e0d888d7ed487ed509de9a07fff79cdee31ed4c856d5"
+    sha256 cellar: :any,                 arm64_sonoma:   "1dfefe85ef027eff13206f91fcfb6e3f5c24f620b15351cbf464d26cab397f05"
+    sha256 cellar: :any,                 arm64_ventura:  "c363d1cfd6ba84dfd8193cf0f35d0692892679c8c11c2ea75ccce157c1af3811"
+    sha256 cellar: :any,                 arm64_monterey: "947a229707651468f4ec56e1a16508d495b934070413683d2ba73abf6abd8211"
+    sha256 cellar: :any,                 sonoma:         "7a19db0009214d0c78def3ecb8327137603967f5bc65bc7f11debb715dc7022a"
+    sha256 cellar: :any,                 ventura:        "9334eda731f3105d30a93600393140d690e80fb05791d9a63dc99601641a8888"
+    sha256 cellar: :any,                 monterey:       "7d6ed1dc202b74d76cc339fb17c96626dad0faf626dad2474f957590e0b15165"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5158488ea35492840d91d5d4cfd4cff98c4d26003e230be5214dc1320bca74c1"
   end
 
   depends_on "autoconf" => :build
