@@ -1,8 +1,8 @@
 class Mtoc < Formula
   desc "Mach-O to PE/COFF binary converter"
   homepage "https://opensource.apple.com/"
-  url "https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-1009.3.tar.gz"
-  sha256 "4b92468ca792244131c821b25cb7e8d133e7508178de1b3f4992ba8f08f19dca"
+  url "https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-1010.6.tar.gz"
+  sha256 "19dadff2a4d23db17a50605a1fe7ad2d4b308fdf142d4dec0c94316e7678dc3f"
   license "APSL-2.0"
 
   bottle do
@@ -28,10 +28,6 @@ class Mtoc < Formula
   patch :DATA
 
   def install
-    # error: DT_TOOLCHAIN_DIR cannot be used to evaluate HEADER_SEARCH_PATHS, use TOOLCHAIN_DIR instead
-    inreplace "xcode/libstuff.xcconfig", "${DT_TOOLCHAIN_DIR}/usr/local/include",
-                                         Formula["llvm"].opt_include
-
     xcodebuild "-arch", Hardware::CPU.arch,
                "-project", "cctools.xcodeproj",
                "-scheme", "mtoc",
@@ -77,3 +73,16 @@ index ee9fc32..29b986c 100644
  #include "stuff/lto.h"
  #include "stuff/allocate.h"
  #include "stuff/errors.h"
+diff --git a/libstuff/reloc.c b/libstuff/reloc.c
+index 296ffa2..33ad2b3 100644
+--- a/libstuff/reloc.c
++++ b/libstuff/reloc.c
+@@ -163,8 +163,6 @@ uint32_t r_type)
+ 	case CPU_TYPE_ARM64:
+ 	case CPU_TYPE_ARM64_32:
+ 	    return(FALSE);
+-    case CPU_TYPE_RISCV32:
+-        return(FALSE);
+ 	default:
+ 	    fatal("internal error: reloc_has_pair() called with unknown "
+ 		  "cputype (%u)", cputype);

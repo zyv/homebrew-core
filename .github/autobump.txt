@@ -1269,6 +1269,7 @@ mpich
 mpv
 mqttui
 mruby
+mtoc
 mu
 muffet
 mujs
