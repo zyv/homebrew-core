@@ -2,8 +2,8 @@ class Monero < Formula
   desc "Official Monero wallet and CPU miner"
   homepage "https://www.getmonero.org/"
   url "https://github.com/monero-project/monero.git",
-      tag:      "v0.18.3.2",
-      revision: "ef3e18b51beb937c7f786ecef0d0a0e3f6295082"
+      tag:      "v0.18.3.3",
+      revision: "81d4db08eb75ce5392c65ca6571e7b08e41b7c95"
   license "BSD-3-Clause"
 
   livecheck do
