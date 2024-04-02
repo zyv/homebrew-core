@@ -1615,6 +1615,7 @@ rojo
 rollup
 rosa-cli
 rover
+rpcgen
 rpg-cli
 rpki-client
 rpl
