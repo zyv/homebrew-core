@@ -2011,6 +2011,7 @@ yaegi
 yamale
 yamllint
 yash
+ydiff
 ykman
 yle-dl
 yo
