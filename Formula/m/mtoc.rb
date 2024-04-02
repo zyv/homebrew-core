@@ -6,12 +6,12 @@ class Mtoc < Formula
   license "APSL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "64ca5eeec93a13384e7a694319f7efd66031cc3e9a516b2f824dea49cc597f93"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0954ac3e537307cee45ea244b7dcaf768f418e50c3f4dc9c95fa4ad7d59899ae"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "82477e19e4a32c11f53643cb98592079b9b249c55154aab62bc44ebf23353c16"
-    sha256 cellar: :any_skip_relocation, sonoma:         "c24baecad18e92b737f47d25211434e984d0a4eb01d4ffcd7da81c5c70c1a5ae"
-    sha256 cellar: :any_skip_relocation, ventura:        "57dde70448e8595e9940d961fd78fdf7c0902d3cb0e88cfe39e5c60d431b90c1"
-    sha256 cellar: :any_skip_relocation, monterey:       "d4dc48d23f9c700cbe7b56a5b7569c73b80085f817f9fa891fcb5cc7598f43bb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9a2e0cff36af9f659bcbb7165d1f180ef4408a0423af23b85c2f4312db8806f6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "eb9f6732da0297987d62d37c6f662a9679527fa7a3c80f45f7edf6c0ebda7b6b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "18bf5ccdeeea52a6e5c0172e623b62142c8e52fca847720bbb88fa441c4f31c5"
+    sha256 cellar: :any_skip_relocation, sonoma:         "02c5fb90c5c4195d212cec400aaf85e629f367d42f5924624bc01b20d4850b0a"
+    sha256 cellar: :any_skip_relocation, ventura:        "9d99cef4e8e1bca0c12e33b574f18700f6492929ec302bbbcfc357ed0da27f67"
+    sha256 cellar: :any_skip_relocation, monterey:       "8a66535f89e326120675f1e809ca4c6e53bcc5b26c6616c169d598b1affeda8c"
   end
 
   depends_on "llvm" => :build
