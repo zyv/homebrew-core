@@ -1004,6 +1004,7 @@ keptn
 kepubify
 kew
 keydb
+keyring
 ki
 kickstart
 kics
