@@ -1272,6 +1272,8 @@ mpv
 mqttui
 mruby
 mtoc
+msgpack
+msgpack-cxx
 mu
 muffet
 mujs
