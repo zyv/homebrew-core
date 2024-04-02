@@ -7,13 +7,13 @@ class Ocm < Formula
   head "https://github.com/openshift-online/ocm-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5ef219d053057e2a308e13f25b3bb23f26bc7956e1db422533947d4471f52b2a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "31f05076e1f80f5c5eea017d63c1b29effe9d925aee7d3d8e9debeb120bf1096"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a8acf5e29de28c4196f9d6e1eefe574f3327bff13fbde835dfc34fe4ee28478b"
-    sha256 cellar: :any_skip_relocation, sonoma:         "94e00690641a547328f461af1947b546b00e499ed215a7c81768f9a246519173"
-    sha256 cellar: :any_skip_relocation, ventura:        "b7fe2b4066d4bb1b038a07c550cd940d016e4defc9296ed69c4e0232498a8a47"
-    sha256 cellar: :any_skip_relocation, monterey:       "df60f06125db5611df5c928804cdd11c99a62a9b78bf9aaa88ba5c238b5e23de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "542d127f88f916f382344e63d23d9894f2fb88b74464a652375a35289c8b7f83"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "120458702b51c080b31581f12afabf0df370c6eb9dc833ec35d7b0dd8966bb1a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dfc13f72b1893dfedcf3137673b22c675b0023ce6943a1f8c89493a73b4050e4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3c11715fe945195bd77bdb5fcba7d456d6b961ef0244095d5be86ff4b61b5c91"
+    sha256 cellar: :any_skip_relocation, sonoma:         "eebd34ed2fb2c3c735f22b0cc571831b93137509b8f554c59a5f426c3b8307eb"
+    sha256 cellar: :any_skip_relocation, ventura:        "6045a26a3dd54ad2c8bdc31195c2e3910da7719d43a95bf9040cb8b12b5d6515"
+    sha256 cellar: :any_skip_relocation, monterey:       "746f07d4731c942fd4f4800f600ff2efb9a8b6e3ff0a7bb518768c8a658aa45f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81a0d870098771b0c1d387dff73d72b184efabceba961331e2e7b96dfae9d7a7"
   end
 
   depends_on "go" => :build
