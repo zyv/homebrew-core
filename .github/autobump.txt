@@ -1342,6 +1342,7 @@ oauth2c
 objfw
 ocaml-findlib
 oci-cli
+ocm
 ocp
 ocrmypdf
 octave
