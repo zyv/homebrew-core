@@ -2001,6 +2001,7 @@ xplr
 xray
 xrootd
 xterm
+xwin
 xxhash
 xz
 yaegi
