@@ -3,8 +3,8 @@ class AzureCli < Formula
 
   desc "Microsoft Azure CLI 2.0"
   homepage "https://docs.microsoft.com/cli/azure/overview"
-  url "https://github.com/Azure/azure-cli/archive/refs/tags/azure-cli-2.58.0.tar.gz"
-  sha256 "9d6539e722e91b094d9a4f8448fc598084420ee4ca6d36c135627ca0d8ee4d10"
+  url "https://github.com/Azure/azure-cli/archive/refs/tags/azure-cli-2.59.0.tar.gz"
+  sha256 "a4fa28f2840c215d685828d8143c979dba4c9f409ddd290b4baa826d87b9a0df"
   license "MIT"
   head "https://github.com/Azure/azure-cli.git", branch: "dev"
 
@@ -192,8 +192,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-compute" do
-    url "https://files.pythonhosted.org/packages/7c/dc/e5b3b31d6eab052a2fc14265faf836d361da0c6a1452c304db89c3262e97/azure-mgmt-compute-30.4.0.tar.gz"
-    sha256 "0b7428fd8bd15c7cbd7c66b9bb010e0a5cb37a806cef1f4948d9071915769334"
+    url "https://files.pythonhosted.org/packages/1e/e2/04dc4d1d2592858b7cf22efde3f7c5e5516faf98131214823b68fb7c087a/azure-mgmt-compute-30.6.0.tar.gz"
+    sha256 "4d80d723ec6d4cb9583617ebec0716e7d74b2732acbaed023ed2e3cc7053d00e"
   end
 
   resource "azure-mgmt-containerinstance" do
@@ -362,8 +362,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-rdbms" do
-    url "https://files.pythonhosted.org/packages/07/be/b0678f1edf78c4b502a426edbac481fc697013e2791bbc19098aaf190f45/azure-mgmt-rdbms-10.2.0b12.tar.gz"
-    sha256 "59d4e6d18c4c5cd1c6712183dfc619d5898968c8df2c90bc38899779d7310de1"
+    url "https://files.pythonhosted.org/packages/36/02/c596b8a0cb7c5d08c0c679fd609d2523c5e8e4bc21d43a9664806887d621/azure-mgmt-rdbms-10.2.0b14.tar.gz"
+    sha256 "85f812ad664a509354f42780c844c2aca58ac660b293d90877c45848db0ac013"
   end
 
   resource "azure-mgmt-recoveryservices" do
@@ -412,8 +412,8 @@ class AzureCli < Formula
   end
 
   resource "azure-mgmt-servicefabricmanagedclusters" do
-    url "https://files.pythonhosted.org/packages/0c/94/fd20fa0fa04919c015fa7376b16d9f4be04c05b15d0d5137fc0013842687/azure-mgmt-servicefabricmanagedclusters-1.0.0.zip"
-    sha256 "109ca3a251ebb7ddb35a0f8829614a4daa7065a16bc13b52c8422ee7f9995ce8"
+    url "https://files.pythonhosted.org/packages/56/96/8f2cdaf1edb93f5af91db350e0446a028f14414cd9b8c17ef8781f80cef0/azure-mgmt-servicefabricmanagedclusters-2.0.0b6.tar.gz"
+    sha256 "6a4fed9cea3d36711e61b10a6a41160ac7dcff996559976cc1c2fa1178ba0905"
   end
 
   resource "azure-mgmt-servicelinker" do
@@ -527,8 +527,8 @@ class AzureCli < Formula
   end
 
   resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/4d/b4/828991d82d3f1b6f21a0f8cfa54337ed33fdb52135f694130060839cfc33/cryptography-41.0.6.tar.gz"
-    sha256 "422e3e31d63743855e43e5a6fcc8b4acab860f560f9321b0ee6269cc7ed70cc3"
+    url "https://files.pythonhosted.org/packages/13/9e/a55763a32d340d7b06d045753c186b690e7d88780cafce5f88cb931536be/cryptography-42.0.5.tar.gz"
+    sha256 "6fe07eec95dfd477eb9530aef5bead34fec819b3aaf6c5bd6d20565da607bfe1"
   end
 
   resource "decorator" do
@@ -587,8 +587,8 @@ class AzureCli < Formula
   end
 
   resource "msal" do
-    url "https://files.pythonhosted.org/packages/bb/45/c4dfbe24dd546d141287fa26476ce3206d461d8e4a24be77c84b835e647d/msal-1.26.0.tar.gz"
-    sha256 "224756079fe338be838737682b49f8ebc20a87c1c5eeaf590daae4532b83de15"
+    url "https://files.pythonhosted.org/packages/a5/b0/006d1297baa1a6706525a3ae64d9575135128e260f9c0c74da5f5b8c584b/msal-1.27.0.tar.gz"
+    sha256 "3109503c038ba6b307152b0e8d34f98113f2e7a78986e28d0baf5b5303afda52"
   end
 
   resource "msal-extensions" do
@@ -657,8 +657,8 @@ class AzureCli < Formula
   end
 
   resource "pyOpenSSL" do
-    url "https://files.pythonhosted.org/packages/be/df/75a6525d8988a89aed2393347e9db27a56cb38a3e864314fac223e905aef/pyOpenSSL-23.2.0.tar.gz"
-    sha256 "276f931f55a452e7dea69c7173e984eb2a4407ce413c918aa34b55f82f9b8bac"
+    url "https://files.pythonhosted.org/packages/eb/81/022190e5d21344f6110064f6f52bf0c3b9da86e9e5a64fc4a884856a577d/pyOpenSSL-24.0.0.tar.gz"
+    sha256 "6aa33039a93fffa4563e655b61d11364d01264be8ccb49906101e02a334530bf"
   end
 
   resource "pycomposefile" do
