@@ -190,6 +190,7 @@ botan
 botan@2
 bottom
 bpftop
+breezy
 brev
 brew-php-switcher
 brogue
