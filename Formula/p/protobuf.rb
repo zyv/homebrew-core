@@ -11,13 +11,13 @@ class Protobuf < Formula
   end
 
   bottle do
-    sha256                               arm64_sonoma:   "fddad1ce30679b586263d42f6873ad14033bf081f1a02265a2dfd0db6c5b90a9"
-    sha256                               arm64_ventura:  "e5f9660c2add8a0b25a739d8733f8e39994627a52c4280fda3f6a6952fd3580c"
-    sha256                               arm64_monterey: "25697e79cbf8a2aa5ae3c70e2a03700cd8c071a1731ecc3eb89bcf44e7d70310"
-    sha256                               sonoma:         "f39583032815a31f5d31b520e24d70f75755e921235496b29fd1ed964fd6bcb5"
-    sha256                               ventura:        "7a1992bf50282507f8a5b707b98f85d02cc95da61b4a77145ecaa7dc48905f5f"
-    sha256                               monterey:       "80f58bba003e5b796d80d00a9324326431340a44abcbcf722596db9c95fc7055"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "56699682719d48c950eb9e0e862669759e974d9120b08b3d004a61fdd4b4bae8"
+    sha256 cellar: :any,                 arm64_sonoma:   "9bbacbfb7f31456778fcfa37bccee409afabb49702843870270404fc18941022"
+    sha256 cellar: :any,                 arm64_ventura:  "0ed7c159a485bfc56024239ddaec502bd5c7f9e36526b577d3fa9336c4009512"
+    sha256 cellar: :any,                 arm64_monterey: "a84f278a50c61da15d24c789ac2bb45eb919adc02dc311a4f4c04c23e6f78d9b"
+    sha256 cellar: :any,                 sonoma:         "99e10c650a00b3b017dd77642fd9230e97c472d40c71e6f34075f17dd0b94f90"
+    sha256 cellar: :any,                 ventura:        "a9dd7c9469573cb267c78423e600bbcba67b172ed9abcf789f6a7cec42c2491c"
+    sha256 cellar: :any,                 monterey:       "925c86112c0b15d006c5dea497b262f2d7960ecdb63b6d0b5aebbb28ed783be3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7460997e933897b54945444f56b3926407763cf2cdcc0d06b044f31eee252afa"
   end
 
   depends_on "cmake" => :build
