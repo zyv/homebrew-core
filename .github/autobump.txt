@@ -1507,6 +1507,7 @@ presenterm
 prestd
 prestodb
 prettier
+primecount
 principalmapper
 procs
 proftpd
