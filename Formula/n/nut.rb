@@ -1,8 +1,8 @@
 class Nut < Formula
   desc "Network UPS Tools: Support for various power devices"
   homepage "https://networkupstools.org/"
-  url "https://github.com/networkupstools/nut/releases/download/v2.8.1/nut-2.8.1.tar.gz"
-  sha256 "7da48ee23b1f0d8d72560bb0af84f5c5ae4dbe35452b84cb49840132e47f099c"
+  url "https://github.com/networkupstools/nut/releases/download/v2.8.2/nut-2.8.2.tar.gz"
+  sha256 "e4b4b0cbe7dd39ba9097be7f7d787bb2fffbe35df64dff53b5fe393d659c597d"
   license "GPL-2.0-or-later"
 
   livecheck do
