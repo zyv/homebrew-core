@@ -1335,6 +1335,7 @@ numbat
 numcpp
 numpy
 nushell
+nut
 nvc
 oauth2_proxy
 oauth2c
