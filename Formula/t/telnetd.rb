@@ -1,8 +1,8 @@
 class Telnetd < Formula
   desc "TELNET server"
   homepage "https://opensource.apple.com/"
-  url "https://github.com/apple-oss-distributions/remote_cmds/archive/refs/tags/remote_cmds-294.tar.gz"
-  sha256 "6e0a4a9cd79fa412f41185333588bc5d4e66a97dc6a2275418c97fb17abb3528"
+  url "https://github.com/apple-oss-distributions/remote_cmds/archive/refs/tags/remote_cmds-302.tar.gz"
+  sha256 "04b3e1253eee08e82e705a199f8ee1e99608304797911e9e69ab2c5c63d734c8"
   license all_of: ["BSD-4-Clause-UC", "BSD-3-Clause"]
 
   bottle do
@@ -36,11 +36,6 @@ class Telnetd < Formula
       libtelnet_dst.install "build/Products/Release/usr/local/include/libtelnet/"
     end
 
-    # fmtcheck(3) is used in several format strings, which is not a literal and thus
-    # throws an error (-Werror, -Wformat-nonliteral). Remove once possible to build
-    # without adding this flag.
-    ENV.append_to_cflags "-Wno-format-nonliteral"
-
     xcodebuild "OBJROOT=build/Intermediates",
                "SYMROOT=build/Products",
                "DSTROOT=build/Archive",
@@ -65,5 +60,11 @@ class Telnetd < Formula
 
   test do
     assert_match "usage: telnetd", shell_output("#{sbin}/telnetd usage 2>&1", 1)
+    port = free_port
+    fork do
+      exec "#{sbin}/telnetd -debug #{port}"
+    end
+    sleep 2
+    system "nc", "-vz", "127.0.0.1", port
   end
 end
