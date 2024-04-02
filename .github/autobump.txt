@@ -1184,6 +1184,7 @@ macchina
 mackup
 mafft
 mage
+magic-wormhole
 mailpit
 mailutils
 makedepend
