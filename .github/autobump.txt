@@ -1525,6 +1525,7 @@ prqlc
 prr
 prs
 psalm
+psysh
 pter
 ptpython
 pueue
