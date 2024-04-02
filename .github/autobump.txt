@@ -1444,6 +1444,7 @@ pdnsrec
 perl
 perltidy
 pfetch-rs
+pg_partman
 pgbadger
 pgbouncer
 pgloader
