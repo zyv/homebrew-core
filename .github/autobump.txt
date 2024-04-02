@@ -565,6 +565,7 @@ dune
 duo_unix
 dust
 dvc
+dwarfutils
 dwm
 dxpy
 dyld-headers
