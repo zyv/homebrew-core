@@ -1879,6 +1879,7 @@ typos-cli
 typst
 typstfmt
 tz
+tzdiff
 uffizzi
 ugit
 ugrep
