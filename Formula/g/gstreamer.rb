@@ -4,13 +4,13 @@ class Gstreamer < Formula
   license all_of: ["LGPL-2.0-or-later", "LGPL-2.1-or-later", "MIT"]
 
   stable do
-    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.22.10/gstreamer-1.22.10.tar.gz"
-    sha256 "bba3a87f82d509802d96a5caf2c47982234063928870623b222f60702f1f50eb"
+    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.22.11/gstreamer-1.22.11.tar.gz"
+    sha256 "cde3601f517b24aaaf0c91f1e2f24700d12482f840c6aa778ccf0b1451ea2a41"
 
     # When updating this resource, use the tag that matches the GStreamer version.
     resource "rs" do
-      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.22.10/gst-plugins-rs-gstreamer-1.22.10.tar.gz"
-      sha256 "ea866cdac87a57e08cf4529be5ba2870054e764b83dbfca733cd6fea1b9a3e11"
+      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.22.11/gst-plugins-rs-gstreamer-1.22.11.tar.gz"
+      sha256 "f809314b5cf285d3c093a08554f0c70dca9b21a5db2c0bccd15691733f16b6e6"
     end
   end
 
@@ -229,6 +229,7 @@ class Gstreamer < Formula
     system bin/"gst-inspect-1.0", "--plugin", "x264"
     system bin/"gst-inspect-1.0", "--plugin", "rtspclientsink"
     system bin/"gst-inspect-1.0", "--plugin", "rsfile"
+    system bin/"gst-inspect-1.0", "hlsdemux2"
 
     system python3, "-c", <<~EOS
       import gi
