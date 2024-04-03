@@ -1182,6 +1182,7 @@ lune
 lunzip
 luv
 lux
+lxc
 lychee
 lynis
 lzip
