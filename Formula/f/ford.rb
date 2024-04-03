@@ -3,10 +3,9 @@ class Ford < Formula
 
   desc "Automatic documentation generator for modern Fortran programs"
   homepage "https://github.com/Fortran-FOSS-Programmers/ford"
-  url "https://files.pythonhosted.org/packages/af/44/6c9f14e5560a95fd5b77009770be7437fad4bc142e39cc34ada49e4c758a/FORD-7.0.5.tar.gz"
-  sha256 "9c6f07acc8f01534f2b14d1b08265a4f36f93d44dd872eb60adfe5c83de36307"
+  url "https://files.pythonhosted.org/packages/fe/45/fbb50a9ce7fb8740b8365fae80d7a3247202c6698672b67acdea188751f4/FORD-7.0.6.tar.gz"
+  sha256 "662d0cab60234743ed7b863fbb980e0af909f31e0205011d7978ea2dedc3e952"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/Fortran-FOSS-Programmers/ford.git", branch: "master"
 
   bottle do
@@ -29,8 +28,8 @@ class Ford < Formula
   end
 
   resource "graphviz" do
-    url "https://files.pythonhosted.org/packages/a5/90/fb047ce95c1eadde6ae78b3fca6a598b4c307277d4f8175d12b18b8f7321/graphviz-0.20.1.zip"
-    sha256 "8c58f14adaa3b947daf26c19bc1e98c4e0702cdc31cf99153e6f06904d492bf8"
+    url "https://files.pythonhosted.org/packages/fa/83/5a40d19b8347f017e417710907f824915fba411a9befd092e52746b63e9f/graphviz-0.20.3.zip"
+    sha256 "09d6bc81e6a9fa392e7ba52135a9d49f1ed62526f96499325930e87ca1b5925d"
   end
 
   resource "jinja2" do
@@ -79,8 +78,8 @@ class Ford < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/a7/ec/4a7d80728bd429f7c0d4d51245287158a1516315cadbb146012439403a9d/rich-13.7.0.tar.gz"
-    sha256 "5cb5123b5cf9ee70584244246816e9114227e0b98ad9176eede6ad54bf5403fa"
+    url "https://files.pythonhosted.org/packages/b3/01/c954e134dc440ab5f96952fe52b4fdc64225530320a910473c1fe270d9aa/rich-13.7.1.tar.gz"
+    sha256 "9be308cb1fe2f1f57d67ce99e95af38a1e2bc71ad9813b0e247cf7ffbcc3a432"
   end
 
   resource "soupsieve" do
