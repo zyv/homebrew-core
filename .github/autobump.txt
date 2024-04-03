@@ -1658,6 +1658,7 @@ scarb
 sccache
 schemathesis
 scip
+scipy
 scm-manager
 scons
 scorecard
