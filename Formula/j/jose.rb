@@ -1,8 +1,8 @@
 class Jose < Formula
   desc "C-language implementation of Javascript Object Signing and Encryption"
   homepage "https://github.com/latchset/jose"
-  url "https://github.com/latchset/jose/releases/download/v12/jose-12.tar.xz"
-  sha256 "0ba189b483f27899867fdd886eda42dd9d17b807ffdc7819822665cb45d7e784"
+  url "https://github.com/latchset/jose/releases/download/v13/jose-13.tar.xz"
+  sha256 "995a72678acb71a700907a2e6a2280e88a04dc14709094fe4ce828bc10aec3ed"
   license "Apache-2.0"
 
   bottle do
