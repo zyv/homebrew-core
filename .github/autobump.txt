@@ -1698,6 +1698,7 @@ sigstore
 sigstore
 sile
 silicon
+simdutf
 simple-scan
 sing-box
 singular
