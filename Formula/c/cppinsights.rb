@@ -6,13 +6,13 @@ class Cppinsights < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "293ecb3c46a19a801a37ddfa6ea895fa089797ef162e0e9fd1e77f612051a564"
-    sha256 cellar: :any,                 arm64_ventura:  "5ab1d9de4049a99e9a8088dd6974d8a45a907a74f3ff68d020561ed63bf8e720"
-    sha256 cellar: :any,                 arm64_monterey: "647f8bd4d0017abc35fe1823809803ede2b992a69d05ec563faccf0ec2ba3b87"
-    sha256 cellar: :any,                 sonoma:         "63cc9e027a29042a96e8c83e431d9995dfc5ee077c96fed3f74b910abf7eb918"
-    sha256 cellar: :any,                 ventura:        "82273e5e3485622be08eee1a91f343b43ea120ed3249f3f79ffd72407e8f75bf"
-    sha256 cellar: :any,                 monterey:       "3ca4650fdc61a89df1a2a1decff56f967a064d642a1dd931123c4207b545d16c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9d1a660e983e603a38d3614dd283d26a2b569864b8fa59626190e0f8ac33de09"
+    sha256 cellar: :any,                 arm64_sonoma:   "96323129186a6544a116c838c12b1f3553afed284acc34f9dab10be492c67931"
+    sha256 cellar: :any,                 arm64_ventura:  "2d0955d7f8b5d8755a3e2ac7877561eb447e3cf94ac6675c88c91324047c9ebf"
+    sha256 cellar: :any,                 arm64_monterey: "977d8ed27ed1b3fe8435290de94c923c1f8b1466f31899e78debff7b6d610f90"
+    sha256 cellar: :any,                 sonoma:         "086658af37dfd1cd02e2964c87ac811aec7878cb248b8184d07cbb52623ae29e"
+    sha256 cellar: :any,                 ventura:        "144b6339feb3dda9c22489ca2f4c491cb9f104a19a5d8c7cdea07c0e190cb6aa"
+    sha256 cellar: :any,                 monterey:       "0bb503eeef577a4824d930902468acde8b401485c7abe24254734497caf0c6f6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a83984ed67773a0e00370010c90b7d841f32cd7791ff3a53ebf160607177799b"
   end
 
   depends_on "cmake" => :build
