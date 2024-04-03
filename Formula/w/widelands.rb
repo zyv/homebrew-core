@@ -1,10 +1,9 @@
 class Widelands < Formula
   desc "Free real-time strategy game like Settlers II"
   homepage "https://www.widelands.org/"
-  url "https://github.com/widelands/widelands/archive/refs/tags/v1.1.tar.gz"
-  sha256 "6853fcf3daec9b66005691e5bcb00326634baf0985ad89a7e6511502612f6412"
+  url "https://github.com/widelands/widelands/archive/refs/tags/v1.2.tar.gz"
+  sha256 "c6bed3717c541276fbed8a33adce230a2637297588c719268fcb963e076210e2"
   license "GPL-2.0-or-later"
-  revision 1
   version_scheme 1
 
   livecheck do
