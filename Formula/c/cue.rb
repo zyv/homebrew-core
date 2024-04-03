@@ -1,8 +1,8 @@
 class Cue < Formula
   desc "Validate and define text-based and dynamic configuration"
   homepage "https://cuelang.org/"
-  url "https://github.com/cue-lang/cue/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "8892dd72df94bfafc34641a8548d1fbab6f2d3efa063f9f6a5363a1be4514016"
+  url "https://github.com/cue-lang/cue/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "353277b82998482141f727effba8900fa4ccee81e20bfbe50a27563f6dee57ec"
   license "Apache-2.0"
   head "https://github.com/cue-lang/cue.git", branch: "master"
 
