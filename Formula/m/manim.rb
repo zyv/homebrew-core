@@ -8,6 +8,16 @@ class Manim < Formula
   license "MIT"
   head "https://github.com/manimCommunity/manim.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "1e0cac5e4bf67290570a8f0760ff70b89a808dd622c75cea2d31523ee0d59a3c"
+    sha256 cellar: :any,                 arm64_ventura:  "1fcc28bbb9b0c3d6cac0f677c2a15e76dc355c0ab3337da9848dc9c5932da139"
+    sha256 cellar: :any,                 arm64_monterey: "cc929f7cfdc73fdf62053dcab0093d5653fa7c6d80d26f06f170f8bf22b1de19"
+    sha256 cellar: :any,                 sonoma:         "85409c2e54e3db7b382eed9281b270143a7a7767de03abc607cdd7987042eb03"
+    sha256 cellar: :any,                 ventura:        "a84953341094ec1f7b4d2f551850de641c1429569211ead3bdff1a6ac1bb08db"
+    sha256 cellar: :any,                 monterey:       "d1d83781ab2edfd8ca2919a246d8603f803d7017aaebb17d8b092e6a7acefe06"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8dd8a6ee91131b1ece954cbaf30edef0427d0f26e0add53ab7b954cb398c038d"
+  end
+
   depends_on "cython" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
