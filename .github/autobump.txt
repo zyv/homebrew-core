@@ -414,6 +414,7 @@ croc
 cromwell
 crowdin
 crun
+crunchy-cli
 cryptography
 cryptol
 cryptominisat
