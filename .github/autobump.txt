@@ -958,7 +958,6 @@ jbig2dec
 jc
 jd
 jdnssec-tools
-jdtls
 jena
 jenkins
 jenkins-job-builder
