@@ -6,13 +6,13 @@ class Kalker < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f5662f5dcf8c16cc040411b3d31310be2461516f02e9e4ae7c7be7b312623d47"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "848595a35f2a8abfc748920baf97f7c2235a4504ebffdc47da03b607ccc834d2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "824213eadaf36cf7804b7969b5d83eecc907f64cb6679368c2c71f20b2a4d6b5"
-    sha256 cellar: :any_skip_relocation, sonoma:         "0081eeb8a42f15fe2a95fec6202306602467ddb3be09ee5d7dec6d049c46ee05"
-    sha256 cellar: :any_skip_relocation, ventura:        "b716ef722fa64ea5187328c5fc5d2084a87e70db4544bcec11708120f7d8c5c2"
-    sha256 cellar: :any_skip_relocation, monterey:       "4c2cf199412bf264ceef40238d8e4f19bac9ba7411c258cc988dbcb231150a96"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7f9f548dcf1cc76318336f48d270b8c44e31379f2f08eb5c216449c8fc19df9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c7e8a9929f77a7fd009e0290793fe22518d945ef362cf980876ce62cc48f25b6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "00c3b095d17680177a8aa6de792b5086f6eeb11291543b5fb57bca8cfa31562f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "69fdaed91c5a9ce2cecb38ad7873ca317617ae727bcad99f34b705344263fa5f"
+    sha256 cellar: :any_skip_relocation, sonoma:         "9c68b74e2490526623a47f2f4195c1824f1eda787fccb20da9a8a34d49bb918f"
+    sha256 cellar: :any_skip_relocation, ventura:        "b0a2540f5dda3f93061e7432fd9180b03c76bbe9c08f267241099a11e8bcb0c2"
+    sha256 cellar: :any_skip_relocation, monterey:       "185cf3399accd7bf448e22b20360aaceccf9e94c4d57b86c3577bf0f8b574e94"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed47375080db64cb26b84b1733f093216e808f4b87d55bcfdf5218104adb084"
   end
 
   depends_on "rust" => :build
