@@ -1537,6 +1537,7 @@ pygments
 pyinstaller
 pylint
 pyoxidizer
+pyqt-builder
 pyright
 pyside@2
 python-build
