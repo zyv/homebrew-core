@@ -1,10 +1,9 @@
 class NodeAT18 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v18.19.1/node-v18.19.1.tar.xz"
-  sha256 "090f96a2ecde080b6b382c6d642bca5d0be4702a78cb555be7bf02b20bd16ded"
+  url "https://nodejs.org/dist/v18.20.1/node-v18.20.1.tar.xz"
+  sha256 "c6d867a9f25e6354810effb8201f8147a15b28000e50790fda00d1ca15f49b8a"
   license "MIT"
-  revision 1
 
   livecheck do
     url "https://nodejs.org/dist/"
@@ -53,8 +52,12 @@ class NodeAT18 < Formula
 
   fails_with gcc: "5"
 
-  # Support Python 3.12
-  patch :DATA
+  # upstream bug report, https://github.com/nodejs/node/issues/52230
+  # and v8 dep patch PR, https://github.com/nodejs/node/pull/52337
+  patch do
+    url "https://github.com/nodejs/node/commit/f7a319eb22d956c11c71fd203243c3fb7fa2094e.patch?full_index=1"
+    sha256 "e410e1abe96bc23b4dc8e308cdc93fc3e940b524bcff78d5a4c15f64b2e075f2"
+  end
 
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
@@ -121,27 +124,3 @@ class NodeAT18 < Formula
     assert_match "< hello >", shell_output("#{bin}/npx --yes cowsay hello")
   end
 end
-
-
-__END__
-diff --git a/configure b/configure
-index fefb313c..711a3014 100755
---- a/configure
-+++ b/configure
-@@ -4,6 +4,7 @@
- # Note that the mix of single and double quotes is intentional,
- # as is the fact that the ] goes on a new line.
- _=[ 'exec' '/bin/sh' '-c' '''
-+command -v python3.12 >/dev/null && exec python3.12 "$0" "$@"
- command -v python3.11 >/dev/null && exec python3.11 "$0" "$@"
- command -v python3.10 >/dev/null && exec python3.10 "$0" "$@"
- command -v python3.9 >/dev/null && exec python3.9 "$0" "$@"
-@@ -23,7 +24,7 @@ except ImportError:
-   from distutils.spawn import find_executable as which
-
- print('Node.js configure: Found Python {}.{}.{}...'.format(*sys.version_info))
--acceptable_pythons = ((3, 11), (3, 10), (3, 9), (3, 8), (3, 7), (3, 6))
-+acceptable_pythons = ((3, 12), (3, 11), (3, 10), (3, 9), (3, 8), (3, 7), (3, 6))
- if sys.version_info[:2] in acceptable_pythons:
-   import configure
- else:
