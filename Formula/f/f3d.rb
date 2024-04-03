@@ -1,8 +1,8 @@
 class F3d < Formula
   desc "Fast and minimalist 3D viewer"
   homepage "https://f3d-app.github.io/f3d/"
-  url "https://github.com/f3d-app/f3d/archive/refs/tags/v2.3.1.tar.gz"
-  sha256 "e6ada89851cd27c84117b5b73dd69475fa7442f05e1dbf2fa76e1dc34d2c0006"
+  url "https://github.com/f3d-app/f3d/archive/refs/tags/v2.4.0.tar.gz"
+  sha256 "3286ad1b324b995fd95818679b4ced80ebc3cc3b4bd4c8e6964695c05c934c8f"
   license "BSD-3-Clause"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
@@ -28,12 +28,6 @@ class F3d < Formula
   depends_on "assimp"
   depends_on "opencascade"
   depends_on "vtk"
-
-  # Upstream fix for https://github.com/f3d-app/f3d/issues/1087
-  patch do
-    url "https://github.com/f3d-app/f3d/commit/a5ecb6bd.patch?full_index=1"
-    sha256 "62856957da64bdf56243c11573b79a624979d9952f64c613c7fe8d5f0ab484dc"
-  end
 
   def install
     args = %W[
