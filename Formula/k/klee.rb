@@ -11,13 +11,14 @@ class Klee < Formula
   head "https://github.com/klee/klee.git", branch: "master"
 
   bottle do
-    sha256 arm64_sonoma:   "2f0160e824e921a2f59c39f450108b2a25280dec0ae73f4a37ee3b3863c29de2"
-    sha256 arm64_ventura:  "54392eec13bf7ad524b666e85cd7508b1b5bd6724ebe97c0198a59595bf8cb95"
-    sha256 arm64_monterey: "bca91eb14c31dea50cea4d25e780850ee669958caaf57ba0af6d21e964543a02"
-    sha256 sonoma:         "e46ca6fe6b4f7d272272a9c684dd975bff9bac2349da945ac5b80f1eaa3f9ed4"
-    sha256 ventura:        "d73b78177f25091c3b29883d2293dec21763af3cad89db2c0d31cbcae6a20542"
-    sha256 monterey:       "3b56b5008a309cacd428de8cadd4ceb85a0ad1ecc5b7cf7961ac997379361e2b"
-    sha256 x86_64_linux:   "ddd9e505d793ed86614d73edd0316485f259d100b0ac8cbc0b59dad7a815ed58"
+    rebuild 1
+    sha256 arm64_sonoma:   "20a94127e1cd812fe8d1fdafa544d16fc1d4f8e3dc4309c3a798616603b27421"
+    sha256 arm64_ventura:  "aff91c5cde3b1560b734d0a4053c0f4e9a0db404f5cce46de2b8af58a13bda3a"
+    sha256 arm64_monterey: "520358584e40a77f6578d0d788f05e4c7028c40b2d416e3fafad21f348dd3612"
+    sha256 sonoma:         "c29106dec09329ae47ba9b8c0852380b92fca1294722d55af62a1aac7dc4fafa"
+    sha256 ventura:        "d2b6d81c8a13b81e572f9867421a16474d1dfeb10f26ee23cc19733cc8383c3b"
+    sha256 monterey:       "fb47d3def09cd573cb36e09e05924a04867b5662822ae768365640429b3dc89a"
+    sha256 x86_64_linux:   "c9eb15b2ae11c897e88fef23d0ed05243dbe162b6679ea18c32ae03fc499975a"
   end
 
   depends_on "cmake" => :build
