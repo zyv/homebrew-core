@@ -1,8 +1,8 @@
 class Cppinsights < Formula
   desc "See your source code with the eyes of a compiler"
   homepage "https://cppinsights.io/"
-  url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_16.0.tar.gz"
-  sha256 "5cb850ed35f33edb322ec5ddd7ddca9caec6eefb7550632226630e70f6ab4e0e"
+  url "https://github.com/andreasfertig/cppinsights/archive/refs/tags/v_17.0.tar.gz"
+  sha256 "2dd6bcfcdba65c0ed2e1f04ef79d57285186871ad8bd481d63269f3115276216"
   license "MIT"
 
   bottle do
@@ -16,11 +16,7 @@ class Cppinsights < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@16"
-
-  on_macos do
-    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1300
-  end
+  depends_on "llvm"
 
   fails_with :clang do
     build 1300
@@ -28,9 +24,7 @@ class Cppinsights < Formula
   end
 
   def install
-    ENV.llvm_clang if ENV.compiler == :clang && DevelopmentTools.clang_build_version <= 1300
-    ENV.remove "HOMEBREW_INCLUDE_PATHS", Formula["llvm"].opt_include
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
+    ENV.llvm_clang if ENV.compiler == :clang && DevelopmentTools.clang_build_version <= 1500
 
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"

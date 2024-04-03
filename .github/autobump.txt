@@ -402,6 +402,7 @@ cpm
 cpp-httplib
 cppad
 cppcheck
+cppinsights
 cpr
 cpu_features
 cpufetch
