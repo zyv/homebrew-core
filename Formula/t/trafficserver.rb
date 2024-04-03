@@ -1,9 +1,9 @@
 class Trafficserver < Formula
-  desc "HTTP/1.1 compliant caching proxy server"
+  desc "HTTP/1.1 and HTTP/2 compliant caching proxy server"
   homepage "https://trafficserver.apache.org/"
-  url "https://downloads.apache.org/trafficserver/trafficserver-9.2.3.tar.bz2"
-  mirror "https://archive.apache.org/dist/trafficserver/trafficserver-9.2.3.tar.bz2"
-  sha256 "49686bf788f48f24f9db3454125856564a847cdc4520cde43dcdd5fed105fbf4"
+  url "https://downloads.apache.org/trafficserver/trafficserver-9.2.4.tar.bz2"
+  mirror "https://archive.apache.org/dist/trafficserver/trafficserver-9.2.4.tar.bz2"
+  sha256 "fd4601677817de55d841376bb2deecf731f1adf317387148cf9a02f11375b7e4"
   license "Apache-2.0"
 
   bottle do
