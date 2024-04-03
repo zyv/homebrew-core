@@ -1144,6 +1144,7 @@ libxcursor
 libxdmcp
 libxext
 libxkbfile
+libxmlb
 libxmu
 libxvmc
 libzim
