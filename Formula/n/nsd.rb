@@ -1,8 +1,8 @@
 class Nsd < Formula
   desc "Name server daemon"
   homepage "https://www.nlnetlabs.nl/projects/nsd/"
-  url "https://www.nlnetlabs.nl/downloads/nsd/nsd-4.8.0.tar.gz"
-  sha256 "820da4e384721915f4bcaf7f2bed98519da563c6e4c130c742c724760ec02a0a"
+  url "https://www.nlnetlabs.nl/downloads/nsd/nsd-4.9.1.tar.gz"
+  sha256 "a6c23a53ee8111fa71e77b7565d1b8f486ea695770816585fbddf14e4367e6df"
   license "BSD-3-Clause"
 
   # We check the GitHub repo tags instead of
@@ -11,6 +11,10 @@ class Nsd < Formula
   livecheck do
     url "https://github.com/NLnetLabs/nsd.git"
     regex(/^NSD[._-]v?(\d+(?:[._]\d+)+)[._-]REL$/i)
+
+    strategy :git do |tags, regex|
+      tags.map { |tag| tag[regex, 1]&.tr("_", ".") }
+    end
   end
 
   bottle do
@@ -36,6 +40,6 @@ class Nsd < Formula
   end
 
   test do
-    system "#{sbin}/nsd", "-v"
+    system sbin/"nsd", "-v"
   end
 end
