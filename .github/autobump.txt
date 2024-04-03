@@ -1273,9 +1273,9 @@ mpich
 mpv
 mqttui
 mruby
-mtoc
 msgpack
 msgpack-cxx
+mtoc
 mu
 muffet
 mujs
@@ -1478,6 +1478,7 @@ pip-tools
 pipdeptree
 pipenv
 pipgrip
+pixi
 pkgconf
 pkl
 plantuml
