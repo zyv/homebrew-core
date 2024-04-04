@@ -1,8 +1,8 @@
 class Root < Formula
   desc "Object oriented framework for large scale data analysis"
   homepage "https://root.cern.ch/"
-  url "https://root.cern.ch/download/root_v6.30.04.source.tar.gz"
-  sha256 "2b4180b698f39cc65d91084d833a884515b325bc5f673c8e39abe818b025d8cc"
+  url "https://root.cern.ch/download/root_v6.30.06.source.tar.gz"
+  sha256 "300db7ed1b678ed2fb9635ca675921a1945c7c2103da840033b493091f55700c"
   license "LGPL-2.1-or-later"
   head "https://github.com/root-project/root.git", branch: "master"
 
@@ -66,13 +66,6 @@ class Root < Formula
   skip_clean "bin"
 
   fails_with gcc: "5"
-
-  # Upstream fix for Xcode 15.3 build failure
-  # https://github.com/root-project/root/issues/14902
-  patch do
-    url "https://github.com/root-project/root/commit/440c7303a95ad53ecd0e5ae7d6ebd0f29a733fa6.patch?full_index=1"
-    sha256 "6cd88fecaf104591a9f43ada36a2daa13d5c8c0aa48b97d1bd5ed1b090fe80e9"
-  end
 
   def python3
     "python3.12"

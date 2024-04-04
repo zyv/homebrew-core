@@ -1620,6 +1620,7 @@ robin-map
 rocksdb
 rojo
 rollup
+root
 rosa-cli
 rover
 rpcgen
