@@ -1739,6 +1739,7 @@ soplex
 sound-touch
 sourcery
 spack
+spectral-cli
 spglib
 spicetify-cli
 spidermonkey
