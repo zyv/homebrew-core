@@ -7,14 +7,13 @@ class UutilsFindutils < Formula
   head "https://github.com/uutils/findutils.git", branch: "main"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_sonoma:   "c9b20a92a27ec6e59d85ea2c7504c7b6b742a8fbce18584add667691bd8ed3a7"
-    sha256 cellar: :any,                 arm64_ventura:  "8be60da1dbce8c62f921e9906b76a9f3384b0f6e7d912a26afd633ac694889a2"
-    sha256 cellar: :any,                 arm64_monterey: "a6a59cb7c7e765c4df4135ddcd8766f676e70d5c08dc004f744e598bfba3481f"
-    sha256 cellar: :any,                 sonoma:         "9b65bda73278dfffcb6977d9e5771bb0134050937b1b181bcee4a2308817e9d2"
-    sha256 cellar: :any,                 ventura:        "a3bc5fead8a81e9c9cf771ac931f204b4fa258be83a14ffd3648c9e5267784e5"
-    sha256 cellar: :any,                 monterey:       "ca68615f9cdca938f9a3d45833207603fd8a2fc9217c86fe0e79857e00c6ed8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c81b5f592d7e87310bbf175f5890e0e18a0177d2c819447021576bf8691f22a6"
+    sha256 cellar: :any,                 arm64_sonoma:   "12b5ed3eac76496fa83f17702d24b11780c8c4031ad0b7f533f2d1417cbe59d2"
+    sha256 cellar: :any,                 arm64_ventura:  "2efbfd98b7bd2f911537e1678efdebbd220301c5f9a432add77e03a2dd3b06a4"
+    sha256 cellar: :any,                 arm64_monterey: "77f731f7daf405a9c353383908404522b28696f044d1ca4f5b350a7ec2395ffe"
+    sha256 cellar: :any,                 sonoma:         "0aa0883840290ac57612e718cb96757bc455f563be3124d01fbd8b86dea6d28e"
+    sha256 cellar: :any,                 ventura:        "74aef463704c438d36d16da8673a575e9d154143282fb17644f6b3f8097f312e"
+    sha256 cellar: :any,                 monterey:       "53c8dd5b4120465a9befd73b93894d35d5534e2d8d1c44acdfd82df4b167e382"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "786493398d788145040daa91d3f72f1cf53184bb318edb070c8fc88df5fba2a0"
   end
 
   depends_on "pkg-config" => :build
