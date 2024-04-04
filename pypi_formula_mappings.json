@@ -553,7 +553,8 @@
     "exclude_packages": ["certifi"]
   },
   "prowler": {
-    "exclude_packages": ["certifi", "cryptography"]
+    "exclude_packages": ["certifi", "cryptography"],
+    "extra_packages": ["setuptools"]
   },
   "pwntools": {
     "exclude_packages": ["certifi", "cryptography"]
