@@ -857,6 +857,7 @@ gsettings-desktop-schemas
 gsmartcontrol
 gsoap
 gtk-gnutella
+gtk4
 gtkmm4
 gtranslator
 gupnp
