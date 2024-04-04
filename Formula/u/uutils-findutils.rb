@@ -1,8 +1,8 @@
 class UutilsFindutils < Formula
   desc "Cross-platform Rust rewrite of the GNU findutils"
   homepage "https://github.com/uutils/findutils"
-  url "https://github.com/uutils/findutils/archive/refs/tags/0.4.2.tar.gz"
-  sha256 "b02fce9219393b47384229b397c7fbe479435ae8ccf8947f4b6cf7ac159d80f9"
+  url "https://github.com/uutils/findutils/archive/refs/tags/0.5.0.tar.gz"
+  sha256 "609ab3fdbf5a3ec8c3a3f014715d3f930e55a217915871a2861e0567c7be76d5"
   license "MIT"
   head "https://github.com/uutils/findutils.git", branch: "main"
 
@@ -17,14 +17,11 @@ class UutilsFindutils < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "c81b5f592d7e87310bbf175f5890e0e18a0177d2c819447021576bf8691f22a6"
   end
 
-  # Use `llvm@15` to work around build failure with Clang 16 described in
-  # https://github.com/rust-lang/rust-bindgen/issues/2312.
-  # TODO: Switch back to `uses_from_macos "llvm" => :build` when `bindgen` is
-  # updated to 0.62.0 or newer. There is a check in the `install` method.
-  depends_on "llvm@15" => :build # for libclang
   depends_on "pkg-config" => :build
   depends_on "rust" => :build
   depends_on "oniguruma"
+
+  uses_from_macos "llvm" => :build
 
   def unwanted_bin_link?(cmd)
     %w[
@@ -33,20 +30,6 @@ class UutilsFindutils < Formula
   end
 
   def install
-    bindgen_version = Version.new(
-      (buildpath/"Cargo.lock").read
-                              .match(/name = "bindgen"\nversion = "(.*)"/)[1],
-    )
-    if bindgen_version >= "0.62.0"
-      odie "`bindgen` crate is updated to 0.62.0 or newer! Please remove " \
-           'this check and try switching to `uses_from_macos "llvm" => :build`.'
-    end
-
-    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
-    # libunwind due to it being present in a library search path.
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm@15"].opt_lib
-
-    ENV["LIBCLANG_PATH"] = Formula["llvm@15"].opt_lib.to_s
     ENV["RUSTONIG_DYNAMIC_LIBONIG"] = "1"
     ENV["RUSTONIG_SYSTEM_LIBONIG"] = "1"
 
