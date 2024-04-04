@@ -540,6 +540,7 @@ drill
 drogon
 drone-cli
 dronedb
+dropbear
 druid
 dscanner
 dsda-doom
