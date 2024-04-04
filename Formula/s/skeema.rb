@@ -1,8 +1,8 @@
 class Skeema < Formula
   desc "Declarative pure-SQL schema management for MySQL and MariaDB"
   homepage "https://www.skeema.io/"
-  url "https://github.com/skeema/skeema/archive/refs/tags/v1.11.1.tar.gz"
-  sha256 "3da0888c67f90875e8c086f4f965965055d5990fb152359a4c898837cd7d0c51"
+  url "https://github.com/skeema/skeema/archive/refs/tags/v1.11.2.tar.gz"
+  sha256 "44fd48b35848440dc6d8deb8f812e8492e55dfa987e6ee3d697b3e8bbbac63c9"
   license "Apache-2.0"
   head "https://github.com/skeema/skeema.git", branch: "main"
 
