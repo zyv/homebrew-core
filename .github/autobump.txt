@@ -1984,6 +1984,7 @@ wstunnel
 wumpus
 wxmaxima
 wxwidgets
+x265
 x3270
 xa
 xapian
