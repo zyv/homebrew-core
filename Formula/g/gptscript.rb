@@ -7,13 +7,13 @@ class Gptscript < Formula
   head "https://github.com/gptscript-ai/gptscript.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "33b2d1671327746a6775f9518f14c2c6083a02da23832c8e1cb91830b028eabf"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7280e821777dbeb06216c59c2c03ed7de7d6be13a8d0824d8fc2d5a3427abee5"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4dac3933c9a14cf3abcf2788928b2517d05dcd9213556f199cdacddc4ddbadfd"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f4a07007bf4791225daf8d398254f8aa455389678b65528a79ebe1ac10ba31af"
-    sha256 cellar: :any_skip_relocation, ventura:        "1863d4af489cbcb8fd421fd157e87f0a8560c2faa2dbd1c9bb3fb1f24e8e2f04"
-    sha256 cellar: :any_skip_relocation, monterey:       "7bd4e848d0dd41975d7d65c1c5852658e6cdb0b468bf355649ba737a082bdc11"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7c83468d730520d1b4dc692e1b48488efbe37c29c4352aab0d272fa9d76dad35"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b22b64493d15328d312ffa64eb7c430cebb39dde9cf21f7e0a45184791391d73"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9e39500104128a3a4646885e78d24ef116dc5f026195c997a7d84173ac6cf453"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bf67f804d979835811d2af652faf19263bfd8895e2011e5df01715fae1df83c3"
+    sha256 cellar: :any_skip_relocation, sonoma:         "91f184b1705114f7e5d5552931d76557a536810d089fd32f32fe615113cfe03f"
+    sha256 cellar: :any_skip_relocation, ventura:        "f234dc80f8fdbf5c937c4a0e6f13682a1da430cdbe6fdcc914f61434bde145d5"
+    sha256 cellar: :any_skip_relocation, monterey:       "cb98d7d410fcb24282324f96d36baa1b36ba5eb9b8c8a1f7df46ea22618087de"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "68147ae9621293c7dc246e9b07582d9b1a980694afd33b97962d6d6bf9131474"
   end
 
   depends_on "go" => :build
