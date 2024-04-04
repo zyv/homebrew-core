@@ -3,8 +3,8 @@ class Pipdeptree < Formula
 
   desc "CLI to display dependency tree of the installed Python packages"
   homepage "https://github.com/tox-dev/pipdeptree"
-  url "https://files.pythonhosted.org/packages/f1/22/af4f7e301cf70dc5ecb6f25366122f3925637013376971e2356ebde82695/pipdeptree-2.16.2.tar.gz"
-  sha256 "96ecde8e6f40c95998491a385e4af56d387f94ff7d3b8f209aa34982a721bc43"
+  url "https://files.pythonhosted.org/packages/e5/8d/c506de2d472182ab89e58f3d6e2d2843a2e6242adb4d1b10289e645cb9ac/pipdeptree-2.17.0.tar.gz"
+  sha256 "f2c19758c023bca0c08fa085ced2660cff066a108a792b1a72af5b5344c47ae0"
   license "MIT"
 
   bottle do
@@ -18,6 +18,11 @@ class Pipdeptree < Formula
   end
 
   depends_on "python@3.12"
+
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
+    sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
+  end
 
   def install
     virtualenv_install_with_resources
