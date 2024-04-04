@@ -1193,6 +1193,7 @@ makepkg
 manifest-tool
 mantra
 mapcidr
+markdownlint-cli2
 marked
 marp-cli
 massdriver
