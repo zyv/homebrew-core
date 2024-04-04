@@ -1904,6 +1904,7 @@ universal-ctags
 usb.ids
 usbredir
 uutils-coreutils
+uutils-findutils
 uuu
 uv
 uvicorn
