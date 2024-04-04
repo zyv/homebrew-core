@@ -1,8 +1,8 @@
 class BashCompletionAT2 < Formula
   desc "Programmable completion for Bash 4.2+"
   homepage "https://github.com/scop/bash-completion"
-  url "https://github.com/scop/bash-completion/releases/download/2.12.0/bash-completion-2.12.0.tar.xz"
-  sha256 "3eb05b1783c339ef59ed576afb0f678fa4ef49a6de8a696397df3148f8345af9"
+  url "https://github.com/scop/bash-completion/releases/download/2.13.0/bash-completion-2.13.0.tar.xz"
+  sha256 "c5f99a39e40f0d154c03ff15438e87ece1f5ac666336a4459899e2ff4bedf3d1"
   license "GPL-2.0-or-later"
 
   livecheck do
