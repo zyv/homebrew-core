@@ -625,6 +625,7 @@ etcd-cpp-apiv3
 ethereum
 eva
 evince
+evtx
 exercism
 exim
 exiv2
