@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/9a/cf/fe61c45a00c09a84b14e1f79922995dc9dc411b1ad0c063b968188b94180/schemathesis-3.26.0.tar.gz"
-  sha256 "042a9d2d6f7104b46e7be23589bf057f9f074aa8c22411a41b82d3fcc9410545"
+  url "https://files.pythonhosted.org/packages/95/66/50a1294d09fe5f50b48d1b0b86ddda215f4a66292d9e3482daeeffe931b7/schemathesis-3.26.1.tar.gz"
+  sha256 "352f4b05f8648d12e9819eb31e96c999293ce5be3de6184c4d7a8687f395321d"
   license "MIT"
 
   bottle do
@@ -63,8 +63,8 @@ class Schemathesis < Formula
   end
 
   resource "httpcore" do
-    url "https://files.pythonhosted.org/packages/03/9d/2055e6b65592d3a485a1141761ba7047674bbe085cebac0988b30e93c9e6/httpcore-1.0.4.tar.gz"
-    sha256 "cb2839ccfcba0d2d3c1131d3c3e26dfc327326fbe7a5dc0dbfe9f6c9151bb022"
+    url "https://files.pythonhosted.org/packages/17/b0/5e8b8674f8d203335a62fdfcfa0d11ebe09e23613c3391033cbba35f7926/httpcore-1.0.5.tar.gz"
+    sha256 "34a38e2f9291467ee3b44e89dd52615370e152954ba21721378a87b2960f7a61"
   end
 
   resource "httpx" do
@@ -73,8 +73,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/b8/c9/eddcf544dd3c9723bba73e6755e66bd8ebc6b4ec2be7f89e0956b358d1b5/hypothesis-6.99.11.tar.gz"
-    sha256 "3df99ecf501e056c7e2c6ac7a9e3726f4fe8d2139dcce068aceffdab58265f1e"
+    url "https://files.pythonhosted.org/packages/fb/d9/65762008149d8d0d4cd11da2d112b025825f65034d39795016f084640c19/hypothesis-6.100.0.tar.gz"
+    sha256 "1841f6b5083844cd4b66965e44a17c0dc8fe8e9c6370c1f7b8d50647fcb2efd3"
   end
 
   resource "hypothesis-graphql" do
@@ -208,8 +208,8 @@ class Schemathesis < Formula
   end
 
   resource "werkzeug" do
-    url "https://files.pythonhosted.org/packages/0d/cc/ff1904eb5eb4b455e442834dabf9427331ac0fa02853bf83db817a7dd53d/werkzeug-3.0.1.tar.gz"
-    sha256 "507e811ecea72b18a404947aded4b3390e1db8f826b494d76550ef45bb3b1dcc"
+    url "https://files.pythonhosted.org/packages/0f/84/00f7193d7bd88ced26cd5f868903e431054424610dc7c041bbe87d2a4d66/werkzeug-3.0.2.tar.gz"
+    sha256 "e39b645a6ac92822588e7b39a692e7828724ceae0b0d702ef96701f90e70128d"
   end
 
   resource "yarl" do
