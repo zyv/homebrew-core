@@ -1705,6 +1705,7 @@ singularity
 sip
 sjk
 skaffold
+skeema
 ski
 skopeo
 skylighting
