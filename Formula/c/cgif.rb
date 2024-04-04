@@ -1,8 +1,8 @@
 class Cgif < Formula
   desc "GIF encoder written in C"
   homepage "https://github.com/dloebl/cgif"
-  url "https://github.com/dloebl/cgif/archive/refs/tags/V0.3.2.tar.gz"
-  sha256 "0abf83b7617f4793d9ab3a4d581f4e8d7548b56a29e3f95b0505f842cbfd7f95"
+  url "https://github.com/dloebl/cgif/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "130ff8a604f047449e81ddddf818bd0e03826b5f468e989b02726b16b7d4742e"
   license "MIT"
 
   bottle do
