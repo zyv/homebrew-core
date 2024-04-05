@@ -3,8 +3,8 @@ require "language/node"
 class AwsAuth < Formula
   desc "Allows you to programmatically authenticate into AWS accounts through IAM roles"
   homepage "https://github.com/iamarkadyt/aws-auth#readme"
-  url "https://registry.npmjs.org/@iamarkadyt/aws-auth/-/aws-auth-2.1.5.tgz"
-  sha256 "525f3245cfdd011e0e2e863f602d565e8744d2e04a858f0e875e82cb048ccd2b"
+  url "https://registry.npmjs.org/@iamarkadyt/aws-auth/-/aws-auth-2.2.3.tgz"
+  sha256 "4320fb53239e40b45d05b023f253cfedf70e283a957eb561c40c349850b3daa7"
   license "MIT"
 
   bottle do
@@ -25,27 +25,9 @@ class AwsAuth < Formula
   end
 
   test do
-    require "pty"
-    require "io/console"
+    output = pipe_output("#{bin}/aws-auth login 2>&1", "fake123")
+    assert_match "Enter new passphrase", output
 
-    PTY.spawn("#{bin}/aws-auth login 2>&1") do |r, w, _pid|
-      r.winsize = [80, 43]
-      r.gets
-      sleep 1
-      # switch to insert mode and add data
-      w.write "Password12345678!\n"
-      sleep 1
-      r.gets
-      w.write "Password12345678!\n"
-      sleep 1
-      r.gets
-      output = begin
-        r.gets
-      rescue Errno::EIO
-        nil
-        # GNU/Linux raises EIO when read is done on closed pty
-      end
-      assert_match "CLI configuration has no saved profiles", output
-    end
+    assert_match version.to_s, shell_output("#{bin}/aws-auth version")
   end
 end
