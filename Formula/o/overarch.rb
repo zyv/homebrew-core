@@ -5,6 +5,10 @@ class Overarch < Formula
   sha256 "7d573e0c044e63487cf9104142651e79beb849282916cf63dcb3a3256211bff0"
   license "EPL-1.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "bb81050adefd759c706a092a42444d4641b6117b9518d026dfe4b0e3545b1fb0"
+  end
+
   head do
     url "https://github.com/soulspace-org/overarch.git", branch: "main"
     depends_on "leiningen" => :build
