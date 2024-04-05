@@ -4,6 +4,7 @@ class Leveldb < Formula
   url "https://github.com/google/leveldb/archive/refs/tags/1.23.tar.gz"
   sha256 "9a37f8a6174f09bd622bc723b55881dc541cd50747cbd08831c2a82d620f6d76"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "8d18b1cabb2b8e9bcf79655774037cce9f9ea523d8d4c2dcc271bcfb40d06904"
