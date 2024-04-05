@@ -1491,6 +1491,7 @@ pngquant
 pnpm
 po4a
 pocketbase
+poco
 podman
 podsync
 poetry
