@@ -443,10 +443,6 @@
     "package_name": "",
     "extra_packages": ["mako", "markupsafe", "packaging", "pygments", "ply"]
   },
-  "meson-python": {
-    "exclude_packages": ["meson", "packaging"],
-    "extra_packages": ["tomli"]
-  },
   "meta-package-manager": {
     "exclude_packages": ["certifi"]
   },
