@@ -1903,6 +1903,7 @@ uffizzi
 ugit
 ugrep
 unar
+ungit
 uni
 universal-ctags
 usb.ids
