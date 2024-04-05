@@ -3,8 +3,8 @@ class CfnLint < Formula
 
   desc "Validate CloudFormation templates against the CloudFormation spec"
   homepage "https://github.com/aws-cloudformation/cfn-lint/"
-  url "https://files.pythonhosted.org/packages/e1/e3/cf78506d6a32f4138036d93dc522bb01d04c509b8ab18915882c84f7db29/cfn-lint-0.86.1.tar.gz"
-  sha256 "ed41e596d807fea2de74dbbfc0cb8b48f8787572c50e3b58cce05382a5af3a64"
+  url "https://files.pythonhosted.org/packages/42/dc/c6afb068eddaba2ba462a0c62645484f6b0d0bc77859c16339f1ba8a6718/cfn-lint-0.86.2.tar.gz"
+  sha256 "c140c814b6a7db048ac881a4f9b7f4e8335afd706f523f3fbf884eb6322f16f9"
   license "MIT-0"
 
   bottle do
@@ -32,18 +32,18 @@ class CfnLint < Formula
   end
 
   resource "aws-sam-translator" do
-    url "https://files.pythonhosted.org/packages/75/72/13d3e1b5070b728e998488f2b670df8ef57048b5a6f41fa71b8e0fbcf3f4/aws-sam-translator-1.86.0.tar.gz"
-    sha256 "a748dcd7886024cb7586abbbdbabe8c787c44c6547bb6602879d7bb8a6934d05"
+    url "https://files.pythonhosted.org/packages/a5/b8/41fcb7d76ac74dcdfedf34c73b6ce4f75c19e68534806df319531315c47c/aws-sam-translator-1.87.0.tar.gz"
+    sha256 "80f4fb6d53774634b6ea84af5fdfa9ad94a46945bc4ad4ef11c8008540dfa7f8"
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/bb/c8/c0423232158b46e86203c491296e39609cc1041e4cd1dfde41f3727617a6/boto3-1.34.67.tar.gz"
-    sha256 "950161d438ae1bf31374f04175e5f2624a5de8109674ff80f4de5d962313072a"
+    url "https://files.pythonhosted.org/packages/f0/d3/3e714658eed2e05df248a676346fbc22a537c183057873d176037afc4fc0/boto3-1.34.78.tar.gz"
+    sha256 "227487f9a40e7963aa108f4fabc81374d65e085891a2a442c190dfd976b86a9e"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/72/0f/73021d692a741fbe723ead7b3478ddf997edcc3dbd84055295c25f9c0797/botocore-1.34.67.tar.gz"
-    sha256 "fc094c055a6ac151820a4d8e28f7b30d03e02695ce180527520a5e219b14e8a1"
+    url "https://files.pythonhosted.org/packages/6f/5a/29b26451528598feb75c87b7a8682abcfa2b08ba31951f24bcb5679034f0/botocore-1.34.78.tar.gz"
+    sha256 "889fcfd1813fad225a5a70940c58cd4bd7a6f5ba6c9769a1d41d0c670272b75d"
   end
 
   resource "jmespath" do
@@ -157,8 +157,8 @@ class CfnLint < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   resource "urllib3" do
