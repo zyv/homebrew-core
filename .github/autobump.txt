@@ -2011,6 +2011,7 @@ xmake
 xmlrpc-c
 xmrig
 xonsh
+xorg-server
 xorgproto
 xplr
 xray
