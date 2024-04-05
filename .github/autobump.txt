@@ -1291,6 +1291,7 @@ naabu
 nagios
 nagios-plugins
 nanoflann
+nasm
 nats-server
 nats-streaming-server
 navi
