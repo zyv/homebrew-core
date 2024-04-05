@@ -20,6 +20,9 @@ class Vfox < Formula
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
+
+    bash_completion.install "completions/bash_autocomplete" => "vfox"
+    zsh_completion.install "completions/zsh_autocomplete" => "_vfox"
   end
 
   test do
