@@ -1161,6 +1161,7 @@ llm
 llvm
 lmdb
 lmod
+lnav
 lndir
 localstack
 locust
