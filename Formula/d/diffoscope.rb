@@ -8,13 +8,13 @@ class Diffoscope < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "477ee2d921cfb1364686d0f9cd50891e42e1fe0b4c08f87576eb3a57898e0eff"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "477ee2d921cfb1364686d0f9cd50891e42e1fe0b4c08f87576eb3a57898e0eff"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "477ee2d921cfb1364686d0f9cd50891e42e1fe0b4c08f87576eb3a57898e0eff"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8912e24823f20126994678923145043e8422742f6c392716587c0e4c654b577b"
-    sha256 cellar: :any_skip_relocation, ventura:        "8912e24823f20126994678923145043e8422742f6c392716587c0e4c654b577b"
-    sha256 cellar: :any_skip_relocation, monterey:       "8912e24823f20126994678923145043e8422742f6c392716587c0e4c654b577b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1a2982dc73c0618f0c9ac5ac17667549e84601c3ed3dda11b0ed50e062630563"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2b5e26a3654ffe6fb78a68b13ce4bcf407d65f9d755576c37a8c2e86e35897f7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2b5e26a3654ffe6fb78a68b13ce4bcf407d65f9d755576c37a8c2e86e35897f7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2b5e26a3654ffe6fb78a68b13ce4bcf407d65f9d755576c37a8c2e86e35897f7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "b9005a1615352fb9f18e01c9180d5e6550f098d6860502cd0c027951ba539ad1"
+    sha256 cellar: :any_skip_relocation, ventura:        "b9005a1615352fb9f18e01c9180d5e6550f098d6860502cd0c027951ba539ad1"
+    sha256 cellar: :any_skip_relocation, monterey:       "b9005a1615352fb9f18e01c9180d5e6550f098d6860502cd0c027951ba539ad1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bc6395f797ce4606299c36e87363cef9641be754fad9da6399401127cd7eedc9"
   end
 
   depends_on "libarchive"
