@@ -4,6 +4,7 @@ class Rocksdb < Formula
   url "https://github.com/facebook/rocksdb/archive/refs/tags/v9.1.1.tar.gz"
   sha256 "54ca90dd782a988cd3ebc3e0e9ba9b4efd563d7eb78c5e690c2403f1b7d4a87a"
   license any_of: ["GPL-2.0-only", "Apache-2.0"]
+  revision 1
   head "https://github.com/facebook/rocksdb.git", branch: "main"
 
   bottle do
