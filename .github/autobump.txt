@@ -666,6 +666,7 @@ felinks
 fend
 fennel
 feroxbuster
+ffmpeg
 ffsend
 ffuf
 fheroes2
