@@ -5,6 +5,7 @@ class ApachePulsar < Formula
   mirror "https://archive.apache.org/dist/pulsar/pulsar-3.1.2/apache-pulsar-3.1.2-src.tar.gz"
   sha256 "82270fa4c224af7979d6d4689d7a77742eb3a32a32630e052dc93739a35624e2"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
