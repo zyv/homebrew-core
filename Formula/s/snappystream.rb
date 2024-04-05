@@ -4,6 +4,7 @@ class Snappystream < Formula
   url "https://github.com/hoxnox/snappystream/archive/refs/tags/1.0.0.tar.gz"
   sha256 "a50a1765eac1999bf42d0afd46d8704e8c4040b6e6c05dcfdffae6dcd5c6c6b8"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/hoxnox/snappystream.git", branch: "master"
 
   bottle do
@@ -51,8 +52,8 @@ class Snappystream < Formula
       }
     EOS
     system ENV.cxx, "test.cxx", "-o", "test",
-                    "-L#{Formula["snappy"].opt_lib}", "-lsnappy",
-                    "-L#{lib}", "-lsnappystream"
+                    "-L#{lib}", "-lsnappystream",
+                    "-L#{Formula["snappy"].opt_lib}", "-lsnappy"
     system "./test < #{__FILE__} > out.dat && diff #{__FILE__} out.dat"
   end
 end
