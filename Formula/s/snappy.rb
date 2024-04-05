@@ -1,8 +1,8 @@
 class Snappy < Formula
   desc "Compression/decompression library aiming for high speed"
   homepage "https://google.github.io/snappy/"
-  url "https://github.com/google/snappy/archive/refs/tags/1.1.10.tar.gz"
-  sha256 "49d831bffcc5f3d01482340fe5af59852ca2fe76c3e05df0e67203ebbe0f1d90"
+  url "https://github.com/google/snappy/archive/refs/tags/1.2.0.tar.gz"
+  sha256 "9b8f10fbb5e3bc112f2e5e64f813cb73faea42ec9c533a5023b5ae08aedef42e"
   license "BSD-3-Clause"
   head "https://github.com/google/snappy.git", branch: "master"
 
