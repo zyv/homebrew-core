@@ -1193,6 +1193,7 @@ mailutils
 makedepend
 makensis
 makepkg
+man-db
 manifest-tool
 mantra
 mapcidr
