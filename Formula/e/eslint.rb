@@ -3,8 +3,8 @@ require "language/node"
 class Eslint < Formula
   desc "AST-based pattern checker for JavaScript"
   homepage "https://eslint.org"
-  url "https://registry.npmjs.org/eslint/-/eslint-8.57.0.tgz"
-  sha256 "97ec696de2427643aaa7cfa0478ea4fc8ef964c3b2fc9b1f4b57b5180629cf12"
+  url "https://registry.npmjs.org/eslint/-/eslint-9.0.0.tgz"
+  sha256 "b3d6290a0f443e43eea6e52417cae956294347f12ee0933461f566f9ee3e1625"
   license "MIT"
 
   bottle do
@@ -25,8 +25,10 @@ class Eslint < Formula
   end
 
   test do
-    (testpath/".eslintrc.json").write("{}") # minimal config
+    # https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file
+    (testpath/"eslint.config.js").write("{}") # minimal config
     (testpath/"syntax-error.js").write("{}}")
+
     # https://eslint.org/docs/user-guide/command-line-interface#exit-codes
     output = shell_output("#{bin}/eslint syntax-error.js", 1)
     assert_match "Unexpected token }", output
