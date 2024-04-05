@@ -1,8 +1,8 @@
 class Veilid < Formula
   desc "Peer-to-peer network for easily sharing various kinds of data"
   homepage "https://veilid.com/"
-  url "https://gitlab.com/veilid/veilid/-/archive/v0.3.0/veilid-v0.3.0.tar.gz"
-  sha256 "9b9f888d57ba5e371fe931361ac0c4afe1e7b6a3ce4fe7c0f744f2dec5421cdb"
+  url "https://gitlab.com/veilid/veilid/-/archive/v0.3.1/veilid-v0.3.1.tar.gz"
+  sha256 "c99a90c09785bf595aef4219f6ce7d613bc3c819b1f4c60f935764b8d580231e"
   license "MPL-2.0"
   head "https://gitlab.com/veilid/veilid.git", branch: "main"
 
@@ -16,10 +16,6 @@ class Veilid < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f6c2ae1ca0b9a5d2afd2d7cf726a954cea96ad19f03f59d1c623faedcb36523d"
   end
 
-  # TODO: Remove `capnp` dependency once version >v0.2.5
-  depends_on "capnp" => :build
-  # TODO: Remove `protobuf` dependency once version >v0.2.5
-  depends_on "protobuf" => :build
   depends_on "rust" => :build
 
   def install
