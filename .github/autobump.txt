@@ -1330,6 +1330,7 @@ noseyparker
 notcurses
 npm-check-updates
 npth
+nsd
 nsq
 nss
 ntfy
