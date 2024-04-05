@@ -7,13 +7,13 @@ class Activemq < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8fb31be689ced27442973d8828d547242d92e07a069334e1635f8798cbc86794"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bbd1eaaad89d2dc6468b3f0b5e7bc586f45a01dbc116f1aaf3348402019c7aa6"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5f756f1662504242c55b7ff1e91fec97dc47f1b150b91a1456c3cca47aa08ae0"
-    sha256 cellar: :any_skip_relocation, sonoma:         "6119542fc7b6350edd6b96a0650199868a9ccfa304fff4e755d76882f31b42e0"
-    sha256 cellar: :any_skip_relocation, ventura:        "e0c23602211e7993524bca8e7572c175b1e45182d5bc763e73c3e56f52fbc231"
-    sha256 cellar: :any_skip_relocation, monterey:       "3ab86369b31600c2059d48f6f229e01ff372e815846710b0b13c842cf69823c5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3b2534517c88a8916eae8b0dac5f8956378ba00ded2499d3a1e26fed50d3cb47"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8af2fad9ccaaa9b8415c97ce9be22da7240ad486cb4ec3d9f4e69fccf875b730"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2f800916affac8fd4161a93627b8e4cbe0692ef6db257c08e5487c4c778779a5"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "77f00c71c3731f066c42e6838bd7c65c6e26b20745b8ec3dbdb79d7a74f5cb7c"
+    sha256 cellar: :any_skip_relocation, sonoma:         "a2cbafac061b598fda37a43d940daabf8c977f0bfb5b4c8150b0cea99e5a6af6"
+    sha256 cellar: :any_skip_relocation, ventura:        "7d271f31c69bb73e4759c6a4dc48ecd230668c20711a4dd46664fd80eed28848"
+    sha256 cellar: :any_skip_relocation, monterey:       "01463e19bbef0c8778b059255c7af47881f78ad30f40abfaaeec5ac3b9411089"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "07a183a9223e8a41bec8e2417a986ba78b01521aa7ea3f7fe045794a519fa7ef"
   end
 
   depends_on "java-service-wrapper"
