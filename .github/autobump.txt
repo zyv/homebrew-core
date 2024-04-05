@@ -1212,7 +1212,6 @@ mbedtls
 mbedtls@2
 md4c
 mdbook
-mdcat
 mdless
 mdzk
 mediamtx
