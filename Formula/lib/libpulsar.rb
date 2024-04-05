@@ -5,6 +5,7 @@ class Libpulsar < Formula
   mirror "https://archive.apache.org/dist/pulsar/pulsar-client-cpp-3.5.1/apache-pulsar-client-cpp-3.5.1.tar.gz"
   sha256 "d24990757319dfa9c9e5d3263f60105dd9e12ddeaf1396d6b397f87dab2fd7d1"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "a08b3483b74be83bc5ccecb061825df782d4f034e39c9fb4cb7c57a6d9a6a1c9"
@@ -27,11 +28,10 @@ class Libpulsar < Formula
   uses_from_macos "curl"
 
   def install
-    args = %w[
+    args = %W[
       -DBUILD_TESTS=OFF
-      -DCMAKE_FIND_PACKAGE_PREFER_CONFIG=ON # protocolbuffers/protobuf#12292
-      -Dprotobuf_MODULE_COMPATIBLE=ON # protocolbuffers/protobuf#1931
       -DCMAKE_CXX_STANDARD=17
+      -DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}
     ]
 
     system "cmake", "-S", ".", "build", *args, *std_cmake_args
