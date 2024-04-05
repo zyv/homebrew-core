@@ -33,7 +33,8 @@ class Sslyze < Formula
     end
   end
 
-  deprecate! date: "2023-10-24", because: "uses deprecated `openssl@1.1`"
+  # Original deprecation date: 2023-10-24
+  disable! date: "2024-04-05", because: "uses deprecated `openssl@1.1`"
 
   depends_on "pyinvoke" => :build
   depends_on "rust" => :build # for cryptography
