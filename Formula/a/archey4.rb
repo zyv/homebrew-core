@@ -3,8 +3,8 @@ class Archey4 < Formula
 
   desc "Simple system information tool written in Python"
   homepage "https://github.com/HorlogeSkynet/archey4"
-  url "https://files.pythonhosted.org/packages/b3/76/21850b7c2b5967326c13fac40a60e9d49295e971ec5b5398780da9d5ee04/archey4-4.14.2.0.tar.gz"
-  sha256 "afbc9f66e0ff85bfff038b9a8a401cb269a28a9024b2ce29ad382e07443eae9d"
+  url "https://files.pythonhosted.org/packages/dc/9a/8a0921ed2df4da26197f98b0f6a8b3af1fa232cc898a13e719e9ed396e95/archey4-4.14.3.0.tar.gz"
+  sha256 "31ce86c6642becd11a9879a63557ed5cef3f552cd9cfe798299414a9c5745056"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -21,8 +21,8 @@ class Archey4 < Formula
   depends_on "python@3.12"
 
   resource "distro" do
-    url "https://files.pythonhosted.org/packages/4b/89/eaa3a3587ebf8bed93e45aa79be8c2af77d50790d15b53f6dfc85b57f398/distro-1.8.0.tar.gz"
-    sha256 "02e111d1dc6a50abb8eed6bf31c3e48ed8b0830d1ea2a1b78c61765c2513fdd8"
+    url "https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz"
+    sha256 "2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"
   end
 
   resource "netifaces" do
