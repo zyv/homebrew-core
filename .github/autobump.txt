@@ -1703,6 +1703,7 @@ sigstore
 sigstore
 sile
 silicon
+simdjson
 simdutf
 simple-scan
 sing-box
