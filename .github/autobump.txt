@@ -2062,4 +2062,5 @@ zpaqfranz
 zsh-vi-mode
 zshdb
 zstd
+zx
 zydis
