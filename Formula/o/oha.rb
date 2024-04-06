@@ -1,8 +1,8 @@
 class Oha < Formula
   desc "HTTP load generator, inspired by rakyll/hey with tui animation"
   homepage "https://github.com/hatoo/oha/"
-  url "https://github.com/hatoo/oha/archive/refs/tags/v1.4.1.tar.gz"
-  sha256 "23691f9bf60745ee9a9df2ec92a4fc4e77d89cd2648b38410d396b193146ce43"
+  url "https://github.com/hatoo/oha/archive/refs/tags/v1.4.3.tar.gz"
+  sha256 "970de0952d5a3a75452f0dd6713eaabcb8a34589c4ea6c05cf8ed925c6873ddb"
   license "MIT"
   head "https://github.com/hatoo/oha.git", branch: "master"
 
@@ -16,10 +16,11 @@ class Oha < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "73d884067b124a44ba07ac245992a0d98511fa83e0d911e6f64120215c9f2ab7"
   end
 
+  depends_on "cmake" => :build # for aws-lc-sys
+  depends_on "pkg-config" => :build
   depends_on "rust" => :build
 
   on_linux do
-    depends_on "pkg-config" => :build
     depends_on "openssl@3" # Uses Secure Transport on macOS
   end
 
