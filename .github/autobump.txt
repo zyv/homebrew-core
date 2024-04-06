@@ -1215,6 +1215,7 @@ mdbook
 mdless
 mdzk
 mediamtx
+mednafen
 meilisearch
 melange
 melody
