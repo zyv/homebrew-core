@@ -1,8 +1,8 @@
 class Bmake < Formula
   desc "Portable version of NetBSD make(1)"
   homepage "https://www.crufty.net/help/sjg/bmake.html"
-  url "https://www.crufty.net/ftp/pub/sjg/bmake-20240314.tar.gz"
-  sha256 "f9a906d7487699c9e0d2c135700c2d088da5fcd0f2f6761267a57aabfea31feb"
+  url "https://www.crufty.net/ftp/pub/sjg/bmake-20240404.tar.gz"
+  sha256 "60dfb60090086f2d008d9c4ec8a224c992a3e62522cc06e43764d5d1e3d7d8bd"
   license "BSD-3-Clause"
 
   livecheck do
