@@ -17,7 +17,6 @@ class Pyqt < Formula
   end
 
   depends_on "pyqt-builder" => :build
-  depends_on "sip" => :build
   depends_on "python@3.12"
   depends_on "qt"
 
@@ -68,13 +67,14 @@ class Pyqt < Formula
     # HACK: there is no option to set the plugindir
     inreplace "project.py", "builder.qt_configuration['QT_INSTALL_PLUGINS']", "'#{share}/qt/plugins'"
 
+    sip_install = Formula["pyqt-builder"].opt_libexec/"bin/sip-install"
     site_packages = prefix/Language::Python.site_packages(python3)
     args = %W[
       --target-dir #{site_packages}
       --scripts-dir #{bin}
       --confirm-license
     ]
-    system "sip-install", *args
+    system sip_install, *args
 
     resource("pyqt6-sip").stage do
       system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
@@ -86,9 +86,11 @@ class Pyqt < Formula
       next if r.name == "pyqt6-webengine" && OS.mac? && DevelopmentTools.clang_build_version <= 1200
 
       r.stage do
-        inreplace "pyproject.toml", "[tool.sip.project]",
-          "[tool.sip.project]\nsip-include-dirs = [\"#{site_packages}/PyQt#{version.major}/bindings\"]\n"
-        system "sip-install", "--target-dir", site_packages
+        inreplace "pyproject.toml", "[tool.sip.project]", <<~EOS
+          [tool.sip.project]
+          sip-include-dirs = ["#{site_packages}/PyQt#{version.major}/bindings"]
+        EOS
+        system sip_install, "--target-dir", site_packages
       end
     end
   end
@@ -118,5 +120,8 @@ class Pyqt < Formula
     # Don't test WebEngineCore bindings on macOS if the SDK is too old to have built qtwebengine in qt.
     pyqt_modules << "WebEngineCore" if OS.linux? || DevelopmentTools.clang_build_version > 1200
     pyqt_modules.each { |mod| system python3, "-c", "import PyQt#{version.major}.Qt#{mod}" }
+
+    # Make sure plugin is installed as it currently gets skipped on wheel build,  e.g. `pip install`
+    assert_predicate share/"qt/plugins/designer"/shared_library("libpyqt#{version.major}"), :exist?
   end
 end
