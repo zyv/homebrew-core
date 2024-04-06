@@ -1210,6 +1210,7 @@ mawk
 maxwell
 mbedtls
 mbedtls@2
+mcap
 md4c
 mdbook
 mdless
