@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/95/66/50a1294d09fe5f50b48d1b0b86ddda215f4a66292d9e3482daeeffe931b7/schemathesis-3.26.1.tar.gz"
-  sha256 "352f4b05f8648d12e9819eb31e96c999293ce5be3de6184c4d7a8687f395321d"
+  url "https://files.pythonhosted.org/packages/2d/99/9fec13978f3f63d4ab7d5201275190ec76e167050e5f0da325cd2e55e381/schemathesis-3.26.2.tar.gz"
+  sha256 "4b9e5da29167ec9e02e61b8839a36d1b020e14780d9d3c645b2f9f8346f321c1"
   license "MIT"
 
   bottle do
@@ -133,8 +133,8 @@ class Schemathesis < Formula
   end
 
   resource "pyrate-limiter" do
-    url "https://files.pythonhosted.org/packages/c0/a2/bb73c385e6d68cbe0ebe6ff16c22c96a79194c1298b2942005fcaf3eda9d/pyrate_limiter-2.10.0.tar.gz"
-    sha256 "98cc52cdbe058458e945ae87d4fd5a73186497ffa545ee6e98372f8599a5bd34"
+    url "https://files.pythonhosted.org/packages/fa/06/13ffff42f7293f96ee45ec61cd50e2d27b39629652550383ffd212b802b1/pyrate_limiter-3.6.0.tar.gz"
+    sha256 "390f97066b322732e498c9e921fbdfd31d9ec0070a14e06da9af0efc62e091e4"
   end
 
   resource "pytest" do
