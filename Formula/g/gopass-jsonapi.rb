@@ -1,8 +1,8 @@
 class GopassJsonapi < Formula
   desc "Gopass Browser Bindings"
   homepage "https://github.com/gopasspw/gopass-jsonapi"
-  url "https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.15.12.tar.gz"
-  sha256 "0ce434e5ef0e74a7e606f1216ced5ae4c96de99bba22eff0708ed07344740d93"
+  url "https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.15.13.tar.gz"
+  sha256 "810fe36396aae3d0e82eabf1de43de824255ab69a7528354714777268ee5d3e4"
   license "MIT"
 
   bottle do
@@ -16,12 +16,6 @@ class GopassJsonapi < Formula
 
   depends_on "go" => :build
   depends_on "gopass"
-
-  # go.mod build patch, remove in next release
-  patch do
-    url "https://github.com/gopasspw/gopass-jsonapi/commit/cab33faab113d0c9702ebaa14cde13e5ccd465d2.patch?full_index=1"
-    sha256 "83cd3482ab270872f469f0669e03f036ab0cd9d0baf2a4cacaca2d416bc1d0b1"
-  end
 
   def install
     ldflags = "-s -w -X main.version=#{version}"
