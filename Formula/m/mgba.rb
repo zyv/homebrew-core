@@ -4,6 +4,7 @@ class Mgba < Formula
   url "https://github.com/mgba-emu/mgba/archive/refs/tags/0.10.3.tar.gz"
   sha256 "be2cda7de3da8819fdab0c659c5cd4c4b8ca89d9ecddeeeef522db6d31a64143"
   license "MPL-2.0"
+  revision 1
   head "https://github.com/mgba-emu/mgba.git", branch: "master"
 
   livecheck do
@@ -53,6 +54,13 @@ class Mgba < Formula
 
     # Install .app bundle into prefix, not prefix/Applications
     inreplace "src/platform/qt/CMakeLists.txt", "Applications", "."
+
+    # Fix OpenGL linking on macOS.
+    if OS.mac?
+      inreplace "CMakeLists.txt",
+                "list(APPEND DEPENDENCY_LIB ${EPOXY_LIBRARIES})",
+                'list(APPEND DEPENDENCY_LIB ${EPOXY_LIBRARIES} "-framework OpenGL")'
+    end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
