@@ -1,8 +1,8 @@
 class Croc < Formula
   desc "Securely send things from one computer to another"
   homepage "https://github.com/schollz/croc"
-  url "https://github.com/schollz/croc/archive/refs/tags/v9.6.14.tar.gz"
-  sha256 "c8b1a109fcf496a103b8d70ef76c0ace6ef22d5575be6bbe2f571c6b1fe6a8ac"
+  url "https://github.com/schollz/croc/archive/refs/tags/v9.6.15.tar.gz"
+  sha256 "ca118155cdf3ceb7496928b1c76387ba74f39b774372d30543e6cbd23d2c0a97"
   license "MIT"
   head "https://github.com/schollz/croc.git", branch: "master"
 
@@ -28,12 +28,12 @@ class Croc < Formula
     fork do
       exec bin/"croc", "relay", "--ports=#{port}"
     end
-    sleep 1
+    sleep 3
 
     fork do
       exec bin/"croc", "--relay=localhost:#{port}", "send", "--code=homebrew-test", "--text=mytext"
     end
-    sleep 1
+    sleep 3
 
     assert_match shell_output("#{bin}/croc --relay=localhost:#{port} --overwrite --yes homebrew-test").chomp, "mytext"
   end
