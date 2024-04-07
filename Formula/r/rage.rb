@@ -6,6 +6,16 @@ class Rage < Formula
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/str4d/rage.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fe679e4dd957148d5c62d465aae7f451c0160ef7ec02629abecc31ef48a76355"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5528b1d13be084d4889823a2343aa3ce5c194add31ddb1f845f9b48673ecdd8a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a6c1eb10260bdc634ff9e9c6a0ccd160b8d6761d0f60cf4a134b166b04de8499"
+    sha256 cellar: :any_skip_relocation, sonoma:         "be1b5a328299875623fcb7b72469eb8522d3ff549e0f263442bf313f60b51bcb"
+    sha256 cellar: :any_skip_relocation, ventura:        "b4d186b9ef6805e18cd695adfd9eb5608797a3332633f73cdcae1fe8401106d5"
+    sha256 cellar: :any_skip_relocation, monterey:       "6b92ec9a3f5c4413663aa63c657d22c63b75c66a146f860c4e36f6c9d83955d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7c4f61c4674059a51330260e541601e4b639a65805c22c9e42c5e7764f4353d"
+  end
+
   depends_on "rust" => :build
 
   def install
