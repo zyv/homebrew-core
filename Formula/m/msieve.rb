@@ -10,6 +10,16 @@ class Msieve < Formula
     regex(%r{url=.*?/Msieve%20v?(\d+(?:\.\d+)+)/}i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "e2048a031203ed1bb7bb3ee4becb928faa9f6d40b96ce62d3718873dd25bc83e"
+    sha256 cellar: :any,                 arm64_ventura:  "b5fd08185a6cccac73b0cbdbc912880cababcee826bf5dbd3a07a6b6a590b53d"
+    sha256 cellar: :any,                 arm64_monterey: "58f7c8472236d7c6213d11a6160e9b58a07de88dd07f0cb2c6281d3d800ce942"
+    sha256 cellar: :any,                 sonoma:         "0be196c24813acf765158fe9fc3c525daf39627c52b762e6dcb54e99dad4fd6f"
+    sha256 cellar: :any,                 ventura:        "712fbadc3fd1dca26ddb4c0d578c9d067e3c246c8fb56ef27eaa611ca5a60cea"
+    sha256 cellar: :any,                 monterey:       "5d992af057d4b06b7f0898fbdd560410efeca4d336a4e562a916af392fe21019"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8580e27cfae573df3fd975a42ceea4967f1397e566523189f385ce7a128148e"
+  end
+
   depends_on "gmp"
 
   uses_from_macos "zlib"
