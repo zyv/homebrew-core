@@ -1331,6 +1331,7 @@ node-build
 node-sass
 node@18
 node@20
+nomino
 noseyparker
 notcurses
 npm-check-updates
