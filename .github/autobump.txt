@@ -1667,6 +1667,7 @@ scamper
 scarb
 sccache
 schemathesis
+scilla
 scip
 scipy
 scm-manager
