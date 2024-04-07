@@ -1,8 +1,8 @@
 class Aichat < Formula
   desc "ChatGPT cli"
   homepage "https://github.com/sigoden/aichat"
-  url "https://github.com/sigoden/aichat/archive/refs/tags/v0.14.0.tar.gz"
-  sha256 "de554ef95d75a17b20f384b5f2ea07b3d2cd6112e87e9e038145d13285633468"
+  url "https://github.com/sigoden/aichat/archive/refs/tags/v0.15.0.tar.gz"
+  sha256 "aa235d15d7a7f00e023d141eba100f329b33d56cf9fb32936f3c3ee652b7c65a"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sigoden/aichat.git", branch: "main"
 
