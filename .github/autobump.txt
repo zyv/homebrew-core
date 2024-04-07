@@ -1361,6 +1361,7 @@ odpi
 oh-my-posh
 oha
 oil
+oksh
 okta-aws-cli
 okta-awscli
 okteto
