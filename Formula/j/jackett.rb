@@ -1,8 +1,8 @@
 class Jackett < Formula
   desc "API Support for your favorite torrent trackers"
   homepage "https://github.com/Jackett/Jackett"
-  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.21.2296.tar.gz"
-  sha256 "74e2a911e7b3cf3ed8685fba91ee808ca3c68f25a25456633118061c44d815a3"
+  url "https://github.com/Jackett/Jackett/archive/refs/tags/v0.21.2313.tar.gz"
+  sha256 "af55011257805c7c75ac4b9dac40447193257a1dace90d321f4c35f1151abbf4"
   license "GPL-2.0-only"
   head "https://github.com/Jackett/Jackett.git", branch: "master"
 
@@ -61,7 +61,7 @@ class Jackett < Formula
     end
 
     begin
-      sleep 10
+      sleep 15
       assert_match "<title>Jackett</title>", shell_output("curl -b cookiefile -c cookiefile -L --silent http://localhost:#{port}")
     ensure
       Process.kill "TERM", pid
