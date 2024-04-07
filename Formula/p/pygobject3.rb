@@ -1,8 +1,8 @@
 class Pygobject3 < Formula
   desc "GNOME Python bindings (based on GObject Introspection)"
   homepage "https://wiki.gnome.org/Projects/PyGObject"
-  url "https://download.gnome.org/sources/pygobject/3.48/pygobject-3.48.1.tar.xz"
-  sha256 "3a0a2c0c0f25931b5840649c54834b9e58a63148d37fa9f6308887b7027e15c2"
+  url "https://download.gnome.org/sources/pygobject/3.48/pygobject-3.48.2.tar.xz"
+  sha256 "0794aeb4a9be31a092ac20621b5f54ec280f9185943d328b105cdae6298ad1a7"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -23,17 +23,6 @@ class Pygobject3 < Formula
   depends_on "python@3.12" => [:build, :test]
   depends_on "gobject-introspection"
   depends_on "py3cairo"
-
-  # Fix support for fundamental types using commits from open MR.
-  # Ref: https://gitlab.gnome.org/GNOME/pygobject/-/merge_requests/304
-  patch do
-    url "https://gitlab.gnome.org/GNOME/pygobject/-/commit/d6d937e3da5791420f17b83cf4caaceab1c0e1b9.diff"
-    sha256 "3a907e7d390bc56bc72aad553164cb8515a22d670a08f344531eedf395a8fddc"
-  end
-  patch do
-    url "https://gitlab.gnome.org/GNOME/pygobject/-/commit/27d34e4c1d24d8f8f15035b18630a00d7c5d2e26.diff"
-    sha256 "60b10f6661cd45f6467f97375eb3b503c08450e43588701cc04166358dca77a4"
-  end
 
   def pythons
     deps.map(&:to_formula)
