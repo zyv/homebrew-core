@@ -6,12 +6,12 @@ class GopassJsonapi < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2e9398a531fe5ab450d68bb5a9404bf6dee9dbd6da002caff016ebb674856217"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0d488f0c23c744ad49fcbc281589e18a669e74d66ad390c89a962a72033ffbd0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6c7e8e357ad765debc90b74747a6724d05b905653ef574cbddc1ca4328267eb9"
-    sha256 cellar: :any_skip_relocation, sonoma:         "9dbbe64ea74130b5bfd1391c4c1ecb8392a6b8b18a61674da75f84a2bc58543e"
-    sha256 cellar: :any_skip_relocation, ventura:        "bc98e741ceae9e3468222ce433fa19b5f9ea4eba5f25ddae5cf933a83e26f908"
-    sha256 cellar: :any_skip_relocation, monterey:       "66a32cafe5bcc58f823b096f6b959fcb04c4a7376a3f54b44b804910e3ea0655"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4a32069959f87ea8b742aae64d590c4c2e6467a8731aa1275cff79fe54bad048"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4286a43f346997246b95ab7f346a881294aa2d09676d98a619b7c7db78978da"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "47be53a5aa5d51f16d8c84d99fe3ba6da6364e446049652588aec8bd274e4684"
+    sha256 cellar: :any_skip_relocation, sonoma:         "9b3b3e84cc592874587cdf5b54c55eb1ca8473524d1ccb0c7996237444dee13e"
+    sha256 cellar: :any_skip_relocation, ventura:        "931b2ab8d3bce8f579f1dfe858b159762c92a79f9a25702bbcaded55213215b1"
+    sha256 cellar: :any_skip_relocation, monterey:       "a37180430d7f20da329a708c515c8c9bfb881958a46e3b6afe0ef19187b37779"
   end
 
   depends_on "go" => :build
