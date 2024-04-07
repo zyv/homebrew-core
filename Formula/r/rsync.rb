@@ -13,15 +13,13 @@ class Rsync < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "d68788aadb63680a636992bdb2edb9b0380aa8d2efb95652fcedac30516b7044"
-    sha256 cellar: :any,                 arm64_ventura:  "071de5ab73fa5f455d1861ac33b5f618f7672f53442ccb50a8c3af55312f58e0"
-    sha256 cellar: :any,                 arm64_monterey: "01361cf8e78ce7c629d97b6474ad417632010e099b6aa881fac5bf39786a973c"
-    sha256 cellar: :any,                 arm64_big_sur:  "e7e106b801d5fd324ae7fc99384141cad1a11b031dbb3a18825747aa1f6e1313"
-    sha256 cellar: :any,                 sonoma:         "eb41ded3d3630e37e01d718f386a41ba5f5820cd949cb1e0cc56131ad1d01d14"
-    sha256 cellar: :any,                 ventura:        "c1d2161f8ca6d894e3f32f1d1cb54babd5bed9a8e078a08a9c37f776a4bc06db"
-    sha256 cellar: :any,                 monterey:       "63d05e0e6ecb5161b9e29704db7607d00e97898e143bca3eabba5c146b776aaf"
-    sha256 cellar: :any,                 big_sur:        "a6262a2ac03fa34a43bd0e187a54a1e89cf523dd03c7fe87a6fde5d1599860ee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "81689deca3e1695f3976b576c54a38348632c43ce8453d6d1b318d8a087f2827"
+    sha256 cellar: :any,                 arm64_sonoma:   "aedcc676dfc2ba721d7e780a852525c3a96ab045ff5225b72ca31b0248aa5abc"
+    sha256 cellar: :any,                 arm64_ventura:  "800017d5ed8d03f6c0ff9e45830b09d5fd709ad1cf565b056782a65aef061769"
+    sha256 cellar: :any,                 arm64_monterey: "87da2d08d06cc90b4087e8ef50418a9ec3a0ceecb23e1ec75ffad2b411c5400a"
+    sha256 cellar: :any,                 sonoma:         "5ef1e7552fe1fe4fcbf336c83313033a544768d4f8e7cc166ea4f91c2867c35b"
+    sha256 cellar: :any,                 ventura:        "c0d2c0d516ca8ed44cdd846a9066b5b9748ce56dc26fc0be07f057f15e730460"
+    sha256 cellar: :any,                 monterey:       "502081be38ed754a5fce7c4a38bfb2aaad99923ffa27a9fe4b13e3e0df7635c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db52f38e89890b3c5b50931db4d3910984dbc8180466c250495f3e7b579a7366"
   end
 
   depends_on "autoconf" => :build
