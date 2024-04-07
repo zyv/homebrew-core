@@ -1556,7 +1556,6 @@ python-build
 python-dateutil
 python-lxml
 python-matplotlib
-python-pyparsing
 python-setuptools
 python-trove-classifiers
 pyyaml
