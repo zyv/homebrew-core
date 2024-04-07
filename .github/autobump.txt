@@ -271,7 +271,6 @@ cdogs-sdl
 cdxgen
 cekit
 censys
-certbot
 certigo
 cfengine
 cfitsio
