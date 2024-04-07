@@ -1650,6 +1650,7 @@ rust-analyzer
 rustup-init
 rye
 s-search
+s2geometry
 s2n
 s3fs
 sad
