@@ -912,6 +912,7 @@ hypre
 hysteria
 hyx
 i2p
+i2pd
 iamy
 ibazel
 ignite
