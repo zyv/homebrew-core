@@ -1140,6 +1140,7 @@ libxcursor
 libxdmcp
 libxext
 libxkbfile
+libxlsxwriter
 libxmlb
 libxmu
 libxvmc
