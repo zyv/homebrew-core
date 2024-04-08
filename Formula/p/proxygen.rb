@@ -1,8 +1,8 @@
 class Proxygen < Formula
   desc "Collection of C++ HTTP libraries"
   homepage "https://github.com/facebook/proxygen"
-  url "https://github.com/facebook/proxygen/releases/download/v2024.04.01.00/proxygen-v2024.04.01.00.tar.gz"
-  sha256 "8b3e492f6bb4ea14bd58da9c82e6146e6052eb3cacbc8bf2d5f4bcc9e7b56c8e"
+  url "https://github.com/facebook/proxygen/releases/download/v2024.04.08.00/proxygen-v2024.04.08.00.tar.gz"
+  sha256 "5e2459cd7e65d1ce238f536ac703544ffa3b8d7f41275c0fb782c5f43d182309"
   license "BSD-3-Clause"
   head "https://github.com/facebook/proxygen.git", branch: "main"
 
@@ -41,7 +41,7 @@ class Proxygen < Formula
 
   test do
     pid = spawn bin/"proxygen_echo"
-    sleep 5
+    sleep 10
     system "curl", "-v", "http://localhost:11000"
   ensure
     Process.kill "TERM", pid
