@@ -3,8 +3,8 @@ class Sigstore < Formula
 
   desc "Codesigning tool for Python packages"
   homepage "https://github.com/sigstore/sigstore-python"
-  url "https://files.pythonhosted.org/packages/fb/62/fc71a3266daa9c2f97ad8baf35baed4a71937218b1c0582333f402134897/sigstore-2.1.3.tar.gz"
-  sha256 "7a0c1252cb7974024aee87c8e0f0f6247604af16e8b5a8e3d0a9e1201e330aa2"
+  url "https://files.pythonhosted.org/packages/a2/91/9843dac576ebdfdcd7be64ffce5cff8c208814c29d739de4a134fa36de51/sigstore-2.1.5.tar.gz"
+  sha256 "7771153c5ac5a51d6556481f4680dfb602cb5c32c94fe56f87ff1801b8a8f243"
   license "Apache-2.0"
 
   bottle do
@@ -143,8 +143,8 @@ class Sigstore < Formula
   end
 
   resource "sigstore-protobuf-specs" do
-    url "https://files.pythonhosted.org/packages/fd/3a/f4a5294a3d836cec5a0157c2c9bcc9b5c3adde37e060f0332a8151b5c9eb/sigstore_protobuf_specs-0.3.0.tar.gz"
-    sha256 "3322adb73992bca0f3dc6d4c2c38bac29086a11d2631a983adb2798e58e32a54"
+    url "https://files.pythonhosted.org/packages/8c/46/cbbe9fac71b99037bcfe9642877e2bca6def226de153077a3441d67bd521/sigstore_protobuf_specs-0.3.1.tar.gz"
+    sha256 "c40b61975b957ae906eb29a5bc7040ec015b68b6b46005cc5805e629493e8dec"
   end
 
   resource "sigstore-rekor-types" do
@@ -163,8 +163,8 @@ class Sigstore < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   resource "urllib3" do
@@ -180,21 +180,21 @@ class Sigstore < Formula
     assert_match version.to_s, shell_output("#{bin}/sigstore -V")
 
     resource "homebrew-test-artifact" do
-      url "https://github.com/sigstore/sigstore-python/releases/download/v2.1.3/sigstore-2.1.3.tar.gz", using: :nounzip
-      sha256 "7a0c1252cb7974024aee87c8e0f0f6247604af16e8b5a8e3d0a9e1201e330aa2"
+      url "https://github.com/sigstore/sigstore-python/releases/download/v2.1.5/sigstore-2.1.5.tar.gz", using: :nounzip
+      sha256 "7771153c5ac5a51d6556481f4680dfb602cb5c32c94fe56f87ff1801b8a8f243"
     end
 
     resource "homebrew-test-artifact.sigstore" do
-      url "https://github.com/sigstore/sigstore-python/releases/download/v2.1.3/sigstore-2.1.3.tar.gz.sigstore"
-      sha256 "373e6398dc87eea2c6dfba2f7b52d8b23f68f08f240ca40f9712f8dbd7747b8d"
+      url "https://github.com/sigstore/sigstore-python/releases/download/v2.1.5/sigstore-2.1.5.tar.gz.sigstore"
+      sha256 "c860cea0233020ed5a3417d49c760056b3d34860b10619027de092ab26cf6d9f"
     end
 
     resource("homebrew-test-artifact").stage testpath
     resource("homebrew-test-artifact.sigstore").stage testpath
 
-    cert_identity = "https://github.com/sigstore/sigstore-python/.github/workflows/release.yml@refs/tags/v2.1.3"
+    cert_identity = "https://github.com/sigstore/sigstore-python/.github/workflows/release.yml@refs/tags/v2.1.5"
 
-    output = shell_output("#{bin}/sigstore verify github sigstore-2.1.3.tar.gz --cert-identity #{cert_identity}")
-    assert_match "OK: sigstore-2.1.3.tar.gz", output
+    output = shell_output("#{bin}/sigstore verify github sigstore-2.1.5.tar.gz --cert-identity #{cert_identity}")
+    assert_match "OK: sigstore-2.1.5.tar.gz", output
   end
 end
