@@ -1551,6 +1551,7 @@ pyenv-virtualenv
 pyflow
 pygit2
 pygments
+pygobject3
 pyinstaller
 pylint
 pyoxidizer
