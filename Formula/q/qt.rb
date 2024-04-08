@@ -10,7 +10,7 @@ class Qt < Formula
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } },
     "LGPL-3.0-only",
   ]
-  revision 1
+  revision 2
   head "https://code.qt.io/qt/qt5.git", branch: "dev"
 
   stable do
@@ -88,13 +88,17 @@ class Qt < Formula
 
   on_macos do
     depends_on "molten-vk" => [:build, :test]
+
+    # FIXME: Avoid Qt opportunistically linking with FFmpeg.
+    # TODO: Remove ASAP after merge.
+    conflicts_with "ffmpeg", because: "Qt links opportunistically with FFmpeg"
   end
 
   on_linux do
     depends_on "alsa-lib"
     depends_on "at-spi2-core"
     # TODO: depends_on "bluez"
-    depends_on "ffmpeg"
+    depends_on "ffmpeg@6"
     depends_on "fontconfig"
     depends_on "gstreamer"
     # TODO: depends_on "gypsy"
