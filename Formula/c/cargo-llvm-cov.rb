@@ -2,8 +2,8 @@ class CargoLlvmCov < Formula
   desc "Cargo subcommand to easily use LLVM source-based code coverage"
   homepage "https://github.com/taiki-e/cargo-llvm-cov"
   # cannot use github tarball due to https://github.com/taiki-e/cargo-llvm-cov/pull/152#issuecomment-1107055622
-  url "https://static.crates.io/crates/cargo-llvm-cov/cargo-llvm-cov-0.6.8.crate", using: :nounzip
-  sha256 "c1cb94e7d372c775b5376a75a41419fd9ecf729cc2ab6f0d99727e29a3d1ceb3"
+  url "https://static.crates.io/crates/cargo-llvm-cov/cargo-llvm-cov-0.6.9.crate", using: :nounzip
+  sha256 "137c054c19f1134aabe426018c3d8718ff5cfe679ba895f3f0a869eccf8b380b"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/taiki-e/cargo-llvm-cov.git", branch: "main"
 
@@ -19,15 +19,10 @@ class CargoLlvmCov < Formula
 
   depends_on "rust" => :build
   depends_on "rustup-init" => :test
-  depends_on "llvm"
 
   def install
     system "tar", "--strip-components", "1", "-xzvf", "cargo-llvm-cov-#{version}.crate" unless build.head?
-    system "cargo", "install", *std_cargo_args(root: libexec)
-    llvm_bin = Formula["llvm"].opt_bin
-    (bin/"cargo-llvm-cov").write_env_script libexec/"bin/cargo-llvm-cov",
-      LLVM_COV:      llvm_bin/"llvm-cov",
-      LLVM_PROFDATA: llvm_bin/"llvm-profdata"
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
@@ -38,7 +33,7 @@ class CargoLlvmCov < Formula
     system rustup_init, "-y", "--profile", "minimal", "--default-toolchain", "beta", "--no-modify-path"
     ENV.prepend_path "PATH", HOMEBREW_CACHE/"cargo_cache/bin"
 
-    system "cargo", "new", "hello_world", "--bin"
+    system "cargo", "new", "hello_world", "--lib"
     cd "hello_world" do
       system "cargo", "llvm-cov", "--html"
     end
