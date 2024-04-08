@@ -74,6 +74,12 @@ class OpensslAT3 < Formula
     args
   end
 
+  # Fixes CVE-2024-2511. Remove in next release.
+  patch do
+    url "https://github.com/openssl/openssl/commit/e9d7083e241670332e0443da0f0d4ffb52829f08.patch?full_index=1"
+    sha256 "cbec9e8d2ff52783239317962a997755353cd13c2516f848596afd4d52232321"
+  end
+
   def install
     if OS.linux?
       ENV.prepend_create_path "PERL5LIB", buildpath/"lib/perl5"
