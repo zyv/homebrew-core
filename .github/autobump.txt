@@ -339,6 +339,7 @@ cloudlist
 cloudprober
 clusterawsadm
 clusterctl
+clzip
 cmctl
 cmu-pocketsphinx
 cnats
