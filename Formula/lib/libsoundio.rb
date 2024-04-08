@@ -1,8 +1,8 @@
 class Libsoundio < Formula
   desc "Cross-platform audio input and output"
   homepage "http://libsound.io"
-  url "https://github.com/andrewrk/libsoundio/archive/refs/tags/2.0.0.tar.gz"
-  sha256 "67a8fc1c9bef2b3704381bfb3fb3ce99e3952bc4fea2817729a7180fddf4a71e"
+  url "https://github.com/andrewrk/libsoundio/archive/refs/tags/2.0.1-5.tar.gz"
+  sha256 "6454dcdabfea428443cf88402ca0c8b37187d710b12c2758ae55b2f2a416081e"
   license "MIT"
 
   bottle do
@@ -24,8 +24,9 @@ class Libsoundio < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args, "-DCMAKE_INSTALL_RPATH=#{rpath}"
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_INSTALL_RPATH=#{rpath}", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
