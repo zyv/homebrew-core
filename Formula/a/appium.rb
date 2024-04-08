@@ -3,8 +3,8 @@ require "language/node"
 class Appium < Formula
   desc "Automation for Apps"
   homepage "https://appium.io/"
-  url "https://registry.npmjs.org/appium/-/appium-2.5.1.tgz"
-  sha256 "b7b49d2c307b8b4db49f8a004d9b76a5441662b19b8cfb191f542f51ba65cf53"
+  url "https://registry.npmjs.org/appium/-/appium-2.5.2.tgz"
+  sha256 "d996714d39440a1cb15b98a266653bc42341643fa1acd9f9a4390e3a7fec1d0b"
   license "Apache-2.0"
   head "https://github.com/appium/appium.git", branch: "master"
 
@@ -27,16 +27,6 @@ class Appium < Formula
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec), "--chromedriver-skip-install"
     bin.install_symlink Dir["#{libexec}/bin/*"]
-
-    # Delete native binaries installed by npm, as we dont support `musl` for a `libc` implementation
-    if OS.linux?
-      node_modules = libexec/"lib/node_modules/appium/node_modules"
-      (node_modules/"@img/sharp-libvips-linuxmusl-x64/lib/libvips-cpp.so.42").unlink
-      (node_modules/"@img/sharp-linuxmusl-x64/lib/sharp-linuxmusl-x64.node").unlink
-    end
-
-    # Replace universal binaries with native slices
-    deuniversalize_machos
   end
 
   service do
