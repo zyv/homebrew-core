@@ -1794,6 +1794,7 @@ steamguard-cli
 steampipe
 stellar-core
 step
+stgit
 stockfish
 storj-uplink
 storm
