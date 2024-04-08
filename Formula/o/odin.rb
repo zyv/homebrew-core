@@ -2,9 +2,9 @@ class Odin < Formula
   desc "Programming language with focus on simplicity, performance and modern systems"
   homepage "https://odin-lang.org/"
   url "https://github.com/odin-lang/Odin.git",
-      tag:      "dev-2024-03",
-      revision: "4c35633e0147b481dd7b2352d6bdb603f78c6dc7"
-  version "2024-03"
+      tag:      "dev-2024-04",
+      revision: "a00d96c0de2c0b6e4df76e58c1c394373e173751"
+  version "2024-04"
   license "BSD-3-Clause"
   head "https://github.com/odin-lang/Odin.git", branch: "master"
 
@@ -49,6 +49,10 @@ class Odin < Formula
     end
 
     cd buildpath/"vendor/stb/src" do
+      system "make", "unix"
+    end
+
+    cd buildpath/"vendor/cgltf/src" do
       system "make", "unix"
     end
 
