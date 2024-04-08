@@ -6,13 +6,13 @@ class Pygobject3 < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma:   "92678e401e4fbae287fed9a2140187ba8773d839cfb3d1028f9257d7c86bb19a"
-    sha256 cellar: :any, arm64_ventura:  "b67c553fd0a26ada44536fb7c1d8ff9d8dc5047bc4ca0525a01c33a7d8d40476"
-    sha256 cellar: :any, arm64_monterey: "9025e185ca09e9aad8b1e47248b049920c045db4e2ed0511492bcde2b7462f70"
-    sha256 cellar: :any, sonoma:         "a62905ab0de96286b2772668ac97f364441d9441552ac0220f045fe9abd147be"
-    sha256 cellar: :any, ventura:        "60695f35a2be78b9ea472963de2bb7a803e1fd765eead878d9c50485a8617332"
-    sha256 cellar: :any, monterey:       "f5ad614dbab8682eb7505323df49d829aa7305b08fdea3745b1d0a936c5b521c"
-    sha256               x86_64_linux:   "bbc37eddc4009446caf9bf3be6b0b4a7ce3bef5a49cd0c26365812e3df9d22b5"
+    sha256 cellar: :any, arm64_sonoma:   "03a66429468af32cc5ca8458dbff8307cf77a6ccb66ce366be318abb71e6dcb7"
+    sha256 cellar: :any, arm64_ventura:  "91bddd1d00d2c8c7e50190714c21f35e98c37d5945f23d1bbe9e49035cad8fe5"
+    sha256 cellar: :any, arm64_monterey: "6aa5972afb3ac83c880a53bc48d582df92af536f9a616fe40648b3ecd66d2ad7"
+    sha256 cellar: :any, sonoma:         "8db6ac23e2664e8a55aa4ef0d360a2150ff7165e6a209fd39eca0898298fdd4c"
+    sha256 cellar: :any, ventura:        "7be31857d1eb553331fa404029bf6f510c0ea48b83395b268909a67b3eae20c7"
+    sha256 cellar: :any, monterey:       "73c9c2554d086c379912a18614f3870dcf9fbb120e3e63a0ee67736d59eb1eeb"
+    sha256               x86_64_linux:   "e619d0cec5375d3427d05b6cac359b993546ead0f78a3b2205f950d012645d7c"
   end
 
   depends_on "meson" => :build
