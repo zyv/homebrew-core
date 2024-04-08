@@ -1970,7 +1970,6 @@ vsh
 vte3
 vue-cli
 vultr
-vunnel
 vvenc
 wabt
 wakatime-cli
