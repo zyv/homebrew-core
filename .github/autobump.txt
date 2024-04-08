@@ -432,6 +432,7 @@ curl
 cvs-fast-export
 cweb
 cxxopts
+cyclonedx-gomod
 cyclonedx-python
 cycode
 cypher-shell
