@@ -3,8 +3,8 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/7d/8a/7cf651764e5083fbb60567c7bec2e088b32f6608897663bfc69103ce5cbc/pdm-2.13.2.tar.gz"
-  sha256 "e282bf1caf0a083fc0fb5e89ad6f79d7c579ff52c7bb58ee8587ea3d5bb9e14a"
+  url "https://files.pythonhosted.org/packages/ab/6c/a487b58ee76d2139dabe2832db1ce3eebba728808dae1b6dcff5b2669b34/pdm-2.13.3.tar.gz"
+  sha256 "92716a25ec2663b867efc9aa00010ace91a201d21548651f35c03cc419b266dd"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
@@ -102,8 +102,8 @@ class Pdm < Formula
   end
 
   resource "pbs-installer" do
-    url "https://files.pythonhosted.org/packages/88/9e/cad63ea87e9f144e24666cd348932fa368b6c6af16ec5dc1a3bdd8ebf9de/pbs_installer-2024.3.27.tar.gz"
-    sha256 "30a368d14710a5e38a57401006b4c1061f030ed06d42d69c8f5e8dd20ee25d58"
+    url "https://files.pythonhosted.org/packages/bc/51/1a535bbbb7d2fbd30853c62a26d5d66c2d77549b750d9f3fce4f238ae3e1/pbs_installer-2024.4.1.tar.gz"
+    sha256 "1f2aca82511fb9e1973b14708d7386780a8c56d111b680ae5786b3f430fa918a"
   end
 
   resource "platformdirs" do
@@ -162,8 +162,8 @@ class Pdm < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   resource "unearth" do
