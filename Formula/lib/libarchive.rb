@@ -1,10 +1,9 @@
 class Libarchive < Formula
   desc "Multi-format archive and compression library"
   homepage "https://www.libarchive.org"
-  url "https://www.libarchive.org/downloads/libarchive-3.7.2.tar.xz"
-  sha256 "04357661e6717b6941682cde02ad741ae4819c67a260593dfb2431861b251acb"
+  url "https://www.libarchive.org/downloads/libarchive-3.7.3.tar.xz"
+  sha256 "63e7a7174638fc7d6b79b4c8b0ad954e0f4f45abe7239c1ecb200232aa9a43d2"
   license "BSD-2-Clause"
-  revision 1
 
   livecheck do
     url :homepage
@@ -31,13 +30,6 @@ class Libarchive < Formula
   uses_from_macos "bzip2"
   uses_from_macos "expat"
   uses_from_macos "zlib"
-
-  # Safer handling of error reporting.
-  # Will be a part of the next release.
-  patch do
-    url "https://github.com/libarchive/libarchive/commit/6110e9c82d8ba830c3440f36b990483ceaaea52c.patch?full_index=1"
-    sha256 "34c11e1b9101919a94ffec7012a74190ee1ac05e23a68778083695fc2e66e502"
-  end
 
   def install
     system "./configure", *std_configure_args,
