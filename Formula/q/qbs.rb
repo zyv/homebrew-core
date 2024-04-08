@@ -1,8 +1,8 @@
 class Qbs < Formula
   desc "Build tool for developing projects across multiple platforms"
   homepage "https://wiki.qt.io/Qbs"
-  url "https://download.qt.io/official_releases/qbs/2.2.2/qbs-src-2.2.2.tar.gz"
-  sha256 "93e0938fbef2f60f175ae4070fbec5066744f61424ef80f9e65b54f1be8615b4"
+  url "https://download.qt.io/official_releases/qbs/2.3.0/qbs-src-2.3.0.tar.gz"
+  sha256 "e7fa44fb36d705ab40f34c24e71bb32beef1210eab2d50bf6f2318a195780826"
   license :cannot_represent
   head "https://code.qt.io/qbs/qbs.git", branch: "master"
 
@@ -26,13 +26,6 @@ class Qbs < Formula
   depends_on "qt"
 
   fails_with gcc: "5"
-
-  # Fix for Xcode 15.3, patch can be removed
-  # for 2.3 release: https://bugreports.qt.io/browse/QBS-1786
-  patch do
-    url "https://code.qt.io/cgit/qbs/qbs.git/patch/?id=5c88b6b11b762cf5861c9d1570df4f1f050c826e"
-    sha256 "bf49f5519122b37c1632ff465ea7df086cc618769e000811fb1f9002e77daed6"
-  end
 
   def install
     qt = Formula["qt"].opt_prefix
