@@ -415,6 +415,7 @@ cryptol
 cryptominisat
 crystal
 crystalline
+crytic-compile
 csfml
 csprecon
 css-crush
