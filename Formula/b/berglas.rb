@@ -1,8 +1,8 @@
 class Berglas < Formula
   desc "Tool for managing secrets on Google Cloud"
   homepage "https://github.com/GoogleCloudPlatform/berglas"
-  url "https://github.com/GoogleCloudPlatform/berglas/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "98e17818381e23f7ff3f8cdb61cd47a37e11efd55b5b4c476f958d6485a45ce2"
+  url "https://github.com/GoogleCloudPlatform/berglas/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "e00382df4ca08e777fb773c83bd67d54e54dc423a493f993a3f023d38f811aab"
   license "Apache-2.0"
 
   bottle do
@@ -20,7 +20,8 @@ class Berglas < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/GoogleCloudPlatform/berglas/internal/version.Version=#{version}
+      -X github.com/GoogleCloudPlatform/berglas/v2/internal/version.name=berglas
+      -X github.com/GoogleCloudPlatform/berglas/v2/internal/version.version=#{version}
     ]
     system "go", "build", *std_go_args(ldflags:)
 
