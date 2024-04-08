@@ -4,6 +4,7 @@ class Kew < Formula
   url "https://github.com/ravachol/kew/archive/refs/tags/v2.4.4.tar.gz"
   sha256 "7637d6d4d360aaba5b750175a5e8781a50cbe756589e0d302e4a5208d8c64ce1"
   license "GPL-2.0-only"
+  revision 1
   head "https://github.com/ravachol/kew.git", branch: "main"
 
   bottle do
