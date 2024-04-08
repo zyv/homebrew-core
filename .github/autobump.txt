@@ -1872,6 +1872,7 @@ tintin
 tippecanoe
 tmux-xpanes
 tmuxp
+tmx
 toast
 tomcat
 tomcat-native
