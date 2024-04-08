@@ -1651,6 +1651,7 @@ ruff-lsp
 rune
 rure
 rust-analyzer
+rustcat
 rustup-init
 rye
 s-search
