@@ -4,6 +4,7 @@ class Libgr < Formula
   url "https://github.com/sciapp/gr/archive/refs/tags/v0.73.3.tar.gz"
   sha256 "4c959abb90535c61ce79c9583b0317dbada5babb46c17d77414c8bd9d42ad8b4"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 arm64_sonoma:   "386825053225c0294a40da425e7cc56ba422c2b540e8e5be37a03f9cd24c12d8"
@@ -17,6 +18,7 @@ class Libgr < Formula
 
   depends_on "cmake" => :build
   depends_on "cairo"
+  depends_on "ffmpeg@6"
   depends_on "glfw"
   depends_on "libtiff"
   depends_on "qhull"
