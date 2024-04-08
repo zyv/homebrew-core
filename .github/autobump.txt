@@ -1992,6 +1992,7 @@ webp
 webpack
 websocat
 webtorrent-cli
+weechat
 werf
 wgcf
 whistle
