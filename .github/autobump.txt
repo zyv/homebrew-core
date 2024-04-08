@@ -1545,6 +1545,7 @@ py-spy
 py3cairo
 pycparser
 pyenv
+pyenv-virtualenv
 pyflow
 pygit2
 pygments
