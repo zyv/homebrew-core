@@ -1,8 +1,8 @@
 class Axel < Formula
   desc "Light UNIX download accelerator"
   homepage "https://github.com/axel-download-accelerator/axel"
-  url "https://github.com/axel-download-accelerator/axel/releases/download/v2.17.13/axel-2.17.13.tar.xz"
-  sha256 "6af9c0238ca4fb850baa17878de0361868e3ff6d9302298d83c6d26931c28723"
+  url "https://github.com/axel-download-accelerator/axel/releases/download/v2.17.14/axel-2.17.14.tar.xz"
+  sha256 "938ee7c8c478bf6fcc82359bbf9576f298033e8b13908e53e3ea9c45c1443693"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
 
   bottle do
