@@ -1798,6 +1798,7 @@ stgit
 stockfish
 storj-uplink
 storm
+stow
 strace
 streamlink
 stress-ng
