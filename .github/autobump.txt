@@ -152,6 +152,7 @@ base16384
 bash_unit
 bash-language-server
 bashunit
+basti
 bat
 bat-extras
 batik
