@@ -8,14 +8,13 @@ class AnsibleLint < Formula
   license all_of: ["MIT", "GPL-3.0-or-later"]
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "8b7708fa94915e493ae11dee6776771958bf3a4b9a65b94b0617c679f908822f"
-    sha256 cellar: :any,                 arm64_ventura:  "dbd62c59eaec73e1235f7e394fcd18b8166fdd65c7271613b896419d0c375f50"
-    sha256 cellar: :any,                 arm64_monterey: "e6a34b28c45120d91a7e40a5804cfd65bff8c46644df1945cbaba96c1e0574b3"
-    sha256 cellar: :any,                 sonoma:         "db8f331e32026b476e941899fdf35c15ac7f039c61a6147be513b7f6f84d3e74"
-    sha256 cellar: :any,                 ventura:        "ad88e1252eb8b83e8a660e8f4943b065e8903f93d5500f0e9e5c5034ff9b1b74"
-    sha256 cellar: :any,                 monterey:       "0a33c741f58e3b8e1be6d5e844f75da1c8496a3ac543dd9d9fe93c591b973efa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "66adb42e6736427dbb1ca68fe99ea8ff0b38558827c093301ef8f82b06920bea"
+    sha256 cellar: :any,                 arm64_sonoma:   "4c7f555078d048725e48483f3d7c8821a5cd16312963931256331f8f80953e5d"
+    sha256 cellar: :any,                 arm64_ventura:  "590ab537d8e5db3cceab23dd0477f77f6845951140dd051f0e3b8af1f52c3d5d"
+    sha256 cellar: :any,                 arm64_monterey: "62c268c189d8497a85178208c4b902ddb12c3e75013e27a672d28ce2435ed7ed"
+    sha256 cellar: :any,                 sonoma:         "4ae4a68a69e75df8cbca637526e32793b584c4b030b1a2aba59ad3c172ab45ce"
+    sha256 cellar: :any,                 ventura:        "3013843ed275f92cf864d6d9492a0ec99890d14fc4d9054c46d03ad3f9be2712"
+    sha256 cellar: :any,                 monterey:       "36ca8256adf7939c2efa3e6d2f74b7205a7909274c91a19af7cb1c81c6af087e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3f983e78cdb8e215d65d45604466cce18c6c6d366722464d53985a4112968f3e"
   end
 
   depends_on "pkg-config" => :build
