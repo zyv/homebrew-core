@@ -16,8 +16,12 @@ class IsaL < Formula
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "nasm" => :build
-  # https://github.com/intel/isa-l/pull/164
-  depends_on arch: :x86_64
+
+  # fix mach compilation
+  patch do
+    url "https://github.com/intel/isa-l/commit/f1b144bbab7cd1f603565b3b7f92bfb47b86e646.patch?full_index=1"
+    sha256 "41a300e3155a281dbf05aa79d54250b19eda035a8166f5368c18867467475c0b"
+  end
 
   def install
     system "./autogen.sh"
