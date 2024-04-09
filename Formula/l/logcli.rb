@@ -1,8 +1,8 @@
 class Logcli < Formula
   desc "Run LogQL queries against a Loki server"
   homepage "https://grafana.com/loki"
-  url "https://github.com/grafana/loki/archive/refs/tags/v2.9.6.tar.gz"
-  sha256 "d3642bb140dbaf766069a587ae6b966576304dfdda3a932bf6e9a79fc8146b17"
+  url "https://github.com/grafana/loki/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "ef44e222086dc2e580394c2a1148f7c0bc5c943066a0d18498f2bf6e64ef5a1b"
   license "AGPL-3.0-only"
   head "https://github.com/grafana/loki.git", branch: "main"
 
@@ -23,11 +23,6 @@ class Logcli < Formula
   depends_on "go" => :build
   depends_on "loki" => :test
 
-  resource "testdata" do
-    url "https://raw.githubusercontent.com/grafana/loki/f5fd029660034d31833ff1d2620bb82d1c1618af/cmd/loki/loki-local-config.yaml"
-    sha256 "27db56559262963688b6b1bf582c4dc76f82faf1fa5739dcf61a8a52425b7198"
-  end
-
   def install
     ldflags = %W[
       -s -w
@@ -41,9 +36,14 @@ class Logcli < Formula
   end
 
   test do
+    resource "homebrew-testdata" do
+      url "https://raw.githubusercontent.com/grafana/loki/b286075428a6cc7f58040bbdec6c81a97b626852/cmd/loki/loki-local-config.yaml"
+      sha256 "2526c97ba82915499d134d8fb6f3dad2828065531818ff94798b36cd9a59e8e2"
+    end
+
     port = free_port
 
-    testpath.install resource("testdata")
+    testpath.install resource("homebrew-testdata")
     inreplace "loki-local-config.yaml" do |s|
       s.gsub! "3100", port.to_s
       s.gsub! "/tmp", testpath
