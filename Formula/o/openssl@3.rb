@@ -1,10 +1,10 @@
 class OpensslAT3 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl.org/"
-  url "https://github.com/openssl/openssl/releases/download/openssl-3.2.1/openssl-3.2.1.tar.gz"
-  mirror "https://www.openssl.org/source/openssl-3.2.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/openssl-3.2.1.tar.gz"
-  sha256 "83c7329fe52c850677d75e5d0b0ca245309b97e8ecbcfdc1dfdc4ab9fac35b39"
+  url "https://github.com/openssl/openssl/releases/download/openssl-3.3.0/openssl-3.3.0.tar.gz"
+  mirror "https://www.openssl.org/source/openssl-3.3.0.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/openssl-3.3.0.tar.gz"
+  sha256 "53e66b043322a606abf0087e7699a0e033a37fa13feb9742df35c3a33b18fb02"
   license "Apache-2.0"
 
   livecheck do
@@ -69,12 +69,6 @@ class OpensslAT3 < Formula
       args += (ENV.ldflags || "").split
     end
     args
-  end
-
-  # Fixes CVE-2024-2511. Remove in next release.
-  patch do
-    url "https://github.com/openssl/openssl/commit/e9d7083e241670332e0443da0f0d4ffb52829f08.patch?full_index=1"
-    sha256 "cbec9e8d2ff52783239317962a997755353cd13c2516f848596afd4d52232321"
   end
 
   def install
