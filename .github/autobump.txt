@@ -2060,6 +2060,7 @@ youtubedr
 yq
 yt-dlp
 yubico-piv-tool
+yyjson
 z3
 zabbix
 zbctl
