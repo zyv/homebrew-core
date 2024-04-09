@@ -1,8 +1,8 @@
 class Feishu2md < Formula
   desc "Convert feishu/larksuite documents to markdown"
   homepage "https://github.com/Wsine/feishu2md"
-  url "https://github.com/Wsine/feishu2md/archive/refs/tags/v2.1.1.tar.gz"
-  sha256 "79fe0bc0839f2560d6191e434f630e073d9f7d0dc2d685463eb6a71bd1095aec"
+  url "https://github.com/Wsine/feishu2md/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "45f9cce470c591c59e933bb9db7227c41f13d86943ac9aa9f4761ad7fcb01adb"
   license "MIT"
   head "https://github.com/Wsine/feishu2md.git", branch: "main"
 
