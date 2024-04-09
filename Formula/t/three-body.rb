@@ -1,8 +1,8 @@
 class ThreeBody < Formula
   desc "三体编程语言 Three Body Language written in Rust"
   homepage "https://github.com/rustq/3body-lang"
-  url "https://github.com/rustq/3body-lang/archive/refs/tags/0.4.5.tar.gz"
-  sha256 "1e1a60f3e4320fd16f34deb53316039bc7cb17072523f34d969d6db8d668baa7"
+  url "https://github.com/rustq/3body-lang/archive/refs/tags/0.6.0.tar.gz"
+  sha256 "0101dddb34244dd7e433d64ae1ca6e87a76116b5509f2b3336d5cf405961617b"
   license "MIT"
   head "https://github.com/rustq/3body-lang.git", branch: "main"
 
@@ -45,5 +45,6 @@ class ThreeBody < Formula
       撞()'").strip
     assert_equal "\"半人马星系\"", shell_output("#{bin}/3body -c '给 三体世界坐标 以 \"半人马星系\"; 广播(三体世界坐标);'").strip
     assert_equal "", shell_output("#{bin}/3body -c '冬眠(1000); 二向箔清理(); 毁灭();'").strip
+    assert_equal "[builtin function]", shell_output("#{bin}/3body -c '智子工程'").strip
   end
 end
