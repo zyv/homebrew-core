@@ -1,8 +1,8 @@
 class Sngrep < Formula
   desc "Command-line tool for displaying SIP calls message flows"
   homepage "https://github.com/irontec/sngrep"
-  url "https://github.com/irontec/sngrep/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "045189f411cffba5083ad917f77fb5c717470b7d4f8f2604880a8ef68aa656b5"
+  url "https://github.com/irontec/sngrep/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "678875d44c6fdacb533f2d9e1b8db33ee8252723bb95653368fd43fae58969fe"
   license "GPL-3.0-or-later" => { with: "openvpn-openssl-exception" }
 
   bottle do
