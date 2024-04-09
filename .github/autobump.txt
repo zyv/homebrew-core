@@ -690,6 +690,7 @@ flowpipe
 fluent-bit
 fluid-synth
 flume
+flyctl
 flyscrape
 flyway
 fmt
