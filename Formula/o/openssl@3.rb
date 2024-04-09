@@ -1,12 +1,9 @@
 class OpensslAT3 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl.org/"
-  url "https://www.openssl.org/source/openssl-3.2.1.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-3.2.1.tar.gz"
-  mirror "https://www.openssl.org/source/old/3.2/openssl-3.2.1.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/old/3.2/openssl-3.2.1.tar.gz"
-  mirror "http://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-3.2.1.tar.gz"
-  mirror "http://www.mirrorservice.org/sites/ftp.openssl.org/source/old/3.2/openssl-3.2.1.tar.gz"
+  url "https://github.com/openssl/openssl/releases/download/openssl-3.2.1/openssl-3.2.1.tar.gz"
+  mirror "https://www.openssl.org/source/openssl-3.2.1.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/openssl-3.2.1.tar.gz"
   sha256 "83c7329fe52c850677d75e5d0b0ca245309b97e8ecbcfdc1dfdc4ab9fac35b39"
   license "Apache-2.0"
 
@@ -36,9 +33,9 @@ class OpensslAT3 < Formula
     end
 
     resource "Test::More" do
-      url "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302196.tar.gz"
-      mirror "http://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302196.tar.gz"
-      sha256 "020e71da0a479b2d2546304ce6bd23fb9dd428df7d4e161d19612fc1f406fd9f"
+      url "https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302198.tar.gz"
+      mirror "http://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302198.tar.gz"
+      sha256 "1dc07bcffd23e49983433c948de3e3f377e6e849ad7fe3432c717fa782024faa"
     end
 
     resource "ExtUtils::MakeMaker" do
