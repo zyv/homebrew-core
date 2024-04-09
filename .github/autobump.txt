@@ -931,6 +931,7 @@ imapsync
 imath
 imgproxy
 immortal
+imposm3
 influxdb
 influxdb-cli
 influxdb@1
