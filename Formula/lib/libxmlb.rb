@@ -3,8 +3,8 @@ class Libxmlb < Formula
 
   desc "Library for querying compressed XML metadata"
   homepage "https://github.com/hughsie/libxmlb"
-  url "https://github.com/hughsie/libxmlb/releases/download/0.3.17/libxmlb-0.3.17.tar.xz"
-  sha256 "bdaf38779646e436cba73caf2bdc1ea07226e6ce418a01800595cd4702cc3caa"
+  url "https://github.com/hughsie/libxmlb/releases/download/0.3.18/libxmlb-0.3.18.tar.xz"
+  sha256 "552131b3f58520478683ac75fa08fd95cf58db5aa7dac332144bcee5e7780b4f"
   license "LGPL-2.1-or-later"
   head "https://github.com/hughsie/libxmlb.git", branch: "main"
 
