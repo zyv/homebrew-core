@@ -1152,6 +1152,7 @@ libxext
 libxkbfile
 libxlsxwriter
 libxmlb
+libxmlsec1
 libxmu
 libxvmc
 libzim
