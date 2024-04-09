@@ -520,6 +520,7 @@ docker-squash
 dockviz
 doctest
 doctl
+docutils
 docuum
 doggo
 dolphie

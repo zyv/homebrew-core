@@ -3,10 +3,9 @@ class Docutils < Formula
 
   desc "Text processing system for reStructuredText"
   homepage "https://docutils.sourceforge.io"
-  url "https://files.pythonhosted.org/packages/1f/53/a5da4f2c5739cf66290fac1431ee52aff6851c7c8ffd8264f13affd7bcdd/docutils-0.20.1.tar.gz"
-  sha256 "f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b"
+  url "https://files.pythonhosted.org/packages/0b/06/fc42ca93a1eea8f881e904fd6d9137bd31ce7407afae603aa478f9c0c235/docutils-0.21.tar.gz"
+  sha256 "5d8f180bd488c582c7738061c99e8001bf02765827a0d98ccd5e813f11769fd5"
   license all_of: [:public_domain, "BSD-2-Clause", "GPL-3.0-or-later", "Python-2.0"]
-  revision 1
 
   bottle do
     rebuild 2
@@ -29,10 +28,24 @@ class Docutils < Formula
   end
 
   test do
-    cp prefix/"README.txt", testpath
+    (testpath/"README.txt").write <<~EOS
+      .. include:: docs/header0.txt
+
+      =========================
+      README: Docutils
+      =========================
+
+      :Author: David Goodger
+      :Contact: goodger@python.org
+      :Date: $Date: 2023-05-09 20:32:19 +0200 (Di, 09. Mai 2023) $
+      :Web site: https://docutils.sourceforge.io/
+      :Copyright: This document has been placed in the public domain.
+
+      .. contents::
+    EOS
+
     mkdir_p testpath/"docs"
     touch testpath/"docs"/"header0.txt"
-    system bin/"rst2man.py", testpath/"README.txt"
     system bin/"rst2man", testpath/"README.txt"
   end
 end
