@@ -1161,6 +1161,7 @@ linux-headers@5.15
 liqoctl
 liquibase
 lit
+literate-git
 little-cms2
 livekit
 llm
