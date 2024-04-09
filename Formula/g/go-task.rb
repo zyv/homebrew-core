@@ -1,8 +1,8 @@
 class GoTask < Formula
   desc "Task is a task runner/build tool that aims to be simpler and easier to use"
   homepage "https://taskfile.dev/"
-  url "https://github.com/go-task/task/archive/refs/tags/v3.35.1.tar.gz"
-  sha256 "09fec550ce19f531ebb94379cea747efff24f6da2465e5a60c53cf8cbae0d9ba"
+  url "https://github.com/go-task/task/archive/refs/tags/v3.36.0.tar.gz"
+  sha256 "ba286bf87a82a284ccd8a76a828fa07269bdde377a4f6770bb5f2bea35bd8522"
   license "MIT"
   head "https://github.com/go-task/task.git", branch: "main"
 
