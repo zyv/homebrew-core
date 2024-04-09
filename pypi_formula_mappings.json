@@ -428,6 +428,9 @@
     "exclude_packages": ["cryptography"],
     "extra_packages": ["wheel"]
   },
+  "manim": {
+    "exclude_packages": ["numpy"]
+  },
   "mapproxy": {
     "exclude_packages": ["certifi", "pillow"],
     "extra_packages": ["pyproj", "setuptools"]

@@ -3,8 +3,8 @@ class Manim < Formula
 
   desc "Animation engine for explanatory math videos"
   homepage "https://www.manim.community"
-  url "https://files.pythonhosted.org/packages/06/62/7802597b93048a8ab543d835338739ce8f4e96e0410b63e29c86deb7cceb/manim-0.18.0.tar.gz"
-  sha256 "56788066bc1aec2471a988c91e337194fd38d1035ed1b4d10838bfe64bd26af8"
+  url "https://files.pythonhosted.org/packages/d3/83/b504dbacb67c665e5b81f5aaa1b23fe058b8dac06c966b5c25949959a2a3/manim-0.18.0.post0.tar.gz"
+  sha256 "93d36a7a26cd8083969d22ebbc1c174a80cd193562d116a6dbf35622439e0035"
   license "MIT"
   head "https://github.com/manimCommunity/manim.git", branch: "main"
 
@@ -64,8 +64,8 @@ class Manim < Formula
   end
 
   resource "cython" do
-    url "https://files.pythonhosted.org/packages/0e/17/c5b026cea7a634ee3b8950a7be16aaa49deeb3b9824ba5e81c13ac26f3c4/Cython-3.0.9.tar.gz"
-    sha256 "a2d354f059d1f055d34cfaa62c5b68bc78ac2ceab6407148d47fb508cf3ba4f3"
+    url "https://files.pythonhosted.org/packages/d5/f7/2fdd9205a2eedee7d9b0abbf15944a1151eb943001dbdc5233b1d1cfc34e/Cython-3.0.10.tar.gz"
+    sha256 "dcc96739331fb854dcf503f94607576cfe8488066c61ca50dfd55836f132de99"
   end
 
   resource "decorator" do
@@ -144,8 +144,8 @@ class Manim < Formula
   end
 
   resource "pyglet" do
-    url "https://files.pythonhosted.org/packages/f5/fa/9b701ace19219b38dca47926a500dafa9f37cf33c7935e699c9218b35062/pyglet-2.0.14.tar.gz"
-    sha256 "9b3bef1532395d88600db115b2eea8c345d2851be48ad8ac64b152b16f089777"
+    url "https://files.pythonhosted.org/packages/7e/21/a514b8358e5f3c49e54edd055637ecb8e6f52af2d9c25bd0d9435c9fa6e0/pyglet-2.1.dev1.tar.gz"
+    sha256 "a94867222e656a097f26a713195a05bf471112e09bf46c4d9030555fc6a56fc4"
   end
 
   resource "pygments" do
@@ -179,8 +179,8 @@ class Manim < Formula
   end
 
   resource "scipy" do
-    url "https://files.pythonhosted.org/packages/30/85/cdbf2c3c460fe5aae812917866392068a88d02f07de0fe31ce738734c477/scipy-1.12.0.tar.gz"
-    sha256 "4bf5abab8a36d20193c698b0f1fc282c1d083c94723902c447e5d2f1780936a3"
+    url "https://files.pythonhosted.org/packages/fb/a3/328965862f41ba67d27ddd26205962007ec87d99eec6d364a29bf00ac093/scipy-1.13.0.tar.gz"
+    sha256 "58569af537ea29d3f78e5abd18398459f195546bb3be23d16677fb26616cc11e"
   end
 
   resource "screeninfo" do
@@ -209,8 +209,8 @@ class Manim < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   resource "urllib3" do
