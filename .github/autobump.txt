@@ -744,6 +744,7 @@ gdu
 geeqie
 gegl
 genact
+geoipupdate
 geoserver
 geph4
 getmail6
