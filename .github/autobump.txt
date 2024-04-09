@@ -1966,6 +1966,7 @@ verapdf
 vercel-cli
 vet
 vfox
+vgmstream
 vgrep
 victoriametrics
 video-compare
