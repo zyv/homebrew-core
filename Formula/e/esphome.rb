@@ -6,6 +6,7 @@ class Esphome < Formula
   url "https://files.pythonhosted.org/packages/9b/e5/c09237cf6f2da94181102324fc255dff654414bc3c18e54145bb60d28697/esphome-2024.3.2.tar.gz"
   sha256 "75f7bd3b963deedfe1341694d15caedac2a95ad39bab8bad366c7c82f254ce7a"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "b8bd7b54ee08c408a52b2f5ae8075eb3baa1a861d7c952a11cf5acfc81f0be49"
@@ -90,8 +91,8 @@ class Esphome < Formula
   end
 
   resource "ecdsa" do
-    url "https://files.pythonhosted.org/packages/ff/7b/ba6547a76c468a0d22de93e89ae60d9561ec911f59532907e72b0d8bc0f1/ecdsa-0.18.0.tar.gz"
-    sha256 "190348041559e21b22a1d65cee485282ca11a6f81d503fddb84d5017e9ed1e49"
+    url "https://files.pythonhosted.org/packages/5e/d0/ec8ac1de7accdcf18cfe468653ef00afd2f609faf67c423efbd02491051b/ecdsa-0.19.0.tar.gz"
+    sha256 "60eaad1199659900dd0af521ed462b793bbdf867432b3948e87416ae4caf6bf8"
   end
 
   resource "esphome-dashboard" do
