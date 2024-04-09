@@ -1864,6 +1864,7 @@ terramate
 terrascan
 tesseract
 testkube
+tetra
 texmath
 tfautomv
 tfsec
