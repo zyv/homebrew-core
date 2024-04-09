@@ -1563,6 +1563,7 @@ pygments
 pygobject3
 pyinstaller
 pylint
+pymol
 pyoxidizer
 pyqt-builder
 pyright
