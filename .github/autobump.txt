@@ -1748,6 +1748,7 @@ sng
 sngrep
 sniffer
 sniffglue
+sniffnet
 snort
 snowflake
 snyk-cli
