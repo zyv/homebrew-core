@@ -662,6 +662,7 @@ fd
 fdroidcl
 fdroidserver
 feh
+feishu2md
 felinks
 fend
 fennel
