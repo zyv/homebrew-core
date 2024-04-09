@@ -5,6 +5,16 @@ class Liblc3 < Formula
   sha256 "958725e277685f9506d30ea341c38a03b245c3b33852cd074da6c8857525e808"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "6d45a4d76d487a56ba784b7ff8f0180cb001186bee0c404bb2fb7b46f120275c"
+    sha256 cellar: :any,                 arm64_ventura:  "a2198a75a7568fee969e52f53a166a874cde30d15f556e5d1fcd1a2a7b6e7827"
+    sha256 cellar: :any,                 arm64_monterey: "6d74073bb134615ed49e44c1652ca64af21260ff13dd34c5cf6c688e502eeb35"
+    sha256 cellar: :any,                 sonoma:         "ed537cda08e81cb4d852e04f3793d32d240e66b1b9439ed4f2a0a7535bdf6343"
+    sha256 cellar: :any,                 ventura:        "49f51813477d4ee1bac7b04b3139279cc666baef5f053e143e7c6245d57ae324"
+    sha256 cellar: :any,                 monterey:       "07c8767c1298cf3827fa2fe9757a1d77fd06fc21dd587801afb8b2200ab85657"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a0a63d27a506e4fbae64b4d52f232a8fc2646634a0f79c3dc0ae2f0f683e650"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
 
