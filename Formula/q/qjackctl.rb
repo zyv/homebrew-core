@@ -1,8 +1,8 @@
 class Qjackctl < Formula
   desc "Simple Qt application to control the JACK sound server daemon"
   homepage "https://qjackctl.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.13/qjackctl-0.9.13.tar.gz"
-  sha256 "ebbc3774b8c2db6ded3c5553939c65e095ce796750d53ee1a299c113a33564b3"
+  url "https://downloads.sourceforge.net/project/qjackctl/qjackctl/0.9.90/qjackctl-0.9.90.tar.gz"
+  sha256 "e537f496a9c67aef94c48fd3c607d73977dfbb090bf44f41529de78e0ef5117d"
   license "GPL-2.0-or-later"
   head "https://git.code.sf.net/p/qjackctl/code.git", branch: "master"
 
