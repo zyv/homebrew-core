@@ -3,8 +3,8 @@ class Sqlfluff < Formula
 
   desc "SQL linter and auto-formatter for Humans"
   homepage "https://docs.sqlfluff.com/"
-  url "https://files.pythonhosted.org/packages/a3/de/7d3bbd416e50036ef107595c9efba8f58f34977a0861877b75068c6988e1/sqlfluff-3.0.3.tar.gz"
-  sha256 "46b5aa5326560eba078ae39b232bb19b8e5abdabeaa18ed8556f18b558330d71"
+  url "https://files.pythonhosted.org/packages/47/39/280985144aa065b8c37eddcb8a6d627386cd40024e03ed2478a3ad5525fa/sqlfluff-3.0.4.tar.gz"
+  sha256 "938258c3dc27a09b5ea7b87f2580912fbfdef938e4ad9e0484ee67d8c1d1bff8"
   license "MIT"
 
   bottle do
@@ -106,8 +106,8 @@ class Sqlfluff < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   def install
