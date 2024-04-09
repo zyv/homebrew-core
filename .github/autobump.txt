@@ -1382,6 +1382,7 @@ opa
 open-adventure
 open-image-denoise
 open-mpi
+open62541
 opendetex
 opendht
 openexr
