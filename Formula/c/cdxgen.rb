@@ -8,13 +8,13 @@ class Cdxgen < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "140a4cba195ea2024809677c2f0a7250df8e1f17c344ff757cd10b351c6bd808"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2e2e008e9819761a78c26a816cf276a4faf9808a40ca8254157566a6e5458bcb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "00b683ebd782497e2bc03831a591583e7a3bd29c4675731e7aebf464add3a254"
-    sha256 cellar: :any_skip_relocation, sonoma:         "c2a0ddd8a3765cb49ff895b5b299ec9fa87f01187506ad6482a4d96656ee2301"
-    sha256 cellar: :any_skip_relocation, ventura:        "bb80ceaa182dd287cd43d684320fd71bb668103b7ab209f1e3da31943caf1c31"
-    sha256 cellar: :any_skip_relocation, monterey:       "629d5fab4f59ca750ce8ed79d78804fc18b261a74d58f56475ed29c96f391b9d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2ba6c7d7cadcc05f69eb1da07fd086243bc5add64da2979cbc55bd8340e4a98"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e848bedc15d9ae1d7e1560cfe3a82cb72bb381201a97666d6bd1684c9197c88e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e4fada54fa12e0c5c23cc69d90a47992ca012cce47747cdbf62838139f8d085f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "49c4a38612c0b7fdbd1885c28ce16555233797a5d5bc36e29b6163203766b9a4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "e1b4fc46346d4595084505bc49523d84e55025002101dcfa7186fbfc64069b84"
+    sha256 cellar: :any_skip_relocation, ventura:        "682786db56f0f19d5d015936a8dea4b012cb00b374812c29d687142cfa47a7d0"
+    sha256 cellar: :any_skip_relocation, monterey:       "512a4cc57f7e13bc8f8b2349a3e857b2b6f50d19d0b149ef6deec2fa3fa0fc00"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ac52619fe5a4aace0d111ec3e1116c6d33b26b58de443bf29a92f415cf8056ed"
   end
 
   depends_on "node"
