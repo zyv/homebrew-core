@@ -9,14 +9,13 @@ class KeepkeyAgent < Formula
   revision 8
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d36b22419357d30d48aceb26fa8bce10517985f20080c2adb560e18609499ece"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ed9fa00e85e9d137a0928301d7863246dcaeb02d619938cbfc97534f37149154"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e9b652b903065baca32d01cb77f6bfacad17a5023d800a49054f0ee0efb3d6f0"
-    sha256 cellar: :any_skip_relocation, sonoma:         "915b9fdd224cadd4f008f0164875b23fe62f367289f682755d35ceda62f4b2e0"
-    sha256 cellar: :any_skip_relocation, ventura:        "77a3cb350acd77ebf524c5ce1eadc865734d80fac75d25dc1589da30895bdb8c"
-    sha256 cellar: :any_skip_relocation, monterey:       "74e3dd6941cb4abe9ed551699143ab2098b20521df7fa898455d2026f952daf8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "54d01a0cea61c9546517ffcea9a32b9bb43254ab2189c1767ffbadd00bf411f9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "92931b4dd55f591f1aa1555e6d2385c9216c67bccdfac519c7d871b6abd9e931"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "45721329733cabb8fb60bf1bbd8c57f3d41ab3690517914e29fcb11e20609ad4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "cc5256e11632f6398fa1e84affb5947adcc3aff627d7f23bcda175b9b120dade"
+    sha256 cellar: :any_skip_relocation, sonoma:         "09d44c2501298a21078ff77731689585a7df852f860fa7db0ada5a4b78814a18"
+    sha256 cellar: :any_skip_relocation, ventura:        "4d7ade556d31d47adfcb08c5cd3595170c3fd8bd587620a6799c003987659591"
+    sha256 cellar: :any_skip_relocation, monterey:       "0931fb228768e22b2a78e97a9716b4b016c6f46585c75bfc92d40d2e1a56a415"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b9024586309813bd02ba23a1d0c558160f96e07fd40418df63ebdd0eb8e08d4"
   end
 
   depends_on "cryptography"
