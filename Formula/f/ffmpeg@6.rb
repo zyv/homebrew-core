@@ -12,6 +12,16 @@ class FfmpegAT6 < Formula
     regex(/href=.*?ffmpeg[._-]v?(6(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 arm64_sonoma:   "ea71adfd8d57a15f5fdb233f175ca267aea712e88dca203b76e0dabefe13c145"
+    sha256 arm64_ventura:  "fac0ab5aeddc403c66793afecf6efe5ba5e239c4149e70216d8b80a7304b2ade"
+    sha256 arm64_monterey: "e45ea1185d556d5e6a920fa6cfd1b4bdef331ab0def0890ecb4eb9012b383c23"
+    sha256 sonoma:         "5198ccccdf143f1c0d5967ad60e296f939c98950d3d0c0a21952241536d24404"
+    sha256 ventura:        "36a87232b91644a4967e665dac2956ab2e7e16751dce4054ed961beff8c88475"
+    sha256 monterey:       "f2878335cae6d747c5cdda11a79a2193dd5bd9418354df4fed3e99a22d7b7cc8"
+    sha256 x86_64_linux:   "7457a91a2259989764c3b253c5b1ef02dc6b98e49252d7479a8069673fa8a3b4"
+  end
+
   keg_only :versioned_formula
 
   depends_on "pkg-config" => :build
