@@ -1,8 +1,8 @@
 class ReFlex < Formula
   desc "Regex-centric, fast and flexible scanner generator for C++"
   homepage "https://www.genivia.com/doc/reflex/html"
-  url "https://github.com/Genivia/RE-flex/archive/refs/tags/v4.2.0.tar.gz"
-  sha256 "deb0fbfe89fb3f47c5934138537ab9ac4cb31d3c952ce7e8243d79f2067c5dd1"
+  url "https://github.com/Genivia/RE-flex/archive/refs/tags/v4.2.1.tar.gz"
+  sha256 "98912b68927bf1790a3ff0ba86e62ea20c5be5fe646f18078cca9d7959e03a24"
   license "BSD-3-Clause"
 
   bottle do
