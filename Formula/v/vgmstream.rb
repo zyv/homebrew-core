@@ -16,13 +16,13 @@ class Vgmstream < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "c9d866183fd14d8cc60672a66bc2951e5ba6fef088f0c1f18364b43e37dd3e82"
-    sha256 cellar: :any,                 arm64_ventura:  "a456abf3e5b6aed9c998b55e80741930cf34905cfd7bbb706cd7c0d35eef8fbb"
-    sha256 cellar: :any,                 arm64_monterey: "f34ae184eaf0fddec4322078b53b9f177fa95ce7e1e38bb2679bdec508ebf489"
-    sha256 cellar: :any,                 sonoma:         "68c38a3569afe428b6c94184537a876c5fe8c4e76c77cba24b1e6ef41a3b7ece"
-    sha256 cellar: :any,                 ventura:        "53197ef2b9b776f81a735c199ecef7c5495fb97e2cd987aab7340a1659a4cb21"
-    sha256 cellar: :any,                 monterey:       "75d00ad77223cdb095f8e4e0052df23dce5579cbd02461f5c608431b74ac01b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9daa41b3c2e228c150a9873e737c8315bc7392dd9f5f945c0841634acd92d648"
+    sha256 cellar: :any,                 arm64_sonoma:   "7eb12c4a211d5ef8d6fed9103227341396a2f598cb58ce4f7165f4a8c0a2d501"
+    sha256 cellar: :any,                 arm64_ventura:  "68a003f21b58d8a7f6da0db64e8140ca5119231e9b70f4e45d034e1387cd7eb3"
+    sha256 cellar: :any,                 arm64_monterey: "a8132501a47104fba1897e0344c11976f56631ae5b09bef0112f386e73aac1a5"
+    sha256 cellar: :any,                 sonoma:         "48690edae6edab3d22db33fb9ff00ee185850a5f902d600d93e21b2a363613d9"
+    sha256 cellar: :any,                 ventura:        "9627aa32e5f63557251a4639c52d971e69cb19b403521f89f8f2017ddbf92d4a"
+    sha256 cellar: :any,                 monterey:       "a30147d3579923528c7a05fe596a281a12d61e354bb3247ece4edff24e9e08cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6ef5dff01b656ce05e72b58b22c4951f43e09ae2f33d5c53249ee05104bd67a"
   end
 
   depends_on "autoconf" => :build
