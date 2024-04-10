@@ -1,8 +1,8 @@
 class Cdo < Formula
   desc "Climate Data Operators"
   homepage "https://code.mpimet.mpg.de/projects/cdo"
-  url "https://code.mpimet.mpg.de/attachments/download/29019/cdo-2.3.0.tar.gz"
-  sha256 "10c878227baf718a6917837527d4426c2d0022cfac4457c65155b9c57f091f6b"
+  url "https://code.mpimet.mpg.de/attachments/download/29313/cdo-2.4.0.tar.gz"
+  sha256 "a4790fb8cc07f353b11f9bbe49218b8e4be8e5ae56aade8420bad390510b4d2c"
   license "GPL-2.0-only"
 
   livecheck do
@@ -27,17 +27,27 @@ class Cdo < Formula
   depends_on "proj"
   uses_from_macos "python" => :build
 
+  on_macos do
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1403
+  end
+
+  fails_with :clang do
+    build 1403
+    cause "Requires C++20 support"
+  end
+
   def install
+    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1403
+
     args = %W[
-      --disable-dependency-tracking
-      --prefix=#{prefix}
+      --disable-openmp
       --with-eccodes=#{Formula["eccodes"].opt_prefix}
       --with-netcdf=#{Formula["netcdf"].opt_prefix}
       --with-hdf5=#{Formula["hdf5"].opt_prefix}
       --with-szlib=#{Formula["libaec"].opt_prefix}
     ]
 
-    system "./configure", *args
+    system "./configure", *args, *std_configure_args
     system "make", "install"
   end
 
