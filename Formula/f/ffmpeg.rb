@@ -68,12 +68,6 @@ class Ffmpeg < Formula
   uses_from_macos "libxml2"
   uses_from_macos "zlib"
 
-  on_macos do
-    # FIXME: Avoid Qt opportunistically linking with FFmpeg.
-    # TODO: Remove ASAP after merge.
-    conflicts_with "qt", because: "Qt links opportunistically with FFmpeg"
-  end
-
   on_linux do
     depends_on "alsa-lib"
     depends_on "libxv"

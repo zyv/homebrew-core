@@ -87,10 +87,6 @@ class Qt < Formula
 
   on_macos do
     depends_on "molten-vk" => [:build, :test]
-
-    # FIXME: Avoid Qt opportunistically linking with FFmpeg.
-    # TODO: Remove ASAP after merge.
-    conflicts_with "ffmpeg", because: "Qt links opportunistically with FFmpeg"
   end
 
   on_linux do
