@@ -1313,6 +1313,7 @@ nasm
 nats-server
 nats-streaming-server
 navi
+ncnn
 nco
 ncspot
 ncview
