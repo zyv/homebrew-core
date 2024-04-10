@@ -4,6 +4,7 @@ class NodeAT16 < Formula
   url "https://nodejs.org/dist/v16.20.2/node-v16.20.2.tar.xz"
   sha256 "576f1a03c455e491a8d132b587eb6b3b84651fc8974bb3638433dd44d22c8f49"
   license "MIT"
+  revision 1
 
   bottle do
     rebuild 1
@@ -22,8 +23,7 @@ class NodeAT16 < Formula
   deprecate! date: "2023-11-02", because: :unsupported
 
   depends_on "pkg-config" => :build
-  depends_on "python-setuptools" => :build
-  depends_on "python@3.12" => :build
+  depends_on "python@3.11" => :build
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "icu4c"
@@ -31,8 +31,12 @@ class NodeAT16 < Formula
   depends_on "libuv"
   depends_on "openssl@3"
 
-  uses_from_macos "python", since: :catalina
   uses_from_macos "zlib"
+
+  # node-gyp bundled in npm does not support Python 3.12.
+  on_system :linux, macos: :mojave_or_older do
+    depends_on "python@3.11"
+  end
 
   fails_with :clang do
     build 1099
@@ -42,7 +46,12 @@ class NodeAT16 < Formula
   fails_with gcc: "5"
 
   def install
-    python3 = "python3.12"
+    # ../deps/v8/src/base/bit-field.h:43:29: error: integer value 7 is outside
+    # the valid range of values [0, 3] for this enumeration type
+    # [-Wenum-constexpr-conversion]
+    ENV.append_to_cflags "-Wno-enum-constexpr-conversion" if DevelopmentTools.clang_build_version >= 1500
+
+    python3 = "python3.11"
     # make sure subprocesses spawned by make are using our Python 3
     ENV["PYTHON"] = which(python3)
 
@@ -90,6 +99,9 @@ class NodeAT16 < Formula
     # make sure npm can find node
     ENV.prepend_path "PATH", opt_bin
     ENV.delete "NVM_NODEJS_ORG_MIRROR"
+    if OS.linux? || (OS.mac? && MacOS.version <= :mojave)
+      ENV.prepend_path "PATH", Formula["python@3.11"].opt_libexec/"bin"
+    end
     assert_equal which("node"), opt_bin/"node"
     assert_predicate bin/"npm", :exist?, "npm must exist"
     assert_predicate bin/"npm", :executable?, "npm must be executable"
