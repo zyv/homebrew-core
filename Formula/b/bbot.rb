@@ -3,10 +3,9 @@ class Bbot < Formula
 
   desc "OSINT automation tool"
   homepage "https://github.com/blacklanternsecurity/bbot"
-  url "https://files.pythonhosted.org/packages/45/9d/792ce23297690f988c3b3988791123b2865be96c65ecd58d9a722dae88f3/bbot-1.1.6.tar.gz"
-  sha256 "68a6e43746f1ce9ab16b4e122113524a7a516bbd2da33398c29168e9e05100f4"
+  url "https://files.pythonhosted.org/packages/b1/44/d4280e1f817b92c7d9be6f7a9dc05a61998bb782c73ff4dc7636400d5454/bbot-1.1.6.1.tar.gz"
+  sha256 "58aa92ce506a76b998badfed9a895c551c38ba3845284325ec15b4bd2a45a352"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "8f0a9df954aa50a67f981534aa6fb0d9194e96e191e190b2216701d220e31c56"
@@ -94,13 +93,13 @@ class Bbot < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/1f/53/a5da4f2c5739cf66290fac1431ee52aff6851c7c8ffd8264f13affd7bcdd/docutils-0.20.1.tar.gz"
-    sha256 "f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b"
+    url "https://files.pythonhosted.org/packages/67/9a/ff2ff8e922f3b97c4b4864ca6c78d76ca5969bd730560001167b7054ac48/docutils-0.21.post1.tar.gz"
+    sha256 "518e29081124e7d8159550958e6de240622562aa824f945f501ec3d3c5b67d19"
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/db/97/3f028f216da17ab0500550a6bb0f26bf39b07848348f63cce44b89829af9/filelock-3.13.3.tar.gz"
-    sha256 "a79895a25bbefdf55d1a2a0a80968f7dbb28edcd6d4234a0afb3f37ecde4b546"
+    url "https://files.pythonhosted.org/packages/38/ff/877f1dbe369a2b9920e2ada3c9ab81cf6fe8fa2dce45f40cad510ef2df62/filelock-3.13.4.tar.gz"
+    sha256 "d13f466618bfde72bd2c18255e269f72542c6e70e7bac83a0232d6b1cc5c8cf4"
   end
 
   resource "h11" do
@@ -109,8 +108,8 @@ class Bbot < Formula
   end
 
   resource "httpcore" do
-    url "https://files.pythonhosted.org/packages/03/9d/2055e6b65592d3a485a1141761ba7047674bbe085cebac0988b30e93c9e6/httpcore-1.0.4.tar.gz"
-    sha256 "cb2839ccfcba0d2d3c1131d3c3e26dfc327326fbe7a5dc0dbfe9f6c9151bb022"
+    url "https://files.pythonhosted.org/packages/17/b0/5e8b8674f8d203335a62fdfcfa0d11ebe09e23613c3391033cbba35f7926/httpcore-1.0.5.tar.gz"
+    sha256 "34a38e2f9291467ee3b44e89dd52615370e152954ba21721378a87b2960f7a61"
   end
 
   resource "httpx" do
@@ -254,8 +253,8 @@ class Bbot < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   resource "urllib3" do
@@ -283,6 +282,10 @@ class Bbot < Formula
     sha256 "10719660409bd1825507e04d2fa4848c10591a092613bcd66651c7e0774f5405"
   end
 
+  # avoid runtime version check, see discussion in https://github.com/mtkennerly/dunamai/issues/80
+  # upstream bug report, https://github.com/blacklanternsecurity/bbot/issues/1257
+  patch :DATA
+
   def install
     virtualenv_install_with_resources
   end
@@ -294,3 +297,17 @@ class Bbot < Formula
     assert_predicate testpath/".config/bbot/secrets.yml", :exist?
   end
 end
+
+__END__
+diff --git a/pyproject.toml b/pyproject.toml
+index 4fc9831..7b8212f 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -89,7 +89,7 @@ line-length = 119
+ extend-exclude = "(test_step_1/test_manager_*)"
+
+ [tool.poetry-dynamic-versioning]
+-enable = true
++enable = false
+ metadata = false
+ format-jinja = 'v1.1.6.1{% if branch == "dev" %}.{{ distance }}rc{% endif %}'
