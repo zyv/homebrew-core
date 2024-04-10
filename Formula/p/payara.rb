@@ -14,7 +14,7 @@ class Payara < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2bbf8054d3b6d7ac987e2f6392e0ea83f9e3bc2b1c8e3b4d6b009120fa6b86c4"
+    sha256 cellar: :any_skip_relocation, all: "890936c7b02e40f193d7b75793b56d5af1f776a1f4397cc7fb92210e0c3395f0"
   end
 
   depends_on :macos # The test fails on Linux.
