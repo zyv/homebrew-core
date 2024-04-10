@@ -8,13 +8,13 @@ class Httpyac < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1b970a97cf1bac971f924b23fe9ea411a07d44772d606a139aac7ed40e2171f9"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1b970a97cf1bac971f924b23fe9ea411a07d44772d606a139aac7ed40e2171f9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1b970a97cf1bac971f924b23fe9ea411a07d44772d606a139aac7ed40e2171f9"
-    sha256 cellar: :any_skip_relocation, sonoma:         "2bea264d481201034f54dcfb392c16397255bba76c179d63589803850c7ba974"
-    sha256 cellar: :any_skip_relocation, ventura:        "2bea264d481201034f54dcfb392c16397255bba76c179d63589803850c7ba974"
-    sha256 cellar: :any_skip_relocation, monterey:       "2bea264d481201034f54dcfb392c16397255bba76c179d63589803850c7ba974"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f0e62274e2de525d660e97e17a08ea4c1e089773def3d3b209d0b6042110fc6c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2bb820bec09c614d7d5cf687ab1cf0b7ddf3d0f694e528ff44496955bc6326a8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2bb820bec09c614d7d5cf687ab1cf0b7ddf3d0f694e528ff44496955bc6326a8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2bb820bec09c614d7d5cf687ab1cf0b7ddf3d0f694e528ff44496955bc6326a8"
+    sha256 cellar: :any_skip_relocation, sonoma:         "92a873ea80a39f7b8c6c5165ff0ee6b4892e0c8daf8698e5480a5d0b64852d43"
+    sha256 cellar: :any_skip_relocation, ventura:        "92a873ea80a39f7b8c6c5165ff0ee6b4892e0c8daf8698e5480a5d0b64852d43"
+    sha256 cellar: :any_skip_relocation, monterey:       "92a873ea80a39f7b8c6c5165ff0ee6b4892e0c8daf8698e5480a5d0b64852d43"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7cc59c57e409562dae6d833c1e38556e6c1f97971ea8ec2209c9831181ea93c"
   end
 
   depends_on "node"
