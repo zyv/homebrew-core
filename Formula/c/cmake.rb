@@ -38,6 +38,10 @@ class Cmake < Formula
   # CMake is built with Qt support and Qt is built with MySQL support as MySQL uses CMake.
   # For the GUI application please instead use `brew install --cask cmake`.
 
+  # Upstream patch to fix regression in LLVM build. Remove in next version.
+  # https://gitlab.kitware.com/cmake/cmake/-/issues/25883
+  patch :DATA
+
   def install
     args = %W[
       --prefix=#{prefix}
@@ -79,3 +83,39 @@ class Cmake < Formula
     refute_path_exists man
   end
 end
+__END__
+diff --git a/Source/cmGlobalGenerator.cxx b/Source/cmGlobalGenerator.cxx
+index 185bff985fde40fe8e1bd08573b84e76c24f4a1a..1606eec57bb612c5db30fa284777b52ac948e9be 100644
+--- a/Source/cmGlobalGenerator.cxx
++++ b/Source/cmGlobalGenerator.cxx
+@@ -28,6 +28,7 @@
+ #include "cm_codecvt_Encoding.hxx"
+ 
+ #include "cmAlgorithms.h"
++#include "cmCMakePath.h"
+ #include "cmCPackPropertiesGenerator.h"
+ #include "cmComputeTargetDepends.h"
+ #include "cmCryptoHash.h"
+@@ -270,17 +271,14 @@ void cmGlobalGenerator::ResolveLanguageCompiler(const std::string& lang,
+ 
+   std::string changeVars;
+   if (cname && !optional) {
+-    std::string cnameString;
++    cmCMakePath cachedPath;
+     if (!cmSystemTools::FileIsFullPath(*cname)) {
+-      cnameString = cmSystemTools::FindProgram(*cname);
++      cachedPath = cmSystemTools::FindProgram(*cname);
+     } else {
+-      cnameString = *cname;
++      cachedPath = *cname;
+     }
+-    std::string pathString = path;
+-    // get rid of potentially multiple slashes:
+-    cmSystemTools::ConvertToUnixSlashes(cnameString);
+-    cmSystemTools::ConvertToUnixSlashes(pathString);
+-    if (cnameString != pathString) {
++    cmCMakePath foundPath = path;
++    if (foundPath.Normal() != cachedPath.Normal()) {
+       cmValue cvars = this->GetCMakeInstance()->GetState()->GetGlobalProperty(
+         "__CMAKE_DELETE_CACHE_CHANGE_VARS_");
+       if (cvars) {
