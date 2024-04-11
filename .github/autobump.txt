@@ -1051,6 +1051,7 @@ kubevious
 kubie
 kumactl
 kustomize
+kvazaar
 kwctl
 kwok
 kyma-cli
