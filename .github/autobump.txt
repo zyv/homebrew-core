@@ -1890,6 +1890,7 @@ testkube
 tetra
 texmath
 tfautomv
+tfmigrate
 tfsec
 tgui
 thanos

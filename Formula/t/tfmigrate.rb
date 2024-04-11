@@ -1,8 +1,8 @@
 class Tfmigrate < Formula
   desc "Terraform/OpenTofu state migration tool for GitOps"
   homepage "https://github.com/minamijoyo/tfmigrate"
-  url "https://github.com/minamijoyo/tfmigrate/archive/refs/tags/v0.3.20.tar.gz"
-  sha256 "8139a470ad941bdeb5e4c7b3f6edc7677bb9190d499bbe488c22ac063ee84f0a"
+  url "https://github.com/minamijoyo/tfmigrate/archive/refs/tags/v0.3.21.tar.gz"
+  sha256 "322feebbea60f3a616dba4f29e72428726858c945681ce2be6be488fcb35d9a3"
   license "MIT"
   head "https://github.com/minamijoyo/tfmigrate.git", branch: "master"
 
