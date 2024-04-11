@@ -521,6 +521,10 @@
   "parliament": {
     "extra_packages": ["setuptools"]
   },
+  "parsedmarc": {
+    "exclude_packages": ["certifi", "cryptography", "kafka-python"],
+    "extra_packages": ["kafka-python-ng"]
+  },
   "pass-import": {
     "exclude_packages": ["certifi"]
   },
