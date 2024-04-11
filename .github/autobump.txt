@@ -1854,6 +1854,7 @@ swiftplantuml
 swig
 syft
 syncthing
+sysaidmin
 sysdig
 sysstat
 systemc
