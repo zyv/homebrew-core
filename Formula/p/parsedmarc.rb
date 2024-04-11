@@ -10,6 +10,16 @@ class Parsedmarc < Formula
   license "Apache-2.0"
   head "https://github.com/domainaware/parsedmarc.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "db28260b908e7d17faea01a09c77112d693fc12f2380e88445a5879d08ae2537"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b6b00a8120f2143a9056fd5a6e96d6220553159a791508d893e5e4c95d98d643"
+    sha256 cellar: :any,                 arm64_monterey: "94b3cc20b0fc422a9fd256c92c6b0e2784bb0e2b2fe688709d6aa7eedf11a06e"
+    sha256 cellar: :any_skip_relocation, sonoma:         "7ad06e6cbf76ee3cc4ea8b1a7d536e125d05f2c93f1148286c8d3c9ddebde59d"
+    sha256 cellar: :any_skip_relocation, ventura:        "bfc3226168e0007ed41d7a986e00eec4d26ae4c3bb2bf32ed736c335f9ae3880"
+    sha256 cellar: :any,                 monterey:       "579dc9954c7a215b3245a04fa20bb9494e2faf8b6f3b4e5c2d5ccf5803e37414"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5c0263cbad9ab66cc0762217728cac50d0e0a935f67afd8de84b95a7a62ab579"
+  end
+
   depends_on "certifi"
   depends_on "cryptography"
   depends_on "python@3.12"
