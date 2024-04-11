@@ -1,8 +1,8 @@
 class Roadrunner < Formula
   desc "High-performance PHP application server, load-balancer and process manager"
   homepage "https://roadrunner.dev/"
-  url "https://github.com/roadrunner-server/roadrunner/archive/refs/tags/v2023.3.12.tar.gz"
-  sha256 "608b30987a7c56c1089474782a7dee6c031f2529319b7952ab5f4074b5018fe0"
+  url "https://github.com/roadrunner-server/roadrunner/archive/refs/tags/v2024.1.0.tar.gz"
+  sha256 "21a9c20b3bebe94be7a8fcbd87ecd7b6e52e838cf9cc6476e881de61a4b5a00c"
   license "MIT"
   head "https://github.com/roadrunner-server/roadrunner.git", branch: "master"
 
@@ -21,10 +21,10 @@ class Roadrunner < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/roadrunner-server/roadrunner/v2023/internal/meta.version=#{version}
-      -X github.com/roadrunner-server/roadrunner/v2023/internal/meta.buildTime=#{time.iso8601}
+      -X github.com/roadrunner-server/roadrunner/v#{version.major}/internal/meta.version=#{version}
+      -X github.com/roadrunner-server/roadrunner/v#{version.major}/internal/meta.buildTime=#{time.iso8601}
     ]
-    system "go", "build", "-tags", "aws", *std_go_args(output: bin/"rr", ldflags:), "./cmd/rr"
+    system "go", "build", "-tags", "aws", *std_go_args(ldflags:, output: bin/"rr"), "./cmd/rr"
 
     generate_completions_from_executable(bin/"rr", "completion")
   end
