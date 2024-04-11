@@ -1,11 +1,26 @@
 class Mpv < Formula
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io"
-  url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.37.0.tar.gz"
-  sha256 "1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf"
   license :cannot_represent
   revision 2
   head "https://github.com/mpv-player/mpv.git", branch: "master"
+
+  stable do
+    url "https://github.com/mpv-player/mpv/archive/refs/tags/v0.37.0.tar.gz"
+    sha256 "1d2d4adbaf048a2fa6ee134575032c4b2dad9a7efafd5b3e69b88db935afaddf"
+
+    # Fix build with FFmpeg 7.0.
+    # Remove when included in a release.
+    # https://github.com/mpv-player/mpv/pull/13659
+    patch do
+      url "https://github.com/mpv-player/mpv/commit/62b1bad755bb6141c5a704741bda8a4da6dfcde5.patch?full_index=1"
+      sha256 "7d6119161f8d2adcc62c8841cee7ea858bf46e51e8d828248ca2133281e2df0a"
+    end
+    patch do
+      url "https://github.com/mpv-player/mpv/commit/78447c4b91634aa91dcace1cc6a9805fb93b9252.patch?full_index=1"
+      sha256 "69e4ead829e36b3a175e40ed3c58cc4291a5b6634da70d02b0a5191b9e6d03f6"
+    end
+  end
 
   bottle do
     sha256 arm64_sonoma:   "9354877f0ede33e63d1fc5e491a8ed726178608b0e94759cee59304a134e267c"
@@ -35,18 +50,6 @@ class Mpv < Formula
 
   on_linux do
     depends_on "alsa-lib"
-  end
-
-  # Fix build with FFmpeg 7.0.
-  # Remove when included in a release.
-  # https://github.com/mpv-player/mpv/pull/13659
-  patch do
-    url "https://github.com/mpv-player/mpv/commit/62b1bad755bb6141c5a704741bda8a4da6dfcde5.patch?full_index=1"
-    sha256 "7d6119161f8d2adcc62c8841cee7ea858bf46e51e8d828248ca2133281e2df0a"
-  end
-  patch do
-    url "https://github.com/mpv-player/mpv/commit/78447c4b91634aa91dcace1cc6a9805fb93b9252.patch?full_index=1"
-    sha256 "69e4ead829e36b3a175e40ed3c58cc4291a5b6634da70d02b0a5191b9e6d03f6"
   end
 
   def install
