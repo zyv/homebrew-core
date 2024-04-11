@@ -1688,6 +1688,7 @@ scamper
 scarb
 sccache
 schemathesis
+scikit-image
 scilla
 scip
 scipy
