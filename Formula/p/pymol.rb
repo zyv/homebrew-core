@@ -1,5 +1,6 @@
 class Pymol < Formula
   include Language::Python::Virtualenv
+
   desc "Molecular visualization system"
   homepage "https://pymol.org/"
   url "https://github.com/schrodinger/pymol-open-source/archive/refs/tags/v3.0.0.tar.gz"
@@ -60,44 +61,26 @@ class Pymol < Formula
   end
 
   def install
-    site_packages = Language::Python.site_packages(python3)
-    ENV.prepend_path "PYTHONPATH", Formula["numpy"].opt_prefix/site_packages
-
     resource("mmtf-cpp").stage do
       system "cmake", "-S", ".", "-B", "build", *std_cmake_args(install_prefix: buildpath/"mmtf")
       system "cmake", "--build", "build"
       system "cmake", "--install", "build"
     end
 
-    # install other resources
-    resources.each do |r|
-      next if r.name == "mmtf-cpp"
+    venv = virtualenv_create(libexec, python3)
+    venv.pip_install resources.reject { |r| r.name == "mmtf-cpp" }
 
-      r.stage do
-        system python3, *Language::Python.setup_install_args(libexec, python3)
-      end
-    end
+    site_packages = Language::Python.site_packages(python3)
+    ENV.prepend_path "PYTHONPATH", Formula["numpy"].opt_prefix/site_packages
+    ENV.append_path "PREFIX_PATH", buildpath/"mmtf"
+    ENV.append_path "PREFIX_PATH", Formula["freetype"].opt_prefix
+    ENV.append_path "PREFIX_PATH", Formula["libxml2"].opt_prefix if OS.linux?
+    ENV["PIP_CONFIG_SETTINGS"] = "--build-option=--glut --use-msgpackc=c++11"
+    # setup.py incorrectly handles --install-lib='' set by bdist_wheel
+    inreplace "setup.py", "self.install_libbase", "'#{venv.site_packages}'"
+    venv.pip_install_and_link buildpath
 
-    if OS.linux?
-      # Fixes "libxml/xmlwriter.h not found" on Linux
-      ENV.append "LDFLAGS", "-L#{Formula["libxml2"].opt_lib}"
-      ENV.append "CPPFLAGS", "-I#{Formula["libxml2"].opt_include}/libxml2"
-    end
-    # CPPFLAGS freetype2 required.
-    ENV.append "CPPFLAGS", "-I#{Formula["freetype"].opt_include}/freetype2"
-    # Point to vendored mmtf headers.
-    ENV.append "CPPFLAGS", "-I#{buildpath}/mmtf/include"
-
-    args = %W[
-      --install-scripts=#{libexec}/bin
-      --install-lib=#{libexec/site_packages}
-      --glut
-      --use-msgpackc=c++11
-    ]
-
-    system python3, "setup.py", "install", *args
-    (prefix/site_packages/"homebrew-pymol.pth").write libexec/site_packages
-    bin.install libexec/"bin/pymol"
+    (prefix/site_packages/"homebrew-pymol.pth").write venv.site_packages
   end
 
   def caveats
