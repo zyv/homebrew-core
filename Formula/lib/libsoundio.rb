@@ -6,13 +6,13 @@ class Libsoundio < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "89ac9bf50666acf58cde9fba6a0c79f4225bb7b57d59f041a69a1d134b6c190a"
-    sha256 cellar: :any,                 arm64_ventura:  "6ad5b12b69952ecc264d4c9bd3f50887f725324712c3442533b4abb67cdfa788"
-    sha256 cellar: :any,                 arm64_monterey: "ee2c21b4512b374f66a2a9c392d7e1690b60adb0252998753cc7efc94bdb7845"
-    sha256 cellar: :any,                 sonoma:         "4ec730c41601e8e59b54bffb2b82fab7de06d929241ff9286e40a25131cb455a"
-    sha256 cellar: :any,                 ventura:        "1d62119eda28b70dd91dcb571198fc9976b62687cc55e725d3d49a981ffd40a0"
-    sha256 cellar: :any,                 monterey:       "af99e9ca8d1894dbab645bea5b5efaf24718dc151b1e212651c4032a69af42bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f37bc1a4f4d602f60f8e5a20b3a0f4eb45c2df24463bcfe08781a331f9ae763"
+    sha256 cellar: :any,                 arm64_sonoma:   "74d5dc6d43cb2ef587a861a8b784ec6134c86f73149645c653b5542c3a0941b6"
+    sha256 cellar: :any,                 arm64_ventura:  "700fd8255a363e2e28aa5b801c4e3218bab3a78f0c37f16dfa60f0e2337146a1"
+    sha256 cellar: :any,                 arm64_monterey: "9726d67b4c9b83077d508a64067df3eb96f87dd731a3cb08395a68dbb2234d88"
+    sha256 cellar: :any,                 sonoma:         "fd982bcdc2ab3d9ec3e0a714295a41d1568a51a6f050d01314bbb9822505549a"
+    sha256 cellar: :any,                 ventura:        "d7edd4161e6b2ce4eb239cacd3264a23aa8c9a6cd89683f0a6bd96b757120672"
+    sha256 cellar: :any,                 monterey:       "997f4179c3fbde9beb699106367d0c944d3ddbb9fbd5c4744cb31e6f7f1ba72b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e1b9e90eb51ce8918bf817febf0bf785da0941cb793a430e8299492bdaafa4d"
   end
 
   depends_on "cmake" => :build
