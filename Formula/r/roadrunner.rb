@@ -7,13 +7,13 @@ class Roadrunner < Formula
   head "https://github.com/roadrunner-server/roadrunner.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5d8eff5d9d59035454415df3f3242bd260f4904bcbdf02c8deee65acde9a1d0a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ab7749902908eb3338390523c908db1160810291c4834209fc3c6157f1b7c8a0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2aa3b409253ff9c1a51403a1ba75ac0ef2c9f4d53e079450f2f20841adefcbe8"
-    sha256 cellar: :any_skip_relocation, sonoma:         "5bc06ba7bfa06fbc1ec269ef211356e25fd4b129af1ddca70e49bd9c99f19fe0"
-    sha256 cellar: :any_skip_relocation, ventura:        "f2eb0010833f9342803271882afab378eed969034bb9fb59a134a3fd4434ebbc"
-    sha256 cellar: :any_skip_relocation, monterey:       "d98c8ee66b095ae0764b418f74052f61cd83f6e3d01725e1539870214e7019e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09baff769899087850245f9c8ec57b8cb65da94e782733fd233d1340b7214f1a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6c9f04d9d7b4c051eb23238899dc812d3f915925b8a7c48718c0fc342c8a5ef5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b8a0868dcb652ac571d8a60bf7d7e95b9b8b66c9cea8dc48e9ec96c8482e5377"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ef550bffe3143ddbd4fd4ba2d4aaaf4f8ded135c17c09919beb4d747d9739a7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "f9f1b0e30a9bfefe17b5460fc2c1951cd9fb58b23201b9541645c93a20ac50d5"
+    sha256 cellar: :any_skip_relocation, ventura:        "b51e046483b25187045a5580d13e4d922766d1f59818027dd371eedd9fa5aad3"
+    sha256 cellar: :any_skip_relocation, monterey:       "edcbd8bcb4142c07b85c1a0767c2bada7b95d6f8bb49445787ec467f6e1462af"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6c9a4539c11eb83b92b476a63afd624ba142bd2d4081f4faf9d2f8c18d7fd909"
   end
 
   depends_on "go" => :build
