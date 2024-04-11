@@ -7,13 +7,13 @@ class Minder < Formula
   head "https://github.com/stacklok/minder.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4ed820f3f7c7fb71604cf60cce4ccc6cb5a26125405fde6ad2bd2c2e7c787e77"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ce46b3055d9c8218cb4e189300795c6d532d46afd1ff6d725ebabf5a79e80db2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9165c1efe2e46ef35630ab3259fe93838a7e21cc10cb8f3b9976a7c31b14df5d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "1a00fbdafdbd7997e54bb9304795cbd882d305dca1dee7f3ad84acb0b1f1c412"
-    sha256 cellar: :any_skip_relocation, ventura:        "b14aef4bd630f4f06c5c89d52c38be405719e58d2c0482286e368f105038402f"
-    sha256 cellar: :any_skip_relocation, monterey:       "c9751de3fcbc99cf5ef821ba782cda5a986b6a1686aeac4893fb9006de711d59"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba9701ef68c8151819a284b7ff1067365fc04f87c3ea0d9e5a3eff566739f8b8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "93525c96dc86dc6c5cb62f84070cbc6388907c847ffa185a9e4c06f622f67bbd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f693b47af07915d17d29bdb3da4a005818246144b3a60876a99c004bf1957283"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9e8cc46ec7a3eff315a9c517f938aa52c3d4a8ebd8fa3c6c3b89997667cce3fc"
+    sha256 cellar: :any_skip_relocation, sonoma:         "17476e4d880c0517b3b0a4e31134f7878ac375444fd0d216c1c90a2e9fd5e297"
+    sha256 cellar: :any_skip_relocation, ventura:        "095759b63eb107e7670c98258b1d7f10827afabef6326efc214b73430a6516da"
+    sha256 cellar: :any_skip_relocation, monterey:       "0ee1e2d20b06a5bae27604798731b3c98e6289edaaf4103fe4a39a6a695e8ea2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "722851853c0f717a7ae1e76125489a97ce83118864a0f31635715af2f2f22fbb"
   end
 
   depends_on "go" => :build
