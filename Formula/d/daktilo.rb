@@ -1,8 +1,8 @@
 class Daktilo < Formula
   desc "Plays typewriter sounds every time you press a key"
   homepage "https://daktilo.cli.rs"
-  url "https://github.com/orhun/daktilo/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "55aead933dfe9176bc6f55f397bfe05f5eb97ef0f2b06e6904e4227f3e715b70"
+  url "https://github.com/orhun/daktilo/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "594987ad0697a29e3d0dc25b220e5680cfaecedf2175fd6c17ba827fc7bc2978"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
@@ -25,7 +25,7 @@ class Daktilo < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args(path: "crates/daktilo")
   end
 
   test do
