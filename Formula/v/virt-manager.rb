@@ -10,11 +10,13 @@ class VirtManager < Formula
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
   bottle do
-    rebuild 8
-    sha256 cellar: :any, arm64_ventura:  "2b36fbf4b95abcc7dc057cd752226a2acb7a2c51830dc071568da0555e304bb7"
-    sha256 cellar: :any, arm64_monterey: "3345f44ca6d28ce4a42657165ef9d315c078de5ad09cd93d7ec4f5fba1e8954f"
-    sha256 cellar: :any, ventura:        "b264b3dbe9e6516eee7a604a766af4f9f8a5810435e6609920d51444ae1ce9e2"
-    sha256 cellar: :any, monterey:       "c7287113d6ce100245bc3d94f0156e0235ffa7ccca5e2c85937dd907a7c96f42"
+    rebuild 9
+    sha256 cellar: :any, arm64_sonoma:   "41fd6e9a29d3603489ab9da23e8966e1dcaaaecaf66e19ffe47122abdbe850d0"
+    sha256 cellar: :any, arm64_ventura:  "f53adafe25e436ef8e61ce865b1af111b8c2de9e4ddf1d0730f1c568c3339919"
+    sha256 cellar: :any, arm64_monterey: "e746ef562019ccc97d922eedcd91f93c1bbc9ef0db0e7065c8fef7bc1fbbdf77"
+    sha256 cellar: :any, sonoma:         "b7667d575c7a133e03822d83a5b57cb90077c8fbecfd6d79b1a162eef0af3ff0"
+    sha256 cellar: :any, ventura:        "fc0ce55d9c07f4c60731b8b2cfcdcf7359b1c4dfccc090e6bca981b9ea956d16"
+    sha256 cellar: :any, monterey:       "5c0e2b424eef79822016435dd21a2349b89a5d22f4d59f9c632114d7f57d966a"
   end
 
   depends_on "docutils" => :build
