@@ -7,13 +7,13 @@ class D2 < Formula
   head "https://github.com/terrastruct/d2.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3fe73ebb390941c620177e27cabc4b8e53f93bb0c7235c68e7ffaa2d0a46ecc0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1efbe689cf17735288ea51d9081773c561b56b0d13de28e82697e427a7a327c1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "8a7ae2ab809333166533e2f4a8011ffc5c231e01c521353f283d01b3d8b45908"
-    sha256 cellar: :any_skip_relocation, sonoma:         "b843d5a5fb1f69c9f98fefd3e10730069230457914480ba61f3d7c091856d067"
-    sha256 cellar: :any_skip_relocation, ventura:        "a24e70b809153b120cae373865d485632632fced7cc027ecf60fd3859903085b"
-    sha256 cellar: :any_skip_relocation, monterey:       "3d119d85ed9816db269acba29acd07557cb8d991a95d125fd240cf5a85c074ef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76e0665995664f122041fffdd4ba4f1c30ba8ea5c15f7aa7cc0c6aaeb405160f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fbd9bfe4a6edddd9a1f6560203f9b9f050994da561b88691d825ce7409ae02fa"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a9deefb9dc0fa2e121ee0497396178df3f6976b255660669cb6ad3b142b7fce9"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3a16595d7bc7405f4ec1bfd91d172e18074f20406e617b6f33d26fd67e93f1a4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "9c27af01eb9e753b4416d05411db85e99d822e3b1d4bc580f2a8990e0efa587f"
+    sha256 cellar: :any_skip_relocation, ventura:        "3f8653d675ba960f9d03059e28a7cd75b3af2cc864ecf366a07538e51173c778"
+    sha256 cellar: :any_skip_relocation, monterey:       "b483a052b8e2bfa4c1d709553aa382e8612d0044bd150bf49915deb7e96284b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e354446de2212c315be64ac9cbf9987017ff2186e70b7a4139884f31bb3f8f09"
   end
 
   depends_on "go" => :build
