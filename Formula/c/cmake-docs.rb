@@ -1,10 +1,10 @@
 class CmakeDocs < Formula
   desc "Documentation for CMake"
   homepage "https://www.cmake.org/"
-  url "https://github.com/Kitware/CMake/releases/download/v3.29.1/cmake-3.29.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/cmake-3.29.1.tar.gz"
-  mirror "http://fresh-center.net/linux/misc/legacy/cmake-3.29.1.tar.gz"
-  sha256 "7fb02e8f57b62b39aa6b4cf71e820148ba1a23724888494735021e32ab0eefcc"
+  url "https://github.com/Kitware/CMake/releases/download/v3.29.2/cmake-3.29.2.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/cmake-3.29.2.tar.gz"
+  mirror "http://fresh-center.net/linux/misc/legacy/cmake-3.29.2.tar.gz"
+  sha256 "36db4b6926aab741ba6e4b2ea2d99c9193222132308b4dc824d4123cb730352e"
   license "BSD-3-Clause"
   head "https://gitlab.kitware.com/cmake/cmake.git", branch: "master"
 
