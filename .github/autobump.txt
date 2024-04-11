@@ -445,6 +445,7 @@ d2
 daemon
 dafny
 dagger
+daktilo
 daq
 dar
 darkhttpd
