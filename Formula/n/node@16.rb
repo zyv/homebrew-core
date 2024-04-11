@@ -7,14 +7,13 @@ class NodeAT16 < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "27070fb9275d5dd1d4bf816659705acc1048ff947a30cc6b0816900d198fab69"
-    sha256 cellar: :any,                 arm64_ventura:  "6712e525f435f790df664cf063b18f85973043f8a3817e14764f0e73ba3d14ce"
-    sha256 cellar: :any,                 arm64_monterey: "d6849c663947a208dbb494be1433ecea9736896988b7078d41e3ed002eb3d0c5"
-    sha256 cellar: :any,                 sonoma:         "5422ad0692efb86e6499645e9cc91de15ae688d426991ae24084fe89a76394c3"
-    sha256 cellar: :any,                 ventura:        "8a163469a0ee7d005efc9ded82e6de9fe80075a207aaaff6c69b675c3fe2e17f"
-    sha256 cellar: :any,                 monterey:       "7c3eace3570476ba69a6922f1de10dab934112fbf5c5f7ae7a6f1b3f30518f44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ade4824e8c644789ac5dcbe03b5e58cf6f07915ebe22771de948a159dd05da9"
+    sha256 cellar: :any,                 arm64_sonoma:   "631a5ed1cd7834f440c6165474fe9affca55e9731d21abb42f01ebf3aa8fd1f6"
+    sha256 cellar: :any,                 arm64_ventura:  "7efc4bbee5dcd2bfce309895cf9870fa0c652c641d887c37e1061fcbc13c1cf0"
+    sha256 cellar: :any,                 arm64_monterey: "1541329ebab112c5c0ad0cf81d0f81e4ad646587bab5e0824ca7b6849c0d53f6"
+    sha256 cellar: :any,                 sonoma:         "70b178141af156260fbd2d1e7d03c1b74bc5878b11b9e4897f9e123e5626518d"
+    sha256 cellar: :any,                 ventura:        "bd526bbf8a16f7da6349fb7a0fb3b182784512bf4b527d622529c8c907f3d8d7"
+    sha256 cellar: :any,                 monterey:       "e3a8ed83a860e58ff03d4b3045715a26510b988dbeca39ded563cbf679da17e9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "769953ce120b601f5523298a89df52db171e50053c9311daf3cd9f0ecee71944"
   end
 
   keg_only :versioned_formula
