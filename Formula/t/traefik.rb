@@ -1,8 +1,8 @@
 class Traefik < Formula
   desc "Modern reverse proxy"
   homepage "https://traefik.io/"
-  url "https://github.com/traefik/traefik/releases/download/v2.11.1/traefik-v2.11.1.src.tar.gz"
-  sha256 "6ba38cb79c9530655b9b8cb66034cebc1436a12c9b23df5534d9a5983b23c6a1"
+  url "https://github.com/traefik/traefik/releases/download/v2.11.2/traefik-v2.11.2.src.tar.gz"
+  sha256 "48a8b8a247991db02d4e3f9aac6db512eaea265d22f0f407ccb038d72d02a106"
   license "MIT"
   head "https://github.com/traefik/traefik.git", branch: "master"
 
@@ -22,7 +22,7 @@ class Traefik < Formula
     ldflags = %W[
       -s -w
       -X github.com/traefik/traefik/v#{version.major}/pkg/version.Version=#{version}
-    ].join(" ")
+    ]
     system "go", "generate"
     system "go", "build", *std_go_args(ldflags:), "./cmd/traefik"
   end
@@ -54,7 +54,7 @@ class Traefik < Formula
       pid = fork do
         exec bin/"traefik", "--configfile=#{testpath}/traefik.toml"
       end
-      sleep 5
+      sleep 8
       cmd_ui = "curl -sIm3 -XGET http://127.0.0.1:#{http_port}/"
       assert_match "404 Not Found", shell_output(cmd_ui)
       sleep 1
