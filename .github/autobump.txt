@@ -1913,6 +1913,7 @@ tomcat@9
 tomee-plus
 tomee-webprofile
 topgrade
+tor
 tox
 toxiproxy
 tproxy
