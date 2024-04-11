@@ -1710,6 +1710,7 @@ sentencepiece
 seqkit
 ser2net
 serverless
+service-weaver
 sh4d0wup
 shaderc
 shadowenv
