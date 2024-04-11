@@ -944,6 +944,7 @@ instaloader
 internetarchive
 inxi
 ioctl
+iperf
 ipfs
 ipinfo-cli
 ipmiutil
