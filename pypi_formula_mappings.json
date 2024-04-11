@@ -782,7 +782,8 @@
     "extra_packages": ["setuptools"]
   },
   "virt-manager": {
-    "exclude_packages": ["certifi"]
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["libvirt-python", "requests"]
   },
   "virtualfish": {
     "extra_packages": ["setuptools"]
