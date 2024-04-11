@@ -1081,6 +1081,7 @@ libassuan
 libavif
 libbpf
 libbsd
+libcap-ng
 libclc
 libcoap
 libcouchbase
