@@ -1122,6 +1122,7 @@ kubevious
 kubie
 kumactl
 kustomize
+kuto
 kuttl
 kvazaar
 kwctl
