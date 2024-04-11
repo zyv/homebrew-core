@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.com/"
-  url "https://github.com/denoland/deno/releases/download/v1.42.1/deno_src.tar.gz"
-  sha256 "38c30012cec6f969903df5eef20dc9208951bb7913d665baacb12c8c1f2250a7"
+  url "https://github.com/denoland/deno/releases/download/v1.42.2/deno_src.tar.gz"
+  sha256 "fd9bdac501520c22c0532117196cb7951ff884541023a01001033190608f2e2a"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -45,7 +45,7 @@ class Deno < Formula
   # Use the version of `v8` crate at: https://github.com/denoland/deno/blob/v#{version}/Cargo.lock
   # Search for 'name = "v8"' (without single quotes).
   resource "rusty_v8" do
-    url "https://static.crates.io/crates/v8/v8-0.89.0.crate", using: :nounzip
+    url "https://static.crates.io/crates/v8/v8-0.89.0.crate"
     sha256 "fe2197fbef82c98f7953d13568a961d4e1c663793b5caf3c74455a13918cdf33"
   end
 
@@ -77,11 +77,7 @@ class Deno < Formula
   def install
     # Work around files missing from crate
     # TODO: Remove this at the same time as `rusty_v8` + `v8` resources
-    (buildpath/"../rusty_v8").mkpath
-    resource("rusty_v8").stage do |r|
-      system "tar", "-C", buildpath/"../rusty_v8",
-                    "--strip-components", "1", "-xzvf", "v8-#{r.version}.crate"
-    end
+    resource("rusty_v8").stage buildpath/"../rusty_v8"
     resource("v8").stage do
       cp_r "tools/builtins-pgo", buildpath/"../rusty_v8/v8/tools/builtins-pgo"
     end
