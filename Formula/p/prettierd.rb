@@ -3,8 +3,8 @@ require "language/node"
 class Prettierd < Formula
   desc "Prettier daemon"
   homepage "https://github.com/fsouza/prettierd"
-  url "https://registry.npmjs.org/@fsouza/prettierd/-/prettierd-0.25.2.tgz"
-  sha256 "f1a8befeaa214039ecc264c1b0d13e731145eab3ad7739cf0a93a3b0f93d6ce0"
+  url "https://registry.npmjs.org/@fsouza/prettierd/-/prettierd-0.25.3.tgz"
+  sha256 "39b761c81a6d1d65819ea2f30e96965e25e7ada6d14644e449116e9543b4619f"
   license "ISC"
 
   bottle do
