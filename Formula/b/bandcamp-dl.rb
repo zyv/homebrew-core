@@ -6,7 +6,7 @@ class BandcampDl < Formula
   url "https://files.pythonhosted.org/packages/e5/4d/d463bcc20602f5385e0441cd7171b1fe6b67e2bb76240ae0f2684de6c022/bandcamp-downloader-0.0.15.tar.gz"
   sha256 "2f7666c00e9cff39135d5c9fc0498bbc93d64684fcb13171cbd9584e31692ebb"
   license "Unlicense"
-  revision 1
+  revision 2
   head "https://github.com/iheanyi/bandcamp-dl.git", branch: "master"
 
   bottle do
@@ -51,13 +51,8 @@ class BandcampDl < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
-  end
-
-  resource "lxml" do
-    url "https://files.pythonhosted.org/packages/2b/b4/bbccb250adbee490553b6a52712c46c20ea1ba533a643f1424b27ffc6845/lxml-5.1.0.tar.gz"
-    sha256 "3eea6ed6e6c918e468e693c41ef07f3c3acc310b70ddd9cc72d9ef84bc9564ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "mutagen" do
