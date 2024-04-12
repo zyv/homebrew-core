@@ -6,7 +6,7 @@ class OpenaiWhisper < Formula
   url "https://files.pythonhosted.org/packages/d2/6e/50ace2bf704e5ffc786d20d96403ab0d57c5d6ab8729de7fed8c436687df/openai-whisper-20231117.tar.gz"
   sha256 "7af424181436f1800cc0b7d75cf40ede34e9ddf1ba4983a910832fcf4aade4a4"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/openai/whisper.git", branch: "main"
 
   bottle do
@@ -37,8 +37,8 @@ class OpenaiWhisper < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "llvmlite" do
@@ -52,8 +52,8 @@ class OpenaiWhisper < Formula
   end
 
   resource "numba" do
-    url "https://files.pythonhosted.org/packages/a3/5e/ad8f7a2ca55b5903cea0aa6ec0bb0eee7faeec3ca1c4f871d99ff46aad36/numba-0.59.0.tar.gz"
-    sha256 "12b9b064a3e4ad00e2371fc5212ef0396c80f41caec9b5ec391c8b04b6eaf2a8"
+    url "https://files.pythonhosted.org/packages/bb/84/468592513867604800592b58d106f5e7e6ef61de226b59c1e9313917fbbb/numba-0.59.1.tar.gz"
+    sha256 "76f69132b96028d2774ed20415e8c528a34e3299a40581bae178f0994a2f370b"
   end
 
   resource "regex" do
