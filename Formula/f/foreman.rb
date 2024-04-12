@@ -2,8 +2,8 @@ class Foreman < Formula
   desc "Manage Procfile-based applications"
   homepage "https://ddollar.github.io/foreman/"
   url "https://github.com/ddollar/foreman.git",
-      tag:      "v0.87.2",
-      revision: "5b815c5d8077511664a712aca90b070229ca6413"
+      tag:      "v0.88.1",
+      revision: "e70bd9239a07231ca13b0624a3ff5d7923f2d359"
   license "MIT"
 
   bottle do
