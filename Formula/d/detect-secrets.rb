@@ -10,14 +10,13 @@ class DetectSecrets < Formula
   head "https://github.com/Yelp/detect-secrets.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_sonoma:   "369d04afa889d5ee9635f530ab53b2df4ed7634d529f16948a29ef5909829857"
-    sha256 cellar: :any,                 arm64_ventura:  "8a88936d5203a614ad21522ef4389611c76883d9f415a80b9e96a6f4ac109359"
-    sha256 cellar: :any,                 arm64_monterey: "86c9210007811b70e213339122faad329d6612da0e8dfef8bac3bfa76039ef90"
-    sha256 cellar: :any,                 sonoma:         "b0c76a50fb08fbe80f13e080b5822ac4e68d2b97c7bdd647b3ebbba2ddc0cb7b"
-    sha256 cellar: :any,                 ventura:        "a887cfa36f12e3af499e4bd071852a15ad2d95357d58987242445d992e1caeed"
-    sha256 cellar: :any,                 monterey:       "0f48a9fa4d37049ceab4d716b9e40d6e990949d97ac245ec1ee30d2ec9e68409"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "08510131dace027059a68516b5b41620f0cee95954dd93d50fd6cbdd41eac8fc"
+    sha256 cellar: :any,                 arm64_sonoma:   "700c31972728f1f171a8832b367d04a7d82a33addf0598b6c959f6d528d1c2f4"
+    sha256 cellar: :any,                 arm64_ventura:  "f134b43523193c1400d96e922c28deeb69b5157b3966b54f7225cc0b8d1033fe"
+    sha256 cellar: :any,                 arm64_monterey: "2d6125cd7d98bd7203caf8ba16bd22bc1c04ec60dec01247130a11465700760d"
+    sha256 cellar: :any,                 sonoma:         "8cccf3956a0063f7ab351c71ce5e4bab6b88346f59fd58fc4be432cbee6b5fb4"
+    sha256 cellar: :any,                 ventura:        "e4752c09b691d41004bae467999bf5b45f9f09b727a93d09f2734e7ff664599e"
+    sha256 cellar: :any,                 monterey:       "8f408a18ffc6febe9c2cb368d687b109dd0575598fb59c827648dfdbc247448c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9bb1f2d9166832277d86d879ebecd0742c45112520a3431c950c7b4af5554b1c"
   end
 
   depends_on "certifi"
