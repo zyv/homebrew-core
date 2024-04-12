@@ -7,6 +7,16 @@ class Sysaidmin < Formula
   sha256 "7e91afa743d60b1b7c9bb5ff6d9b5edc0774bafb687e9b7e550fda0e3acf5aed"
   license "AGPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "4fb9c302497179f9cb51abd6d379ab0e2c7e79c940f8b5efe98c7fe0e56c12d4"
+    sha256 cellar: :any,                 arm64_ventura:  "27d4081785eb8389aa07f995fd178b1e8e75264540be237a91b75ec4a7eb0cf9"
+    sha256 cellar: :any,                 arm64_monterey: "7676f2a22f2282097a1f034d375f1cb76451dc8adc2a912a2a12a92e497548d4"
+    sha256 cellar: :any,                 sonoma:         "6d0cfd48b68ed6da09fa894db866cd3b1ad6d764eec500b28e9483849397c850"
+    sha256 cellar: :any,                 ventura:        "4eea2c2e62d727a5a2e909fe4f6cabc66d9940c2fc69bdc7c2c858d99f32a785"
+    sha256 cellar: :any,                 monterey:       "76652c90ea831bc1eb4574fd7e4d7725009e8a8ead411fdd5af3856ac712b696"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6f2d699ea60b37f82fae235c6ed47cca0f6729fb6d012784ed448c37bae738fa"
+  end
+
   depends_on "rust" => :build # for pydantic_core
   depends_on "certifi"
   depends_on "python@3.12"
