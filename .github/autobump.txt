@@ -1166,6 +1166,7 @@ libxmu
 libxvmc
 libzim
 libzzip
+license-eye
 lighthouse
 lighttpd
 lima
