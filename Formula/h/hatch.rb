@@ -9,13 +9,13 @@ class Hatch < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "07ca960c8a1db653627dbf68717136cdfd522982e8b4e6099bbb579d9027ed1a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7787fca6338ff5540b22b2561c0c72d3c2e6815c034366ea9ccd4969b891d0a9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c7528e30497a3685487e1175cc52a21d34cd63af51fe2783a937cd00b5d0feae"
-    sha256 cellar: :any_skip_relocation, sonoma:         "079f570d40c6b794fc10169863806f29180a9ac63c986165fec205f9ca5f0a6d"
-    sha256 cellar: :any_skip_relocation, ventura:        "b56ba40ae48fed18a0b70ea14f25fd26e15999a04f2ecc1af21aee622ce8a3f5"
-    sha256 cellar: :any_skip_relocation, monterey:       "524baed9ad26b511b84d2118b1d3b202c0ffa537d895c0b9a93fcd2c1b5fe6da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "72f577276681521dea1ec570135aee2c13d44a3f1125acfa0dd975df7e085274"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2ebd217d0f61e9935ddb3c64ed2ecafbc1d6afbf8a67e4660b3a0237e3d62867"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "53869c08703879e43117dc0fbf14ce89eedeb7b54d1a1c9ff3d2c9495c1106ce"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4dd97d3b698ef2fe7a109017f5d3e09a0d0c7359767ffa01c9fabc5a3807f490"
+    sha256 cellar: :any_skip_relocation, sonoma:         "1e46a12fba20a6a9febb8732c321ba38e69b28b7adfb662c54f9209e447602ff"
+    sha256 cellar: :any_skip_relocation, ventura:        "3b8308f74c455eeddfc6b7c570a2d85e5298a0bf9dad16d99abff5936e22cbff"
+    sha256 cellar: :any_skip_relocation, monterey:       "f9b3e9e6447e5123d0076b9e781a345068f114bd3915675f23c64b2f344f3877"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9546cbeed200eb4cd581fe212c0d0c19d26a61d52a79835160ecd2bb552099ee"
   end
 
   depends_on "certifi"
