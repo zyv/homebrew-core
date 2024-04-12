@@ -1260,6 +1260,7 @@ mimirtool
 minder
 minetest
 minikube
+minipro
 miniserve
 minizinc
 minizip

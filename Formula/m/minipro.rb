@@ -1,19 +1,10 @@
 class Minipro < Formula
   desc "Open controller for the MiniPRO TL866xx series of chip programmers"
   homepage "https://gitlab.com/DavidGriffith/minipro/"
+  url "https://gitlab.com/DavidGriffith/minipro/-/archive/0.7/minipro-0.7.tar.gz"
+  sha256 "febd2aa1a7e8d7d5b2c4de62503f37e562633a1d2b2bf78b788e49ac06847ab4"
   license "GPL-3.0-or-later"
   head "https://gitlab.com/DavidGriffith/minipro.git", branch: "master"
-
-  stable do
-    url "https://gitlab.com/DavidGriffith/minipro/-/archive/0.6/minipro-0.6.tar.gz"
-    sha256 "16b4220b5fc07dddc4d1d49cc181a2c6a735c833cc27f24ab73eac2572c9304a"
-
-    # Fix version number, remove in next release
-    patch do
-      url "https://gitlab.com/DavidGriffith/minipro/-/commit/6b0074466ea5e2c2664362b5fcba4bc8b0172a44.diff"
-      sha256 "a71e107701ff17d1731c3aa57868a822106b0fe1f808f40a88cfbe236faed289"
-    end
-  end
 
   bottle do
     sha256 arm64_sonoma:   "5fdf1559c70eff5eadab36148badcde72fca212465979c92a297286a70e2b41e"
