@@ -1,5 +1,6 @@
 a2ps
 abcmidi
+abi3audit
 abseil
 access
 ack
@@ -872,6 +873,7 @@ gtk-gnutella
 gtk4
 gtkmm4
 gtranslator
+gulp-cli
 gupnp
 gupnp-tools
 hackrf
@@ -1175,6 +1177,7 @@ linux-pam
 liqoctl
 liquibase
 lit
+litecli
 literate-git
 little-cms2
 livekit
@@ -1242,6 +1245,7 @@ meilisearch
 melange
 melody
 memcached
+memray
 mercurial
 mesa
 meson
@@ -1539,6 +1543,7 @@ presenterm
 prestd
 prestodb
 prettier
+prettierd
 primecount
 principalmapper
 procs
