@@ -6,7 +6,7 @@ class DetectSecrets < Formula
   url "https://files.pythonhosted.org/packages/f1/55/292f9ce52bba7f3df0a9cde65dabf458d3aeec6a63bf737e5a5fa9fe6d31/detect_secrets-1.4.0.tar.gz"
   sha256 "d56787e339758cef48c9ccd6692f7a094b9963c979c9813580b0169e41132833"
   license "Apache-2.0"
-  revision 3
+  revision 4
   head "https://github.com/Yelp/detect-secrets.git", branch: "master"
 
   bottle do
@@ -30,8 +30,8 @@ class DetectSecrets < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "pyyaml" do
