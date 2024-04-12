@@ -9,13 +9,13 @@ class HuggingfaceCli < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "0a1a0922006bf2f7c4f2dba7dfb9e9f93f89b12b0ca0b1a1c6acf095b325141f"
-    sha256 cellar: :any,                 arm64_ventura:  "7f15649bb6f88aea6d7034271f823f2b829f695140f4bc498c80bbb491c7cc84"
-    sha256 cellar: :any,                 arm64_monterey: "00a3e9f99d1b90d387d662149adf2ec00d4148edd4edac3cb033a7699a47dd0e"
-    sha256 cellar: :any,                 sonoma:         "690cdd1320c1fd81f7b9097939474ccb12f7ae9cbb84d2e123b373df620ee9e0"
-    sha256 cellar: :any,                 ventura:        "aea0caa6d838d2f7c6e47e74ed09ebc3c1be829c264389e1de618bf0b8fc8485"
-    sha256 cellar: :any,                 monterey:       "b1b12ad4f4d806b2b24627786fb7c88799f47153b5ed5f4dd9eb6852ef5de557"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "483566688851bd8051fc289d24cd60c5e543e34a8250b2a6b067db62f4d08ace"
+    sha256 cellar: :any,                 arm64_sonoma:   "46b44bd7e9573af9a95283b6df7c99bb52163939abcbb403fe69d6574ab4e03d"
+    sha256 cellar: :any,                 arm64_ventura:  "ac3c2fcd203a72da4f897fbc2d825335bb59e7e1e26540cf5d20fad5bcd37463"
+    sha256 cellar: :any,                 arm64_monterey: "bb9f2e0475f23c66cf2e192249bd38f908ed9f990bf22bb0773b0839ce325052"
+    sha256 cellar: :any,                 sonoma:         "e2fcabdd3ab0b14f21e4b9244753776f738ee3b8c0ac57aa59e5725242c3aa9c"
+    sha256 cellar: :any,                 ventura:        "feecb3dfb1a350e49e16fbb99b8e5dc3037dbd381a5a82072b3f128ae3382947"
+    sha256 cellar: :any,                 monterey:       "26b8f4be4dd077e8b31ffa2aeb72b167b3654939a9b7385bcfaa53d9eb301e18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c6e8d28cc305f65b2b0141293b2bdf558de15311ac6c6563876c52d4be29b240"
   end
 
   depends_on "certifi"
