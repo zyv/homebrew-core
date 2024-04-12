@@ -6,6 +6,7 @@ class Openstackclient < Formula
   url "https://files.pythonhosted.org/packages/61/ea/fc55acbbc9d7e6392d43d47107c837f1282ca44f68552cb0b0d1921c7c17/python-openstackclient-6.6.0.tar.gz"
   sha256 "bbef1ed34829c41052b2eca26480e29ca1f72be058d1430da5341ec44c4f295c"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "1cbc906000e2afdc10fbe79a513bd42739e2d3f69e31f22472ca6201889f1d22"
@@ -72,8 +73,8 @@ class Openstackclient < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "iso8601" do
@@ -162,8 +163,8 @@ class Openstackclient < Formula
   end
 
   resource "oslo-log" do
-    url "https://files.pythonhosted.org/packages/b5/9b/21cb487426ec7e39807a1996ae16325e62230de49f514638bf376ac15a72/oslo.log-5.5.0.tar.gz"
-    sha256 "4cedd1669c7de28d8e66b67a5f6d6c6fe83928535fa87cd69bf6611b59f567e7"
+    url "https://files.pythonhosted.org/packages/83/b8/399ddd945d31ab29346c515c5fc77a0bdb0f292abf1c3068405ef3074862/oslo.log-5.5.1.tar.gz"
+    sha256 "484148512c5db2a8b35c83cd997e9953755fd8bfa8aaf6ee0cc8c7aeb7429210"
   end
 
   resource "oslo-serialization" do
