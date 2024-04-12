@@ -4,6 +4,7 @@ class Chapel < Formula
   url "https://github.com/chapel-lang/chapel/releases/download/2.0.0/chapel-2.0.0.tar.gz"
   sha256 "b5387e9d37b214328f422961e2249f2687453c2702b2633b7d6a678e544b9a02"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   bottle do
@@ -35,6 +36,15 @@ class Chapel < Formula
     # in our find-python.sh script.
     inreplace "util/config/find-python.sh", /^(for cmd in )(python3 )/, "\\1#{python} \\2"
 
+    # TEMPORARY adds clean-cmakecache target to prevent issues where only
+    #           the first make target gets written to the proper CMAKE_RUNTIME_OUTPUT_DIRECTORY
+    #           cmake detects a change in compilers (although the values are the same?) and
+    #           reruns configure, losing the output directory we set at configure time
+    inreplace "compiler/Makefile",
+              "all: $(PRETARGETS) $(MAKEALLSUBDIRS) echocompilerdir $(TARGETS)\n",
+              "all: $(PRETARGETS) $(MAKEALLSUBDIRS) echocompilerdir $(TARGETS)\n\n
+              clean-cmakecache: FORCE\n\trm -f $(COMPILER_BUILD)/CMakeCache.txt\n\n"
+
     libexec.install Dir["*"]
     # Chapel uses this ENV to work out where to install.
     ENV["CHPL_HOME"] = libexec
@@ -54,18 +64,19 @@ class Chapel < Formula
     # https://github.com/Homebrew/legacy-homebrew/pull/35166
     cd libexec do
       system "./util/printchplenv", "--all"
-      with_env(CHPL_PIP_FROM_SOURCE: "1") do
-        system "make", "test-venv"
-      end
       with_env(CHPL_LLVM: "none") do
         system "make"
       end
       with_env(CHPL_LLVM: "system") do
+        cd "compiler" do
+          system "make", "clean-cmakecache"
+        end
         system "make"
       end
-      # TODO: a bug (in the formula?) is causing chpldoc to not be installed
-      # see https://github.com/chapel-lang/chapel/issues/24639
       with_env(CHPL_PIP_FROM_SOURCE: "1") do
+        cd "compiler" do
+          system "make", "clean-cmakecache"
+        end
         system "make", "chpldoc"
       end
       system "make", "mason"
@@ -99,16 +110,15 @@ class Chapel < Formula
     cd libexec do
       with_env(CHPL_LLVM: "system") do
         system "util/test/checkChplInstall"
-        # TODO: enable when bug affecting chpldoc install is resolved
-        # system "util/test/checkChplDoc"
+        system "util/test/checkChplDoc"
       end
       with_env(CHPL_LLVM: "none") do
         system "util/test/checkChplInstall"
-        # TODO: enable when bug affecting chpldoc install is resolved
-        # system "util/test/checkChplDoc"
+        system "util/test/checkChplDoc"
       end
     end
     system bin/"chpl", "--print-passes", "--print-commands", libexec/"examples/hello.chpl"
+    system bin/"chpldoc", "--version"
     system bin/"mason", "--version"
   end
 end
