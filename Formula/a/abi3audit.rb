@@ -6,6 +6,7 @@ class Abi3audit < Formula
   url "https://files.pythonhosted.org/packages/98/8c/987d0c3fbc7e7ce2e1baa336d7cd68c6b0ffbf0237442c4e33175824eefa/abi3audit-0.0.10.tar.gz"
   sha256 "a68af492ec3b373bd9329ed05b7bacdecd727a97b1d75921634c35d0e5f48de5"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "aa71845ddc7c20c407ee8a741736f06d8f858bf1daba8f27b8041e496c19ce66"
@@ -26,8 +27,8 @@ class Abi3audit < Formula
   end
 
   resource "abi3info" do
-    url "https://files.pythonhosted.org/packages/05/8a/fdbc086c8fda87125f08adb36853e14f6231071d1306f90cbf5cd1a38abb/abi3info-2024.3.26.tar.gz"
-    sha256 "6088d6d7920104309ab55877d2b2bfc8ace18c78cc89f9dedd9e92933308551d"
+    url "https://files.pythonhosted.org/packages/82/f8/303cd7d59d739a8af265a5e6bc4ae7ad8afee80355c858f6ba5bdc6a62c6/abi3info-2024.4.10.tar.gz"
+    sha256 "1548775e18952c6434cb050e9ade4a8eb266ab500101982efa376bd14518cc5e"
   end
 
   resource "attrs" do
@@ -51,8 +52,8 @@ class Abi3audit < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "kaitaistruct" do
