@@ -33,6 +33,11 @@ class Logcli < Formula
     ]
 
     system "go", "build", *std_go_args(ldflags:), "./cmd/logcli"
+
+    generate_completions_from_executable(
+      bin/"logcli",
+      shell_parameter_format: "--completion-script-", shells: [:bash, :zsh],
+    )
   end
 
   test do
