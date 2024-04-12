@@ -1959,6 +1959,7 @@ ugrep
 unar
 ungit
 uni
+uni-algo
 universal-ctags
 usb.ids
 usbredir
