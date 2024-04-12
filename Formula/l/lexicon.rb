@@ -10,14 +10,13 @@ class Lexicon < Formula
   head "https://github.com/AnalogJ/lexicon.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "536701984157787f0bec52fdac0a9e7b58924c383a5209b43b9d4eb775a53a89"
-    sha256 cellar: :any,                 arm64_ventura:  "cd8f204e0b8194f0d861ad8bde322c8f134ddf795a03f07f05fe53621fc110d3"
-    sha256 cellar: :any,                 arm64_monterey: "831eb32fc2b6bf22cc8c7a7f64aeb51f46d5b50e243e49505f7d14817ae714d5"
-    sha256 cellar: :any,                 sonoma:         "b2badc6182a2ccdae0c5cdfd43f00a4f667ea31ee462100120b0edb41f972e72"
-    sha256 cellar: :any,                 ventura:        "6f000c5a554a011594ec5d59a9846bb483eb777ccfddf54280680a23ed8b91fb"
-    sha256 cellar: :any,                 monterey:       "5acb13c75c220e39d046c413c038bbfd1b8b1de90a0752cca66cf907b719733d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0cec45d788f077e7cc0b0b2fa24c3265ddd7893873fb631b4798e8d8f008b8e7"
+    sha256 cellar: :any,                 arm64_sonoma:   "9c92ebc05f30cd7a0a3ef3e9e103ac44609137db07c05a5a0068adfd32fee0cd"
+    sha256 cellar: :any,                 arm64_ventura:  "a8322855d152df6a2de6871ebd8fe735d4419796ecff717d8154ee05398d5b6c"
+    sha256 cellar: :any,                 arm64_monterey: "61e9c24351c84f37c9c7d81169b5976b39c6351395c04e4ac6274c6a0912765e"
+    sha256 cellar: :any,                 sonoma:         "39a4ecd37589923c960212f6dc82d4f5c9e3d54710918c59801d9ea13c4fe598"
+    sha256 cellar: :any,                 ventura:        "60179799ec4234f20854fa3ceda9f50d97e27e34d10e31ab7e5b0ff5bfa32a04"
+    sha256 cellar: :any,                 monterey:       "01e3cedcacd4038bff586df4b8a75c6c75309475ab2d8ff749b35f73e4fc76b8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b47af4b3b652b6f7d6804ae871aa4181f695b29a96baaf76cdc2e36d3351a6a6"
   end
 
   depends_on "certifi"
