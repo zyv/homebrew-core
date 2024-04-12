@@ -9,13 +9,13 @@ class Borgmatic < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "49015d16c270e168af02b427c2b89297ce9232b35db1c67626c5d35396b86bb2"
-    sha256 cellar: :any,                 arm64_ventura:  "b376b87880374cafd1db0a3412d1c1260c344c69477ad132da62dd98e1b677d6"
-    sha256 cellar: :any,                 arm64_monterey: "232c73ee0dbf1da9b4bdd91033969c75425b0f1716d19a8f4c7e29d6f727a41a"
-    sha256 cellar: :any,                 sonoma:         "8671142c030d8e1bd2437f3cd70b58970ffba26ff02bae484c9d149b1b4dc699"
-    sha256 cellar: :any,                 ventura:        "935e170c1287d43464d96db125c49b1d547d4f8447bf864da5903a050ec31e6c"
-    sha256 cellar: :any,                 monterey:       "90963ceb90c23a56c5c7bae48ba04d07706de5329c08577855b6bcb9d1c582c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17fb395af1f8e8df9b6dcc68b5951ffadd5392b4b5b5c311b9b496071c5e0f12"
+    sha256 cellar: :any,                 arm64_sonoma:   "1acf1e1b1a18db6a89bd581d10409065c81cfdc5591f37a1aa02e46dfca90bd4"
+    sha256 cellar: :any,                 arm64_ventura:  "3d04b5e8039af348c84095187aa722eb913d182bda01ff6ff07041ecfc56c840"
+    sha256 cellar: :any,                 arm64_monterey: "f7cc1066cced87db726fc8451b0d22fea087572b07493ff86f3b4fc06a9500ce"
+    sha256 cellar: :any,                 sonoma:         "13758d7afea8c6e84b516fe7f6048929147f78a69a0f3ff9b48ce0c57ec4cde7"
+    sha256 cellar: :any,                 ventura:        "21e20a970299c12661cc86ef3ac0447b760012f73dbf76252622ab01875f7950"
+    sha256 cellar: :any,                 monterey:       "7b28761183175361e943128046b919c63c4717c3f8c1509507e294557d594b96"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c23be4471cb2136dc8f3f95f1fdc4df9624b918dfbca94b5c5cf70ad0418ad46"
   end
 
   depends_on "rust" => :build # for rpds-py
