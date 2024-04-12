@@ -9,13 +9,13 @@ class Dnstwist < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "fde32f4aa7366f84921e50d4328f1fa9b34f5c4d07dfda4b126588d1b54859bd"
-    sha256 cellar: :any,                 arm64_ventura:  "7cbb9c99cf7705f9cd96d2f1b646724da2ffd351d663832aff1e5b399e8c17a2"
-    sha256 cellar: :any,                 arm64_monterey: "e6e6ce5ad5d0a4703946b2999a04d42f7b5e80ac7a21acd6df0945230b5ad051"
-    sha256 cellar: :any,                 sonoma:         "c64acdde114add958d39faec5b864b958d590b7333108a4c063850082356010e"
-    sha256 cellar: :any,                 ventura:        "671efaf4467405ce914e274c93e7fa14737095021cb54ad1b5484b37e93dff33"
-    sha256 cellar: :any,                 monterey:       "39604878f8b5e3af3796143ad5eb3149e11f07b2f36746224b4d0665a810327a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e2498d888b5c22b3f94c63a6a8f81aef7a641ce50bd0013e4ae071537ccd023d"
+    sha256 cellar: :any,                 arm64_sonoma:   "4986cd314d136ca18a900b2fd68643fa0b8408f9977cb8a80446523bafc9b5cd"
+    sha256 cellar: :any,                 arm64_ventura:  "5470501061408ab627de7c60a9bea3650ca799aad912d8bebcd84507e2fb919f"
+    sha256 cellar: :any,                 arm64_monterey: "0dd1e983e5da8620efd1ab67e5f505fbdbd489a88a4aaf2c04f2bcf23bd280d2"
+    sha256 cellar: :any,                 sonoma:         "ffda1e82f01e73d47371e5336c836348c95fe463c7bf33e2c76e5477b17040e5"
+    sha256 cellar: :any,                 ventura:        "464836eeb1c6cdddc0feaf1eae0c98ba7d39fc1c2f609f2789593e1c9e9abf90"
+    sha256 cellar: :any,                 monterey:       "c4694ee3f34c016532c59af5c5b8d03fe900017c5c5a8231b543b99006fa1802"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "017380a9b2266e4339d18644d913e0a876e3d800707494588c68ad142216f1b8"
   end
 
   depends_on "certifi"
