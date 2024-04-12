@@ -6,6 +6,7 @@ class Apprise < Formula
   url "https://files.pythonhosted.org/packages/c1/d7/5eb1bd8fe2883fc8e15e8f19760a4ca12a28f7f19a0d636b8e03656489a1/apprise-1.7.5.tar.gz"
   sha256 "0ac34b27009d5c625e87d33ec85fa577062b57f3bced6d7223e17c5afbb40e68"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "d39c077d5614c71333877f0870d1fb2dbf510ea47889798847c62df4cf0bcfd1"
@@ -32,8 +33,8 @@ class Apprise < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "markdown" do
