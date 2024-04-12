@@ -6,6 +6,7 @@ class Datalad < Formula
   url "https://files.pythonhosted.org/packages/ee/51/43be9521b4942bf5db7e218e8802e747b4aa7fd8a7c7be80580a8e63232b/datalad-1.0.0.tar.gz"
   sha256 "34113a9fdd2f8fa2aa6124a89a2853e83a3604f6b31eeaf5f9161def0da692e7"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "08efa3bc9ef069652336c2908dc8cc4fed4cd3a5f9d86f68777f3dc8af200170"
@@ -64,8 +65,8 @@ class Datalad < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "importlib-metadata" do
@@ -91,11 +92,6 @@ class Datalad < Formula
   resource "jaraco-functools" do
     url "https://files.pythonhosted.org/packages/57/7c/fe770e264913f9a49ddb9387cca2757b8d7d26f06735c1bfbb018912afce/jaraco.functools-4.0.0.tar.gz"
     sha256 "c279cb24c93d694ef7270f970d499cab4d3813f4e08273f95398651a634f0925"
-  end
-
-  resource "jeepney" do
-    url "https://files.pythonhosted.org/packages/d6/f4/154cf374c2daf2020e05c3c6a03c91348d59b23c5366e968feb198306fdf/jeepney-0.8.0.tar.gz"
-    sha256 "5efe48d255973902f6badc3ce55e2aa6c5c3b3bc642059ef3a91247bcfcc5806"
   end
 
   resource "keyring" do
@@ -151,11 +147,6 @@ class Datalad < Formula
   resource "requests-toolbelt" do
     url "https://files.pythonhosted.org/packages/f3/61/d7545dafb7ac2230c70d38d31cbfe4cc64f7144dc41f6e4e4b78ecd9f5bb/requests-toolbelt-1.0.0.tar.gz"
     sha256 "7681a0a3d047012b5bdc0ee37d7f8f07ebe76ab08caeccfc3921ce23c88d5bc6"
-  end
-
-  resource "secretstorage" do
-    url "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz"
-    sha256 "2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77"
   end
 
   resource "tqdm" do
