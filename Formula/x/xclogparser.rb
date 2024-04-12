@@ -1,8 +1,8 @@
 class Xclogparser < Formula
   desc "Tool to parse the SLF serialization format used by Xcode"
   homepage "https://github.com/MobileNativeFoundation/XCLogParser"
-  url "https://github.com/MobileNativeFoundation/XCLogParser/archive/refs/tags/v0.2.38.tar.gz"
-  sha256 "45ddbfa9937965b97837fdccfc3a2c45ce77076f77adb9a973821159d75b5e80"
+  url "https://github.com/MobileNativeFoundation/XCLogParser/archive/refs/tags/v0.2.39.tar.gz"
+  sha256 "b225891b94bbdb549ddbc9ffe838ad87f73ef7cc79934e3e23969bb1220eafd9"
   license "Apache-2.0"
 
   bottle do
@@ -19,20 +19,21 @@ class Xclogparser < Formula
 
   uses_from_macos "swift"
 
-  resource "test_log" do
-    url "https://github.com/tinder-maxwellelliott/XCLogParser/releases/download/0.2.9/test.xcactivitylog"
-    sha256 "bfcad64404f86340b13524362c1b71ef8ac906ba230bdf074514b96475dd5dca"
-  end
-
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/xclogparser"
   end
 
   test do
-    resource("test_log").stage(testpath)
-    shell_output = shell_output("#{bin}/xclogparser dump --file #{testpath}/test.xcactivitylog")
-    match_data = shell_output.match(/"title" : "(Run custom shell script 'Run Script')"/)
-    assert_equal "Run custom shell script 'Run Script'", match_data[1]
+    resource "homebrew-test_log" do
+      url "https://github.com/chenrui333/github-action-test/releases/download/2024.04.14/test.xcactivitylog"
+      sha256 "3ac25e3160e867cc2f4bdeb06043ff951d8f54418d877a9dd7ad858c09cfa017"
+    end
+
+    resource("homebrew-test_log").stage(testpath)
+    output = shell_output("#{bin}/xclogparser dump --file #{testpath}/test.xcactivitylog")
+    assert_match "Target 'helloworldTests' in project 'helloworld'", output
+
+    assert_match version.to_s, shell_output("#{bin}/xclogparser version")
   end
 end
