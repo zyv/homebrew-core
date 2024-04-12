@@ -6,6 +6,7 @@ class JenkinsJobBuilder < Formula
   url "https://files.pythonhosted.org/packages/cc/28/48099c7d0762b127469f8a7574fb3b5f41a158fb4e41022dcf2b99aeb859/jenkins-job-builder-6.2.0.tar.gz"
   sha256 "915da0d6a6d2e4bedb12a7cf8a38fad1e2bea5b4dcf1202cfed72da4dbf43c5b"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "4541d808669b786d006d1126e7d34f2dc96c3e8161d3875ae3599d6b8d1ccacd"
@@ -32,8 +33,8 @@ class JenkinsJobBuilder < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "jinja2" do
@@ -72,8 +73,8 @@ class JenkinsJobBuilder < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+    url "https://files.pythonhosted.org/packages/5f/dd/50c569f342bc5d22142e2fc5fab1822d256202f404a384f05541f703f2ff/setuptools-69.3.tar.gz"
+    sha256 "e1fd0ca7ba442e4be8a415dcca867b8018777dd5f95f4492bb4dc7d77dbc8bd8"
   end
 
   resource "six" do
