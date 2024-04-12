@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/b1/58/6a89640d52368524af1455b7fb18d013f18fd7e93acb2fa73f75dd87ead0/snakemake-8.10.6.tar.gz"
-  sha256 "2b624f033bb020a4763c4274f11eb0b34b51fb3b73cc64598005eaa897f11dd6"
+  url "https://files.pythonhosted.org/packages/9b/95/2a69e23ff7087259b2dd566c08ed4d0e929f137e9bee8a26dc64aa8be3e8/snakemake-8.10.7.tar.gz"
+  sha256 "c64e0ddfe2af6c06f0c50f5451b8cffad0775a829364754e40da418b4c1118d6"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -65,8 +65,8 @@ class Snakemake < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/1f/53/a5da4f2c5739cf66290fac1431ee52aff6851c7c8ffd8264f13affd7bcdd/docutils-0.20.1.tar.gz"
-    sha256 "f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b"
+    url "https://files.pythonhosted.org/packages/21/ff/c495b797462434f0befcb598b51cde31c3ebdf8577c3fd9d9a8f5eeb844c/docutils-0.21.1.tar.gz"
+    sha256 "65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f"
   end
 
   resource "dpath" do
@@ -95,8 +95,8 @@ class Snakemake < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "immutables" do
@@ -200,13 +200,13 @@ class Snakemake < Formula
   end
 
   resource "snakemake-interface-common" do
-    url "https://files.pythonhosted.org/packages/d8/69/9578aaa7c6631d1e3bc444a543cad1df47ff9a79eb8158084c2259b00367/snakemake_interface_common-1.17.1.tar.gz"
-    sha256 "555c8218d9b68ddc1046f94a517e7d0f22e15bdc839d6ce149608d8ec137b9ae"
+    url "https://files.pythonhosted.org/packages/d2/41/4b47eba2790d7c33496e60204a16e6f82435dc62aac86d4528a1331e60bd/snakemake_interface_common-1.17.2.tar.gz"
+    sha256 "7a2bba88df98c1a0a5cec89b835c62dd2e6e72c1fb8fd104fe73405c800b87c0"
   end
 
   resource "snakemake-interface-executor-plugins" do
-    url "https://files.pythonhosted.org/packages/f3/04/dea6e5bcaaedd27784893a48c56b5192a559c0e5d3a0c3b533585e2a83b5/snakemake_interface_executor_plugins-9.1.0.tar.gz"
-    sha256 "26da734f7399f5963c5bc7cbcbb51f2d61e3c76298010418d76c48dda92aeb2f"
+    url "https://files.pythonhosted.org/packages/87/55/451357845658465df9241149fb8cbcb623b7d2066f69d426076d61d979a5/snakemake_interface_executor_plugins-9.1.1.tar.gz"
+    sha256 "357c3b1d633b26241693a4e5ce291fbe198c03a54a30acfa86dd97dc252fa2c6"
   end
 
   resource "snakemake-interface-report-plugins" do
