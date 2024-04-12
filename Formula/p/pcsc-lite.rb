@@ -1,8 +1,8 @@
 class PcscLite < Formula
   desc "Middleware to access a smart card using SCard API"
   homepage "https://pcsclite.apdu.fr/"
-  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.0.3.tar.bz2"
-  sha256 "f42ee9efa489e9ff5d328baefa26f9c515be65021856e78d99ad1f0ead9ec85d"
+  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.1.0.tar.bz2"
+  sha256 "85cab61cc744c81e2bc432656863293b8428d0136f079e3b12a84b335b5b35aa"
   license all_of: ["BSD-3-Clause", "GPL-3.0-or-later", "ISC"]
 
   livecheck do
