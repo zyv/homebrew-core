@@ -6,6 +6,7 @@ class Internetarchive < Formula
   url "https://files.pythonhosted.org/packages/ab/f0/edfeb1a2add5577d831f5639dea1b886e04ca898a9abd2645345b4660fce/internetarchive-3.7.0.tar.gz"
   sha256 "fca52e6b28fb76c84c47e61f32794653dc2d2ae4cc2de90911cb967be221d70c"
   license "AGPL-3.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d2c2fa40180e2c11e270b8128f2c304244ad9f12be976d9dfe196aa95c56122f"
@@ -36,8 +37,8 @@ class Internetarchive < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "jsonpatch" do
