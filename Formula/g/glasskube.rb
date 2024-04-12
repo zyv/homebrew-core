@@ -4,6 +4,7 @@ class Glasskube < Formula
   url "https://github.com/glasskube/glasskube/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "0508423982723e9b28d73f14ecf0f5f2bdcca2fc45616a09922c1601d4eb2d78"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/glasskube/glasskube.git", branch: "main"
 
   bottle do
@@ -17,6 +18,7 @@ class Glasskube < Formula
   end
 
   depends_on "go" => :build
+  depends_on "node" => :build
 
   def install
     ldflags = %W[
@@ -26,6 +28,7 @@ class Glasskube < Formula
       -X github.com/glasskube/glasskube/internal/config.Date=#{time.iso8601}
     ]
 
+    system "make", "web"
     system "go", "build", *std_go_args(ldflags:), "./cmd/glasskube"
 
     generate_completions_from_executable(bin/"glasskube", "completion")
