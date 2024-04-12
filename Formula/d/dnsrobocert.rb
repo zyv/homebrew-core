@@ -10,14 +10,13 @@ class Dnsrobocert < Formula
   head "https://github.com/adferrand/dnsrobocert.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "c2fbe2541d4ee0f0f22a62f87fbaa10f8456076f577c78992843c448b8ac8e61"
-    sha256 cellar: :any,                 arm64_ventura:  "2d1da37effab104c8cf2988966a6e5ef8b1b8c39b25cba7b21456f38e1267ac9"
-    sha256 cellar: :any,                 arm64_monterey: "7eaba9aa5bd590600bc10511eaa0410a25308e49f6b50de14b66853772a07ea8"
-    sha256 cellar: :any,                 sonoma:         "5b835e58fda62c4fc23a559033346ccb471746f6ba6d646d66b1121c90767f6b"
-    sha256 cellar: :any,                 ventura:        "7eca5a5f85672a52063472c9a64c234f267bd603f52cf8894c38090623c2a46f"
-    sha256 cellar: :any,                 monterey:       "67602753a6179919e119e1e4c12ea14f553c1d36998ad05a7f7c9f3b12f80e21"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78bff4f49c350890390d123537d20132c989e48f8d9888de8f29b94337f19c5b"
+    sha256 cellar: :any,                 arm64_sonoma:   "9eb6876db15e251a8e3071768b87725afe61f6f857e71d9fbae624337998cf2a"
+    sha256 cellar: :any,                 arm64_ventura:  "318d3033777b94e4b943a27a0512e8bdf074a1a35679a5133e162aa088f670a6"
+    sha256 cellar: :any,                 arm64_monterey: "1eb5cb375ff3081887a1bfdc3dbca374d991aa3aca7b8612fd68dcb09f8cc993"
+    sha256 cellar: :any,                 sonoma:         "53efada4fff1f8819b2169fc8024c59302322daae324b7eaa0d90b0267718da6"
+    sha256 cellar: :any,                 ventura:        "c77f8abf6256fad30a086ab44e35808b4a34fe7779b22c1c23da37a4164ef479"
+    sha256 cellar: :any,                 monterey:       "fc3d198b2fdaf6b5f1fa225d776a84dd3d2c77fb1330be8b23fbc4b5a424cff9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d356a1d69f2ac5c985e06acb7291da1a22a93fe15cbe1de96674c0cc290d4e52"
   end
 
   depends_on "rust" => :build
