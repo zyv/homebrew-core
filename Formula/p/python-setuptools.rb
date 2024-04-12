@@ -6,13 +6,13 @@ class PythonSetuptools < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "48673e50b9474f4e00b998088484ed366e685ec3d34ea52c68557cfe774e7d5c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "48673e50b9474f4e00b998088484ed366e685ec3d34ea52c68557cfe774e7d5c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "48673e50b9474f4e00b998088484ed366e685ec3d34ea52c68557cfe774e7d5c"
-    sha256 cellar: :any_skip_relocation, sonoma:         "7c8f16f1ce22479056cd208b11cb64e7071d412941f11689035b9654d065a9c1"
-    sha256 cellar: :any_skip_relocation, ventura:        "7c8f16f1ce22479056cd208b11cb64e7071d412941f11689035b9654d065a9c1"
-    sha256 cellar: :any_skip_relocation, monterey:       "7c8f16f1ce22479056cd208b11cb64e7071d412941f11689035b9654d065a9c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "48673e50b9474f4e00b998088484ed366e685ec3d34ea52c68557cfe774e7d5c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "925c1d73a5fdd47ae39d0e157c096d3f23ddac54908a07771e22e4ac0540ab1d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "925c1d73a5fdd47ae39d0e157c096d3f23ddac54908a07771e22e4ac0540ab1d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "925c1d73a5fdd47ae39d0e157c096d3f23ddac54908a07771e22e4ac0540ab1d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "3a21365538d499e90b3f0cc9ef3de93b6e81e43d9bf01a47982cbb69bc8bec70"
+    sha256 cellar: :any_skip_relocation, ventura:        "3a21365538d499e90b3f0cc9ef3de93b6e81e43d9bf01a47982cbb69bc8bec70"
+    sha256 cellar: :any_skip_relocation, monterey:       "3a21365538d499e90b3f0cc9ef3de93b6e81e43d9bf01a47982cbb69bc8bec70"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "925c1d73a5fdd47ae39d0e157c096d3f23ddac54908a07771e22e4ac0540ab1d"
   end
 
   depends_on "python@3.12" => [:build, :test]
