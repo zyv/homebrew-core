@@ -6,7 +6,7 @@ class Localstack < Formula
   url "https://files.pythonhosted.org/packages/20/4e/6c7e90dd5fe61547b3058dce38f2ed79ad6e17bd37a610fee1429f9a1159/localstack-3.3.0.tar.gz"
   sha256 "50e8c2980eb09e9ee5176776468a3fc9de05599c18dfaf011db434ab57556405"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "2b91beebe73c1d32afd2eb254d89fda9acf21fe35f7fbb48be80ec3c25d95272"
@@ -65,8 +65,8 @@ class Localstack < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "localstack-core" do
