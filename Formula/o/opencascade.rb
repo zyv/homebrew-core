@@ -5,7 +5,7 @@ class Opencascade < Formula
   version "7.7.2"
   sha256 "2fb23c8d67a7b72061b4f7a6875861e17d412d524527b2a96151ead1d9cfa2c1"
   license "LGPL-2.1-only"
-  revision 3
+  revision 4
 
   # The first-party download page (https://dev.opencascade.org/release)
   # references version 7.5.0 and hasn't been updated for later maintenance
@@ -72,6 +72,32 @@ class Opencascade < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
+    # The soname / install name of libtbb and libtbbmalloc are versioned only
+    # by the minor version (e.g., `libtbb.so.12`), but Open CASCADE's CMake
+    # config files reference the fully-versioned filenames (e.g.,
+    # `libtbb.so.12.11`).
+    # This mandates rebuilding opencascade upon tbb's minor version updates.
+    # To avoid this, we change the fully-versioned references to the minor-only
+    # version. For example:
+    #   libtbb.so.12.11 => libtbb.so.12
+    #   libtbbmalloc.so.2.11 => libtbbmalloc.so.2
+    #   libtbb.12.11.dylib => libtbb.12.dylib
+    #   libtbbmalloc.2.11.dylib => libtbbmalloc.2.dylib
+    # See also:
+    #   https://github.com/Homebrew/homebrew-core/issues/129111
+    #   https://dev.opencascade.org/content/cmake-files-macos-link-non-existent-libtbb128dylib
+    tbb_regex = /
+      libtbb
+      (malloc)? # 1
+      (\.so)? # 2
+      \.(\d+) # 3
+      \.(\d+) # 4
+      (\.dylib)? # 5
+    /x
+    inreplace (lib/"cmake/opencascade").glob("*.cmake") do |s|
+      s.gsub! tbb_regex, 'libtbb\1\2.\3\5', false
+    end
+
     bin.env_script_all_files(libexec, CASROOT: prefix)
 
     # Some apps expect resources in legacy ${CASROOT}/src directory
@@ -85,8 +111,6 @@ class Opencascade < Formula
     assert_equal "1", output.split("\n", 2)[1].chomp
 
     # Make sure hardcoded library name references in our CMake config files are valid.
-    # https://github.com/Homebrew/homebrew-core/issues/129111
-    # https://dev.opencascade.org/content/cmake-files-macos-link-non-existent-libtbb128dylib
     (testpath/"CMakeLists.txt").write <<~CMAKE
       cmake_minimum_required(VERSION 3.5)
       project(test LANGUAGES CXX)
