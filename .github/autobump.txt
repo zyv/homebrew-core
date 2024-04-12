@@ -870,6 +870,7 @@ grype
 gsettings-desktop-schemas
 gsmartcontrol
 gsoap
+gstreamer
 gtk-gnutella
 gtk4
 gtkmm4
