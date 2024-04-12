@@ -1401,6 +1401,7 @@ open62541
 opendetex
 opendht
 openexr
+openfast
 openfga
 openfpgaloader
 openh264
