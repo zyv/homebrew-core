@@ -9,13 +9,13 @@ class Arjun < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0573dba6e79a5db1e133709cf6dbef4a726294d2ce2ec0de6fbbc1f6622dbf34"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0573dba6e79a5db1e133709cf6dbef4a726294d2ce2ec0de6fbbc1f6622dbf34"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0573dba6e79a5db1e133709cf6dbef4a726294d2ce2ec0de6fbbc1f6622dbf34"
-    sha256 cellar: :any_skip_relocation, sonoma:         "0573dba6e79a5db1e133709cf6dbef4a726294d2ce2ec0de6fbbc1f6622dbf34"
-    sha256 cellar: :any_skip_relocation, ventura:        "0573dba6e79a5db1e133709cf6dbef4a726294d2ce2ec0de6fbbc1f6622dbf34"
-    sha256 cellar: :any_skip_relocation, monterey:       "0573dba6e79a5db1e133709cf6dbef4a726294d2ce2ec0de6fbbc1f6622dbf34"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a689285ca1924fcf99a49aefc8eb67a8b6ff195357318a967d865dc638f68464"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "bdc1db4487a8ada5194b9aad1bc7e627e992f37ffed57852b4c7488deca50113"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bdc1db4487a8ada5194b9aad1bc7e627e992f37ffed57852b4c7488deca50113"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "bdc1db4487a8ada5194b9aad1bc7e627e992f37ffed57852b4c7488deca50113"
+    sha256 cellar: :any_skip_relocation, sonoma:         "bdc1db4487a8ada5194b9aad1bc7e627e992f37ffed57852b4c7488deca50113"
+    sha256 cellar: :any_skip_relocation, ventura:        "bdc1db4487a8ada5194b9aad1bc7e627e992f37ffed57852b4c7488deca50113"
+    sha256 cellar: :any_skip_relocation, monterey:       "bdc1db4487a8ada5194b9aad1bc7e627e992f37ffed57852b4c7488deca50113"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6afe93b8bfc4e8a3a049478b957357ccd78a8435445894c107d4c12ab82ff759"
   end
 
   depends_on "certifi"
