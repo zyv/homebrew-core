@@ -734,6 +734,10 @@
   "svtplay-dl": {
     "exclude_packages": ["certifi", "cryptography"]
   },
+  "sysaidmin": {
+    "exclude_packages": ["certifi"],
+    "extra_packages": ["setuptools"]
+  },
   "theharvester": {
     "exclude_packages": ["certifi"]
   },
