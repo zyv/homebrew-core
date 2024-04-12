@@ -699,7 +699,6 @@ fisher
 flac
 flank
 flann
-flarectl
 flashrom
 flatbuffers
 fleet-cli
