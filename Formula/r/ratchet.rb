@@ -19,7 +19,13 @@ class Ratchet < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    ldflags = %W[
+      -s
+      -w
+      -X=github.com/sethvargo/ratchet/internal/version.version=#{version}
+      -X=github.com/sethvargo/ratchet/internal/version.commit=homebrew
+    ]
+    system "go", "build", *std_go_args(ldflags:)
 
     pkgshare.install "testdata"
   end
@@ -28,5 +34,8 @@ class Ratchet < Formula
     cp_r pkgshare/"testdata", testpath
     output = shell_output(bin/"ratchet check testdata/github.yml 2>&1", 1)
     assert_match "found 4 unpinned refs", output
+
+    output = shell_output(bin/"ratchet -v 2>&1")
+    assert_match "ratchet #{version} (homebrew", output
   end
 end
