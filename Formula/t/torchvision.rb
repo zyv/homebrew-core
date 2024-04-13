@@ -14,13 +14,13 @@ class Torchvision < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "6b22b8bc583fe6bf8d107ed80a01a0d9eee3585999c57cd2fdc9b893aac86bbe"
-    sha256 cellar: :any,                 arm64_ventura:  "f7197c4eabaef9c13d4c6c9282df7693bc70bb9e4d0509afc1a8e91cc0c3e3d8"
-    sha256 cellar: :any,                 arm64_monterey: "7b6a69941c2be598e1af661cc0d4955932f3628bc77513d3cd11ac7f0eb476dd"
-    sha256 cellar: :any,                 sonoma:         "dacec4a595a383dc197fbae7222478bd579087b82c432cd1d8d243b7e475cc9b"
-    sha256 cellar: :any,                 ventura:        "d965b74d92c31c10c30231712cb5c7ce649b00959ae52a932787e5b86159649d"
-    sha256 cellar: :any,                 monterey:       "41ad3d58c7f6c1ca65e91e6a99889dbf20640367ac97f3067709f7d8c12edf28"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f530f66ebd7b5e361740b2fa069ad736dc90424c3dd81fb0361ee2bd36469b2"
+    sha256 cellar: :any,                 arm64_sonoma:   "df7f946be163a8525ce627f70656345e189cb001d325271682e7d76dfffa3a20"
+    sha256 cellar: :any,                 arm64_ventura:  "95cef3493e8398e2b4b88a6cb877e01f9aa212c1c9f267c2ea9f9c12213535b6"
+    sha256 cellar: :any,                 arm64_monterey: "557595a2dd490ce89657205beefb16446148422323566f40255464fdfe294ef6"
+    sha256 cellar: :any,                 sonoma:         "22c7faa55dbf78ffa60b7b21b583c7bcaa8b88c0caa03c84728e4e6dea61b05b"
+    sha256 cellar: :any,                 ventura:        "6fb38e025316f68d2f0abaf799d595ed3c76b12e81b76973743d7a8c9c352617"
+    sha256 cellar: :any,                 monterey:       "2b04230010c99cf4cd2efbc020bcacd1d09699780c6455adde780034e8c5f9d2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1575c7aed788dbb65579cb1cfcd17e96fdb1d932296c45caf8a8cfd567619945"
   end
 
   depends_on "cmake" => :build
