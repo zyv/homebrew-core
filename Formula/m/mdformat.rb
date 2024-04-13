@@ -7,6 +7,16 @@ class Mdformat < Formula
   sha256 "a9dbb1838d43bb1e6f03bd5dca9412c552544a9bc42d6abb5dc32adfe8ae7c0d"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "14024bedc37d382d69cf4bdc4d6da652920d83b238c17c5e4bfa5078bc40e2bc"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "14024bedc37d382d69cf4bdc4d6da652920d83b238c17c5e4bfa5078bc40e2bc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "14024bedc37d382d69cf4bdc4d6da652920d83b238c17c5e4bfa5078bc40e2bc"
+    sha256 cellar: :any_skip_relocation, sonoma:         "14024bedc37d382d69cf4bdc4d6da652920d83b238c17c5e4bfa5078bc40e2bc"
+    sha256 cellar: :any_skip_relocation, ventura:        "14024bedc37d382d69cf4bdc4d6da652920d83b238c17c5e4bfa5078bc40e2bc"
+    sha256 cellar: :any_skip_relocation, monterey:       "14024bedc37d382d69cf4bdc4d6da652920d83b238c17c5e4bfa5078bc40e2bc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8c5d61f62ab333861eccbfeaf1a7a9f4b8d09f0fc68a620a0a1c90146af14a2f"
+  end
+
   depends_on "python@3.12"
 
   resource "markdown-it-py" do
