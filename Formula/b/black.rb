@@ -3,10 +3,9 @@ class Black < Formula
 
   desc "Python code formatter"
   homepage "https://black.readthedocs.io/en/stable/"
-  url "https://files.pythonhosted.org/packages/8f/5f/bac24a952668c7482cfdb4ebf91ba57a796c9da8829363a772040c1a3312/black-24.3.0.tar.gz"
-  sha256 "a0c9c4a0771afc6919578cec71ce82a3e31e054904e7197deacbc9382671c41f"
+  url "https://files.pythonhosted.org/packages/e7/29/58e93d7775544b6058f1df71dce4a8f5b039c2f8e381d3c695444c3d3d5f/black-24.4.0.tar.gz"
+  sha256 "f07b69fda20578367eaebbd670ff8fc653ab181e1ff95d84497f9fa20e7d0641"
   license "MIT"
-  revision 1
   head "https://github.com/psf/black.git", branch: "main"
 
   livecheck do
@@ -15,13 +14,13 @@ class Black < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0ed51fee94b89ceb3451864c9547c85094ca9c483aa084b263611e4bb34724fd"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3154c74ca5bbaf9a8b5c33a24e14d7605f2e0c64fee3deb25bd82a85d55d9d0e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6528bdb9add228b1b77f1fb024cba2adcc349f46cfb7cb2d61b80ecc83c39913"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e5d33bb277f483fdf7f50d67df82fa013c444f9cb6a91caaa97789acb8319120"
-    sha256 cellar: :any_skip_relocation, ventura:        "7a8306f549a540da93cdbce35fd77d4cac2dde1b8000b027e9bde6c3ac99fa48"
-    sha256 cellar: :any_skip_relocation, monterey:       "a91b11a10d630a7ae7e5293b7fb3bc296a5bc198b098c5360ca7001a1c2c42b2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d408cf82aaf7bdd7d3ce0a7c8b732f65c6a34c02c424f1cf47bf90b2aa3551ab"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "43ad20b7c6c5d5ec45e39b539475d6ee80e59a344533ba760f133a8276a96e39"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "0bcf5dc74d5fae7109f564b8d0cbdb4f20136295f929adcc054729a5a03812e8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c970dc9b7255552dae091ba72f861fed94ee2deec4c9df730fb50da9fce18892"
+    sha256 cellar: :any_skip_relocation, sonoma:         "823a44370eaf05e78b438c2aa135c6bda02a5aec8dba53e6b4da66d6c2ee3bb5"
+    sha256 cellar: :any_skip_relocation, ventura:        "eabeb77eef8f212f9aa1e7a436bc3768c18e253eb1688c5de0f7cb9dadf0b854"
+    sha256 cellar: :any_skip_relocation, monterey:       "72ba8d31c55ceaddc21648acf2ca635cb6af8285dc3dadb5de684bff17bf87fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b4f56894d076553242648edae23f9c2a08bc08f79bb64d3d5dbe8715147054dd"
   end
 
   depends_on "python@3.12"
