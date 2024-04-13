@@ -1,15 +1,13 @@
 class Chezmoi < Formula
   desc "Manage your dotfiles across multiple diverse machines, securely"
   homepage "https://chezmoi.io/"
-  url "https://github.com/twpayne/chezmoi.git",
-      tag:      "v2.47.3",
-      revision: "4f76edb5295068569d7c6311020ac0094c77ef44"
+  url "https://github.com/twpayne/chezmoi/archive/refs/tags/v2.47.4.tar.gz"
+  sha256 "3f4575c54b5c42b90ed37ed05314235b0e455e0dd05cc63bb64f910924211803"
   license "MIT"
   head "https://github.com/twpayne/chezmoi.git", branch: "master"
 
   # Upstream uses GitHub releases to indicate that a version is released,
   # so the `GithubLatest` strategy is necessary.
-
   livecheck do
     url :stable
     strategy :github_latest
@@ -31,7 +29,7 @@ class Chezmoi < Formula
     ldflags = %W[
       -s -w
       -X main.version=#{version}
-      -X main.commit=#{Utils.git_head}
+      -X main.commit=#{tap.user}
       -X main.date=#{time.iso8601}
       -X main.builtBy=#{tap.user}
     ]
