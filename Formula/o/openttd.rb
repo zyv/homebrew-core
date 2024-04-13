@@ -1,8 +1,8 @@
 class Openttd < Formula
   desc "Simulation game based upon Transport Tycoon Deluxe"
   homepage "https://www.openttd.org/"
-  url "https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-source.tar.xz"
-  sha256 "2a1deba01bfe58e2188879f450c3fa4f3819271ab49bf348dd66545f040d146f"
+  url "https://cdn.openttd.org/openttd-releases/14.0/openttd-14.0-source.tar.xz"
+  sha256 "96f76ab858816a5e30038ade0692e6ebf350b9f70bf19c7b48dda845c88418b1"
   license "GPL-2.0-only"
   head "https://github.com/OpenTTD/OpenTTD.git", branch: "master"
 
@@ -32,7 +32,7 @@ class Openttd < Formula
   depends_on "cmake" => :build
   depends_on "libpng"
   depends_on "lzo"
-  depends_on macos: :high_sierra # needs C++17
+  depends_on macos: :catalina # needs C++20
   depends_on "xz"
 
   uses_from_macos "zlib"
@@ -100,8 +100,10 @@ class Openttd < Formula
   def install
     # Disable CMake fixup_bundle to prevent copying dylibs
     inreplace "cmake/PackageBundle.cmake", "fixup_bundle(", "# \\0"
+    # Have CMake use our FIND_FRAMEWORK setting
+    inreplace "CMakeLists.txt", "set(CMAKE_FIND_FRAMEWORK LAST)", ""
 
-    args = std_cmake_args
+    args = std_cmake_args(find_framework: "FIRST")
     unless OS.mac?
       args << "-DCMAKE_INSTALL_BINDIR=bin"
       args << "-DCMAKE_INSTALL_DATADIR=#{share}"
