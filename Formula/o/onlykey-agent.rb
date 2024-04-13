@@ -9,13 +9,13 @@ class OnlykeyAgent < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "32442c6ffc49c4075e1b142d0d2401090b8c22161fc09f8addb886c05df9aef8"
-    sha256 cellar: :any,                 arm64_ventura:  "6f12a08462fad7eee1578667eff263b4bb9929ed3b312481060556dfb96e88f3"
-    sha256 cellar: :any,                 arm64_monterey: "465eff43f7d5311820d3e5a65bdab465d30a79a28c22a82b9b0227d0fd519350"
-    sha256 cellar: :any,                 sonoma:         "583d8b2f47dc8ca82964a1262c6a0b90e071d8055d586a0759f1a182bc818e01"
-    sha256 cellar: :any,                 ventura:        "2b513a17bba288e82682eb77cd504cbc4bb1e9c4df93d51a1a15d35cc5abe1db"
-    sha256 cellar: :any,                 monterey:       "66a8c24510c7048ab1bee51fc664c14d1688b03b32c5fa020c40e0b28f40f289"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5dd8c93c7b1cd9b5b683455c8644ae960ad9ad2e9333fb9e89de1b06f96d0f39"
+    sha256 cellar: :any,                 arm64_sonoma:   "df2aec63a18b97d68daea2eec00abf41da00cdef71809d6b86ed5c6d0082c147"
+    sha256 cellar: :any,                 arm64_ventura:  "65cdc304a9fdd5cae61bcad514bfedefdaaa31d1c2b2ce8c5980f08cafe76f8f"
+    sha256 cellar: :any,                 arm64_monterey: "1d565d4d6c563894bc2dd71e2184b4d8cc99b527e7f9f12a8e33d1d44f067713"
+    sha256 cellar: :any,                 sonoma:         "018dcca71117ae9939eff6d65757a4881e4183de6664fc57cee9618429d3211a"
+    sha256 cellar: :any,                 ventura:        "0dac0f883cfc9e5446bf38235a9185ef915a7ab63a530400895530eba5fc93c3"
+    sha256 cellar: :any,                 monterey:       "5edae9717a1ad9c5f31448a414a4436f723bc1b503b328849e3657a0ccdb3022"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1753ef31fec509a7829c2a600160fb000bca4859068cb45baebdae4f774d3d09"
   end
 
   depends_on "certifi"
