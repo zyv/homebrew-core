@@ -10,14 +10,13 @@ class Twine < Formula
   head "https://github.com/pypa/twine.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "bf718566eb7eaab3515119f0771a1f7626697dea998679edc5d06469d3bb9403"
-    sha256 cellar: :any,                 arm64_ventura:  "705fa5dd174d0211363e3a0ad7ec8faa5d33b679adbd1c842b16b32fe49b8969"
-    sha256 cellar: :any,                 arm64_monterey: "1be6a72634b7b0ab770bf90c13c28ab661026a070d14b4170ee76a4618496ee8"
-    sha256 cellar: :any,                 sonoma:         "3864b90972e221b4fe78d3e464c52b2b74924d0b2b7eff5c008fb0785f4e6e77"
-    sha256 cellar: :any,                 ventura:        "a17ce8f3730df77c173783fc9abf776dd370190f3b46fff90f873e3f62d68dbf"
-    sha256 cellar: :any,                 monterey:       "bb1b7c5bd76c9d8c9def2069a41f283ab010166037723e31540bc6111fcaa956"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "52f6366c3a309651a8370bf4be61be91b7caa7d01d2ac594a21172ff0805f98d"
+    sha256 cellar: :any,                 arm64_sonoma:   "9b78bb42d07d18af09b5e1f8456a58ccedbe184f8c6acf7d76c588ccb82771e4"
+    sha256 cellar: :any,                 arm64_ventura:  "8fa09b6cdea58f8e113b2d84e06676088324b0f30541ac65443c277b664734df"
+    sha256 cellar: :any,                 arm64_monterey: "fb0555b4f8aa3ee291892099dddc67a7d6e83f00c180da432e24ae8eef803f06"
+    sha256 cellar: :any,                 sonoma:         "971317111e70a1935620cb3ac1a466876c9a0b309d1b4499caa6411943433397"
+    sha256 cellar: :any,                 ventura:        "0ea0e20888af8cda7f1eeea9cce7ed50677f9314cdac231e9d595dcebc591006"
+    sha256 cellar: :any,                 monterey:       "79a737736ead73d5d3cceb5454376e8c9cc4230bf5eb835d99b76e4cb8e55119"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3c3748cb0278024a6a99e83ab86fc8e82b6f79e55fd4ad56a7df56262bdb977b"
   end
 
   depends_on "rust" => :build
