@@ -1165,6 +1165,7 @@ libxlsxwriter
 libxmlb
 libxmlsec1
 libxmu
+libxo
 libxvmc
 libzim
 libzzip
