@@ -37,14 +37,19 @@ class Atlantis < Formula
       system "go", "build", *std_go_args(ldflags: "-s -w", output: libexec/"bin/terraform")
     end
 
-    system "go", "build", *std_go_args(ldflags: "-s -w", output: libexec/"bin/atlantis")
+    ldflags = %W[
+      -s -w
+      -X main.version=#{version}
+      -X main.commit=brew
+      -X main.date=#{time.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags:, output: libexec/"bin/atlantis")
 
-    env = { PATH: libexec/"bin" }
-    (bin/"atlantis").write_env_script libexec/"bin/atlantis", env
+    (bin/"atlantis").write_env_script libexec/"bin/atlantis", PATH: libexec/"bin"
   end
 
   test do
-    system bin/"atlantis", "version"
+    assert_match version.to_s, shell_output("#{bin}/atlantis version")
     port = free_port
     loglevel = "info"
     gh_args = "--gh-user INVALID --gh-token INVALID --gh-webhook-secret INVALID --repo-allowlist INVALID"
