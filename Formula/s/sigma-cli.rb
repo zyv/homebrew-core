@@ -6,6 +6,7 @@ class SigmaCli < Formula
   url "https://files.pythonhosted.org/packages/93/d9/1f9b9129b722fe4127b3749d427ec0f2e0966858e204743c068446b532f0/sigma_cli-1.0.1.tar.gz"
   sha256 "a65dd949dd9812a4380332bacd6cf0c229647404fa31b766fae1596b6bf5e208"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
@@ -39,8 +40,8 @@ class SigmaCli < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "jinja2" do
@@ -64,13 +65,13 @@ class SigmaCli < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/37/fe/65c989f70bd630b589adfbbcd6ed238af22319e90f059946c26b4835e44b/pyparsing-3.1.1.tar.gz"
-    sha256 "ede28a1a32462f5a9705e07aea48001a08f7cf81a021585011deba701581a0db"
+    url "https://files.pythonhosted.org/packages/46/3a/31fd28064d016a2182584d579e033ec95b809d8e220e74c4af6f0f2e8842/pyparsing-3.1.2.tar.gz"
+    sha256 "a1bac0ce561155ecc3ed78ca94d3c9378656ad4c94c1270de543f621420f94ad"
   end
 
   resource "pysigma" do
-    url "https://files.pythonhosted.org/packages/39/5b/0605372257fde328cba8d65c0030a2bc2a71bd2ad65fca57c03cc840b626/pysigma-0.11.3.tar.gz"
-    sha256 "ed68af1c4150fdd55d0bc1f228fb512088162530a0410f9239deca09ec06942b"
+    url "https://files.pythonhosted.org/packages/94/75/aec3ebd2f369040b1de41e7453fad58ed3bf51343f3cc3356a6c09fc7619/pysigma-0.11.4.tar.gz"
+    sha256 "1e09b32e195f56d6afd2bd0e97f2d360f3d5ad99c2fe48b92012a935e52babdd"
   end
 
   resource "pysigma-backend-sqlite" do
