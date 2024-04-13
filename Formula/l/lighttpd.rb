@@ -11,13 +11,13 @@ class Lighttpd < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "faef6711a71611b1b4d329806f562918c01c4aba12937c1cd72f6d0cf6994b63"
-    sha256 arm64_ventura:  "3965819a87645eb03a7e7d63e0559be82176466fa2aecc844f97e97ea230b9d2"
-    sha256 arm64_monterey: "316e88e19ec2fb0429e37b3bba934b24dff6b0e8d9e6ad88729bc11462507584"
-    sha256 sonoma:         "d2f21e5bf0d4b221480188069407c6939727cbfbeb7fb8a607ccf92cf3b507ff"
-    sha256 ventura:        "6bd82f22ff0d37770625844ab2cc10c4e817f76fff443d47506aa9772ad4583e"
-    sha256 monterey:       "e95e5cfeb4729ba1dbc662afc9baf222719f123eeefaa6b73ca752e74e9b4849"
-    sha256 x86_64_linux:   "4588e2ff293427c1c6cf2af07fcd99006957eb09a0bbb89cc311b8176ada25d2"
+    sha256 arm64_sonoma:   "091059b0ac1e2356912caf2fe85f5bb0d88ebde56c43579d28c9a68b5eac1075"
+    sha256 arm64_ventura:  "00fb719b4328a1b7593452f8f6bae234a595ca089492f192bc309bdab055502f"
+    sha256 arm64_monterey: "aa6d7a5fe4662bdbbae1389091aec850c99d47f851dca621a55f9fcf7e5e7844"
+    sha256 sonoma:         "f5604bd4748f47f72e87a7e1192efc40748e1f1d7d271eb555e1bd6444776c75"
+    sha256 ventura:        "685d709d0d522aace4a102e2b28c3c04f2e6a6079de349d6148f999796571a8e"
+    sha256 monterey:       "596921b5fcabab2c21e6b75b54589016755e990cd86728810839b233cb4a830e"
+    sha256 x86_64_linux:   "8aa1c17b796dfc07c3e4d7543abc43af33469b5236aada5531baf3f98f8a66e2"
   end
 
   depends_on "autoconf" => :build
