@@ -4,7 +4,7 @@ class Chapel < Formula
   url "https://github.com/chapel-lang/chapel/releases/download/2.0.0/chapel-2.0.0.tar.gz"
   sha256 "b5387e9d37b214328f422961e2249f2687453c2702b2633b7d6a678e544b9a02"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   bottle do
@@ -19,8 +19,8 @@ class Chapel < Formula
 
   depends_on "cmake"
   depends_on "gmp"
-  depends_on "llvm"
-  depends_on "python@3.11"
+  depends_on "llvm@17"
+  depends_on "python@3.12"
 
   # LLVM is built with gcc11 and we will fail on linux with gcc version 5.xx
   fails_with gcc: "5"
@@ -29,10 +29,14 @@ class Chapel < Formula
     deps.map(&:to_formula).find { |f| f.name.match? "^llvm" }
   end
 
+  # Fixes: SyntaxWarning: invalid escape sequence '\d'
+  # Remove when merged: https://github.com/chapel-lang/chapel/pull/24643
+  patch :DATA
+
   def install
     # Always detect Python used as dependency rather than needing aliased Python formula
-    python = "python3.11"
-    # It should be noted that this will expand to: 'for cmd in python3.11 python3 python python2; do'
+    python = "python3.12"
+    # It should be noted that this will expand to: 'for cmd in python3.12 python3 python python2; do'
     # in our find-python.sh script.
     inreplace "util/config/find-python.sh", /^(for cmd in )(python3 )/, "\\1#{python} \\2"
 
@@ -122,3 +126,18 @@ class Chapel < Formula
     system bin/"mason", "--version"
   end
 end
+
+__END__
+diff --git a/util/chplenv/compiler_utils.py b/util/chplenv/compiler_utils.py
+index c4d683830f4c..1d1be1d55521 100644
+--- a/util/chplenv/compiler_utils.py
++++ b/util/chplenv/compiler_utils.py
+@@ -32,7 +32,7 @@ def CompVersion(version_string):
+     are not specified, 0 will be used for their value(s)
+     """
+     CompVersionT = namedtuple('CompVersion', ['major', 'minor', 'revision', 'build'])
+-    match = re.search(u'(\d+)(\.(\d+))?(\.(\d+))?(\.(\d+))?', version_string)
++    match = re.search(u"(\\d+)(\\.(\\d+))?(\\.(\\d+))?(\\.(\\d+))?", version_string)
+     if match:
+         major    = int(match.group(1))
+         minor    = int(match.group(3) or 0)
