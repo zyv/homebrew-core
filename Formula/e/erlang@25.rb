@@ -12,13 +12,13 @@ class ErlangAT25 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "777c56baa94033fefe0aa3340d025e630e1e7a173efb4f2ff37de9c490314b7f"
-    sha256 cellar: :any,                 arm64_ventura:  "5dec2eb68560a5c543f840bff803e17594f7eb846c2c91ec91a5c34184a2c1f7"
-    sha256 cellar: :any,                 arm64_monterey: "74c5f3eb257f7fe9fc9fa9defdb17b6e062a1b00bdf2c7580199fb8093d7b7e2"
-    sha256 cellar: :any,                 sonoma:         "5d4649c231fee46bd27d06dc42f242cedb7994f0f6ecedec5648f8a98ea55958"
-    sha256 cellar: :any,                 ventura:        "2e8f08d2d8b92ad7f0b235d84e94de882f9df905c923d77f37021a5195d2b644"
-    sha256 cellar: :any,                 monterey:       "b243ec1c6abdf04700ab26204fe37846df833b0c0a59af357987e85c7e127dc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f4b445ae77eff6f6f4fbef59db89c352ec88a8f09c9c89ca538eec8773c822a4"
+    sha256 cellar: :any,                 arm64_sonoma:   "3073af7e0261bd3be4174ca43eac39f4e2f47dbbaca281c1316cbdd8336faf13"
+    sha256 cellar: :any,                 arm64_ventura:  "9a7863cf91598e729efa5416f2b6128931d2ad5a8d69022264b6a7c040644e1e"
+    sha256 cellar: :any,                 arm64_monterey: "bc7ce68d91b09a91fe982b29740f6e8dab96203b0d3ffaf2e640aa7f42295e52"
+    sha256 cellar: :any,                 sonoma:         "5b82d2f7f88bf9401ba63176d296692dc1a6cdd99f0ec5f3cc115df6a4b51c4b"
+    sha256 cellar: :any,                 ventura:        "268bc9d6a2de229047fb845e45576f2cea079513fccbfba28a3344aef5b14ba5"
+    sha256 cellar: :any,                 monterey:       "97261142fa0603da77a99e0ffa79e8f20e9d4aaaacf7a3736dd58767b585a7de"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "981de3bc09eeda61b0b6656580dfd2be2d161a99f337fa4668cf4433d48a79b5"
   end
 
   keg_only :versioned_formula
