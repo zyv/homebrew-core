@@ -2048,6 +2048,7 @@ wgcf
 whistle
 whois
 wildfly-as
+wildmidi
 wimlib
 wireguard-go
 wiremock-standalone
