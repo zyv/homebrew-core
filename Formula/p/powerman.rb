@@ -1,8 +1,8 @@
 class Powerman < Formula
   desc "Control (remotely and in parallel) switched power distribution units"
   homepage "https://github.com/chaos/powerman"
-  url "https://github.com/chaos/powerman/releases/download/v2.4.0/powerman-2.4.0.tar.gz"
-  sha256 "ff5f66285e1d952b4dbcb9543ef7969bb4abb464276aaecff949f629b72da605"
+  url "https://github.com/chaos/powerman/releases/download/v2.4.1/powerman-2.4.1.tar.gz"
+  sha256 "e91c88e87d1bfe5d578ff6ebadce9f89f1b6934dac14526175ba8add53ea5053"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -24,6 +24,7 @@ class Powerman < Formula
   end
 
   depends_on "curl"
+  depends_on "jansson"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
