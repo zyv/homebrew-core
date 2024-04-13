@@ -11,7 +11,13 @@ class Grails < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d61c73ef3bdf952eb04142fda9cef6f2268f8011b8af16d4d1f4796dc7c0fe9e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fd812c9a9d82a9520388c50bd217b79c54005af8d4c746738ed7818318b63d3b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fd812c9a9d82a9520388c50bd217b79c54005af8d4c746738ed7818318b63d3b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd812c9a9d82a9520388c50bd217b79c54005af8d4c746738ed7818318b63d3b"
+    sha256 cellar: :any_skip_relocation, sonoma:         "5d0db416139b3cfc043c8b19d0bf002f59b1c2156d21309301ced52fa561d90c"
+    sha256 cellar: :any_skip_relocation, ventura:        "5d0db416139b3cfc043c8b19d0bf002f59b1c2156d21309301ced52fa561d90c"
+    sha256 cellar: :any_skip_relocation, monterey:       "5d0db416139b3cfc043c8b19d0bf002f59b1c2156d21309301ced52fa561d90c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fd812c9a9d82a9520388c50bd217b79c54005af8d4c746738ed7818318b63d3b"
   end
 
   depends_on "openjdk@11"
