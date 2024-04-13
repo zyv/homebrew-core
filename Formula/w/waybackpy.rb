@@ -9,14 +9,13 @@ class Waybackpy < Formula
   revision 4
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5a5b6c2e519d8b7a88a932180534bbc9ca78d1abe209ef95783e4c7bd669a18c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "8b4c81d02982f89530951fbffffe03933a93d9a9e0493ef2e4d5ab02194990d1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "47b23021a426a469efa2b299696387a94cec60dabc97be977af76d239d9231ea"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8fb24a112322b091a4bad5468b276b53602d5d11b664c1eb101dc6bdef3be434"
-    sha256 cellar: :any_skip_relocation, ventura:        "ff71470d24536ce9b49d4f3709ed45cd00ed8dcded7df3c5b3c0292faeb4edcb"
-    sha256 cellar: :any_skip_relocation, monterey:       "221b9a4696b4bfd3f0b5ec3eaf43311a5025f894b8d340960d78f9ad5cd4d139"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f7cbd7b8cdc15cad1c2aaf7ad0d2f67933a3dccaca372129a20074177452b3f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "165c7576d713878d6d90437837807854b5335ba1eda387ba7201c24f4d409403"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "165c7576d713878d6d90437837807854b5335ba1eda387ba7201c24f4d409403"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "165c7576d713878d6d90437837807854b5335ba1eda387ba7201c24f4d409403"
+    sha256 cellar: :any_skip_relocation, sonoma:         "165c7576d713878d6d90437837807854b5335ba1eda387ba7201c24f4d409403"
+    sha256 cellar: :any_skip_relocation, ventura:        "165c7576d713878d6d90437837807854b5335ba1eda387ba7201c24f4d409403"
+    sha256 cellar: :any_skip_relocation, monterey:       "165c7576d713878d6d90437837807854b5335ba1eda387ba7201c24f4d409403"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5241c1dccedc457c95b101762f582249c60bff05463bc9920f044501c59b04c6"
   end
 
   depends_on "certifi"
