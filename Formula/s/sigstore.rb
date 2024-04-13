@@ -9,13 +9,13 @@ class Sigstore < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "df8cacaaff829f71230dc5140e629c7cc55944019319e8a73969cc81456e5bf2"
-    sha256 cellar: :any,                 arm64_ventura:  "a3daa1faddbdf5c458384dbccc7fb89e6f0168ad1b75deeb67c013dcc992e316"
-    sha256 cellar: :any,                 arm64_monterey: "ab97bd94fc4fc2351bd7f04b700f567a0b65d83d5812e0768ca4787bfe52a42e"
-    sha256 cellar: :any,                 sonoma:         "cc18369f0038611872dae0aeb6d84b9e62026d43d43e3ad61d1a3c5f94759f98"
-    sha256 cellar: :any,                 ventura:        "934c6ed0a90982be4a4d888368211d55a69ae12725dd6cf0130a7e9858f5124b"
-    sha256 cellar: :any,                 monterey:       "baa9aa3be5ad1a097ddab4c2ac5b41597e325f612478ec4c7d422298a65c5f65"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "98cfcff66878957192e3a3e49bdf51275d5b49e82e902557ad05a566aee76401"
+    sha256 cellar: :any,                 arm64_sonoma:   "72d78ea0674e04782b0601e8346c2bc069f5b422a779d3046af8bacd6ef94e54"
+    sha256 cellar: :any,                 arm64_ventura:  "0e1b198523a145aab03243fe2d7f94dfe309caac36843434b9efc92478f2e5b6"
+    sha256 cellar: :any,                 arm64_monterey: "1d4da0f6179aa9221360b16ccfb8f7ac6c6fbefd2343e50c65e8a2fdec1ae3ec"
+    sha256 cellar: :any,                 sonoma:         "8ca95dfc17255d1520bc3e93a84cfb9d6f55d49f4c1145635548151173c4fd99"
+    sha256 cellar: :any,                 ventura:        "4f9604d03b7403ea0853be8703d0a2137829990557cc02b0d8c9b8348d4f9f56"
+    sha256 cellar: :any,                 monterey:       "e90a9f559e887ec919ce97c1bd0d71b59b893268ff85e8203c36b068e9f488ec"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f56199f32cca2e13ae691953bcf9d38f2c3469c98a3682da2fafd4c5b136b783"
   end
 
   depends_on "rust" => :build
