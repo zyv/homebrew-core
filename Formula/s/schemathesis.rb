@@ -6,6 +6,7 @@ class Schemathesis < Formula
   url "https://files.pythonhosted.org/packages/2d/99/9fec13978f3f63d4ab7d5201275190ec76e167050e5f0da325cd2e55e381/schemathesis-3.26.2.tar.gz"
   sha256 "4b9e5da29167ec9e02e61b8839a36d1b020e14780d9d3c645b2f9f8346f321c1"
   license "MIT"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "6a04f3795fc38db3d08d6a16d4de6cd0d31113b98e286a03191b7c274b953565"
@@ -73,8 +74,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/fb/d9/65762008149d8d0d4cd11da2d112b025825f65034d39795016f084640c19/hypothesis-6.100.0.tar.gz"
-    sha256 "1841f6b5083844cd4b66965e44a17c0dc8fe8e9c6370c1f7b8d50647fcb2efd3"
+    url "https://files.pythonhosted.org/packages/5a/30/eaf0f26a982bc3b9bdc701b6b289347275beb1ae50aea146cf443c32ce7c/hypothesis-6.100.1.tar.gz"
+    sha256 "ebff09d7fa4f1fb6a855a812baf17e578b4481b7b70ec6d96496210d1a4c6c35"
   end
 
   resource "hypothesis-graphql" do
@@ -88,8 +89,8 @@ class Schemathesis < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "iniconfig" do
