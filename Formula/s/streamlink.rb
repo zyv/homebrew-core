@@ -6,6 +6,7 @@ class Streamlink < Formula
   url "https://files.pythonhosted.org/packages/66/31/326decb04078c7ba4fe917f4dbc7dcbd9ac0aa7be1a5e8cac69fa3d76ade/streamlink-6.7.2.tar.gz"
   sha256 "7a74700129f5c29c006260df53976384300981c9aff9d3d5c2eb7e91d3dca359"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/streamlink/streamlink.git", branch: "master"
 
   bottle do
@@ -50,8 +51,8 @@ class Streamlink < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "isodate" do
@@ -60,8 +61,8 @@ class Streamlink < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/2b/b4/bbccb250adbee490553b6a52712c46c20ea1ba533a643f1424b27ffc6845/lxml-5.1.0.tar.gz"
-    sha256 "3eea6ed6e6c918e468e693c41ef07f3c3acc310b70ddd9cc72d9ef84bc9564ca"
+    url "https://files.pythonhosted.org/packages/ea/e2/3834472e7f18801e67a3cd6f3c203a5456d6f7f903cfb9a990e62098a2f3/lxml-5.2.1.tar.gz"
+    sha256 "3f7765e69bbce0906a7c74d5fe46d2c7a7596147318dbc08e4a2431f3060e306"
   end
 
   resource "outcome" do
@@ -115,8 +116,8 @@ class Streamlink < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/16/3a/0d26ce356c7465a19c9ea8814b960f8a36c3b0d07c323176620b7b483e44/typing_extensions-4.10.0.tar.gz"
-    sha256 "b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   resource "urllib3" do
