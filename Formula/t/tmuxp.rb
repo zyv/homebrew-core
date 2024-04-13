@@ -3,8 +3,8 @@ class Tmuxp < Formula
 
   desc "Tmux session manager. Built on libtmux"
   homepage "https://tmuxp.git-pull.com/"
-  url "https://files.pythonhosted.org/packages/a9/a3/1daa0dcaac35d567e2fa21522c3c1bdcb7b7bd96e56b9ed591cd046ca082/tmuxp-1.45.0.tar.gz"
-  sha256 "23b3ff0a8862a44c2bc687a553f78f4afd8f1e03371d775555a7699ed54572b4"
+  url "https://files.pythonhosted.org/packages/2b/25/e696821e9d490ae3d5cfa31c70fd4589f974f5c82294fc043b57a0835be5/tmuxp-1.46.0.tar.gz"
+  sha256 "f9a5e9b01e268f0f6c64b6a5bf79275bca243fe9a1d8ffe76d90a20b06b75015"
   license "MIT"
 
   bottle do
