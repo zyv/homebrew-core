@@ -1567,6 +1567,7 @@ prqlc
 prr
 prs
 psalm
+pspg
 psysh
 pter
 ptpython
