@@ -1,9 +1,8 @@
 class Zlint < Formula
   desc "X.509 Certificate Linter focused on Web PKI standards and requirements"
   homepage "https://github.com/zmap/zlint"
-  url "https://github.com/zmap/zlint.git",
-      tag:      "v3.6.1",
-      revision: "82d733e4dceb5e69296c9ac9dd4d1747182ebe26"
+  url "https://github.com/zmap/zlint/archive/refs/tags/v3.6.2.tar.gz"
+  sha256 "6181f735e713b59242ecda493f9377a0873023ba70d2566a4cba453c05edb2a2"
   license "Apache-2.0"
   head "https://github.com/zmap/zlint.git", branch: "master"
 
@@ -20,13 +19,14 @@ class Zlint < Formula
   depends_on "go" => :build
 
   def install
-    system "make", "--directory=v3", "GIT_VERSION=v#{version}", "zlint"
-    bin.install "v3/zlint"
+    cd "v3" do
+      ldflags = "-s -w -X main.version=#{version}"
+      system "go", "build", *std_go_args(ldflags:), "./cmd/zlint"
+    end
   end
 
   test do
-    assert_match "ZLint version v#{version}",
-      shell_output("#{bin}/zlint -version")
+    assert_match "ZLint version #{version}", shell_output("#{bin}/zlint -version")
 
     (testpath/"cert.pem").write <<~EOS
       -----BEGIN CERTIFICATE-----
