@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.com/"
-  url "https://github.com/denoland/deno/releases/download/v1.42.2/deno_src.tar.gz"
-  sha256 "fd9bdac501520c22c0532117196cb7951ff884541023a01001033190608f2e2a"
+  url "https://github.com/denoland/deno/releases/download/v1.42.4/deno_src.tar.gz"
+  sha256 "15dcd50bd2b228a38070a4e47edb844ab68761f6a5dc42bb3f0ff5e4ea4c3eec"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -45,8 +45,8 @@ class Deno < Formula
   # Use the version of `v8` crate at: https://github.com/denoland/deno/blob/v#{version}/Cargo.lock
   # Search for 'name = "v8"' (without single quotes).
   resource "rusty_v8" do
-    url "https://static.crates.io/crates/v8/v8-0.89.0.crate"
-    sha256 "fe2197fbef82c98f7953d13568a961d4e1c663793b5caf3c74455a13918cdf33"
+    url "https://static.crates.io/crates/v8/v8-0.90.1.crate"
+    sha256 "f1bcf540b968aed8a609e790ec7d25d064a70d62b48677cc9cff085528c56918"
   end
 
   # Find the v8 version from the last commit message at:
@@ -60,8 +60,8 @@ class Deno < Formula
   # Use the version of `deno_core` crate at: https://github.com/denoland/deno/blob/v#{version}/Cargo.lock
   # Search for 'name = "deno_core"' (without single quotes).
   resource "deno_core" do
-    url "https://github.com/denoland/deno_core/archive/refs/tags/0.272.0.tar.gz"
-    sha256 "b28dbcdc4c5b6e005f2e222dfdf2b7d1f17358a224f9e18b47c02e84f8d6dbdd"
+    url "https://github.com/denoland/deno_core/archive/refs/tags/0.275.0.tar.gz"
+    sha256 "9a5e3898a4eff9998ea00f29c0a991780e054b92894f1d4576e6d5d0722aa687"
   end
 
   # To find the version of gn used:
