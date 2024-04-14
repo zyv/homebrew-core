@@ -6,7 +6,13 @@ class Vcsh < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d7917b8660f585cc6bf699f74d25d920d855390e2ea526fa27fb76ab26159e53"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a2cd3d849d8d93364817eb4a01176c1938a3b9c5510e4fe38e0058449620f4a1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "66bec02ca7b95d794da587fbf0e1eabdfd5eb1f14b983dee39e1e7f0b2dbd893"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a2cd3d849d8d93364817eb4a01176c1938a3b9c5510e4fe38e0058449620f4a1"
+    sha256 cellar: :any_skip_relocation, sonoma:         "a2cd3d849d8d93364817eb4a01176c1938a3b9c5510e4fe38e0058449620f4a1"
+    sha256 cellar: :any_skip_relocation, ventura:        "a2cd3d849d8d93364817eb4a01176c1938a3b9c5510e4fe38e0058449620f4a1"
+    sha256 cellar: :any_skip_relocation, monterey:       "a2cd3d849d8d93364817eb4a01176c1938a3b9c5510e4fe38e0058449620f4a1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a2cd3d849d8d93364817eb4a01176c1938a3b9c5510e4fe38e0058449620f4a1"
   end
 
   depends_on "autoconf" => :build
