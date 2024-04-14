@@ -1977,6 +1977,7 @@ uutils-findutils
 uuu
 uv
 uvicorn
+uwsgi
 v2ray
 vala
 valabind
