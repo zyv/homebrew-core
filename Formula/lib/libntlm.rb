@@ -1,8 +1,8 @@
 class Libntlm < Formula
   desc "Implements Microsoft's NTLM authentication"
   homepage "https://gitlab.com/gsasl/libntlm/"
-  url "https://download.savannah.nongnu.org/releases/libntlm/libntlm-1.7.tar.gz"
-  sha256 "d805ebb901cbc9ff411e704cbbf6de4d28e7bcb05c9eca2124f582cbff31c0b1"
+  url "https://download.savannah.nongnu.org/releases/libntlm/libntlm-1.8.tar.gz"
+  sha256 "ce6569a47a21173ba69c990965f73eb82d9a093eb871f935ab64ee13df47fda1"
   license "LGPL-2.1-or-later"
 
   livecheck do
