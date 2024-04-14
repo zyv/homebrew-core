@@ -1450,6 +1450,7 @@ orocos-kdl
 ortp
 osc
 osctrl-cli
+osi
 osm2pgsql
 ospray
 osslsigncode
