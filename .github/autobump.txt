@@ -1602,6 +1602,7 @@ python-lxml
 python-matplotlib
 python-setuptools
 python-trove-classifiers
+python-yq
 pyyaml
 qbe
 qbs
