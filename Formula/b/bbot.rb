@@ -3,8 +3,8 @@ class Bbot < Formula
 
   desc "OSINT automation tool"
   homepage "https://github.com/blacklanternsecurity/bbot"
-  url "https://files.pythonhosted.org/packages/b1/44/d4280e1f817b92c7d9be6f7a9dc05a61998bb782c73ff4dc7636400d5454/bbot-1.1.6.1.tar.gz"
-  sha256 "58aa92ce506a76b998badfed9a895c551c38ba3845284325ec15b4bd2a45a352"
+  url "https://files.pythonhosted.org/packages/70/8b/7aeca0cfc86fceede10aff5ca896a8c4588266071a2d97fb7b5d1bdfcabe/bbot-1.1.6.3.tar.gz"
+  sha256 "bb8d8681d58211a00bb0508e76af345f09a1e4f8eb6e0b2184cb453384e749ae"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -93,8 +93,8 @@ class Bbot < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/67/9a/ff2ff8e922f3b97c4b4864ca6c78d76ca5969bd730560001167b7054ac48/docutils-0.21.post1.tar.gz"
-    sha256 "518e29081124e7d8159550958e6de240622562aa824f945f501ec3d3c5b67d19"
+    url "https://files.pythonhosted.org/packages/21/ff/c495b797462434f0befcb598b51cde31c3ebdf8577c3fd9d9a8f5eeb844c/docutils-0.21.1.tar.gz"
+    sha256 "65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f"
   end
 
   resource "filelock" do
@@ -118,8 +118,8 @@ class Bbot < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "jinja2" do
@@ -178,13 +178,13 @@ class Bbot < Formula
   end
 
   resource "pydantic" do
-    url "https://files.pythonhosted.org/packages/4b/de/38b517edac45dd022e5d139aef06f9be4762ec2e16e2b14e1634ba28886b/pydantic-2.6.4.tar.gz"
-    sha256 "b1704e0847db01817624a6b86766967f552dd9dbf3afba4004409f908dcc84e6"
+    url "https://files.pythonhosted.org/packages/cd/fc/70fe71ff78f680d584eba9c55a30092f6ef0b9cf0c75a74bd35a24151a83/pydantic-2.7.0.tar.gz"
+    sha256 "b5ecdd42262ca2462e2624793551e80911a1e989f462910bb81aef974b4bb383"
   end
 
   resource "pydantic-core" do
-    url "https://files.pythonhosted.org/packages/77/3f/65dbe5231946fe02b4e6ea92bc303d2462f45d299890fd5e8bfe4d1c3d66/pydantic_core-2.16.3.tar.gz"
-    sha256 "1cac689f80a3abab2d3c0048b29eea5751114054f032a941a32de4c852c59cad"
+    url "https://files.pythonhosted.org/packages/3d/28/d693aab237fca82da327990a88a983b2b84b890032076ee4a87e18038dbb/pydantic_core-2.18.1.tar.gz"
+    sha256 "de9d3e8717560eb05e28739d1b35e4eac2e458553a52a301e51352a7ffc86a35"
   end
 
   resource "pyjwt" do
@@ -218,8 +218,8 @@ class Bbot < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
+    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
   end
 
   resource "six" do
@@ -282,10 +282,6 @@ class Bbot < Formula
     sha256 "10719660409bd1825507e04d2fa4848c10591a092613bcd66651c7e0774f5405"
   end
 
-  # avoid runtime version check, see discussion in https://github.com/mtkennerly/dunamai/issues/80
-  # upstream bug report, https://github.com/blacklanternsecurity/bbot/issues/1257
-  patch :DATA
-
   def install
     virtualenv_install_with_resources
   end
@@ -297,17 +293,3 @@ class Bbot < Formula
     assert_predicate testpath/".config/bbot/secrets.yml", :exist?
   end
 end
-
-__END__
-diff --git a/pyproject.toml b/pyproject.toml
-index 4fc9831..7b8212f 100644
---- a/pyproject.toml
-+++ b/pyproject.toml
-@@ -89,7 +89,7 @@ line-length = 119
- extend-exclude = "(test_step_1/test_manager_*)"
-
- [tool.poetry-dynamic-versioning]
--enable = true
-+enable = false
- metadata = false
- format-jinja = 'v1.1.6.1{% if branch == "dev" %}.{{ distance }}rc{% endif %}'
