@@ -1123,6 +1123,7 @@ libmicrohttpd
 libmxml
 libnfs
 libnice
+libntlm
 libobjc2
 libomp
 libopenmpt
