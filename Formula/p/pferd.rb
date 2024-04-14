@@ -3,10 +3,9 @@ class Pferd < Formula
 
   desc "Programm zum Flotten Einfachen Runterladen von Dateien"
   homepage "https://github.com/Garmelon/PFERD"
-  url "https://files.pythonhosted.org/packages/46/3e/c59874ab484c5e19fed106c8b37aa29bbe64921bd8f5b88e9b718c3c264b/pferd-3.5.1.tar.gz"
-  sha256 "adad46fbfad08fbe9a479bb8989393598dc26ec30851d162a97e958509cbf809"
+  url "https://files.pythonhosted.org/packages/ed/53/0ee89a40c7a3156ac35262b7f9e897f367e1fb753fcd5bfae6d8660b1a0b/pferd-3.5.2.tar.gz"
+  sha256 "4ab6ec9b55ba63e174353819ccb33abb0a9f1c2fea6177ded268eb1ad4bee23f"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "19dc49b64e11d8bc3a87a11b9e2676ed3f804449c7a6de132e2c95248086eead"
