@@ -929,6 +929,7 @@ i2p
 i2pd
 iamy
 ibazel
+icloudpd
 ignite
 igraph
 igv
