@@ -19,7 +19,7 @@ class FabricInstaller < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "01d7c119f63a7036896b288ade17aa5908a2b908025e2ae6ee0f618693f09031"
+    sha256 cellar: :any_skip_relocation, all: "5417e368ad080b296504ee2193dbcf6ab29b48fe829aea628b34b5136d3e22a3"
   end
 
   depends_on "openjdk"
