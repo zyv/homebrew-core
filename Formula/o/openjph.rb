@@ -1,8 +1,8 @@
 class Openjph < Formula
   desc "Open-source implementation of JPEG2000 Part-15 (or JPH or HTJ2K)"
   homepage "https://github.com/aous72/OpenJPH"
-  url "https://github.com/aous72/OpenJPH/archive/refs/tags/0.10.5.tar.gz"
-  sha256 "fc1e43fb1e8a097f883f5fe98794327eb96c4bdf2c53cb633537b061af4c99f3"
+  url "https://github.com/aous72/OpenJPH/archive/refs/tags/0.11.0.tar.gz"
+  sha256 "43814a50a81a0e2447c6275f221ef87f34ac4c073e713d8d7e82c1e80e284ec1"
   license "BSD-2-Clause"
   head "https://github.com/aous72/OpenJPH.git", branch: "master"
 
