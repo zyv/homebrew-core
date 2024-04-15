@@ -10,6 +10,16 @@ class Morpheus < Formula
     regex(/^v?(\d+(?:\.\d+)+(?:_?\d+)?)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "7499f7a4721755466ae1b38cb3b5a55ba2fc5ca471232cc7e320b5d04fcf0fcd"
+    sha256 cellar: :any,                 arm64_ventura:  "ce0249b648e88ae685c1379b4fc58869408782b6e50b883d67d2edd4d95066b3"
+    sha256 cellar: :any,                 arm64_monterey: "a5714a265b96b9a7c926a2d155f8f78d8c090770a064c52757df37e682d661ed"
+    sha256 cellar: :any,                 sonoma:         "1aec65d363df33f6b118d2c6689827fe94718e24570e6aaf74f1e85860a05ce1"
+    sha256 cellar: :any,                 ventura:        "681c8ba46b7daa01fa5aaaca1a02ac3bb710e078afa143699d2adcc9adbbb496"
+    sha256 cellar: :any,                 monterey:       "8f1c56a3f7ef13f0d6cb8438c9ddd62df813cf0912edf8e15cc93a1040458331"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a7e3beee556888d39c5447fa3e32d50e565529376dc153d93e419be0a025aa35"
+  end
+
   depends_on "boost" => :build
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
