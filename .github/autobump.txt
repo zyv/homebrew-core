@@ -1114,6 +1114,7 @@ libidn2
 libimobiledevice-glue
 libint
 libirecovery
+libjuice
 libjwt
 libksba
 liblc3
