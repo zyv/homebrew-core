@@ -1,21 +1,10 @@
 class Bench < Formula
   desc "Command-line benchmark tool"
   homepage "https://github.com/Gabriella439/bench"
+  url "https://hackage.haskell.org/package/bench-1.0.13/bench-1.0.13.tar.gz"
+  sha256 "170c396f59e37851ed626c07756dc394841f7597895e691bf26049fee9725a6c"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/Gabriella439/bench.git", branch: "main"
-
-  stable do
-    url "https://hackage.haskell.org/package/bench-1.0.12/bench-1.0.12.tar.gz"
-    sha256 "a6376f4741588201ab6e5195efb1e9921bc0a899f77a5d9ac84a5db32f3ec9eb"
-
-    # Use Hackage metadata revision to support GHC 9.6.
-    # TODO: Remove this resource on next release along with corresponding install logic
-    resource "bench.cabal" do
-      url "https://hackage.haskell.org/package/bench-1.0.12/revision/7.cabal"
-      sha256 "309892b67c83b0a9da78b615edad7334c3c1a13509658453fdc6a8ba5d3d36e0"
-    end
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d67753efea7bd91ca20905d0b0b7526f056513c54cbd1fe36f25ca0f10309878"
@@ -38,8 +27,6 @@ class Bench < Formula
   uses_from_macos "zlib"
 
   def install
-    resource("bench.cabal").stage { buildpath.install "7.cabal" => "bench.cabal" } if build.stable?
-
     system "cabal", "v2-update"
     system "cabal", "v2-install", *std_cabal_v2_args
   end

@@ -156,6 +156,7 @@ bcoin
 bde
 beagle
 bear
+bench
 benthos
 berglas
 bettercap
