@@ -742,7 +742,8 @@
     "exclude_packages": ["certifi"]
   },
   "toot": {
-    "exclude_packages": ["certifi"]
+    "package_name": "toot[images,richtext]",
+    "exclude_packages": ["certifi", "pillow"]
   },
   "torchvision": {
     "exclude_packages": ["certifi", "numpy", "pillow", "torch"]
