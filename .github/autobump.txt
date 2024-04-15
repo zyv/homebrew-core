@@ -1780,6 +1780,7 @@ slurm
 smake
 smimesign
 sn0int
+snakefmt
 snakemake
 snap
 snapcraft

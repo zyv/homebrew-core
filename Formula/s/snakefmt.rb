@@ -3,10 +3,9 @@ class Snakefmt < Formula
 
   desc "Snakemake code formatter"
   homepage "https://github.com/snakemake/snakefmt/"
-  url "https://files.pythonhosted.org/packages/1f/ce/d2dee5da2cf76cdec5a5fb9dc7b99849b08ea28a5dc17830afc2baadaffc/snakefmt-0.10.0.tar.gz"
-  sha256 "53eae69fc81425e2192684eba76171bd648b05dcba93c9d5f45746d3fadb8617"
+  url "https://files.pythonhosted.org/packages/67/b8/d44a8f77f181fb679451493701db94293e6810db31e9b320aa0a5c2c69db/snakefmt-0.10.1.tar.gz"
+  sha256 "b04a34fc5481b15667c8bc7f23b5722b98ef827b27c6fd6dfbab8b34b245e32b"
   license "MIT"
-  revision 1
   head "https://github.com/snakemake/snakefmt.git", branch: "master"
 
   bottle do
@@ -22,8 +21,8 @@ class Snakefmt < Formula
   depends_on "python@3.12"
 
   resource "black" do
-    url "https://files.pythonhosted.org/packages/8f/5f/bac24a952668c7482cfdb4ebf91ba57a796c9da8829363a772040c1a3312/black-24.3.0.tar.gz"
-    sha256 "a0c9c4a0771afc6919578cec71ce82a3e31e054904e7197deacbc9382671c41f"
+    url "https://files.pythonhosted.org/packages/e7/29/58e93d7775544b6058f1df71dce4a8f5b039c2f8e381d3c695444c3d3d5f/black-24.4.0.tar.gz"
+    sha256 "f07b69fda20578367eaebbd670ff8fc653ab181e1ff95d84497f9fa20e7d0641"
   end
 
   resource "click" do
