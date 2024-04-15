@@ -1925,6 +1925,7 @@ tile38
 timg
 tin
 tintin
+tio
 tippecanoe
 tmux-xpanes
 tmuxp
