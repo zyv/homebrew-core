@@ -241,7 +241,6 @@ cargo-c
 cargo-crev
 cargo-deny
 cargo-depgraph
-cargo-edit
 cargo-generate
 cargo-instruments
 cargo-llvm-cov
@@ -372,7 +371,6 @@ conduit
 condure
 conftest
 consul-template
-container-diff
 container-structure-test
 contentful-cli
 convco
@@ -1104,7 +1102,6 @@ libffi
 libfontenc
 libgedit-gtksourceview
 libgetdata
-libgit2@1.6
 libgpg-error
 libgr
 libgsf
@@ -1495,7 +1492,6 @@ pfetch-rs
 pg_partman
 pgbadger
 pgbouncer
-pgloader
 pgpool-ii
 pgroonga
 pgrouting
@@ -1601,11 +1597,9 @@ pyright
 pyside@2
 python-argcomplete
 python-build
-python-dateutil
 python-lxml
 python-matplotlib
 python-setuptools
-python-trove-classifiers
 python-yq
 pyyaml
 qbe
@@ -1967,7 +1961,6 @@ ttdl
 ttyd
 tup
 tygo
-typedb
 typescript
 typescript-language-server
 typos-cli
@@ -2040,7 +2033,6 @@ vvenc
 wabt
 wakatime-cli
 wallpaper
-wapm
 wartremover
 wasm-micro-runtime
 wasm-pack
