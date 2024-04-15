@@ -2082,6 +2082,7 @@ xapian
 xauth
 xbyak
 xcbeautify
+xcdiff
 xclogparser
 xcodegen
 xdg-ninja
