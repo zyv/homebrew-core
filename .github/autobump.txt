@@ -1302,6 +1302,7 @@ mpc
 mpd
 mpdecimal
 mpg123
+mpi4py
 mpich
 mpv
 mqttui
