@@ -1782,6 +1782,7 @@ smimesign
 sn0int
 snakemake
 snap
+snapcast
 snapcraft
 sng
 sngrep
