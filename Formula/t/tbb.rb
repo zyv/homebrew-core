@@ -27,10 +27,12 @@ class Tbb < Formula
   end
 
   def install
-    # Prevent `setup.py` from installing tbb4py directly into HOMEBREW_PREFIX.
+    # Prevent `setup.py` from installing tbb4py as a deprecated egg directly into HOMEBREW_PREFIX.
     # We need this due to our Python patch.
     site_packages = Language::Python.site_packages(python3)
-    inreplace "python/CMakeLists.txt", "install --prefix build -f", "\\0 --install-lib build/#{site_packages}"
+    inreplace "python/CMakeLists.txt",
+              "install --prefix build -f",
+              "\\0 --install-lib build/#{site_packages} --single-version-externally-managed --record=RECORD"
 
     tbb_site_packages = prefix/site_packages/"tbb"
     ENV.append "LDFLAGS", "-Wl,-rpath,#{rpath},-rpath,#{rpath(source: tbb_site_packages)}"
@@ -54,10 +56,6 @@ class Tbb < Formula
                     *args, *std_cmake_args
     system "cmake", "--build", "build/static"
     lib.install buildpath.glob("build/static/*/libtbb*.a")
-
-    ENV.append_path "CMAKE_PREFIX_PATH", prefix.to_s
-    ENV["TBBROOT"] = prefix
-    system python3, "-m", "pip", "install", *std_pip_args, "./python"
   end
 
   test do
