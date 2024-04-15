@@ -1785,6 +1785,7 @@ sn0int
 snakefmt
 snakemake
 snap
+snapcast
 snapcraft
 sng
 sngrep
