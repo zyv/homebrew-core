@@ -1,8 +1,8 @@
 class Csview < Formula
   desc "High performance csv viewer for cli"
   homepage "https://github.com/wfxr/csview"
-  url "https://github.com/wfxr/csview/archive/refs/tags/v1.2.4.tar.gz"
-  sha256 "ff796fec2757186133c8b61caec8f774c44cb8e1400d014a29930601760e6a36"
+  url "https://github.com/wfxr/csview/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "eb71b3e6442afa9a9815c9cac3808b10bf3dd0d2f18fc3daba84980375f42ea0"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/wfxr/csview.git", branch: "master"
 
