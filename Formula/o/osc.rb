@@ -3,8 +3,8 @@ class Osc < Formula
 
   desc "Command-line interface to work with an Open Build Service"
   homepage "https://openbuildservice.org"
-  url "https://github.com/openSUSE/osc/archive/refs/tags/1.6.1.tar.gz"
-  sha256 "da8d0317271335c91780ed397fd61b8d4bafff0e4e8b41f6bf88441e87c78bc8"
+  url "https://github.com/openSUSE/osc/archive/refs/tags/1.6.2.tar.gz"
+  sha256 "05c6b0bd4dd093fe57a6760e284ef285a28e978f247d54cee5cd174d1ec9c5dd"
   license "GPL-2.0-or-later"
   head "https://github.com/openSUSE/osc.git", branch: "master"
 
