@@ -139,7 +139,7 @@
     "extra_packages": ["pip==22.3.1", "wheel"]
   },
   "charmcraft": {
-    "extra_packages": ["appdirs", "keyring", "pydantic", "setuptools"],
+    "extra_packages": ["jeepney", "secretstorage"],
     "exclude_packages": ["certifi", "cryptography"]
   },
   "chatblade": {
