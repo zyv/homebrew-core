@@ -1295,6 +1295,7 @@ mongodb-atlas-cli
 monika
 monolith
 moon
+morpheus
 morse
 moto
 mpc
