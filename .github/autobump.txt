@@ -1914,6 +1914,7 @@ texmath
 tfautomv
 tfmigrate
 tfsec
+tfupdate
 tgui
 thanos
 theharvester
