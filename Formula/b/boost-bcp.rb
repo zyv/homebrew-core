@@ -1,8 +1,8 @@
 class BoostBcp < Formula
   desc "Utility for extracting subsets of the Boost library"
   homepage "https://www.boost.org/doc/tools/bcp/"
-  url "https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.tar.xz"
-  sha256 "2e64e5d79a738d0fa6fb546c6e5c2bd28f88d268a2a080546f74e5ff98f29d0e"
+  url "https://github.com/boostorg/boost/releases/download/boost-1.85.0/boost-1.85.0-b2-nodocs.tar.xz"
+  sha256 "09f0628bded81d20b0145b30925d7d7492fd99583671586525d5d66d4c28266a"
   license "BSL-1.0"
   head "https://github.com/boostorg/boost.git", branch: "master"
 
@@ -22,6 +22,19 @@ class BoostBcp < Formula
 
   depends_on "boost-build" => :build
   depends_on "boost" => :test
+
+  # Fix build with latest boost::filesystem by applying commit from open PR
+  # PR ref: https://github.com/boostorg/bcp/pull/18
+  patch do
+    url "https://github.com/boostorg/bcp/commit/cd21e9b4a749a77c24facf2da44f01e032c40842.patch?full_index=1"
+    sha256 "09fdccb8ebdef5d13bbccbeb48eec7d14bb6916c75ea5c14fc439ff2bbd0f080"
+    directory "tools/bcp"
+  end
+  patch do
+    url "https://github.com/boostorg/bcp/commit/c98516b5b76e9132eba78a399af9c95ec8d23bd4.patch?full_index=1"
+    sha256 "557221988cda08f5183310c5ef50fdef79e4c096c8e849cd42f170c802ba7b6a"
+    directory "tools/bcp"
+  end
 
   def install
     # remove internal reference to use brewed boost-build
