@@ -4,6 +4,7 @@ class Rdkit < Formula
   url "https://github.com/rdkit/rdkit/archive/refs/tags/Release_2024_03_1.tar.gz"
   sha256 "5afe78c3d3358fec83f891eb822c0ad07a40ce3709da58071892bce1ea56585b"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/rdkit/rdkit.git", branch: "master"
 
   livecheck do
@@ -35,6 +36,13 @@ class Rdkit < Formula
   depends_on "postgresql@14"
   depends_on "py3cairo"
   depends_on "python@3.12"
+
+  # Fix build with `boost` 1.85.0 using open PR.
+  # PR ref: https://github.com/rdkit/rdkit/pull/7389
+  patch do
+    url "https://github.com/rdkit/rdkit/commit/407ef993981de44c72efa7df11a2cca9354df4c2.patch?full_index=1"
+    sha256 "b491cd6445ae167fdd878b173ac7d9b4ce17c674ecdf1dc510253d2d74643d24"
+  end
 
   def python
     deps.map(&:to_formula)
