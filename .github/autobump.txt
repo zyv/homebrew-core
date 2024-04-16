@@ -2019,6 +2019,7 @@ vet
 vfox
 vgmstream
 vgrep
+vhs
 victoriametrics
 video-compare
 vim
