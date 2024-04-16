@@ -4,6 +4,7 @@ class Votca < Formula
   url "https://github.com/votca/votca/archive/refs/tags/v2024.tar.gz"
   sha256 "be1f8ad3de2ce86f0c01014aa5358c181f128a847bc4508ba0a4bffd5c82a1cf"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "e2e3a40552fadfa8ffa3a77d9b1d576cc5ed08a612d68f1deb243bd75243920c"
@@ -34,6 +35,12 @@ class Votca < Formula
 
   on_macos do
     depends_on "libomp"
+  end
+
+  # Backport fix for build failure with `boost` 1.85.0. Remove in the next release.
+  patch do
+    url "https://github.com/votca/votca/commit/9a29a3a82ea23c5159d43b0f25218601e12085b4.patch?full_index=1"
+    sha256 "814fad24b533b84855f5171dda6789552872f16e1bbc3bebf8a3ebb2394440af"
   end
 
   def install
