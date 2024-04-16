@@ -4,7 +4,7 @@ class Mupen64plus < Formula
   url "https://github.com/mupen64plus/mupen64plus-core/releases/download/2.5/mupen64plus-bundle-src-2.5.tar.gz"
   sha256 "9c75b9d826f2d24666175f723a97369b3a6ee159b307f7cc876bbb4facdbba66"
   license "GPL-2.0-or-later"
-  revision 7
+  revision 8
 
   livecheck do
     url :stable
@@ -35,6 +35,18 @@ class Mupen64plus < Formula
   end
 
   def install
+    # Work around build failure with `boost` 1.85.0
+    # Issue ref: https://github.com/mupen64plus/mupen64plus-video-glide64mk2/issues/128
+    wpath_files = %w[
+      source/mupen64plus-video-glide64mk2/src/GlideHQ/TxCache.cpp
+      source/mupen64plus-video-glide64mk2/src/GlideHQ/TxHiResCache.cpp
+      source/mupen64plus-video-glide64mk2/src/GlideHQ/TxHiResCache.h
+      source/mupen64plus-video-glide64mk2/src/GlideHQ/TxTexCache.cpp
+    ]
+    inreplace wpath_files, /\bboost::filesystem::wpath\b/, "boost::filesystem::path"
+    inreplace "source/mupen64plus-video-glide64mk2/src/GlideHQ/TxHiResCache.cpp",
+              "->path().leaf().", "->path().filename()."
+
     # Prevent different C++ standard library warning
     if OS.mac?
       inreplace Dir["source/mupen64plus-**/projects/unix/Makefile"],
@@ -53,7 +65,7 @@ class Mupen64plus < Formula
       ENV.append "CFLAGS", "-fpie"
     end
 
-    args = ["install", "PREFIX=#{prefix}"]
+    args = ["install", "PREFIX=#{prefix}", "COREDIR=#{lib}/"]
     args << if OS.mac?
       "INSTALL_STRIP_FLAG=-S"
     else
