@@ -4,7 +4,7 @@ class Supertux < Formula
   url "https://github.com/SuperTux/supertux/releases/download/v0.6.3/SuperTux-v0.6.3-Source.tar.gz"
   sha256 "f7940e6009c40226eb34ebab8ffb0e3a894892d891a07b35d0e5762dd41c79f6"
   license "GPL-3.0-or-later"
-  revision 7
+  revision 8
   head "https://github.com/SuperTux/supertux.git", branch: "master"
 
   livecheck do
@@ -23,11 +23,11 @@ class Supertux < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "glm" => :build
   depends_on "pkg-config" => :build
   depends_on "boost"
   depends_on "freetype"
   depends_on "glew"
+  depends_on "glm"
   depends_on "libogg"
   depends_on "libpng"
   depends_on "libvorbis"
