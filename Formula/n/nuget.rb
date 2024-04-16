@@ -1,15 +1,18 @@
 class Nuget < Formula
   desc "Package manager for Microsoft development platform including .NET"
   homepage "https://www.nuget.org/"
-  url "https://dist.nuget.org/win-x86-commandline/v6.8.0/nuget.exe" # make sure libexec.install below matches case
-  sha256 "6c9e1b09f06971933b08080e7272a2ca5b0d8222500744da757bd8d019013a3d"
+  url "https://dist.nuget.org/win-x86-commandline/v6.9.1/nuget.exe"
+  sha256 "82bb13e2365e1e5ee7d0975618dcf90b279427de8a7ecb338b9b78bfc457d51b"
   license "MIT"
+
+  livecheck do
+    url "https://dist.nuget.org/tools.json"
+    regex(%r{"url":\s*?"[^"]+/v?(\d+(?:\.\d+)+)/nuget\.exe",\s*?"stage":\s*?"ReleasedAndBlessed"}i)
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, all: "e9b2794f708ebfb6ec3384dbfbb99c4819fb81d143aab3c92b49cfadd2eca3c4"
   end
-
-  deprecate! date: "2023-10-24", because: "uses deprecated `mono`"
 
   depends_on "mono"
 
