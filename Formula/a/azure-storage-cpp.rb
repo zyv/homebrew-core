@@ -4,7 +4,7 @@ class AzureStorageCpp < Formula
   url "https://github.com/Azure/azure-storage-cpp/archive/refs/tags/v7.5.0.tar.gz"
   sha256 "446a821d115949f6511b7eb01e6a0e4f014b17bfeba0f3dc33a51750a9d5eca5"
   license "Apache-2.0"
-  revision 8
+  revision 9
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "301f9864ac4d274fea2f67679ded8c0a9f4ddf8cab26eb94c9733923ae19af3e"
