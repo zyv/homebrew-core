@@ -4,7 +4,7 @@ class Gource < Formula
   url "https://github.com/acaudwell/Gource/releases/download/gource-0.54/gource-0.54.tar.gz"
   sha256 "1dcbcedf65d2cf4d69fe0b633e54c202926c08b829bcad0b73eaf9e29cd6fae5"
   license "GPL-3.0-or-later"
-  revision 3
+  revision 4
 
   bottle do
     sha256 arm64_sonoma:   "b8b897102f246e11f945323cef9e073719f726e4d954a43705453fbe26d876f7"
@@ -34,18 +34,27 @@ class Gource < Formula
   depends_on "sdl2"
   depends_on "sdl2_image"
 
+  # Fix build with `boost` 1.85.0 using open PR.
+  # PR ref: https://github.com/acaudwell/Gource/pull/326
+  patch do
+    url "https://github.com/acaudwell/Gource/commit/4357df0e3cf3a5f2c8bcff74bf562e5f346c930a.patch?full_index=1"
+    sha256 "8c566c312e18ee293eb1cf14864b6c3658cfcc971eaf887ee0d308b67572c3e6"
+  end
+
   def install
+    ENV.cxx11
+
     # clang on Mt. Lion will try to build against libstdc++,
     # despite -std=gnu++0x
     ENV.libcxx
     ENV.append "LDFLAGS", "-pthread" if OS.linux?
 
-    system "autoreconf", "-f", "-i" if build.head?
+    system "autoreconf", "--force", "--install", "--verbose" if build.head?
 
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
+    system "./configure", "--disable-silent-rules",
                           "--with-boost=#{Formula["boost"].opt_prefix}",
-                          "--without-x"
+                          "--without-x",
+                          *std_configure_args
     system "make", "install"
   end
 
