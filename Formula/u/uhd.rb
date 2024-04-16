@@ -3,13 +3,26 @@ class Uhd < Formula
 
   desc "Hardware driver for all USRP devices"
   homepage "https://files.ettus.com/manual/"
-  # The build system uses git to recover version information
-  url "https://github.com/EttusResearch/uhd.git",
-      tag:      "v4.6.0.0",
-      revision: "50fa3baa2e11ea3b30d5a7e397558e9ae76d8b00"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later", "MIT", "BSD-3-Clause", "Apache-2.0"]
-  revision 1
+  revision 2
   head "https://github.com/EttusResearch/uhd.git", branch: "master"
+
+  stable do
+    # The build system uses git to recover version information
+    url "https://github.com/EttusResearch/uhd.git",
+        tag:      "v4.6.0.0",
+        revision: "50fa3baa2e11ea3b30d5a7e397558e9ae76d8b00"
+
+    # Backport fixes for build failure with `boost` 1.85.0. Remove in the next release.
+    patch do
+      url "https://github.com/EttusResearch/uhd/commit/c4863b9b9f8b639260f7797157e8ac4dd81fef93.patch?full_index=1"
+      sha256 "5e5a90ba2fdaee109dccf0ca583d63e8848605eabff08b96187a408804b2910e"
+    end
+    patch do
+      url "https://github.com/EttusResearch/uhd/commit/ea586168c596d13d05d145832519755794649ba0.patch?full_index=1"
+      sha256 "224b3f0b726dc2eda982733a59009f34c0f70a0d2970a64755268ea237e86db3"
+    end
+  end
 
   livecheck do
     url :stable
