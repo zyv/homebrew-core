@@ -4,7 +4,7 @@ class Pagmo < Formula
   url "https://github.com/esa/pagmo2/archive/refs/tags/v2.19.0.tar.gz"
   sha256 "701ada528de7d454201e92a5d88903dd1c22ea64f43861d9694195ddfef82a70"
   license any_of: ["LGPL-3.0-or-later", "GPL-3.0-or-later"]
-  revision 3
+  revision 4
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "7e11b0ca4289cdec876d0c5199b9827aa7642543b2dd2a2582eaf94a0c9f8b32"
