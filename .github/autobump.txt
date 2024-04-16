@@ -1146,6 +1146,7 @@ librdkafka
 librespot
 libressl
 librsvg
+libsail
 libsais
 libscfg
 libsecret
