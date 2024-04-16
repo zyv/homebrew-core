@@ -971,6 +971,7 @@ ivy
 ivykis
 jackett
 jadx
+janet
 jaq
 jasper
 jbang
