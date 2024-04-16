@@ -1067,6 +1067,7 @@ kyma-cli
 kyverno
 lacework-cli
 languagetool
+lastpass-cli
 latex2html
 latexindent
 latexml
