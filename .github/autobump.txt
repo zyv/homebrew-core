@@ -914,6 +914,7 @@ htmldoc
 htmlq
 htmltest
 htpdate
+htslib
 httm
 httping
 httpx
