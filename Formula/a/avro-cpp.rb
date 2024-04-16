@@ -8,7 +8,7 @@ class AvroCpp < Formula
       tag:      "release-1.11.3",
       revision: "35ff8b997738e4d983871902d47bfb67b3250734"
   license "Apache-2.0"
-  revision 2
+  revision 3
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "de6b8abaa622b8d35a2ff8be108fb1fa5a1e6833f6013bfc99c6fda3dbc1433f"
