@@ -4,7 +4,7 @@ class Fuego < Formula
   url "https://svn.code.sf.net/p/fuego/code/trunk", revision: "1981"
   version "1.1"
   license any_of: ["GPL-3.0-only", "LGPL-3.0-only"]
-  revision 10
+  revision 11
   version_scheme 1
   head "https://svn.code.sf.net/p/fuego/code/trunk"
 
@@ -28,10 +28,16 @@ class Fuego < Formula
   depends_on "boost"
 
   def install
-    system "autoreconf", "-fvi"
-    system "./configure", *std_configure_args,
-                          "--disable-silent-rules",
-                          "--with-boost=#{Formula["boost"].opt_prefix}"
+    # Work around build failure with Boost 1.85.0
+    # Issue ref: https://sourceforge.net/p/fuego/tickets/108/
+    inreplace "fuegomain/FuegoMain.cpp", ".branch_path()", ".parent_path()"
+    inreplace "smartgame/SgStringUtil.cpp", /^(\s*)(normalizedFile)\.normalize\(\);$/,
+                                            "\\1\\2 = \\2.lexically_normal();"
+
+    system "autoreconf", "--force", "--install", "--verbose"
+    system "./configure", "--disable-silent-rules",
+                          "--with-boost=#{Formula["boost"].opt_prefix}",
+                          *std_configure_args
     system "make", "install", "LIBS=-lpthread"
   end
 
