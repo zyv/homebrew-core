@@ -815,6 +815,7 @@ gnumeric
 gnunet
 gnupg
 gnupg-pkcs11-scd
+gnupg@2.2
 gnuplot
 gnutls
 go-camo
