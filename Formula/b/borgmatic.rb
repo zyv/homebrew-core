@@ -3,10 +3,9 @@ class Borgmatic < Formula
 
   desc "Simple wrapper script for the Borg backup software"
   homepage "https://torsion.org/borgmatic/"
-  url "https://files.pythonhosted.org/packages/d5/bd/e783d473e3c422141ff5cf175dd4c0855b1aae4a877f1683f98a9657a1af/borgmatic-1.8.9.tar.gz"
-  sha256 "61f0d5d812738b60d58bf7a85a0dca7aa9898d4bf9f93acba58745f11ed8b8f6"
+  url "https://files.pythonhosted.org/packages/39/ff/a4366451e28b16caea17fed89b64101971a57d8bb7d62b774399a8eae4ad/borgmatic-1.8.10.tar.gz"
+  sha256 "851daae3d8020fd059b24fa343dd047ca924abb997f6a00efa046cbdd9ee0de7"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "1acf1e1b1a18db6a89bd581d10409065c81cfdc5591f37a1aa02e46dfca90bd4"
@@ -83,8 +82,8 @@ class Borgmatic < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
+    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
   end
 
   resource "urllib3" do
