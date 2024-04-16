@@ -889,6 +889,7 @@ haskell-stack
 hasura-cli
 haxe
 hbase
+hck
 hcloud
 hcxtools
 heartbeat
