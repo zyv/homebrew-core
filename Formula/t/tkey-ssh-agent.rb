@@ -1,10 +1,9 @@
 class TkeySshAgent < Formula
   desc "SSH agent for use with the TKey security stick"
   homepage "https://tillitis.se/"
-  url "https://github.com/tillitis/tkey-ssh-agent/archive/refs/tags/v0.0.6.tar.gz"
-  sha256 "b0ace3e21b9fc739a05c0049131f7386efa766936576d56c206d3abd0caed668"
+  url "https://github.com/tillitis/tkey-ssh-agent/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "abe43e1948101a5da007ff997161216ee7d44a54e3fa6b0aa255c22fcab11ae1"
   license "GPL-2.0-only"
-  revision 1
 
   livecheck do
     url :stable
@@ -31,16 +30,7 @@ class TkeySshAgent < Formula
     depends_on "pinentry"
   end
 
-  resource "signerapp" do
-    url "https://github.com/tillitis/tillitis-key1-apps/releases/download/v0.0.6/signer.bin"
-    sha256 "639bdba7e61c3e1d551e9c462c7447e4908cf0153edaebc2e6843c9f78e477a6"
-  end
-
-  # patch `go.bug.st/serial` to v1.6.2 to fix `cannot define new methods on non-local type C.CFTypeRef` error
-  patch :DATA
-
   def install
-    resource("signerapp").stage("./cmd/tkey-ssh-agent/app.bin")
     ldflags = "-s -w -X main.version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd/tkey-ssh-agent"
     man1.install "system/tkey-ssh-agent.1"
@@ -86,31 +76,3 @@ class TkeySshAgent < Formula
     assert_predicate socket, :exist?
   end
 end
-
-__END__
-diff --git a/go.mod b/go.mod
-index aaf7fbd..22b4ff6 100644
---- a/go.mod
-+++ b/go.mod
-@@ -6,7 +6,7 @@ require (
- 	github.com/gen2brain/beeep v0.0.0-20220909211152-5a9ec94374f6
- 	github.com/spf13/pflag v1.0.5
- 	github.com/twpayne/go-pinentry-minimal v0.0.0-20220113210447-2a5dc4396c2a
--	go.bug.st/serial v1.5.0
-+	go.bug.st/serial v1.6.2
- 	golang.org/x/crypto v0.5.0
- 	golang.org/x/term v0.4.0
- )
-diff --git a/go.sum b/go.sum
-index f0652fe..805352e 100644
---- a/go.sum
-+++ b/go.sum
-@@ -26,6 +26,8 @@ github.com/twpayne/go-pinentry-minimal v0.0.0-20220113210447-2a5dc4396c2a h1:a1b
- github.com/twpayne/go-pinentry-minimal v0.0.0-20220113210447-2a5dc4396c2a/go.mod h1:ARJJXqNuaxVS84jX6ST52hQh0TtuQZWABhTe95a6BI4=
- go.bug.st/serial v1.5.0 h1:ThuUkHpOEmCVXxGEfpoExjQCS2WBVV4ZcUKVYInM9T4=
- go.bug.st/serial v1.5.0/go.mod h1:UABfsluHAiaNI+La2iESysd9Vetq7VRdpxvjx7CmmOE=
-+go.bug.st/serial v1.6.2 h1:kn9LRX3sdm+WxWKufMlIRndwGfPWsH1/9lCWXQCasq8=
-+go.bug.st/serial v1.6.2/go.mod h1:UABfsluHAiaNI+La2iESysd9Vetq7VRdpxvjx7CmmOE=
- golang.org/x/crypto v0.5.0 h1:U/0M97KRkSFvyD/3FSmdP5W5swImpNgle/EHFhOsQPE=
- golang.org/x/crypto v0.5.0/go.mod h1:NK/OQwhpMQP3MwtdjgLlYHnH9ebylxKWv3e0fK+mkQU=
- golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
