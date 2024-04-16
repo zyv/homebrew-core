@@ -2,10 +2,15 @@ class ArchiSteamFarm < Formula
   desc "Application for idling Steam cards from multiple accounts simultaneously"
   homepage "https://github.com/JustArchiNET/ArchiSteamFarm"
   url "https://github.com/JustArchiNET/ArchiSteamFarm.git",
-      tag:      "5.5.0.11",
-      revision: "3c2a154b3911885e813471f61def2b5f60e5971a"
+      tag:      "6.0.1.24",
+      revision: "457828260b319a2a67d8b4e5f535f04657e3f657"
   license "Apache-2.0"
   head "https://github.com/JustArchiNET/ArchiSteamFarm.git", branch: "main"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d9ed64c22a0f38c76bb217e25721b349070fc04d3b2bd84d8df8a460870bdb9d"
@@ -15,8 +20,6 @@ class ArchiSteamFarm < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "b5255a59dd07630a94b6796786b4dfb3595d2e8caaf8a49ed5f971f9ff97accc"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f2042e4f16da582d2576cbf7251f2ec6d0a13f8025f48cac015b27084b06a325"
   end
-
-  deprecate! date: "2023-10-24", because: "uses deprecated `dotnet`"
 
   depends_on "dotnet"
 
