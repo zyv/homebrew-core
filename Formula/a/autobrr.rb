@@ -1,8 +1,8 @@
 class Autobrr < Formula
   desc "Modern, easy to use download automation for torrents and usenet"
   homepage "https://autobrr.com/"
-  url "https://github.com/autobrr/autobrr/archive/refs/tags/v1.40.1.tar.gz"
-  sha256 "fe0f3dec41377c8edc1e6261117e1551201add3753f6d5b8c4d68a1dca006ec0"
+  url "https://github.com/autobrr/autobrr/archive/refs/tags/v1.41.0.tar.gz"
+  sha256 "096159986b73cc5f2550f61e94f6a7d7314718c0545642c2034836005648c258"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -17,10 +17,18 @@ class Autobrr < Formula
 
   depends_on "go" => :build
   depends_on "node" => :build
+  depends_on "pnpm" => :build
+
+  # Update pnpm and dependency lockfile
+  # upstream PR patch, https://github.com/autobrr/autobrr/pull/1515
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/9ac9588f76a579c2cceac9d7665031d0766268c6/autobrr/autobrr-1.41.0-pnpm.patch"
+    sha256 "08d07758290377ad76f11bcff33a84c6e33d188554801039e647c142905802d3"
+  end
 
   def install
-    system "npx", "pnpm", "install", "--dir", "web"
-    system "npx", "pnpm", "--dir", "web", "run", "build"
+    system "pnpm", "install", "--dir", "web"
+    system "pnpm", "--dir", "web", "run", "build"
 
     ldflags = "-s -w -X main.version=#{version} -X main.commit=#{tap.user}"
 
