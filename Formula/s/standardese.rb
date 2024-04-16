@@ -3,7 +3,7 @@ class Standardese < Formula
   homepage "https://standardese.github.io"
   # TODO: use resource blocks for vendored deps
   license "MIT"
-  revision 17
+  revision 18
   head "https://github.com/standardese/standardese.git", branch: "master"
 
   # Remove stable block when patch is no longer needed.
@@ -37,7 +37,22 @@ class Standardese < Formula
 
   fails_with gcc: "5" # LLVM is built with Homebrew GCC
 
+  # https://github.com/standardese/cppast/blob/main/external/external.cmake#L12
+  resource "type_safe" do
+    url "https://github.com/foonathan/type_safe/archive/refs/tags/v0.2.4.tar.gz"
+    sha256 "a631d03c18c65726b3d1b7d41ac5806e9121367afe10dd2f408a2d75e144b734"
+  end
+
+  # Fix build with `boost` 1.85.0 using open PR.
+  # PR ref: https://github.com/standardese/standardese/pull/247
+  patch do
+    url "https://github.com/standardese/standardese/commit/0593c8fbaee48ffac022e2ea95865d808cc149ce.patch?full_index=1"
+    sha256 "4b204256b97a4058b88c7b2350941d2c59a6c38aeb91e4112e1d267fdd092d03"
+  end
+
   def install
+    (buildpath/"type_safe").install resource("type_safe")
+
     # Don't build shared libraries to avoid having to manually install and relocate
     # libstandardese, libtiny-process-library, and libcppast. These libraries belong
     # to no install targets and are not used elsewhere.
@@ -46,6 +61,7 @@ class Standardese < Formula
                     "-DBUILD_SHARED_LIBS=OFF",
                     "-DCMARK_LIBRARY=#{Formula["cmark-gfm"].opt_lib/shared_library("libcmark-gfm")}",
                     "-DCMARK_INCLUDE_DIR=#{Formula["cmark-gfm"].opt_include}",
+                    "-DFETCHCONTENT_SOURCE_DIR_TYPE_SAFE=#{buildpath}/type_safe",
                     "-DSTANDARDESE_BUILD_TEST=OFF",
                     *std_cmake_args
     system "cmake", "--build", "build"
