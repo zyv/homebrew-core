@@ -286,6 +286,7 @@ cglm
 cgrep
 chain-bench
 chainloop-cli
+chainsaw
 chamber
 chaoskube
 charmcraft
