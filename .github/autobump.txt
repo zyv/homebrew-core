@@ -1359,6 +1359,7 @@ nexttrace
 nfdump
 nfpm
 nginx
+ngt
 ninja
 nixpacks
 nng
