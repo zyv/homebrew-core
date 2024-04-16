@@ -1705,6 +1705,7 @@ saf-cli
 sagittarius-scheme
 samba
 saml2aws
+samtools
 sbt
 scala
 scala@2.12
