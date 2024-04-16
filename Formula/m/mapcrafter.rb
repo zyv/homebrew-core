@@ -4,7 +4,7 @@ class Mapcrafter < Formula
   url "https://github.com/mapcrafter/mapcrafter/archive/refs/tags/v.2.4.tar.gz"
   sha256 "f3b698d34c02c2da0c4d2b7f4e251bcba058d0d1e4479c0418eeba264d1c8dae"
   license "GPL-3.0"
-  revision 10
+  revision 11
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "e2f94fcaa7b91042cb6ab1252f58bcd9edc1e46e07ffc08c792a35af72c15acb"
@@ -21,19 +21,24 @@ class Mapcrafter < Formula
   depends_on "jpeg-turbo"
   depends_on "libpng"
 
+  # Fix build with `boost` 1.85.0 using open PR.
+  # PR ref: https://github.com/mapcrafter/mapcrafter/pull/394
+  patch do
+    url "https://github.com/mapcrafter/mapcrafter/commit/28dbc86803650eb487782e937cbb4513dbd0a650.patch?full_index=1"
+    sha256 "55edc91aee2fbe0727282d8b3e967ac654455e7fb4ca424c490caf7556eca179"
+  end
+
   def install
-    ENV.cxx11
-
-    args = std_cmake_args
-    args << "-DJPEG_INCLUDE_DIR=#{Formula["jpeg-turbo"].opt_include}"
-    args << "-DJPEG_LIBRARY=#{Formula["jpeg-turbo"].opt_lib/shared_library("libjpeg")}"
-
-    system "cmake", ".", *args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DOPT_SKIP_TESTS=ON",
+                    "-DJPEG_INCLUDE_DIR=#{Formula["jpeg-turbo"].opt_include}",
+                    "-DJPEG_LIBRARY=#{Formula["jpeg-turbo"].opt_lib/shared_library("libjpeg")}",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
-    assert_match(/Mapcrafter/,
-      shell_output("#{bin}/mapcrafter --version"))
+    assert_match(/Mapcrafter/, shell_output("#{bin}/mapcrafter --version"))
   end
 end
