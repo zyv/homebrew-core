@@ -6,7 +6,7 @@ class Overarch < Formula
   license "EPL-1.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "bb81050adefd759c706a092a42444d4641b6117b9518d026dfe4b0e3545b1fb0"
+    sha256 cellar: :any_skip_relocation, all: "85ce27b036d06d4da50ebe754b24c980224513da46f8bb9a3f38eed5aa269f15"
   end
 
   head do
