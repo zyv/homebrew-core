@@ -1,8 +1,9 @@
 class Mono < Formula
   desc "Cross platform, open source .NET development framework"
   homepage "https://www.mono-project.com/"
-  url "https://download.mono-project.com/sources/mono/mono-6.12.0.199.tar.xz"
-  sha256 "c0850d545353a6ba2238d45f0914490c6a14a0017f151d3905b558f033478ef5"
+  url "https://github.com/mono/mono.git",
+      tag:      "mono-6.12.0.206",
+      revision: "0cbf0e290c31adb476f9de0fa44b1d8829affa40"
   license "MIT"
 
   livecheck do
@@ -59,9 +60,8 @@ class Mono < Formula
     # Remove use of -flat_namespace. Upstreamed at
     # https://github.com/mono/mono/pull/21257
     inreplace "mono/profiler/Makefile.am", "-Wl,suppress -Wl,-flat_namespace", "-Wl,dynamic_lookup"
-    system "autoreconf", "--force", "--install", "--verbose"
 
-    system "./configure", *std_configure_args,
+    system "./autogen.sh", *std_configure_args,
                           "--disable-silent-rules",
                           "--disable-nls"
     system "make"
