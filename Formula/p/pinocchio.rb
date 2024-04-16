@@ -4,7 +4,7 @@ class Pinocchio < Formula
   url "https://github.com/stack-of-tasks/pinocchio/releases/download/v2.7.0/pinocchio-2.7.0.tar.gz"
   sha256 "fbc8de46b3296c8bf7d4d9b03392c04809a1bca52930fab243749eeef39db406"
   license "BSD-2-Clause"
-  revision 2
+  revision 3
   head "https://github.com/stack-of-tasks/pinocchio.git", branch: "master"
 
   livecheck do
