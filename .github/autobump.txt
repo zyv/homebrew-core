@@ -1944,6 +1944,7 @@ toast
 tomcat
 tomcat-native
 tomcat@9
+tomee-plume
 tomee-plus
 tomee-webprofile
 topgrade
