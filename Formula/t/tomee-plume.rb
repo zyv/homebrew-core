@@ -1,9 +1,9 @@
 class TomeePlume < Formula
   desc "Apache TomEE Plume"
   homepage "https://tomee.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=tomee/tomee-9.1.2/apache-tomee-9.1.2-plume.tar.gz"
-  mirror "https://archive.apache.org/dist/tomee/tomee-9.1.2/apache-tomee-9.1.2-plume.tar.gz"
-  sha256 "4f734038f2557ba45bd4f00e17683ac15ad269f640b4aa7cbc13d16a61404c8c"
+  url "https://www.apache.org/dyn/closer.lua?path=tomee/tomee-9.1.3/apache-tomee-9.1.3-plume.tar.gz"
+  mirror "https://archive.apache.org/dist/tomee/tomee-9.1.3/apache-tomee-9.1.3-plume.tar.gz"
+  sha256 "2ca7033ece4e869ea88061248a1a2a6eeb4081720b2a6b82afadfe9eef72c856"
   license "Apache-2.0"
 
   bottle do
