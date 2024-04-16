@@ -1,11 +1,24 @@
 class Pcl < Formula
   desc "Library for 2D/3D image and point cloud processing"
   homepage "https://pointclouds.org/"
-  url "https://github.com/PointCloudLibrary/pcl/archive/refs/tags/pcl-1.14.0.tar.gz"
-  sha256 "de297b929eafcb93747f12f98a196efddf3d55e4edf1b6729018b436d5be594d"
   license "BSD-3-Clause"
-  revision 2
+  revision 3
   head "https://github.com/PointCloudLibrary/pcl.git", branch: "master"
+
+  stable do
+    url "https://github.com/PointCloudLibrary/pcl/archive/refs/tags/pcl-1.14.0.tar.gz"
+    sha256 "de297b929eafcb93747f12f98a196efddf3d55e4edf1b6729018b436d5be594d"
+
+    # Backport missing <functional> header. Remove in the next release.
+    patch do
+      url "https://github.com/PointCloudLibrary/pcl/commit/61b2e8e5336d7d8b0e1ae7c1168035faa083310b.patch?full_index=1"
+      sha256 "06e17f22d497a68b0ff3ac66eb6ba3d6247c9b9f86ae898bc76abcdcb5a2d5ba"
+    end
+
+    # Backport compatibility with Boost 1.85.0. Remove in the next release.
+    # Ref: https://github.com/PointCloudLibrary/pcl/commit/7234ee75fce64bd15376c696d46a70594fc826f2
+    patch :DATA
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "9d6a2445628d80caef165a1725ec4fe482c56a842507dc38dace4f42f5643c20"
@@ -35,7 +48,7 @@ class Pcl < Formula
   end
 
   def install
-    args = std_cmake_args + %w[
+    args = %w[
       -DBUILD_SHARED_LIBS:BOOL=ON
       -DBUILD_apps=AUTO_OFF
       -DBUILD_apps_3d_rec_framework=AUTO_OFF
@@ -62,11 +75,10 @@ class Pcl < Formula
     # The AppleClang versions shipped on current MacOS versions do not support the -march=native flag on arm
     args << "-DPCL_ENABLE_MARCHNATIVE:BOOL=OFF" if build.bottle?
 
-    mkdir "build" do
-      system "cmake", "..", *args
-      system "make", "install"
-      prefix.install Dir["#{bin}/*.app"]
-    end
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+    prefix.install bin.glob("*.app")
   end
 
   test do
@@ -127,3 +139,54 @@ class Pcl < Formula
     end
   end
 end
+
+__END__
+diff --git a/outofcore/include/pcl/outofcore/octree_base.h b/outofcore/include/pcl/outofcore/octree_base.h
+index 45959b95236fd510981c6f61a14d0eae6f4c7685..1a7c8778c1046921af3ae6d5ef8bb5e45e9feb1a 100644
+--- a/outofcore/include/pcl/outofcore/octree_base.h
++++ b/outofcore/include/pcl/outofcore/octree_base.h
+@@ -63,6 +63,7 @@
+ #include <pcl/PCLPointCloud2.h>
+
+ #include <shared_mutex>
++#include <list>
+
+ namespace pcl
+ {
+diff --git a/outofcore/include/pcl/outofcore/octree_base_node.h b/outofcore/include/pcl/outofcore/octree_base_node.h
+index 7085d530227da76bb441a73ee13508bf60c2d720..dba76d4f04ff2b7536525ae56d2699f479cf8d6f 100644
+--- a/outofcore/include/pcl/outofcore/octree_base_node.h
++++ b/outofcore/include/pcl/outofcore/octree_base_node.h
+@@ -42,6 +42,7 @@
+ #include <memory>
+ #include <mutex>
+ #include <random>
++#include <list>
+
+ #include <pcl/common/io.h>
+ #include <pcl/PCLPointCloud2.h>
+diff --git a/recognition/include/pcl/recognition/face_detection/face_detector_data_provider.h b/recognition/include/pcl/recognition/face_detection/face_detector_data_provider.h
+index 7b4a929df52604a269fde377850ac55930074faa..be3b86aecc1cc2a78cf787dd86e8d6f3b3ca0449 100644
+--- a/recognition/include/pcl/recognition/face_detection/face_detector_data_provider.h
++++ b/recognition/include/pcl/recognition/face_detection/face_detector_data_provider.h
+@@ -12,7 +12,7 @@
+ #include <pcl/recognition/face_detection/face_common.h>
+
+ #include <boost/algorithm/string.hpp>
+-#include <boost/filesystem/operations.hpp>
++#include <boost/filesystem.hpp>
+
+ #include <fstream>
+ #include <string>
+diff --git a/test/outofcore/test_outofcore.cpp b/test/outofcore/test_outofcore.cpp
+index cb5cfff4aca489bf029e8713f175635bad8d1071..3f658bf86ea14591d3dfbd4494f79c8c4ef2ea80 100644
+--- a/test/outofcore/test_outofcore.cpp
++++ b/test/outofcore/test_outofcore.cpp
+@@ -44,6 +44,7 @@
+
+ #include <pcl/test/gtest.h>
+
++#include <list>
+ #include <vector>
+ #include <iostream>
+ #include <random>
