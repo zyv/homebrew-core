@@ -2,7 +2,7 @@ class OsrmBackend < Formula
   desc "High performance routing engine"
   homepage "http://project-osrm.org/"
   license "BSD-2-Clause"
-  revision 4
+  revision 5
   head "https://github.com/Project-OSRM/osrm-backend.git", branch: "master"
 
   stable do
@@ -11,6 +11,9 @@ class OsrmBackend < Formula
 
     # Backport fix for missing include. Remove in the next release.
     # Ref: https://github.com/Project-OSRM/osrm-backend/commit/565959b3896945a0eb437cc799b697be023121ef
+    #
+    # Also add temporary build fix to 'include/util/lua_util.hpp' for Boost 1.85.0.
+    # Issue ref: https://github.com/Project-OSRM/osrm-backend/issues/6850
     patch :DATA
   end
 
@@ -109,3 +112,16 @@ index 5d16fe6..2c378bf 100644
 
  #include "util/string_view.hpp"
 
+diff --git a/include/util/lua_util.hpp b/include/util/lua_util.hpp
+index 36af5a1f3..cd2d1311c 100644
+--- a/include/util/lua_util.hpp
++++ b/include/util/lua_util.hpp
+@@ -8,7 +8,7 @@ extern "C"
+ #include <lualib.h>
+ }
+
+-#include <boost/filesystem/convenience.hpp>
++#include <boost/filesystem/operations.hpp>
+
+ #include <iostream>
+ #include <string>
