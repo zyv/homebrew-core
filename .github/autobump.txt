@@ -1945,6 +1945,7 @@ tin
 tintin
 tio
 tippecanoe
+tkey-ssh-agent
 tmux-xpanes
 tmuxp
 tmx
