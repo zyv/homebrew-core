@@ -6,6 +6,7 @@ class PhpAT81 < Formula
   mirror "https://fossies.org/linux/www/php-8.1.28.tar.xz"
   sha256 "95d0b2e9466108fd750dab5c30a09e5c67f5ad2cb3b1ffb3625a038a755ad080"
   license "PHP-3.01"
+  revision 1
 
   livecheck do
     url "https://www.php.net/downloads"
@@ -40,7 +41,7 @@ class PhpAT81 < Formula
   depends_on "gd"
   depends_on "gettext"
   depends_on "gmp"
-  depends_on "icu4c"
+  depends_on "icu4c@75"
   depends_on "krb5"
   depends_on "libpq"
   depends_on "libsodium"
@@ -65,6 +66,12 @@ class PhpAT81 < Formula
     # PHP build system incorrectly links system libraries
     # see https://github.com/php/php-src/issues/10680
     patch :DATA
+  end
+
+  # Backport support for `icu4c` 75
+  patch do
+    url "https://github.com/php/php-src/commit/037855fcd3f2bc8a40d7c9ca485b3be81ce480ea.patch?full_index=1"
+    sha256 "37092174e79df35e8622ff21a83c033fcbadc5ae6d95a515d21c2ccb4860e3d9"
   end
 
   def install
