@@ -4,7 +4,7 @@ class ColladaDom < Formula
   url "https://github.com/rdiankov/collada-dom/archive/refs/tags/v2.5.0.tar.gz"
   sha256 "3be672407a7aef60b64ce4b39704b32816b0b28f61ebffd4fbd02c8012901e0d"
   license "MIT"
-  revision 8
+  revision 9
   head "https://github.com/rdiankov/collada-dom.git", branch: "master"
 
   bottle do
@@ -25,12 +25,15 @@ class ColladaDom < Formula
 
   uses_from_macos "libxml2"
 
+  # Fix build failure with `boost` 1.85.0.
+  # Issue ref: https://github.com/rdiankov/collada-dom/issues/42
+  patch :DATA
+
   def install
     # Remove bundled libraries to avoid fallback
     (buildpath/"dom/external-libs").rmtree
 
-    ENV.cxx11 if OS.linux? # due to `icu4c` dependency in `libxml2`
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DCMAKE_CXX_STANDARD=11", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -49,10 +52,51 @@ class ColladaDom < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "test.cpp", "-I#{include}/collada-dom2.5",
+    system ENV.cxx, "test.cpp", "-std=c++11", "-I#{include}/collada-dom2.5",
                     "-L#{lib}", "-lcollada-dom2.5-dp", "-o", "test"
 
     # This is the DAE file version, not the package version
     assert_equal "1.5.0", shell_output("./test").chomp
   end
 end
+
+__END__
+diff --git a/dom/include/dae.h b/dom/include/dae.h
+index e53388b..a14276a 100644
+--- a/dom/include/dae.h
++++ b/dom/include/dae.h
+@@ -25,7 +25,7 @@
+ #pragma warning(disable: 4180 4245)
+ #endif
+ #ifndef NO_BOOST
+-#include <boost/filesystem/convenience.hpp>
++#include <boost/filesystem/operations.hpp>
+ #endif
+ #ifdef _MSC_VER
+ #pragma warning(pop)
+diff --git a/dom/src/dae/daeUtils.cpp b/dom/src/dae/daeUtils.cpp
+index de30ca0..011a852 100644
+--- a/dom/src/dae/daeUtils.cpp
++++ b/dom/src/dae/daeUtils.cpp
+@@ -18,7 +18,7 @@
+ #endif
+
+ #ifndef NO_BOOST
+-#include <boost/filesystem/convenience.hpp>       // THIS WAS NOT COMMENTED.
++#include <boost/filesystem/operations.hpp>       // THIS WAS NOT COMMENTED.
+ #endif
+
+ #include <cstdio> // for tmpnam
+diff --git a/dom/src/dae/daeZAEUncompressHandler.cpp b/dom/src/dae/daeZAEUncompressHandler.cpp
+index da2a344..2550000 100644
+--- a/dom/src/dae/daeZAEUncompressHandler.cpp
++++ b/dom/src/dae/daeZAEUncompressHandler.cpp
+@@ -271,7 +271,7 @@ bool daeZAEUncompressHandler::checkAndExtractInternalArchive( const std::string&
+     bool error = false;
+
+     boost::filesystem::path archivePath(filePath);
+-    std::string dir = archivePath.branch_path().string();
++    std::string dir = archivePath.parent_path().string();
+
+     const std::string& randomSegment = cdom::getRandomFileName();
+     std::string tmpDir = dir + cdom::getFileSeparator() + randomSegment + cdom::getFileSeparator();
