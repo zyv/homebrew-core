@@ -6,6 +6,11 @@ class Naturaldocs < Formula
   sha256 "37dcfeaa0aee2a3622adc85882edacfb911c2e713dba6592cbee6812deddd2f2"
   license "AGPL-3.0-only"
 
+  livecheck do
+    url :stable
+    regex(%r{url=.*?/Natural.?Docs[._-]v?(\d+(?:\.\d+)+)\.(?:t|zip)}i)
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "46d41e17b53b336d1db203a705164e735af1db6021cc973d126de1091fb8ce0c"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "46d41e17b53b336d1db203a705164e735af1db6021cc973d126de1091fb8ce0c"
@@ -15,8 +20,6 @@ class Naturaldocs < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "46d41e17b53b336d1db203a705164e735af1db6021cc973d126de1091fb8ce0c"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "44e058e2339a3d6113ac8564fa1b9557c1b93783f541a82a463d03b82f45fb8e"
   end
-
-  deprecate! date: "2023-10-24", because: "uses deprecated `mono`"
 
   depends_on "mono"
 
@@ -40,6 +43,9 @@ class Naturaldocs < Formula
   end
 
   test do
-    system "#{bin}/naturaldocs", "-h"
+    assert_match version.to_s, shell_output(bin/"naturaldocs -v")
+
+    output = shell_output(bin/"naturaldocs --list-encodings")
+    assert_match "Unicode (UTF-8)", output
   end
 end
