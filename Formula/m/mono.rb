@@ -11,14 +11,13 @@ class Mono < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_monterey: "7c423e09da1607e5c80a8631fb4eb9f53869aca4c1bd702af36c3651a059f8dd"
-    sha256 arm64_big_sur:  "1a755293d5bd0b4d646c752be882493bbd272b8502998f78b673091a9a5e78e8"
-    sha256 sonoma:         "537d0087e718c8945d8c5acae07e0ec1f29706ee8b21610443a638d21ac42acc"
-    sha256 ventura:        "a86886958f62a0456623b51ceeef71304a6b5bc4e98fd3f889a269e817987ec2"
-    sha256 monterey:       "26fc159d687c2c647cbdc7d54c3100d47034a1bef41ad5bcd37ed28b17f338b1"
-    sha256 big_sur:        "c319b187b5b7881bae3139a38028af4ae09f55acdd0a23b5dfe1deb04bab4372"
-    sha256 x86_64_linux:   "e147b8ae7c32cda6c96a34bdd1de6f7d15c40af36b9ae68cb2196eb7e827e0a2"
+    sha256 arm64_sonoma:   "fecd50c2c2290c51fc84addd9bac77dd74b3c7901b5a8329e95322bf099cd7d6"
+    sha256 arm64_ventura:  "a3682350a932ff3812b57b3cd5671971a3cda31ddae14ccbe0a263f666222507"
+    sha256 arm64_monterey: "07f9edfaf51fb758b0af90349d33ab6abc7cfc3d95596b2ad26a55fe9ebd62e8"
+    sha256 sonoma:         "fc2d7386cf53876efd5edd0eafa568a3c82b13322fb2c27cecbe96a3477287ff"
+    sha256 ventura:        "df4634d1564955ffa5b51e5e3c8efd78f5feaf82b71cfb3476e26d920a1b1b3a"
+    sha256 monterey:       "54f6aa2e1caa371de1ba5fc6f2b3e4e8423a2669249dca543d4995900693834e"
+    sha256 x86_64_linux:   "003fac1632e75740b9d6e105471e4c5212a22d0adbeead4e2e73c03f70573f84"
   end
 
   depends_on "autoconf" => :build
