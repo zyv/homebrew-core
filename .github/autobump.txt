@@ -892,6 +892,7 @@ hbase
 hcloud
 hcxtools
 heartbeat
+hebcal
 helm
 helm-docs
 helm-ls
