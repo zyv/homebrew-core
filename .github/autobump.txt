@@ -881,6 +881,7 @@ gtranslator
 gulp-cli
 gupnp
 gupnp-tools
+gxml
 hackrf
 hadoop
 halide
