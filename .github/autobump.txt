@@ -2051,6 +2051,7 @@ wasmtime
 watchexec
 wavpack
 wayland-protocols
+wazero
 web-ext
 webdis
 webkitgtk
