@@ -4,7 +4,7 @@ class Tfel < Formula
   url "https://github.com/thelfer/tfel/archive/refs/tags/TFEL-4.2.0.tar.gz"
   sha256 "cf8a309c4d19a8e36232f8540ff28aa0d6285645f8dfb1ac57dd481ba3453e02"
   license "GPL-1.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/thelfer/tfel.git", using: :git, branch: "master"
 
   bottle do
