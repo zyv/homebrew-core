@@ -1366,6 +1366,7 @@ nfdump
 nfpm
 nginx
 ngt
+nim
 ninja
 nixpacks
 nng
