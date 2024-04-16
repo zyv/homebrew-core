@@ -4,7 +4,7 @@ class Innoextract < Formula
   url "https://constexpr.org/innoextract/files/innoextract-1.9.tar.gz"
   sha256 "6344a69fc1ed847d4ed3e272e0da5998948c6b828cb7af39c6321aba6cf88126"
   license "Zlib"
-  revision 7
+  revision 8
   head "https://github.com/dscharrer/innoextract.git", branch: "master"
 
   livecheck do
@@ -26,12 +26,17 @@ class Innoextract < Formula
   depends_on "boost"
   depends_on "xz"
 
+  # Fix build with `boost` 1.85.0 using open PR
+  # PR ref: https://github.com/dscharrer/innoextract/pull/169
+  patch do
+    url "https://github.com/dscharrer/innoextract/commit/264c2fe6b84f90f6290c670e5f676660ec7b2387.patch?full_index=1"
+    sha256 "f968a9c0521083dd4076ce5eed56127099a9c9888113fc50f476b914396045cc"
+  end
+
   def install
-    mkdir "build" do
-      system "cmake", "..", *std_cmake_args
-      system "make"
-      system "make", "install"
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
