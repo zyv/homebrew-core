@@ -6,7 +6,7 @@ class Wownero < Formula
       tag:      "v0.11.1.0",
       revision: "1b8475003c065b0387f21323dad8a03b131ae7d1"
   license "BSD-3-Clause"
-  revision 3
+  revision 4
 
   # The `strategy` code below can be removed if/when this software exceeds
   # version 10.0.0. Until then, it's used to omit a malformed tag that would
@@ -50,6 +50,19 @@ class Wownero < Formula
   conflicts_with "monero", because: "both install a wallet2_api.h header"
 
   def install
+    # Work around build error with Boost 1.85.0.
+    # Reported to `monero` where issue needs to be fixed as `wownero` is a fork.
+    # Issue ref: https://github.com/monero-project/monero/issues/9304
+    ENV.append "CXXFLAGS", "-include boost/numeric/conversion/bounds.hpp"
+    copy_option_files = %w[
+      src/common/boost_serialization_helper.h
+      src/p2p/net_peerlist.cpp
+      src/wallet/wallet2.cpp
+    ]
+    inreplace copy_option_files, "boost::filesystem::copy_option::overwrite_if_exists",
+                                 "boost::filesystem::copy_options::overwrite_existing"
+    inreplace "src/simplewallet/simplewallet.cpp", "boost::filesystem::complete(", "boost::filesystem::absolute("
+
     # Need to help CMake find `readline` when not using /usr/local prefix
     args = %W[-DReadline_ROOT_DIR=#{Formula["readline"].opt_prefix}]
 
