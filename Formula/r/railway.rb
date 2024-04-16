@@ -1,8 +1,8 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app/"
-  url "https://github.com/railwayapp/cli/archive/refs/tags/v3.6.0.tar.gz"
-  sha256 "45c532ef34bd8c02b169077783176c3632bfde24fcb4cf134cd95a0477099ae6"
+  url "https://github.com/railwayapp/cli/archive/refs/tags/v3.7.0.tar.gz"
+  sha256 "728174507cc3187e14eae0643c6d61422d6f0b1d4da45c60d03e257dd4a9ea77"
   license "MIT"
   head "https://github.com/railwayapp/cli.git", branch: "master"
 
@@ -18,16 +18,9 @@ class Railway < Formula
 
   depends_on "rust" => :build
 
-  # patch release version, upstream PR ref, https://github.com/railwayapp/cli/pull/488
-  patch do
-    url "https://github.com/railwayapp/cli/commit/6ce78727cbb41866e4c828347fb1cde6d6c505d6.patch?full_index=1"
-    sha256 "1b982ce319217cd6ca927e6cb8b2c984f124497f4be95bb7f3b2cf5de5603abd"
-  end
-
   def install
     system "cargo", "install", *std_cargo_args
 
-    # Install shell completions
     generate_completions_from_executable(bin/"railway", "completion")
   end
 
