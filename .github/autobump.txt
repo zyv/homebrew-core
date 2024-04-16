@@ -857,6 +857,7 @@ gradle-completion
 gradle-profiler
 grafana
 grails
+graphqurl
 graphqxl
 greed
 greenmask
