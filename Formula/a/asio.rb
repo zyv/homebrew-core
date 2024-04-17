@@ -1,8 +1,8 @@
 class Asio < Formula
   desc "Cross-platform C++ Library for asynchronous programming"
   homepage "https://think-async.com/Asio"
-  url "https://downloads.sourceforge.net/project/asio/asio/1.28.1%20%28Stable%29/asio-1.28.1.tar.bz2"
-  sha256 "3bcf0357e2e19a2ee5adc805e6cc209338a7461c406d3047d282ea1c4b566101"
+  url "https://downloads.sourceforge.net/project/asio/asio/1.30.2%20%28Stable%29/asio-1.30.2.tar.bz2"
+  sha256 "9f12cef05c0477eace9c68ccabd19f9e3a04b875d4768c323714cbd3a5fa3c2b"
   license "BSL-1.0"
 
   livecheck do
@@ -54,7 +54,7 @@ class Asio < Formula
     pid = fork do
       exec found.first, "127.0.0.1", port.to_s, "."
     end
-    sleep 1
+    sleep 5
     begin
       assert_match "404 Not Found", shell_output("curl http://127.0.0.1:#{port}")
     ensure
