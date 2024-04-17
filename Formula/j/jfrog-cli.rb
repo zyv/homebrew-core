@@ -7,13 +7,13 @@ class JfrogCli < Formula
   head "https://github.com/jfrog/jfrog-cli.git", branch: "v2"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fde2d566d58facc20a5a5ad1bf43b67b24ddee9839fc168e613f50c5c77ed413"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cfb1cfef783b2c1c63cdf3c3eb1a03903148bb0ce524b620decdfbea636e68cf"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c93e992a9d30c1c7d659749d1e1734714aa860fc9d408858df5fa70981bb8fcf"
-    sha256 cellar: :any_skip_relocation, sonoma:         "27e4b5f9fe4ddbdbbc747e1b3c117b324b49ed7832fe4abb2470ac4876f2ac65"
-    sha256 cellar: :any_skip_relocation, ventura:        "6062d9b6921c1edf15b53a1a647c6c88d6849e2bf963b2fb0e3f634777055ce6"
-    sha256 cellar: :any_skip_relocation, monterey:       "f58903d0fb90509acd4f36a982435c682dc446a5a8bf42400d5e68d0131a8024"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8cf2e6aa35b791e1eca27bbf4f3c1c72e9a562e65896c0bc7dc22b1683cb887f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c09f7d67fdad5aa6fd41a491652de81bc33a6348a635fe55622817c9556360d7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "aa56e034f4caf1bc3e1cd0be081ebd9e45d3415329f1387ebc05313392a75ebe"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c12e28667071895b7dea6245c38fd89a263f96ac08afac351ba751f24defa2fa"
+    sha256 cellar: :any_skip_relocation, sonoma:         "34e6e226729aea20b836301412c7343adf6841f338f55c2a9e2a34fde464ede1"
+    sha256 cellar: :any_skip_relocation, ventura:        "a33d07e3359090d580d95bcae61f7ba4c1c820ed515a67b69310035c4aff2967"
+    sha256 cellar: :any_skip_relocation, monterey:       "8c8664c5e33fe26330a841715ba8de017440803d33631bd4ed90fa54b435f528"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8db2d60995f14aba767c13bad6f8ce7905f89572711d808f08e927ff9885b01c"
   end
 
   depends_on "go" => :build
