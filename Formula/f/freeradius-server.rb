@@ -2,7 +2,7 @@ class FreeradiusServer < Formula
   desc "High-performance and highly configurable RADIUS server"
   homepage "https://freeradius.org/"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 3
+  revision 4
   head "https://github.com/FreeRADIUS/freeradius-server.git", branch: "master"
 
   stable do
@@ -72,7 +72,10 @@ class FreeradiusServer < Formula
   end
 
   test do
-    output = shell_output("#{bin}/smbencrypt homebrew")
-    assert_match "77C8009C912CFFCF3832C92FC614B7D1", output
+    assert_match "77C8009C912CFFCF3832C92FC614B7D1",
+                 shell_output("#{bin}/smbencrypt homebrew")
+
+    assert_match "Configuration appears to be OK",
+                 shell_output("#{bin}/radiusd -CX")
   end
 end
