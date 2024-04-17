@@ -83,6 +83,7 @@ ascii
 asciidoctor
 asciidoctorj
 asdf
+asio
 ask-cli
 asn
 asnmap
