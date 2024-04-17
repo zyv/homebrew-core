@@ -1824,6 +1824,7 @@ sourcery
 spack
 spectral-cli
 spglib
+sphinx-doc
 spicetify-cli
 spidermonkey
 sponge
