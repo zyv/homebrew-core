@@ -3,10 +3,9 @@ class Nvchecker < Formula
 
   desc "New version checker for software releases"
   homepage "https://github.com/lilydjwg/nvchecker"
-  url "https://files.pythonhosted.org/packages/0b/e2/1d749d02d1625529571cc01aad4e3e23d834fbe58bfca1a2bf3bb86a8b65/nvchecker-2.13.1.tar.gz"
-  sha256 "50594215ebf23f12795886f424b963b3e6fab26407a4f9afc111df4498304ee3"
+  url "https://files.pythonhosted.org/packages/fb/99/72e1057e035f43dfd11d8b07fa19881c55bdfadbee31caab961b0e9a9fce/nvchecker-2.14.tar.gz"
+  sha256 "268c01dafb5a111cf724dac005637b636e8366dd5bd37587a3128b503734ecb4"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "720518e3f156801f589c5407090e8fd4547fe91e62c0e161b5c0c3912b570733"
@@ -23,8 +22,8 @@ class Nvchecker < Formula
   depends_on "python@3.12"
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
-    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
+    url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
+    sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
   end
 
   resource "platformdirs" do

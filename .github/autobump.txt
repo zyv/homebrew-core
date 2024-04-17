@@ -1400,6 +1400,7 @@ numpy
 nushell
 nut
 nvc
+nvchecker
 oauth2_proxy
 oauth2c
 objfw
