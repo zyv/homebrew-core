@@ -6,15 +6,13 @@ class UtilMacros < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2e8b1378e854636bb55cea97e384e9668391ff6a7ab98da5ce96ef52c59fb536"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d27b0b89a7376788a6a33f030d72f9bbc1397f7d21c2e672be950180ed35f3e9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d27b0b89a7376788a6a33f030d72f9bbc1397f7d21c2e672be950180ed35f3e9"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d27b0b89a7376788a6a33f030d72f9bbc1397f7d21c2e672be950180ed35f3e9"
-    sha256 cellar: :any_skip_relocation, sonoma:         "677f697c4dbdbe5f8b555dba3b5a9fa287f46b6965eca0f7696871f60905e34e"
-    sha256 cellar: :any_skip_relocation, ventura:        "4e3314b61fccbf1b357ae51333f1c228dca6bcee87dcc218fe843fbbc0d55dd6"
-    sha256 cellar: :any_skip_relocation, monterey:       "4e3314b61fccbf1b357ae51333f1c228dca6bcee87dcc218fe843fbbc0d55dd6"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4e3314b61fccbf1b357ae51333f1c228dca6bcee87dcc218fe843fbbc0d55dd6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d27b0b89a7376788a6a33f030d72f9bbc1397f7d21c2e672be950180ed35f3e9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2b4af09c7a852f609925d9a8ead68653d67f80e2452000ec0e54b372d9b4b0cf"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2b4af09c7a852f609925d9a8ead68653d67f80e2452000ec0e54b372d9b4b0cf"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "2b4af09c7a852f609925d9a8ead68653d67f80e2452000ec0e54b372d9b4b0cf"
+    sha256 cellar: :any_skip_relocation, sonoma:         "696cf4c4a3f599b3572b2626958c668f0188f14af306cc777c4ab878e2f3fb3f"
+    sha256 cellar: :any_skip_relocation, ventura:        "696cf4c4a3f599b3572b2626958c668f0188f14af306cc777c4ab878e2f3fb3f"
+    sha256 cellar: :any_skip_relocation, monterey:       "696cf4c4a3f599b3572b2626958c668f0188f14af306cc777c4ab878e2f3fb3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b4af09c7a852f609925d9a8ead68653d67f80e2452000ec0e54b372d9b4b0cf"
   end
 
   depends_on "pkg-config" => :test
