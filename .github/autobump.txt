@@ -908,6 +908,7 @@ helmfile
 helmify
 helmsman
 hermit
+hexo
 hexyl
 hfstospell
 hidapi
