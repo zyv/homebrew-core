@@ -1,9 +1,9 @@
 class OpenjdkAT8 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u402-ga.tar.gz"
-  version "1.8.0-402"
-  sha256 "4e7495914ca02ef8e3d467d0026ff76672891b4ba026b4200aeb9a0666e22238"
+  url "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u412-ga.tar.gz"
+  version "1.8.0-412"
+  sha256 "f63bb60fbc6e798b0bbf5b6477765c66740a2b3cceab2d6713be879057f1c99b"
   license "GPL-2.0-only"
 
   livecheck do
@@ -138,7 +138,7 @@ class OpenjdkAT8 < Formula
           --with-extra-cxxflags=-F#{javavm_framework_path}
         ]
         ldflags << "-F#{javavm_framework_path}"
-        # Fix "'JavaNativeFoundation/JavaNativeFoundation.h' file not found" issue on MacOS Sonoma.
+      # Fix "'JavaNativeFoundation/JavaNativeFoundation.h' file not found" issue on MacOS Sonoma.
       elsif MacOS.version == :sonoma
         javavm_framework_path = "/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"
         args += %W[
@@ -209,6 +209,23 @@ class OpenjdkAT8 < Formula
 end
 
 __END__
+--- jdk/src/share/bin/splashscreen_stubs.c
++++ jdk/src/share/bin/splashscreen_stubs.c
+@@ -61,11 +61,11 @@
+ #define INVOKEV(name) _INVOKE(name, ,;)
+
+ int     DoSplashLoadMemory(void* pdata, int size) {
+-    INVOKE(SplashLoadMemory, NULL)(pdata, size);
++    INVOKE(SplashLoadMemory, 0)(pdata, size);
+ }
+
+ int     DoSplashLoadFile(const char* filename) {
+-    INVOKE(SplashLoadFile, NULL)(filename);
++    INVOKE(SplashLoadFile, 0)(filename);
+ }
+
+ void    DoSplashInit(void) {
+
 --- jdk/src/share/native/com/sun/java/util/jar/pack/jni.cpp
 +++ jdk/src/share/native/com/sun/java/util/jar/pack/jni.cpp
 @@ -292,7 +292,7 @@
