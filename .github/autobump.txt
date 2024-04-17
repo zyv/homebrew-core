@@ -2007,6 +2007,7 @@ uni-algo
 universal-ctags
 usb.ids
 usbredir
+util-macros
 uutils-coreutils
 uutils-findutils
 uuu
