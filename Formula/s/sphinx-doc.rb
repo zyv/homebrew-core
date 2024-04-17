@@ -3,8 +3,8 @@ class SphinxDoc < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://files.pythonhosted.org/packages/0e/3b/5cdf0dbaa8fa39ce39b4f9611cd64c2c70d127a4bca236e3b44feeba8f64/sphinx-7.3.4.tar.gz"
-  sha256 "614826a7cf76f0a4525875c3ed55e2c3618f906897cb7ad53511c5fedcbb35aa"
+  url "https://files.pythonhosted.org/packages/ee/da/a6efd3ae0d33bc716e24adf5fff9ad40b2978bf7d9201293f6470bc9d18c/sphinx-7.3.5.tar.gz"
+  sha256 "30d03bbaa53b77d38863fd6b95cc4edb4a84a1512787b3b0c12fb3b4fb25d9e9"
   license "BSD-2-Clause"
 
   bottle do
