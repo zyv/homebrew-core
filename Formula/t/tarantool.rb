@@ -1,10 +1,9 @@
 class Tarantool < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
-  url "https://download.tarantool.org/tarantool/src/tarantool-3.0.1.tar.gz"
-  sha256 "3d7dafee29353887afeecaf49927c540ec70a1eb6299d1bc02b5ac616b3e2c06"
+  url "https://download.tarantool.org/tarantool/src/tarantool-3.1.0.tar.gz"
+  sha256 "6df4383566a8bf3dcb417f798bd46c790dc96bf3b39bc9604acaba45288cc342"
   license "BSD-2-Clause"
-  revision 1
   version_scheme 1
   head "https://github.com/tarantool/tarantool.git", branch: "master"
 
@@ -79,9 +78,6 @@ class Tarantool < Formula
   end
 
   def post_install
-    local_user = ENV["USER"]
-    inreplace etc/"default/tarantool", /(username\s*=).*/, "\\1 '#{local_user}'"
-
     (var/"lib/tarantool").mkpath
     (var/"log/tarantool").mkpath
     (var/"run/tarantool").mkpath
