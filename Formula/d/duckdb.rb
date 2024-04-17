@@ -2,8 +2,8 @@ class Duckdb < Formula
   desc "Embeddable SQL OLAP Database Management System"
   homepage "https://www.duckdb.org"
   url "https://github.com/duckdb/duckdb.git",
-      tag:      "v0.10.1",
-      revision: "4a89d97db8a5a23a15f3025c8d2d2885337c2637"
+      tag:      "v0.10.2",
+      revision: "1601d94f94a7e0d2eb805a94803eb1e3afbbe4ed"
   license "MIT"
 
   bottle do
@@ -20,18 +20,19 @@ class Duckdb < Formula
   uses_from_macos "python" => :build
 
   def install
-    mkdir "build"
-    cd "build" do
-      system "cmake", "..", *std_cmake_args, "-DBUILD_EXTENSIONS='autocomplete;icu;parquet;json'",
-             "-DENABLE_EXTENSION_AUTOLOADING=1",
-             "-DENABLE_EXTENSION_AUTOINSTALL=1"
-      system "make"
-      system "make", "install"
-      bin.install "duckdb"
-      # The cli tool was renamed (0.1.8 -> 0.1.9)
-      # Create a symlink to not break compatibility
-      bin.install_symlink bin/"duckdb" => "duckdb_cli"
-    end
+    args = %w[
+      -DBUILD_EXTENSIONS='autocomplete;icu;parquet;json'
+      -DENABLE_EXTENSION_AUTOLOADING=1
+      -DENABLE_EXTENSION_AUTOINSTALL=1
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+
+    # The cli tool was renamed (0.1.8 -> 0.1.9)
+    # Create a symlink to not break compatibility
+    bin.install_symlink bin/"duckdb" => "duckdb_cli"
   end
 
   test do
