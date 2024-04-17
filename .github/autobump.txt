@@ -2037,6 +2037,7 @@ vineyard
 vips
 virgil
 virtctl
+virtualenv
 virtualenvwrapper
 virtualfish
 virustotal-cli
