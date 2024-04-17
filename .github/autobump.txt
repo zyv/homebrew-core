@@ -1433,6 +1433,7 @@ opendht
 openexr
 openfast
 openfga
+openfortivpn
 openfpgaloader
 openh264
 openimageio
