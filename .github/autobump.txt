@@ -1062,6 +1062,7 @@ kubecfg
 kubecm
 kubeconform
 kubefirst
+kubekey
 kubergrunt
 kubernetes-cli
 kubescape
