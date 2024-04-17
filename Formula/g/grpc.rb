@@ -2,13 +2,12 @@ class Grpc < Formula
   desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
   license "Apache-2.0"
-  revision 2
   head "https://github.com/grpc/grpc.git", branch: "master"
 
   stable do
     url "https://github.com/grpc/grpc.git",
-        tag:      "v1.62.1",
-        revision: "6d7a55890e076a3a8abc8185b6bf0153fcf9d179"
+        tag:      "v1.62.2",
+        revision: "96f984744fe728e196c11d33b91b022566c0d40f"
 
     # Backport fix for Protobuf 26
     patch do
