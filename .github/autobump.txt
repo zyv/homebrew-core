@@ -849,6 +849,7 @@ got
 gotestwaf
 gotpm
 govc
+govulncheck
 gowsdl
 gpg-tui
 gpsim
