@@ -3,10 +3,9 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/9b/e5/c09237cf6f2da94181102324fc255dff654414bc3c18e54145bb60d28697/esphome-2024.3.2.tar.gz"
-  sha256 "75f7bd3b963deedfe1341694d15caedac2a95ad39bab8bad366c7c82f254ce7a"
+  url "https://files.pythonhosted.org/packages/51/d3/e3de8ac06501440a7359dbdc576e418ddc1767d33f17b7b06dc39ebdc955/esphome-2024.4.0.tar.gz"
+  sha256 "d397bbe844004f681f48d2dfa4484937f2ff059f8bdf6dd1f51e6946f789e290"
   license "MIT"
-  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "7a7a24f299756d9705006178b24a1e99bea35657f949927ce63d6f1780db1225"
@@ -26,8 +25,8 @@ class Esphome < Formula
   uses_from_macos "libffi"
 
   resource "aioesphomeapi" do
-    url "https://files.pythonhosted.org/packages/b7/6b/6ec89b7b9a6786b9194713d14a0d70281f212279e3b73e03063a11f9cc4a/aioesphomeapi-23.1.1.tar.gz"
-    sha256 "69ffdbcdd51f88cc7caf58482c2c25b3adf78b69d309ae8a81bbc6ae0bb697e9"
+    url "https://files.pythonhosted.org/packages/99/68/96702205f1f140086873680931691687fde7e05dbf6ff60a960146d55dff/aioesphomeapi-23.2.0.tar.gz"
+    sha256 "8a2ec2b6d55cd4f1a8af9d3510ff3d63707ac863dedb433ddbcb24b0476ce59e"
   end
 
   resource "aiohappyeyeballs" do
@@ -46,8 +45,8 @@ class Esphome < Formula
   end
 
   resource "argcomplete" do
-    url "https://files.pythonhosted.org/packages/3c/c0/031c507227ce3b715274c1cd1f3f9baf7a0f7cec075e22c7c8b5d4e468a9/argcomplete-3.2.3.tar.gz"
-    sha256 "bf7900329262e481be5a15f56f19736b376df6f82ed27576fa893652c5de6c23"
+    url "https://files.pythonhosted.org/packages/79/51/fd6e293a64ab6f8ce1243cf3273ded7c51cbc33ef552dce3582b6a15d587/argcomplete-3.3.0.tar.gz"
+    sha256 "fd03ff4a5b9e6580569d34b273f741e85cd9e072f3feeeee3eba4891c70eda62"
   end
 
   resource "async-interrupt" do
@@ -96,8 +95,8 @@ class Esphome < Formula
   end
 
   resource "esphome-dashboard" do
-    url "https://files.pythonhosted.org/packages/22/d9/f9d6b35391f4ce463d7d918cb7cd2a620cb95a8e52a752c7f5c74d40ba26/esphome-dashboard-20240319.0.tar.gz"
-    sha256 "8e2117656c3c03845cb116f2a45a5692df0edc86f570d70e40ed731edf7a6905"
+    url "https://files.pythonhosted.org/packages/ad/1f/583c28b40593bb320eeeddcb9937dad69195ccfaaf076f2d4838cc6aff46/esphome-dashboard-20240412.0.tar.gz"
+    sha256 "313fc4a59f240ca1e12461789e3761e90fb17bc185e056316a82228214a0ba24"
   end
 
   resource "esptool" do
