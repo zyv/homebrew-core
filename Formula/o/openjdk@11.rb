@@ -1,8 +1,8 @@
 class OpenjdkAT11 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.22-ga.tar.gz"
-  sha256 "5ed47173679cdfefa0cb9fc92d443413e05ab2e157a29bb86e829d7f6a80913a"
+  url "https://github.com/openjdk/jdk11u/archive/refs/tags/jdk-11.0.23-ga.tar.gz"
+  sha256 "82bd91cc58909c6b08a8066e8ed8cf3ad09532b250126eb1159390b15db1f9fd"
   license "GPL-2.0-only"
 
   livecheck do
@@ -70,13 +70,6 @@ class OpenjdkAT11 < Formula
         sha256 "99be79935354f5c0df1ad293620ea36d13f48ec3ea870c838f20c504c9668b57"
       end
     end
-  end
-
-  # Backport fix for error: C++11 was disabled in PCH file but is currently enabled
-  # TODO: Remove in the next release.
-  patch do
-    url "https://github.com/openjdk/jdk11u-dev/commit/dc028f28d1ec5a4efd89af1b5f83fa4dc349defc.patch?full_index=1"
-    sha256 "678565de01da3bb6b81948ab3de55bb2224145a093212db801b3b59debd90710"
   end
 
   def install
