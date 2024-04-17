@@ -1912,6 +1912,7 @@ talhelper
 talisman
 tanka
 taplo
+tarantool
 tbb
 tcl-tk
 tcsh
