@@ -3,8 +3,8 @@ require "language/node"
 class Quicktype < Formula
   desc "Generate types and converters from JSON, Schema, and GraphQL"
   homepage "https://github.com/quicktype/quicktype"
-  url "https://registry.npmjs.org/quicktype/-/quicktype-23.0.145.tgz"
-  sha256 "573910897b8fd49cf9b520c9241fe9a333946d43ab0db602b547fe8866673e16"
+  url "https://registry.npmjs.org/quicktype/-/quicktype-23.0.146.tgz"
+  sha256 "0973cce800c1f4092af62a2ea9eb0f94369a2d6754b3495b5ebfba3ee051db83"
   license "Apache-2.0"
   head "https://github.com/quicktype/quicktype.git", branch: "master"
 
