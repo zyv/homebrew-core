@@ -6,13 +6,13 @@ class Autobrr < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a1b8a3bf08e4ad72923cf3a55a2b84c6df6544468ba3a0ed93b910ef07c0740a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f5a42370a2daf0f2fffd36993dba948c422ecf3e98d026183b69a9d3ab2586da"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a17dc06a1e519202acdce07a8962cb94441b6f8b149325c714ccabd2090aa810"
-    sha256 cellar: :any_skip_relocation, sonoma:         "0a1f3ee933a9863cccd42b8130411fb487d64506576ca988c95b7580d2c089bf"
-    sha256 cellar: :any_skip_relocation, ventura:        "178c0abdcc00a3e294b2c341bf771a27e52a359bb1afd5c39710aea3687df47f"
-    sha256 cellar: :any_skip_relocation, monterey:       "8dd762e9b54e17137a9d881b7fc4407c8397859557d290c6e9a3015469c13bd0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e99467f0c77aabbdc527217f908336d49adcc301b2d2d9c9b76a838489da46c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "7430b1131e2639848a3d04b6fc9e40fe42f4da2169bbc05925d365a9fad03739"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dee5eaf50a7f4839dfe3fadfecccec903bccb0314c0e5998ba08b9d5a93468a6"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "35b723c1f53bb3c976c755ed0e8f06c97e2367d569332c569380fb6cdc43d0e7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "b95aa3d8f701772fa495c1d4df8bba1958cfced5be7f6cf798fcd9317d6beb52"
+    sha256 cellar: :any_skip_relocation, ventura:        "bdb3ff2c78c6c26754f1b90ef3389adf7c5e208ca396525107f31ce876da78a9"
+    sha256 cellar: :any_skip_relocation, monterey:       "1efb640eeb1fbba0d72c4960b05a6d33500577f5bb8906ddcc2149146d848755"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb724af5e8882ad4ee6d07cadd94c638bc1055a542a5577ae3b97086afdf0f47"
   end
 
   depends_on "go" => :build
