@@ -3,8 +3,8 @@ require "language/node"
 class Pyright < Formula
   desc "Static type checker for Python"
   homepage "https://github.com/microsoft/pyright"
-  url "https://registry.npmjs.org/pyright/-/pyright-1.1.358.tgz"
-  sha256 "845819ac100fbb5cd31e289d94a5ac5941717f7270a8e80fede745c98b4f7fab"
+  url "https://registry.npmjs.org/pyright/-/pyright-1.1.359.tgz"
+  sha256 "48875272e10c3023e2ca069fba2de90bbb296b4500dafc33262eb40b5bd80d2c"
   license "MIT"
   head "https://github.com/microsoft/pyright.git", branch: "main"
 
@@ -23,8 +23,6 @@ class Pyright < Formula
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
-    # Replace universal binaries with native slices
-    deuniversalize_machos
   end
 
   test do
@@ -33,6 +31,6 @@ class Pyright < Formula
           return a + b
     EOS
     output = pipe_output("#{bin}/pyright broken.py 2>&1")
-    assert_match 'error: Expression of type "int" cannot be assigned to return type "str"', output
+    assert_match "error: Expression of type \"int\" is incompatible with return type \"str\"", output
   end
 end
