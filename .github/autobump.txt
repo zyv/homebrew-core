@@ -409,6 +409,7 @@ cpuid
 cql-proxy
 crabz
 crane
+cri-tools
 croaring
 croc
 cromwell
