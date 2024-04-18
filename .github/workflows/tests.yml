@@ -364,7 +364,7 @@ jobs:
         if: always()
         uses: Homebrew/actions/post-build@master
         with:
-          runner: ${{ matrix.runner }}
+          runner: ${{ runner.os == 'Linux' && format('{0}-deps', matrix.runner) || matrix.runner }}
           cleanup: ${{ matrix.cleanup }}
           bottles-directory: ${{ env.BOTTLES_DIR }}
           logs-directory: ${{ format('{0}/logs', env.BOTTLES_DIR) }}
