@@ -22,7 +22,7 @@ class Pnpm < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "22c0f6d967d9b72d0ef445175b7fc40f4610ae35d6e854a21095372af478948d"
   end
 
-  depends_on "node" => :test
+  depends_on "node" => [:build, :test]
 
   conflicts_with "corepack", because: "both installs `pnpm` and `pnpx` binaries"
 
@@ -30,6 +30,8 @@ class Pnpm < Formula
     libexec.install buildpath.glob("*")
     bin.install_symlink "#{libexec}/bin/pnpm.cjs" => "pnpm"
     bin.install_symlink "#{libexec}/bin/pnpx.cjs" => "pnpx"
+
+    generate_completions_from_executable(bin/"pnpm", "completion")
 
     # remove non-native architecture pre-built binaries
     (libexec/"dist").glob("reflink.*.node").each do |f|
