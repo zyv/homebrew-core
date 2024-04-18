@@ -4,6 +4,7 @@ class Pdal < Formula
   url "https://github.com/PDAL/PDAL/releases/download/2.7.1/PDAL-2.7.1-src.tar.bz2"
   sha256 "7769aaacfc26daeb559b511c73c241a5e9a2f31e26ef3a736204b83e791c5453"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/PDAL/PDAL.git", branch: "master"
 
   # The upstream GitHub repository sometimes creates tags that only include a
@@ -35,22 +36,42 @@ class Pdal < Formula
   depends_on "numpy"
   depends_on "openssl@3"
 
+  on_linux do
+    depends_on "libunwind"
+  end
+
   fails_with gcc: "5" # gdal is compiled with GCC
 
   def install
     # Work around an Xcode 15 linker issue which causes linkage against LLVM's
     # libunwind due to it being present in a library search path.
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib if DevelopmentTools.clang_build_version >= 1500
+    if DevelopmentTools.clang_build_version >= 1500
+      recursive_dependencies
+        .select { |d| d.name.match?(/^llvm(@\d+)?$/) }
+        .map { |llvm_dep| llvm_dep.to_formula.opt_lib }
+        .each { |llvm_lib| ENV.remove "HOMEBREW_LIBRARY_PATHS", llvm_lib }
+    end
 
-    system "cmake", ".", *std_cmake_args,
-                         "-DWITH_LASZIP=TRUE",
-                         "-DBUILD_PLUGIN_GREYHOUND=ON",
-                         "-DBUILD_PLUGIN_ICEBRIDGE=ON",
-                         "-DBUILD_PLUGIN_PGPOINTCLOUD=ON",
-                         "-DBUILD_PLUGIN_PYTHON=ON",
-                         "-DBUILD_PLUGIN_SQLITE=ON"
+    args = %w[
+      -DWITH_LASZIP=TRUE
+      -DBUILD_PLUGIN_GREYHOUND=ON
+      -DBUILD_PLUGIN_ICEBRIDGE=ON
+      -DBUILD_PLUGIN_PGPOINTCLOUD=ON
+      -DBUILD_PLUGIN_PYTHON=ON
+      -DBUILD_PLUGIN_SQLITE=ON
+    ]
+    if OS.linux?
+      libunwind = Formula["libunwind"]
+      ENV.append_to_cflags "-I#{libunwind.opt_include}"
+      args += %W[
+        -DLIBUNWIND_INCLUDE_DIR=#{libunwind.opt_include}
+        -DLIBUNWIND_LIBRARY=#{libunwind.opt_lib/shared_library("libunwind")}
+      ]
+    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, *args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
-    system "make", "install"
     rm_rf "test/unit"
     doc.install "examples", "test"
   end
