@@ -482,6 +482,7 @@ detox
 devcontainer
 devspace
 dex2jar
+dezoomify-rs
 dfmt
 dfu-programmer
 dhall
