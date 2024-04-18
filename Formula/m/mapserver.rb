@@ -4,7 +4,7 @@ class Mapserver < Formula
   url "https://download.osgeo.org/mapserver/mapserver-8.0.1.tar.gz"
   sha256 "79d23595ef95d61d3d728ae5e60850a3dbfbf58a46953b4fdc8e6e0ffe5748ba"
   license "MIT"
-  revision 3
+  revision 4
 
   livecheck do
     url "https://mapserver.org/download.html"
@@ -51,6 +51,23 @@ class Mapserver < Formula
   end
 
   def install
+    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
+    # libunwind due to it being present in a library search path.
+    if DevelopmentTools.clang_build_version >= 1500
+      recursive_dependencies
+        .select { |d| d.name.match?(/^llvm(@\d+)?$/) }
+        .map { |llvm_dep| llvm_dep.to_formula.opt_lib }
+        .each { |llvm_lib| ENV.remove "HOMEBREW_LIBRARY_PATHS", llvm_lib }
+    end
+
+    # Workaround for: Built-in generator --c_out specifies a maximum edition
+    # PROTO3 which is not the protoc maximum 2023.
+    # Remove when fixed in `protobuf-c`:
+    # https://github.com/protobuf-c/protobuf-c/pull/711
+    inreplace "CMakeLists.txt",
+              "COMMAND ${PROTOBUFC_COMPILER}",
+              "COMMAND #{Formula["protobuf"].opt_bin/"protoc"}"
+
     if OS.mac?
       mapscript_rpath = rpath(source: prefix/Language::Python.site_packages(python3)/"mapscript")
       # Install within our sandbox and add missing RPATH due to _mapscript.so not using CMake install()
