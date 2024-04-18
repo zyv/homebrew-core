@@ -12,13 +12,13 @@ class SpatialiteGui < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "8118deb7546c121de8bbc896903e9c72f8041743f181d519e8432f4603e2c6eb"
-    sha256 cellar: :any,                 arm64_ventura:  "017848cd915bdbb235ad0274523f48bb8ee1e596e19c79eecac1fe607002bc0f"
-    sha256 cellar: :any,                 arm64_monterey: "888e9f7843db07a4952db29a454302bd4ffd9161f98d2165fa3b9c0e70f9068a"
-    sha256 cellar: :any,                 sonoma:         "2e6a062109a1d47a99dbd5df515fe7d45fae9b1d72f191344d5220cc40a533fc"
-    sha256 cellar: :any,                 ventura:        "664b0807a162618da46d8898b8c891204ec560a128a38c26f89458c838aa64df"
-    sha256 cellar: :any,                 monterey:       "2e77213707059a4cbaaa4f49639794a3c92e18950efad246381ebbfd852a63d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9dfab6ace2e591356c57306e21a5faa1f762d7ef94784a5233f652bb0043b31"
+    sha256 cellar: :any,                 arm64_sonoma:   "d4392dabb5d4c3e56557cffa6fa8bf201fb0957f3b36e6ff10dda3c5f4440997"
+    sha256 cellar: :any,                 arm64_ventura:  "3bcca03de6319c89394192908fca92324947083337fe1aae61eb22f440c363fd"
+    sha256 cellar: :any,                 arm64_monterey: "700d4623fe0584fc17654457a2dcd830910c5fbe2ebf9dd722711907aa5103fb"
+    sha256 cellar: :any,                 sonoma:         "1014b5a5eadb32b48daeb0a2a06f972b286faf03779e56cb9571559b9e403e5d"
+    sha256 cellar: :any,                 ventura:        "e6884941f998ac9a3f945d76a415405553238e702e0b28aa2881fcdde07864ca"
+    sha256 cellar: :any,                 monterey:       "08d7dcbb6918eb49a19844e1754c7347eb6c3d0c811e432620e7f2099257d19e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e49cf249287df161d75d0fb638bdf614e2adc2e91e72248f0f85521edeac0fbd"
   end
 
   depends_on "pkg-config" => :build
