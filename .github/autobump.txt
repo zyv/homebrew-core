@@ -1095,6 +1095,7 @@ ld-find-code-refs
 ldc
 ldeep
 leaf-proxy
+leakcanary-shark
 lean-cli
 leapp-cli
 leetup
