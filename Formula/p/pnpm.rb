@@ -13,16 +13,17 @@ class Pnpm < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "47542d31f20ff910ecd667f251254f369cd4410ab40dbfd43f6678dc48f1549f"
-    sha256 cellar: :any,                 arm64_ventura:  "47542d31f20ff910ecd667f251254f369cd4410ab40dbfd43f6678dc48f1549f"
-    sha256 cellar: :any,                 arm64_monterey: "47542d31f20ff910ecd667f251254f369cd4410ab40dbfd43f6678dc48f1549f"
-    sha256 cellar: :any,                 sonoma:         "b25dbfd674e7e659c2524f35f97769626e222c48b8fda2fb1c2e412a0b9b5156"
-    sha256 cellar: :any,                 ventura:        "b25dbfd674e7e659c2524f35f97769626e222c48b8fda2fb1c2e412a0b9b5156"
-    sha256 cellar: :any,                 monterey:       "b25dbfd674e7e659c2524f35f97769626e222c48b8fda2fb1c2e412a0b9b5156"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "22c0f6d967d9b72d0ef445175b7fc40f4610ae35d6e854a21095372af478948d"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "f2e3869c170a34f5c70903edf494225d24f7c2108b8eed04580a145853021103"
+    sha256 cellar: :any,                 arm64_ventura:  "f2e3869c170a34f5c70903edf494225d24f7c2108b8eed04580a145853021103"
+    sha256 cellar: :any,                 arm64_monterey: "f2e3869c170a34f5c70903edf494225d24f7c2108b8eed04580a145853021103"
+    sha256 cellar: :any,                 sonoma:         "c91156cbee479c92854e5beeedaddbfc2ac4dfe8ba4cc0a4cf2a09e234518d54"
+    sha256 cellar: :any,                 ventura:        "c91156cbee479c92854e5beeedaddbfc2ac4dfe8ba4cc0a4cf2a09e234518d54"
+    sha256 cellar: :any,                 monterey:       "c91156cbee479c92854e5beeedaddbfc2ac4dfe8ba4cc0a4cf2a09e234518d54"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dbf429b84eeda5fe55816a610a71e60e9a72bd802c7dc7761a12ec4e0ddc7ee7"
   end
 
-  depends_on "node" => :test
+  depends_on "node" => [:build, :test]
 
   conflicts_with "corepack", because: "both installs `pnpm` and `pnpx` binaries"
 
@@ -30,6 +31,8 @@ class Pnpm < Formula
     libexec.install buildpath.glob("*")
     bin.install_symlink "#{libexec}/bin/pnpm.cjs" => "pnpm"
     bin.install_symlink "#{libexec}/bin/pnpx.cjs" => "pnpx"
+
+    generate_completions_from_executable(bin/"pnpm", "completion")
 
     # remove non-native architecture pre-built binaries
     (libexec/"dist").glob("reflink.*.node").each do |f|
