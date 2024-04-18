@@ -3,8 +3,8 @@ class TrashCli < Formula
 
   desc "Command-line interface to the freedesktop.org trashcan"
   homepage "https://github.com/andreafrancia/trash-cli"
-  url "https://files.pythonhosted.org/packages/1e/2b/267cd091c656738fd7fb2f60d86898698c5431c0565f87917f8eb6abb753/trash-cli-0.23.11.10.tar.gz"
-  sha256 "606ca808cd2e285820874bb8b4287212485de6b01959e448f92ebad3eaa4cef8"
+  url "https://files.pythonhosted.org/packages/6b/2c/40b5a7f7623986d784272290eedf6add4c266798ab92d0ab11b1e24aedc2/trash_cli-0.24.4.17.tar.gz"
+  sha256 "8a540b16856cf316dab5d9507b6bb2cb46f7bbdbffafa63795c5242630ce3046"
   license "GPL-2.0-or-later"
   head "https://github.com/andreafrancia/trash-cli.git", branch: "master"
 
