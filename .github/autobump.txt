@@ -1270,7 +1270,6 @@ melody
 memcached
 memray
 mercurial
-mesa
 meson
 meta-package-manager
 metabase
