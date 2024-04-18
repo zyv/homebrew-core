@@ -274,6 +274,7 @@ cdxgen
 cekit
 censys
 certigo
+cf2tf
 cfengine
 cfitsio
 cfn-lint
