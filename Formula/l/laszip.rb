@@ -1,9 +1,9 @@
 class Laszip < Formula
   desc "Lossless LiDAR compression"
   homepage "https://laszip.org/"
-  url "https://github.com/LASzip/LASzip/releases/download/3.4.3/laszip-src-3.4.3.tar.gz"
-  sha256 "53f546a7f06fc969b38d1d71cceb1862b4fc2c4a0965191a0eee81a57c7b373d"
-  license "LGPL-2.1-or-later"
+  url "https://github.com/LASzip/LASzip/archive/refs/tags/3.4.4.tar.gz"
+  sha256 "6d034bf3a400f81317a5dbad59d1b7ce82d971e887ca22d15813b914f0a5c281"
+  license "Apache-2.0"
   head "https://github.com/LASzip/LASzip.git", branch: "master"
 
   bottle do
@@ -24,13 +24,14 @@ class Laszip < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
     pkgshare.install "example"
   end
 
   test do
-    system ENV.cxx, pkgshare/"example/laszipdllexample.cpp", "-L#{lib}",
+    system ENV.cxx, pkgshare/"example/laszipdllexample.cpp", "-L#{lib}", "-I#{include}/laszip",
                     "-llaszip", "-llaszip_api", "-Wno-format", "-ldl", "-o", "test"
     assert_match "LASzip DLL", shell_output("./test -h 2>&1", 1)
   end
