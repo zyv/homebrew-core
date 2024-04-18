@@ -1992,6 +1992,7 @@ trippy
 trivy
 trojan-go
 trufflehog
+trurl
 tsduck
 tt
 ttdl
