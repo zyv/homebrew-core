@@ -1,8 +1,8 @@
 class LeafProxy < Formula
   desc "Lightweight and fast proxy utility"
   homepage "https://github.com/eycorsican/leaf"
-  url "https://github.com/eycorsican/leaf/archive/refs/tags/v0.10.10.tar.gz"
-  sha256 "9d46c18e092090c3f73d42d6b61095ef862b4e5daee2a360d1708b7954157998"
+  url "https://github.com/eycorsican/leaf/archive/refs/tags/v0.10.12.tar.gz"
+  sha256 "5c351b19fcce9262f99ecde37a18b5eb36acb6105f922f096834e6a5bdcfb382"
   license "Apache-2.0"
   head "https://github.com/eycorsican/leaf.git", branch: "master"
 
@@ -21,7 +21,7 @@ class LeafProxy < Formula
   conflicts_with "leaf", because: "both install a `leaf` binary"
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "leaf-bin")
+    system "cargo", "install", *std_cargo_args(path: "leaf-cli")
   end
 
   test do
