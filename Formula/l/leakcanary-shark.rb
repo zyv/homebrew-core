@@ -6,7 +6,7 @@ class LeakcanaryShark < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f48beb3d4abe9da3afa616317bd45574ff7f6712ff145a1e77140ac728ac70d0"
+    sha256 cellar: :any_skip_relocation, all: "0cebacc85e3f690e603a7f298e342d248c5ed6068da7edff8cfac07d4c59ab43"
   end
 
   depends_on "openjdk"
