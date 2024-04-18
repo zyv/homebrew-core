@@ -1,8 +1,8 @@
 class Tmuxinator < Formula
   desc "Manage complex tmux sessions easily"
   homepage "https://github.com/tmuxinator/tmuxinator"
-  url "https://github.com/tmuxinator/tmuxinator/archive/refs/tags/v3.1.2.tar.gz"
-  sha256 "f173d3481f01ad6321e639fa07473715c5f2210dad4b073bd0d1d87087f80785"
+  url "https://github.com/tmuxinator/tmuxinator/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "d1f65fd7c27bdc35de73eee7454eb5b00b4685c8e6c6e7c163d767ab0e8920c3"
   license "MIT"
   head "https://github.com/tmuxinator/tmuxinator.git", branch: "master"
 
@@ -21,19 +21,19 @@ class Tmuxinator < Formula
 
   conflicts_with "tmuxinator-completion", because: "the tmuxinator formula includes completion"
 
-  resource "erubis" do
-    url "https://rubygems.org/downloads/erubis-2.7.0.gem"
-    sha256 "63653f5174a7997f6f1d6f465fbe1494dcc4bdab1fb8e635f6216989fb1148ba"
-  end
-
-  resource "thor" do
-    url "https://rubygems.org/downloads/thor-1.3.0.gem"
-    sha256 "1adc7f9e5b3655a68c71393fee8bd0ad088d14ee8e83a0b73726f23cbb3ca7c3"
-  end
-
   resource "xdg" do
     url "https://rubygems.org/downloads/xdg-2.2.5.gem"
     sha256 "f3a5f799363852695e457bb7379ac6c4e3e8cb3a51ce6b449ab47fbb1523b913"
+  end
+
+  resource "thor" do
+    url "https://rubygems.org/downloads/thor-1.3.1.gem"
+    sha256 "fa7e3471d4f6a27138e3d9c9b0d4daac9c3d7383927667ae83e9ab42ae7401ef"
+  end
+
+  resource "erubi" do
+    url "https://rubygems.org/downloads/erubi-1.12.0.gem"
+    sha256 "27bedb74dfb1e04ff60674975e182d8ca787f2224f2e8143268c7696f42e4723"
   end
 
   def install
