@@ -1,8 +1,8 @@
 class Glab < Formula
   desc "Open-source GitLab command-line tool"
   homepage "https://gitlab.com/gitlab-org/cli"
-  url "https://gitlab.com/gitlab-org/cli/-/archive/v1.38.0/cli-v1.38.0.tar.gz"
-  sha256 "e41f7c04d782936562f7eee6866ae973aa4f2807ade643372a918d5271f279c7"
+  url "https://gitlab.com/gitlab-org/cli/-/archive/v1.39.0/cli-v1.39.0.tar.gz"
+  sha256 "1426c717b090248bef44c26bcc05f34cf8512201fc40eb261b7143b41052a2ad"
   license "MIT"
   head "https://gitlab.com/gitlab-org/cli.git", branch: "trunk"
 
