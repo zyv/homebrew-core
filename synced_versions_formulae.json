@@ -30,7 +30,7 @@
   ["git", "git-credential-libsecret", "git-gui", "git-svn"],
   ["hdf5", "hdf5-mpi"],
   ["ilmbase", "openexr@2"],
-  ["libmediainfo", "mediainfo"],
+  ["libmediainfo", "media-info"],
   ["libnetworkit", "networkit"],
   ["libnghttp2", "nghttp2"],
   ["libngspice", "ngspice"],
