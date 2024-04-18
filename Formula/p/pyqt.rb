@@ -4,6 +4,7 @@ class Pyqt < Formula
   url "https://files.pythonhosted.org/packages/8c/2b/6fe0409501798abc780a70cab48c39599742ab5a8168e682107eaab78fca/PyQt6-6.6.1.tar.gz"
   sha256 "9f158aa29d205142c56f0f35d07784b8df0be28378d20a97bcda8bd64ffd0379"
   license "GPL-3.0-only"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "ff17ae68092a601ba87f7b832338dd901211a835d27476080aa36446bd99b9bf"
@@ -51,6 +52,12 @@ class Pyqt < Formula
   resource "pyqt6-webengine" do
     url "https://files.pythonhosted.org/packages/49/9a/69db3a2ab1ba43f762144a66f0375540e195e107a1049d7263ab48ebc9cc/PyQt6_WebEngine-6.6.0.tar.gz"
     sha256 "d50b984c3f85e409e692b156132721522d4e8cf9b6c25e0cf927eea2dfb39487"
+  end
+
+  # Backport support for `qt` 6.7.0 API changes
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/50173dde32f39f63617ece5d4cad2a616027a506/pyqt/qt-6.7.0.patch"
+    sha256 "2e1df66b5d6ad338269368bc3778f27ed77f66be891613f7c567fbdac2197f6d"
   end
 
   def python3
