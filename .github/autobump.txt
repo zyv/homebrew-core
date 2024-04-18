@@ -12,6 +12,7 @@ ada-url
 adb-enhanced
 adios2
 adwaita-icon-theme
+aerleon
 afflib
 agda
 age
