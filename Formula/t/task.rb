@@ -1,10 +1,9 @@
 class Task < Formula
   desc "Feature-rich console based todo list manager"
   homepage "https://taskwarrior.org/"
-  url "https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v2.6.2/task-2.6.2.tar.gz"
-  sha256 "b1d3a7f000cd0fd60640670064e0e001613c9e1cb2242b9b3a9066c78862cfec"
+  url "https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v3.0.0/task-3.0.0.tar.gz"
+  sha256 "30f397081044f5dc2e5a0ba51609223011a23281cd9947ea718df98d149fcc83"
   license "MIT"
-  revision 1
   head "https://github.com/GothenburgBitFactory/taskwarrior.git", branch: "develop"
 
   livecheck do
@@ -26,6 +25,8 @@ class Task < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "rust" => :build
+  depends_on "corrosion"
   depends_on "gnutls"
 
   on_linux do
@@ -37,6 +38,13 @@ class Task < Formula
   conflicts_with "go-task", because: "both install `task` binaries"
 
   fails_with gcc: "5"
+
+  # upstream bug report, https://github.com/GothenburgBitFactory/taskwarrior/issues/3294
+  # and PR comment for the workaround, https://github.com/GothenburgBitFactory/taskwarrior/pull/3302
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/080b833258961c922d85984871a96ca55bbf519b/task/task-3.0.0.patch"
+    sha256 "362834215f7308f5c2af1b6591d98907d2f77fddc4a341915e0f47eb153724ac"
+  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

@@ -1919,6 +1919,7 @@ talisman
 tanka
 taplo
 tarantool
+task
 tbb
 tbls
 tcl-tk
