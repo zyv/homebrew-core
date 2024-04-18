@@ -1,8 +1,8 @@
 class CassandraReaper < Formula
   desc "Management interface for Cassandra"
   homepage "https://cassandra-reaper.io/"
-  url "https://github.com/thelastpickle/cassandra-reaper/releases/download/3.5.0/cassandra-reaper-3.5.0-release.tar.gz"
-  sha256 "86eda426fb1cf2b1c9bcd068177b87afb14e43f5522611763f76d022ce510e50"
+  url "https://github.com/thelastpickle/cassandra-reaper/releases/download/3.6.0/cassandra-reaper-3.6.0-release.tar.gz"
+  sha256 "128b0ae381faebb4043e2c698477e7d5f399159c0eb2d991a32bfc1655cce839"
   license "Apache-2.0"
 
   bottle do
@@ -38,11 +38,13 @@ class CassandraReaper < Formula
     inreplace "cassandra-reaper.yaml" do |s|
       s.gsub! "port: 8080", "port: #{port}"
       s.gsub! "port: 8081", "port: #{free_port}"
+      s.gsub! "storageType: memory", "storageType: memory\npersistenceStoragePath: #{testpath}/persistence"
     end
+
     fork do
-      exec "#{bin}/cassandra-reaper", "#{testpath}/cassandra-reaper.yaml"
+      exec bin/"cassandra-reaper", testpath/"cassandra-reaper.yaml"
     end
-    sleep 30
+    sleep 40
     assert_match "200 OK", shell_output("curl -Im3 -o- http://localhost:#{port}/webui/login.html")
   end
 end
