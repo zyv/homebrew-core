@@ -3,8 +3,8 @@ class Locust < Formula
 
   desc "Scalable user load testing tool written in Python"
   homepage "https://locust.io/"
-  url "https://files.pythonhosted.org/packages/40/db/9bf93a65c9588b1551ad7603514c3536465d65d5df3ceda9fb883d7e62e5/locust-2.25.0.tar.gz"
-  sha256 "45bc88b3097f0346a46514f99ebf8d8a86f07325366da0b9dc2c3f207499dbc6"
+  url "https://files.pythonhosted.org/packages/3d/94/fe78c17e7cdcc606aab1a244936e70f9d9d1cff9368af3554bd523b9466a/locust-2.26.0.tar.gz"
+  sha256 "a5cb4c96b8fa1ae5c20876ab8ca9d1e980d56148ed3c187df610cc2546705bff"
   license "MIT"
 
   bottle do
@@ -17,6 +17,8 @@ class Locust < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "8d964610b2624fcd5788e3ea09be972514ad0172476e50456fc9117c6282b53a"
   end
 
+  depends_on "cmake" => :build # for pyzmq
+  depends_on "ninja" => :build # for pyzmq
   depends_on "certifi"
   depends_on "python@3.12"
   depends_on "zeromq"
@@ -67,8 +69,8 @@ class Locust < Formula
   end
 
   resource "geventhttpclient" do
-    url "https://files.pythonhosted.org/packages/2f/c5/836b35b4186379324e246bdf040972428b466ac72328c4e167cb2e8e451a/geventhttpclient-2.2.0.tar.gz"
-    sha256 "6c91948e40233348e033f1bbc5dc3a96808d9b1512acfb7c0b5f81fe75f5b5fc"
+    url "https://files.pythonhosted.org/packages/41/2d/3552e3e27f8ebe179b3f011bd70c5cc46c15851b774e949e9f7af83e161c/geventhttpclient-2.2.1.tar.gz"
+    sha256 "29f7e02683e3cd4f0032fba67364ff322e8504fddd170d9de5541bcfade85a50"
   end
 
   resource "greenlet" do
@@ -82,8 +84,8 @@ class Locust < Formula
   end
 
   resource "itsdangerous" do
-    url "https://files.pythonhosted.org/packages/7f/a1/d3fb83e7a61fa0c0d3d08ad0a94ddbeff3731c05212617dff3a94e097f08/itsdangerous-2.1.2.tar.gz"
-    sha256 "5dbbc68b317e5e42f327f9021763545dc3fc3bfe22e6deb96aaf1fc38874156a"
+    url "https://files.pythonhosted.org/packages/9c/cb/8ac0172223afbccb63986cc25049b154ecfb5e85932587206f42317be31d/itsdangerous-2.2.0.tar.gz"
+    sha256 "e0050c0b7da1eea53ffaf149c0cfbb5c6e2e2b69c4bef22c81fa6eb73e5f6173"
   end
 
   resource "jinja2" do
@@ -107,8 +109,8 @@ class Locust < Formula
   end
 
   resource "pyzmq" do
-    url "https://files.pythonhosted.org/packages/3a/33/1a3683fc9a4bd64d8ccc0290da75c8f042184a1a49c146d28398414d3341/pyzmq-25.1.2.tar.gz"
-    sha256 "93f1aa311e8bb912e34f004cf186407a4e90eec4f0ecc0efd26056bf7eda0226"
+    url "https://files.pythonhosted.org/packages/46/db/76b6c3a512adf5caf74827a7a02e1b311240d4544cc450623568b30109f8/pyzmq-26.0.0.tar.gz"
+    sha256 "10ff405db5cee3bbd7aa143d78b25d90356097aed7864e50f0ae644e08759fe9"
   end
 
   resource "requests" do
