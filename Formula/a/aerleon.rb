@@ -3,10 +3,9 @@ class Aerleon < Formula
 
   desc "Generate firewall configs for multiple firewall platforms"
   homepage "https://aerleon.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/b8/e5/f4386abc5d0e7f18bba22650514c1c14dbd235c93e11ac020f6c724614da/aerleon-1.7.0.tar.gz"
-  sha256 "f3145c2a04f37c0463fbd80ee650f039bda9bc445e9c7fd4f18d8eeeda1b6ead"
+  url "https://files.pythonhosted.org/packages/ca/bd/87869c1cb33a2b4d269c6f66056c44453e643925731cb85e6861d1121be8/aerleon-1.9.0.tar.gz"
+  sha256 "850cd621dda750263db313d4473302b48b82adaaa9220e6fd0677cb7900f95f6"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/aerleon/aerleon.git", branch: "main"
 
   bottle do
@@ -38,8 +37,8 @@ class Aerleon < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/0c/1d/eb26f5e75100d531d7399ae800814b069bc2ed2a7410834d57374d010d96/typing_extensions-4.9.0.tar.gz"
-    sha256 "23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"
+    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
+    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
   end
 
   def install
