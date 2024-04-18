@@ -1,8 +1,8 @@
 class Kics < Formula
   desc "Detect vulnerabilities, compliance issues, and misconfigurations"
   homepage "https://kics.io/"
-  url "https://github.com/Checkmarx/kics/archive/refs/tags/v1.7.13.tar.gz"
-  sha256 "6262632cb70fd4d642deb66b1c02ae2825bde34d9020632a9a627c94350650cf"
+  url "https://github.com/Checkmarx/kics/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "8b4b3c466421215625889943ee2bf63c8646790782d47876516ea12fb1b46a0d"
   license "Apache-2.0"
   head "https://github.com/Checkmarx/kics.git", branch: "master"
 
@@ -49,6 +49,7 @@ class Kics < Formula
 
     assert_match <<~EOS, shell_output("#{bin}/kics scan -p #{testpath}")
       Results Summary:
+      CRITICAL: 0
       HIGH: 0
       MEDIUM: 0
       LOW: 0
