@@ -4,6 +4,7 @@ class Ospray < Formula
   url "https://github.com/ospray/ospray/archive/refs/tags/v3.1.0.tar.gz"
   sha256 "0b9d7df900fe0474b12e5a2641bb9c3f5a1561217b2789834ebf994a15288a82"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/ospray/ospray.git", branch: "master"
 
   livecheck do
@@ -37,6 +38,13 @@ class Ospray < Formula
   end
 
   def install
+    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
+    # libunwind due to it being present in a library search path.
+    if DevelopmentTools.clang_build_version >= 1500
+      ENV.remove "HOMEBREW_LIBRARY_PATHS",
+                 Formula["ispc"].deps.map(&:to_formula).find { |f| f.name.match? "^llvm" }.opt_lib
+    end
+
     resources.each do |r|
       r.stage do
         args = %W[
