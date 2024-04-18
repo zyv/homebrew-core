@@ -1083,6 +1083,7 @@ kyverno
 lacework-cli
 languagetool
 lastpass-cli
+laszip
 latex2html
 latexindent
 latexml
