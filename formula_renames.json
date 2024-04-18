@@ -10,7 +10,7 @@
   "atk": "at-spi2-core",
   "azion-cli": "azion",
   "aztfy": "aztfexport",
-  "artifactory-cli-go": "jfrog-cli-go",
+  "artifactory-cli-go": "jfrog-cli",
   "badtouch": "authoscope",
   "bash-completion2": "bash-completion@2",
   "beanstalk": "beanstalkd",
