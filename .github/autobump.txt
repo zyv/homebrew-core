@@ -1918,6 +1918,7 @@ tanka
 taplo
 tarantool
 tbb
+tbls
 tcl-tk
 tcsh
 tctl
