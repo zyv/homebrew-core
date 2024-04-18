@@ -7,13 +7,13 @@ class Trurl < Formula
   head "https://github.com/curl/trurl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "31f50eb8336d2e68c2a95c7cc8baefa0fdc810d58d4071d534a129d98e82e5c6"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c29fd5155bff88e1acc41e145d52e6ec9838ecfb3337f740e978d4cd6e555453"
-    sha256 cellar: :any,                 arm64_monterey: "119765466dc91ac26d31260daf771945179c09840cf1a4a8610f922ed717a772"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f076b3e9961a5122f97b9825875c79d7a13e5ede64dc500a0b7f9a37cda52701"
-    sha256 cellar: :any_skip_relocation, ventura:        "b5fe9d9b80283e7976765d227f1988b8a1e05b2e51e7bf3389b9b2163c2fa667"
-    sha256 cellar: :any,                 monterey:       "97096b60051a0578cd568232c2132b9c72054773409d941482f61cea2200922b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3122417e2eb9d44749988533c215e7876b66e40417c7654b3ed3c65c2578177"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2415e2f8f88c59adae7c4aa77bac4fe9a715e5851f4096fe63812367cd346fa5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "514387ed6fdc290e702db81c572dfd61c691f9ad7c7dfa1f5dc65c64202d9de8"
+    sha256 cellar: :any,                 arm64_monterey: "99fcdc7a5d9e58e604a1a5ef1c434708a6b8227b8f7022c29f5522efaa12ae67"
+    sha256 cellar: :any_skip_relocation, sonoma:         "99c265f07780793aa801d34be5aaed4a2f6e58fac0aac081c5fc5e12fcd1174e"
+    sha256 cellar: :any_skip_relocation, ventura:        "10c86617298162eedfbc5c00a16e8625848da3902cb84f659d01eaa8a331ef3b"
+    sha256 cellar: :any,                 monterey:       "ecde46b16ab0ea4ff3e48df4ae18da877a413b82df245ebba0ca68b5e5d97357"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f8d5dc74470e93a51ea777ae0b1e9a0047aa24136ca351f7994de15791804b4c"
   end
 
   uses_from_macos "curl", since: :ventura # uses CURLUE_NO_ZONEID, available since curl 7.81.0
