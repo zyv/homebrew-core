@@ -1,8 +1,8 @@
 class Grin < Formula
   desc "Minimal implementation of the Mimblewimble protocol"
   homepage "https://grin.mw/"
-  url "https://github.com/mimblewimble/grin/archive/refs/tags/v5.2.1.tar.gz"
-  sha256 "243f391e5181307c5a8158759f560bc835b3e0287ffdd1898d38d6db644de631"
+  url "https://github.com/mimblewimble/grin/archive/refs/tags/v5.3.0.tar.gz"
+  sha256 "2b4723c3ab0e81a4b385e2d85ccc3f82b1046b21c2fed3c76aec1a378a5d8e25"
   license "Apache-2.0"
 
   bottle do
@@ -15,31 +15,12 @@ class Grin < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "56241d9e23541542bdce1c9c22905509140c3254c5b63d3ae6e8bb8ae7fedf07"
   end
 
-  # Use `llvm@15` to work around build failure with Clang 16 described in
-  # https://github.com/rust-lang/rust-bindgen/issues/2312.
-  # TODO: Switch back to `uses_from_macos "llvm" => :build` when `bindgen` is
-  # updated to 0.62.0 or newer. There is a check in the `install` method.
-  depends_on "llvm@15" => :build # for libclang
   depends_on "rust" => :build
 
+  uses_from_macos "llvm" => :build # for libclang
   uses_from_macos "ncurses"
 
   def install
-    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
-    # libunwind due to it being present in a library search path.
-    ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm@15"].opt_lib
-
-    bindgen_version = Version.new(
-      (buildpath/"Cargo.lock").read
-                              .match(/name = "bindgen"\nversion = "(.*)"/)[1],
-    )
-    if bindgen_version >= "0.62.0"
-      odie "`bindgen` crate is updated to 0.62.0 or newer! Please remove " \
-           'this check and try switching to `uses_from_macos "llvm" => :build`.'
-    end
-
-    ENV["CLANG_PATH"] = Formula["llvm@15"].opt_bin/"clang"
-
     system "cargo", "install", *std_cargo_args
   end
 
