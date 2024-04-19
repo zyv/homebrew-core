@@ -8,13 +8,13 @@ class SyslogNg < Formula
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   bottle do
-    sha256 arm64_sonoma:   "19578e6b6f382c326b6fb8c4d3cd09ec7f55a78e90ae4776fbbfdec81833c8ca"
-    sha256 arm64_ventura:  "a0c705a7b53386f97cf4e71c7fd392f5875c9363a9d0e58621e24c36f1191106"
-    sha256 arm64_monterey: "c366d1c99deddbe312e6ca672744a2382e894c72c7c6ca0fd0ede33579486b7c"
-    sha256 sonoma:         "f616a82c15c8a71cb7c6d1201a5e25c84c3971f7637560768656b6129b4871d9"
-    sha256 ventura:        "e3d562b92be1e943d4ac7d6c8560db27fba6e14e2393475a8de5815de99eaa2b"
-    sha256 monterey:       "6412eb3a4676aa8160be43e759fbfafb7097d3429ec33aea4de1884e4d09fb97"
-    sha256 x86_64_linux:   "c88bbb6dfd93353e59b09b286082c6af3b56527d80da7adab87c487c4d6ced89"
+    sha256 arm64_sonoma:   "dd5a93f7c7a210373ddbc808eb60425539068c73da3798d41c41b45c3ea11e6f"
+    sha256 arm64_ventura:  "0f7706621aed4b1cdb3947b66f69df9c80e96372a1f7b6721ec1b86ba15760d5"
+    sha256 arm64_monterey: "8ad186a0e9c0421609e3a3a51a03326598d045d0134e4d23be3f709159336f61"
+    sha256 sonoma:         "2394cc3c5f2d6770ddab0f8f8d30f9ced1e32f07742e0aa492442a189c14dfaa"
+    sha256 ventura:        "596d0062f0dbf83a53fa2236412d889e0aa846acfbceb1b2a225b09fccc7615f"
+    sha256 monterey:       "d1b998e16010105264f1aa9c537ba4c76b77a8e216e8195ff2b3f42543b03fda"
+    sha256 x86_64_linux:   "0b34b8a901ed9d3220b20e3d9ed577b5dfccbe6cc22709140715880a297f14e1"
   end
 
   depends_on "autoconf" => :build
