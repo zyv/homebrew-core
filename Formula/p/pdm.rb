@@ -3,8 +3,8 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/18/df/3c775881f4c0195986581a7af29b5d5dda3e830438b542c6d556d80899f9/pdm-2.14.0.tar.gz"
-  sha256 "7ae6c4b5518085a703e0824ab10cbc3b7246b599ef07b8c4dcb2af1e42859190"
+  url "https://files.pythonhosted.org/packages/14/8e/505d8b7a87c7a67512788add96a93cbf26e549a1b663850beb2d06245026/pdm-2.15.0.tar.gz"
+  sha256 "e7a11d1b237cdea3ed671958bb7d7cc67b522c6519d5c35bf6a1949329a54010"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
@@ -47,8 +47,8 @@ class Pdm < Formula
   end
 
   resource "findpython" do
-    url "https://files.pythonhosted.org/packages/88/98/d3884ebd9f49213cab7b964ec9e415e7efbcf00327f061105c46da22361d/findpython-0.6.0.tar.gz"
-    sha256 "036a7841b88e2f372433a589b1f09219519737d2989eb5f5370d70afbcf84765"
+    url "https://files.pythonhosted.org/packages/29/57/a35de26696baa005ddcfce8af495fb8cdb75942ebebf1cf219a04706fc81/findpython-0.6.1.tar.gz"
+    sha256 "56e52b409a92bcbd495cf981c85acf137f3b3e51cc769b46eba219bb1ab7533c"
   end
 
   resource "h11" do
@@ -57,8 +57,8 @@ class Pdm < Formula
   end
 
   resource "hishel" do
-    url "https://files.pythonhosted.org/packages/1c/db/79c910d7b7b4e0b81826ddbd293188779276431a6f89d97c3d874e9b8aaa/hishel-0.0.25.tar.gz"
-    sha256 "ddb22ee32c656e3c75cd05efefd1165c5fbd1c3f023edffda684f5125625700b"
+    url "https://files.pythonhosted.org/packages/21/9c/e97476b0e594ee9ad7af48701138b87d0a21387b4f0fcfcc803d5520fb14/hishel-0.0.26.tar.gz"
+    sha256 "f0ae2766214499cb0253a5ec7694f0d6e3835c9a35634356f8926fb7a1cf379e"
   end
 
   resource "httpcore" do
@@ -167,13 +167,13 @@ class Pdm < Formula
   end
 
   resource "unearth" do
-    url "https://files.pythonhosted.org/packages/42/8c/b9649ad9d54de4ed0b978527f6d7576526290db905e33a28895b585778da/unearth-0.15.1.tar.gz"
-    sha256 "863deb3339c0d65a5be0d0ad2c67d46d5f574a798e74ef0552bf11d298a30abb"
+    url "https://files.pythonhosted.org/packages/4e/27/312c0976a8c35aca68b81bfd2cc3b5cc4b9c8901bfd1c9a6658ccee687b4/unearth-0.15.2.tar.gz"
+    sha256 "381f3e6969db0b28d9fc2fbfb216860579bf341bd695472f2c62e2bcce9e6d3d"
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/93/4f/a7737e177ab67c454d7e60d48a5927f16cd05623e9dd888f78183545d250/virtualenv-20.25.1.tar.gz"
-    sha256 "e08e13ecdca7a0bd53798f356d5831434afa5b07b93f0abdf0797b7a06ffe197"
+    url "https://files.pythonhosted.org/packages/42/28/846fb3eb75955d191f13bca658fb0082ddcef8e2d4b6fd0c76146556f0be/virtualenv-20.25.3.tar.gz"
+    sha256 "7bb554bbdfeaacc3349fa614ea5bff6ac300fc7c335e9facf3a3bcfc703f45be"
   end
 
   resource "wheel" do
