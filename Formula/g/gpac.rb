@@ -15,14 +15,13 @@ class Gpac < Formula
   head "https://github.com/gpac/gpac.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "243d9269d097f534c5df53d0e3a4f75ccfb632ce9ebdd68814a2d0bc9aaae332"
-    sha256 cellar: :any,                 arm64_ventura:  "461021a0d9ed70e310ed500fd5a634df5f80b1655f263a8ad8e43b4e7311a4a4"
-    sha256 cellar: :any,                 arm64_monterey: "354ac657f5a4245c079a8ab82eb2983f7eaab6caf8dbf5b278015d9ddf7f4350"
-    sha256 cellar: :any,                 sonoma:         "82c443a00849f02d4dd6f19dd55a4d35219e46029b8191077555e3c9e65bb9de"
-    sha256 cellar: :any,                 ventura:        "125e19dc918de8e1b9653c69bf84ec63afcd7ccaa49944c119be18c57a94dd1b"
-    sha256 cellar: :any,                 monterey:       "7dc6bcae8298a7de5f5e6ee63226a503107ad7aac48b9986d2279eef546ce97d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c44bcf2a3d20fb5cd07c6327b3939b1aecec642c97bbf31966f67b70b68c70db"
+    sha256 cellar: :any,                 arm64_sonoma:   "0db848b31b7bda589b829bef38fd0d99575d1303691a04a915d66548b3dac128"
+    sha256 cellar: :any,                 arm64_ventura:  "e02c1581892fd72215874516724a24eb30fb7862a1e5d45ebd7cce0b840a3908"
+    sha256 cellar: :any,                 arm64_monterey: "b15f699737dc4e58fda9c8753ea2aa2f323baa0423b5424230852bdb0e35b258"
+    sha256 cellar: :any,                 sonoma:         "d689fcb607e52f1111fb9ddfb6bf107a40592e16c7f7f536bcbece0b76e69145"
+    sha256 cellar: :any,                 ventura:        "be9dbecc82418f0ff125b5838d56ff7e37c7818f64f090df2fc0e35fdec969b4"
+    sha256 cellar: :any,                 monterey:       "618101f402082ebc311574e2de377212b20386b346f1f12ab008ded4b647e5fa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3fa932d0f671a1643b20f381bba3181328431e5ef9555444a8d25a983ace36e1"
   end
 
   depends_on "pkg-config" => :build
