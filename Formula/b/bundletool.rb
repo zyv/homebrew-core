@@ -6,13 +6,7 @@ class Bundletool < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f220b43e7cc35d4d81c96f83e0a4df119b7844056564920c2fa05eabc0aa8439"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f220b43e7cc35d4d81c96f83e0a4df119b7844056564920c2fa05eabc0aa8439"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f220b43e7cc35d4d81c96f83e0a4df119b7844056564920c2fa05eabc0aa8439"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f220b43e7cc35d4d81c96f83e0a4df119b7844056564920c2fa05eabc0aa8439"
-    sha256 cellar: :any_skip_relocation, ventura:        "f220b43e7cc35d4d81c96f83e0a4df119b7844056564920c2fa05eabc0aa8439"
-    sha256 cellar: :any_skip_relocation, monterey:       "f220b43e7cc35d4d81c96f83e0a4df119b7844056564920c2fa05eabc0aa8439"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ea62556f28c7b01f47b806d11d78f79ffbd2f647c4e187a8b04eff692f51685"
+    sha256 cellar: :any_skip_relocation, all: "58e9eb96aae28d6cd2a6db238aeeaddb60d1addad02073607232a2574573177f"
   end
 
   depends_on "openjdk"
