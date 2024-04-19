@@ -8,6 +8,7 @@ class Parsedmarc < Formula
   url "https://files.pythonhosted.org/packages/d2/3a/6f796f3b6eea53c426576066305db5a8b05674461afb740065bc076b5d29/parsedmarc-8.11.0.tar.gz"
   sha256 "381c6269707c34a34cbe2448d7dad8609c699df9da10bdf348f998078bab22e8"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/domainaware/parsedmarc.git", branch: "master"
 
   bottle do
@@ -28,8 +29,8 @@ class Parsedmarc < Formula
   uses_from_macos "libxslt"
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/18/93/1f005bbe044471a0444a82cdd7356f5120b9cf94fe2c50c0cdbf28f1258b/aiohttp-3.9.3.tar.gz"
-    sha256 "90842933e5d1ff760fae6caca4b2b3edba53ba8f4b71e95dacf2818a2aca06f7"
+    url "https://files.pythonhosted.org/packages/04/a4/e3679773ea7eb5b37a2c998e25b017cc5349edf6ba2739d1f32855cfb11b/aiohttp-3.9.5.tar.gz"
+    sha256 "edea7d15772ceeb29db4aff55e482d4bcfb6ae160ce144f2682de02f6d693551"
   end
 
   resource "aiosignal" do
@@ -58,13 +59,13 @@ class Parsedmarc < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/fd/56/efecad00c3a731b6bc1684d03c1cfa9612d8143943f53afebc232fb03ca1/boto3-1.34.82.tar.gz"
-    sha256 "fcdb84936b04d5f78c8c8667b65bf5b9803cf39fd25bb7fe57ba237074e36171"
+    url "https://files.pythonhosted.org/packages/32/e7/9aec313dbbeb57072da986186f788d488f872ec70368bd82c45e89d0b59a/boto3-1.34.87.tar.gz"
+    sha256 "c630597a4d8018dc5ca364176104f10d3c96ef21009d28b398090822d49a57f1"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/5a/2a/2f92275741fa4c509c14a56ce310858956018daa5d94522a42df27e163f5/botocore-1.34.82.tar.gz"
-    sha256 "2fd14676152f9d64541099090cc64973fdf8232744256454de443583e35e497d"
+    url "https://files.pythonhosted.org/packages/ec/33/d905ce890390d7b2f15558628d1841cf97fd05986377818de82af4d259eb/botocore-1.34.87.tar.gz"
+    sha256 "a3a4d857f0941d98a1e5ce8cd64c39062271fea0be4d9f3d0d6aff6cb58123b9"
   end
 
   resource "cachetools" do
@@ -118,8 +119,8 @@ class Parsedmarc < Formula
   end
 
   resource "google-api-python-client" do
-    url "https://files.pythonhosted.org/packages/ac/7a/5b7b208a29c278128a9c27470338960a050da1fc74d18e10525a12fae4fc/google-api-python-client-2.125.0.tar.gz"
-    sha256 "51a0385cff65ec135106e8be60ee7112557396dde5f44113ae23912baddda143"
+    url "https://files.pythonhosted.org/packages/f5/89/cd79e7ad831c351f8085e07bf3196d1c36bcd2200ead46e68b244a3b0e68/google-api-python-client-2.126.0.tar.gz"
+    sha256 "97c0410630e2bebd194d99e91bd620dab5bc6b6ec0bf033f9a9109b700b83acb"
   end
 
   resource "google-auth" do
@@ -193,8 +194,8 @@ class Parsedmarc < Formula
   end
 
   resource "maxminddb" do
-    url "https://files.pythonhosted.org/packages/84/2a/8b3580d214c25d37c789fa78588d83d885ed9844653d32479ee92e227c9a/maxminddb-2.6.0.tar.gz"
-    sha256 "c5b91c62bc274d0a83ac88088a6db2dac1301acb8aa7bf80a901a07120361e1d"
+    url "https://files.pythonhosted.org/packages/51/a0/515e51f564a7d0323316296ce43a796c92a60246ffdbab8bb6d2e548b4d1/maxminddb-2.6.1.tar.gz"
+    sha256 "6c5d591f625e03b0a34df0c7ff81580676397b8335e13ece130c6e39e4a3afb9"
   end
 
   resource "msal" do
@@ -253,8 +254,8 @@ class Parsedmarc < Formula
   end
 
   resource "publicsuffixlist" do
-    url "https://files.pythonhosted.org/packages/f3/4c/2701caa231c1512cce70131b2eb5cc9612fecd716de2225d3b602680c5c3/publicsuffixlist-0.10.0.20240411.tar.gz"
-    sha256 "c7a18e4b7b2a1fed628c2828be88fa7245b76a2755797b47b061271ff98bac7a"
+    url "https://files.pythonhosted.org/packages/f8/6a/fda2888f79cad0ab6d0240bfee38c0d058763a1bb1447fad72977e72aa59/publicsuffixlist-0.10.0.20240416.tar.gz"
+    sha256 "63440ff5234940e30610a004783c0a353450b458b050e5862db906271eba4819"
   end
 
   resource "pyasn1" do
@@ -288,8 +289,8 @@ class Parsedmarc < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/b5/39/31626e7e75b187fae7f121af3c538a991e725c744ac893cc2cfd70ce2853/regex-2023.12.25.tar.gz"
-    sha256 "29171aa128da69afdf4bde412d5bedc335f2ca8fcfe4489038577d05f16181e5"
+    url "https://files.pythonhosted.org/packages/14/40/033a8339e9b2ab82eaf29c07d74f1fd6aaa62f7f8c994261be60a6c97b30/regex-2024.4.16.tar.gz"
+    sha256 "fa454d26f2e87ad661c4f0c5a5fe4cf6aab1e307d1b94f16ffdfcb089ba685c0"
   end
 
   resource "requests" do
@@ -313,8 +314,8 @@ class Parsedmarc < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
+    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
   end
 
   resource "simplejson" do
