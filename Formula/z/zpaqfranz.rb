@@ -14,13 +14,13 @@ class Zpaqfranz < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "13b73ee7112435680e3f82a5579127010df2ff152bb7aa19f69c0a530b291d9e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ceefd29f30f98ac08602b42358a68c0356435c713f804149a11a1853bd0a83c7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c218202f729bb60845d8074f0d6ee95a9943c08fdf490a8dec388875402e69f5"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8970407cf4ab40c47705b0d0a98861e9d712ea4344fc591f137ceb37760523e0"
-    sha256 cellar: :any_skip_relocation, ventura:        "7a01f8bfd72d9c00dfdae1286923e010f4a83594687067488469612a8c492562"
-    sha256 cellar: :any_skip_relocation, monterey:       "2cf98df87f20849f63433275579399b2d8de6111780afa9f8217af6300d82c49"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7173d013726ddd7415b02e144d9b3fc8420a077ce49f41e87aae33daf41c1a9d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1b4d9d6bf251d665e377d248f8b9f48f807fc2e7d58f0050d34f08b307bdeb52"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "42dc51eb24362728ff4587e351a46b057f2f5f5ed9e58a2b8611612ca300a1d8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e184d6a3bb2cf16b5feebf94740242ce83bcbd0eafc74542bdde289f59d92f8e"
+    sha256 cellar: :any_skip_relocation, sonoma:         "3b51f38139e810bc89e200dcbecda757616748fe050292b1d66fe8c5c2bd1789"
+    sha256 cellar: :any_skip_relocation, ventura:        "8981b695f16b19d411aadc7c06bb3e99069f5aa5113616eb7d964c205fca789f"
+    sha256 cellar: :any_skip_relocation, monterey:       "ab03b4b961f48a685a72dfedae01067fc9a5846a6f32870ea97e72f98d02f1f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7b1e0ca622afeb93837c28d4a635175ee2421b0169206e9e3e9c54f37adf4068"
   end
 
   def install
