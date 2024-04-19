@@ -73,6 +73,7 @@ argocd
 argocd-autopilot
 argocd-vault-plugin
 argparse
+argyll-cms
 arjun
 arkade
 armadillo

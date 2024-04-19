@@ -1,8 +1,8 @@
 class ArgyllCms < Formula
   desc "ICC compatible color management system"
   homepage "https://www.argyllcms.com/"
-  url "https://www.argyllcms.com/Argyll_V3.1.0_src.zip"
-  sha256 "4fdd5a1d7bc6dde79a54e350ec9374f6ef00b53903ee0d184cdfa4a11f0ecdcb"
+  url "https://www.argyllcms.com/Argyll_V3.2.0_src.zip"
+  sha256 "ea554c48a1d36f8a089ac860cc5b4d00536b7511948aa2c4c4314e07be8b7bb8"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -57,16 +57,13 @@ class ArgyllCms < Formula
     # * Fix a typo that leads to an undeclared function error:
     #   `parse.c:102:20: error: call to undeclared function 'yylineno'`
     patch do
-      url "https://raw.githubusercontent.com/Homebrew/formula-patches/42252ab3d438f7ada66e83b92bb51a9178d3df10/jam/2.6.1-undeclared_functions.diff"
-      sha256 "d567cbaf3914f38bb8c5017ff01cc40fe85970c34d3ad84dbeda8c893518ffae"
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/cf70f015e7398796660da57212ff0ab90c609acf/jam/2.6.1.patch"
+      sha256 "1850cf53c4db0e05978d52b90763b519c00fa4f2fbd6fc2753200e49943821ec"
     end
   end
 
-  # Fixes a missing header, which is an error by default on arm64 but not x86_64
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/f6ede0dff06c2d9e3383416dc57c5157704b6f3a/argyll-cms/unistd_import.diff"
-    sha256 "5ce1e66daf86bcd43a0d2a14181b5e04574757bcbf21c5f27b1f1d22f82a8a6e"
-  end
+  # notified author about the patch
+  patch :DATA
 
   def install
     resource("jam").stage do
@@ -125,3 +122,17 @@ class ArgyllCms < Formula
     assert_match "Calibrate a Display", shell_output("#{bin}/dispcal 2>&1", 1)
   end
 end
+
+__END__
+diff --git a/gamut/GenRMGam.c b/gamut/GenRMGam.c
+index 05e6bef..bac04ca 100644
+--- a/gamut/GenRMGam.c
++++ b/gamut/GenRMGam.c
+@@ -12,6 +12,7 @@
+ #include "aconfig.h"
+ #include "numlib.h"
+ #include "icc.h"
++#include "xicc.h"
+ #include "cgats.h"
+ #include "xcam.h"
+ #include "gamut.h"
