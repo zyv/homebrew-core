@@ -6,13 +6,10 @@ class Vala < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_sonoma:   "fc9fa37446e64f80a7677c36044388a79051c33bcb412d988ddd03a017c9999a"
-    sha256 arm64_ventura:  "198702f6303d7c9d5328baf365e1a3c4a081f95c3280093126b01e93618df457"
-    sha256 arm64_monterey: "4bacf02fde57abe5547d47177b0e40277f499d69733a10f84e9da41813155be1"
-    sha256 sonoma:         "a02e06944c96f824d3829558ae151838268f758c0bdda3326b1a0297c13fd869"
-    sha256 ventura:        "ffa5e6110916952089a3f73aeb52d27ca0bbd5bc231b039656eaa40e786e8804"
-    sha256 monterey:       "bd12be11504f0dc71a96a099ebc86ab0de78357ee9d08719bfe0644058416edd"
-    sha256 x86_64_linux:   "a49de854769b3edd75a1a0034f024841024af5954ae8cb54f2d409c966f8c1fa"
+    sha256 arm64_sonoma:   "08ca53b37c7464bc3990246568ca344ddfa7ee9e38b8cffdea01a5fe9c183a17"
+    sha256 arm64_ventura:  "867b615ee4cb52de204837b74acb80d203c62cef97efe1b68117744390a4512b"
+    sha256 arm64_monterey: "7a23986c89b3f2ee3583cf8119932b624f436c923f489d9e8bdbf79f74fa014d"
+    sha256 x86_64_linux:   "7a61d8199a2837ca08d9a400f9a4eb9c72559e5962c62b53b4fbcaa80bf3fe08"
   end
 
   depends_on "gobject-introspection" => :build
