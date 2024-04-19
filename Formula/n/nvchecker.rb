@@ -3,8 +3,8 @@ class Nvchecker < Formula
 
   desc "New version checker for software releases"
   homepage "https://github.com/lilydjwg/nvchecker"
-  url "https://files.pythonhosted.org/packages/fb/99/72e1057e035f43dfd11d8b07fa19881c55bdfadbee31caab961b0e9a9fce/nvchecker-2.14.tar.gz"
-  sha256 "268c01dafb5a111cf724dac005637b636e8366dd5bd37587a3128b503734ecb4"
+  url "https://files.pythonhosted.org/packages/2b/ad/f48d2bcce3acfbfd2ac78d10fa1448598b46f98f7e84718810b5f2d9a8c6/nvchecker-2.14.1.tar.gz"
+  sha256 "7a2992e6d5cab1907a16d079281a175cffa355b5d3c97fc782fa92f2fa3cdaca"
   license "MIT"
 
   bottle do
