@@ -902,6 +902,7 @@ haproxy
 harfbuzz
 haskell-stack
 hasura-cli
+hatari
 haxe
 hbase
 hck
