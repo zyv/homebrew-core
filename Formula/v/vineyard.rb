@@ -3,8 +3,8 @@ class Vineyard < Formula
 
   desc "In-memory immutable data manager. (Project under CNCF)"
   homepage "https://v6d.io"
-  url "https://github.com/v6d-io/v6d/releases/download/v0.22.0/v6d-0.22.0.tar.gz"
-  sha256 "848173e4a1815427b0d3b86ce6d65e4517ccbfac69d08c69bb4e6be20713bbc2"
+  url "https://github.com/v6d-io/v6d/releases/download/v0.22.1/v6d-0.22.1.tar.gz"
+  sha256 "16aea4dc63830925c2d8cd89dc36580ff80dd7610793d56ae5d0d09972cf2fcc"
   license "Apache-2.0"
 
   bottle do
@@ -36,12 +36,6 @@ class Vineyard < Formula
   depends_on "redis"
 
   fails_with gcc: "5"
-
-  # upstream patch ref, https://github.com/v6d-io/v6d/pull/1876
-  patch do
-    url "https://github.com/v6d-io/v6d/commit/28964271812f893476c02104b3af900f90b65c1e.patch?full_index=1"
-    sha256 "379e41663e32970b1543fc0a43de7d6d8c45d8737683568a8a6f98f893d3fd5e"
-  end
 
   def install
     python = "python3.12"
