@@ -8,7 +8,7 @@ class RubyCompletion < Formula
   head "https://github.com/mernen/completion-ruby.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ddef10f9066b45d6d50d2795bfc16b7fbc528145db20e6a7c7714e2a26e3ac83"
+    sha256 cellar: :any_skip_relocation, all: "8d1ac3a77d0543fca3d43fc9dcf1574d4bc8e68e964769a49c8f09c4677e964f"
   end
 
   def install
