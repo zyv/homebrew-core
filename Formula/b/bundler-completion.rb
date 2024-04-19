@@ -1,8 +1,8 @@
 class BundlerCompletion < Formula
   desc "Bash completion for Bundler"
   homepage "https://github.com/mernen/completion-ruby"
-  url "https://github.com/mernen/completion-ruby/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "ee8b84d7ac7444a7388e58a406af56dc0b690a57faa7bcfa4c10671deb788991"
+  url "https://github.com/mernen/completion-ruby/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "70b9ae9154076b561f0d7b2b74893258dc00168ded3e8686f14e349f4a324914"
   license "MIT"
   version_scheme 1
   head "https://github.com/mernen/completion-ruby.git", branch: "main"
