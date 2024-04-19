@@ -1,9 +1,8 @@
 class Yorkie < Formula
   desc "Document store for collaborative applications"
   homepage "https://yorkie.dev/"
-  url "https://github.com/yorkie-team/yorkie.git",
-    tag:      "v0.4.16",
-    revision: "13315ac7cccedc5011a4dba320a73beaa6704837"
+  url "https://github.com/yorkie-team/yorkie/archive/refs/tags/v0.4.17.tar.gz"
+  sha256 "9e123c62c2bf8a9d79b4ce24f4731565394485c9b624208532406fc8968f0afc"
   license "Apache-2.0"
   head "https://github.com/yorkie-team/yorkie.git", branch: "main"
 
@@ -25,8 +24,13 @@ class Yorkie < Formula
   depends_on "go" => :build
 
   def install
-    system "make", "build"
-    prefix.install "bin"
+    ldflags = %W[
+      -s -w
+      -X github.com/yorkie-team/yorkie/internal/version.Version=#{version}
+      -X github.com/yorkie-team/yorkie/internal/version.BuildDate=#{time.iso8601}
+    ]
+
+    system "go", "build", *std_go_args(ldflags:), "./cmd/yorkie"
 
     generate_completions_from_executable(bin/"yorkie", "completion")
   end
