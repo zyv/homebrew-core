@@ -916,6 +916,7 @@ hermit
 hexo
 hexyl
 hfstospell
+hickory-dns
 hidapi
 highs
 himalaya
