@@ -753,6 +753,7 @@ gau
 gcovr
 gcsfuse
 gdal
+gdk-pixbuf
 gdu
 geeqie
 gegl
