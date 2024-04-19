@@ -12,17 +12,13 @@ class Hatari < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "1e95435661ddda4b7f973cd1c66d855f8fa692330d9e8e0206bb1fdd718d6de0"
-    sha256 cellar: :any,                 arm64_ventura:  "e07bbcf4adbb8d5d79cf789d689d4fedc1ddebe9863ed8339825e3e904565177"
-    sha256 cellar: :any,                 arm64_monterey: "667e12e353a24d45995f336f687a23b44d6bfc6deca23f84e966e32e1e978571"
-    sha256 cellar: :any,                 arm64_big_sur:  "b193a4d9e107c34a4a07a1aeef77786953e8d328ee085ca242342a6d107312fe"
-    sha256 cellar: :any,                 sonoma:         "bb9575a1a4f8c60efb77eccb016866330dcfc804d9f251fefb7c22a8bf6897a3"
-    sha256 cellar: :any,                 ventura:        "4e343b2fc064affbd0d39b6f4d7460d71d9b18eaedf3c9b76b7ff6a0e7547bc0"
-    sha256 cellar: :any,                 monterey:       "a3257660008936e85dbcc3227ddeb5014c39aa04e0a08e5f1ef5214abfd4c0e6"
-    sha256 cellar: :any,                 big_sur:        "44257d9e4a6cf65ce62aec936a36dbcabee429d66341376f0749454e14c7d247"
-    sha256 cellar: :any,                 catalina:       "95d8de415e6c641dc64dd92636b4aee0ff8c0d3a0b7fc60cab57406868b9fb7f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f2c1ce5731913973b4d8caab05d82c893a85260ee47d95cea565526a4404c1d"
+    sha256 cellar: :any,                 arm64_sonoma:   "c621abae9b430a09f6389df198a246bab810281201b4d7e87fbaac311db06d22"
+    sha256 cellar: :any,                 arm64_ventura:  "cacb7a21109dc0377d2e24bcf8f183ea94c295fcae57688e9703de1e0ed6eceb"
+    sha256 cellar: :any,                 arm64_monterey: "26032585bf8048b0987200009f9532d1a0281051644511269cc4918d94680b78"
+    sha256 cellar: :any,                 sonoma:         "107fc887028fe359dc50681b60dca25b27bb498d333167874e021e4f8dc0f0b1"
+    sha256 cellar: :any,                 ventura:        "0fc52a934a1d10afabf313998aadb3257cf1043d5232057c9b42714f9417b59a"
+    sha256 cellar: :any,                 monterey:       "b3691b1718cea74b9fd1c859aaa7bae64732fb9d47ccc55ba8851628ee66e3c5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c3a872e656f3ca0cf1d3db8447e745c81b8ad652580f0481e571deded52351f3"
   end
 
   depends_on "cmake" => :build
