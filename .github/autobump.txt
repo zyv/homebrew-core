@@ -1106,6 +1106,7 @@ lerna
 lexbor
 lexicon
 lf
+libabigail
 libadwaita
 libaec
 libassuan
