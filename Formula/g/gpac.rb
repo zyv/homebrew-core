@@ -9,10 +9,9 @@
 class Gpac < Formula
   desc "Multimedia framework for research and academic purposes"
   homepage "https://gpac.wp.mines-telecom.fr/"
-  url "https://github.com/gpac/gpac/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "8173ecc4143631d7f2c59f77e1144b429ccadb8de0d53a4e254389fb5948d8b8"
+  url "https://github.com/gpac/gpac/archive/refs/tags/v2.4.0.tar.gz"
+  sha256 "99c8c994d5364b963d18eff24af2576b38d38b3460df27d451248982ea16157a"
   license "LGPL-2.1-or-later"
-  revision 1
   head "https://github.com/gpac/gpac.git", branch: "master"
 
   bottle do
@@ -32,18 +31,6 @@ class Gpac < Formula
   uses_from_macos "zlib"
 
   conflicts_with "bento4", because: "both install `mp42ts` binaries"
-
-  # https://github.com/gpac/gpac/issues/2673
-  patch do
-    url "https://github.com/gpac/gpac/commit/ce2202796a1630129cdff42cc1c02c3a8ea7a75f.patch?full_index=1"
-    sha256 "708ff80d95fcfd28720c6c56a9c32c76bb181911fa8f6cb9a0f38c8012e96e9d"
-  end
-
-  # https://github.com/gpac/gpac/issues/2406
-  patch do
-    url "https://github.com/gpac/gpac/commit/ba14e34dd7a3c4cef5a56962898e9f863dd4b4f3.patch?full_index=1"
-    sha256 "22ea4f6e93ec457468759bf5599903bea5171b1216472d09967fc9c558fa9fb3"
-  end
 
   def install
     args = %W[
