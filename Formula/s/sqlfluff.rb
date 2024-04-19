@@ -3,8 +3,8 @@ class Sqlfluff < Formula
 
   desc "SQL linter and auto-formatter for Humans"
   homepage "https://docs.sqlfluff.com/"
-  url "https://files.pythonhosted.org/packages/47/39/280985144aa065b8c37eddcb8a6d627386cd40024e03ed2478a3ad5525fa/sqlfluff-3.0.4.tar.gz"
-  sha256 "938258c3dc27a09b5ea7b87f2580912fbfdef938e4ad9e0484ee67d8c1d1bff8"
+  url "https://files.pythonhosted.org/packages/16/50/f4a2bddbe52da638171d67d087bc73c121d40a9aef534bbc29e967793ceb/sqlfluff-3.0.5.tar.gz"
+  sha256 "5a4a08e4e4dedcadf4f544de83a7edab66e1decf7d946ec5fdbe59db49d6c2fe"
   license "MIT"
 
   bottle do
@@ -41,8 +41,8 @@ class Sqlfluff < Formula
   end
 
   resource "diff-cover" do
-    url "https://files.pythonhosted.org/packages/ec/7e/368f94d646c67a6b1c4807c7c50e6e5c076748f71d16752cd20ba16070a5/diff_cover-8.0.3.tar.gz"
-    sha256 "393565ca8668ae1e0e38e4e132b51cf028086fb06a7a7d9479deb5023e2f68d4"
+    url "https://files.pythonhosted.org/packages/dd/23/d26ca0d7401c362fd1d760947c8436790fd4e76fcf110323f1a2e35ab981/diff_cover-9.0.0.tar.gz"
+    sha256 "1dc851d3f3f320c048d03618e4c0d9861fa4a1506b425d2d09a564b20c95674a"
   end
 
   resource "iniconfig" do
@@ -91,8 +91,8 @@ class Sqlfluff < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/b5/39/31626e7e75b187fae7f121af3c538a991e725c744ac893cc2cfd70ce2853/regex-2023.12.25.tar.gz"
-    sha256 "29171aa128da69afdf4bde412d5bedc335f2ca8fcfe4489038577d05f16181e5"
+    url "https://files.pythonhosted.org/packages/14/40/033a8339e9b2ab82eaf29c07d74f1fd6aaa62f7f8c994261be60a6c97b30/regex-2024.4.16.tar.gz"
+    sha256 "fa454d26f2e87ad661c4f0c5a5fe4cf6aab1e307d1b94f16ffdfcb089ba685c0"
   end
 
   resource "tblib" do
