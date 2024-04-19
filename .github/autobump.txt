@@ -1728,6 +1728,7 @@ s-search
 s2geometry
 s2n
 s3fs
+s3ql
 s6
 sad
 saf-cli
