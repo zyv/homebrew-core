@@ -2114,6 +2114,7 @@ wolfssl
 woodpecker-cli
 woof-doom
 wstunnel
+wtfis
 wumpus
 wxmaxima
 wxwidgets
