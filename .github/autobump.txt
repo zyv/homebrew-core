@@ -1581,6 +1581,7 @@ prestodb
 prettier
 prettierd
 primecount
+primesieve
 principalmapper
 procs
 proftpd
