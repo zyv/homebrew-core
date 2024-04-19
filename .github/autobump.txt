@@ -844,6 +844,7 @@ gopass-jsonapi
 gopls
 goplus
 gor
+goread
 goredo
 goreleaser
 goreman
