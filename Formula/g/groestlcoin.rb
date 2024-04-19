@@ -1,8 +1,8 @@
 class Groestlcoin < Formula
   desc "Decentralized, peer to peer payment network"
   homepage "https://groestlcoin.org/groestlcoin-core-wallet/"
-  url "https://github.com/Groestlcoin/groestlcoin/releases/download/v26.0/groestlcoin-26.0.tar.gz"
-  sha256 "45ff0c7e58e3e6cd9be4db00f8ba02566249538487f5711e64d4f0187414fb46"
+  url "https://github.com/Groestlcoin/groestlcoin/releases/download/v27.0/groestlcoin-27.0.tar.gz"
+  sha256 "cf8de03ef104e67aa7c0c1f69fd78e19ea6fa3e8187d890d7916c1c72a3be530"
   license "MIT"
   head "https://github.com/groestlcoin/groestlcoin.git", branch: "master"
 

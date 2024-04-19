@@ -874,6 +874,7 @@ greed
 greenmask
 grex
 grin
+groestlcoin
 grokj2k
 gromacs
 groonga
