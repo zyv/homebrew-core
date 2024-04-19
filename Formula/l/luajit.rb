@@ -10,12 +10,12 @@ class Luajit < Formula
   # Get the latest commit with:
   #   `git ls-remote --heads https://github.com/LuaJIT/LuaJIT.git v2.1`
   # This is a rolling release model so take care not to ignore CI failures that may be regressions.
-  url "https://github.com/LuaJIT/LuaJIT/archive/d06beb0480c5d1eb53b3343e78063950275aa281.tar.gz"
+  url "https://github.com/LuaJIT/LuaJIT/archive/b3e498738962cdb08686f3dd612cf060382d88f2.tar.gz"
   # Use the version scheme `2.1.timestamp` where `timestamp` is the Unix timestamp of the
   # latest commit at the time of updating.
   # `brew livecheck luajit` will generate the correct version for you automatically.
-  version "2.1.1710088188"
-  sha256 "6abd146a1dfa240a965748f63221633446affa2a715e3eb03879136e3efb95f4"
+  version "2.1.1713517273"
+  sha256 "74beec850828fb4150638767acf399ae4cf6715cf06cfbe79e2c5b8d102f77bb"
   license "MIT"
   head "https://luajit.org/git/luajit.git", branch: "v2.1"
 
@@ -87,19 +87,19 @@ class Luajit < Formula
     EOS
 
     # Check that LuaJIT can find its own `jit.*` modules
+    arch = Hardware::CPU.arm? ? "arm64" : "x64"
     touch "empty.lua"
-    system bin/"luajit", "-b", "-o", "osx", "-a", "arm64", "empty.lua", "empty.o"
+    system bin/"luajit", "-b", "-o", "osx", "-a", arch, "empty.lua", "empty.o"
     assert_predicate testpath/"empty.o", :exist?
 
     # Check that we're not affected by LuaJIT/LuaJIT/issues/865.
     require "macho"
     machobj = MachO.open("empty.o")
-    assert_kind_of MachO::FatFile, machobj
+    # always generate 64 bit non-FAT Mach-O object files
+    # per https://github.com/LuaJIT/LuaJIT/commit/7110b935672489afd6ba3eef3e5139d2f3bd05b6
+    assert_kind_of MachO::MachOFile, machobj
     assert_predicate machobj, :object?
-
-    cputypes = machobj.machos.map(&:cputype)
-    assert_includes cputypes, :arm64
-    assert_includes cputypes, :x86_64
-    assert_equal 2, cputypes.length
+    cpu = Hardware::CPU.arm? ? "arm64" : "x86_64"
+    assert_match cpu, machobj.cputype
   end
 end

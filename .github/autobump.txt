@@ -1225,7 +1225,6 @@ logstash
 lout
 lsd
 lsof
-luajit
 luarocks
 luau
 lucky-commit
