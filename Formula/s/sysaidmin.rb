@@ -3,8 +3,8 @@ class Sysaidmin < Formula
 
   desc "GPT-powered sysadmin"
   homepage "https://github.com/skorokithakis/sysaidmin"
-  url "https://files.pythonhosted.org/packages/1d/20/83d3990757074c4e43f29da3f306d3ab5e25edcb4bf31aca14ebb4591e4a/sysaidmin-0.2.0.tar.gz"
-  sha256 "7e91afa743d60b1b7c9bb5ff6d9b5edc0774bafb687e9b7e550fda0e3acf5aed"
+  url "https://files.pythonhosted.org/packages/64/c7/9f23e1bef4cd534f6efbddada2c3da089dbb6f15b5ecb51f089b6c196c9b/sysaidmin-0.2.1.tar.gz"
+  sha256 "37f8a58c35c3fed39430c83c563e43c709cfaed6cefe23a2f1564d504597a56d"
   license "AGPL-3.0-or-later"
 
   bottle do
@@ -57,8 +57,8 @@ class Sysaidmin < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/74/21/6c17ea073a1643611e99a64934cb7d6f0c5ef74c5bd2ecd9ca8f748867a3/openai-1.17.0.tar.gz"
-    sha256 "72e6758cec080a3e5a9daf843178c975fed656fe0831919f4dd89bb62431724f"
+    url "https://files.pythonhosted.org/packages/5c/a7/b7464911dcf81d15498c998b3aaf959c9a0721d59fc835cc7b5b2736a06e/openai-1.23.1.tar.gz"
+    sha256 "6df937e2a1ad64494951ea3614f5516db4d67c3fcc0b751b8e5edf1bc57e2d3d"
   end
 
   resource "pydantic" do
@@ -72,8 +72,8 @@ class Sysaidmin < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
+    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
   end
 
   resource "sniffio" do
