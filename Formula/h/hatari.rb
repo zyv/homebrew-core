@@ -1,8 +1,8 @@
 class Hatari < Formula
   desc "Atari ST/STE/TT/Falcon emulator"
   homepage "https://hatari.tuxfamily.org"
-  url "https://download.tuxfamily.org/hatari/2.4.1/hatari-2.4.1.tar.bz2"
-  sha256 "2a5da1932804167141de4bee6c1c5d8d53030260fe7fe7e31e5e71a4c00e0547"
+  url "https://download.tuxfamily.org/hatari/2.5.0/hatari-2.5.0.tar.bz2"
+  sha256 "d76c22fc3de69fb1bb4af3e8ba500b7e40f5a2a45d07783f24cb7101e53c3457"
   license "GPL-2.0-or-later"
   head "https://git.tuxfamily.org/hatari/hatari.git", branch: "master"
 
@@ -37,8 +37,8 @@ class Hatari < Formula
 
   # Download EmuTOS ROM image
   resource "emutos" do
-    url "https://downloads.sourceforge.net/project/emutos/emutos/1.2/emutos-1024k-1.2.zip"
-    sha256 "65933ffcda6cba87ab013b5e799c3a0896b9a7cb2b477032f88f091ab8578b2a"
+    url "https://downloads.sourceforge.net/project/emutos/emutos/1.3/emutos-1024k-1.3.zip"
+    sha256 "076d451f15ddf7b64530c14431142b026569b1e5d6becc1af37aa008db81333f"
   end
 
   def install
