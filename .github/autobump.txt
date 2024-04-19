@@ -2157,6 +2157,7 @@ ydiff
 ykman
 yle-dl
 yo
+yorkie
 yosys
 youtubedr
 yq
