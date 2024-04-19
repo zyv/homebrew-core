@@ -20,13 +20,13 @@ class Adios2 < Formula
   end
 
   bottle do
-    sha256 arm64_sonoma:   "adae563be0e6a56fec81f3d396ad4611b818c70a7acc54be504b1a3b0896e652"
-    sha256 arm64_ventura:  "283d482432e189fe6cb1a302089e2615e49a12bfac57db69f087efe80290eae9"
-    sha256 arm64_monterey: "e28f7eb517b74faaefb469e0b7bca433a7f68f04e0bde43743a866f8d3e3effc"
-    sha256 sonoma:         "7933ca4cad6d0c75fa5bf2b7caf4f0675980880c4d259bf31e7294be03d75433"
-    sha256 ventura:        "4a90152c29da3dcb1b329191b3bdb783eb11730b3014864080d93005fdc17534"
-    sha256 monterey:       "e883fb195102fcb4e142baee668cb5532bfb0aec8413e67d35d28575915dd2a4"
-    sha256 x86_64_linux:   "50dab40f7ef2a78b751fc532b74ee32d0c28a0636e1fa5c81fe59450c4806e55"
+    sha256 arm64_sonoma:   "f27bc3122be07a98fd8db78211d426cc0288623dff91e7427840266936855a1e"
+    sha256 arm64_ventura:  "de760c48271b31dc9310360fdc9b381d916625a5a8ae49d114dcc22e6dc444a5"
+    sha256 arm64_monterey: "988b4a7ca6198fcebd0a430b84918e6ed58bbceb71983b9e0c14024637f41a80"
+    sha256 sonoma:         "dfa5e5f519e3266512b5963937070607e3362281e0219d028f8b43f3d29b0528"
+    sha256 ventura:        "ecc5229d30b5d6c61d21834dc280e48ff85c9f3c954cbea3009025f945dd6640"
+    sha256 monterey:       "59caa71985070eb7d28f0fd096782299e88ab64eed87f0200f00cf30c8e045c2"
+    sha256 x86_64_linux:   "97f031412ebf7c38631b2b30087675beed1fd1f28c2a87f4ad25654175ba879c"
   end
 
   depends_on "cmake" => :build
