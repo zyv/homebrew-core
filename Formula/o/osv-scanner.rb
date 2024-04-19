@@ -1,8 +1,8 @@
 class OsvScanner < Formula
   desc "Vulnerability scanner which uses the OSV database"
   homepage "https://github.com/google/osv-scanner"
-  url "https://github.com/google/osv-scanner/archive/refs/tags/v1.7.1.tar.gz"
-  sha256 "9aa9ebd72bcf62a377231f6b821d328ab7163d1a7eb39d7e9271bb6c7c01a3b0"
+  url "https://github.com/google/osv-scanner/archive/refs/tags/v1.7.2.tar.gz"
+  sha256 "b6ff65f82e833e2d8102e3308e620ef30af5f93b3a215f899098be9a3e21ad03"
   license "Apache-2.0"
   head "https://github.com/google/osv-scanner.git", branch: "main"
 
