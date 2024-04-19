@@ -859,6 +859,7 @@ gotpm
 govc
 govulncheck
 gowsdl
+gpac
 gpg-tui
 gpsim
 gptscript
