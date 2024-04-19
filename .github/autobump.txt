@@ -1076,6 +1076,7 @@ kubergrunt
 kubernetes-cli
 kubescape
 kubeseal
+kubeshark
 kubespy
 kubevela
 kubevious
