@@ -1911,6 +1911,7 @@ syft
 syncthing
 sysaidmin
 sysdig
+syslog-ng
 sysstat
 systemc
 systemd
