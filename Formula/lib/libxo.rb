@@ -1,18 +1,18 @@
 class Libxo < Formula
   desc "Allows an application to generate text, XML, JSON, and HTML output"
   homepage "https://juniper.github.io/libxo/libxo-manual.html"
-  url "https://github.com/Juniper/libxo/releases/download/1.7.3/libxo-1.7.3.tar.gz"
-  sha256 "4a4506ac0b65d8d96726e8b1c126df45196ffd2acf2de81ea7752988fb462497"
+  url "https://github.com/Juniper/libxo/releases/download/1.7.4/libxo-1.7.4.tar.gz"
+  sha256 "adee0d024bda9bb1b76504cd48336c30c9dac771dad7e0d982315f3e0e3c103c"
   license "BSD-2-Clause"
 
   bottle do
-    sha256 arm64_sonoma:   "6f2979989d49621f6cec5a1ab08499bbd32d8f9705351f2c4bc4cd91a5454123"
-    sha256 arm64_ventura:  "6aad31e4f412d28e22bfcb8f550b65ca64a9f3f377fe2dd20e1aa403bb31d5e1"
-    sha256 arm64_monterey: "6e53e633f93e2dc1a9d38c96dad72c14a8bfa039bc7e08c1045db909979364b9"
-    sha256 sonoma:         "4d3f5e9f62f7a6c4e1bf607a764bc2883dd5739957345cce4b3b15d599239eb7"
-    sha256 ventura:        "386363862ad9b84c71c4f387f2b8585f6a23cbf90080c879423845b8f3d65f8f"
-    sha256 monterey:       "fb2afec5970ed5d3bf71299ff63851675e94fe84ba9604fb050b0aa3acfca91b"
-    sha256 x86_64_linux:   "b0b76b22afad4b171676b4484bfcdc8e9bf1de2ef748f95dcd1c609fab53fbaa"
+    sha256 arm64_sonoma:   "f3abcec652ba9ae49c9227187391225de9b9f9759a8e4ca13e87f2b1acf2e313"
+    sha256 arm64_ventura:  "aea81843d6ce92b65d5fc6600022cb9827567d1837f42a12647e55ee85a78f32"
+    sha256 arm64_monterey: "a02e41c891be25e501d7225a2f9ea0abf59dd1dfe231ac9ec01d14703cafb360"
+    sha256 sonoma:         "d5f2fee7470abadb91b9520c71d20f917e2073ab6b250775518f85dff664f29c"
+    sha256 ventura:        "7b9e10ebb54fcb44eb7717d148a2546cbaf2a6c98cfda8caccc287be2f177891"
+    sha256 monterey:       "58f7b048f208fd0b7b3d015b3eb84ba923bd69a1fffdbcfcb398e5befd7b2319"
+    sha256 x86_64_linux:   "ec8c43fd1ff1daf9171c64c48fcf942a475d8a9881b3e0584a5e49472ab55bf5"
   end
 
   depends_on "libtool" => :build
