@@ -6,13 +6,13 @@ class Libxo < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 arm64_sonoma:   "f3abcec652ba9ae49c9227187391225de9b9f9759a8e4ca13e87f2b1acf2e313"
-    sha256 arm64_ventura:  "aea81843d6ce92b65d5fc6600022cb9827567d1837f42a12647e55ee85a78f32"
-    sha256 arm64_monterey: "a02e41c891be25e501d7225a2f9ea0abf59dd1dfe231ac9ec01d14703cafb360"
-    sha256 sonoma:         "d5f2fee7470abadb91b9520c71d20f917e2073ab6b250775518f85dff664f29c"
-    sha256 ventura:        "7b9e10ebb54fcb44eb7717d148a2546cbaf2a6c98cfda8caccc287be2f177891"
-    sha256 monterey:       "58f7b048f208fd0b7b3d015b3eb84ba923bd69a1fffdbcfcb398e5befd7b2319"
-    sha256 x86_64_linux:   "ec8c43fd1ff1daf9171c64c48fcf942a475d8a9881b3e0584a5e49472ab55bf5"
+    sha256 arm64_sonoma:   "4c55e5145b840b968e7a3b02b7806034c7a7a463d0761ad405594518a3ba52ef"
+    sha256 arm64_ventura:  "d032a1e05fa91f2d0ffc90c86361f9fcf3239ae11dc053583ef9d1d964d86c55"
+    sha256 arm64_monterey: "7efad6f78bca7183e0ed73dbaa895d6e545e60b58e3b2e1cb9e18593a835c2c4"
+    sha256 sonoma:         "9176bd1a62a3c7e3781cdfd1c2fd2f8958b468d08f6086a4229741e4f32e4229"
+    sha256 ventura:        "0f9aa2f3a1257b686116e9a936662759fb7f5b61134fb810f1d30085951e6f54"
+    sha256 monterey:       "c9beeccc9174bba7cdf02f3455e1984b2c4c37d67b8330e8a9a18101b7239f06"
+    sha256 x86_64_linux:   "5fa4473b566e7039ec3b98394c7ce6c863cbe3f4eeacc000012976a4cde4ea83"
   end
 
   depends_on "libtool" => :build
