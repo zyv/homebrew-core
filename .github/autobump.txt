@@ -1102,6 +1102,7 @@ latex2html
 latexindent
 latexml
 lazydocker
+lcov
 ld-find-code-refs
 ldc
 ldeep
