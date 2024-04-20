@@ -1157,6 +1157,7 @@ libksba
 liblc3
 liblinear
 liblouis
+libmatio
 libmicrohttpd
 libmxml
 libnfs
