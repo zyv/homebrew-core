@@ -266,6 +266,7 @@ catch2
 cava
 cbindgen
 ccache
+ccls
 cctz
 cdebug
 cdk
