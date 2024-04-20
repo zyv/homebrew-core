@@ -119,11 +119,6 @@ class Mvt < Formula
     sha256 "e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
-    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
-  end
-
   resource "simplejson" do
     url "https://files.pythonhosted.org/packages/79/79/3ccb95bb4154952532f280f7a41979fbfb0fbbaee4d609810ecb01650afa/simplejson-3.19.2.tar.gz"
     sha256 "9eb442a2442ce417801c912df68e1f6ccfcd41577ae7274953ab3ad24ef7d82c"
@@ -140,14 +135,15 @@ class Mvt < Formula
   end
 
   def install
-    # The `iosbackup` resource requires `nskeyedunarchiver` & `pycryptodome`, so they must be installed
-    # prior to `iosbackup`. `setuptools` must also be preinstalled, otherwise pip will auto-install
-    # it, and attempt to import the same NSKeyedUnarchiver resource but via a wheel.
     venv = virtualenv_create(libexec, "python3.12")
-    venv.pip_install resource("setuptools")
-    skipped_resources = %w[setuptools iosbackup]
-    venv.pip_install resources.reject { |r| skipped_resources.include?(r.name) }
-    venv.pip_install resource("iosbackup")
+    venv.pip_install resources.reject { |r| r.name == "iosbackup" }
+
+    # iosbackup is incompatible with build isolation: https://github.com/avibrazil/iOSbackup/pull/32
+    resource("iosbackup").stage do
+      inreplace "setup.py", "from iOSbackup import __version__", "__version__ = '#{resource("iosbackup").version}'"
+      venv.pip_install Pathname.pwd
+    end
+
     venv.pip_install_and_link buildpath
 
     %w[mvt-android mvt-ios].each do |script|
