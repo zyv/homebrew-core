@@ -1,8 +1,8 @@
 class Liblc3 < Formula
   desc "Low Complexity Communication Codec library and tools"
   homepage "https://github.com/google/liblc3"
-  url "https://github.com/google/liblc3/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "958725e277685f9506d30ea341c38a03b245c3b33852cd074da6c8857525e808"
+  url "https://github.com/google/liblc3/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "b65e38943708529efd04a87dd1a9f16a9856ed6199d082b18e7d42fb5c59486e"
   license "Apache-2.0"
 
   bottle do
