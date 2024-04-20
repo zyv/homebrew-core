@@ -1,8 +1,9 @@
 class Biodiff < Formula
   desc "Hex diff viewer using alignment algorithms from biology"
   homepage "https://github.com/8051Enthusiast/biodiff"
-  url "https://github.com/8051Enthusiast/biodiff/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "f7960914ccf9b5fbdf3188b187d0cd3bca00f211487aa01d7b6f580da1c32312"
+  url "https://github.com/8051Enthusiast/biodiff.git",
+      tag:      "v1.2.0",
+      revision: "36ff3e726bbb73946e744e34c954fa153be3870b"
   license "MIT"
   head "https://github.com/8051Enthusiast/biodiff.git", branch: "main"
 
@@ -16,7 +17,10 @@ class Biodiff < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "28b668c882b37f9edc86bbe6eb95ec691ad2e9963dd2e68537b5f9d98aec495f"
   end
 
+  depends_on "cmake" => :build # for biodiff-wfa2-sys
   depends_on "rust" => :build
+
+  uses_from_macos "llvm" # for libclang
 
   def install
     system "cargo", "install", *std_cargo_args
