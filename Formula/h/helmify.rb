@@ -1,9 +1,8 @@
 class Helmify < Formula
   desc "Create Helm chart from Kubernetes yaml"
   homepage "https://github.com/arttor/helmify"
-  url "https://github.com/arttor/helmify.git",
-      tag:      "v0.4.11",
-      revision: "2e9539cb5dfaf33b8c9741c1fd5deddc83e9db41"
+  url "https://github.com/arttor/helmify/archive/refs/tags/v0.4.12.tar.gz"
+  sha256 "9f07788bb1e633ff5ef2224d8b83796c9d4dcbf776ad09e7e0759baddadf7167"
   license "MIT"
   head "https://github.com/arttor/helmify.git", branch: "main"
 
@@ -23,7 +22,7 @@ class Helmify < Formula
     ldflags = %W[
       -X main.version=#{version}
       -X main.date=#{time.iso8601}
-      -X main.commit=#{Utils.git_head}
+      -X main.commit=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/helmify"
   end
