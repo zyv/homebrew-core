@@ -6,7 +6,7 @@ class RobinMap < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3825b8051fa3eda2b966dacd393131b57b452905fc6be760dd01ee9439c76289"
+    sha256 cellar: :any_skip_relocation, all: "ff6d61f27dfec61e4d040f50458c381a9f31552cbaaea77c11ff88f1442ae40b"
   end
 
   depends_on "cmake" => [:build, :test]
