@@ -2,14 +2,13 @@ class Sysdig < Formula
   desc "System-level exploration and troubleshooting tool"
   homepage "https://sysdig.com/"
   license "Apache-2.0"
-  revision 1
 
   stable do
-    url "https://github.com/draios/sysdig/archive/refs/tags/0.36.0.tar.gz"
-    sha256 "2e519bfa7e6af885cf686f3f85a16fb398c3eb5a6763da7ff8e4ba570cdc2701"
+    url "https://github.com/draios/sysdig/archive/refs/tags/0.36.1.tar.gz"
+    sha256 "e0737ce660637d72859822b5bec835d8e0e3337620a366d0e9c5dc5a1300feb4"
 
-    # Update to value of FALCOSECURITY_LIBS_VERSION found in
-    # https://github.com/draios/sysdig/blob/#{version}/cmake/modules/falcosecurity-libs.cmake
+    # Update to value of FALCOSECURITY_LIBS_VERSION with
+    # VERSION=#{version} && curl -fsSL https://raw.githubusercontent.com/draios/sysdig/$VERSION/cmake/modules/falcosecurity-libs.cmake | grep -o 'set(FALCOSECURITY_LIBS_VERSION "[0-9.]*")' | awk -F'"' '{print $2}'
     resource "falcosecurity-libs" do
       url "https://github.com/falcosecurity/libs/archive/refs/tags/0.15.1.tar.gz"
       sha256 "8c2596fec3c25e9718a8b357b0504450cd26efbe653b79afcd66a8405f0dc08c"
@@ -45,13 +44,13 @@ class Sysdig < Formula
   depends_on "c-ares"
   depends_on "jsoncpp"
   depends_on "luajit"
+  depends_on "ncurses" # for `newterm` function
   depends_on "re2"
   depends_on "tbb"
   depends_on "uthash"
   depends_on "yaml-cpp"
 
   uses_from_macos "curl"
-  uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
   on_linux do
