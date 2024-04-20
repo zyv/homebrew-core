@@ -3,8 +3,8 @@ class Badkeys < Formula
 
   desc "Tool to find common vulnerabilities in cryptographic public keys"
   homepage "https://badkeys.info"
-  url "https://files.pythonhosted.org/packages/f2/29/3e87b8c7fc9779bf216349ffcaed9a748928a015b77d71ab2e0dd1b4e073/badkeys-0.0.6.tar.gz"
-  sha256 "ead74de1a60844bbd8019710aa8314ecde82ac077eee72d68a6f185e7ab5ee48"
+  url "https://files.pythonhosted.org/packages/1a/75/598b292a0ccc7585a8b7e2a93403e2f6f00bb21bfb20a364db39fbf0f1d6/badkeys-0.0.7.tar.gz"
+  sha256 "49d6c417adc1c9c76784a0d3b1b29c79999243c8027f72e7bf33032596e8d0e7"
   license "MIT"
   head "https://github.com/badkeys/badkeys.git", branch: "main"
 
@@ -25,8 +25,14 @@ class Badkeys < Formula
   depends_on "python@3.12"
 
   resource "gmpy2" do
-    url "https://files.pythonhosted.org/packages/a7/d1/249a57c014c3a73ffc842d5a33a1ce3d4198f3e6ea0ee84c237d24b5a556/gmpy2-2.2.0a1.tar.gz"
-    sha256 "3b8acc939a40411a8ad5541ed178ff866dd1759e667ee26fe34c9291b6b350c3"
+    url "https://files.pythonhosted.org/packages/d9/2e/2848cb5ab5240cb34b967602990450d0fd715f013806929b2f82821cef7f/gmpy2-2.1.5.tar.gz"
+    sha256 "bc297f1fd8c377ae67a4f493fc0f926e5d1b157e5c342e30a4d84dc7b9f95d96"
+
+    # upstream bug report, https://github.com/aleaxit/gmpy/issues/446
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/formula-patches/d77631527c866bbd168f7add6814e3388033cf2f/badkeys/gmpy2-2.1.5-py3.12.patch"
+      sha256 "6b0994285919e373d2e91b3e0662c7775f03a194a116b5170fdc41837dd3551e"
+    end
   end
 
   def install
