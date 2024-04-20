@@ -3,8 +3,8 @@ class Cf2tf < Formula
 
   desc "Cloudformation templates to Terraform HCL converter"
   homepage "https://github.com/DontShaveTheYak/cf2tf"
-  url "https://files.pythonhosted.org/packages/36/94/87ce5c09fe600564e7c01baa9a66beecd8a7934b6eab81188494c2d5db10/cf2tf-0.6.3.tar.gz"
-  sha256 "ea6ea854524e0ce36387a65203447c54b08cccf0ab1cf58647c93c13233cbf5d"
+  url "https://files.pythonhosted.org/packages/ce/74/d2472164eb07869fb403a31113781c71e3f2928d818374b6869cbafd37d9/cf2tf-0.7.1.tar.gz"
+  sha256 "902b9f4570de4077c0fe148446ded193c505adcebd619cb1f908ef013125c7a1"
   license "GPL-3.0-only"
   head "https://github.com/DontShaveTheYak/cf2tf.git", branch: "master"
 
