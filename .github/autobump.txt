@@ -482,6 +482,7 @@ deno
 dependency-check
 deployer
 derby
+descope
 detect-secrets
 detekt
 detox
