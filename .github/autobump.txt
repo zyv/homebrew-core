@@ -2209,6 +2209,7 @@ zellij
 zenith
 zeromq
 zf
+zig
 zipkin
 zlib
 zlint

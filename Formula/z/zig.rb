@@ -2,10 +2,9 @@ class Zig < Formula
   desc "Programming language designed for robustness, optimality, and clarity"
   homepage "https://ziglang.org/"
   # TODO: Check if we can use unversioned `llvm` at version bump.
-  url "https://ziglang.org/download/0.11.0/zig-0.11.0.tar.xz"
-  sha256 "72014e700e50c0d3528cef3adf80b76b26ab27730133e8202716a187a799e951"
+  url "https://ziglang.org/download/0.12.0/zig-0.12.0.tar.xz"
+  sha256 "a6744ef84b6716f976dad923075b2f54dc4f785f200ae6c8ea07997bd9d9bd9a"
   license "MIT"
-  revision 1
 
   livecheck do
     url "https://ziglang.org/download/"
@@ -25,32 +24,30 @@ class Zig < Formula
   depends_on "cmake" => :build
   # Check: https://github.com/ziglang/zig/blob/#{version}/CMakeLists.txt
   # for supported LLVM version.
-  # When switching to `llvm`, remove the `on_linux` block below.
-  depends_on "llvm@16" => :build
+  depends_on "llvm@17" => :build
   depends_on macos: :big_sur # https://github.com/ziglang/zig/issues/13313
   depends_on "z3"
   depends_on "zstd"
+
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
-  # `llvm` is not actually used, but we need it because `brew`'s compiler
-  # selector does not currently support using Clang from a versioned LLVM.
-  on_linux do
-    depends_on "llvm" => :build
-  end
-
-  fails_with :gcc
-
   def install
-    # Make sure `llvm@16` is used.
-    ENV.prepend_path "PATH", Formula["llvm@16"].opt_bin
-    ENV["CC"] = Formula["llvm@16"].opt_bin/"clang"
-    ENV["CXX"] = Formula["llvm@16"].opt_bin/"clang++"
+    # `brew`'s compiler selector does not currently support using Clang from a
+    # versioned LLVM so we need to manually bypass the shims.
+    llvm = Formula["llvm@17"]
+    ENV.prepend_path "PATH", llvm.opt_bin
+    ENV["CC"] = llvm.opt_bin/"clang"
+    ENV["CXX"] = llvm.opt_bin/"clang++"
 
-    # Work around duplicate symbols with Xcode 15 linker.
-    # Remove on next release.
-    # https://github.com/ziglang/zig/issues/17050
-    ENV.append "LDFLAGS", "-Wl,-ld_classic" if DevelopmentTools.clang_build_version >= 1500
+    # build patch for libunwind linkage issue
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", llvm.opt_lib
+
+    # Work around failure with older Xcode's libc++:
+    # Undefined symbols for architecture x86_64:
+    # "std::__1::__libcpp_verbose_abort(char const*, ...)", referenced from:
+    #     std::__1::__throw_out_of_range[abi:un170006](char const*) in libzigcpp.a(zig_clang_driver.cpp.o)
+    ENV.append "LDFLAGS", "-L#{llvm.opt_lib}/c++" if OS.mac? && DevelopmentTools.clang_build_version <= 1400
 
     # Workaround for https://github.com/Homebrew/homebrew-core/pull/141453#discussion_r1320821081.
     # This will likely be fixed upstream by https://github.com/ziglang/zig/pull/16062.
