@@ -1356,6 +1356,7 @@ muffet
 mujs
 murex
 mutt
+mvt
 mx
 mycli
 mydumper
