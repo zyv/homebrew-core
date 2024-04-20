@@ -274,6 +274,7 @@ cdogs-sdl
 cdxgen
 cekit
 censys
+cern-ndiff
 certigo
 cf2tf
 cfengine
