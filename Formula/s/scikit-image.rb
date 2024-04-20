@@ -3,8 +3,8 @@ class ScikitImage < Formula
 
   desc "Image processing in Python"
   homepage "https://scikit-image.org"
-  url "https://files.pythonhosted.org/packages/4b/12/2337d523dc7085ef0e5a51dfde6059e7969442919aeac8de0064bdb8adb7/scikit_image-0.23.1.tar.gz"
-  sha256 "4ff756161821568ed56523f1c4ab9094962ba79e817a9a8e818d9f51d223d669"
+  url "https://files.pythonhosted.org/packages/24/ce/183ff64ed397911a9d3b671714f8a2618af407b427a40ca48550fb0f7bd7/scikit_image-0.23.2.tar.gz"
+  sha256 "c9da4b2c3117e3e30364a3d14496ee5c72b09eb1a4ab1292b302416faa360590"
   license "BSD-3-Clause"
   head "https://github.com/scikit-image/scikit-image.git", branch: "main"
 
@@ -51,8 +51,8 @@ class ScikitImage < Formula
   end
 
   resource "tifffile" do
-    url "https://files.pythonhosted.org/packages/d1/54/e627e6604700d5ec694b023ae971a5493560452fe062d057dba1db23ac82/tifffile-2024.2.12.tar.gz"
-    sha256 "4920a3ec8e8e003e673d3c6531863c99eedd570d1b8b7e141c072ed78ff8030d"
+    url "https://files.pythonhosted.org/packages/7b/79/f55cf9d4c2a2bbb19a37d8a0c14142e9c329a6cf3843e8d68237cb0615a8/tifffile-2024.4.18.tar.gz"
+    sha256 "5ffcd77b9d77c3aada1278631af5c8ac788438452fda2eb1b9b60d5553e95c82"
   end
 
   def install
