@@ -3,8 +3,8 @@ class CmakeLanguageServer < Formula
 
   desc "Language Server for CMake"
   homepage "https://github.com/regen100/cmake-language-server"
-  url "https://files.pythonhosted.org/packages/65/d0/caf71019da3fe2eba801c620cd2ee9a122ede9e048101bf3ee024a5065fc/cmake_language_server-0.1.9.tar.gz"
-  sha256 "6b4768d89788c582b61d4503f6a3b0e594318af9d67be6d5453cded6dec0d7a8"
+  url "https://files.pythonhosted.org/packages/cc/ce/4b14dcaac4359fc9bdcb823763c7984b72e16ff2bf1c709bbc963cc0e0bc/cmake_language_server-0.1.10.tar.gz"
+  sha256 "dbc627dc1e549fc7414f459bdb340812acd84a0c8727b92e73c4bd348e6311bf"
   license "MIT"
   head "https://github.com/regen100/cmake-language-server.git", branch: "master"
 
@@ -36,8 +36,8 @@ class CmakeLanguageServer < Formula
   end
 
   resource "pygls" do
-    url "https://files.pythonhosted.org/packages/e9/8d/31b50ac0879464049d744a1ddf00dc6474433eb55d40fa0c8e8510591ad2/pygls-1.3.0.tar.gz"
-    sha256 "1b44ace89c9382437a717534f490eadc6fda7c0c6c16ac1eaaf5568e345e4fb8"
+    url "https://files.pythonhosted.org/packages/86/b9/41d173dad9eaa9db9c785a85671fc3d68961f08d67706dc2e79011e10b5c/pygls-1.3.1.tar.gz"
+    sha256 "140edceefa0da0e9b3c533547c892a42a7d2fd9217ae848c330c53d266a55018"
   end
 
   def install
