@@ -897,6 +897,7 @@ gtk-gnutella
 gtk4
 gtkmm4
 gtranslator
+gucharmap
 gulp-cli
 gupnp
 gupnp-tools
