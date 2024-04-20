@@ -67,15 +67,13 @@ class Notifiers < Formula
     sha256 "42821446ee7a76f5d9f71f9e33a4fb2ffd724bb3e7f93386150b61a43115788d"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/7a/12/dc02a2401dac87cb2d3ea8d3b23eab30db4cd2948d5b048bf912b9fe959a/setuptools-69.4.tar.gz"
-    sha256 "659e902e587e77fab8212358f5b03977b5f0d18d4724310d4a093929fee4ca1a"
-  end
-
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
     sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
+
+  # Drop setuptools dep: https://github.com/liiight/notifiers/pull/470
+  patch :DATA
 
   def install
     virtualenv_install_with_resources
@@ -85,3 +83,25 @@ class Notifiers < Formula
     assert_match "notifiers", shell_output("#{bin}/notifiers --help")
   end
 end
+
+__END__
+diff --git a/notifiers/utils/helpers.py b/notifiers/utils/helpers.py
+index e351956..9981a0e 100644
+--- a/notifiers/utils/helpers.py
++++ b/notifiers/utils/helpers.py
+@@ -1,6 +1,5 @@
+ import logging
+ import os
+-from distutils.util import strtobool
+ from pathlib import Path
+ 
+ log = logging.getLogger("notifiers")
+@@ -13,7 +12,7 @@ def text_to_bool(value: str) -> bool:
+     :param value: Value to check
+     """
+     try:
+-        return bool(strtobool(value))
++        return value.lower() in {"y", "yes", "t", "true", "on", "1"}
+     except (ValueError, AttributeError):
+         return value is not None
+ 
