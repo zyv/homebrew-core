@@ -60,11 +60,6 @@ class Iredis < Formula
     sha256 "4973bae7444c0fbed64a06b87446f79361cb7e4ec1538c022d696ed7a5015580"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
-    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
-  end
-
   resource "six" do
     url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
     sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
@@ -76,10 +71,7 @@ class Iredis < Formula
   end
 
   def install
-    venv = virtualenv_create(libexec, "python3.12")
-    venv.pip_install resource("setuptools")
-    venv.pip_install resources.reject { |r| r.name == "setuptools" }
-    venv.pip_install_and_link buildpath
+    virtualenv_install_with_resources
   end
 
   test do
