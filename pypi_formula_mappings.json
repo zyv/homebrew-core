@@ -463,8 +463,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "mvt": {
-    "exclude_packages": ["certifi", "cryptography"],
-    "extra_packages": ["setuptools"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "mycli": {
     "exclude_packages": ["cryptography"]
