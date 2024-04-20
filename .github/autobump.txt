@@ -896,6 +896,7 @@ gulp-cli
 gupnp
 gupnp-tools
 gxml
+gyb
 hackrf
 hadoop
 halide
