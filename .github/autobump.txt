@@ -1315,6 +1315,7 @@ minizinc
 minizip
 minizip-ng
 minuit2
+mkdocs
 mkfontscale
 mlkit
 mlx
