@@ -1,8 +1,8 @@
 class Overtls < Formula
   desc "Simple proxy tunnel for bypassing the GFW"
   homepage "https://github.com/ShadowsocksR-Live/overtls"
-  url "https://github.com/ShadowsocksR-Live/overtls/archive/refs/tags/v0.2.21.tar.gz"
-  sha256 "e19edfdb601f4c6455b7c23809a54de2b6c18544cd868f6bc486ccde8285c14c"
+  url "https://github.com/ShadowsocksR-Live/overtls/archive/refs/tags/v0.2.22.tar.gz"
+  sha256 "b27b0d13e5584eef29ecd5c91f4d13fad6338b1975672326dcea61f1760fc569"
   license "MIT"
   head "https://github.com/ShadowsocksR-Live/overtls.git", branch: "master"
 
