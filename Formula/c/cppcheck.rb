@@ -1,10 +1,9 @@
 class Cppcheck < Formula
   desc "Static analysis of C and C++ code"
   homepage "https://sourceforge.net/projects/cppcheck/"
-  url "https://github.com/danmar/cppcheck/archive/refs/tags/2.13.0.tar.gz"
-  sha256 "8229afe1dddc3ed893248b8a723b428dc221ea014fbc76e6289840857c03d450"
+  url "https://github.com/danmar/cppcheck/archive/refs/tags/2.14.0.tar.gz"
+  sha256 "2d2ead75db10c5993d77c8dfe854dc42b00fac65953611bb6c83e25fc74b9d50"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/danmar/cppcheck.git", branch: "main"
 
   # There can be a notable gap between when a version is tagged and a
@@ -39,7 +38,6 @@ class Cppcheck < Formula
   def install
     args = std_cmake_args + %W[
       -DHAVE_RULES=ON
-      -DUSE_MATCHCOMPILER=ON
       -DUSE_BUNDLED_TINYXML2=OFF
       -DENABLE_OSS_FUZZ=OFF
       -DPYTHON_EXECUTABLE=#{python3}
