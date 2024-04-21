@@ -730,6 +730,7 @@ forgit
 fork-cleaner
 fortio
 fourmolu
+fping
 fred
 freeciv
 freeipmi

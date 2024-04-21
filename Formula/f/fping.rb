@@ -1,8 +1,8 @@
 class Fping < Formula
   desc "Scriptable ping program for checking if multiple hosts are up"
   homepage "https://fping.org/"
-  url "https://fping.org/dist/fping-5.1.tar.gz"
-  sha256 "1ee5268c063d76646af2b4426052e7d81a42b657e6a77d8e7d3d2e60fd7409fe"
+  url "https://fping.org/dist/fping-5.2.tar.gz"
+  sha256 "a7692d10d73fb0bb76e1f7459aa7f19bbcdbfc5adbedef02f468974b18b0e42f"
   license "BSD-3-Clause"
 
   livecheck do
@@ -39,10 +39,6 @@ class Fping < Formula
   test do
     assert_match "Version #{version}", shell_output("#{bin}/fping --version")
     assert_match "Probing options:", shell_output("#{bin}/fping --help")
-    if OS.mac?
-      assert_equal "::1 is alive", shell_output("#{bin}/fping -A localhost").chomp
-    else
-      assert_match "can't create socket", shell_output("#{bin}/fping -A localhost 2>&1", 4)
-    end
+    assert_equal "127.0.0.1 is alive", shell_output("#{bin}/fping -4 -A localhost").chomp
   end
 end
