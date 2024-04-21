@@ -5,6 +5,7 @@ class Zig < Formula
   url "https://ziglang.org/download/0.11.0/zig-0.11.0.tar.xz"
   sha256 "72014e700e50c0d3528cef3adf80b76b26ab27730133e8202716a187a799e951"
   license "MIT"
+  revision 1
 
   livecheck do
     url "https://ziglang.org/download/"
