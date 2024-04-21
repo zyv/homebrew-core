@@ -42,6 +42,7 @@ class Rocksdb < Formula
       -DWITH_ZSTD=ON
       -DROCKSDB_BUILD_SHARED=ON
       -DCMAKE_EXE_LINKER_FLAGS=-Wl,-rpath,#{rpath}
+      -DZSTD_INCLUDE_DIRS=#{Formula["zstd"].include}
     ]
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
