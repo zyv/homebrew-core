@@ -9,13 +9,14 @@ class Snakemake < Formula
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "a76372ae8c9a1b860d025db91c032daa10ced7121b07f72295448b5566f2b0d3"
-    sha256 cellar: :any,                 arm64_ventura:  "d50bcc6cff927a19ed3163650bb7e0bc5e2b4d155764c2cc1c40f9743125e78e"
-    sha256 cellar: :any,                 arm64_monterey: "f1b9d75bdfc32adb4a95ce009c70533a72b9c5dd78c807bf2a163795b1a099d3"
-    sha256 cellar: :any,                 sonoma:         "d07c3d36d16d891388a44f2e06ce172fbce44980c45a23dba4abb45cc15a4532"
-    sha256 cellar: :any,                 ventura:        "641b4ba2f2410ccb503e24a0167403499f2675dc574f1907d0e3127159b9944a"
-    sha256 cellar: :any,                 monterey:       "22ce4a6524bc8e76b0fd4d8247dc499737995f1e9bf6141b40f4b9b33128e42b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cd105219821415c3a595e63bb3235d197bb0107f4e9202ec5c7c9f1bd6ae01a6"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "18eb22d0cf13b5b5a61f01c6945ada2721e8d5e3d907f27ff5fd532dc2ec300a"
+    sha256 cellar: :any,                 arm64_ventura:  "ea36de77aabdf6b09d6af73c0da68810f39850adfbf8504bb3b04b6b7bc13feb"
+    sha256 cellar: :any,                 arm64_monterey: "94a989c2efb945fed2a6240764da1b108c62b04629a1b1978121a93789fae113"
+    sha256 cellar: :any,                 sonoma:         "0160b765bf494420c2dcfaff91affc18b84dd2829c209b7ec8c264f423da4157"
+    sha256 cellar: :any,                 ventura:        "291c93fb43cf203b91c807a571588d36a62d0cc61bffed8b5d71f2244e1d650d"
+    sha256 cellar: :any,                 monterey:       "c66d8e73da8b5a683785a4e1a56c98efe08a446852e7bfdce6e6b45440b88fc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "74e1701aa7e6ae3471892a32b45e8a13fac43c7068c0ae00d81150aed1becdf3"
   end
 
   depends_on "rust" => :build
