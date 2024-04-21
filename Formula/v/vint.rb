@@ -38,10 +38,10 @@ class Vint < Formula
     sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/c9/3d/74c56f1c9efd7353807f8f5fa22adccdba99dc72f34311c30a69627a0fad/setuptools-69.1.0.tar.gz"
-    sha256 "850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"
-  end
+  # Drop setuptools dep. Next release will switch to setuptools_scm,
+  # this patch uses importlib for a smaller self-contained diff
+  # https://github.com/Vimjas/vint/commit/997677ae688fbaf47da426500cc56aae7305d243
+  patch :DATA
 
   def install
     virtualenv_install_with_resources
@@ -63,3 +63,33 @@ class Vint < Formula
     assert_equal "", shell_output("#{bin}/vint good.vim")
   end
 end
+
+__END__
+diff --git a/vint/linting/cli.py b/vint/linting/cli.py
+index 55db52e..c347f23 100644
+--- a/vint/linting/cli.py
++++ b/vint/linting/cli.py
+@@ -1,7 +1,6 @@
+ import sys
+ from argparse import ArgumentParser
+ from pathlib import PosixPath
+-import pkg_resources
+ import logging
+
+ from vint.linting.linter import Linter
+@@ -150,11 +149,11 @@ class CLI(object):
+
+
+     def _get_version(self):
+-        # In unit tests, pkg_resources cannot find vim-vint.
+-        # So, I decided to return dummy version
++        from importlib import metadata
++
+         try:
+-            version = pkg_resources.require('vim-vint')[0].version
+-        except pkg_resources.DistributionNotFound:
++            version = metadata.version('vim-vint')
++        except metadata.PackageNotFoundError:
+             version = 'test_mode'
+
+         return version
