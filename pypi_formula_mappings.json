@@ -731,8 +731,7 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "sysaidmin": {
-    "exclude_packages": ["certifi"],
-    "extra_packages": ["setuptools"]
+    "exclude_packages": ["certifi"]
   },
   "theharvester": {
     "exclude_packages": ["certifi"]
