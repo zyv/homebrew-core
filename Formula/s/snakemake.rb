@@ -184,11 +184,6 @@ class Snakemake < Formula
     sha256 "42821446ee7a76f5d9f71f9e33a4fb2ffd724bb3e7f93386150b61a43115788d"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
-    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
-  end
-
   resource "smart-open" do
     url "https://files.pythonhosted.org/packages/06/84/c6e6276a72a78996f11118b8bc1d9e9b619aa78201f408210f4a584bd377/smart_open-7.0.4.tar.gz"
     sha256 "62b65852bdd1d1d516839fcb1f6bc50cd0f16e05b4ec44b52f43d38bcb838524"
@@ -222,6 +217,12 @@ class Snakemake < Formula
   resource "stopit" do
     url "https://files.pythonhosted.org/packages/35/58/e8bb0b0fb05baf07bbac1450c447d753da65f9701f551dca79823ce15d50/stopit-1.1.2.tar.gz"
     sha256 "f7f39c583fd92027bd9d06127b259aee7a5b7945c1f1fa56263811e1e766996d"
+
+    # Drop setuptools dep: https://github.com/glenfant/stopit/pull/30
+    patch do
+      url "https://github.com/glenfant/stopit/commit/9a559afdba924c444cc02fd258548029aacedd3c.patch?full_index=1"
+      sha256 "a6a7d140bbb0dbcc1dd31e2d0ce317f6bac04c2368bc15dd1f139cd7e538f5a8"
+    end
   end
 
   resource "tabulate" do
@@ -240,8 +241,8 @@ class Snakemake < Formula
   end
 
   resource "traitlets" do
-    url "https://files.pythonhosted.org/packages/4f/97/d957b3a5f6da825cbbb6a02e584bcab769ea2c2a9ad67a9cc25b4bbafb30/traitlets-5.14.2.tar.gz"
-    sha256 "8cdd83c040dab7d1dee822678e5f5d100b514f7b72b01615b26fc5718916fdf9"
+    url "https://files.pythonhosted.org/packages/eb/79/72064e6a701c2183016abbbfedaba506d81e30e232a68c9f0d6f6fcd1574/traitlets-5.14.3.tar.gz"
+    sha256 "9ed0579d3502c94b4b3732ac120375cda96f923114522847de4b3bb98b96b6b7"
   end
 
   resource "urllib3" do
@@ -261,6 +262,12 @@ class Snakemake < Formula
 
   def python3
     "python3.12"
+  end
+
+  # Drop setuptools dep: https://github.com/snakemake/snakemake/pull/2831
+  patch do
+    url "https://github.com/snakemake/snakemake/commit/2239c05a967918d1ba58a079222ee1881c8f0f26.patch?full_index=1"
+    sha256 "5455a8f15fb158e7e6add0691e092f6f0f7ee47ce88f35f0446a315877b193e4"
   end
 
   def install
