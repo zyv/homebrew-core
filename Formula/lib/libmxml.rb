@@ -1,8 +1,8 @@
 class Libmxml < Formula
   desc "Mini-XML library"
   homepage "https://michaelrsweet.github.io/mxml/"
-  url "https://github.com/michaelrsweet/mxml/releases/download/v4.0.2/mxml-4.0.2.tar.gz"
-  sha256 "34ae4854c02f14007886d0fb0c50c09edbd3cc3f9a9267d6540823e4d617c8da"
+  url "https://github.com/michaelrsweet/mxml/releases/download/v4.0.3/mxml-4.0.3.tar.gz"
+  sha256 "3717da5b3829d6b37ef70db00ac1ec431bdb60faed8fde6538c11dc4aec13a7a"
   license "Apache-2.0"
   head "https://github.com/michaelrsweet/mxml.git", branch: "master"
 
