@@ -1,19 +1,19 @@
 class Gitu < Formula
   desc "TUI Git client inspired by Magit"
   homepage "https://github.com/altsem/gitu"
-  url "https://github.com/altsem/gitu/archive/refs/tags/v0.19.0.tar.gz"
-  sha256 "6b6a3811bff0aa60301ba82b437bc9b17985bbf82911d2f5d911f7e25219d23f"
+  url "https://github.com/altsem/gitu/archive/refs/tags/v0.19.1.tar.gz"
+  sha256 "b99cc5ed1b4293d6be77629629d173cdd3ad99aac9b022d55779ea96159cc152"
   license "MIT"
   head "https://github.com/altsem/gitu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4238afacedad281fa1921392692b475cfa7aaa41d78a559f09a8a7db54b13358"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7e2d89e604183870b0d51b462f56085c9cb43f770378890ed1f3d5518350bc72"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4c78e57d07c04aecd6549a5adc5881bda702950fc1b49e3ef9265de5edd589ed"
-    sha256 cellar: :any_skip_relocation, sonoma:         "c8c46dd493857125f1c649065bf42489ccd6597aee0edd7cdb2d12c971478125"
-    sha256 cellar: :any_skip_relocation, ventura:        "62f210c87398f6d3c077ba75e4cdbfae021e90c211c25dab9005cc0bf504ba77"
-    sha256 cellar: :any_skip_relocation, monterey:       "802b4afa2d2d71dc6836fc56ce8ffbeb13ec32676b3ecaf0fd4a3f23190c3bb9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6f71546934dbdd9f7ee41811148deaacb67011355694fffbc03afa9a80eecce"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "75e664df239b101b0f4491f1e2496d66726b7a42d015e249eb5c2249f840bd37"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d949285029ad162815c67442e5aebad0dae187263ee23ac10771f9df12d4da5a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "f82b6541984b925998b63e94241b71274fbef4582c7d16a066dbfe0b3411b5bc"
+    sha256 cellar: :any_skip_relocation, sonoma:         "bccbecae573386e01535d11f94a165ff5b983b47f7530baad16e5da9eceeb547"
+    sha256 cellar: :any_skip_relocation, ventura:        "5573485f584a39ad58ffd89582bbd37fe87589cd2b25ddd188d69f512ae22440"
+    sha256 cellar: :any_skip_relocation, monterey:       "9f59c6cff7ab56ab585cedec29dabc2889be8f404a8eefe491353d2d5babfd5d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "23058084e65a915965350fece86ce6bcc722ce1e6b263574dc07f7e8a86b1124"
   end
 
   depends_on "rust" => :build
