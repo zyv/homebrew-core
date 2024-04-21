@@ -1239,6 +1239,7 @@ logstash
 lout
 lsd
 lsof
+lttng-ust
 luarocks
 luau
 lucky-commit
