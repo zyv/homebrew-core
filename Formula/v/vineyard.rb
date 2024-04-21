@@ -6,6 +6,7 @@ class Vineyard < Formula
   url "https://github.com/v6d-io/v6d/releases/download/v0.22.1/v6d-0.22.1.tar.gz"
   sha256 "16aea4dc63830925c2d8cd89dc36580ff80dd7610793d56ae5d0d09972cf2fcc"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     sha256                               arm64_sonoma:   "735777e66863fde84e3d493d7d514eb81207aff7414bb338ecb95a7bc330381f"
@@ -19,7 +20,6 @@ class Vineyard < Formula
 
   depends_on "cmake" => [:build, :test]
   depends_on "llvm" => [:build, :test]
-  depends_on "python-setuptools" => :build
   depends_on "python@3.12" => :build
   depends_on "apache-arrow"
   depends_on "boost"
@@ -37,8 +37,15 @@ class Vineyard < Formula
 
   fails_with gcc: "5"
 
+  resource "setuptools" do
+    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
+    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
+  end
+
   def install
     python = "python3.12"
+    venv = virtualenv_create(libexec, python)
+    venv.pip_install resources
     # LLVM is keg-only.
     ENV.prepend_path "PYTHONPATH", Formula["llvm"].opt_prefix/Language::Python.site_packages(python)
 
@@ -46,10 +53,15 @@ class Vineyard < Formula
     # libunwind due to it being present in a library search path.
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
 
+    # Work around API changes in `apache-arrow` 16+.
+    # Issue ref: https://github.com/v6d-io/v6d/issues/1881
+    arrow_uri_files = %w[modules/io/io/local_io_adaptor.cc modules/io/io/io_factory.cc]
+    inreplace arrow_uri_files, "arrow::internal::Uri", "arrow::util::Uri"
+
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_CXX_STANDARD=17",
                     "-DCMAKE_CXX_STANDARD_REQUIRED=TRUE",
-                    "-DPYTHON_EXECUTABLE=#{which(python)}",
+                    "-DPYTHON_EXECUTABLE=#{venv.root}/bin/python",
                     "-DUSE_EXTERNAL_ETCD_LIBS=ON",
                     "-DUSE_EXTERNAL_REDIS_LIBS=ON",
                     "-DUSE_EXTERNAL_HIREDIS_LIBS=ON",
