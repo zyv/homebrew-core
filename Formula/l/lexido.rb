@@ -1,8 +1,8 @@
 class Lexido < Formula
   desc "Innovative assistant for the command-line"
   homepage "https://github.com/micr0-dev/lexido"
-  url "https://github.com/micr0-dev/lexido/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "8d05016b392fa43a33d6989c1f6e568f0d8b5d8893faf8622d02d36fd2d5e9db"
+  url "https://github.com/micr0-dev/lexido/archive/refs/tags/v1.4.tar.gz"
+  sha256 "9a6bb4197566c3455bca50028cbff38d5d301c918ba1a6ac84dd246fe5658b16"
   license "AGPL-3.0-or-later"
 
   bottle do
