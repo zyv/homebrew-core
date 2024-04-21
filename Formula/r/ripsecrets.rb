@@ -1,8 +1,8 @@
 class Ripsecrets < Formula
   desc "Prevent committing secret keys into your source code"
   homepage "https://github.com/sirwart/ripsecrets"
-  url "https://github.com/sirwart/ripsecrets/archive/refs/tags/v0.1.7.tar.gz"
-  sha256 "12e1dfcd217bba34f74fd639d1a8de7dcf93ff2ae69398e093dfd794811db3ca"
+  url "https://github.com/sirwart/ripsecrets/archive/refs/tags/v0.1.8.tar.gz"
+  sha256 "4d7209605d3babde73092fed955628b0ecf280d8d68633b9056d2f859741109d"
   license "MIT"
   head "https://github.com/sirwart/ripsecrets.git", branch: "main"
 

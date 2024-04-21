@@ -1715,6 +1715,7 @@ rhit
 riemann
 riemann-client
 rio
+ripsecrets
 risor
 rizin
 rke
