@@ -707,8 +707,7 @@
     "exclude_packages": ["certifi"]
   },
   "snakemake": {
-    "exclude_packages": ["certifi"],
-    "extra_packages": ["setuptools"]
+    "exclude_packages": ["certifi"]
   },
   "snapcraft": {
     "extra_packages": ["catkin-pkg"]
