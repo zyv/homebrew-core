@@ -1745,6 +1745,7 @@ rune
 rure
 rust-analyzer
 rustcat
+rustscan
 rustup-init
 rye
 s-search
