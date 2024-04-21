@@ -8,13 +8,13 @@ class AdrViewer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b3012fb54668eb17d5306681d9a99efa79c34a6103d4e6d5c8d2f4a5a3736d72"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "43664d77279796afdeadbef4443b6c583f82d156393698ca018bd5bf89249ad2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "55b98dd660a86e2c8fc4b60572887c2ba7b726f1a188516db65994b7da3acd9d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "b5c03ef785abcfb091cc863f6ab422fd8f8ca1e272632a9b79d94c4ef164c23c"
-    sha256 cellar: :any_skip_relocation, ventura:        "1bcfc044e06d95952de0cf0a8af7d61a82cc9b102cb07a9925bfda3df5305c8d"
-    sha256 cellar: :any_skip_relocation, monterey:       "febe2df12048536883a405402e8cb3f70458ec12e0e18725f50146fec0119c50"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "645664afc04069b3734da2a0d2f0e78d2b867c7460a280db11629612560cc667"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e392e7fc0df34aec1d1963699148c10fcfdde6ffa774a21332a4e368dd42aa2c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "49c198fab0064a72a50a9514ce940137db29bdadb9968642bc9cf17e8634409d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "03ac0a603f17c6726880d1bf3d6e4122ed267c87a2e79b47a442650c187dd454"
+    sha256 cellar: :any_skip_relocation, sonoma:         "5b1549d8b0eb3d3488c58ae488fd362ba10e2c561498e2eea37425922e123c27"
+    sha256 cellar: :any_skip_relocation, ventura:        "76f25ebfe50d0cb2d0eccd6fa492439c7e35ac00033a9e92ea8282c97ffdbe4f"
+    sha256 cellar: :any_skip_relocation, monterey:       "7ab7ceed694fa6bd0fd4f36d89cd8beb3efad47c56dfe278b5fa335b43c5cee3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c2acb8fe3eba8f0134da8a08a85dc89392dc393c54a3c1b5f5a51124fdac2fd6"
   end
 
   depends_on "python@3.12"
