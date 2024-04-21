@@ -11,6 +11,7 @@ activemq
 ada-url
 adb-enhanced
 adios2
+adr-viewer
 adwaita-icon-theme
 aerleon
 afflib
