@@ -1,8 +1,8 @@
 class Minigraph < Formula
   desc "Proof-of-concept seq-to-graph mapper and graph generator"
   homepage "https://lh3.github.io/minigraph"
-  url "https://github.com/lh3/minigraph/archive/refs/tags/v0.20.tar.gz"
-  sha256 "ef695e69d57bbc34478d7d3007e4153422ee2e3534e4f3fcbb8930cfaa5e1dc0"
+  url "https://github.com/lh3/minigraph/archive/refs/tags/v0.21.tar.gz"
+  sha256 "4272447393f0ae1e656376abe144de96cbafc777414d4c496f735dd4a6d3c06a"
   license "MIT"
 
   livecheck do
