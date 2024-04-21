@@ -2,8 +2,8 @@ class Biodiff < Formula
   desc "Hex diff viewer using alignment algorithms from biology"
   homepage "https://github.com/8051Enthusiast/biodiff"
   url "https://github.com/8051Enthusiast/biodiff.git",
-      tag:      "v1.2.0",
-      revision: "36ff3e726bbb73946e744e34c954fa153be3870b"
+      tag:      "v1.2.1",
+      revision: "48468e9e7493c5bec608035f86459feb2469be14"
   license "MIT"
   head "https://github.com/8051Enthusiast/biodiff.git", branch: "main"
 
