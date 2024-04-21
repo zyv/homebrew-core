@@ -1229,6 +1229,7 @@ litecli
 literate-git
 little-cms2
 livekit
+livekit-cli
 llm
 llvm
 lmdb
