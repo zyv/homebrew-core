@@ -767,9 +767,6 @@
   "twine": {
     "exclude_packages": ["certifi"]
   },
-  "twtxt": {
-    "extra_packages": ["setuptools"]
-  },
   "unoconv":{
     "extra_packages": ["setuptools"]
   },
