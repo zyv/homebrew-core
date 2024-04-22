@@ -1,8 +1,8 @@
 class Gtranslator < Formula
   desc "GNOME gettext PO file editor"
   homepage "https://wiki.gnome.org/Design/Apps/Translator"
-  url "https://download.gnome.org/sources/gtranslator/46/gtranslator-46.0.tar.xz"
-  sha256 "0a30bf0fd82d88f9a206659e8b5f59eaa93fb80f67530bbf9461c5bf6a1c0beb"
+  url "https://download.gnome.org/sources/gtranslator/46/gtranslator-46.1.tar.xz"
+  sha256 "b4af3184891491fd89c1a0465652310156c07d156b6a24e1c07f3a4cf7579568"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -15,6 +15,7 @@ class Gtranslator < Formula
     sha256 x86_64_linux:   "912e28944db7258f1fc4808d7f7997273046c44f6da573011ae68192623fa67f"
   end
 
+  depends_on "desktop-file-utils" => :build # for update-desktop-database
   depends_on "itstool" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
