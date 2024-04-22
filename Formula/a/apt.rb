@@ -1,8 +1,8 @@
 class Apt < Formula
   desc "Advanced Package Tool"
   homepage "https://wiki.debian.org/Apt"
-  url "https://deb.debian.org/debian/pool/main/a/apt/apt_2.9.1.tar.xz"
-  sha256 "fd726ed4bc975217dd61af6675aa688c1010a998efa34be4f80f194e7917bf71"
+  url "https://deb.debian.org/debian/pool/main/a/apt/apt_2.9.2.tar.xz"
+  sha256 "80aa74466b132e50ed8d0159f10e64a448b6a6c64723d62c42b83a5199ca03a7"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -98,12 +98,6 @@ class Apt < Formula
   resource "Syntax::Keyword::Try" do
     url "https://cpan.metacpan.org/authors/id/P/PE/PEVANS/Syntax-Keyword-Try-0.29.tar.gz"
     sha256 "cc320719d3608daa9514743a43dac2be99cb8ccd989b1fefa285290cb1d59d8f"
-  end
-
-  # upstream bug report, https://github.com/mquinson/po4a/issues/475
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/07275a9af84b536ac737c364d66fc2eb4daf729a/apt/po4a-0.70.patch"
-    sha256 "35f0ac1416af3116e17275a4b233a7abc34767655734bf07dda83ff307266e15"
   end
 
   def install
