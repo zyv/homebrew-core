@@ -1,8 +1,8 @@
 class Darcs < Formula
   desc "Distributed version control system that tracks changes, via Haskell"
   homepage "https://darcs.net/"
-  url "https://hackage.haskell.org/package/darcs-2.16.5/darcs-2.16.5.tar.gz"
-  sha256 "d63c6cd236e31e812e8ad84433d27059387606269fbd953f4c349c3cb3aa242b"
+  url "https://hackage.haskell.org/package/darcs-2.18.2/darcs-2.18.2.tar.gz"
+  sha256 "e665518a0a62eccb9e071243005e4b3f7e365186a1aa49d60779f6d35da13386"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -15,10 +15,8 @@ class Darcs < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee3f9ad7d74ba60c4f75fea414168304c2bd7d3dbe9c6ee0ca249a7d10703740"
   end
 
-  deprecate! date: "2023-11-16", because: "depends on GHC 8.10 to build"
-
   depends_on "cabal-install" => :build
-  depends_on "ghc@8.10" => :build # GHC 9.2 open patch: http://bugs.darcs.net/patch2244
+  depends_on "ghc" => :build
   depends_on "gmp"
 
   uses_from_macos "ncurses"
