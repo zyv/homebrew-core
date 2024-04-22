@@ -546,6 +546,7 @@ doppler
 dosbox-staging
 dosbox-x
 dotenv-linter
+dotnet
 dotslash
 double-conversion
 doxygen
