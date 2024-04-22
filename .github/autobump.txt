@@ -1922,6 +1922,7 @@ subnetcalc
 subversion
 suite-sparse
 sundials
+superfile
 suricata
 svgbob
 svgo
