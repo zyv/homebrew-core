@@ -2,12 +2,10 @@ class PerconaXtrabackup < Formula
   desc "Open source hot backup tool for InnoDB and XtraDB databases"
   homepage "https://www.percona.com/software/mysql-database/percona-xtrabackup"
   # TODO: Check if we can use unversioned `protobuf` at version bump
-  # Check if mysql-client@8.0 can be update to latest with next version
-  # if DBD::mysql > 5.003 - https://github.com/perl5-dbi/DBD-mysql/issues/375
   url "https://downloads.percona.com/downloads/Percona-XtraBackup-LATEST/Percona-XtraBackup-8.0.35-30/source/tarball/percona-xtrabackup-8.0.35-30.tar.gz"
   sha256 "8a3632a5a7a91834800f4f83902468bccff1d979e82347c0372b39a97b0c85f0"
   license "GPL-2.0-only"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://docs.percona.com/percona-xtrabackup/latest/"
@@ -41,7 +39,7 @@ class PerconaXtrabackup < Formula
   depends_on "libfido2"
   depends_on "libgcrypt"
   depends_on "lz4"
-  depends_on "mysql-client@8.0"
+  depends_on "mysql-client"
   depends_on "openssl@3"
   depends_on "protobuf@21"
   depends_on "zstd"
@@ -77,8 +75,8 @@ class PerconaXtrabackup < Formula
   end
 
   resource "DBD::mysql" do
-    url "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-5.003.tar.gz"
-    sha256 "21554443d60e294cc0ac00adaef53ccb7de55d4fae66a38372a5adf0a0f1edda"
+    url "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-5.004.tar.gz"
+    sha256 "33a6bf1b685cc50c46eb1187a3eb259ae240917bc189d26b81418790aa6da5df"
   end
 
   # https://github.com/percona/percona-xtrabackup/blob/percona-xtrabackup-#{version}/cmake/boost.cmake
