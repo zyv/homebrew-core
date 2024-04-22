@@ -1,8 +1,8 @@
 class Calceph < Formula
   desc "C library to access the binary planetary ephemeris files"
   homepage "https://www.imcce.fr/inpop/calceph"
-  url "https://www.imcce.fr/content/medias/recherche/equipes/asd/calceph/calceph-3.5.5.tar.gz"
-  sha256 "f7acf529a9267793126d7fdbdf79d4d26ae33274c99d09a9fc9d6191a3c72aca"
+  url "https://www.imcce.fr/content/medias/recherche/equipes/asd/calceph/calceph-4.0.0.tar.gz"
+  sha256 "f083df763e3d8cbbd17060c77b3ecd88beb9ce6c7e7f87630b3debd1bb0091f9"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -20,21 +20,18 @@ class Calceph < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d889b6e08767bd3c7353cfc85d075e5c6bb181ca33220b64809cae1c303be09"
   end
 
+  depends_on "cmake" => :build
   depends_on "gcc" # for gfortran
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/03cf8088210822aa2c1ab544ed58ea04c897d9c4/libtool/configure-pre-0.4.2.418-big_sur.diff"
-    sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
-  end
-
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    system "make"
-    system "make", "install"
+    args = %w[
+      -DBUILD_SHARED_LIBS=ON
+      -DENABLE_FORTRAN=ON
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
