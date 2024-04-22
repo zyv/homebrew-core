@@ -1,8 +1,8 @@
 class Qsoas < Formula
   desc "Versatile software for data analysis"
   homepage "https://bip.cnrs.fr/groups/bip06/software/"
-  url "https://bip.cnrs.fr/wp-content/uploads/qsoas/qsoas-3.2.tar.gz"
-  sha256 "0cd0e3b0d77666797a1447b5ff7cf9ed35b53efd091fa7525fad4913c896de79"
+  url "https://bip.cnrs.fr/wp-content/uploads/qsoas/qsoas-3.3.tar.gz"
+  sha256 "c5a701dfed23c682892479b43b92aac79a7db5ceb9ed6b6cd0a41129d2690492"
   license "GPL-2.0-only"
 
   livecheck do
@@ -24,34 +24,18 @@ class Qsoas < Formula
 
   depends_on "bison" => :build
   depends_on "gsl"
+  depends_on "mruby"
   depends_on "qt@5"
 
   uses_from_macos "ruby"
 
   fails_with gcc: "5"
 
-  # Needs mruby 2, see https://github.com/fourmond/QSoas/issues/4
-  resource "mruby2" do
-    url "https://github.com/mruby/mruby/archive/refs/tags/2.1.2.tar.gz"
-    sha256 "4dc0017e36d15e81dc85953afb2a643ba2571574748db0d8ede002cefbba053b"
-  end
-
   def install
-    resource("mruby2").stage do
-      inreplace "build_config.rb", /default/, "full-core"
-      system "make"
-
-      cd "build/host/" do
-        libexec.install %w[bin lib mrbgems mrblib]
-      end
-
-      libexec.install "include"
-    end
-
     gsl = Formula["gsl"].opt_prefix
     qt5 = Formula["qt@5"].opt_prefix
 
-    system "#{qt5}/bin/qmake", "MRUBY_DIR=#{libexec}",
+    system "#{qt5}/bin/qmake", "MRUBY_DIR=#{Formula["mruby"].opt_prefix}",
                                "GSL_DIR=#{gsl}/include",
                                "QMAKE_LFLAGS=-L#{libexec}/lib -L#{gsl}/lib"
     system "make"
