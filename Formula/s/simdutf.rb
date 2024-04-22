@@ -1,8 +1,8 @@
 class Simdutf < Formula
   desc "Unicode conversion routines, fast"
   homepage "https://github.com/simdutf/simdutf"
-  url "https://github.com/simdutf/simdutf/archive/refs/tags/v5.2.4.tar.gz"
-  sha256 "36281d6489a4a8c2b5bfac2d41c03dce8fc89ec1cda15cc05c53d44f5ad30b4d"
+  url "https://github.com/simdutf/simdutf/archive/refs/tags/v5.2.6.tar.gz"
+  sha256 "ab9e56facf7cf05f4e9d062a0adef310fc6a0f82a8132e8ec1e1bb7ab5e234df"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/simdutf/simdutf.git", branch: "master"
 
@@ -26,11 +26,20 @@ class Simdutf < Formula
 
   uses_from_macos "python" => :build
 
+  # https://github.com/simdutf/simdutf/blob/v#{version}/benchmarks/base64/CMakeLists.txt#L5
+  resource "base64" do
+    url "https://github.com/aklomp/base64/archive/refs/tags/v0.5.2.tar.gz"
+    sha256 "723a0f9f4cf44cf79e97bcc315ec8f85e52eb104c8882942c3f2fba95acc080d"
+  end
+
   def install
+    (buildpath/"base64").install resource("base64")
+
     args = %W[
       -DBUILD_SHARED_LIBS=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
       -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON
+      -DFETCHCONTENT_SOURCE_DIR_BASE64=#{buildpath}/base64
       -DPython3_EXECUTABLE=#{which("python3")}
       -DSIMDUTF_BENCHMARKS=ON
     ]
