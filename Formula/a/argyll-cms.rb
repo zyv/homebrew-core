@@ -2,7 +2,7 @@ class ArgyllCms < Formula
   desc "ICC compatible color management system"
   homepage "https://www.argyllcms.com/"
   url "https://www.argyllcms.com/Argyll_V3.2.0_src.zip"
-  sha256 "ea554c48a1d36f8a089ac860cc5b4d00536b7511948aa2c4c4314e07be8b7bb8"
+  sha256 "4861ab87b41618fb6706843099aad2cc649115634dee1e60738792387b371176"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -62,9 +62,6 @@ class ArgyllCms < Formula
     end
   end
 
-  # notified author about the patch
-  patch :DATA
-
   def install
     resource("jam").stage do
       system "make", "CC=#{ENV.cc}", "CFLAGS=#{ENV.cflags}", "LOCATE_TARGET=bin"
@@ -122,17 +119,3 @@ class ArgyllCms < Formula
     assert_match "Calibrate a Display", shell_output("#{bin}/dispcal 2>&1", 1)
   end
 end
-
-__END__
-diff --git a/gamut/GenRMGam.c b/gamut/GenRMGam.c
-index 05e6bef..bac04ca 100644
---- a/gamut/GenRMGam.c
-+++ b/gamut/GenRMGam.c
-@@ -12,6 +12,7 @@
- #include "aconfig.h"
- #include "numlib.h"
- #include "icc.h"
-+#include "xicc.h"
- #include "cgats.h"
- #include "xcam.h"
- #include "gamut.h"
