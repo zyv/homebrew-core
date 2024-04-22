@@ -1791,6 +1791,7 @@ sdb
 sdl2
 seam
 seaweedfs
+securefs
 selene
 semgrep
 sentencepiece
