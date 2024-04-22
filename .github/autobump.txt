@@ -1096,6 +1096,7 @@ kubevious
 kubie
 kumactl
 kustomize
+kuttl
 kvazaar
 kwctl
 kwok

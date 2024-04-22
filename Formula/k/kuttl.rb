@@ -1,9 +1,8 @@
 class Kuttl < Formula
   desc "KUbernetes Test TooL"
   homepage "https://kuttl.dev"
-  url "https://github.com/kudobuilder/kuttl.git",
-      tag:      "v0.15.0",
-      revision: "f6d64c915c8dd9e2da354562c3d5c6fcf88aec2b"
+  url "https://github.com/kudobuilder/kuttl/archive/refs/tags/v0.16.0.tar.gz"
+  sha256 "25d1c39852397f81f7e5098e692e37ff5f76444b447973c031e012cb8af3df92"
   license "Apache-2.0"
   head "https://github.com/kudobuilder/kuttl.git", branch: "main"
 
@@ -27,7 +26,7 @@ class Kuttl < Formula
     ldflags = %W[
       -s -w
       -X #{project}/pkg/version.gitVersion=v#{version}
-      -X #{project}/pkg/version.gitCommit=#{Utils.git_head}
+      -X #{project}/pkg/version.gitCommit=#{tap.user}
       -X #{project}/pkg/version.buildDate=#{time.iso8601}
     ]
 
