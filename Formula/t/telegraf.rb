@@ -1,8 +1,8 @@
 class Telegraf < Formula
   desc "Plugin-driven server agent for collecting & reporting metrics"
   homepage "https://www.influxdata.com/time-series-platform/telegraf/"
-  url "https://github.com/influxdata/telegraf/archive/refs/tags/v1.30.1.tar.gz"
-  sha256 "77f01e8dc2e84b6a91f9ad2b5aa80873f53076a1c806c0966267769896e1b015"
+  url "https://github.com/influxdata/telegraf/archive/refs/tags/v1.30.2.tar.gz"
+  sha256 "3514d870fe1899f20c5d1f1545233413cbe11061b23a0cafbd44b861a9295dc6"
   license "MIT"
   head "https://github.com/influxdata/telegraf.git", branch: "master"
 
