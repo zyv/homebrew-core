@@ -781,9 +781,6 @@
     "package_name": "vdirsyncer[google]",
     "exclude_packages": ["certifi"]
   },
-  "vint": {
-    "extra_packages": ["setuptools"]
-  },
   "virt-manager": {
     "exclude_packages": ["certifi"],
     "extra_packages": ["libvirt-python", "requests"]
