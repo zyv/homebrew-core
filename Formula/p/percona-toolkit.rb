@@ -17,13 +17,13 @@ class PerconaToolkit < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "f6bb5b6cd4b4b23b68ee688dff583ec7f86239266ee9296084cc9aa6c63f0cd3"
-    sha256 cellar: :any,                 arm64_ventura:  "6a730c277a8d7e1dabfc9a8d644f6e28eb6b416d67d238e07cb20e62aec9441d"
-    sha256 cellar: :any,                 arm64_monterey: "392cc5d58b83f2df591860a959d16163160e8356c5f59585a9f00a3607260f0a"
-    sha256 cellar: :any,                 sonoma:         "7ec024c441956d3dad59afdbbad08340dfa9cf806e5cab1bff4a3d29b901fdcf"
-    sha256 cellar: :any,                 ventura:        "6199ef6d49670b9621463c6ed1c238e2e5b9141f4732ce6e6f3e63286a138b1f"
-    sha256 cellar: :any,                 monterey:       "4246e5fb174b129c1dc96fe85abc3f41f560f16470ce75482e289398bb58dd88"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7bbb1879e552c4bd7904097d0016f18462fd1df7901a9ff2f64a94f800b55ba5"
+    sha256 cellar: :any,                 arm64_sonoma:   "e4f3ce735f82c07be179a6c61fb08b2eef5358b67e45d0c737f64a093ab62d2d"
+    sha256 cellar: :any,                 arm64_ventura:  "3782647a866f8107481a3c48d8eb16354364588c61294e937a5e29c08d7a58c0"
+    sha256 cellar: :any,                 arm64_monterey: "f0b2ceb21fadde42ea9277d66b9566a989c065b39faaed72957c2c5d8c2866e9"
+    sha256 cellar: :any,                 sonoma:         "f16c675138909148c2bc3e8966a25696537c074ac1e18962cf38d40800d62e79"
+    sha256 cellar: :any,                 ventura:        "7074d2704f671867df1b28cdf3435e6fbc527f1300ada8252b368465839a6876"
+    sha256 cellar: :any,                 monterey:       "80d997a8f71169acf39299ee02e46244f35ac02e4193cdd7630e44e4d7e1224e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09bc4a57472177454c1f5098b92a60e560f6376ff58d22e30210b8422709aee1"
   end
 
   depends_on "mysql-client"
