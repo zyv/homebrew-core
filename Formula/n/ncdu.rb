@@ -1,8 +1,8 @@
 class Ncdu < Formula
   desc "NCurses Disk Usage"
   homepage "https://dev.yorhel.nl/ncdu"
-  url "https://dev.yorhel.nl/download/ncdu-2.3.tar.gz"
-  sha256 "bbce1d1c70f1247671be4ea2135d8c52cd29a708af5ed62cecda7dc6a8000a3c"
+  url "https://dev.yorhel.nl/download/ncdu-2.4.tar.gz"
+  sha256 "4a3d0002309cf6a7cea791938dac9becdece4d529d0d6dc8d91b73b4e6855509"
   license "MIT"
   head "https://g.blicky.net/ncdu.git", branch: "zig"
 
@@ -36,7 +36,7 @@ class Ncdu < Formula
     else Hardware.oldest_cpu
     end
 
-    args = %W[--prefix #{prefix} -Doptimize=ReleaseFast]
+    args = %W[--prefix #{prefix} --release=fast]
     args << "-Dpie=true" if OS.mac?
     args << "-Dcpu=#{cpu}" if build.bottle?
 
