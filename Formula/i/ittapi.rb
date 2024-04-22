@@ -1,8 +1,8 @@
 class Ittapi < Formula
   desc "Intel Instrumentation and Tracing Technology (ITT) and Just-In-Time (JIT) API"
   homepage "https://github.com/intel/ittapi"
-  url "https://github.com/intel/ittapi/archive/refs/tags/v3.24.6.tar.gz"
-  sha256 "4e6cb42b6bd9e699e3dfbaf678e572f4292127dfee3312744137ac567064a26f"
+  url "https://github.com/intel/ittapi/archive/refs/tags/v3.24.7.tar.gz"
+  sha256 "2ff56c5c3f144b92e34af9bee451115f6076c9070ec92d361c3c07de8ff42649"
   license "GPL-2.0-only"
   head "https://github.com/intel/ittapi.git", branch: "master"
 
