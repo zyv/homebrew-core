@@ -1,12 +1,10 @@
 class Innotop < Formula
   desc "Top clone for MySQL"
   homepage "https://github.com/innotop/innotop/"
-  # Check if mysql-client@8.0 can be update to latest with next version
-  # if DBD::mysql > 5.003 - https://github.com/perl5-dbi/DBD-mysql/issues/375
   url "https://github.com/innotop/innotop/archive/refs/tags/v1.13.0.tar.gz"
   sha256 "6ec91568e32bda3126661523d9917c7fbbd4b9f85db79224c01b2a740727a65c"
   license any_of: ["GPL-2.0-only", "Artistic-1.0-Perl"]
-  revision 7
+  revision 8
   head "https://github.com/innotop/innotop.git"
 
   bottle do
@@ -17,7 +15,7 @@ class Innotop < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d8457950e00284c337b9a9dcceef6e4a980748668b6819b0824b85ac272e8e95"
   end
 
-  depends_on "mysql-client@8.0"
+  depends_on "mysql-client"
   depends_on "openssl@3"
 
   uses_from_macos "perl"
@@ -33,8 +31,8 @@ class Innotop < Formula
   end
 
   resource "DBD::mysql" do
-    url "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-5.002.tar.gz"
-    sha256 "8dbf87c2b5b8eaf79cd16507cc07597caaf4af49bc521ec51c0ea275e8332e25"
+    url "https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN/DBD-mysql-5.004.tar.gz"
+    sha256 "33a6bf1b685cc50c46eb1187a3eb259ae240917bc189d26b81418790aa6da5df"
   end
 
   resource "TermReadKey" do
