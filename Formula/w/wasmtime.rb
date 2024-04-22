@@ -2,8 +2,8 @@ class Wasmtime < Formula
   desc "Standalone JIT-style runtime for WebAssembly, using Cranelift"
   homepage "https://wasmtime.dev/"
   url "https://github.com/bytecodealliance/wasmtime.git",
-      tag:      "v19.0.2",
-      revision: "040ec9209e096bb348077e364ed83cf1a54293fe"
+      tag:      "v20.0.0",
+      revision: "9e1084ffac08b1bf9c82de40c0efc1baff14b9ad"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/bytecodealliance/wasmtime.git", branch: "main"
 
@@ -27,9 +27,7 @@ class Wasmtime < Formula
   def install
     system "cargo", "install", *std_cargo_args
     system "cargo", "build", "--locked", "--lib", "-p", "wasmtime-c-api", "--release"
-    cp "crates/c-api/wasm-c-api/include/wasm.h", "crates/c-api/include/"
     lib.install shared_library("target/release/libwasmtime")
-    include.install "crates/c-api/wasm-c-api/include/wasm.h"
     include.install Dir["crates/c-api/include/*"]
   end
 
