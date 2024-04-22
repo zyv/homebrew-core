@@ -7,13 +7,13 @@ class Vfox < Formula
   head "https://github.com/version-fox/vfox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "50cb8a7fb207f0ae12d588444fbd9894f5dd69c9ac0b56eec33edaadd0160015"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ecff56093e3999ac9d23e8056ae58d1d40848371084dbf6d94883d6e8aa702b0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c4a8a9b3dff0e01dff1f6063313f3ed13e9d4ae9adfa308e2cf2c8689e01887d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "02d36c029a01babbb5a39d0c4cf961cb40f538aa389e39738fc857a94080318b"
-    sha256 cellar: :any_skip_relocation, ventura:        "b80fea3c749846604329c96ea2ae5d50b0157ce9be8adc64564c2e0d576cd3d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "0cfd6b37dac358d97b997cbc7de39a2c82ae12727718f18477bbb5eeac035d5c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1408d26fb6a3623f8f0b851e8273e597ca902c54ba40941fa1e11bd27f6d006"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5b015f0ed2b83bef8dd524f75c1d8a925df3ecd08f6073143f139947b028dabf"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d5d67ec3c9203cf468a43c70081bc9fd773e175864775c497902a7442fb270ff"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ae446b7ebbda9cb095a6f9da61137ef57a00dc6b68813ecfc2f3224c98d581e"
+    sha256 cellar: :any_skip_relocation, sonoma:         "606c170165b24f4546be0879ba1d35920264a50704148e8369e7f74f81b14a06"
+    sha256 cellar: :any_skip_relocation, ventura:        "061959baece57a4199fe0d4342893c52faf74174d2bf4f211e47b3a69f7e7538"
+    sha256 cellar: :any_skip_relocation, monterey:       "1d35a3e60c4f4954387f1f3c43cf8a06983ce5558240d2e8b53759faa805bea1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9f852e7e603534cee18b72b0ef6807c88726ebce26be26a2437aae758ca2c87c"
   end
 
   depends_on "go" => :build
