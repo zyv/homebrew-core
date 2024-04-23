@@ -2,7 +2,7 @@ class Csound < Formula
   desc "Sound and music computing system"
   homepage "https://csound.com"
   license "LGPL-2.1-or-later"
-  revision 7
+  revision 8
   head "https://github.com/csound/csound.git", branch: "master"
 
   # Remove `stable` block when patches are no longer needed
@@ -61,15 +61,12 @@ class Csound < Formula
   depends_on "portmidi"
   depends_on "python@3.12"
   depends_on "stk"
+  depends_on "wiiuse"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "curl"
   uses_from_macos "zlib"
-
-  on_macos do
-    depends_on "wiiuse"
-  end
 
   on_linux do
     depends_on "alsa-lib"
@@ -151,6 +148,7 @@ class Csound < Formula
         -DBUILD_PYTHON_OPCODES=ON
         -DBUILD_STK_OPCODES=ON
         -DBUILD_WEBSOCKET_OPCODE=ON
+        -DBUILD_WIIMOTE_OPCODES=ON
         -DGMM_INCLUDE_DIR=#{buildpath}
         -DPython3_EXECUTABLE=#{python3}
         -DUSE_FLTK=ON
@@ -158,7 +156,6 @@ class Csound < Formula
       args += if OS.mac?
         %W[
           -DBUILD_P5GLOVE_OPCODES=ON
-          -DBUILD_WIIMOTE_OPCODES=ON
           -DCSOUND_FRAMEWORK=#{frameworks}/CsoundLib64.framework
           -DCSOUND_INCLUDE_DIR=#{frameworks}/CsoundLib64.framework/Headers
           -DPLUGIN_INSTALL_DIR=#{frameworks}/CsoundLib64.framework/Resources/Opcodes64
@@ -166,7 +163,6 @@ class Csound < Formula
       else
         %w[
           -DBUILD_P5GLOVE_OPCODES=OFF
-          -DBUILD_WIIMOTE_OPCODES=OFF
         ]
       end
 
@@ -249,6 +245,7 @@ class Csound < Formula
       JackoInfo
       instr 1
           i_ websocket 8888, 0
+          i_ wiiconnect 1, 1
       endin
     EOS
     system bin/"csound", "--orc", "--syntax-check-only", "opcode-existence.orc"
@@ -257,7 +254,6 @@ class Csound < Formula
       (testpath/"mac-opcode-existence.orc").write <<~EOS
         instr 1
             p5gconnect
-            i_ wiiconnect 1, 1
         endin
       EOS
       system bin/"csound", "--orc", "--syntax-check-only", "mac-opcode-existence.orc"
