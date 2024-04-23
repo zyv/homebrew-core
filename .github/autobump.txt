@@ -1334,6 +1334,7 @@ mmark
 mmctl
 mmv
 mockery
+mockolo
 mockserver
 moco
 mods
