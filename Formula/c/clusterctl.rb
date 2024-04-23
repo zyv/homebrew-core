@@ -1,9 +1,8 @@
 class Clusterctl < Formula
   desc "Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle"
   homepage "https://cluster-api.sigs.k8s.io"
-  url "https://github.com/kubernetes-sigs/cluster-api.git",
-      tag:      "v1.7.0",
-      revision: "ce58362fefb10c2c9e462a9a6c850733f4d87161"
+  url "https://github.com/kubernetes-sigs/cluster-api/archive/refs/tags/v1.7.1.tar.gz"
+  sha256 "d76e1026b3d8bce474fe75fa92a912216cacaf83d65a66e7a8f96ea81a9bbad6"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/cluster-api.git", branch: "main"
 
@@ -30,8 +29,14 @@ class Clusterctl < Formula
   depends_on "go" => :build
 
   def install
-    system "make", "clusterctl"
-    prefix.install "bin"
+    ldflags = %W[
+      -s -w
+      -X sigs.k8s.io/cluster-api/version.gitVersion=#{version}
+      -X sigs.k8s.io/cluster-api/version.gitCommit=brew
+      -X sigs.k8s.io/cluster-api/version.gitTreeState=clean
+      -X sigs.k8s.io/cluster-api/version.buildDate=#{time.iso8601}
+    ]
+    system "go", "build", *std_go_args(ldflags:), "./cmd/clusterctl"
 
     generate_completions_from_executable(bin/"clusterctl", "completion", shells: [:bash, :zsh])
   end
