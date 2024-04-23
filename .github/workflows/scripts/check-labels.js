@@ -150,11 +150,18 @@ module.exports = async ({github, context, core}, formulae_detect) => {
       console.log('No CI-skip-revision-audit label found. Not passing --skip-revision-audit to brew test-bot.')
     }
 
-    if (label_names.includes('CI-skip-repository-audit')) {
-      console.log('CI-skip-repository-audit label found. Passing --skip-repository-audit to brew test-bot.')
-      test_bot_formulae_args.push('--skip-repository-audit')
+    if (label_names.includes('CI-skip-new-formulae')) {
+      console.log('CI-skip-new-formulae label found. Passing --skip-new to brew test-bot.')
+      test_bot_formulae_args.push('--skip-new')
     } else {
-      console.log('No CI-skip-repository-audit label found. Not passing --skip-repository-audit to brew test-bot.')
+      console.log('No CI-skip-new-formulae label found. Not passing --skip-new to brew test-bot.')
+    }
+
+    if (label_names.includes('CI-skip-new-formulae-strict')) {
+      console.log('CI-skip-new-formulae-strict label found. Passing --skip-new-strictw to brew test-bot.')
+      test_bot_formulae_args.push('--skip-new-strict')
+    } else {
+      console.log('No CI-skip-new-formulae-strict label found. Not passing --skip-new-strict to brew test-bot.')
     }
 
     core.setOutput('test-bot-formulae-args', test_bot_formulae_args.join(" "))
