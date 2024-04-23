@@ -24,16 +24,15 @@ class Fastme < Formula
   end
 
   on_macos do
-    depends_on "gcc"
+    depends_on "libomp"
   end
 
-  fails_with :clang # no OpenMP support
-
   def install
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+    if OS.mac?
+      ENV["OPENMP_CFLAGS"] = "-Xpreprocessor -fopenmp"
+      ENV["OPENMP_LDFLAG"] = "-lomp"
+    end
+    system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
   end
 
