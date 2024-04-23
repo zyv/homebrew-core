@@ -12,6 +12,9 @@ class Fwupd < Formula
     sha256 arm64_sonoma:   "aee38a03fae10372878f5d348f263caa3f6f45dcaea0a520e5b43e4613cf90b9"
     sha256 arm64_ventura:  "6e2674bd4350776d54369c4897b271e29680d46001b51ae333dfc2a4e815eb87"
     sha256 arm64_monterey: "a44f4a9772a2e3604e2c5b691a7a5a14f3629dece59ff0bc9776d4443b256260"
+    sha256 sonoma:         "79811ab28a5b0de3f05eb1fdf4eeefeb9777793b0438734c0aec649b8cc57bdf"
+    sha256 ventura:        "67c62a837c7061f13de73c76fca8cae1bd5877fc1106db66f731c387ccbee7eb"
+    sha256 monterey:       "882c7c0221e235ef49b2a1819ada04f65c9ca37850e07f8b7fe21b32071cfbff"
     sha256 x86_64_linux:   "eb4f34344cd2f94db1e20031b25f0450746c6e395def01771df165ed3becae5a"
   end
 
