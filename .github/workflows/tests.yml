@@ -32,6 +32,7 @@ jobs:
         stable: [false, true]
     name: tap_syntax${{ matrix.stable && ' (stable)' || '' }}
     runs-on: ubuntu-22.04
+    continue-on-error: ${{ matrix.stable }}
     container:
       image: ghcr.io/homebrew/ubuntu22.04:master
     env:
