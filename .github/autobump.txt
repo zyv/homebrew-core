@@ -1180,6 +1180,7 @@ libpng
 libproxy
 libpulsar
 librdkafka
+librealsense
 librespot
 libressl
 librsvg
