@@ -1,8 +1,8 @@
 class Librtlsdr < Formula
   desc "Use Realtek DVB-T dongles as a cheap SDR"
   homepage "https://osmocom.org/projects/rtl-sdr/wiki"
-  url "https://github.com/steve-m/librtlsdr/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "e108d3c6a00efcdf55877d1172be538842686c50377043319baffcfdb6b7b9cb"
+  url "https://github.com/steve-m/librtlsdr/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "f407de0b6dce19e81694814e363e8890b6ab2c287c8d64c27a03023e5702fb42"
   license "GPL-2.0-or-later"
   head "https://git.osmocom.org/rtl-sdr", using: :git, branch: "master"
 
