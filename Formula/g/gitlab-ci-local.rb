@@ -3,8 +3,8 @@ require "language/node"
 class GitlabCiLocal < Formula
   desc "Run gitlab pipelines locally as shell executor or docker executor"
   homepage "https://github.com/firecow/gitlab-ci-local"
-  url "https://registry.npmjs.org/gitlab-ci-local/-/gitlab-ci-local-4.48.1.tgz"
-  sha256 "1176deb0cc5e0a17a504e0260ae874c4e3681384361359000b61fe3fe595ef37"
+  url "https://registry.npmjs.org/gitlab-ci-local/-/gitlab-ci-local-4.48.2.tgz"
+  sha256 "3eefb079c1abe9e79c0d1a3466921d5a08375ead27fffa7e392e6fcb6d2eb1dd"
   license "MIT"
   head "https://github.com/firecow/gitlab-ci-local.git", branch: "master"
 
@@ -20,18 +20,9 @@ class GitlabCiLocal < Formula
 
   depends_on "node"
 
-  # add missing schema.json file
-  # upstream bug report, https://github.com/firecow/gitlab-ci-local/issues/1190
-  resource "schema.json" do
-    url "https://raw.githubusercontent.com/firecow/gitlab-ci-local/master/src/schema/schema.json"
-    sha256 "81578fbb5a57ed922c66135c3bd5ddc0791ba3478c7bd64142997f6d3c5bd53c"
-  end
-
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
-
-    (libexec/"lib/node_modules/gitlab-ci-local/src/schema").install resource("schema.json")
   end
 
   test do
