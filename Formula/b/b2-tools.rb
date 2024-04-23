@@ -3,8 +3,8 @@ class B2Tools < Formula
 
   desc "B2 Cloud Storage Command-Line Tools"
   homepage "https://github.com/Backblaze/B2_Command_Line_Tool"
-  url "https://files.pythonhosted.org/packages/5f/4f/f5bb965f9a1051ba1918061be414f262f1c4be3bcf8551e1cba59bcf1406/b2-3.19.0.tar.gz"
-  sha256 "5da4f79573b9e1e027f1bf1ecea2b1adb2f345e0511e00970255ce7f400eba37"
+  url "https://files.pythonhosted.org/packages/87/ba/82243b0c8461778e1ab575f0229cfe925413e8e4fe7a105da61e536e5f89/b2-3.19.1.tar.gz"
+  sha256 "648a5d371bf02058d5ab4cb2d35a8e0d97e3e7ba43503ca44920dfe9b9fad109"
   license "MIT"
 
   bottle do
@@ -43,8 +43,8 @@ class B2Tools < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/21/ff/c495b797462434f0befcb598b51cde31c3ebdf8577c3fd9d9a8f5eeb844c/docutils-0.21.1.tar.gz"
-    sha256 "65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f"
+    url "https://files.pythonhosted.org/packages/ae/ed/aefcc8cd0ba62a0560c3c18c33925362d46c6075480bfa4df87b28e169a9/docutils-0.21.2.tar.gz"
+    sha256 "3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f"
   end
 
   resource "idna" do
@@ -63,8 +63,8 @@ class B2Tools < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/96/dc/c1d911bf5bb0fdc58cc05010e9f3efe3b67970cef779ba7fbc3183b987a8/platformdirs-4.2.0.tar.gz"
-    sha256 "ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768"
+    url "https://files.pythonhosted.org/packages/b2/e4/2856bf61e54d7e3a03dd00d0c1b5fa86e6081e8f262eb91befbe64d20937/platformdirs-4.2.1.tar.gz"
+    sha256 "031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"
   end
 
   resource "python-dateutil" do
