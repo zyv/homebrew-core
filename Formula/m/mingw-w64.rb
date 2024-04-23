@@ -4,6 +4,7 @@ class MingwW64 < Formula
   url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v11.0.1.tar.bz2"
   sha256 "3f66bce069ee8bed7439a1a13da7cb91a5e67ea6170f21317ac7f5794625ee10"
   license "ZPL-2.1"
+  revision 1
 
   livecheck do
     url :stable
@@ -40,6 +41,18 @@ class MingwW64 < Formula
     url "https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz"
     mirror "https://ftpmirror.gnu.org/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz"
     sha256 "e275e76442a6067341a27f04c5c6b83d8613144004c0413528863dc6b5c743da"
+
+    # Backport fix for ctype build errors with Xcode 15.3
+    patch do
+      url "https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=9970b576b7e4ae337af1268395ff221348c4b34a"
+      sha256 "968bfcb58f75d889470f2f815787f6aa254fb43f1e5516e04f577dad22259905"
+    end
+
+    # Backport fix for libcc1 std::vector build errors with Xcode 15.3
+    patch do
+      url "https://gcc.gnu.org/git/?p=gcc.git;a=patch;h=5213047b1d50af63dfabb5e5649821a6cb157e33"
+      sha256 "0d36d0d5556aefa59dbedf821f5c9dcda940a9c6f92cb3509423f524fd93351a"
+    end
   end
 
   def target_archs
