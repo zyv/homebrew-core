@@ -6,7 +6,7 @@ class Fantom < Formula
   license "AFL-3.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "1eb3e699119225b4fb0dd6779daccf09d937a4506da9829d0dd14398f9e2c672"
+    sha256 cellar: :any_skip_relocation, all: "a978c056073b3b96fadea72fd74c80e1f61627bbf8eedaa4b9ff23e6be54e0a7"
   end
 
   depends_on "openjdk"
