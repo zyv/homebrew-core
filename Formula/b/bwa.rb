@@ -1,9 +1,9 @@
 class Bwa < Formula
   desc "Burrow-Wheeler Aligner for pairwise alignment of DNA"
   homepage "https://github.com/lh3/bwa"
-  url "https://github.com/lh3/bwa/releases/download/v0.7.17/bwa-0.7.17.tar.bz2"
-  sha256 "de1b4d4e745c0b7fc3e107b5155a51ac063011d33a5d82696331ecf4bed8d0fd"
-  license "GPL-3.0"
+  url "https://github.com/lh3/bwa/archive/refs/tags/v0.7.18.tar.gz"
+  sha256 "194788087f7b9a77c0114aa481b2ef21439f6abab72488c83917302e8d0e7870"
+  license all_of: ["GPL-3.0-or-later", "MIT"]
   head "https://github.com/lh3/bwa.git", branch: "master"
 
   bottle do
@@ -30,9 +30,6 @@ class Bwa < Formula
   end
 
   def install
-    # PR ref: https://github.com/lh3/bwa/pull/344
-    inreplace "ksw.c", "<emmintrin.h>", "<sse2neon.h>" if Hardware::CPU.arm?
-
     system "make"
 
     # "make install" requested 26 Dec 2017 https://github.com/lh3/bwa/issues/172

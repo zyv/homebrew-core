@@ -216,6 +216,7 @@ bup
 bupstash
 busted
 butane
+bwa
 byacc
 byobu
 byteman
