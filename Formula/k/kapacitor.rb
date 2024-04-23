@@ -6,8 +6,8 @@ class Kapacitor < Formula
 
   stable do
     url "https://github.com/influxdata/kapacitor.git",
-        tag:      "v1.7.3",
-        revision: "43be9330273f227c6b5495a97019483577c542a7"
+        tag:      "v1.7.4",
+        revision: "3470f6ae7f53acaca90459cc1128298548fdc740"
 
     # build patch to upgrade flux so that it can be built with rust 1.72.0+
     # upstream PR ref, https://github.com/influxdata/kapacitor/pull/2811
