@@ -1,8 +1,8 @@
 class Kubetui < Formula
   desc "TUI tool for monitoring and exploration of Kubernetes resources"
   homepage "https://github.com/sarub0b0/kubetui"
-  url "https://github.com/sarub0b0/kubetui/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "137ef45cb539a56b16990c72ae60c7247d4ff90be3c16eec029dbd5e0480e677"
+  url "https://github.com/sarub0b0/kubetui/archive/refs/tags/v1.5.1.tar.gz"
+  sha256 "6294b4fa3d85da1b6581a88aeec9bc98a939d42893791c125d4f0e77a06d338f"
   license "MIT"
   head "https://github.com/sarub0b0/kubetui.git", branch: "main"
 
