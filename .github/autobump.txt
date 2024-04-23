@@ -1199,6 +1199,7 @@ libtommath
 libucl
 libunibreak
 libunwind
+libupnp
 libusbmuxd
 libuv
 libva
