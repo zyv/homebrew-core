@@ -1618,6 +1618,7 @@ proftpd
 proj
 prometheus
 prometheus-cpp
+promptfoo
 proto
 protoc-gen-go
 protoc-gen-go-grpc
