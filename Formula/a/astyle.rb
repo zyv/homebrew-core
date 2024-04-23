@@ -1,8 +1,8 @@
 class Astyle < Formula
   desc "Source code beautifier for C, C++, C#, and Java"
   homepage "https://astyle.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/astyle/astyle/astyle%203.4/astyle-3.4.13.tar.bz2"
-  sha256 "78a610abd39e94e0f913e9ee5cda1e85bb62cd633553decb9e00d3d9201019ce"
+  url "https://downloads.sourceforge.net/project/astyle/astyle/astyle%203.4/astyle-3.4.14.tar.bz2"
+  sha256 "606a83f39146733185f6763059d292433c40f393eb6f52042e163f8df4e16a3e"
   license "MIT"
   head "https://svn.code.sf.net/p/astyle/code/trunk/AStyle"
 
@@ -21,11 +21,13 @@ class Astyle < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d9407606901842fcbc5ed0853a3ea7c352bbc288a3eee4dcc960516e40fae8b"
   end
 
+  depends_on "cmake" => :build
+
   def install
-    cd "src" do
-      system "make", "CXX=#{ENV.cxx}", "-f", "../build/gcc/Makefile"
-      bin.install "bin/astyle"
-    end
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+    man1.install "man/astyle.1"
   end
 
   test do
