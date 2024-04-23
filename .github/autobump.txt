@@ -1893,6 +1893,7 @@ src
 srgn
 srt
 srtp
+ssh-audit
 sshs
 sslh
 stackql
