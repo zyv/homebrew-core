@@ -1,8 +1,8 @@
 class Yazi < Formula
   desc "Blazing fast terminal file manager written in Rust, based on async I/O"
   homepage "https://github.com/sxyazi/yazi"
-  url "https://github.com/sxyazi/yazi/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "61b6b0372360bbe2b720a75127bef9325b7d507d544235d6a548db01424553e9"
+  url "https://github.com/sxyazi/yazi/archive/refs/tags/v0.2.5.tar.gz"
+  sha256 "aea4a6ebd7f56c5d5fe6afbea143fc98c336d4ccd7852f2e8983c23e205988c4"
   license "MIT"
   head "https://github.com/sxyazi/yazi.git", branch: "main"
 
@@ -33,6 +33,6 @@ class Yazi < Formula
 
   test do
     # yazi is a GUI application
-    assert_match "yazi #{version}", shell_output("#{bin}/yazi --version").strip
+    assert_match "Yazi #{version}", shell_output("#{bin}/yazi --version").strip
   end
 end
