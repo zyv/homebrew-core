@@ -39,7 +39,7 @@ class Runme < Formula
       echo "Hello World"
       ```
     EOS
-    assert_match "Hello World", shell_output("#{bin}/runme run foobar")
-    assert_match "foobar", shell_output("#{bin}/runme list")
+    assert_match "Hello World", shell_output("#{bin}/runme run --git-ignore=false foobar")
+    assert_match "foobar", shell_output("#{bin}/runme list --git-ignore=false")
   end
 end
