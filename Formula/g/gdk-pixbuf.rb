@@ -57,6 +57,7 @@ class GdkPixbuf < Formula
                                       "-Dpng=enabled",
                                       "-Dtiff=enabled",
                                       "-Djpeg=enabled",
+                                      "-Dothers=enabled",
                                       "-Dintrospection=enabled",
                                       *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
