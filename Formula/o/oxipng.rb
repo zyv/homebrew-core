@@ -6,19 +6,22 @@ class Oxipng < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ecd90ddaf3a929ae38a177c5c46b016ae3cc2dc6a76843df2d81b88bfc474666"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ba6e3aa7e480c8afabe8f6340a24315def64e4280822c34a0a4877cb6fead7f2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f60cbd2a66909e0762775a8470f6ab04171ab11885f88737cbf5bd52272f03c9"
-    sha256 cellar: :any_skip_relocation, sonoma:         "7b915e7202c1e19b65dd6fa1161e5605f042984f547a0106a9c59c7c9e01f446"
-    sha256 cellar: :any_skip_relocation, ventura:        "cd1642f8915c5424ac2ef5e6c63096092f01a3784db0723514f1fadf9f906ee2"
-    sha256 cellar: :any_skip_relocation, monterey:       "460ac30ffef23932abeaf987f2bb9fe69e3b5821b9471e0e673a8976163a06e5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e00d9c417bb8be10f9ca735f4572f461b7329c6da1147c49867ccd7ca7acf10c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9fdd4be90f915c227b082531a803296bea10670202f5b9f43a49f42c96b77cbb"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "799aee08ac1b340d69807fc69fda8d2acbb30d67c5f95a8e3f7b9276c3cb9271"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac860a10f482704f8b732e43138ab81720fdc4f1af522a27fb44ac3676015c42"
+    sha256 cellar: :any_skip_relocation, sonoma:         "51d0acd5344987d04055aff80cee92c15a7e5973dbe10c77ba8903bc9f06048b"
+    sha256 cellar: :any_skip_relocation, ventura:        "f5f5bc9127350691ca9e4b6bf2227410578cef12ca0982bbea07e46c8b957da7"
+    sha256 cellar: :any_skip_relocation, monterey:       "54b4aef8f48f3dc0c22fd083253ba8136685ede238b3500e9bb2ef9ef9d14b6e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "859dc8247db729b83a23d1279d2e5c31b4b14b7f9376838715f832b316b3e7da"
   end
 
   depends_on "rust" => :build
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    man1.install "target/release/assets/oxipng.1"
   end
 
   test do
