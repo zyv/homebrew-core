@@ -1410,6 +1410,7 @@ ngt
 nim
 ninja
 nixpacks
+nmap
 nng
 node
 node_exporter
