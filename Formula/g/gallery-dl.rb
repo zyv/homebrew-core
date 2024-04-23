@@ -43,7 +43,13 @@ class GalleryDl < Formula
   end
 
   def install
+    system "make" if build.head?
     virtualenv_install_with_resources
+    man1.install_symlink libexec/"share/man/man1/gallery-dl.1"
+    man5.install_symlink libexec/"share/man/man5/gallery-dl.conf.5"
+    bash_completion.install libexec/"share/bash-completion/completions/gallery-dl"
+    zsh_completion.install libexec/"share/zsh/site-functions/_gallery-dl"
+    fish_completion.install libexec/"share/fish/vendor_completions.d/gallery-dl.fish"
   end
 
   test do
