@@ -1153,6 +1153,7 @@ libgetdata
 libgpg-error
 libgr
 libgsf
+libgusb
 libgweather
 libhandy
 libical

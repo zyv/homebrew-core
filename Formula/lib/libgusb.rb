@@ -3,9 +3,9 @@ class Libgusb < Formula
 
   desc "GObject wrappers for libusb1"
   homepage "https://github.com/hughsie/libgusb"
-  url "https://github.com/hughsie/libgusb/archive/refs/tags/0.4.8.tar.gz"
-  sha256 "9a1fb0d46e4b1ca7ee777ed8177b344e50a849594cd98b51a38a512bef4b3342"
-  license "LGPL-2.1-only"
+  url "https://github.com/hughsie/libgusb/archive/refs/tags/0.4.9.tar.gz"
+  sha256 "aa1242a308183d4ca6c2e8c9e3f2e345370b94308ef2d4b6e9c10d5ff6d7763e"
+  license "LGPL-2.1-or-later"
   head "https://github.com/hughsie/libgusb.git", branch: "main"
 
   bottle do
@@ -22,6 +22,7 @@ class Libgusb < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "python-setuptools" => :build
   depends_on "python@3.12" => :build
   depends_on "vala" => :build
   depends_on "glib"
