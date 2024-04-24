@@ -33,6 +33,10 @@ class Mono < Formula
   uses_from_macos "krb5"
   uses_from_macos "zlib"
 
+  on_linux do
+    depends_on "ca-certificates"
+  end
+
   conflicts_with "xsd", because: "both install `xsd` binaries"
   conflicts_with cask: "mono-mdk"
   conflicts_with cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
@@ -61,14 +65,18 @@ class Mono < Formula
     # https://github.com/mono/mono/pull/21257
     inreplace "mono/profiler/Makefile.am", "-Wl,suppress -Wl,-flat_namespace", "-Wl,dynamic_lookup"
 
-    system "./autogen.sh", *std_configure_args,
-                          "--disable-silent-rules",
-                          "--disable-nls"
+    system "./autogen.sh", "--disable-nls",
+                           "--disable-silent-rules",
+                           *std_configure_args
     system "make"
     system "make", "install"
     # mono-gdb.py and mono-sgen-gdb.py are meant to be loaded by gdb, not to be
     # run directly, so we move them out of bin
     libexec.install bin/"mono-gdb.py", bin/"mono-sgen-gdb.py"
+  end
+
+  def post_install
+    system bin/"cert-sync", Formula["ca-certificates"].pkgetc/"cert.pem" if OS.linux?
   end
 
   def caveats
