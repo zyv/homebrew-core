@@ -3,8 +3,8 @@ require "language/node"
 class Graphqurl < Formula
   desc "Curl for GraphQL with autocomplete, subscriptions and GraphiQL"
   homepage "https://github.com/hasura/graphqurl"
-  url "https://registry.npmjs.org/graphqurl/-/graphqurl-1.0.2.tgz"
-  sha256 "1bdac1bb89df5fcfe9950337ec1615ffdaad13fbf01325ffcf2b87d505d67669"
+  url "https://registry.npmjs.org/graphqurl/-/graphqurl-1.0.3.tgz"
+  sha256 "77b38dc7f34b7e4f4d3550896a2c4a78ef31a76f202de03b9efaabfc5060ee82"
   license "Apache-2.0"
 
   bottle do
