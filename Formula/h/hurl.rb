@@ -1,8 +1,8 @@
 class Hurl < Formula
   desc "Run and Test HTTP Requests with plain text and curl"
   homepage "https://hurl.dev"
-  url "https://github.com/Orange-OpenSource/hurl/archive/refs/tags/4.2.0.tar.gz"
-  sha256 "8ede2b3e9e1e1fb80000362750814b0fd07911506c1ea13e38e6c2fe80f447f0"
+  url "https://github.com/Orange-OpenSource/hurl/archive/refs/tags/4.3.0.tar.gz"
+  sha256 "499f2430ee6b73b0414ab8aa3c9298be8276e7b404b13c76e4c02a86eb1db9cd"
   license "Apache-2.0"
   head "https://github.com/Orange-OpenSource/hurl.git", branch: "master"
 
@@ -39,6 +39,13 @@ class Hurl < Formula
 
     man1.install "docs/manual/hurl.1"
     man1.install "docs/manual/hurlfmt.1"
+
+    bash_completion.install "completions/hurl.bash" => "hurl"
+    zsh_completion.install "completions/_hurl"
+    fish_completion.install "completions/hurl.fish"
+    bash_completion.install "completions/hurlfmt.bash" => "hurlfmt"
+    zsh_completion.install "completions/_hurlfmt"
+    fish_completion.install "completions/hurlfmt.fish"
   end
 
   test do
