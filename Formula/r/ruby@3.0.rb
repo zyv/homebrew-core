@@ -1,15 +1,9 @@
 class RubyAT30 < Formula
   desc "Powerful, clean, object-oriented scripting language"
   homepage "https://www.ruby-lang.org/"
-  url "https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.6.tar.xz"
-  sha256 "b5cbee93e62d85cfb2a408c49fa30a74231ae8409c2b3858e5f5ea254d7ddbd1"
+  url "https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.7.tar.xz"
+  sha256 "1748338373c4fad80129921080d904aca326e41bd9589b498aa5ee09fd575bab"
   license "Ruby"
-  revision 1
-
-  livecheck do
-    url "https://www.ruby-lang.org/en/downloads/"
-    regex(/href=.*?ruby[._-]v?(3\.0(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
     sha256 arm64_sonoma:   "51e73f05d0971654c1cb062c5d6eec3f26977ade877970ef4f5ff98b031c4eaf"
@@ -25,6 +19,8 @@ class RubyAT30 < Formula
 
   keg_only :versioned_formula
 
+  disable! date: "2025-04-23", because: :unmaintained
+
   depends_on "pkg-config" => :build
   depends_on "libyaml"
   depends_on "openssl@3"
@@ -37,14 +33,14 @@ class RubyAT30 < Formula
   # The exception is Rubygem security fixes, which mandate updating this
   # formula & the versioned equivalents and bumping the revisions.
   resource "rubygems" do
-    url "https://rubygems.org/rubygems/rubygems-3.4.10.tgz"
-    sha256 "55f1c67fa2ae96c9751b81afad5c0f2b3792c5b19cbba6d54d8df9fd821460d3"
+    url "https://rubygems.org/rubygems/rubygems-3.5.9.tgz"
+    sha256 "2b203642191e6bb9ece19075f62275a88526319b124684c46667415dca4363f1"
   end
 
   # Update the bundled openssl gem for compatibility with OpenSSL 3.
   resource "openssl" do
-    url "https://github.com/ruby/openssl/archive/refs/tags/v3.1.0.tar.gz"
-    sha256 "3f099acd0b3bea791cbdde520f2d332a709bbd9144abcbe22189a20bac12c6de"
+    url "https://github.com/ruby/openssl/archive/refs/tags/v3.2.0.tar.gz"
+    sha256 "993534b105f5405c2db482ca26bb424d9e47f0ffe7e4b3259a15d95739ff92f9"
   end
 
   def api_version
@@ -60,8 +56,6 @@ class RubyAT30 < Formula
     ENV.delete("SDKROOT")
 
     resource("openssl").stage do
-      odie "Check if `openssl` resource is still needed!" if version > "3.0.6"
-
       %w[ext/openssl test/openssl].map { |path| (buildpath/path).rmtree }
       (buildpath/"ext").install "ext/openssl"
       (buildpath/"ext/openssl").install "lib", "History.md", "openssl.gemspec"
