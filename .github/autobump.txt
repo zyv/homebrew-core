@@ -1544,6 +1544,7 @@ parallel
 pari
 parsedmarc
 partio
+pass-git-helper
 passenger
 patat
 patchelf

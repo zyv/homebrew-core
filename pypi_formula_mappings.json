@@ -523,6 +523,10 @@
     "exclude_packages": ["certifi", "cryptography", "kafka-python"],
     "extra_packages": ["kafka-python-ng"]
   },
+  "pass-git-helper": {
+    "package_name": "",
+    "extra_packages": ["pyxdg"]
+  },
   "pass-import": {
     "exclude_packages": ["certifi"]
   },
