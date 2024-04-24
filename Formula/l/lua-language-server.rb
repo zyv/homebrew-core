@@ -37,15 +37,22 @@ class LuaLanguageServer < Formula
 
     (libexec/"bin").install "bin/lua-language-server", "bin/main.lua"
     libexec.install "main.lua", "debugger.lua", "locale", "meta", "script"
-    bin.write_exec_script libexec/"bin/lua-language-server"
-    (libexec/"log").mkpath
+
+    # Make sure `lua-language-server` does not need to write into the Cellar.
+    (bin/"lua-language-server").write <<~BASH
+      #!/bin/bash
+      exec -a lua-language-server #{libexec}/bin/lua-language-server \
+        --logpath="${XDG_CACHE_HOME:-${HOME}/.cache}/lua-language-server/log" \
+        --metapath="${XDG_CACHE_HOME:-${HOME}/.cache}/lua-language-server/meta" \
+        "$@"
+    BASH
   end
 
   test do
     require "pty"
     output = /^Content-Length: \d+\s*$/
 
-    stdout, stdin, lua_ls = PTY.spawn bin/"lua-language-server", "--logpath=#{testpath}/log"
+    stdout, stdin, lua_ls = PTY.spawn bin/"lua-language-server"
     sleep 5
     stdin.write "\n"
     sleep 25
