@@ -225,6 +225,7 @@ c-ares
 c-blosc2
 c2rust
 c3c
+c4core
 c7n
 ca-certificates
 caddy
