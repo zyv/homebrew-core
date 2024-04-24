@@ -629,6 +629,7 @@ enet
 enpass-cli
 ensmallen
 entr
+envchain
 envd
 envoy
 enzyme

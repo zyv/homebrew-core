@@ -1,8 +1,8 @@
 class Envchain < Formula
   desc "Secure your credentials in environment variables"
   homepage "https://github.com/sorah/envchain"
-  url "https://github.com/sorah/envchain/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "09af1fe1cfba3719418f90d59c29c081e1f22b38249f0110305b657bd306e9ae"
+  url "https://github.com/sorah/envchain/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "832bcf58037db6187f7327282e347e45627ea617c2e09a9e6d18629e7310fff9"
   license "MIT"
   head "https://github.com/sorah/envchain.git", branch: "master"
 
