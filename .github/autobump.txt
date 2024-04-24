@@ -1901,6 +1901,7 @@ spotify-tui
 sql-migrate
 sqlancer
 sqlc
+sqlcipher
 sqlcmd
 sqlfluff
 sqlmap
