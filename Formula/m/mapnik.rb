@@ -2,7 +2,7 @@ class Mapnik < Formula
   desc "Toolkit for developing mapping applications"
   homepage "https://mapnik.org/"
   license "LGPL-2.1-or-later"
-  revision 27
+  revision 28
   head "https://github.com/mapnik/mapnik.git", branch: "master"
 
   # TODO: Try switching to CMake build on next release as it works better with
@@ -23,6 +23,13 @@ class Mapnik < Formula
     patch do
       url "https://github.com/mapnik/mapnik/commit/26eb76cc07210d564d80d98948770c94d27c5243.patch?full_index=1"
       sha256 "085408d6a38c77df7f333047bb1568bf0dfdf9c3b87fd9001997ba9b22be6d4c"
+    end
+
+    # Fix build with `boost` 1.85.0 using open PR.
+    # PR ref: https://github.com/mapnik/mapnik/pull/4448
+    patch do
+      url "https://github.com/mapnik/mapnik/commit/8088aa4319fd54d41e9b8534b964d113f687fc7f.patch?full_index=1"
+      sha256 "3d37cfb1b52a93e3deec09f290070d9ef8fdb85a4c5c393dd8ca924d8921d5a3"
     end
   end
 
