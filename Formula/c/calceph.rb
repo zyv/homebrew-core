@@ -24,7 +24,7 @@ class Calceph < Formula
   depends_on "gcc" # for gfortran
 
   def install
-    args = %w[
+    args = %W[
       -DBUILD_SHARED_LIBS=ON
       -DENABLE_FORTRAN=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
