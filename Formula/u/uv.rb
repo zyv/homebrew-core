@@ -23,6 +23,12 @@ class Uv < Formula
 
   uses_from_macos "python" => :test
 
+  on_linux do
+    # On macOS, bzip2-sys will use the bundled lib as it cannot find the system or brew lib.
+    # We only ship bzip2.pc on Linux which bzip2-sys needs to find library.
+    depends_on "bzip2"
+  end
+
   def install
     ENV["LIBGIT2_NO_VENDOR"] = "1"
 
