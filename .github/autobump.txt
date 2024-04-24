@@ -731,6 +731,7 @@ foreman
 forgit
 fork-cleaner
 fortio
+fossil
 fourmolu
 fping
 fred
