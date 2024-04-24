@@ -1184,6 +1184,7 @@ librealsense
 librespot
 libressl
 librsvg
+librtlsdr
 libsail
 libsais
 libscfg
