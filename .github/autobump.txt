@@ -1755,6 +1755,9 @@ rswift
 rsyncy
 rsyslog
 rubberband
+ruby
+ruby@3.1
+ruby@3.2
 ruff
 ruff-lsp
 rune
@@ -1827,7 +1830,6 @@ shush
 sigma-cli
 signal-cli
 signmykey
-sigstore
 sigstore
 sile
 silicon
