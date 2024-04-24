@@ -1,8 +1,8 @@
 class Werf < Formula
   desc "Consistent delivery tool for Kubernetes"
   homepage "https://werf.io/"
-  url "https://github.com/werf/werf/archive/refs/tags/v1.2.307.tar.gz"
-  sha256 "025f21d41af247bff027cfde3034e564774d78b8b4191651ee6c561c40a37d89"
+  url "https://github.com/werf/werf/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "7373fa3d1dfdbe352ffeefbddbd9006e0396b2f0b35ed7b921044d9379430ce6"
   license "Apache-2.0"
   head "https://github.com/werf/werf.git", branch: "main"
 
@@ -38,14 +38,14 @@ class Werf < Formula
         -linkmode external
         -extldflags=-static
         -s -w
-        -X github.com/werf/werf/pkg/werf.Version=#{version}
+        -X github.com/werf/werf/v2/pkg/werf.Version=#{version}
       ]
       tags = %w[
         dfrunsecurity dfrunnetwork dfrunmount dfssh containers_image_openpgp
         osusergo exclude_graphdriver_devicemapper netgo no_devmapper static_build
       ].join(" ")
     else
-      ldflags = "-s -w -X github.com/werf/werf/pkg/werf.Version=#{version}"
+      ldflags = "-s -w -X github.com/werf/werf/v2/pkg/werf.Version=#{version}"
       tags = "dfrunsecurity dfrunnetwork dfrunmount dfssh containers_image_openpgp"
     end
 
