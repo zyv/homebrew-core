@@ -21,12 +21,17 @@ class Fail2ban < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "17696ca92925114343ba483955efa4c34b5dacdec5b242f95c20712a7e3dc550"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "sphinx-doc" => :build
   depends_on "python@3.12"
 
+  # Drop distutils: https://github.com/fail2ban/fail2ban/pull/3728
+  patch do
+    url "https://github.com/fail2ban/fail2ban/commit/a763fbbdfd6486e372965b4009eb3fe5db346718.patch?full_index=1"
+    sha256 "631ca7e59e21d4a9bbe6adf02d0b1ecc0fa33688d145eb5e736d961e0e55e4cd"
+  end
+
   def install
-    ENV["PYTHON"] = python3 = "python3.12"
+    python3 = "python3.12"
 
     Pathname.glob("config/paths-*.conf").reject do |pn|
       pn.fnmatch?("config/paths-common.conf") || pn.fnmatch?("config/paths-osx.conf")
@@ -36,18 +41,22 @@ class Fail2ban < Formula
     inreplace "config/jail.conf", "before = paths-debian.conf", "before = paths-osx.conf"
 
     # Replace hardcoded paths
-    inreplace_etc_var("setup.py")
     inreplace_etc_var(Pathname.glob("config/{action,filter}.d/**/*").select(&:file?), audit_result: false)
     inreplace_etc_var(["config/fail2ban.conf", "config/paths-common.conf", "doc/run-rootless.txt"])
     inreplace_etc_var(Pathname.glob("fail2ban/**/*").select(&:file?), audit_result: false)
     inreplace_etc_var(Pathname.glob("man/*"), audit_result: false)
 
-    # Fix doc compilation
-    inreplace "setup.py", "/usr/share/doc/fail2ban", doc
-    inreplace "setup.py", "if os.path.exists('#{var}/run')", "if True"
-    inreplace "setup.py", "platform_system in ('linux',", "platform_system in ('linux', 'darwin',"
+    # Update `data_files` from absolute to relative paths for wheel compatability and include doc files
+    inreplace "setup.py" do |s|
+      s.gsub! "/etc", "./etc"
+      s.gsub! "/var", "./var"
+      s.gsub! "/usr/share/doc/fail2ban", "./share/doc/fail2ban"
+      s.gsub! "if os.path.exists('./var/run')", "if True"
+      s.gsub! "platform_system in ('linux',", "platform_system in ('linux', 'darwin',"
+    end
 
-    system python3, *Language::Python.setup_install_args(prefix, python3), "--without-tests"
+    system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
+    etc.install (prefix/"etc").children
 
     # Install docs
     system "make", "-C", "doc", "dirhtml", "SPHINXBUILD=sphinx-build"
@@ -73,23 +82,11 @@ class Fail2ban < Formula
 
   def caveats
     <<~EOS
-      Before using Fail2Ban for the first time you should edit the jail
-      configuration and enable the jails that you want to use, for instance
-      ssh-ipfw. Also, make sure that they point to the correct configuration
-      path. I.e. on Mountain Lion the sshd logfile should point to
-      /var/log/system.log.
+      You must enable any jails by editing:
+        #{etc}/fail2ban/jail.conf
 
-        * #{etc}/fail2ban/jail.conf
-
-      The Fail2Ban wiki has two pages with instructions for macOS Server that
-      describes how to set up the Jails for the standard macOS Server
-      services for the respective releases.
-
-        10.4: https://www.fail2ban.org/wiki/index.php/HOWTO_Mac_OS_X_Server_(10.4)
-        10.5: https://www.fail2ban.org/wiki/index.php/HOWTO_Mac_OS_X_Server_(10.5)
-
-      Please do not forget to update your configuration files.
-      They are in #{etc}/fail2ban.
+      Other configuration files are in #{etc}/fail2ban. See more instructions at
+      https://github.com/fail2ban/fail2ban/wiki/Proper-fail2ban-configuration.
     EOS
   end
 
