@@ -1080,6 +1080,7 @@ kosli-cli
 kotlin
 krakend
 krew
+ktfmt
 kube-linter
 kubeaudit
 kubebuilder
