@@ -849,6 +849,7 @@ gofumpt
 gojq
 golang-migrate
 golangci-lint
+google-authenticator-libpam
 google-java-format
 goose
 gopass
