@@ -1765,6 +1765,7 @@ rye
 s-search
 s2geometry
 s2n
+s3-backer
 s3fs
 s3ql
 s6
