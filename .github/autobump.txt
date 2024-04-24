@@ -1699,6 +1699,7 @@ quictls
 quill
 quilt
 qxmpp
+r
 rabbitmq
 radamsa
 radare2
