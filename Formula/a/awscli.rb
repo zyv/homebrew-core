@@ -137,10 +137,7 @@ class Awscli < Formula
     ENV.append_to_cflags "-Wno-incompatible-function-pointer-types" if DevelopmentTools.clang_build_version >= 1500
 
     # The `awscrt` resource requires `setuptools` & `wheel`, so they must be installed first
-    venv = virtualenv_create(libexec, "python3.11", system_site_packages: false)
-    venv.pip_install resources.reject { |r| r.name == "awscrt" }
-    venv.pip_install resource("awscrt")
-    venv.pip_install_and_link buildpath
+    virtualenv_install_with_resources(system_site_packages: false, end_with: "awscrt")
 
     pkgshare.install "awscli/examples"
 
