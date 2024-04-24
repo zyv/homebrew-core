@@ -1319,6 +1319,7 @@ mighttpd2
 mill
 miller
 millet
+mimalloc
 mimirtool
 minder
 minetest
