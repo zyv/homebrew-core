@@ -1665,6 +1665,9 @@ pyinstaller
 pylint
 pymol
 pyoxidizer
+pypy
+pypy3.10
+pypy3.9
 pyqt-builder
 pyright
 pyside@2
