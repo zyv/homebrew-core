@@ -1529,6 +1529,7 @@ oxipng
 p11-kit
 pacapt
 packetbeat
+packmol
 pan
 pandoc
 pandoc-crossref
