@@ -234,6 +234,7 @@ cadical
 caf
 caire
 calc
+calceph
 calcurse
 calicoctl
 canfigger
