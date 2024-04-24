@@ -3,7 +3,7 @@ class Ht < Formula
   homepage "https://hte.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/hte/ht-source/ht-2.1.0.tar.bz2"
   sha256 "31f5e8e2ca7f85d40bb18ef518bf1a105a6f602918a0755bc649f3f407b75d70"
-  license "GPL-2.0"
+  license "GPL-2.0-only"
 
   bottle do
     rebuild 3
@@ -21,15 +21,25 @@ class Ht < Formula
 
   uses_from_macos "ncurses"
 
+  # Apply commit from open PR to work around build failure on Apple Silicon
+  # ld: building fixups: pointer not aligned at _coff_characteristics+0x1
+  # PR ref: https://github.com/sebastianbiallas/ht/pull/31
+  patch do
+    on_macos do
+      url "https://github.com/sebastianbiallas/ht/commit/a721310665267655d37d9e80db5234d2a7731895.patch?full_index=1"
+      sha256 "def983c542112d66f472a4a32323948f812bdd30bb1aa54abc5cb5b3ffef1752"
+    end
+  end
+
   def install
     # Fix compilation with Xcode 9
     # https://github.com/sebastianbiallas/ht/pull/18
     inreplace "htapp.cc", "(abs(a - b) > 1)", "(abs((int)a - (int)b))"
 
     chmod 0755, "./install-sh"
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--disable-x11-textmode"
+    system "./configure", "--disable-silent-rules",
+                          "--disable-x11-textmode",
+                          *std_configure_args
     system "make", "install"
   end
 
