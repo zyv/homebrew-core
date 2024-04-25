@@ -3,8 +3,8 @@ class Virtualfish < Formula
 
   desc "Python virtual environment manager for the fish shell"
   homepage "https://virtualfish.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/ff/99/3d94808b610a4992595e926340e123251ec7c772d4ff1cc9593480f346f9/virtualfish-2.5.7.tar.gz"
-  sha256 "f507d8cd281cb1c1ebf6021fc18ac20a85d8afbfc5ea4fe8eb0a3f54349bc9ba"
+  url "https://files.pythonhosted.org/packages/95/03/0f7b063c25c60e4221fb2a710cce05fe4686aa5dd1f6fce4bd6abd4595e4/virtualfish-2.5.8.tar.gz"
+  sha256 "ea887a44399a4b2621b71f15c1d856d54a3ff3348a3292b0dfcb2d8238fe6932"
   license "MIT"
   head "https://github.com/justinmayer/virtualfish.git", branch: "main"
 
@@ -55,12 +55,6 @@ class Virtualfish < Formula
   resource "virtualenv" do
     url "https://files.pythonhosted.org/packages/d8/02/0737e7aca2f7df4a7e4bfcd4de73aaad3ae6465da0940b77d222b753b474/virtualenv-20.26.0.tar.gz"
     sha256 "ec25a9671a5102c8d2657f62792a27b48f016664c6873f6beed3800008577210"
-  end
-
-  # Drop setuptools dep: https://github.com/justinmayer/virtualfish/pull/244
-  patch do
-    url "https://github.com/justinmayer/virtualfish/commit/b7ec2d4f37e30adc327db115417d93e7d223a2ad.patch?full_index=1"
-    sha256 "df2f769a066eb75c08815e9d30b8fa33e00381794e6e40731df909212d7fec7c"
   end
 
   def install
