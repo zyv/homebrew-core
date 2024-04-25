@@ -3,10 +3,9 @@ class Platformio < Formula
 
   desc "Your Gateway to Embedded Software Development Excellence"
   homepage "https://platformio.org/"
-  url "https://files.pythonhosted.org/packages/97/09/4f055c5471537e68dc38d8a7981dadd7c158d07135372397e845617798b8/platformio-6.1.14.tar.gz"
-  sha256 "7a88ce098f30c538fc0cf8f4c3ac4761c3c4b4eebf09fd3606f172399cd7d4e4"
+  url "https://files.pythonhosted.org/packages/13/78/8903f4f505a393ee48a18a00b4b9c866a726ef844d23ff3ce4863d710898/platformio-6.1.15.tar.gz"
+  sha256 "d3209a60d40340fdbab2c76ee23303d90e5ecea0a11f92980c9d2068d0975fde"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/platformio/platformio-core.git", branch: "develop"
 
   bottle do
