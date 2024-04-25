@@ -892,6 +892,7 @@ greed
 greenmask
 grex
 grin
+grin-wallet
 groestlcoin
 grokj2k
 gromacs
