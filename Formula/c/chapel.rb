@@ -1,10 +1,9 @@
 class Chapel < Formula
   desc "Programming language for productive parallel computing at scale"
   homepage "https://chapel-lang.org/"
-  url "https://github.com/chapel-lang/chapel/releases/download/2.0.0/chapel-2.0.0.tar.gz"
-  sha256 "b5387e9d37b214328f422961e2249f2687453c2702b2633b7d6a678e544b9a02"
+  url "https://github.com/chapel-lang/chapel/releases/download/2.0.1/chapel-2.0.1.tar.gz"
+  sha256 "19ebcd88d829712468cfef10c634c3e975acdf78dd1a57671d11657574636053"
   license "Apache-2.0"
-  revision 2
   head "https://github.com/chapel-lang/chapel.git", branch: "main"
 
   bottle do
