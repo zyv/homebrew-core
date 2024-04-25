@@ -8,13 +8,13 @@ class PassGitHelper < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "31f6f2793fddfc326d7e8b613b3b7fd5304ae09e65ac3cd388328874d93100b4"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "31f6f2793fddfc326d7e8b613b3b7fd5304ae09e65ac3cd388328874d93100b4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "31f6f2793fddfc326d7e8b613b3b7fd5304ae09e65ac3cd388328874d93100b4"
-    sha256 cellar: :any_skip_relocation, sonoma:         "08c8ef93e8d4035d43c0f60fd5f2c017545a2ad3aeaeeff4a3209276f4d8449e"
-    sha256 cellar: :any_skip_relocation, ventura:        "08c8ef93e8d4035d43c0f60fd5f2c017545a2ad3aeaeeff4a3209276f4d8449e"
-    sha256 cellar: :any_skip_relocation, monterey:       "08c8ef93e8d4035d43c0f60fd5f2c017545a2ad3aeaeeff4a3209276f4d8449e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2fa3b90d39c93bb7701bebdef7faf423c8268cf86b24f67d3be2bca9d4bb5cd8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "7abf528867c4773880eeaf96a61583677c6df91d1d33cb6260851995f0977f2c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7abf528867c4773880eeaf96a61583677c6df91d1d33cb6260851995f0977f2c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7abf528867c4773880eeaf96a61583677c6df91d1d33cb6260851995f0977f2c"
+    sha256 cellar: :any_skip_relocation, sonoma:         "161f83037615891ef298cf97940553757ed09c84da60a404c509b08a9b270101"
+    sha256 cellar: :any_skip_relocation, ventura:        "161f83037615891ef298cf97940553757ed09c84da60a404c509b08a9b270101"
+    sha256 cellar: :any_skip_relocation, monterey:       "161f83037615891ef298cf97940553757ed09c84da60a404c509b08a9b270101"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e320b0f7dcf2d5ecdc49312d2504817267b4bbf3b17a02c0aeb06b37f5e7a6e"
   end
 
   depends_on "gnupg" => :test
