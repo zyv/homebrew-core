@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/d5/6a/f74bec8e81b2608b5454a9f6dd07e3b82bb3cadf77549008e426acedf4f8/snakemake-8.10.8.tar.gz"
-  sha256 "75711faa668324f9e6c44a860f2f9645be358763a97ee411bb32f7a8f6dca6b7"
+  url "https://files.pythonhosted.org/packages/cf/30/a499aacba2e7c8ceeda46135a0099afb7142e071fe802c7ee1bff85a0a42/snakemake-8.11.0.tar.gz"
+  sha256 "1f49ac4fe87886b0c3db45aa2d4b257afa81bea862ac48ab2667b693cad274f0"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -66,8 +66,8 @@ class Snakemake < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/21/ff/c495b797462434f0befcb598b51cde31c3ebdf8577c3fd9d9a8f5eeb844c/docutils-0.21.1.tar.gz"
-    sha256 "65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f"
+    url "https://files.pythonhosted.org/packages/ae/ed/aefcc8cd0ba62a0560c3c18c33925362d46c6075480bfa4df87b28e169a9/docutils-0.21.2.tar.gz"
+    sha256 "3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f"
   end
 
   resource "dpath" do
@@ -146,8 +146,8 @@ class Snakemake < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/96/dc/c1d911bf5bb0fdc58cc05010e9f3efe3b67970cef779ba7fbc3183b987a8/platformdirs-4.2.0.tar.gz"
-    sha256 "ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768"
+    url "https://files.pythonhosted.org/packages/b2/e4/2856bf61e54d7e3a03dd00d0c1b5fa86e6081e8f262eb91befbe64d20937/platformdirs-4.2.1.tar.gz"
+    sha256 "031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"
   end
 
   resource "psutil" do
@@ -166,8 +166,8 @@ class Snakemake < Formula
   end
 
   resource "referencing" do
-    url "https://files.pythonhosted.org/packages/59/d7/48b862b8133da2e0ed091195028f0d45c4d0be0f7f23dbe046a767282f37/referencing-0.34.0.tar.gz"
-    sha256 "5773bd84ef41799a5a8ca72dc34590c041eb01bf9aa02632b4a973fb0181a844"
+    url "https://files.pythonhosted.org/packages/6a/1f/c74e341a7a2a6fb2ab77d3a7311bd57a31e766e5d006a25053484cccbfeb/referencing-0.35.0.tar.gz"
+    sha256 "191e936b0c696d0af17ad7430a3dc68e88bc11be6514f4757dc890f04ab05889"
   end
 
   resource "requests" do
