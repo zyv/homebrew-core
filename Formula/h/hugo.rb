@@ -1,9 +1,8 @@
 class Hugo < Formula
   desc "Configurable static site generator"
   homepage "https://gohugo.io/"
-  url "https://github.com/gohugoio/hugo.git",
-      tag:      "v0.125.3",
-      revision: "474c4c02212cf97712c6fbf4159c68822ea6e078"
+  url "https://github.com/gohugoio/hugo/archive/refs/tags/v0.125.4.tar.gz"
+  sha256 "69837126d7bbe720f09c35fc1fed4f525b982b675d779ff2b18946d2e6a1ac87"
   license "Apache-2.0"
   head "https://github.com/gohugoio/hugo.git", branch: "master"
 
@@ -22,7 +21,7 @@ class Hugo < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/gohugoio/hugo/common/hugo.commitHash=#{Utils.git_head}
+      -X github.com/gohugoio/hugo/common/hugo.commitHash=#{tap.user}
       -X github.com/gohugoio/hugo/common/hugo.buildDate=#{time.iso8601}
       -X github.com/gohugoio/hugo/common/hugo.vendorInfo=brew
     ]
