@@ -1425,6 +1425,7 @@ nfdump
 nfpm
 nginx
 ngt
+nickel
 nim
 ninja
 nixpacks
