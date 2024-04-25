@@ -2076,6 +2076,7 @@ tz
 tzdiff
 u-boot-tools
 uffizzi
+uftrace
 ugit
 ugrep
 unar
