@@ -3,8 +3,8 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/14/8e/505d8b7a87c7a67512788add96a93cbf26e549a1b663850beb2d06245026/pdm-2.15.0.tar.gz"
-  sha256 "e7a11d1b237cdea3ed671958bb7d7cc67b522c6519d5c35bf6a1949329a54010"
+  url "https://files.pythonhosted.org/packages/ff/55/baf970b59fea776bd6e6257c521e36b2d3c3d11a76cd050720a60f50344b/pdm-2.15.1.tar.gz"
+  sha256 "1c9cd049c1016633a23ef92ec1fc782da8ae0743142ef33faf7d48872f874b39"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
@@ -107,8 +107,8 @@ class Pdm < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/96/dc/c1d911bf5bb0fdc58cc05010e9f3efe3b67970cef779ba7fbc3183b987a8/platformdirs-4.2.0.tar.gz"
-    sha256 "ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768"
+    url "https://files.pythonhosted.org/packages/b2/e4/2856bf61e54d7e3a03dd00d0c1b5fa86e6081e8f262eb91befbe64d20937/platformdirs-4.2.1.tar.gz"
+    sha256 "031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"
   end
 
   resource "pygments" do
@@ -172,8 +172,8 @@ class Pdm < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/42/28/846fb3eb75955d191f13bca658fb0082ddcef8e2d4b6fd0c76146556f0be/virtualenv-20.25.3.tar.gz"
-    sha256 "7bb554bbdfeaacc3349fa614ea5bff6ac300fc7c335e9facf3a3bcfc703f45be"
+    url "https://files.pythonhosted.org/packages/d8/02/0737e7aca2f7df4a7e4bfcd4de73aaad3ae6465da0940b77d222b753b474/virtualenv-20.26.0.tar.gz"
+    sha256 "ec25a9671a5102c8d2657f62792a27b48f016664c6873f6beed3800008577210"
   end
 
   resource "wheel" do
