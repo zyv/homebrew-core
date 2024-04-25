@@ -1,8 +1,8 @@
 class Enchant < Formula
   desc "Spellchecker wrapping library"
   homepage "https://abiword.github.io/enchant/"
-  url "https://github.com/AbiWord/enchant/releases/download/v2.7.0/enchant-2.7.0.tar.gz"
-  sha256 "2a073dc6ebe753196c0674a781ccf321bed25d1c6e43bffb97e2c92af420952c"
+  url "https://github.com/AbiWord/enchant/releases/download/v2.7.1/enchant-2.7.1.tar.gz"
+  sha256 "a1cb8239095d6b0bd99ba2dd012a1402cef1a194f5de1b7214bd528676a65229"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -20,6 +20,10 @@ class Enchant < Formula
   depends_on "glib"
 
   uses_from_macos "mandoc" => :build
+
+  on_system :linux, macos: :ventura_or_newer do
+    depends_on "groff" => :build
+  end
 
   def install
     # mandoc is only available since Ventura, but groff is available for older macOS
@@ -41,6 +45,7 @@ class Enchant < Formula
 
     # Explicitly set locale so that the correct dictionary can be found
     ENV["LANG"] = "en_US.UTF-8"
+    ENV["LC_ALL"] = "en_US.UTF-8"
 
     assert_equal enchant_result, shell_output("#{bin}/enchant-2 -l #{file}").chomp
   end
