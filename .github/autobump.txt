@@ -922,6 +922,7 @@ harfbuzz
 haskell-stack
 hasura-cli
 hatari
+hatch
 haxe
 hbase
 hck
