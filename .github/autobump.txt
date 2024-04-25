@@ -601,6 +601,7 @@ ecflow-ui
 echidna
 ecl
 ed
+edbrowse
 edgevpn
 editorconfig
 editorconfig-checker
