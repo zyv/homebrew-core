@@ -1,8 +1,8 @@
 class Openjdk < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.java.net/"
-  url "https://github.com/openjdk/jdk21u/archive/refs/tags/jdk-21.0.2-ga.tar.gz"
-  sha256 "17eda717843ffbbacc7de4bdcd934f404a23a57ebb3cda3cec630a668651531f"
+  url "https://github.com/openjdk/jdk21u/archive/refs/tags/jdk-21.0.3-ga.tar.gz"
+  sha256 "818e9dee28ae390f2781406d594690fc42bd994d078ad9f8360a4fbca6a3df1f"
   license "GPL-2.0-only" => { with: "Classpath-exception-2.0" }
 
   livecheck do
@@ -75,9 +75,6 @@ class Openjdk < Formula
     end
   end
 
-  # Patch to restore build on macOS 13
-  patch :DATA
-
   def install
     boot_jdk = buildpath/"boot-jdk"
     resource("boot-jdk").stage boot_jdk
@@ -107,7 +104,10 @@ class Openjdk < Formula
       --with-zlib=system
     ]
 
-    ldflags = ["-Wl,-rpath,#{loader_path.gsub("$", "\\$$")}/server"]
+    ldflags = %W[
+      -Wl,-rpath,#{loader_path.gsub("$", "\\$$")}
+      -Wl,-rpath,#{loader_path.gsub("$", "\\$$")}/server
+    ]
     args += if OS.mac?
       ldflags << "-headerpad_max_install_names"
 
@@ -168,19 +168,3 @@ class Openjdk < Formula
     assert_match "Hello, world!", shell_output("#{bin}/java HelloWorld")
   end
 end
-
-__END__
-diff -pur a/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c b/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c
---- a/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c	2022-08-12 22:24:53.000000000 +0200
-+++ b/src/jdk.net/macosx/native/libextnet/MacOSXSocketOptions.c	2022-10-24 18:27:36.000000000 +0200
-@@ -29,9 +29,9 @@
- #include <unistd.h>
-
- #include <jni.h>
--#include <netinet/tcp.h>
-
- #define __APPLE_USE_RFC_3542
-+#include <netinet/tcp.h>
- #include <netinet/in.h>
-
- #ifndef IP_DONTFRAG
