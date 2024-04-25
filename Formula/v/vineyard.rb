@@ -42,6 +42,12 @@ class Vineyard < Formula
     sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
   end
 
+  # Backport fix for API changes in `apache-arrow` 16+.
+  patch do
+    url "https://github.com/v6d-io/v6d/commit/e8b8c828f54e16163c98a9b91068f3344608431a.patch?full_index=1"
+    sha256 "b105216ad518dc581a9b9eb45398d7f87f63ba9728b3e3690aaef172a33ff3d2"
+  end
+
   def install
     python = "python3.12"
     venv = virtualenv_create(libexec, python)
@@ -52,11 +58,6 @@ class Vineyard < Formula
     # Work around an Xcode 15 linker issue which causes linkage against LLVM's
     # libunwind due to it being present in a library search path.
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib
-
-    # Work around API changes in `apache-arrow` 16+.
-    # Issue ref: https://github.com/v6d-io/v6d/issues/1881
-    arrow_uri_files = %w[modules/io/io/local_io_adaptor.cc modules/io/io/io_factory.cc]
-    inreplace arrow_uri_files, "arrow::internal::Uri", "arrow::util::Uri"
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_CXX_STANDARD=17",
