@@ -13,13 +13,13 @@ class Inform6 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2cac469d603b339fe28bbb7a14989bfeeac8fb0c4caa375191deee6954f73b43"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2e47394e4365b91f94cfa3796bfdd7787e31277fbbce09ab5bc7f36d564bcbee"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c5fa8401a108ee6277f6733333bdee92caaa3be2ab0c633c24c326fe486813a6"
-    sha256 cellar: :any_skip_relocation, sonoma:         "b16d21c28632680520db57a285517fc0f6278b648c81e111059332fbd41e4cd1"
-    sha256 cellar: :any_skip_relocation, ventura:        "95056949a2a5f87324ea6b2a00669c95f46127038d964f215169fcec3ded236d"
-    sha256 cellar: :any_skip_relocation, monterey:       "2d009d9a3900ba258012cf755e72ad6fc0031cd4894527e5a7fdcd80f4a75d37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eae87b2faa46fe713a4b44d5684256b0970bed9b33b47d270936f5617d32b25b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "324499e408a1dfc47e64dee9d2cf645e985366621367667b3ca452dfcdcf77d9"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "88c5c37d241f3169bf2c50efac01a3526f2485fd7fb772f2fc29cb597fb7f848"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a8148f5d7163d0fbdd79970cea9029096b0aba6669594a96b0fdb1679c4efe17"
+    sha256 cellar: :any_skip_relocation, sonoma:         "fcf6c3cf5b6618ac5853071e9053b783d98535c980fa189b9154e464c174d394"
+    sha256 cellar: :any_skip_relocation, ventura:        "853644b80084e5384dd4d9a7b6f09dde50b6572be23c2dcc6c715e88fbb96931"
+    sha256 cellar: :any_skip_relocation, monterey:       "8c7e258ceae325a06907d82a32e63cb56bb39fe41eda6d35b2c50b15f5bd0f72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a6280dececade4695c3560890475b15f39c38499bd32756d22c3ee4942a5f91b"
   end
 
   resource "homebrew-test_resource" do
