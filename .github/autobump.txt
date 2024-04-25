@@ -991,6 +991,7 @@ imposm3
 influxdb
 influxdb-cli
 influxdb@1
+inform6
 inlyne
 instaloader
 internetarchive
