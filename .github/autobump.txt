@@ -760,6 +760,7 @@ fwupd
 fx
 fzf
 g-ls
+gateway-go
 gator
 gatsby-cli
 gau
