@@ -1,8 +1,8 @@
 class ErlangLs < Formula
   desc "Erlang Language Server"
   homepage "https://erlang-ls.github.io/"
-  url "https://github.com/erlang-ls/erlang_ls/archive/refs/tags/0.51.0.tar.gz"
-  sha256 "1eb8748755b2990d02e8ba8387f6f9ef04c398ad2975fa606387f3b9bdbafd1c"
+  url "https://github.com/erlang-ls/erlang_ls/archive/refs/tags/0.52.0.tar.gz"
+  sha256 "8c9028cc65985746abc8736703381c04f0922116ef8cc7711bee09953432d968"
   license "Apache-2.0"
 
   bottle do
