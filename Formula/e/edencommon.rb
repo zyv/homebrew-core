@@ -4,6 +4,7 @@ class Edencommon < Formula
   url "https://github.com/facebookexperimental/edencommon/archive/refs/tags/v2024.04.22.00.tar.gz"
   sha256 "6b558e3f78fb6e211e26c6e7a07b2b5a9073322b39c60afc3def21309b360053"
   license "MIT"
+  revision 1
   head "https://github.com/facebookexperimental/edencommon.git", branch: "main"
 
   bottle do
@@ -18,6 +19,7 @@ class Edencommon < Formula
 
   depends_on "cmake" => :build
   depends_on "googletest" => :build
+  depends_on "mvfst" => :build
   depends_on "fb303"
   depends_on "fbthrift"
   depends_on "folly"
