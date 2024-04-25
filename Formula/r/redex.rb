@@ -5,7 +5,7 @@ class Redex < Formula
   desc "Bytecode optimizer for Android apps"
   homepage "https://github.com/facebook/redex"
   license "MIT"
-  revision 14
+  revision 15
   head "https://github.com/facebook/redex.git", branch: "main"
 
   stable do
@@ -69,6 +69,9 @@ class Redex < Formula
       # Work around missing include. Fixed upstream but code has been refactored
       # Ref: https://github.com/facebook/redex/commit/3f4cde379da4657068a0dbe85c03df558854c31c
       ENV.append "CXXFLAGS", "-include set"
+      # Help detect Boost::Filesystem and Boost::System during ./configure.
+      # TODO: Remove in the next release.
+      ENV.cxx11
     end
 
     venv = virtualenv_create(libexec, "python3.12")
