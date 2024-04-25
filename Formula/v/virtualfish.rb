@@ -9,13 +9,14 @@ class Virtualfish < Formula
   head "https://github.com/justinmayer/virtualfish.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "65deff56f7bfda016430a19ce252cc2e7318cd31563ff5140bb90f0b64badb0a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "982e1d4a943fd468ecdcb2196a29d6ed6f42fd8a6d21eeeb739c45464b85c067"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9da9c4a06a1f1ad1b00530fd6e861f5bc5a328bfeb2560d5d9eb029a320616c9"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3215b85676fdb3b91f4aa75d2b9a5d975902d501bd6979f3bd926da66d028976"
-    sha256 cellar: :any_skip_relocation, ventura:        "aafd7742e3085a0785fa5dd966442ddddb1ba4052d23f806927256e9293e3627"
-    sha256 cellar: :any_skip_relocation, monterey:       "b05c553e36daeea3732b8529ccfd772eb5dfc9ce35144cb98e31ca3fc9291d9c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "70961a036370488acbebb91ae0729bbc23836c4a2cd197158f48d394fd6071e9"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "76ff83ad4a0b182754eefa7eabdf04e4d462b29f832496ea4e859d0b6a39dc51"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c8dd793448e3c8566304ed0822564622163d5d21856f63b6d06bb5729d4aa3d1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d23a4d01766c6584dd6505e6e00fe4b8035f44020c3dc1a27dbdcea1a006fcc6"
+    sha256 cellar: :any_skip_relocation, sonoma:         "0c95adac846ffabcfd76b38e7e2cb20bfc14b92b6f4520025e17f1341f815784"
+    sha256 cellar: :any_skip_relocation, ventura:        "233ba5dfa195d6e996a51d1661ac3aa9ba9a920f0536f46c8e9d5ba11dd87d34"
+    sha256 cellar: :any_skip_relocation, monterey:       "e49011c5ac4c0fef0cfbb07771928aaac29e669d4570e1420949ad759913f8b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e27001fd3396803fd72b313632e52eebc1af064bea86a6399fd8d760c48797a1"
   end
 
   depends_on "fish"
@@ -27,8 +28,8 @@ class Virtualfish < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/70/70/41905c80dcfe71b22fb06827b8eae65781783d4a14194bce79d16a013263/filelock-3.13.1.tar.gz"
-    sha256 "521f5f56c50f8426f5e03ad3b281b490a87ef15bc6c526f168290f0c7148d44e"
+    url "https://files.pythonhosted.org/packages/38/ff/877f1dbe369a2b9920e2ada3c9ab81cf6fe8fa2dce45f40cad510ef2df62/filelock-3.13.4.tar.gz"
+    sha256 "d13f466618bfde72bd2c18255e269f72542c6e70e7bac83a0232d6b1cc5c8cf4"
   end
 
   resource "packaging" do
@@ -42,8 +43,8 @@ class Virtualfish < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/96/dc/c1d911bf5bb0fdc58cc05010e9f3efe3b67970cef779ba7fbc3183b987a8/platformdirs-4.2.0.tar.gz"
-    sha256 "ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768"
+    url "https://files.pythonhosted.org/packages/b2/e4/2856bf61e54d7e3a03dd00d0c1b5fa86e6081e8f262eb91befbe64d20937/platformdirs-4.2.1.tar.gz"
+    sha256 "031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"
   end
 
   resource "psutil" do
@@ -51,14 +52,15 @@ class Virtualfish < Formula
     sha256 "6be126e3225486dff286a8fb9a06246a5253f4c7c53b475ea5f5ac934e64194c"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
-    sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
+  resource "virtualenv" do
+    url "https://files.pythonhosted.org/packages/d8/02/0737e7aca2f7df4a7e4bfcd4de73aaad3ae6465da0940b77d222b753b474/virtualenv-20.26.0.tar.gz"
+    sha256 "ec25a9671a5102c8d2657f62792a27b48f016664c6873f6beed3800008577210"
   end
 
-  resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/93/4f/a7737e177ab67c454d7e60d48a5927f16cd05623e9dd888f78183545d250/virtualenv-20.25.1.tar.gz"
-    sha256 "e08e13ecdca7a0bd53798f356d5831434afa5b07b93f0abdf0797b7a06ffe197"
+  # Drop setuptools dep: https://github.com/justinmayer/virtualfish/pull/244
+  patch do
+    url "https://github.com/justinmayer/virtualfish/commit/b7ec2d4f37e30adc327db115417d93e7d223a2ad.patch?full_index=1"
+    sha256 "df2f769a066eb75c08815e9d30b8fa33e00381794e6e40731df909212d7fec7c"
   end
 
   def install

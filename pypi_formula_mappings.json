@@ -782,9 +782,6 @@
     "exclude_packages": ["certifi"],
     "extra_packages": ["libvirt-python", "requests"]
   },
-  "virtualfish": {
-    "extra_packages": ["setuptools"]
-  },
   "volatility": {
     "extra_packages": ["capstone", "pycryptodome", "yara-python", "jsonschema"]
   },
