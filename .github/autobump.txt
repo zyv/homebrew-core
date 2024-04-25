@@ -639,6 +639,7 @@ epr
 erdtree
 erg
 erlang
+erlang_ls
 erlang@24
 erlang@25
 erofs-utils
