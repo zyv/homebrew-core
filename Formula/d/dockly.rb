@@ -3,8 +3,8 @@ require "language/node"
 class Dockly < Formula
   desc "Immersive terminal interface for managing docker containers and services"
   homepage "https://lirantal.github.io/dockly/"
-  url "https://registry.npmjs.org/dockly/-/dockly-3.24.1.tgz"
-  sha256 "1f004c72e1958f386f00efdccc467a06ade3c1f8ad205dbbaaff1a6b6625686a"
+  url "https://registry.npmjs.org/dockly/-/dockly-3.24.2.tgz"
+  sha256 "0c0004f0ea1f2bee8ba34a90374cd6434e55ae67baa31e7bdfcef8ac37014939"
   license "MIT"
 
   bottle do
