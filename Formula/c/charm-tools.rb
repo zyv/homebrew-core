@@ -141,8 +141,8 @@ class CharmTools < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/96/dc/c1d911bf5bb0fdc58cc05010e9f3efe3b67970cef779ba7fbc3183b987a8/platformdirs-4.2.0.tar.gz"
-    sha256 "ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768"
+    url "https://files.pythonhosted.org/packages/b2/e4/2856bf61e54d7e3a03dd00d0c1b5fa86e6081e8f262eb91befbe64d20937/platformdirs-4.2.1.tar.gz"
+    sha256 "031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"
   end
 
   resource "pyrsistent" do
@@ -181,8 +181,8 @@ class CharmTools < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
+    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
   end
 
   resource "six" do
@@ -201,8 +201,8 @@ class CharmTools < Formula
   end
 
   resource "types-setuptools" do
-    url "https://files.pythonhosted.org/packages/2d/06/0de7b539346aaa8758b3c80375c4841dc2764ef92c5e743f1ebe9789da54/types-setuptools-69.2.0.20240317.tar.gz"
-    sha256 "b607c4c48842ef3ee49dc0c7fe9c1bad75700b071e1018bb4d7e3ac492d47048"
+    url "https://files.pythonhosted.org/packages/12/c7/10593c47ad543413eaf25bba1979a3c5a4bf3f42e505dd28869c618a764c/types-setuptools-69.5.0.20240423.tar.gz"
+    sha256 "a7ba908f1746c4337d13f027fa0f4a5bcad6d1d92048219ba792b3295c58586d"
   end
 
   resource "urllib3" do
@@ -216,13 +216,8 @@ class CharmTools < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/93/4f/a7737e177ab67c454d7e60d48a5927f16cd05623e9dd888f78183545d250/virtualenv-20.25.1.tar.gz"
-    sha256 "e08e13ecdca7a0bd53798f356d5831434afa5b07b93f0abdf0797b7a06ffe197"
-  end
-
-  resource "wheel" do
-    url "https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz"
-    sha256 "465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85"
+    url "https://files.pythonhosted.org/packages/d8/02/0737e7aca2f7df4a7e4bfcd4de73aaad3ae6465da0940b77d222b753b474/virtualenv-20.26.0.tar.gz"
+    sha256 "ec25a9671a5102c8d2657f62792a27b48f016664c6873f6beed3800008577210"
   end
 
   def install
