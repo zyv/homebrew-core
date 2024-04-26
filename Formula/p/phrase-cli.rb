@@ -1,8 +1,8 @@
 class PhraseCli < Formula
   desc "Tool to interact with the Phrase API"
   homepage "https://phrase.com/"
-  url "https://github.com/phrase/phrase-cli/archive/refs/tags/2.25.0.tar.gz"
-  sha256 "77e7f80365851df20bd5829a51dc23125eb151aa3eafe9bbb4c9516ae94c737a"
+  url "https://github.com/phrase/phrase-cli/archive/refs/tags/2.26.0.tar.gz"
+  sha256 "4cb373851d94fece3ba98cf647f73bd7a0fa48acb50b4d9004217fae859a6937"
   license "MIT"
 
   bottle do
