@@ -4,6 +4,7 @@ class Gmime < Formula
   url "https://github.com/jstedfast/gmime/releases/download/3.2.14/gmime-3.2.14.tar.xz"
   sha256 "a5eb3dd675f72e545c8bc1cd12107e4aad2eaec1905eb7b4013cdb1fbe5e2317"
   license "LGPL-2.1-or-later"
+  revision 1
 
   bottle do
     sha256                               arm64_sonoma:   "3880f919eab39bb7fe31f52fb1c9485c9100eeea67b6858768e9d91596566f8c"
@@ -27,7 +28,7 @@ class Gmime < Formula
   end
 
   depends_on "gobject-introspection" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkg-config" => [:build, :test]
   depends_on "glib"
   depends_on "gpgme"
 
@@ -44,6 +45,18 @@ class Gmime < Formula
 
     system "./configure", *std_configure_args, *args
     system "make", "install"
+
+    # Avoid hardcoding Cellar paths of dependencies
+    inreplace lib/"pkgconfig/gmime-#{version.major}.0.pc" do |s|
+      %w[gpgme libassuan libidn2].each do |f|
+        s.gsub! Formula[f].prefix.realpath, Formula[f].opt_prefix
+      end
+    end
+
+    return if OS.linux?
+
+    # Avoid dependents remembering gmime's Cellar path
+    inreplace share/"gir-1.0/GMime-#{version.major}.0.gir", prefix, opt_prefix
   end
 
   test do
@@ -60,27 +73,26 @@ class Gmime < Formula
         }
       }
     EOS
-    gettext = Formula["gettext"]
-    glib = Formula["glib"]
-    pcre = Formula["pcre"]
-    flags = (ENV.cflags || "").split + (ENV.cppflags || "").split + (ENV.ldflags || "").split
-    flags += %W[
-      -I#{gettext.opt_include}
-      -I#{glib.opt_include}/glib-2.0
-      -I#{glib.opt_lib}/glib-2.0/include
-      -I#{include}/gmime-3.0
-      -I#{pcre.opt_include}
-      -D_REENTRANT
-      -L#{gettext.opt_lib}
-      -L#{glib.opt_lib}
-      -L#{lib}
-      -lgio-2.0
-      -lglib-2.0
-      -lgmime-3.0
-      -lgobject-2.0
-    ]
-    flags << "-lintl" if OS.mac?
+
+    flags = shell_output("pkg-config --cflags --libs gmime-#{version.major}.0").strip.split
     system ENV.cc, "-o", "test", "test.c", *flags
     system "./test"
+
+    # Check that `pkg-config` paths are valid
+    cflags = shell_output("pkg-config --cflags gmime-#{version.major}.0").strip
+    cflags.split.each do |flag|
+      next unless flag.start_with?("-I")
+
+      flag.delete_prefix!("-I")
+      assert_path_exists flag
+    end
+
+    ldflags = shell_output("pkg-config --libs gmime-#{version.major}.0").strip
+    ldflags.split.each do |flag|
+      next unless flag.start_with?("-L")
+
+      flag.delete_prefix!("-L")
+      assert_path_exists flag
+    end
   end
 end
