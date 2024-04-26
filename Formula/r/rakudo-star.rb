@@ -1,8 +1,8 @@
 class RakudoStar < Formula
   desc "Rakudo compiler and commonly used packages"
   homepage "https://rakudo.org/"
-  url "https://github.com/rakudo/star/releases/download/2024.03/rakudo-star-2024.03.tar.gz"
-  sha256 "b24cec9755b0361a79c7d8ac55c9a4e3ab71c46786c041e051798485f38d366f"
+  url "https://github.com/rakudo/star/releases/download/2024.04/rakudo-star-2024.04.tar.gz"
+  sha256 "49bc2f8461e2b194ed2b8800d83f1de27e216b46404b96abd46df82678814c86"
   license "Artistic-2.0"
 
   bottle do
