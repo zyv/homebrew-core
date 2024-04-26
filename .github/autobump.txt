@@ -2028,6 +2028,7 @@ source-to-image
 sourcekitten
 sourcery
 spack
+spdlog
 spectral-cli
 spglib
 sphinx-doc
