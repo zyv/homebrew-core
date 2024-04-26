@@ -11,15 +11,13 @@ class Qsoas < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "d29b2f65c9aa182b5b27c7c1640674862df244be75b51b75ac2b446a7c50d607"
-    sha256 cellar: :any,                 arm64_ventura:  "438d7f9af6814f1691bb359bfaaac693251f1b16755a37f20a172a99e4a05e26"
-    sha256 cellar: :any,                 arm64_monterey: "46058c026ed1f265beefb389ae198a3ff6a9441e413cc291d8b4eba87b66469a"
-    sha256 cellar: :any,                 arm64_big_sur:  "f80cb135a5650e23fc09b9c2bd9a8f09f13726aa7bcf3c86b7712acb48572df7"
-    sha256 cellar: :any,                 sonoma:         "e1f6279b2229fcf859379e9f5ab39e15630be109505fb3e258a3580edc6e018a"
-    sha256 cellar: :any,                 ventura:        "08901a171960dffc48598688ac87facc4d695d11862e92c18d03c0b912d0c8cc"
-    sha256 cellar: :any,                 monterey:       "834ba1207a00845d5c27a8aea184a31002f32e3be6e3850d329fe16ff94fc7a1"
-    sha256 cellar: :any,                 big_sur:        "bc6e5e7f128f623b77b6a535c90c879fc7352def13d84f8684944553824837a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02be44ecc8f76fb4d46f0d1cf8feffaa3d9b4cd3a50c712514b1a6929b70a393"
+    sha256 cellar: :any,                 arm64_sonoma:   "1a38da810ed778afab4910333154be9a7e9d023dbe6b31a1474f234195e71082"
+    sha256 cellar: :any,                 arm64_ventura:  "3719d9bcc7efb9eb02ad8df0e5db43898c57cb85d6ccae3ec041c41c9516e20d"
+    sha256 cellar: :any,                 arm64_monterey: "a6c01927415078bc9fa9502897cb3e1fc9ee697eb061cc65215622aa547d1e3c"
+    sha256 cellar: :any,                 sonoma:         "8bde4f66b2c7038e53f5368ce5fadc708b3c026cad89fa4e3ae8e93c91eba57a"
+    sha256 cellar: :any,                 ventura:        "e346084ec2da1a1a8b09655384c656e15b243634724ed3ad284da177f9001db2"
+    sha256 cellar: :any,                 monterey:       "6d113519d854f6f1eec16a575aade4d729cfbec5185bf26dfba89a9c119fde47"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2aff2943602ababdef4e34fe307329ed45a6f499bfcebe8bd74c0abec6f834aa"
   end
 
   depends_on "bison" => :build
