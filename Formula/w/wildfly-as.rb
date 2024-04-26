@@ -1,8 +1,8 @@
 class WildflyAs < Formula
   desc "Managed application runtime for building applications"
   homepage "https://www.wildfly.org/"
-  url "https://github.com/wildfly/wildfly/releases/download/31.0.1.Final/wildfly-31.0.1.Final.tar.gz"
-  sha256 "d5b0d9490f22d9e5f509794470c773a7147301b512fd2db9315991340f2b562d"
+  url "https://github.com/wildfly/wildfly/releases/download/32.0.0.Final/wildfly-32.0.0.Final.tar.gz"
+  sha256 "b88fb653edaa14c20263477f591bc0b60576a877afae031094589509de1c1c48"
   license "Apache-2.0"
 
   livecheck do
