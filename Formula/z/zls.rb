@@ -2,8 +2,8 @@ class Zls < Formula
   desc "Language Server for Zig"
   homepage "https://github.com/zigtools/zls"
   url "https://github.com/zigtools/zls.git",
-      tag:      "0.11.0",
-      revision: "5bfff2a4b9ee01a7bab5fc26fad6e174f289c28d"
+      tag:      "0.12.0",
+      revision: "68cd4ff4c7b84e89bd1e1b4ad29f9abd8b020174"
   license "MIT"
   head "https://github.com/zigtools/zls.git", branch: "master"
 

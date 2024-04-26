@@ -2245,6 +2245,7 @@ zig
 zipkin
 zlib
 zlint
+zls
 znapzend
 znc
 zola
