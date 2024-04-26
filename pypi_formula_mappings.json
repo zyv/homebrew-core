@@ -541,9 +541,6 @@
   "pipenv": {
     "exclude_packages": ["certifi"]
   },
-  "pipgrip": {
-    "extra_packages": ["wheel"]
-  },
   "platformio": {
     "exclude_packages": ["certifi"]
   },
