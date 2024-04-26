@@ -12,13 +12,13 @@ class Pypy39 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "6e4036bc99784d5e9a4181ae57b693f06e33d5283725657bdf002544e53b5cf8"
-    sha256 cellar: :any,                 arm64_ventura:  "8aa75035593e5a2c27882765190de2f54d4523c7daaadc125bf08b55e7c9ff01"
-    sha256 cellar: :any,                 arm64_monterey: "9b2e50fcb4fd4d0a8491b5feddf7bba7d33106c177a346844481d1051c6e9cd9"
-    sha256 cellar: :any,                 sonoma:         "a398082a9b2e660e5f3dd56b1fb03b71a029d9ca98e1e73becac711e0b7ec797"
-    sha256 cellar: :any,                 ventura:        "0683d35b591f98d6f0a20c3a2cd9e4f6ff1a2ab784fef94fe0c14ce20a99644d"
-    sha256 cellar: :any,                 monterey:       "1bd9370f7cb0ecfa8166fac07630edae728592174722fc8c50e008e03c173a42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1f5def43f60dfdb8281ee17e15b45c8ad483f4d10d061ab8ed82784dcb056a71"
+    sha256 cellar: :any,                 arm64_sonoma:   "a2b7c3fb49103e181be68d58bc5e24ef166378a45b6e0809ed49d3703320cd6c"
+    sha256 cellar: :any,                 arm64_ventura:  "e0808219d8841660930e01893cb4c5926ea402369efd21f5c50a05594f0308fd"
+    sha256 cellar: :any,                 arm64_monterey: "713260b8a119d369e1aad5261848c0b74f7703063bbac4502e0ebe9a15d1ef91"
+    sha256 cellar: :any,                 sonoma:         "538ad1b015b0f99bdc3cb3c9717eee7924c1c3ebb23642c5ca5c94c7f702cae7"
+    sha256 cellar: :any,                 ventura:        "4d2b3ee05e7e7ab409b490dc1f5406c758dc5c5b5686bb421a3ebac10335081d"
+    sha256 cellar: :any,                 monterey:       "69ffe1a539cf92a717bdf238529414331d6ac0eaa774f30820e04ddd9d0e90ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "03a763d3d1d5274e48acf5911303adea4c327feb5e7f5e0b727362582e0de541"
   end
 
   depends_on "pkg-config" => :build
