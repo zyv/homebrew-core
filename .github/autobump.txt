@@ -1697,6 +1697,7 @@ qjackctl
 qmmp
 qpdf
 qpid-proton
+qsoas
 qsv
 quantlib
 quantum++
