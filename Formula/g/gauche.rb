@@ -1,10 +1,9 @@
 class Gauche < Formula
   desc "R7RS Scheme implementation, developed to be a handy script interpreter"
   homepage "https://practical-scheme.net/gauche/"
-  url "https://github.com/shirok/Gauche/releases/download/release0_9_14/Gauche-0.9.14.tgz"
-  sha256 "02928f8535cf83f23ed6097f1b07b1fdb487a5ad2cb81d8a34d5124d02db3d48"
+  url "https://github.com/shirok/Gauche/releases/download/release0_9_15/Gauche-0.9.15.tgz"
+  sha256 "3643e27bc7c8822cfd6fb2892db185f658e8e364938bc2ccfcedb239e35af783"
   license "BSD-3-Clause"
-  revision 1
 
   livecheck do
     url :stable
