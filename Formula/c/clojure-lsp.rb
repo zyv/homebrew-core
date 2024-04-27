@@ -17,13 +17,7 @@ class ClojureLsp < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "50d783342293e1bb38afae569dcc36e046cba83c1df28bf10eab924db5724d3c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "50d783342293e1bb38afae569dcc36e046cba83c1df28bf10eab924db5724d3c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "50d783342293e1bb38afae569dcc36e046cba83c1df28bf10eab924db5724d3c"
-    sha256 cellar: :any_skip_relocation, sonoma:         "50d783342293e1bb38afae569dcc36e046cba83c1df28bf10eab924db5724d3c"
-    sha256 cellar: :any_skip_relocation, ventura:        "50d783342293e1bb38afae569dcc36e046cba83c1df28bf10eab924db5724d3c"
-    sha256 cellar: :any_skip_relocation, monterey:       "50d783342293e1bb38afae569dcc36e046cba83c1df28bf10eab924db5724d3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "340c1cd021cf2f7bb8405d46b42d58a9383db3e121060cf792a353ade9c8f3d2"
+    sha256 cellar: :any_skip_relocation, all: "cd750b83619ba9c37e92cb863d10d6c533d1426fc1dc52e92509bfce02ed20fe"
   end
 
   depends_on "openjdk"
