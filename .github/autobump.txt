@@ -445,6 +445,7 @@ ctlptl
 cubejs-cli
 cucumber-ruby
 cue
+cups
 curl
 cvs-fast-export
 cweb
