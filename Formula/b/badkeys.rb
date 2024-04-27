@@ -9,13 +9,13 @@ class Badkeys < Formula
   head "https://github.com/badkeys/badkeys.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "7ea280366fba3f17ae800e82f5575d4339371ec2d4672a7a5f906a8d1222aad7"
-    sha256 cellar: :any,                 arm64_ventura:  "176e0e9b94dfa6b9f5500630156a0f7c63aaec544e19800228df18d9dc8c1a29"
-    sha256 cellar: :any,                 arm64_monterey: "6919401a19c5483b7dece7e41cdf7c1681c36e46bc215e443f4fbaecdcb3ed6f"
-    sha256 cellar: :any,                 sonoma:         "a63af4ad844369a9d9a83ed91cb733e531a6542a18c46fe83a119b328122f8df"
-    sha256 cellar: :any,                 ventura:        "63a978d2b0cddfe1b98f593c9220cf78fe633dafe3e1078a418e8fec97a732fa"
-    sha256 cellar: :any,                 monterey:       "485593241594904e2959a90cddf7177bdba83a02d58366e06863f3f5403e93ad"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4d1cabfae78a7a12e0f1d300283c836c9df90f61712185659ebf7766c7199eaa"
+    sha256 cellar: :any,                 arm64_sonoma:   "40595744dd8f4688f61821a704c4dbdd0de5c91d8c587310d6c16be2bf831ebc"
+    sha256 cellar: :any,                 arm64_ventura:  "9ce884dbabd2ad73147dd7a70b513b2aa858e5f2916c33b03b245df03c384798"
+    sha256 cellar: :any,                 arm64_monterey: "8562fc9c4360acf579ebb96defe0ce7d6c51ce0bb8816ee023ed9146c61566fc"
+    sha256 cellar: :any,                 sonoma:         "427b7c1f42f0514e5529d9c3af934304138a4123f01f2b37e39cd6086edb7395"
+    sha256 cellar: :any,                 ventura:        "8bd57365869c7ebcab523491eef790d2ce2d62c9a7b98c689527a5e390fcbefd"
+    sha256 cellar: :any,                 monterey:       "c28cd99688151c08bd462cb5f77192bd926ad23694a37392d35442a3827c33fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02895613efd4dd45eb8c298eef3db5f8d76fbc0e5a33fcfa8be3201d5569aea6"
   end
 
   depends_on "cryptography"
