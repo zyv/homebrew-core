@@ -3,8 +3,8 @@ class Badkeys < Formula
 
   desc "Tool to find common vulnerabilities in cryptographic public keys"
   homepage "https://badkeys.info"
-  url "https://files.pythonhosted.org/packages/1a/75/598b292a0ccc7585a8b7e2a93403e2f6f00bb21bfb20a364db39fbf0f1d6/badkeys-0.0.7.tar.gz"
-  sha256 "49d6c417adc1c9c76784a0d3b1b29c79999243c8027f72e7bf33032596e8d0e7"
+  url "https://files.pythonhosted.org/packages/ef/be/ebdc7b274a4bacaab1d0f01da8237b5dac6e98f04063b7802a6cf88a75ea/badkeys-0.0.8.tar.gz"
+  sha256 "158953a0f695e2d56bee7c41ec8bc0958a6465f7d555e5583deee62dbbed3902"
   license "MIT"
   head "https://github.com/badkeys/badkeys.git", branch: "main"
 
@@ -43,20 +43,19 @@ class Badkeys < Formula
     output = shell_output("#{bin}/badkeys --update-bl")
     assert_match "Writing new badkeysdata.json...", output
 
-    (testpath/"rsa-nprime.key").write <<~EOS
-      Invalid RSA key with prime N.
-
+    # taken from https://raw.githubusercontent.com/badkeys/badkeys/main/tests/data/rsa-debianweak.key
+    (testpath/"rsa-debianweak.key").write <<~EOS
       -----BEGIN RSA PUBLIC KEY-----
-      MIIBCgKCAQEAqQSg27883tGr5jtyOaZkEn597cuw1Wz4wWuFp1quvHOyiMId7L7m
-      KHh2G+WQaEEBKl2A/M/tXgdfbrY0NnW3SMIZ9PMTWJNjtAqjBKVBDXDJbJhOpvya
-      gL4HBKR6cnB0TE+3m0co6o98xRT7eFBP4V9WyZYIG15XDruFvGkgeqmXefqf5BB5
-      Erquu6RePYNt25I3SFM12kZTW+HcrDyj34CO4Jxkw5JI5bUtP9wV5ocr/Z5FmvmI
-      Di3eNbHBVteLN3BIuFax8JQvpcdwEjy7Qdro5Ad3a3Ld4//2Vn/mAkGPop/HmJme
-      wI1poiKh+VgF87bloijO+izBYk/eo9ZWWQIDAQAB
+      MIIBCgKCAQEAwJZTDExKND/DiP+LbhTIi2F0hZZt0PdX897LLwPf3+b1GOCUj1OH
+      BZvVqhJPJtOPE53W68I0NgVhaJdY6bFOA/cUUIFnN0y/ZOJOJsPNle1aXQTjxAS+
+      FXu4CQ6a2pzcU+9+gGwed7XxAkIVCiTprfmRCI2vIKdb61S8kf5D3YdVRH/Tq977
+      nxyYeosEGYJFBOIT+N0mqca37S8hA9hCJyD3p0AM40dD5M5ARAxpAT7+oqOXkPzf
+      zLtCTaHYJK3+WAce121Br4NuQJPqYPVxniUPohT4YxFTqB7vwX2C4/gZ2ldpHtlg
+      JVAHT96nOsnlz+EPa5GtwxtALD43CwOlWQIDAQAB
       -----END RSA PUBLIC KEY-----
     EOS
 
-    output = shell_output("#{bin}/badkeys #{testpath}/rsa-nprime.key")
-    assert_match "rsainvalid/prime_n vulnerability, rsa[2048], #{testpath}/rsa-nprime.key", output
+    output = shell_output("#{bin}/badkeys #{testpath}/rsa-debianweak.key")
+    assert_match "blocklist/debianssl vulnerability, rsa[2048], #{testpath}/rsa-debianweak.key", output
   end
 end
