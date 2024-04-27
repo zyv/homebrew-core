@@ -7,13 +7,13 @@ class RiemannClient < Formula
   head "https://git.madhouse-project.org/algernon/riemann-c-client.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "7854bc14bd566d2dde42dc063099cfc65f32e76b19753d707c6b2d3b9c25c7cd"
-    sha256 cellar: :any,                 arm64_ventura:  "6c8e5b2f98803a91ff957f0052c2f2ba4bbc276fb4116bb244c8179b0f3ac835"
-    sha256 cellar: :any,                 arm64_monterey: "10c6ded8a26a5b556881b2dc045175c0c02fd5221c8fb79c58805f30c01c150d"
-    sha256 cellar: :any,                 sonoma:         "7392770dda4b7a8a85ad01c6fff29755ebba6bf454569a452e0b179031a2ed20"
-    sha256 cellar: :any,                 ventura:        "3cc09e98b21351ff7e33c35664467ffc1c2f7ddec512a3f4fed9aaa2b44b3717"
-    sha256 cellar: :any,                 monterey:       "76fd317852de35fce96522105df18ef93ce9d58105f764c7d25715ebd14fadc3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5aedd6872a9056fc17d3defe1f0602b61653c0b6ebf698df90da0297be259dd4"
+    sha256 cellar: :any,                 arm64_sonoma:   "4116feb76d22357c68e8c5a08ffef422c0e01c3b60aabeef4e3b4f05839a62a6"
+    sha256 cellar: :any,                 arm64_ventura:  "b3507667a57c0d40ae48bab7c5e9dcf08cb0e17030a20b3f3d746973bbb8193e"
+    sha256 cellar: :any,                 arm64_monterey: "a8afc4ddc4a4081a00908f94189611a642eb9cbf6419b41bef7db291960ad250"
+    sha256 cellar: :any,                 sonoma:         "426da29c687af12a8f693ad486f02a4fb7a1f6cca60416bb6715a536c5d62ffb"
+    sha256 cellar: :any,                 ventura:        "8bd9e8528e663ba4aab929be622df0830433aa554c0c133e131350d507c3f539"
+    sha256 cellar: :any,                 monterey:       "6dac6669b4d4b2fd9af0bde77fcd4ae7e5187ec8801eb0e26b7fa8796f8b3e1a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fc7736635610401fa99e4911155329f537c997b57d218821538f0e6b8b212111"
   end
 
   depends_on "autoconf" => :build
