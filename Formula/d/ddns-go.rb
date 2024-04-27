@@ -1,8 +1,8 @@
 class DdnsGo < Formula
   desc "Simple and easy-to-use DDNS"
   homepage "https://github.com/jeessy2/ddns-go"
-  url "https://github.com/jeessy2/ddns-go/archive/refs/tags/v6.3.3.tar.gz"
-  sha256 "fee40e6a9abc8313632b29ccc9b71184a3f8f9377986de5d2773374ad4b99173"
+  url "https://github.com/jeessy2/ddns-go/archive/refs/tags/v6.5.0.tar.gz"
+  sha256 "4f9b7762431a4a75a59ea050b3e41a2d6fa790e212d3ce8aa21f02b6e01f01ea"
   license "MIT"
   head "https://github.com/jeessy2/ddns-go.git", branch: "master"
 
@@ -36,6 +36,6 @@ class DdnsGo < Formula
 
     system "curl", "--silent", "localhost:#{port}/clearLog"
     output = shell_output("curl --silent localhost:#{port}/logs")
-    assert_equal "[]", output
+    assert_match "Temporary Redirect", output
   end
 end
