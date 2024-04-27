@@ -12,9 +12,10 @@ class Mupen64plus < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 ventura:      "54d806dd6c2fd106f57b12a63ad727847a32a4bec555ec6661f4cc3e18f16c1f"
-    sha256 cellar: :any,                 monterey:     "3b1ff670ae4641fda794466ce163358f719a50f8606033a596cc779318996ebd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "6c8af0100e0056e5da34db613f0f60aa6177a83cba40536b5ee97f740ce7215d"
+    sha256 sonoma:       "0f437da2a2cfdf2ced2d2479d2ab607f32b22b9cb3d7a5a1e44ccbe95b8daa03"
+    sha256 ventura:      "199fa074563658ae7b6c05a47f9110ee598410f9238f429d929b456f45c9245c"
+    sha256 monterey:     "dba7bba059b6b612f87feebf35af939c3fb9508fb3e8fb2e5441f71778e4726a"
+    sha256 x86_64_linux: "98724239e9ae73bfcce1db911635ba6cc7947878c1843c488a6408466282bf91"
   end
 
   depends_on "pkg-config" => :build
