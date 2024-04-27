@@ -1,8 +1,8 @@
 class RiemannClient < Formula
   desc "C client library for the Riemann monitoring system"
   homepage "https://git.madhouse-project.org/algernon/riemann-c-client"
-  url "https://git.madhouse-project.org/algernon/riemann-c-client/archive/riemann-c-client-2.2.1.tar.gz"
-  sha256 "65daf32ad043ccd553a8314d1506914c2b71867d24b0e18380cb174e04861303"
+  url "https://git.madhouse-project.org/algernon/riemann-c-client/archive/riemann-c-client-2.2.2.tar.gz"
+  sha256 "468c2d6cb4095e581927005a1dab13656f5a9355e4c68a3a25fceb5c6798a72f"
   license "EUPL-1.2"
   head "https://git.madhouse-project.org/algernon/riemann-c-client.git", branch: "main"
 
@@ -25,9 +25,6 @@ class RiemannClient < Formula
   depends_on "openssl@3"
   depends_on "protobuf-c"
 
-  # upstream build patch
-  patch :DATA
-
   def install
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--prefix=#{prefix}", "--with-tls=openssl"
@@ -40,47 +37,3 @@ class RiemannClient < Formula
     system "#{bin}/riemann-client", "send", "-h"
   end
 end
-
-__END__
-diff --git a/Makefile.am b/Makefile.am
-index caf43c5..9eb8f55 100644
---- a/Makefile.am
-+++ b/Makefile.am
-@@ -68,7 +68,7 @@ CLEANFILES			= ${proto_files}
-
- ${proto_files}: ${top_srcdir}/lib/riemann/proto/riemann.proto
- 	${AM_V_at} ${mkinstalldirs} ${top_builddir}/lib/riemann/proto
--	${AM_V_GEN} protoc-c $^ -I${top_srcdir}/lib/riemann/proto --c_out=${top_builddir}/lib/riemann/proto
-+	${AM_V_GEN} ${PROTOC} $^ -I${top_srcdir}/lib/riemann/proto --c_out=${top_builddir}/lib/riemann/proto
-
- if HAVE_VERSIONING
- lib_libriemann_client_@TLS@_la_LDFLAGS += \
-diff --git a/README.md b/README.md
-index f5dcc20..f525e27 100644
---- a/README.md
-+++ b/README.md
-@@ -128,3 +128,7 @@ If, for some reason the build fails, one may need to regenerate the
- `protobuf-c-compiler` generated headers (changes in the compiler are
- known to cause issues). To do this, do a `make distclean` first, and
- then start over from `configure`.
-+
-+If the protobuf-c compiler fails, and complains about `PROTO3` as maximum
-+edition, install protobuf 26+ too, and either start over from `configure`, or
-+set the `PROTOC` environment variable to `protoc`.
-diff --git a/configure.ac b/configure.ac
-index 8c4733c..4b48987 100644
---- a/configure.ac
-+++ b/configure.ac
-@@ -35,8 +35,8 @@ AC_PROG_CXX
-
- LT_INIT([shared])
-
--AC_CHECK_PROG([HAS_PROTOC_C], [protoc-c], [yes])
--if test x$HAS_PROTOC_C != x"yes"; then
-+AC_CHECK_PROGS([PROTOC], [protoc protoc-c])
-+if test -z "${PROTOC}"; then
-    AC_MSG_ERROR([You need protoc-c installed and on your path to proceed. You can find it at https://github.com/protobuf-c/protobuf-c])
- fi
-
---
-2.44.0
