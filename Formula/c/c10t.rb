@@ -7,13 +7,13 @@ class C10t < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "4ff08fb8cb3941ab320a9f4ec820da891eff3e39d14ed9c38843c573b1704340"
-    sha256 cellar: :any,                 arm64_ventura:  "856d872dffdf383de68992607b02de367f2cedff332afe663a347c7cef39de35"
-    sha256 cellar: :any,                 arm64_monterey: "17c55821f3fe09927bb589a1457d8ae51011ac4ee67fb4b69d4b60b61a84633e"
-    sha256 cellar: :any,                 sonoma:         "12f263defc63989d44f9dbac1edc86a2e093784aae77bae5525b44c2b4d28ea6"
-    sha256 cellar: :any,                 ventura:        "03c8e64ba64e0698c8def0829ff8edba107ecd8dd0b0d936458f5da9e4f7f965"
-    sha256 cellar: :any,                 monterey:       "f1b40738214b734bac6ef582ce855f5743dc1ea1ca49e1e7536cb5c13df2dae4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d6a5d1b9ee6d2a4671ad6ffbd6b8355a48f448ac2c87f53147d9293d7e9726ca"
+    sha256 cellar: :any,                 arm64_sonoma:   "355ca9fb9bb10bdbf2462da32181daa401abe8803d7bd2e403ea3f8eaec6f30a"
+    sha256 cellar: :any,                 arm64_ventura:  "3343bb2cab905b7f8fa2970080457a5ce35bac8f0d8b437c71488078bd7d65eb"
+    sha256 cellar: :any,                 arm64_monterey: "9c3bb3f90c776e7c9a26c68eb7736bccec14201131b21a1d8cef6ffe1c807148"
+    sha256 cellar: :any,                 sonoma:         "bc41d3565e4a08b220f1fa633e9bf22deba60ad963df117cc6f8a101bcd80217"
+    sha256 cellar: :any,                 ventura:        "302af66eb43af05e5916de3c03e4099852fe3c732c646e5a354b54a092b73348"
+    sha256 cellar: :any,                 monterey:       "7d77247a708fc5de9e6dedf06d0b7cb96e57ca04669fc4e71699374a439a7c08"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9b1d919dd79da3d6c061a727f7f92356d176be1165c4fb43ecf19faac0e475a8"
   end
 
   depends_on "cmake" => :build
