@@ -130,6 +130,7 @@ babel
 babl
 bacon
 bacula-fd
+badkeys
 bagit
 baidupcs-go
 balena-cli
