@@ -341,6 +341,7 @@ clingo
 clipboard
 clojurescript
 closure-compiler
+closure-lsp
 cloud-nuke
 cloud-sql-proxy
 cloudflare-quiche
