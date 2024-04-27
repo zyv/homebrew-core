@@ -340,6 +340,7 @@ cliclick
 clifm
 clingo
 clipboard
+clojure
 clojurescript
 closure-compiler
 cloud-nuke
