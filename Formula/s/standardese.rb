@@ -21,13 +21,13 @@ class Standardese < Formula
   end
 
   bottle do
-    sha256                               arm64_sonoma:   "d6bd756f3e69b8118564823fd062d8ec51a6b944638984cae174d86ca5ba25cb"
-    sha256                               arm64_ventura:  "6d4854816fd5cd670293dc63772bdeaa7913b6d7e299621738672e6d16a2ce2f"
-    sha256                               arm64_monterey: "63c933dcb34c09f18123146201641e70729b55b18480f70747948bf4a46083ef"
-    sha256                               sonoma:         "8d8a4c82c6ed48a43564c526f6527675082161233ce2c34cdc6e121bb4d6be17"
-    sha256                               ventura:        "f11392c8b19c1e7a12df994064d1ede809923412250e410d85a07f05ab131b08"
-    sha256                               monterey:       "072fce3c8ec73bf67f100b3d60fbcd49037564ce58cd8edd1c1d8d2cb78d43e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5623097445c39eed9d64848abd5f22347f8136e64fe037f742f385db3af65bc5"
+    sha256                               arm64_sonoma:   "362272beec22bc9b8ffe1cf3d1e139fb2f7b2b5216c53fc047bf02abff981dc5"
+    sha256                               arm64_ventura:  "4602636a4276f940a0151df62e52d3e7cf0f5b8b58ae338109095820d51d30d2"
+    sha256                               arm64_monterey: "d8c9a2a0650c729c836a36f6922a7c8bda0439aac982853932df0f0235e55a3c"
+    sha256                               sonoma:         "06d53bdd40fb8a90a51fcc340d3073d6ac845fb1c9ce550eff9f4cbda9508e83"
+    sha256                               ventura:        "3f5d2991596e83b23235378510c02a2e8b7b7f17819ab763b501c3979ca88da5"
+    sha256                               monterey:       "5d0c9a7d4defee7b0edddc12fed4d356155f6bb0d735023f9e80fbb72dd18583"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a179ebb256a5d21a95cc52a0de2d87528ccef9e139d4f3790a0f6714481c5511"
   end
 
   depends_on "cmake" => :build
