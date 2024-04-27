@@ -79,6 +79,8 @@ class Curl < Formula
       --with-librtmp
       --with-libssh2
       --without-libpsl
+      --with-zsh-functions-dir=#{zsh_completion}
+      --with-fish-functions-dir=#{fish_completion}
     ]
 
     args << if OS.mac?
