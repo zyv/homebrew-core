@@ -12,13 +12,13 @@ class Pinocchio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "4225c920ce4da6c69e0c250573d7ea901bf7d08606d3621f8c2d251f6beed382"
-    sha256 cellar: :any,                 arm64_ventura:  "3625ab5afaeb3f74c6f2c06608dea16c29ba1b1535dbf1e480bc0c4ea5b3e613"
-    sha256 cellar: :any,                 arm64_monterey: "57bf405cad6c48862a8b701250392864391583818c7857ea179b1920f9ecb681"
-    sha256 cellar: :any,                 sonoma:         "a52895cf7dfde9de4416546e6f8b2fc4a4e72450f8261f7a27a6714bdc5b4aa2"
-    sha256 cellar: :any,                 ventura:        "31c92723f2a035782ed65e23031054021c7112e24fdd32abe93a42f09f9ce15c"
-    sha256 cellar: :any,                 monterey:       "19084bbf232327deac104b43f2950f4b1abeb4af4a2846e29043cebcef54e374"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e45984dacaa80a5ce790c2599395f717bc9559dccc061c2274daa29b3c33c0d5"
+    sha256 cellar: :any,                 arm64_sonoma:   "0e2575f8d573f3760be3ad8de68785c552935d4479196ad53bb2fcc4ead3dbcc"
+    sha256 cellar: :any,                 arm64_ventura:  "ba757831239ab83459de79d8411861c5950e6007394721bd9369073da00b9a2b"
+    sha256 cellar: :any,                 arm64_monterey: "7103ae81cdb44f41458d8dee0e9c91f946ec11b7920f7815dceed29d630ba023"
+    sha256 cellar: :any,                 sonoma:         "2d0a09efb7e362932f1758caf129203aed2b5b10295a4cc512979d332bd01bcd"
+    sha256 cellar: :any,                 ventura:        "d31f608a766fd378b309755067f707dffad0b099ef7c6a2b452a8520724be2d3"
+    sha256 cellar: :any,                 monterey:       "e71c53c9c664f6e9b666d85678a2e8a32c9148b0500201b1d096dc007f08fcd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8051834fa5c74a06105dcf814f538c5234e38ec84de4075f41d60c8c56bf4b9"
   end
 
   depends_on "cmake" => :build
