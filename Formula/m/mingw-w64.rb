@@ -22,6 +22,8 @@ class MingwW64 < Formula
     sha256 x86_64_linux:   "18f643336db02fa5262279462b07f8150e3fc5e02583ac8d5d7e331b5e82561f"
   end
 
+  # binutils searches for zstd using pkg-config
+  depends_on "pkg-config" => :build
   # Apple's makeinfo is old and has bugs
   depends_on "texinfo" => :build
 
@@ -29,6 +31,9 @@ class MingwW64 < Formula
   depends_on "isl"
   depends_on "libmpc"
   depends_on "mpfr"
+  depends_on "zstd"
+
+  uses_from_macos "zlib"
 
   resource "binutils" do
     url "https://ftp.gnu.org/gnu/binutils/binutils-2.42.tar.xz"
@@ -71,6 +76,8 @@ class MingwW64 < Formula
           --enable-targets=#{target}
           --disable-multilib
           --disable-nls
+          --with-system-zlib
+          --with-zstd
         ]
         mkdir "build-#{arch}" do
           system "../configure", *args
@@ -98,14 +105,15 @@ class MingwW64 < Formula
         --with-sysroot=#{arch_dir}
         --prefix=#{arch_dir}
         --with-bugurl=#{tap.issues_url}
-        --enable-languages=c,c++,fortran
+        --enable-languages=c,c++,objc,obj-c++,fortran
         --with-ld=#{arch_dir}/bin/#{target}-ld
         --with-as=#{arch_dir}/bin/#{target}-as
         --with-gmp=#{Formula["gmp"].opt_prefix}
         --with-mpfr=#{Formula["mpfr"].opt_prefix}
         --with-mpc=#{Formula["libmpc"].opt_prefix}
         --with-isl=#{Formula["isl"].opt_prefix}
-        --with-zstd=no
+        --with-system-zlib
+        --with-zstd
         --disable-multilib
         --disable-nls
         --enable-threads=posix
