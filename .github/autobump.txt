@@ -1594,6 +1594,7 @@ picard-tools
 pidgin
 pig
 pillow
+pinocchio
 pinot
 pint
 pip-audit
