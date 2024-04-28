@@ -4,6 +4,7 @@ class LibpahoMqtt < Formula
   url "https://github.com/eclipse/paho.mqtt.c/archive/refs/tags/v1.3.13.tar.gz"
   sha256 "47c77e95609812da82feee30db435c3b7c720d4fd3147d466ead126e657b6d9c"
   license "EPL-2.0"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "eaad10a2d0f97a601e347085e12cf9572336692cbf4ccef95573111f51e7ccd3"
@@ -16,9 +17,10 @@ class LibpahoMqtt < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "openssl@3"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", "-DPAHO_WITH_SSL=ON", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
