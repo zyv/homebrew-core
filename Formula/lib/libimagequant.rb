@@ -1,8 +1,8 @@
 class Libimagequant < Formula
   desc "Palette quantization library extracted from pnquant2"
   homepage "https://pngquant.org/lib/"
-  url "https://github.com/ImageOptim/libimagequant/archive/refs/tags/4.3.0.tar.gz"
-  sha256 "7f590ed400def273381ac066f46b9f9e8b3e0b1985a5b7e82ca7a65541a6681b"
+  url "https://github.com/ImageOptim/libimagequant/archive/refs/tags/4.3.1.tar.gz"
+  sha256 "75020204491f14a8cdf4b857f6c5bab08b6b5f1736345412b296a253bc632bf6"
   license :cannot_represent
 
   bottle do
