@@ -10,6 +10,16 @@ class Libtickit < Formula
     regex(/href=.*?libtickit[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "51b38ea86c54e7e7066a4a647fb54a5ead901cad66351864fff9c13b7d7ad5d2"
+    sha256 cellar: :any,                 arm64_ventura:  "977351edbb07a69bb5fd6e8ac66beea1c21079a5222a9d99cd8682ea3bf19869"
+    sha256 cellar: :any,                 arm64_monterey: "62791be08577ec55964ae31b4773ea1b40f5e6eded04c5a7d53db91f9a4f6aa5"
+    sha256 cellar: :any,                 sonoma:         "f8b70ed83814c613ec565f63c620a3a610d577351b82a88c43092d8607f70c84"
+    sha256 cellar: :any,                 ventura:        "8e05bb158469669b22f12becd2ef300edee426be92d0bd32a0664bb658e77d77"
+    sha256 cellar: :any,                 monterey:       "4b6947249116e4c22a74bd74ba2db83b5b66b31ef1efb2a732ea4783ea0baf2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c521424137d6ff8325dd9baa8102c2ba32b2f3429a50998016d3931c69f9dc6e"
+  end
+
   depends_on "libtool" => :build
   depends_on "pkg-config" => :build
   depends_on "libtermkey"
