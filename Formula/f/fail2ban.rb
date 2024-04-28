@@ -12,13 +12,14 @@ class Fail2ban < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "91d045d27090b2fbb804b2a2664113a05994b95b448fecbe0fd510d179aa0575"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "91d045d27090b2fbb804b2a2664113a05994b95b448fecbe0fd510d179aa0575"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "91d045d27090b2fbb804b2a2664113a05994b95b448fecbe0fd510d179aa0575"
-    sha256 cellar: :any_skip_relocation, sonoma:         "02690c016600f89a6fd2ef1db64e02c8afee903662c033674d2153e0a3642e31"
-    sha256 cellar: :any_skip_relocation, ventura:        "02690c016600f89a6fd2ef1db64e02c8afee903662c033674d2153e0a3642e31"
-    sha256 cellar: :any_skip_relocation, monterey:       "02690c016600f89a6fd2ef1db64e02c8afee903662c033674d2153e0a3642e31"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17696ca92925114343ba483955efa4c34b5dacdec5b242f95c20712a7e3dc550"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "9a2ad3c6f2d059d4850a456ee61d2ec7fb98871b691bf5459c5f72eb35718153"
+    sha256 cellar: :any,                 arm64_ventura:  "29d10c2c5fd555dde333ae1336671c4d6fd60185424b3d27ec96eb425d54acf4"
+    sha256 cellar: :any,                 arm64_monterey: "51edc42706c0111efa1b50c3d5a126560089ee21b71fd885a1dcb273a495dc9d"
+    sha256 cellar: :any,                 sonoma:         "1b8b7461c2cd1dcecb4e63b86e18e321fcd874a4f89a07991bffca12cc48c78c"
+    sha256 cellar: :any,                 ventura:        "a09486a0617d89608ecf994caffd4e113df92706fb8a544075ca0b543a5d9c77"
+    sha256 cellar: :any,                 monterey:       "15c3b1fdcf3acd343a965040256f3c5ab524f7d67f1d052207134077ed32d6e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2c45ae1eabc4ee45291465540dbcd94724fa9bab68f93f85a11821e7de4dcae8"
   end
 
   depends_on "sphinx-doc" => :build
