@@ -6,6 +6,7 @@ class SyslogNg < Formula
   url "https://github.com/syslog-ng/syslog-ng/releases/download/syslog-ng-4.7.1/syslog-ng-4.7.1.tar.gz"
   sha256 "5477189a2d12325aa4faebfcf59f5bdd9084234732f0c3ec16dd253847dacf1c"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+  revision 1
 
   bottle do
     sha256 arm64_sonoma:   "32bd87ad18d6c957acf6d18fdfe9559007fe3934cee2f2c43397317396441007"
@@ -17,24 +18,26 @@ class SyslogNg < Formula
     sha256 x86_64_linux:   "24dadc10ff927f1c28d1bc030fcc71a7a6448a86e849e5ccb407f882894e5a6d"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "autoconf-archive" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
   depends_on "pkg-config" => :build
 
+  depends_on "abseil"
   depends_on "glib"
+  depends_on "grpc"
   depends_on "hiredis"
   depends_on "ivykis"
   depends_on "json-c"
   depends_on "libdbi"
   depends_on "libmaxminddb"
   depends_on "libnet"
+  depends_on "libpaho-mqtt"
   depends_on "librdkafka"
   depends_on "mongo-c-driver"
+  depends_on "net-snmp"
   depends_on "openssl@3"
   depends_on "pcre2"
+  depends_on "protobuf"
   depends_on "python@3.12"
+  depends_on "rabbitmq-c"
   depends_on "riemann-client"
 
   uses_from_macos "curl"
@@ -50,16 +53,20 @@ class SyslogNg < Formula
 
     venv_path = libexec/"python-venv"
     system "./configure", *std_configure_args,
+                          "CXXFLAGS=-std=c++17",
                           "--disable-silent-rules",
+                          "--enable-all-modules",
                           "--sysconfdir=#{pkgetc}",
                           "--localstatedir=#{var}/#{name}",
                           "--with-ivykis=system",
                           "--with-python=#{sng_python_ver}",
                           "--with-python-venv-dir=#{venv_path}",
-                          "--disable-afsnmp",
                           "--disable-example-modules",
                           "--disable-java",
-                          "--disable-java-modules"
+                          "--disable-java-modules",
+                          "--disable-smtp",
+                          # enable this after v4.8.0 is released: https://github.com/syslog-ng/syslog-ng/pull/4924
+                          "--disable-grpc"
     system "make", "install"
 
     requirements = lib/"syslog-ng/python/requirements.txt"
