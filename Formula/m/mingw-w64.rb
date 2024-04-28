@@ -12,14 +12,14 @@ class MingwW64 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_sonoma:   "f3c537c4fb29ff0f571e65b64d67c84de38d83ada5ce29076d6ecf643bba7432"
-    sha256 arm64_ventura:  "85645db0ba736c87e48f71e94b4d3510721968453d4ab34c20694b1182a1d01a"
-    sha256 arm64_monterey: "4b7a1c60068afa548768c7c6d27b5dab5c154c1ead8b3bbf795fe386989988bb"
-    sha256 sonoma:         "aa1939ccf0fa3445beff41a7778f82cc2facc9f094cfd04a8b882151ec3f0c23"
-    sha256 ventura:        "9d97ca8db9c0fb13aae21084f628f4d8d06a0190275d9a32964acb1ba907611d"
-    sha256 monterey:       "de5240ce5c8df8a75a13e3791d9ff0cb497ecdaa88906e08a729859d27900f14"
-    sha256 x86_64_linux:   "18f643336db02fa5262279462b07f8150e3fc5e02583ac8d5d7e331b5e82561f"
+    rebuild 2
+    sha256 arm64_sonoma:   "166737c970ee5a025dc5ecfc36afd0850ed16a4a3b13ac7a1a706b7d98eb20b7"
+    sha256 arm64_ventura:  "fa487b22ea3635fac2e05d91b7c31667927e693085135dd3f3ef7c8645f6aabb"
+    sha256 arm64_monterey: "3397b288b7d9133a6b9e7bd6f9f016151440a724de848dfb8d90ccb27876a242"
+    sha256 sonoma:         "bf54be7e06281b1090f94a6e98e32ce63ceb67b7ba13fc0f2187127bbf5753f2"
+    sha256 ventura:        "dcaeed42886127b357f8a48cce28752f71f56270100d8b026e908ccd0e455dba"
+    sha256 monterey:       "05f340ac5b0f75e20d59bbe71cb53fd0599f2b49a1c312380daec2be931ba752"
+    sha256 x86_64_linux:   "94c79056b935ead8fa122187e4b3c29c2b4a2e11e56ea07b927807deceb90516"
   end
 
   # binutils searches for zstd using pkg-config
