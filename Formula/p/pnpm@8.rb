@@ -12,6 +12,16 @@ class PnpmAT8 < Formula
     regex(/["']version["']:\s*?["'](8[^"']+)["']/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "849c0aa25de16f51ca7fcdeed19e163bcb0551b3dd4dc1bc9ee52ead756fbc34"
+    sha256 cellar: :any,                 arm64_ventura:  "849c0aa25de16f51ca7fcdeed19e163bcb0551b3dd4dc1bc9ee52ead756fbc34"
+    sha256 cellar: :any,                 arm64_monterey: "849c0aa25de16f51ca7fcdeed19e163bcb0551b3dd4dc1bc9ee52ead756fbc34"
+    sha256 cellar: :any,                 sonoma:         "d2544ff56b3d13e34dd63854297421384c2659ad0398d2242121dae6d6473550"
+    sha256 cellar: :any,                 ventura:        "d2544ff56b3d13e34dd63854297421384c2659ad0398d2242121dae6d6473550"
+    sha256 cellar: :any,                 monterey:       "d2544ff56b3d13e34dd63854297421384c2659ad0398d2242121dae6d6473550"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53d2d5ba6f77a39ca8b682c5e914251da7c6b32e62698a54c6290186dccf0f13"
+  end
+
   keg_only :versioned_formula
 
   disable! date: "2025-04-30", because: :unmaintained
