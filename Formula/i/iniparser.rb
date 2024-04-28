@@ -1,8 +1,8 @@
 class Iniparser < Formula
   desc "Library for parsing ini files"
   homepage "https://github.com/ndevilla/iniparser"
-  url "https://github.com/ndevilla/iniparser/archive/refs/tags/v4.1.tar.gz"
-  sha256 "960daa800dd31d70ba1bacf3ea2d22e8ddfc2906534bf328319495966443f3ae"
+  url "https://github.com/ndevilla/iniparser/archive/refs/tags/v4.2.tar.gz"
+  sha256 "dbcbaf3aedb4f88a9fc0df4b315737ddd10e6c37918e3d89f0ecc475333bde4d"
   license "MIT"
   head "https://github.com/ndevilla/iniparser.git", branch: "master"
 
