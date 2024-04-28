@@ -341,9 +341,9 @@ clifm
 clingo
 clipboard
 clojure
+clojure-lsp
 clojurescript
 closure-compiler
-closure-lsp
 cloud-nuke
 cloud-sql-proxy
 cloudflare-quiche
