@@ -1,8 +1,8 @@
 class Nudoku < Formula
   desc "Ncurses based sudoku game"
   homepage "https://jubalh.github.io/nudoku/"
-  url "https://github.com/jubalh/nudoku/archive/refs/tags/3.0.0.tar.gz"
-  sha256 "56c9f8d70ca350411dccfdc5a0e2dc39aaa83da08f87ad874f7f4b7fb64b3541"
+  url "https://github.com/jubalh/nudoku/archive/refs/tags/4.0.0.tar.gz"
+  sha256 "35a6efdcc03395eb2ce1f9e3640d9a7100469197a466cb49cb48ef55291eadd0"
   license "GPL-3.0-or-later"
   head "https://github.com/jubalh/nudoku.git", branch: "master"
 
@@ -24,8 +24,14 @@ class Nudoku < Formula
 
   uses_from_macos "ncurses"
 
+  # fix variable scope issue
+  patch do
+    url "https://github.com/jubalh/nudoku/commit/20c30f6d189eb78bf6c0eae4b5f4b9d5e1baf0ba.patch?full_index=1"
+    sha256 "49f81f4fb9bf6feb696859b7e25d6f189493239313d8f4e3d1a0ad1ee850312b"
+  end
+
   def install
-    system "autoreconf", "-fiv"
+    system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--enable-cairo",

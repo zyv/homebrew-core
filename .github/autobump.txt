@@ -1460,6 +1460,7 @@ nsq
 nss
 ntfy
 nuclei
+nudoku
 numactl
 numbat
 numcpp
