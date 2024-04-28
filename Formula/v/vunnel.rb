@@ -3,8 +3,8 @@ class Vunnel < Formula
 
   desc "Tool for collecting vulnerability data from various sources"
   homepage "https://github.com/anchore/vunnel"
-  url "https://files.pythonhosted.org/packages/aa/9a/1a0f4e95ceb1cff072ab3703e1aa36a67fb1163d47755753ea562c598fed/vunnel-0.21.2.tar.gz"
-  sha256 "3cd5948aeacd15912084c8a5933119b38be42d9a63bb0fb2e2e275c84ffa6509"
+  url "https://files.pythonhosted.org/packages/11/33/9946f1c61f82fc3e6d8a2f14faa50db95aed823b7d38091fc6c9cdf07638/vunnel-0.22.0.tar.gz"
+  sha256 "71366a96eae6c2ecd5bd63873faaffb478c285ab2c04219dcbf2dd80d5dfb204"
   license "Apache-2.0"
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
@@ -46,11 +46,9 @@ class Vunnel < Formula
     sha256 "3e3e079a41feb5a1b64f978b5ea4f46040a94f11f0e8bbb8261e3dbbeca64d44"
   end
 
-  # 3.0 is not yet published on PyPI: https://github.com/RedHatProductSecurity/cvss/issues/55
-  # but it's the version depended on upstream: https://github.com/anchore/vunnel/pull/464
   resource "cvss" do
-    url "https://github.com/RedHatProductSecurity/cvss/archive/refs/tags/v3.0.tar.gz"
-    sha256 "ed976fba0910b55aa60c55c6056721514b125d8b54af2da6e39aeb3ddd929f58"
+    url "https://files.pythonhosted.org/packages/f0/c1/3ec60fa39d598bf652871f012cf8fd7e85f80ca6b2243c312c84a96a1314/cvss-3.1.tar.gz"
+    sha256 "54789edd255d1bc26cc04919f5795e250e9ce2da33b2fc0e8e709f22cb88c5fc"
   end
 
   resource "defusedxml" do
@@ -64,8 +62,8 @@ class Vunnel < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/bf/3f/ea4b9117521a1e9c50344b909be7886dd00a519552724809bb1f486986c2/idna-3.6.tar.gz"
-    sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
+    url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
+    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
   end
 
   resource "ijson" do
@@ -114,8 +112,8 @@ class Vunnel < Formula
   end
 
   resource "orjson" do
-    url "https://files.pythonhosted.org/packages/2c/b1/10d5314003aeac7cb27824f502eedcf4f2705efc1b38f70db247e9ff99b5/orjson-3.10.0.tar.gz"
-    sha256 "ba4d8cac5f2e2cff36bea6b6481cdb92b38c202bcec603d6f5ff91960595a1ed"
+    url "https://files.pythonhosted.org/packages/f5/af/0daa12a907215a5af6d97db8adf301ef14a1b1c651f7e176ee04e0998433/orjson-3.10.1.tar.gz"
+    sha256 "a883b28d73370df23ed995c466b4f6c708c1f7a9bdc400fe89165c96c7603204"
   end
 
   resource "packaging" do
@@ -124,13 +122,13 @@ class Vunnel < Formula
   end
 
   resource "pluggy" do
-    url "https://files.pythonhosted.org/packages/54/c6/43f9d44d92aed815e781ca25ba8c174257e27253a94630d21be8725a2b59/pluggy-1.4.0.tar.gz"
-    sha256 "8c85c2876142a764e5b7548e7d9a0e0ddb46f5185161049a79b7e974454223be"
+    url "https://files.pythonhosted.org/packages/96/2d/02d4312c973c6050a18b314a5ad0b3210edb65a906f868e31c111dede4a6/pluggy-1.5.0.tar.gz"
+    sha256 "2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1"
   end
 
   resource "pytest" do
-    url "https://files.pythonhosted.org/packages/30/b7/7d44bbc04c531dcc753056920e0988032e5871ac674b5a84cb979de6e7af/pytest-8.1.1.tar.gz"
-    sha256 "ac978141a75948948817d360297b7aae0fcb9d6ff6bc9ec6d514b85d5a65c044"
+    url "https://files.pythonhosted.org/packages/09/9d/78b3785134306efe9329f40815af45b9215068d6ae4747ec0bc91ff1f4aa/pytest-8.2.0.tar.gz"
+    sha256 "d507d4482197eac0ba2bae2e9babf0672eb333017bcedaa5fb1a3d42c1174b3f"
   end
 
   resource "pytest-snapshot" do
@@ -154,8 +152,8 @@ class Vunnel < Formula
   end
 
   resource "ruff" do
-    url "https://files.pythonhosted.org/packages/ee/bc/f38c369c43e74ad172d2ba2053ebd6ce2743e863023b0dd6f7a65621beda/ruff-0.3.5.tar.gz"
-    sha256 "a067daaeb1dc2baf9b82a32dae67d154d95212080c80435eb052d95da647763d"
+    url "https://files.pythonhosted.org/packages/f1/ef/b34ab9103284368f9ef958547998168955d32b017e02e4d66acfb8c57b9a/ruff-0.4.2.tar.gz"
+    sha256 "33bcc160aee2520664bc0859cfeaebc84bb7323becff3f303b8f1f2d81cb4edc"
   end
 
   resource "six" do
