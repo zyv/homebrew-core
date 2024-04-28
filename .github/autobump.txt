@@ -1105,6 +1105,7 @@ kubeaudit
 kubebuilder
 kubecfg
 kubecm
+kubecolor
 kubeconform
 kubefirst
 kubekey
