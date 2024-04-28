@@ -184,6 +184,7 @@ bk
 bkt
 black
 bluepill
+blueutil
 bluez
 bmake
 bnd
