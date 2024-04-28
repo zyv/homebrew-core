@@ -764,6 +764,7 @@ fuse-overlayfs
 fuseki
 futhark
 fw
+fwup
 fwupd
 fx
 fzf
