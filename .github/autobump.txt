@@ -1159,6 +1159,7 @@ libcap-ng
 libclc
 libcoap
 libcouchbase
+libcpuid
 libdap
 libdeflate
 libdnet
