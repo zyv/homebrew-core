@@ -3,8 +3,8 @@ require "language/node"
 class Artillery < Formula
   desc "Cloud-native performance & reliability testing for developers and SREs"
   homepage "https://artillery.io/"
-  url "https://registry.npmjs.org/artillery/-/artillery-2.0.10.tgz"
-  sha256 "a22ba3b6297a3babcefc218442a800daef4ecf1db377d10345156fa13e5a0d98"
+  url "https://registry.npmjs.org/artillery/-/artillery-2.0.11.tgz"
+  sha256 "3b7be31e27992dc4d99d72ff4825ee1e4150b318cfe0227595dc09149c2002f2"
   license "MPL-2.0"
 
   livecheck do
