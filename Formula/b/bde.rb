@@ -11,14 +11,13 @@ class Bde < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "2ec67f02b6f24193a57ef4da58e6f14e93cfe472889e0c31647bb014baf386a3"
-    sha256 cellar: :any,                 arm64_ventura:  "a77966d44eff4c5151c256e3797067412d63009763ff533352b6afa4ec3db868"
-    sha256 cellar: :any,                 arm64_monterey: "c47b0514a2dbd1692a347066c3dd9880c370af0adb8f858af88d62e6438d3c91"
-    sha256 cellar: :any,                 sonoma:         "70d427ee0ea6ede4beb5f37826bab1949e55d5141f4bb7971bc0748c20d74417"
-    sha256 cellar: :any,                 ventura:        "2a30bc3f66bf879b34bb29cee2d1b909e52b46d51cd0c6407dbe8cd49ba69673"
-    sha256 cellar: :any,                 monterey:       "808d18c89ae1f51c77d718ddf1b91be6dfc47856f6eba4e533174a865f2b16fa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "26b96ecc32f3c86336cb592434a4d68486264a73a1fdb7b4b09be21916498a4f"
+    sha256 cellar: :any,                 arm64_sonoma:   "5795f3e1c52cb98aeec7c2678f060f2e94500fb1a9dd8b68c31dbc347ec05c9e"
+    sha256 cellar: :any,                 arm64_ventura:  "9056bcaab5bd65600019316eb42b502c30e614455faff16c0db65732389b662c"
+    sha256 cellar: :any,                 arm64_monterey: "e0fadd564b1f8dc72f43faee5705e968c3a803b9ba71b7e2a1903c8e73100fa5"
+    sha256 cellar: :any,                 sonoma:         "5d2ff14421850452e4d56031188763267f8005ff4a57fd31fcf27e6340dff60d"
+    sha256 cellar: :any,                 ventura:        "547a50de15385779bdd50fb09603b563fe1c541ba1ed8d15c305ff30db0da45b"
+    sha256 cellar: :any,                 monterey:       "df1954fe0914a593566be37c8f6bdfb69b68826bb3cad44f1352a856332ce904"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb2a6523e5adccbfb81cd1bf5594a6c023167a13887b8d1f5f25a5330d5bc228"
   end
 
   depends_on "cmake" => :build
