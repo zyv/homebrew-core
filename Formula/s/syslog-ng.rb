@@ -9,13 +9,13 @@ class SyslogNg < Formula
   revision 1
 
   bottle do
-    sha256 arm64_sonoma:   "32bd87ad18d6c957acf6d18fdfe9559007fe3934cee2f2c43397317396441007"
-    sha256 arm64_ventura:  "9a4afb80473105db1f8c53ce2030eab4be2dd80f8352c211fe617d75fa82372f"
-    sha256 arm64_monterey: "dfd39f4c49729c14e1e02021cd638f3d58a8e15dd601dd26a5141ab9b2a5690e"
-    sha256 sonoma:         "086e84e5052a5c841fc0a878cdbf89a012a0186d77133c2f0e829b1a15c61069"
-    sha256 ventura:        "a83ce64252e31f4b7269e55ad02c8255d4c928e8d863959f25656763667c873e"
-    sha256 monterey:       "8e078e247b38ebb3aad67afc34d4b9139484f97d211f8c44fbeee42dcb3ee074"
-    sha256 x86_64_linux:   "24dadc10ff927f1c28d1bc030fcc71a7a6448a86e849e5ccb407f882894e5a6d"
+    sha256 arm64_sonoma:   "00ddc4bfca13ce78ad1cd239a9301f53001eb0cda274066ce8df6b40a21d61a1"
+    sha256 arm64_ventura:  "10e01ab94e2262a8a01dae99fb776eea96a2d41614fb36bc5fee24293951aee5"
+    sha256 arm64_monterey: "7620a7c1b231ce58c1a2ba392cef60d8c2c63d74a828c4cc9268f5ed1538559e"
+    sha256 sonoma:         "b18cb6a6666ee472c9732d8125edfdab8cccdf11a81ccd51ae5ce8733bad7940"
+    sha256 ventura:        "4819160183f8f5b9fe125d8748857ba22e1d621ea2b177ec394ac7ab72d1a5f8"
+    sha256 monterey:       "a55a7155ca829aa0d75de2c8b54d070d725509a1615fee7f171389c04ab19280"
+    sha256 x86_64_linux:   "cbc70738ff261585815d286fd9cce6e43d202cfc2f8f0311933f1a6d76b82c5a"
   end
 
   depends_on "pkg-config" => :build
