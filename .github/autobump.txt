@@ -1694,6 +1694,7 @@ pygments
 pygobject3
 pyinstaller
 pylint
+pylyzer
 pymol
 pyoxidizer
 pypy
