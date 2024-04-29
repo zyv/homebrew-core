@@ -2114,6 +2114,7 @@ usb.ids
 usbredir
 util-macros
 uutils-coreutils
+uutils-diffutils
 uutils-findutils
 uuu
 uv
