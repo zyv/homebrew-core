@@ -1,8 +1,8 @@
 class Imgproxy < Formula
   desc "Fast and secure server for resizing and converting remote images"
   homepage "https://imgproxy.net"
-  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v3.23.0.tar.gz"
-  sha256 "d48721d96bf2974af4b6e612d0cdb27484d132c9f9ad17abe5c2095f22beeb8d"
+  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v3.24.0.tar.gz"
+  sha256 "9c257be72fc46634bafe52ae42fee01d1a66b68d5724303fc676eb701a7149b0"
   license "MIT"
   head "https://github.com/imgproxy/imgproxy.git", branch: "master"
 
@@ -39,7 +39,7 @@ class Imgproxy < Formula
     pid = fork do
       exec bin/"imgproxy"
     end
-    sleep 20
+    sleep 30
 
     output = testpath/"test-converted.png"
 
