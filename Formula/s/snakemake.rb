@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/cf/30/a499aacba2e7c8ceeda46135a0099afb7142e071fe802c7ee1bff85a0a42/snakemake-8.11.0.tar.gz"
-  sha256 "1f49ac4fe87886b0c3db45aa2d4b257afa81bea862ac48ab2667b693cad274f0"
+  url "https://files.pythonhosted.org/packages/aa/99/cf43b78cb3eec765334ae95001e3ac38dcaf0b2a2413def05aa104f403c9/snakemake-8.11.1.tar.gz"
+  sha256 "54df0a2fab378f334741459a48c5293f05ae372b31ac0fd4c3ec8d19f2309356"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -260,23 +260,9 @@ class Snakemake < Formula
     sha256 "d2d77e53eafca74f58234fcd3fea28cc0a719e4f3784911511e35e86594bc880"
   end
 
-  def python3
-    "python3.12"
-  end
-
-  # Drop setuptools dep: https://github.com/snakemake/snakemake/pull/2831
-  patch do
-    url "https://github.com/snakemake/snakemake/commit/2239c05a967918d1ba58a079222ee1881c8f0f26.patch?full_index=1"
-    sha256 "5455a8f15fb158e7e6add0691e092f6f0f7ee47ce88f35f0446a315877b193e4"
-  end
-
   def install
-    virtualenv_install_with_resources
-
-    # cleanup `pulp/solverdir/cbc`
-    site_packages_path = Language::Python.site_packages(python3)
-    pulp_solverdir_path = libexec/site_packages_path/"pulp/solverdir/cbc"
-    pulp_solverdir_path.rmtree
+    venv = virtualenv_install_with_resources
+    (venv.site_packages/"pulp/solverdir/cbc").rmtree
   end
 
   test do
