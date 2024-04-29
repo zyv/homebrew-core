@@ -1359,6 +1359,7 @@ minizip-ng
 minuit2
 mkdocs
 mkfontscale
+mkvtoolnix
 mlkit
 mlt
 mlx
