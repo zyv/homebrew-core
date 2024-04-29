@@ -6,7 +6,7 @@ class Gcem < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "023923521a9f89f3669d45a1b7662805266e93d167de9e222e64121214948005"
+    sha256 cellar: :any_skip_relocation, all: "4c337ac05dac7977ed331c345563b4ec5a023af3ec25a1fd9fe714fd812170e4"
   end
 
   depends_on "cmake" => :build
