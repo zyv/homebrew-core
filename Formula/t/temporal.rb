@@ -1,8 +1,8 @@
 class Temporal < Formula
   desc "Command-line interface for running and interacting with Temporal Server and UI"
   homepage "https://temporal.io/"
-  url "https://github.com/temporalio/cli/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "9cc4e80254e95a3b456e7d605b518c1a3e4d62b92a08a05efd6cf897ce4b2f3e"
+  url "https://github.com/temporalio/cli/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "eada525bab531952b84bd78ba9631e1eaed64eba9860fd61ea1e874d454e6d30"
   license "MIT"
   head "https://github.com/temporalio/cli.git", branch: "main"
 
@@ -19,9 +19,9 @@ class Temporal < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/temporalio/cli/headers.Version=#{version}"
+    ldflags = "-s -w -X github.com/temporalio/cli/temporalcli.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd/temporal"
-    generate_completions_from_executable(bin/"temporal", "completion", shells: [:bash, :zsh])
+    generate_completions_from_executable bin/"temporal", "completion"
   end
 
   test do
