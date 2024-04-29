@@ -1,8 +1,8 @@
 class Tio < Formula
   desc "Simple TTY terminal I/O application"
   homepage "https://tio.github.io"
-  url "https://github.com/tio/tio/releases/download/v2.8/tio-2.8.tar.xz"
-  sha256 "890a880a048e604dbb9c3765d10b3dcdd2bb54cecf7b4bcc3a1ac0f3b6c95706"
+  url "https://github.com/tio/tio/releases/download/v3.0/tio-3.0.tar.xz"
+  sha256 "b7ec8eab6c29a3821e3f1239cf6baa84ef634ea2188ffa93d7a276c89338961e"
   license "GPL-2.0-or-later"
   head "https://github.com/tio/tio.git", branch: "master"
 
@@ -19,8 +19,16 @@ class Tio < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "glib"
   depends_on "inih"
   depends_on "lua"
+
+  # add macos build patch for `fs_get_creation_time`
+  # upstream patch ref, https://github.com/tio/tio/pull/244
+  patch do
+    url "https://github.com/tio/tio/commit/c37cc145d726405fb853f366ddd037329914ca52.patch?full_index=1"
+    sha256 "0d6463142fc24db2d45b5cc3cf59b0898e5c5b0e7656c6a21f3f679103d9607f"
+  end
 
   def install
     system "meson", "setup", "build", "-Dbashcompletiondir=#{bash_completion}", *std_meson_args
