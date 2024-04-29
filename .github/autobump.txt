@@ -2165,6 +2165,7 @@ vsh
 vte3
 vue-cli
 vultr
+vvdec
 vvenc
 wabt
 wakatime-cli
