@@ -7,8 +7,8 @@ class Mlx < Formula
   head "https://github.com/ml-explore/mlx.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma:  "378ecb43f9c7b7c254b0d1700a2421613dd5d500838278a28c9afbe2ee180609"
-    sha256 cellar: :any, arm64_ventura: "55d0b34cbd71ae10537fbc1b213aabc484fe480c95b8fd1889a27dd62c61cee3"
+    sha256 cellar: :any, arm64_sonoma:  "4a98688962364a969c421ed311516208b781fa325a0ca0408be5d99f5721d360"
+    sha256 cellar: :any, arm64_ventura: "23ba94caaecee0858fa7aeae82ad09b594db2cdac5cf78f085777dc4cc98dff0"
   end
 
   depends_on "cmake" => :build
