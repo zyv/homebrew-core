@@ -773,6 +773,7 @@ gateway-go
 gator
 gatsby-cli
 gau
+gcem
 gcovr
 gcsfuse
 gdal
