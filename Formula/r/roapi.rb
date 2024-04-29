@@ -1,8 +1,8 @@
 class Roapi < Formula
   desc "Full-fledged APIs for static datasets without writing a single line of code"
   homepage "https://roapi.github.io/docs"
-  url "https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.11.1.tar.gz"
-  sha256 "0bc41ff939596b10a85cf1c81364d13d8c26ee32b5718c87bc39d9907d5be037"
+  url "https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.11.2.tar.gz"
+  sha256 "ec012c64a1f8e581ec5d8cccb16336c7e82f9c7db08e5c95395f4936a621dfb6"
   license "Apache-2.0"
 
   bottle do
