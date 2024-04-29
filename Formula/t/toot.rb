@@ -6,7 +6,7 @@ class Toot < Formula
   url "https://files.pythonhosted.org/packages/e4/01/dcfb2d4fd58a5c96d99d9ff98f7a48cf0813e4a615b5953da11e67374075/toot-0.43.0.tar.gz"
   sha256 "6aa84c4b8df6e2214a3e735142bf5bd57b3b10aa08e35579425c5dbe3bc25ae7"
   license "GPL-3.0-only"
-  revision 1
+  revision 2
   head "https://github.com/ihabunek/toot.git", branch: "master"
 
   bottle do
@@ -79,8 +79,8 @@ class Toot < Formula
   end
 
   resource "urwidgets" do
-    url "https://files.pythonhosted.org/packages/16/1f/cb6f188ddd62a52b3fa5694c2a541309d246dee54e6d4bc7a4079b2bbc59/urwidgets-0.1.1.tar.gz"
-    sha256 "1e0dbceb875ace11067d93a585d8842a011db14ce78ec69ed485dc0df17f09e7"
+    url "https://files.pythonhosted.org/packages/60/6d/e7847c2a472bf16b87e4ecc3764bb059631fa5453d4148f3bb5cdd81e301/urwidgets-0.2.0.tar.gz"
+    sha256 "d41acf9d9f8d576cb580bc042919b209c5aeeb60e1f81052809c63f31c4e7688"
   end
 
   resource "wcwidth" do
