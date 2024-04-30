@@ -7,17 +7,17 @@ class Pyqt < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "e3f74e8411e07172f5553bdafc137b6e58adebdc4399854de81831021c45056c"
-    sha256 cellar: :any,                 arm64_ventura:  "a0f2ea7aa99cd0ef8ef1c9c43883179e2b3969d905d363b041824ff2ada59a4c"
-    sha256 cellar: :any,                 arm64_monterey: "e1575fd00ba11cbf6f27d1d8037656d4c0987f19a69f5960e7d84d88ccd95684"
-    sha256 cellar: :any,                 sonoma:         "1a22dd2ff55dd10d82a085992036c2216528d72d47f1af5a1011dad82a9357db"
-    sha256 cellar: :any,                 ventura:        "348a454bf27b8de335a8d2272709cdbd2792787c76b796dae3baa7f6ce316d59"
-    sha256 cellar: :any,                 monterey:       "4f25ba87939aaf9520911755f29b7190bd287e6ac3825e076ef775c64a8b417a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e0ab80ba9fa1be909117e468a0e99edb6e8f47e43de8f50a5262494225541892"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "70da9c98f162ce4f9f42b871b1951b9414c60bc88d7f6cd256791ad41a9a9de5"
+    sha256 cellar: :any,                 arm64_ventura:  "a926afd8822bace68785390696618a6354d6b39baf5a276d9e65ceafe9c8db53"
+    sha256 cellar: :any,                 arm64_monterey: "835db2f635626191030c76e1adc1639bb05609f8e8e02a3d7511ec26299393ad"
+    sha256 cellar: :any,                 sonoma:         "fbf38e8652acac6609e3c29aa05bca2d131dac3896bef6ed983294e9c4f20635"
+    sha256 cellar: :any,                 ventura:        "e5f7ef5e3d21c6c85f0c24d93cef5aa72748836e1def444ff45b90e96ffdac8d"
+    sha256 cellar: :any,                 monterey:       "61e6faf499e80d1aa952381a0b4d9bc8920a5749c5cee3c7afbcd08835567dae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba0635af95e0ed446fdea11006a8b83d871ab720738a795b17b8f0bad076c44c"
   end
 
   depends_on "pyqt-builder" => :build
-  depends_on "sip" => :build
   depends_on "python@3.12"
   depends_on "qt"
 
@@ -68,13 +68,14 @@ class Pyqt < Formula
     # HACK: there is no option to set the plugindir
     inreplace "project.py", "builder.qt_configuration['QT_INSTALL_PLUGINS']", "'#{share}/qt/plugins'"
 
+    sip_install = Formula["pyqt-builder"].opt_libexec/"bin/sip-install"
     site_packages = prefix/Language::Python.site_packages(python3)
     args = %W[
       --target-dir #{site_packages}
       --scripts-dir #{bin}
       --confirm-license
     ]
-    system "sip-install", *args
+    system sip_install, *args
 
     resource("pyqt6-sip").stage do
       system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
@@ -86,9 +87,11 @@ class Pyqt < Formula
       next if r.name == "pyqt6-webengine" && OS.mac? && DevelopmentTools.clang_build_version <= 1200
 
       r.stage do
-        inreplace "pyproject.toml", "[tool.sip.project]",
-          "[tool.sip.project]\nsip-include-dirs = [\"#{site_packages}/PyQt#{version.major}/bindings\"]\n"
-        system "sip-install", "--target-dir", site_packages
+        inreplace "pyproject.toml", "[tool.sip.project]", <<~EOS
+          [tool.sip.project]
+          sip-include-dirs = ["#{site_packages}/PyQt#{version.major}/bindings"]
+        EOS
+        system sip_install, "--target-dir", site_packages
       end
     end
   end
@@ -118,5 +121,8 @@ class Pyqt < Formula
     # Don't test WebEngineCore bindings on macOS if the SDK is too old to have built qtwebengine in qt.
     pyqt_modules << "WebEngineCore" if OS.linux? || DevelopmentTools.clang_build_version > 1200
     pyqt_modules.each { |mod| system python3, "-c", "import PyQt#{version.major}.Qt#{mod}" }
+
+    # Make sure plugin is installed as it currently gets skipped on wheel build,  e.g. `pip install`
+    assert_predicate share/"qt/plugins/designer"/shared_library("libpyqt#{version.major}"), :exist?
   end
 end
