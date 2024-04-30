@@ -2185,6 +2185,7 @@ watchexec
 wavpack
 wayland-protocols
 wazero
+weasyprint
 web-ext
 webdis
 webkitgtk
