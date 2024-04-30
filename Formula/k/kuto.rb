@@ -7,6 +7,10 @@ class Kuto < Formula
   sha256 "4e4ac78f04caebf634674fea2266d1701b20aa0a132513e58b25f8875d0b81e1"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ef0cca54501f33ac8ec2b3610a5d0897035e0ba672301e5bd7a6f858d4eff110"
+  end
+
   depends_on "node"
 
   def install
