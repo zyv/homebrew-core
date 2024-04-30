@@ -1219,6 +1219,7 @@ libscfg
 libsecret
 libshumate
 libsndfile
+libsolv
 libsoundio
 libspelling
 libsql

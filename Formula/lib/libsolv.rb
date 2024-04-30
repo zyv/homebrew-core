@@ -1,8 +1,8 @@
 class Libsolv < Formula
   desc "Library for solving packages and reading repositories"
   homepage "https://github.com/openSUSE/libsolv"
-  url "https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.28.tar.gz"
-  sha256 "bd2406f498fea6086ae0eacbf8b188c98b380e59af2267170e6a7b7d715cb207"
+  url "https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.29.tar.gz"
+  sha256 "cb8d36a345ea9491f75d88c3a36a6f575c4e25f08197562f7ab0aa1c6e8c6abd"
   license "BSD-3-Clause"
 
   livecheck do
