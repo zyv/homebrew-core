@@ -6,14 +6,13 @@ class Pyqt < Formula
   license "GPL-3.0-only"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_sonoma:   "70da9c98f162ce4f9f42b871b1951b9414c60bc88d7f6cd256791ad41a9a9de5"
-    sha256 cellar: :any,                 arm64_ventura:  "a926afd8822bace68785390696618a6354d6b39baf5a276d9e65ceafe9c8db53"
-    sha256 cellar: :any,                 arm64_monterey: "835db2f635626191030c76e1adc1639bb05609f8e8e02a3d7511ec26299393ad"
-    sha256 cellar: :any,                 sonoma:         "fbf38e8652acac6609e3c29aa05bca2d131dac3896bef6ed983294e9c4f20635"
-    sha256 cellar: :any,                 ventura:        "e5f7ef5e3d21c6c85f0c24d93cef5aa72748836e1def444ff45b90e96ffdac8d"
-    sha256 cellar: :any,                 monterey:       "61e6faf499e80d1aa952381a0b4d9bc8920a5749c5cee3c7afbcd08835567dae"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba0635af95e0ed446fdea11006a8b83d871ab720738a795b17b8f0bad076c44c"
+    sha256 cellar: :any,                 arm64_sonoma:   "ff5ebac9070a5f9d15442ff0981eb5690dd9cf668fbcef8cbd53dd24ffaed2ad"
+    sha256 cellar: :any,                 arm64_ventura:  "ec3abbbc7751faabf34fa388100d9685acabbd788428d71a2d998e1ba7379fa5"
+    sha256 cellar: :any,                 arm64_monterey: "796c48191e9685b5d4184a4d676cbedd5caefcba0094854cb4e4b2231ec35264"
+    sha256 cellar: :any,                 sonoma:         "14468a809fdc8f2d80c6b4418e17ff6594ec5a8e562cfabfb6275a66194480ec"
+    sha256 cellar: :any,                 ventura:        "73c9d46adae4ce63e55848875bd1c013dc20464b19d8528d6dd735ad39e6c8a6"
+    sha256 cellar: :any,                 monterey:       "88c4cd143db46e6a86bce96640c6b1248767ac35ef1699022c3a8da98e15de9e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e4a6aac19ca0975376890d595ad29dcb5aee9db23b69f52e868bc4280f608e75"
   end
 
   depends_on "pyqt-builder" => :build
