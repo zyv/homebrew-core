@@ -4,6 +4,7 @@ class VideoCompare < Formula
   url "https://github.com/pixop/video-compare/archive/refs/tags/20240429.tar.gz"
   sha256 "28f0522efa728dd817e116346211c40d744d66b530c57900855e5f0e2152d79e"
   license "GPL-2.0-only"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "5bb869be045401f8e11e93a75d3c0e28c80bb2b9aec2a38bfe5e7ec6a7d60175"
@@ -15,7 +16,7 @@ class VideoCompare < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d0eb29c315701ca56bb658dc14ba7f7ab204503ceb583ae4016ae6e88383b4b6"
   end
 
-  depends_on "ffmpeg@6"
+  depends_on "ffmpeg"
   depends_on "sdl2"
   depends_on "sdl2_ttf"
 
