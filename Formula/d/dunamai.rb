@@ -8,13 +8,13 @@ class Dunamai < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "220d0359c2ab265a889d1e2893769caf2f5b6d9ecbd29c02e042674f04c24f6d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "220d0359c2ab265a889d1e2893769caf2f5b6d9ecbd29c02e042674f04c24f6d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "220d0359c2ab265a889d1e2893769caf2f5b6d9ecbd29c02e042674f04c24f6d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "220d0359c2ab265a889d1e2893769caf2f5b6d9ecbd29c02e042674f04c24f6d"
-    sha256 cellar: :any_skip_relocation, ventura:        "220d0359c2ab265a889d1e2893769caf2f5b6d9ecbd29c02e042674f04c24f6d"
-    sha256 cellar: :any_skip_relocation, monterey:       "220d0359c2ab265a889d1e2893769caf2f5b6d9ecbd29c02e042674f04c24f6d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a931ddc9fa7f7193476b135e1a2643f9dad810bc07507a54ff79ccdd881356c1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e5ed1b5d51dad5513bbff1bc8a0584d8b4aa93d546dd7c68e5a5f2d9c96d9a3f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e5ed1b5d51dad5513bbff1bc8a0584d8b4aa93d546dd7c68e5a5f2d9c96d9a3f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "e5ed1b5d51dad5513bbff1bc8a0584d8b4aa93d546dd7c68e5a5f2d9c96d9a3f"
+    sha256 cellar: :any_skip_relocation, sonoma:         "e5ed1b5d51dad5513bbff1bc8a0584d8b4aa93d546dd7c68e5a5f2d9c96d9a3f"
+    sha256 cellar: :any_skip_relocation, ventura:        "e5ed1b5d51dad5513bbff1bc8a0584d8b4aa93d546dd7c68e5a5f2d9c96d9a3f"
+    sha256 cellar: :any_skip_relocation, monterey:       "e5ed1b5d51dad5513bbff1bc8a0584d8b4aa93d546dd7c68e5a5f2d9c96d9a3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2ed0cde65c325304435d77baca42ac3d18dbe0e7ff7a6152a17f13a30bceee4e"
   end
 
   depends_on "python@3.12"
