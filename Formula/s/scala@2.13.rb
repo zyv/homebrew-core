@@ -13,7 +13,7 @@ class ScalaAT213 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c0caf40dece89e77bd9273e347722089afb05ac6913215c27c4e676bfdb93e74"
+    sha256 cellar: :any_skip_relocation, all: "80de117b46f247676ede207845cbb45859b70409df95349a2b7e329d9e6c95f4"
   end
 
   keg_only :versioned_formula
