@@ -110,6 +110,7 @@ autodiff
 autopep8
 autorest
 autorestic
+autotrace
 avrdude
 awk
 aws-amplify
