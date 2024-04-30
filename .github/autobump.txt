@@ -1632,6 +1632,7 @@ pmtiles
 pnetcdf
 pngquant
 pnpm
+pnpm@8
 po4a
 pocketbase
 poco
