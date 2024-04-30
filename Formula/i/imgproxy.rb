@@ -1,19 +1,19 @@
 class Imgproxy < Formula
   desc "Fast and secure server for resizing and converting remote images"
   homepage "https://imgproxy.net"
-  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v3.24.0.tar.gz"
-  sha256 "9c257be72fc46634bafe52ae42fee01d1a66b68d5724303fc676eb701a7149b0"
+  url "https://github.com/imgproxy/imgproxy/archive/refs/tags/v3.24.1.tar.gz"
+  sha256 "dc75ffd728450b04c8eaa7cd172836d518b129d552026bbaef87fd32e078573d"
   license "MIT"
   head "https://github.com/imgproxy/imgproxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "d2a0335d69852415a341d55ebea2457ff2c1823265c63be5f5010fb8b2a29660"
-    sha256 cellar: :any,                 arm64_ventura:  "b3a4c5fdeef54c9e39fd03c72c76c3c81440ce55bc015db4a4200cf0aa809281"
-    sha256 cellar: :any,                 arm64_monterey: "1602582ab216a0d5e0efe60607256d302590792bda1eb3d229b8cf1c2b6ff276"
-    sha256 cellar: :any,                 sonoma:         "3198b750c36125de0f567f9a4767c498cec0749c04161e43de2afeca14f0c0e6"
-    sha256 cellar: :any,                 ventura:        "fe9a833d92f1bd7e6398931119ce3e53f3bff731fda9c09375e5d6fbcd45f9fc"
-    sha256 cellar: :any,                 monterey:       "b53932a8c0e1bc3b6fe51ac947e1804d7acab152c73439c24380be78587f1511"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e5909aae82ff1fa9f71dd4b1f1aac977446affe667d0e5e8d2157acec32f404"
+    sha256 cellar: :any,                 arm64_sonoma:   "5ff11e9477cb9e02f0b0a7652ddc2ac7f6f4ea74a3a6aa7ebfbbb42ae4a388be"
+    sha256 cellar: :any,                 arm64_ventura:  "88d2278740dc1b7633b7515afc2f984c8bf58955e6fe05c873fa61acda9f9d9c"
+    sha256 cellar: :any,                 arm64_monterey: "72d894718e527f80f120bbfdde49a2d516fabc7a356fe2ecfd88cb09a212da3f"
+    sha256 cellar: :any,                 sonoma:         "e566bad032ce5be97c26f9c87c5d7c0dea33d35f0f1aaaeeb3722866c5671203"
+    sha256 cellar: :any,                 ventura:        "91822815cb24b63cb7ffafa207496ab6b5b2d2aba53aa23d8104346dbb5141f1"
+    sha256 cellar: :any,                 monterey:       "819a662654d393903b42f11244dd2f0e11768632a6fa8663a3b4b640d85376a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba31fb3a5ea84d76f6095503bd2b7cb40ed4dd385f67605103a9ba359e2f9395"
   end
 
   depends_on "go" => :build
