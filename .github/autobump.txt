@@ -1832,6 +1832,7 @@ sagittarius-scheme
 samba
 saml2aws
 samtools
+sbcl
 sbom-tool
 sbt
 scala
