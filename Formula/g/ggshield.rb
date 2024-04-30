@@ -3,10 +3,9 @@ class Ggshield < Formula
 
   desc "Scanner for secrets and sensitive data in code"
   homepage "https://www.gitguardian.com"
-  url "https://files.pythonhosted.org/packages/c1/61/583d8d6777734e39fe7a331e934c652911d0dd354b7ae0d096e42cfb8394/ggshield-1.26.0.tar.gz"
-  sha256 "d5c18d5f4fb8fd00013c0f9cad19a466a095eee7214cbd95d585f09694b201bd"
+  url "https://files.pythonhosted.org/packages/e4/81/3e415d5b06b22120e5503f3182c1d03876197d5e0e3074fc5b2f5e8cc7bd/ggshield-1.27.0.tar.gz"
+  sha256 "9bc16c253bef41301823230b240390c2fbf7b0f5df6d050c34d919db30d4b597"
   license "MIT"
-  revision 1
   head "https://github.com/GitGuardian/ggshield.git", branch: "main"
 
   bottle do
