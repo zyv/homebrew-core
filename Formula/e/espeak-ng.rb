@@ -1,5 +1,5 @@
 class EspeakNg < Formula
-  desc "WHATWG-compliant and fast URL parser written in modern C++"
+  desc "Speech synthesizer that supports more than hundred languages and accents"
   homepage "https://github.com/espeak-ng/espeak-ng"
   url "https://github.com/espeak-ng/espeak-ng/archive/refs/tags/1.51.tar.gz"
   sha256 "f0e028f695a8241c4fa90df7a8c8c5d68dcadbdbc91e758a97e594bbb0a3bdbf"
