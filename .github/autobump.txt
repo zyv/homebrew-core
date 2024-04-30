@@ -863,6 +863,7 @@ goctl
 goffice
 gofumpt
 gojq
+gokey
 golang-migrate
 golangci-lint
 google-authenticator-libpam
