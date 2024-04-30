@@ -653,6 +653,7 @@ erlang@25
 erofs-utils
 esbuild
 eslint
+espeak-ng
 espflash
 esphome
 esptool
