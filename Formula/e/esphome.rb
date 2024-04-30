@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/84/09/d3f532e1d65adfdab092032f3709f0fe9a2f522dce4a45baa3e931aaa78e/esphome-2024.4.1.tar.gz"
-  sha256 "f326b59b532a0384a2e2606c4d9785a36afa2dd3b524be225955b4c4aab0607f"
+  url "https://files.pythonhosted.org/packages/d9/d6/6d8a264a78e9c5ab61135e9c939aa9f06b3eab8f6e7e887df15d6e2d72b2/esphome-2024.4.2.tar.gz"
+  sha256 "d8ddb2fe0b0c9ddd5b5662896b27f0d4ac208e3791966f233b4c76745757c0f8"
   license "MIT"
 
   bottle do
@@ -73,11 +73,6 @@ class Esphome < Formula
   resource "chacha20poly1305-reuseable" do
     url "https://files.pythonhosted.org/packages/18/c4/011bf30a7b82df544c9f1b1703bfe249b76f2309b2ca7d65e3359152fb2c/chacha20poly1305_reuseable-0.12.1.tar.gz"
     sha256 "c1ca3de2c78eb87ac006d975729e0b9032ff31597e3c112e78268f4cd431fd6a"
-  end
-
-  resource "chardet" do
-    url "https://files.pythonhosted.org/packages/f3/0d/f7b6ab21ec75897ed80c17d79b15951a719226b9fababf1e40ea74d69079/chardet-5.2.0.tar.gz"
-    sha256 "1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"
   end
 
   resource "charset-normalizer" do
