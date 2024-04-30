@@ -388,6 +388,7 @@ conda-zsh-completion
 conduit
 condure
 conftest
+conmon
 consul-template
 container-structure-test
 contentful-cli
