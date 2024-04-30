@@ -24,6 +24,8 @@ class Gh < Formula
 
   depends_on "go" => :build
 
+  deny_network_access! [:postinstall, :test]
+
   def install
     with_env(
       "GH_VERSION" => version.to_s,
