@@ -4,11 +4,9 @@ class MysqlAT80 < Formula
   # TODO: Check if we can use unversioned `protobuf` at version bump
   # https://bugs.mysql.com/bug.php?id=111469
   # https://bugs.mysql.com/bug.php?id=113045
-  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.36.tar.gz"
-  sha256 "429c5f69f3722e31807e74119d157a023277af210bfee513443cae60ebd2a86d"
-
+  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.37.tar.gz"
+  sha256 "fe0c7986f6a2d6a2ddf65e00aadb90fa6cb73da38c4172dc2b930dd1c2dc4af6"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
-  revision 1
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/8.0.html?tpl=files&os=src&version=8.0"
@@ -193,7 +191,7 @@ index 42e63d0..5d21cc3 100644
 @@ -1942,31 +1942,6 @@ MYSQL_CHECK_RAPIDJSON()
  MYSQL_CHECK_FIDO()
  MYSQL_CHECK_FIDO_DLLS()
- 
+
 -IF(APPLE)
 -  GET_FILENAME_COMPONENT(HOMEBREW_BASE ${HOMEBREW_HOME} DIRECTORY)
 -  IF(EXISTS ${HOMEBREW_BASE}/include/boost)
