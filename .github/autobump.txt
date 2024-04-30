@@ -81,6 +81,7 @@ armadillo
 arp-scan
 arrayfire
 artillery
+arttime
 arturo
 ascii
 asciidoctor
