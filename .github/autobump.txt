@@ -923,6 +923,7 @@ gtkmm4
 gtranslator
 gucharmap
 gulp-cli
+gum
 gupnp
 gupnp-tools
 gxml
