@@ -1420,6 +1420,7 @@ ncnn
 nco
 ncspot
 ncview
+neatvi
 needle
 neo4j
 neofetch

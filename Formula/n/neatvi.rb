@@ -2,8 +2,8 @@ class Neatvi < Formula
   desc "Clone of ex/vi for editing bidirectional utf-8 text"
   homepage "https://repo.or.cz/neatvi.git"
   url "https://repo.or.cz/neatvi.git",
-      tag:      "14",
-      revision: "e627fa1cea7e515832d219e9a3ad0cc50ee9e296"
+      tag:      "15",
+      revision: "d16828a4a46cbc84c30cf58c38978ad819bc0379"
   license "ISC"
   head "https://repo.or.cz/neatvi.git", branch: "master"
 
