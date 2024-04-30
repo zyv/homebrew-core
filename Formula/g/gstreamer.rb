@@ -4,13 +4,13 @@ class Gstreamer < Formula
   license all_of: ["LGPL-2.0-or-later", "LGPL-2.1-or-later", "MIT"]
 
   stable do
-    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.24.2/gstreamer-1.24.2.tar.bz2"
-    sha256 "2dc6023a905c428c6e7d2b8a2701a7f058d5dd990dad2e1e2f862826cbd09f3e"
+    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.24.3/gstreamer-1.24.3.tar.bz2"
+    sha256 "28caa0b49df73dcb0ff6884484bd7e1e1dcf1c9d6a501881f6ec3b8bf625be07"
 
     # When updating this resource, use the tag that matches the GStreamer version.
     resource "rs" do
-      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.24.2/gst-plugins-rs-gstreamer-1.24.2.tar.bz2"
-      sha256 "d341ea21848b7329ff96c9572d4f795f412a82c1471b3a9d14b74900346beb75"
+      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.24.3/gst-plugins-rs-gstreamer-1.24.3.tar.bz2"
+      sha256 "2c4f6d1e0874be42ce680affe15064e5a702d476e89dcd21bda44e11bad81085"
 
       # Backport support for newer `dav1d`
       patch do
@@ -45,6 +45,7 @@ class Gstreamer < Formula
 
   depends_on "bison" => :build
   depends_on "cargo-c" => :build
+  depends_on "gitlint" => :build
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "nasm" => :build
