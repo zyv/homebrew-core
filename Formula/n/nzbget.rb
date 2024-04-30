@@ -1,10 +1,10 @@
 class Nzbget < Formula
   desc "Binary newsgrabber for nzb files"
-  homepage "https://nzbget.net/"
-  url "https://github.com/nzbget/nzbget/releases/download/v21.1/nzbget-21.1-src.tar.gz"
-  sha256 "4e8fc1beb80dc2af2d6a36a33a33f44dedddd4486002c644f4c4793043072025"
+  homepage "https://nzbget.com"
+  url "https://github.com/nzbgetcom/nzbget/archive/refs/tags/v24.0.tar.gz"
+  sha256 "f8b66551b943f72442a0fb00d8872a0e9c92c829e63d6a74c35888b7cb658dca"
   license "GPL-2.0-or-later"
-  head "https://github.com/nzbget/nzbget.git", branch: "develop"
+  head "https://github.com/nzbgetcom/nzbget.git", branch: "develop"
 
   bottle do
     rebuild 2
@@ -20,49 +20,35 @@ class Nzbget < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "65fd679c775ee8595c57e5459cc0eba8802944aa7181a4548e6cc6ad0340ffb3"
   end
 
-  disable! date: "2023-10-18", because: :repo_archived
-
-  depends_on "pkg-config" => :build
+  depends_on "cmake" => :build
+  depends_on "boost"
   depends_on "openssl@3"
+  depends_on "sevenzip"
 
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
 
-  # Fix OpenSSL 3 compatibility
-  # upstream PR ref, https://github.com/nzbget/nzbget/pull/793
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/formula-patches/56a864d/nzbget/openssl-3.patch"
-    sha256 "7fd5e300c6ba456df20307a2d3de630e3cb6d5dfdc2662abd567190eb55ac3be"
-  end
-
   def install
-    ENV.cxx11
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
 
-    # Fix "ncurses library not found"
-    # Reported 14 Aug 2016: https://github.com/nzbget/nzbget/issues/264
+    # nzbget CMake build does not strip binary
+    # must be removed in v25, tracking issue https://github.com/nzbgetcom/nzbget/issues/257
+    system "strip", "build/nzbget"
+
+    system "cmake", "--install", "build"
+
+    # remove default nzbget.conf to prevent linking
+    # must be removed in v25, tracking issue https://github.com/nzbgetcom/nzbget/issues/257
+    rm prefix/"etc/nzbget.conf"
+
     if OS.mac?
-      (buildpath/"brew_include").install_symlink MacOS.sdk_path/"usr/include/ncurses.h"
-      ENV["ncurses_CFLAGS"] = "-I#{buildpath}/brew_include"
-      ENV["ncurses_LIBS"] = "-L/usr/lib -lncurses"
-    else
-      ENV["ncurses_CFLAGS"] = "-I#{Formula["ncurses"].opt_include}"
-      ENV["ncurses_LIBS"] = "-L#{Formula["ncurses"].opt_lib} -lncurses"
-    end
-
-    # Tell configure to use OpenSSL
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}",
-                          "--with-tlslib=OpenSSL"
-    system "make"
-    ENV.deparallelize
-    system "make", "install"
-    pkgshare.install_symlink "nzbget.conf" => "webui/nzbget.conf"
-
-    # Set upstream's recommended values for file systems without
-    # sparse-file support (e.g., HFS+); see Homebrew/homebrew-core#972
-    if OS.mac?
+      # Set upstream's recommended values for file systems without
+      # sparse-file support (e.g., HFS+); see Homebrew/homebrew-core#972
       inreplace "nzbget.conf", "DirectWrite=yes", "DirectWrite=no"
       inreplace "nzbget.conf", "ArticleCache=0", "ArticleCache=700"
+      # Update 7z cmd to match homebrew binary
+      inreplace "nzbget.conf", "SevenZipCmd=7z", "SevenZipCmd=7zz"
     end
 
     etc.install "nzbget.conf"
@@ -70,8 +56,8 @@ class Nzbget < Formula
 
   service do
     run [opt_bin/"nzbget", "-c", HOMEBREW_PREFIX/"etc/nzbget.conf", "-s", "-o", "OutputMode=Log",
-         "-o", "ConfigTemplate=#{HOMEBREW_PREFIX}/opt/nzbget/share/nzbget/nzbget.conf",
-         "-o", "WebDir=#{HOMEBREW_PREFIX}/opt/nzbget/share/nzbget/webui"]
+         "-o", "ConfigTemplate=#{HOMEBREW_PREFIX}/share/nzbget/nzbget.conf",
+         "-o", "WebDir=#{HOMEBREW_PREFIX}/share/nzbget/webui"]
     keep_alive true
     environment_variables PATH: "#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin:/usr/sbin:/sbin"
   end
