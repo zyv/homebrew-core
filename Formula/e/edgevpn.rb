@@ -20,8 +20,7 @@ class Edgevpn < Formula
   def install
     ldflags = %W[
       -s -w
-      -X main.version=#{version}
-      -X main.date=#{time.iso8601}
+      -X github.com/mudler/edgevpn/internal.Version=#{version}
     ]
 
     ENV["CGO_ENABLED"] = "0"
