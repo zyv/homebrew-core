@@ -8,13 +8,13 @@ class Raven < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "5ffd10c11746c4b371bcf585c6706f892092a1f4e7793b614d146b11edd1c050"
-    sha256 cellar: :any,                 arm64_ventura:  "c1688df4222b0ee4c3585eca91520caec051408f01abe179ec68509ec559139d"
-    sha256 cellar: :any,                 arm64_monterey: "de29b4047914f3ff32fe25251a671b8f1c08822d93e883544be3eb29734936eb"
-    sha256 cellar: :any,                 sonoma:         "099c9deb73902061c3017ce0848ecbdfd912647a6070ca202f81916b42530e08"
-    sha256 cellar: :any,                 ventura:        "40871399dbfebc3e03c46dcc096de8be464c6b6550d03f749469cdde57a619d0"
-    sha256 cellar: :any,                 monterey:       "d61a537fcc3b0f58d22efee3bb2f7bb1593609af6e38e3637a8d1797ef38a602"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17cb53dafdcfe99ba17588ff2294f53fa53aa531646881484b00eaa6a0ac4fd8"
+    sha256 cellar: :any,                 arm64_sonoma:   "24358ae759b3c6c56b7061e964423ffe25861d188c3c566bfd6d86cc6e3b6e80"
+    sha256 cellar: :any,                 arm64_ventura:  "53164b50efdde032b3ab29fcb6217dfecdf6780213b9cb9ccfa87fd415a47020"
+    sha256 cellar: :any,                 arm64_monterey: "5dd38e2a8ba2d4e3a64d10f0816910e4990bb2e9119fe201690cace6cf676e1c"
+    sha256 cellar: :any,                 sonoma:         "399bd1cd2b114f0aa5f40c59a461bd1d5fc671bcf30285d4f4074ef00e046226"
+    sha256 cellar: :any,                 ventura:        "fc5e95f0f76807b461f43fec6bb24682e835d338ac64d5ee0caef43bed5d210c"
+    sha256 cellar: :any,                 monterey:       "518d25d145f40f2501b26fc438e43e6f85b470a5b7584a3cbb008a9ea94ddaaa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b1dcafee5ae36853d17816684a6ddcf413e8a2cf5e0bccf278cb885f3a3f6a0"
   end
 
   depends_on "certifi"
