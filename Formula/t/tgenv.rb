@@ -17,6 +17,7 @@ class Tgenv < Formula
 
   uses_from_macos "unzip"
 
+  conflicts_with "tenv", because: "tgenv symlinks terragrunt binaries"
   conflicts_with "terragrunt", because: "tgenv symlinks terragrunt binaries"
 
   def install
@@ -24,6 +25,6 @@ class Tgenv < Formula
   end
 
   test do
-    assert_match "0.40.0", shell_output("#{bin}/tgenv list-remote")
+    assert_match "0.58.1", shell_output("#{bin}/tgenv list-remote")
   end
 end
