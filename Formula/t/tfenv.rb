@@ -21,6 +21,7 @@ class Tfenv < Formula
     depends_on "grep"
   end
 
+  conflicts_with "tenv", because: "tfenv symlinks terraform binaries"
   conflicts_with "terraform", because: "tfenv symlinks terraform binaries"
 
   def install
