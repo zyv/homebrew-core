@@ -1404,6 +1404,7 @@ mqttui
 mruby
 msgpack
 msgpack-cxx
+msmtp
 mtbl
 mtoc
 mu
