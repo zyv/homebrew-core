@@ -2,8 +2,8 @@ class Quotatool < Formula
   desc "Edit disk quotas from the command-line"
   homepage "https://quotatool.ekenberg.se/"
   url "https://github.com/ekenberg/quotatool.git",
-    tag:      "v1.6.3",
-    revision: "a32e83b5cc414a0a28d4e703f6012349a92c2d4d"
+    tag:      "v1.6.4",
+    revision: "f7a4bffa059cffc2fe9d69ebd16938b0b7948469"
   license "GPL-2.0-or-later"
 
   bottle do
