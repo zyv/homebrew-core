@@ -1,9 +1,9 @@
 class RaxmlNg < Formula
   desc "RAxML Next Generation: faster, easier-to-use and more flexible"
-  homepage "https://sco.h-its.org/exelixis/web/software/raxml/"
+  homepage "https://cme.h-its.org/exelixis/web/software/raxml/"
   url "https://github.com/amkozlov/raxml-ng.git",
-      tag:      "1.2.1",
-      revision: "af74065fa2e03d4eb3efd83881bd50926d07e234"
+      tag:      "1.2.2",
+      revision: "805318cef87bd5d67064efa299b5d1cf948367fd"
   license "AGPL-3.0-or-later"
 
   bottle do
@@ -27,7 +27,7 @@ class RaxmlNg < Formula
   end
 
   resource "homebrew-example" do
-    url "https://sco.h-its.org/exelixis/resource/download/hands-on/dna.phy"
+    url "https://cme.h-its.org/exelixis/resource/download/hands-on/dna.phy"
     sha256 "c2adc42823313831b97af76b3b1503b84573f10d9d0d563be5815cde0effe0c2"
   end
 
