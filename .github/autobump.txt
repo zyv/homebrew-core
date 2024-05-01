@@ -1975,6 +1975,7 @@ steamguard-cli
 steampipe
 stellar-core
 step
+stepci
 stgit
 stockfish
 storj-uplink
