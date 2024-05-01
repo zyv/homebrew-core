@@ -1237,6 +1237,7 @@ libucl
 libunibreak
 libunwind
 libupnp
+liburing
 libusbmuxd
 libuv
 libva
