@@ -3,8 +3,8 @@ class LinodeCli < Formula
 
   desc "CLI for the Linode API"
   homepage "https://github.com/linode/linode-cli"
-  url "https://files.pythonhosted.org/packages/45/6c/101a152405af17ebdd6417f1f63c97c4e5734463d011009c8eb214109f47/linode_cli-5.48.4.tar.gz"
-  sha256 "58b8394efda3de0132a7df4374d56e035d0395b7093c2e7c58d200d56c7513e5"
+  url "https://files.pythonhosted.org/packages/68/12/9307ced2361e6fef5d895e69fcc76be022fdebdbe9c8f8c20e8311a5070c/linode_cli-5.49.0.tar.gz"
+  sha256 "e7f9702a0083dc66d9d1eec9d9164dccabfed0e3e677da8163c2648c26dcb62f"
   license "BSD-3-Clause"
   head "https://github.com/linode/linode-cli.git", branch: "main"
 
@@ -107,11 +107,15 @@ class LinodeCli < Formula
     sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
   end
 
+  # patch to generate completion without PAT prompt, upstream PR ref, https://github.com/linode/linode-cli/pull/608
+  patch do
+    url "https://github.com/linode/linode-cli/commit/2c2d1761901f9713a98fdaab604995a45f666941.patch?full_index=1"
+    sha256 "9995a513c441909301d491a3996738cb2efc6974289fb2a74ea3f78d2b424560"
+  end
+
   def install
-    # Prevent setup.py from installing the bash_completion script
-    inreplace "setup.py", "data_files=get_baked_files(),", ""
     virtualenv_install_with_resources
-    bash_completion.install "linode-cli.sh" => "linode-cli"
+    generate_completions_from_executable(bin/"linode-cli", "completion", shells: [:bash, :fish])
   end
 
   test do
