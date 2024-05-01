@@ -2014,6 +2014,7 @@ syslog-ng
 sysstat
 systemc
 systemd
+t-completion
 tailscale
 tailspin
 tailwindcss
