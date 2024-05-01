@@ -1,8 +1,8 @@
 class Corrosion < Formula
   desc "Easy Rust and C/C++ Integration"
   homepage "https://github.com/corrosion-rs/corrosion"
-  url "https://github.com/corrosion-rs/corrosion/archive/refs/tags/v0.4.8.tar.gz"
-  sha256 "6b9090647d372adec2b09ac7a553458b6e39004238967f9a25e9dd8c1d77584d"
+  url "https://github.com/corrosion-rs/corrosion/archive/refs/tags/v0.4.9.tar.gz"
+  sha256 "3346b21c4986c077988e10a19b8737a7b56f6f84ef8e800058b58d1f138e8fa9"
   license "MIT"
 
   bottle do
