@@ -1,8 +1,8 @@
 class Grype < Formula
   desc "Vulnerability scanner for container images and filesystems"
   homepage "https://github.com/anchore/grype"
-  url "https://github.com/anchore/grype/archive/refs/tags/v0.77.1.tar.gz"
-  sha256 "ee5ff61008adbc17d3f47ce0dc7b93ca22e1ef5b50be4ae4b58a6141262271de"
+  url "https://github.com/anchore/grype/archive/refs/tags/v0.77.2.tar.gz"
+  sha256 "d48040b1aaae323c08e54fbd8dae86f5925cd17616ed68c066a57083d9776ba4"
   license "Apache-2.0"
   head "https://github.com/anchore/grype.git", branch: "main"
 
