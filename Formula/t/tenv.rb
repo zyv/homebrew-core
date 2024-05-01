@@ -18,11 +18,17 @@ class Tenv < Formula
 
   depends_on "go" => :build
 
+  conflicts_with "opentofu", because: "both install tofu binary"
+  conflicts_with "terraform", because: "both install terraform binary"
+  conflicts_with "terragrunt", because: "both install terragrunt binary"
+  conflicts_with "tfenv", because: "tfenv symlinks terraform binaries"
+  conflicts_with "tgenv", because: "tgenv symlinks terragrunt binaries"
+
   def install
     ldflags = "-s -w -X main.version=#{version}"
-    system "go", "build", *std_go_args(ldflags:), "./cmd/tenv"
-
-    generate_completions_from_executable(bin/"tenv", "completion")
+    %w[tenv terraform terragrunt tf tofu].each do |f|
+      system "go", "build", *std_go_args(ldflags:, output: bin/f), "./cmd/#{f}"
+    end
   end
 
   test do
