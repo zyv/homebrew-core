@@ -17,6 +17,7 @@ class Terragrunt < Formula
 
   depends_on "go" => :build
 
+  conflicts_with "tenv", because: "both install terragrunt binary"
   conflicts_with "tgenv", because: "tgenv symlinks terragrunt binaries"
 
   def install
