@@ -645,6 +645,7 @@ envd
 envoy
 enzyme
 epr
+eprover
 erdtree
 erg
 erlang
