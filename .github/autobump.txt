@@ -68,6 +68,7 @@ apr
 apt
 aravis
 arb
+archi-steam-farm
 argc
 argo
 argocd
