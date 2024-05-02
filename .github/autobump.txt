@@ -2179,6 +2179,7 @@ virtualenv
 virtualenvwrapper
 virtualfish
 virustotal-cli
+vis
 vite
 vitess
 vivid
