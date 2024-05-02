@@ -1827,6 +1827,7 @@ ruff
 ruff-lsp
 rune
 rure
+rust
 rust-analyzer
 rustcat
 rustfmt
