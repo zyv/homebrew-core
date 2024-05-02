@@ -1,8 +1,8 @@
 class Bfs < Formula
   desc "Breadth-first version of find"
   homepage "https://tavianator.com/projects/bfs.html"
-  url "https://github.com/tavianator/bfs/archive/refs/tags/3.1.3.tar.gz"
-  sha256 "9b512e4fe665ff73f9a0b3357420fc1f65af6205cbf74f2dfb55592e90e598d8"
+  url "https://github.com/tavianator/bfs/archive/refs/tags/3.2.tar.gz"
+  sha256 "86b17cab7b213f36e93639eceba3ffa86e1556d12a1db8955c8c7e53b2e94140"
   license "0BSD"
 
   bottle do
@@ -30,8 +30,10 @@ class Bfs < Formula
   def install
     ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1300
 
-    system "make", "release"
-    system "make", "install", "PREFIX=#{prefix}"
+    system "./configure", "--enable-release"
+    system "make"
+    system "make", "install", "DEST_PREFIX=#{prefix}", "DEST_MANDIR=#{man}"
+    bash_completion.install share/"bash-completion/completions/bfs"
   end
 
   test do
