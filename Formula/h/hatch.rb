@@ -3,8 +3,8 @@ class Hatch < Formula
 
   desc "Modern, extensible Python project management"
   homepage "https://hatch.pypa.io/latest/"
-  url "https://files.pythonhosted.org/packages/0d/d2/cf2c772634c3ab65a0244ebcead8aeff671cbd29f1f72a1f4460698d9650/hatch-1.9.7.tar.gz"
-  sha256 "19a7b82179f94f2adddbad76aa7e65ab90cad55ab103d53827637935c9e6624c"
+  url "https://files.pythonhosted.org/packages/05/f3/54d969452d2d71b072da7435cbcfe3e867a12702b1770fc1bd8e92be89dd/hatch-1.10.0.tar.gz"
+  sha256 "0d68a7d3efa225bedb7a8bb773a347fdc16d5e064aef5fb0411de57cc9abd08a"
   license "MIT"
 
   bottle do
@@ -20,6 +20,7 @@ class Hatch < Formula
   depends_on "certifi"
   depends_on "cryptography"
   depends_on "python@3.12"
+  depends_on "uv"
 
   on_linux do
     depends_on "cffi"
@@ -41,14 +42,9 @@ class Hatch < Formula
     sha256 "1530ea13e350031b6312d8580ddb6b27a104275a31106523b8f123787f494f64"
   end
 
-  resource "editables" do
-    url "https://files.pythonhosted.org/packages/37/4a/986d35164e2033ddfb44515168a281a7986e260d344cf369c3f52d4c3275/editables-0.5.tar.gz"
-    sha256 "309627d9b5c4adc0e668d8c6fa7bac1ba7c8c5d415c2d27f60f081f8e80d1de2"
-  end
-
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/38/ff/877f1dbe369a2b9920e2ada3c9ab81cf6fe8fa2dce45f40cad510ef2df62/filelock-3.13.4.tar.gz"
-    sha256 "d13f466618bfde72bd2c18255e269f72542c6e70e7bac83a0232d6b1cc5c8cf4"
+    url "https://files.pythonhosted.org/packages/06/ae/f8e03746f0b62018dcf1120f5ad0a1db99e55991f2cda0cf46edc8b897ea/filelock-3.14.0.tar.gz"
+    sha256 "6ea72da3be9b8c82afd3edcf99f2fffbb5076335a5ae4d03248bb5b6c3eae78a"
   end
 
   resource "h11" do
@@ -57,8 +53,8 @@ class Hatch < Formula
   end
 
   resource "hatchling" do
-    url "https://files.pythonhosted.org/packages/d8/a1/7dd1caa87c0b15c04c6291e25112e5d082cce02ee87f221a8be1d594f857/hatchling-1.21.1.tar.gz"
-    sha256 "bba440453a224e7d4478457fa2e8d8c3633765bafa02975a6b53b9bf917980bc"
+    url "https://files.pythonhosted.org/packages/2d/18/dbb6b0c167c21429e4f4b03744f5da79d4a534f12c13fd41d2d3033b96da/hatchling-1.24.2.tar.gz"
+    sha256 "41ddc27cdb25db9ef7b68bef075f829c84cb349aa1bff8240797d012510547b0"
   end
 
   resource "httpcore" do
@@ -97,8 +93,8 @@ class Hatch < Formula
   end
 
   resource "keyring" do
-    url "https://files.pythonhosted.org/packages/18/ec/cc0afdcd7538d4942a6b78f858139120a8c7999e554004080ed312e43886/keyring-25.1.0.tar.gz"
-    sha256 "7230ea690525133f6ad536a9b5def74a4bd52642abe594761028fc044d7c7893"
+    url "https://files.pythonhosted.org/packages/b8/09/fdd3a390518e3aebeec0d7aceae7f9152da1fd2484f12f1b3a12a74aa079/keyring-25.2.0.tar.gz"
+    sha256 "7045f367268ce42dba44745050164b431e46f6e92f99ef2937dfadaef368d8cf"
   end
 
   resource "markdown-it-py" do
@@ -187,8 +183,8 @@ class Hatch < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/42/28/846fb3eb75955d191f13bca658fb0082ddcef8e2d4b6fd0c76146556f0be/virtualenv-20.25.3.tar.gz"
-    sha256 "7bb554bbdfeaacc3349fa614ea5bff6ac300fc7c335e9facf3a3bcfc703f45be"
+    url "https://files.pythonhosted.org/packages/93/9f/97beb3dd55a764ac9776c489be4955380695e8d7a6987304e58778ac747d/virtualenv-20.26.1.tar.gz"
+    sha256 "604bfdceaeece392802e6ae48e69cec49168b9c5f4a44e483963f9242eb0e78b"
   end
 
   resource "zstandard" do
