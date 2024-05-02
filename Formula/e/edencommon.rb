@@ -1,10 +1,9 @@
 class Edencommon < Formula
   desc "Shared library for Watchman and Eden projects"
   homepage "https://github.com/facebookexperimental/edencommon"
-  url "https://github.com/facebookexperimental/edencommon/archive/refs/tags/v2024.04.22.00.tar.gz"
-  sha256 "6b558e3f78fb6e211e26c6e7a07b2b5a9073322b39c60afc3def21309b360053"
+  url "https://github.com/facebookexperimental/edencommon/archive/refs/tags/v2024.04.29.00.tar.gz"
+  sha256 "4aa2299b0dc2de5841826c7b903521dffa4c528f689e4db91110fded71f93fc9"
   license "MIT"
-  revision 1
   head "https://github.com/facebookexperimental/edencommon.git", branch: "main"
 
   bottle do
@@ -29,13 +28,6 @@ class Edencommon < Formula
   depends_on "openssl@3"
   depends_on "wangle"
 
-  # Use AUR's patch from open PR to fix build with `fmt` v10.
-  # PR ref: https://github.com/facebookexperimental/edencommon/pull/17
-  patch do
-    url "https://github.com/facebookexperimental/edencommon/commit/bd46378b43aaa394094799d18f734495385c6f67.patch?full_index=1"
-    sha256 "74b47722dd7d40cb07fc504e9f14dd18fe6ee7c38b83373a4d94637fcb618ca1"
-  end
-
   def install
     # Fix "Process terminated due to timeout" by allowing a longer timeout.
     inreplace buildpath.glob("eden/common/{os,utils}/test/CMakeLists.txt"),
@@ -48,10 +40,7 @@ class Edencommon < Formula
     # Avoid having to build FBThrift py library
     inreplace "CMakeLists.txt", "COMPONENTS cpp2 py)", "COMPONENTS cpp2)"
 
-    system "cmake", "-S", ".", "-B", "_build",
-                    "-DBUILD_SHARED_LIBS=ON",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    *std_cmake_args
+    system "cmake", "-S", ".", "-B", "_build", *std_cmake_args
     system "cmake", "--build", "_build"
     system "cmake", "--install", "_build"
   end
@@ -74,8 +63,8 @@ class Edencommon < Formula
 
     system ENV.cxx, "-std=c++17", "-I#{include}", "test.cc",
                     "-L#{lib}", "-L#{Formula["folly"].opt_lib}",
-                    "-L#{Formula["boost"].opt_lib}", "-L#{Formula["glog"].opt_lib}",
-                    "-ledencommon_utils", "-lfolly", "-lboost_context-mt", "-lglog", "-o", "test"
+                    "-L#{Formula["boost"].opt_lib}", "-L#{Formula["glog"].opt_lib}", "-L#{Formula["fmt"].opt_lib}",
+                    "-ledencommon_utils", "-lfolly", "-lfmt", "-lboost_context-mt", "-lglog", "-o", "test"
     assert_match "ruby", shell_output("./test #{Process.pid}")
   end
 end
