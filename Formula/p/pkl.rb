@@ -15,7 +15,8 @@ class Pkl < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "fb743b581d8eeb5b609c86a2c8926c95410e7fd2dceeecff7a6b80fcda40c401"
   end
 
-  depends_on "openjdk" => :build
+  # Can change this to 21 in later releases.
+  depends_on "openjdk@17" => :build
 
   uses_from_macos "zlib"
 
@@ -33,7 +34,7 @@ class Pkl < Formula
   end
 
   def install
-    ENV["JAVA_HOME"] = Formula["openjdk"].opt_prefix
+    ENV["JAVA_HOME"] = Formula["openjdk@17"].opt_prefix
     # Need to set this so that native-image passes through env vars when calling out to the C toolchain.
     # This is only needed for GraalVM 23.0, which is only used when building for macOS/aarch64.
     ENV["NATIVE_IMAGE_DEPRECATED_BUILDER_SANITATION"] = "true" if OS.mac? && Hardware::CPU.arm?
