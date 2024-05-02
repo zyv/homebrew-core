@@ -12,7 +12,8 @@ class Tgenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ceef88ef9082c454a7f9cb0b6833b0a1b3df5147d46cb658a485659ecc081c60"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "5d9c35f1dd3856a985c721d8e0f2d33b656f207092ea5f836ed878e03bba7505"
   end
 
   uses_from_macos "unzip"
