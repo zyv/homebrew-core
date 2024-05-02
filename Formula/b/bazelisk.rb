@@ -5,6 +5,7 @@ class Bazelisk < Formula
       tag:      "v1.19.0",
       revision: "c7c6c19799ff408c48bdce6b7557217ad0050b17"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/bazelbuild/bazelisk.git", branch: "master"
 
   bottle do
@@ -27,7 +28,7 @@ class Bazelisk < Formula
   end
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.BazeliskVersion=#{version}")
+    system "go", "build", *std_go_args(ldflags: "-s -w -X github.com/bazelbuild/bazelisk/core.BazeliskVersion=#{version}")
 
     bin.install_symlink "bazelisk" => "bazel"
 
@@ -38,7 +39,9 @@ class Bazelisk < Formula
 
   test do
     ENV["USE_BAZEL_VERSION"] = Formula["bazel"].version
-    assert_match "Build label: #{Formula["bazel"].version}", shell_output("#{bin}/bazelisk version")
+    output = shell_output("#{bin}/bazelisk version")
+    assert_match "Bazelisk version: #{version}", output
+    assert_match "Build label: #{Formula["bazel"].version}", output
 
     # This is an older than current version, so that we can test that bazelisk
     # will target an explicit version we specify. This version shouldn't need to
