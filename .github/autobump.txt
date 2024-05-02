@@ -1062,6 +1062,7 @@ jql
 jreleaser
 jrnl
 jruby
+jsdoc3
 json-fortran
 jsonnet
 jsvc

@@ -3,8 +3,8 @@ require "language/node"
 class Jsdoc3 < Formula
   desc "API documentation generator for JavaScript"
   homepage "https://jsdoc.app/"
-  url "https://registry.npmjs.org/jsdoc/-/jsdoc-4.0.2.tgz"
-  sha256 "d5e75d41bde8a43272a2a146f3ac1c63686765823400fdfb98716fb1420c580a"
+  url "https://registry.npmjs.org/jsdoc/-/jsdoc-4.0.3.tgz"
+  sha256 "853e0a2d2f32b8bf3b5f7a5730e23ec1cb138a616e066bb2bc658d13c349da57"
   license "Apache-2.0"
   head "https://github.com/jsdoc3/jsdoc.git", branch: "main"
 
