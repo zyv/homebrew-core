@@ -1063,6 +1063,7 @@ jreleaser
 jrnl
 jruby
 json-fortran
+json2ts
 jsonnet
 jsvc
 jtbl
