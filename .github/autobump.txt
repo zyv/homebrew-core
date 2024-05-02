@@ -1737,6 +1737,7 @@ qpdf
 qpid-proton
 qsoas
 qsv
+qthreads
 quantlib
 quantum++
 quasi88
