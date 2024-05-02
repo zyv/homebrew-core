@@ -1987,6 +1987,7 @@ steampipe
 stellar-core
 step
 stepci
+stern
 stgit
 stockfish
 storj-uplink
