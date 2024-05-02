@@ -1849,6 +1849,7 @@ scala@2.13
 scalingo
 scamper
 scarb
+scc
 sccache
 schemathesis
 scikit-image

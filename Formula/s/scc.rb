@@ -1,8 +1,8 @@
 class Scc < Formula
   desc "Fast and accurate code counter with complexity and COCOMO estimates"
   homepage "https://github.com/boyter/scc/"
-  url "https://github.com/boyter/scc/archive/refs/tags/v3.2.0.tar.gz"
-  sha256 "69cce0b57e66c736169bd07943cdbe70891bc2ff3ada1f4482acbd1335adbfad"
+  url "https://github.com/boyter/scc/archive/refs/tags/v3.3.2.tar.gz"
+  sha256 "2bbfed4cf34bbe50760217b479331cf256285335556a0597645b7250fb603388"
   license any_of: ["MIT", "Unlicense"]
 
   livecheck do
@@ -35,8 +35,8 @@ class Scc < Formula
     EOS
 
     expected_output = <<~EOS
-      Language,Lines,Code,Comments,Blanks,Complexity,Bytes
-      C,4,4,0,0,0,50
+      Language,Lines,Code,Comments,Blanks,Complexity,Bytes,Files,ULOC
+      C,4,4,0,0,0,50,1,0
     EOS
 
     assert_match expected_output, shell_output("#{bin}/scc -fcsv test.c")
