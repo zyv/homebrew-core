@@ -10,6 +10,16 @@ class TraefikAT2 < Formula
     regex(/^v?(2\.\d+\.\d+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "da39e9eae2ed542ba0090a76c55cf9778a5730e13151bbbd2c291c13789f62c4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c015e99c800e218ce256f5d8a9d5338a4342b2d7bae18ecc21ef127187a73479"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "584a83402912d1265289b07aba88a632e4b25fb9a3ea1f2f6a7897adac0a0755"
+    sha256 cellar: :any_skip_relocation, sonoma:         "50b7adf57646b1cfe734bed5f0aa654f5052d2e6528a16a6a8f68c1a6d90927c"
+    sha256 cellar: :any_skip_relocation, ventura:        "c73511b81bd712943bf3131204d0ae2aed43289d9441ad6e99f20cfe5fa4ba98"
+    sha256 cellar: :any_skip_relocation, monterey:       "360fb734870dfa1d45e3a01400eb294d2f79daa6f3c7f0061c4235891d447842"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4096f96667d696b4eb719a91647f372bad82b73eae3717db9f7d1ed8152a1eab"
+  end
+
   keg_only :versioned_formula
 
   # https://doc.traefik.io/traefik/deprecation/releases/
