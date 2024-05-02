@@ -3,8 +3,8 @@ class LinodeCli < Formula
 
   desc "CLI for the Linode API"
   homepage "https://github.com/linode/linode-cli"
-  url "https://files.pythonhosted.org/packages/68/12/9307ced2361e6fef5d895e69fcc76be022fdebdbe9c8f8c20e8311a5070c/linode_cli-5.49.0.tar.gz"
-  sha256 "e7f9702a0083dc66d9d1eec9d9164dccabfed0e3e677da8163c2648c26dcb62f"
+  url "https://files.pythonhosted.org/packages/b7/81/1d3f969f9ebd99bc80c052e87234269ef63e8deef9c9a8bc1561766bed4d/linode_cli-5.49.1.tar.gz"
+  sha256 "7609390dbccb72967481ac43e76f2a92c253ac8bb501a6628b77404187573b63"
   license "BSD-3-Clause"
   head "https://github.com/linode/linode-cli.git", branch: "main"
 
@@ -105,12 +105,6 @@ class LinodeCli < Formula
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/7a/50/7fd50a27caa0652cd4caf224aa87741ea41d3265ad13f010886167cfcc79/urllib3-2.2.1.tar.gz"
     sha256 "d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
-  end
-
-  # patch to generate completion without PAT prompt, upstream PR ref, https://github.com/linode/linode-cli/pull/608
-  patch do
-    url "https://github.com/linode/linode-cli/commit/2c2d1761901f9713a98fdaab604995a45f666941.patch?full_index=1"
-    sha256 "9995a513c441909301d491a3996738cb2efc6974289fb2a74ea3f78d2b424560"
   end
 
   def install
