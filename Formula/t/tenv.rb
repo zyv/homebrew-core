@@ -7,13 +7,14 @@ class Tenv < Formula
   head "https://github.com/tofuutils/tenv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "518a2e6c2816e7cbc8dc97a5a1774eb21507bf442d7f1af78d52587010986864"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "af2f8d25a9c028572b88f8f94655197143ac64d576915b704a1125b01f5c555c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b25e9bbb488ccaa617cfd532bc84ec62cbf4f063e524630a271ed70b5690ee5b"
-    sha256 cellar: :any_skip_relocation, sonoma:         "1dbcd7e61047be2361b6596058bb5ce3d8d6c771341ec98c1fe4f5ada9d874da"
-    sha256 cellar: :any_skip_relocation, ventura:        "59b07694e8f85954a8f785b011c42b706166c7e7bdd44256246a63630686b8c6"
-    sha256 cellar: :any_skip_relocation, monterey:       "b8be11fc3351ea3a12179ca23a6709fbcaead79f093a07eb67df0654298d5318"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bbd6ce875aa07fd7ad281c0d774e79123263bb127ca81f0cbea7674d805a38d6"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "92e42b5244a47f1092e2e823bfd0924f2271b88e072f381c5a3093a7191abe30"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "952642b968a3a1f7ec4a8d44012b5b5fc55a587203d2bc08d0bba568da23c0a8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dc3611d219c3fc6bea4c1cb0a3456c30837dc4f53b54892e8725a830292af0b5"
+    sha256 cellar: :any_skip_relocation, sonoma:         "4c71415a2c50caed241142d19532ce41dc63135253250015d37a769aec0742e4"
+    sha256 cellar: :any_skip_relocation, ventura:        "9a9716be14ce0c1140e5418c15bf83419e0b2e3cd80b4713ee128a8d6123466f"
+    sha256 cellar: :any_skip_relocation, monterey:       "dd5cd768281ed0c5f6e0b5168007781b8283c02935fc5039669b2a0a75231582"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6b342dff164325281f3db8de3fc5559c0e1b3effee3b94f41802bfe14e3725ac"
   end
 
   depends_on "go" => :build
