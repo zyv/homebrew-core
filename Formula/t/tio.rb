@@ -20,7 +20,6 @@ class Tio < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "glib"
-  depends_on "inih"
   depends_on "lua"
 
   def install
