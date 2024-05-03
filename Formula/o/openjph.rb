@@ -1,8 +1,8 @@
 class Openjph < Formula
   desc "Open-source implementation of JPEG2000 Part-15 (or JPH or HTJ2K)"
   homepage "https://github.com/aous72/OpenJPH"
-  url "https://github.com/aous72/OpenJPH/archive/refs/tags/0.12.0.tar.gz"
-  sha256 "e73fd0b12d95c0b61884579f61c26da7461335146e7e9c84f4a2dd5c9325bb4f"
+  url "https://github.com/aous72/OpenJPH/archive/refs/tags/0.13.0.tar.gz"
+  sha256 "65c044d58619b846612205947f0e379edf037964841a0878d88ebc235819302f"
   license "BSD-2-Clause"
   head "https://github.com/aous72/OpenJPH.git", branch: "master"
 
@@ -25,7 +25,6 @@ class Openjph < Formula
     args = %W[
       -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
-    args << "-DOJPH_DISABLE_INTEL_SIMD=ON" if Hardware::CPU.arm?
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
