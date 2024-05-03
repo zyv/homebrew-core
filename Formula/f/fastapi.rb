@@ -7,6 +7,16 @@ class Fastapi < Formula
   sha256 "b9db9dd147c91cb8b769f7183535773d8741dd46f9dc6676cd82eab510228cd7"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "b7f79ae45f9ac819cb57839befb57a6393ed12c72f136f2af8905dc7f1f4504d"
+    sha256 cellar: :any,                 arm64_ventura:  "1eda8363f5b75a5f97896e15be9cd3105b772d1a9cae1bb68e8ef9bc92882031"
+    sha256 cellar: :any,                 arm64_monterey: "f9a55b8b2fdd3eab3ef60428f0ac3d81756c6cac6939da12fb555d0b7a941803"
+    sha256 cellar: :any,                 sonoma:         "f4e4d0523620f95beda506c8ddffabb011964d1d3d4f7133a6b416359606d693"
+    sha256 cellar: :any,                 ventura:        "762f73b5854f0d2b7ffd1ff7f3d1f9ec1f9fa2482822703686c60db226a7e89a"
+    sha256 cellar: :any,                 monterey:       "7c2018b547fc64de66c21a53970b6a980891b8aeb0327ef70279e6539cdac5e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1ddea81c6ef2b8b2d0370eed0658265f1970684058f1852ee6687f1128bc4446"
+  end
+
   depends_on "rust" => :build # for pydantic
   depends_on "certifi"
   depends_on "libyaml"
