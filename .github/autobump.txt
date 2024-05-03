@@ -15,6 +15,7 @@ adr-viewer
 adwaita-icon-theme
 aerleon
 afflib
+aftman
 agda
 age
 age-plugin-yubikey
