@@ -2283,6 +2283,7 @@ xxhash
 xz
 yaegi
 yamale
+yamlfmt
 yamllint
 yash
 ydiff
