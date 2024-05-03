@@ -2269,6 +2269,7 @@ xorgproto
 xplr
 xray
 xrootd
+xsimd
 xterm
 xwin
 xxhash
