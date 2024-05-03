@@ -1463,6 +1463,7 @@ newman
 newrelic-cli
 newrelic-infra-agent
 newsboat
+nextdns
 nexttrace
 nfdump
 nfpm
