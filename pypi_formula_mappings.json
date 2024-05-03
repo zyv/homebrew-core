@@ -121,6 +121,10 @@
     "package_name": "",
     "extra_packages": ["cassandra-driver"]
   },
+  "cahute": {
+    "package_name": "",
+    "extra_packages": ["setuptools", "toml"]
+  },
   "ccm": {
     "extra_packages": ["cassandra-driver", "setuptools"]
   },
