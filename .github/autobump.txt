@@ -951,6 +951,7 @@ hatch
 haxe
 hbase
 hck
+hcl2json
 hcloud
 hcxtools
 heartbeat
