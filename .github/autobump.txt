@@ -1647,6 +1647,7 @@ pkl
 plantuml
 platformio
 plow
+pluto
 pmd
 pmix
 pmtiles
