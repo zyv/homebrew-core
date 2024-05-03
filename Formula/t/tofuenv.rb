@@ -6,6 +6,10 @@ class Tofuenv < Formula
   license "MIT"
   head "https://github.com/tofuutils/tofuenv.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "ee28b005988edd5b72576d1019be4049ea7d09bb54f79644dfd56b88242017ac"
+  end
+
   uses_from_macos "unzip"
 
   on_macos do
