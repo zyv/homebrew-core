@@ -1,8 +1,8 @@
 class GitCredentialOauth < Formula
   desc "Git credential helper that authenticates in browser using OAuth"
   homepage "https://github.com/hickford/git-credential-oauth"
-  url "https://github.com/hickford/git-credential-oauth/archive/refs/tags/v0.11.2.tar.gz"
-  sha256 "1701316840133951f7ba3c2c085b3e92c0ac8c3f1ae8e76400c234c9d74f0722"
+  url "https://github.com/hickford/git-credential-oauth/archive/refs/tags/v0.11.3.tar.gz"
+  sha256 "fe54bc6053c7696d2ce990698cf469e2463266a71dab6615ab6b557c9eecc5e7"
   license "Apache-2.0"
   head "https://github.com/hickford/git-credential-oauth.git", branch: "main"
 
