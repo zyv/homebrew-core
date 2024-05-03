@@ -5,12 +5,12 @@ class Dmd < Formula
 
   stable do
     # make sure resources also use the same version
-    url "https://github.com/dlang/dmd/archive/refs/tags/v2.108.0.tar.gz"
-    sha256 "35cd47ead6737615a4b5c82dd80ea4b5f84cf231a10bf1c3487f4527adc89424"
+    url "https://github.com/dlang/dmd/archive/refs/tags/v2.108.1.tar.gz"
+    sha256 "470eb1289578e179525f922be88003d5ed231000b8ab12c27b8e75034d77fcb7"
 
     resource "phobos" do
-      url "https://github.com/dlang/phobos/archive/refs/tags/v2.108.0.tar.gz"
-      sha256 "804021ee34612836500dfe93992673bb430fba5caec95075108908f2f0f6a2d3"
+      url "https://github.com/dlang/phobos/archive/refs/tags/v2.108.1.tar.gz"
+      sha256 "6d8031006a8977baea5c195e3f7134ace7251962b6d88c6020b7f933fede627a"
     end
   end
 
