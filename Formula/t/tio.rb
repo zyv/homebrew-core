@@ -7,20 +7,20 @@ class Tio < Formula
   head "https://github.com/tio/tio.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_sonoma:   "49d690fa71c35f45a20b7afc935ae1b5186560e91cec074a32abb316776dbcdb"
-    sha256 cellar: :any, arm64_ventura:  "d4178b03f30ce4844ba666d9a35295ce70e25889acc63672fbe85cdcc8aa2649"
-    sha256 cellar: :any, arm64_monterey: "ec0f1e7c44d8cac8907806c3c71a6f4babe254c0929c5411702d257fdbf6690a"
-    sha256 cellar: :any, sonoma:         "af07457bba5f2b694a81e390969806fc6bbd9654273bd333f1cf2471cc52509b"
-    sha256 cellar: :any, ventura:        "7bd20a932c724f8b5f2ea06d7c6e52082f3a6ef017130d5149cb62999d44d6cd"
-    sha256 cellar: :any, monterey:       "fab7296387ad4499e038b0994c94327da6f214b36b2879e5e08ae830a41aea48"
-    sha256               x86_64_linux:   "a3d7a5d19b1ae7bdde02fe18b37e41df798ceac9e570f9fe5c41942ebd97a0d5"
+    rebuild 1
+    sha256 cellar: :any, arm64_sonoma:   "6a800b0dcb7156a11ee13edf7cceea95b26275f1f8d05042036fc3af0ac35745"
+    sha256 cellar: :any, arm64_ventura:  "aa6188b64f086cd3b917e5e9f5518c70fe476a626da4dcc88b1126bfda6734cd"
+    sha256 cellar: :any, arm64_monterey: "a6dbbe5a81e44cc685eff613551e4c929a5ebf5921d76f74c84e882304638947"
+    sha256 cellar: :any, sonoma:         "25479ad7c1cce22f7210d4e6762d69b066372f164cb557a0cae76eae1a902486"
+    sha256 cellar: :any, ventura:        "cf11490ff74695e32c853f07558f0fd8597c943373495ade51816c5387bcba41"
+    sha256 cellar: :any, monterey:       "b7ce088222cb169c44ee9501f8475ca930c8375bd23aa7d02858c7a89aac72d5"
+    sha256               x86_64_linux:   "35ad553eff6f73c4b7cc1793b8b0691d89dc3b388397839cc184d6101021c7a0"
   end
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "glib"
-  depends_on "inih"
   depends_on "lua"
 
   def install
