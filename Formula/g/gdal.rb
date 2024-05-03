@@ -4,7 +4,7 @@ class Gdal < Formula
   url "https://github.com/OSGeo/gdal/releases/download/v3.8.5/gdal-3.8.5.tar.gz"
   sha256 "0c865c7931c7e9bb4832f50fb53aec8676cbbaccd6e55945011b737fb89a49c2"
   license "MIT"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://download.osgeo.org/gdal/CURRENT/"
@@ -111,7 +111,7 @@ class Gdal < Formula
       -DCMAKE_INSTALL_RPATH=#{rpaths.join(";")}
       -DPython_EXECUTABLE=#{which(python3)}
       -DGDAL_PYTHON_INSTALL_LIB=#{site_packages}
-      -DCMAKE_CXX_STANDARD=17
+      -DCMAKE_CXX_STANDARD=20
     ]
 
     # JavaVM.framework in SDK causing Java bindings to be built
