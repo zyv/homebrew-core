@@ -12,6 +12,16 @@ class Cahute < Formula
     regex(/href=.*?cahute[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "46fe8c8ab653ec56112c6fd96406994fa567011dc1d3425156d73a81dc7bed39"
+    sha256 cellar: :any,                 arm64_ventura:  "0bd334ccd2db852cf3735d20600aebc9265de06ad4f21ad1aa0fcd38d3324fb7"
+    sha256 cellar: :any,                 arm64_monterey: "4466934190794da649d849ddae4c984df811ae3de9f3e53db30102f6e81292a2"
+    sha256 cellar: :any,                 sonoma:         "ab48a6aa740266190822d1d3bdd9f7361b64d53c0aa72991762c37d1c2ca6f01"
+    sha256 cellar: :any,                 ventura:        "79d22f701a7d923c734f3d0923eaa2fe9e0533661409c06b276422b0c76f10d1"
+    sha256 cellar: :any,                 monterey:       "ee24ab155ca2843e61ccaa72ddeaa68243c001889fe2b84b7b92f4f674f5f7e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f83b54623bd76091437b6bd5104e6eb150508ca7f3556293dc6c95198c97f1d3"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => [:build, :test]
   depends_on "python@3.12" => :build
