@@ -3,19 +3,19 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/2b/79/599bb623686a4f25b092680b724cad58bcccf5bb34c7fe4bd365124350db/snakemake-8.11.2.tar.gz"
-  sha256 "20bd01bf97f0a0d0cd9c55f326e065a89b144a1b8081ede1520327792519343f"
+  url "https://files.pythonhosted.org/packages/91/40/341bb82c01a67268905968118cfc015522d563dc6ad84599248ec583dc9a/snakemake-8.11.3.tar.gz"
+  sha256 "23cdaab26f16c1e199acfd8aa5711c01fa98a4f20028fc9019d04e4176426862"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "373cbacfdac15ad9372f5c4b156f2112213c97497ce154106362624d58cf88e8"
-    sha256 cellar: :any,                 arm64_ventura:  "10be8086a3bc8fba50a00a1d013005dc79d81f4799bae1a37daf7540cff4eeb9"
-    sha256 cellar: :any,                 arm64_monterey: "775872bf8e919ac7c07d4d7e969f6fef68b8e9981f48b1910b23c6d290f173c7"
-    sha256 cellar: :any,                 sonoma:         "c0b762397d7f247c9700d82246366f417b5a407ea64cc616b7156f6e1180723b"
-    sha256 cellar: :any,                 ventura:        "eb8b726f61d79b96d675c1c7e31a0d5da55a8284bad844b73c838fc2f705efbf"
-    sha256 cellar: :any,                 monterey:       "1bb12d5e071b725d3f64f6e6e3aa0d793c5d7f1779bcec9be7e8cb54060b8fd0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8733a8e6338f7742b45fbc1dac1f884d71ad551f70231c82a96111d2f72db28"
+    sha256 cellar: :any,                 arm64_sonoma:   "f76e16bcfa39b39cb556d1f3024f981c5295de18cda8dafa611e9ad5b90d44ba"
+    sha256 cellar: :any,                 arm64_ventura:  "83f82dd23fb0199968bbd685ef82cbefd5d39b1e6f9fe83853844bd1bbcc197f"
+    sha256 cellar: :any,                 arm64_monterey: "a421bbfe76b7c28ccc50359230bdb3750ab0b4ff3a1006e240e4f25ab0001429"
+    sha256 cellar: :any,                 sonoma:         "219dd7748ebf0456a04be77d364aeaddada5e10416cacff8ef2ae85a56431db3"
+    sha256 cellar: :any,                 ventura:        "994f6844677126245bf006b9301e7a8f8ec6d7950fa4a07cf02b4d9cb1beda52"
+    sha256 cellar: :any,                 monterey:       "549344de82e2bb8ec3f5e5f0ac5496b95b5980f0e3081379baa4636e9ad42258"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4b4a0a7cdc3aca1b0c5d1a643fce98ee5eed881eb4de298acd358aab085c20f6"
   end
 
   depends_on "rust" => :build
