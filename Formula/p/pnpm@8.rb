@@ -6,6 +6,7 @@ class PnpmAT8 < Formula
   url "https://registry.npmjs.org/pnpm/-/pnpm-8.15.8.tgz"
   sha256 "691fe176eea9a8a80df20e4976f3dfb44a04841ceb885638fe2a26174f81e65e"
   license "MIT"
+  revision 1
 
   livecheck do
     url "https://registry.npmjs.org/pnpm/latest-8"
@@ -32,8 +33,10 @@ class PnpmAT8 < Formula
     libexec.install buildpath.glob("*")
     bin.install_symlink "#{libexec}/bin/pnpm.cjs" => "pnpm@8"
     bin.install_symlink "#{libexec}/bin/pnpx.cjs" => "pnpx@8"
+    bin.install_symlink "#{libexec}/bin/pnpm.cjs" => "pnpm"
+    bin.install_symlink "#{libexec}/bin/pnpx.cjs" => "pnpx"
 
-    generate_completions_from_executable(bin/"pnpm@8", "completion")
+    generate_completions_from_executable(bin/"pnpm", "completion")
 
     # remove non-native architecture pre-built binaries
     (libexec/"dist").glob("reflink.*.node").each do |f|
@@ -51,7 +54,7 @@ class PnpmAT8 < Formula
   end
 
   test do
-    system "#{bin}/pnpm@8", "init"
+    system "#{bin}/pnpm", "init"
     assert_predicate testpath/"package.json", :exist?, "package.json must exist"
   end
 end
