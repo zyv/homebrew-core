@@ -25,6 +25,7 @@ class Graphicsmagick < Formula
   depends_on "jasper"
   depends_on "jpeg-turbo"
   depends_on "jpeg-xl"
+  depends_on "libheif"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "libtool"
