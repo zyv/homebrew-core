@@ -1,14 +1,14 @@
 class Ngircd < Formula
   desc "Lightweight Internet Relay Chat server"
   homepage "https://ngircd.barton.de/"
-  url "https://ngircd.barton.de/pub/ngircd/ngircd-26.1.tar.xz"
-  mirror "https://ngircd.sourceforge.io/pub/ngircd/ngircd-26.1.tar.xz"
-  sha256 "55c16fd26009f6fc6a007df4efac87a02e122f680612cda1ce26e17a18d86254"
+  url "https://ngircd.barton.de/pub/ngircd/ngircd-27.tar.xz"
+  mirror "https://ngircd.sourceforge.io/pub/ngircd/ngircd-27.tar.xz"
+  sha256 "6897880319dd5e2e73c1c9019613509f88eb5b8daa5821a36fbca3d785c247b8"
   license "GPL-2.0-or-later"
 
   livecheck do
     url "https://ngircd.barton.de/download.php"
-    regex(/href=.*?ngircd[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/href=.*?ngircd[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
 
   bottle do
@@ -39,11 +39,11 @@ class Ngircd < Formula
     system "make", "install"
 
     if OS.mac?
-      prefix.install "contrib/MacOSX/de.barton.ngircd.plist.tmpl" => "de.barton.ngircd.plist"
+      prefix.install "contrib/de.barton.ngircd.plist"
       (prefix/"de.barton.ngircd.plist").chmod 0644
 
       inreplace prefix/"de.barton.ngircd.plist" do |s|
-        s.gsub! ":SBINDIR:", sbin
+        s.gsub! "/opt/ngircd/sbin", sbin
         s.gsub! "/Library/Logs/ngIRCd.log", var/"Logs/ngIRCd.log"
       end
     end
