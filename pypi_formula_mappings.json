@@ -277,6 +277,9 @@
   "fava": {
     "exclude_packages": ["certifi"]
   },
+  "fastapi": {
+    "exclude_packages": ["certifi"]
+  },
   "fdroidserver": {
     "exclude_packages": ["certifi", "cryptography", "numpy", "pillow"],
     "extra_packages": ["androguard==3.3.5", "setuptools"]

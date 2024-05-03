@@ -685,6 +685,7 @@ fakeroot
 falco
 falcoctl
 fantom
+fastapi
 fastfec
 fastfetch
 fastlane
