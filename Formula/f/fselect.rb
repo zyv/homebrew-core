@@ -1,8 +1,8 @@
 class Fselect < Formula
   desc "Find files with SQL-like queries"
   homepage "https://github.com/jhspetersson/fselect"
-  url "https://github.com/jhspetersson/fselect/archive/refs/tags/0.8.5.tar.gz"
-  sha256 "e5742da80606630e310bb1567f2d72d7874f0b2537440e2800507abd786d912d"
+  url "https://github.com/jhspetersson/fselect/archive/refs/tags/0.8.6.tar.gz"
+  sha256 "4b7a6dc5f6f3da39c3242856a1c78734c7b14bd801dc4d7e32bc6f5a1809bc63"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
@@ -15,6 +15,7 @@ class Fselect < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e1a9036f7623a859059bd501a0a7cd333e7b7206cd8e7a0d2be6e336a4f8be75"
   end
 
+  depends_on "cmake" => :build # for libz-ng-sys
   depends_on "rust" => :build
 
   def install
