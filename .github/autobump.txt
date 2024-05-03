@@ -251,6 +251,7 @@ capnp
 capstone
 cargo-about
 cargo-audit
+cargo-auditable
 cargo-binstall
 cargo-bloat
 cargo-c
