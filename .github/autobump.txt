@@ -847,6 +847,7 @@ glibmm@2.66
 glm
 global
 glooctl
+glslang
 gmailctl
 gmic
 gmsh
