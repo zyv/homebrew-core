@@ -1,8 +1,8 @@
 class Aftman < Formula
   desc "Toolchain manager for Roblox, the prodigal sequel to Foreman"
   homepage "https://github.com/LPGhatguy/aftman"
-  url "https://github.com/LPGhatguy/aftman/archive/refs/tags/v0.2.7.tar.gz"
-  sha256 "2c4f191bfce631abff185a658b947105055da687c409e09ea80786be4c32b75e"
+  url "https://github.com/LPGhatguy/aftman/archive/refs/tags/v0.2.8.tar.gz"
+  sha256 "fb7a4fc6a0e736df3968834284da163380d4dcd4707e9836d35ff427e6c53f8c"
   license "MIT"
   head "https://github.com/LPGhatguy/aftman.git", branch: "main"
 
@@ -24,6 +24,7 @@ class Aftman < Formula
   end
 
   depends_on "rust" => :build
+  uses_from_macos "bzip2"
 
   on_linux do
     depends_on "pkg-config" => :build
