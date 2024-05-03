@@ -787,6 +787,7 @@ gcem
 gcovr
 gcsfuse
 gdal
+gdcm
 gdk-pixbuf
 gdu
 geeqie
