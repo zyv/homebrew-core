@@ -693,6 +693,7 @@ fastnetmon
 fastp
 fastqc
 faudio
+fauna-shell
 faust
 favirecon
 fblog
