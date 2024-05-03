@@ -203,7 +203,7 @@ class Fastapi < Formula
       exec bin/"fastapi", "dev", "--port", port.to_s, "main.py"
     end
 
-    sleep 1
+    sleep 5
     output = shell_output("curl -s http://127.0.0.1:#{port}")
     assert_equal '{"Hello":"World"}', output
   ensure
