@@ -36,6 +36,11 @@ class Platformio < Formula
     sha256 "e1a9c94970ae6d710b3fb4526294dfeb86f2cb4a81eff3a4b98dc40fb0e5e021"
   end
 
+  resource "chardet" do
+    url "https://files.pythonhosted.org/packages/f3/0d/f7b6ab21ec75897ed80c17d79b15951a719226b9fababf1e40ea74d69079/chardet-5.2.0.tar.gz"
+    sha256 "1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"
+  end
+
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz"
     sha256 "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
@@ -62,8 +67,8 @@ class Platformio < Formula
   end
 
   resource "marshmallow" do
-    url "https://files.pythonhosted.org/packages/5b/17/1b117d1875d8287a85cc2d5e2effd3f31bd8afd9f142c7b8391b9d665f0c/marshmallow-3.21.1.tar.gz"
-    sha256 "4e65e9e0d80fc9e609574b9983cf32579f305c718afb30d7233ab818571768c3"
+    url "https://files.pythonhosted.org/packages/a2/16/06ad266adc423f9d7ee49dce26787b973907aa70213760c9fe1711745405/marshmallow-3.21.2.tar.gz"
+    sha256 "82408deadd8b33d56338d2182d455db632c6313aa2af61916672146bb32edc56"
   end
 
   resource "packaging" do
