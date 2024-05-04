@@ -9,13 +9,13 @@ class Enex2notion < Formula
   revision 6
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f70a8320750c59b92b7164a9917ff716057724d0c74edc2bae26bd3c80d44470"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ec20b37539b991a0093c4199bb12dca48e38514aeb361fae5b4e858d4d28570d"
-    sha256 cellar: :any,                 arm64_monterey: "d053cfb15e37bd95811cc9f34d8cd6b72149d09d8f1554b9c76a4c4dfed86125"
-    sha256 cellar: :any_skip_relocation, sonoma:         "c763e0456d2426e8c95273a22d1d66fc4a481ca67b7eb9e1dd936bfbd5512023"
-    sha256 cellar: :any_skip_relocation, ventura:        "f207e46a68a169dc6ea75b4fff24ad9c93cdb23279de48be2fe3c9164c292027"
-    sha256 cellar: :any,                 monterey:       "576972d5f637cb23344ca09c86be4d1c162da6b4ada42341ef2d6406f51427ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "29cd100ab830b46608b5c683bb88dacf2afda1f6eb30379c9b82d5e790a0208d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "1c0e66e84d2fd1141fdb55b2d9af772183b0bdcd221aab622cb0f977b130ffa5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "72e05aab9fcbe20331782c352a8f707f6db3d617b03bd1bf5712329b071a26d8"
+    sha256 cellar: :any,                 arm64_monterey: "1250cc44cee877c7e347d74b90253aeeba9af170c95568de6fc3397cdceefeb9"
+    sha256 cellar: :any_skip_relocation, sonoma:         "01c19b60ce7ea7fb5714f4c4fac20103f30ed8ddd91effef2ef13a07c2704d5b"
+    sha256 cellar: :any_skip_relocation, ventura:        "e4b151c7e05f78243eca78f969657d0c7c6ad2fc5064097ddd142130eec753e7"
+    sha256 cellar: :any,                 monterey:       "83ed949e1ce4c7c4c14ed831bb470122092e191ee450fcc67f8c8c151c39bf99"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "47e23f27f32b5a4d695c16e6d858a1598cc33b12f9557eb2b1600fd25c3ad4d0"
   end
 
   depends_on "certifi"
