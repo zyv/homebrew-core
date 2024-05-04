@@ -1750,6 +1750,7 @@ qpid-proton
 qsoas
 qsv
 qthreads
+qtkeychain
 quantlib
 quantum++
 quasi88
