@@ -1600,6 +1600,7 @@ patat
 patchelf
 payara
 pciutils
+pcl
 pcsc-lite
 pdal
 pdfalyzer
