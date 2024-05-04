@@ -9,13 +9,13 @@ class Datalad < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "98618c3c7648f301d1f1f9aa2b1c600f2502d6942fd3e1c01027b147dddf558d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "020f69bbff20f4d4ce6094b0638c49ba9078e61a517ebf642126d29a6dca4fc8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c004ac90f796298fc775e5153c67af39905e9bc3fbc460562278c1e889a9d327"
-    sha256 cellar: :any_skip_relocation, sonoma:         "4bc10444681aacda5cb39898782239fa1d344f91646ee41036c31cdf5f870aef"
-    sha256 cellar: :any_skip_relocation, ventura:        "6e568540705ec180112f9713cb79192db2d245189aabcd79ab8614beff498f12"
-    sha256 cellar: :any_skip_relocation, monterey:       "f8f9860cc3880ef19c6f0d16d2bb9e5535d52792436b9610924ab803d66aac3d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20813e82720fdcb333998ced923fadcc65bb47c9998625bc87209bbe081c1239"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a4a31570fa11dd41877aed001c9271d97ed903458612273940ea533378b9b92f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ffa124df942ccc9fc1a195d5c05e5c3372499f8adc3bf755b7ad60ef6da93003"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "03f5a9e704d893c5f459b610102ec175743718537a68aaa07e48f4e728f13d17"
+    sha256 cellar: :any_skip_relocation, sonoma:         "71f7f5e99492937e2bba022a0f205285c83e88f1a1ffb9260083b9a41c98d10c"
+    sha256 cellar: :any_skip_relocation, ventura:        "c01763f5ef9f5aff4c385df787a0d29ea9e7468a3ebbf0f5019649f429d165ca"
+    sha256 cellar: :any_skip_relocation, monterey:       "2b6ef98cd1bbf6844b99cd6b9d290c7c56691865ad38c3709a231cbeeb7b090a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f68e6db11cf14f72fe186079cacffc01f138cf00806152fa571e6265fc184a9f"
   end
 
   depends_on "certifi"
