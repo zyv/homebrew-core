@@ -7,13 +7,13 @@ class Pcl < Formula
   head "https://github.com/PointCloudLibrary/pcl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "0772149d0bce174cd6894d2561e2e5be2e4684e734b1320e300e5295d9431edc"
-    sha256 cellar: :any,                 arm64_ventura:  "79bd1dc809f782085e7af19629769610f00da56636e0ff2c5316f3096a6b3b94"
-    sha256 cellar: :any,                 arm64_monterey: "f5bbf0098d842a8ee7363abef4a3569d0098d0f4818c136c54e3cb3504a27f91"
-    sha256 cellar: :any,                 sonoma:         "07d5a586df25d368483f2c3b9edf8abf182dcef3b434788b9abdde6f783e6394"
-    sha256 cellar: :any,                 ventura:        "afa14e78c20ccd099134248fca59768fbcd0735a586d767d7beb38ca6089da70"
-    sha256 cellar: :any,                 monterey:       "7b215314d0b6bd24df61a552d976e34aef88b8b4eb8b19b56127af68eca10e5d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "694f8f92d0c3758119e4ae47c09a42af43e5b0cf4cf77bd12fc943b4f389cd9b"
+    sha256 cellar: :any,                 arm64_sonoma:   "39cee09c2c655d0d74f33f32a54ba6b6c1d10d46eadc9f11fed15bdcdd9a8f29"
+    sha256 cellar: :any,                 arm64_ventura:  "f8f25c19570bfc7cc02b28075f6b7bd1bcc2f15849140b9fe9fd80558883493a"
+    sha256 cellar: :any,                 arm64_monterey: "a3053dcaa4dbdec6b23a38939c5253fa7e3eeb3e9f0782b1b73270c0715c04c2"
+    sha256 cellar: :any,                 sonoma:         "38b740dcc918055e8bea36a7e67efe3fe9c403afd89f55f850f96771a5beb04b"
+    sha256 cellar: :any,                 ventura:        "10e1bdaa812868ceb2812dfa35778e3e638fa52bd2c40e575ddafffa7d6cd9a1"
+    sha256 cellar: :any,                 monterey:       "dd3676be1b53c96b0455639d6c8b2d3b965f5780542d387d3e98453e134806cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "dca70fec9d5e3fa8040e73d16eff29f07d1998c22fb8446d87ce9c4294c45164"
   end
 
   depends_on "cmake" => [:build, :test]
