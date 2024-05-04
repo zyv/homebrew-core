@@ -10,14 +10,13 @@ class Rbtools < Formula
   head "https://github.com/reviewboard/rbtools.git", branch: "master"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8564b8e193cb9885c8dd7540c947efa679c82979dd980d1990b1bca4761d56af"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4cf043f16ec3e30fa1a4eab3dc014fe6ba79709517a85c7dd601f46107c3a2a9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b7588726743915124b0a5ea7a38840beff619907cf06dd990b94722a8923e357"
-    sha256 cellar: :any_skip_relocation, sonoma:         "a9f443f8e1772f42512672757b7221fae1a42c6f4cd8649dd0b175ec99878fb3"
-    sha256 cellar: :any_skip_relocation, ventura:        "10207ac9469ec3585002611a84fcc0a4cfb0f7c9413b796b427ed30cc50c12da"
-    sha256 cellar: :any_skip_relocation, monterey:       "66ed002719b9e0caf04e6716c6888bf00bd1cfe8737a2dbf29d90e1f0c281700"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0ef70330f98a2aac1f43584cf2765555cfcc799b3a315fb0e466bf87971c4716"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4761e157db056c959fc7d24a9519503375685466a8b2b50817bed9c154d4fd7b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4761e157db056c959fc7d24a9519503375685466a8b2b50817bed9c154d4fd7b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4761e157db056c959fc7d24a9519503375685466a8b2b50817bed9c154d4fd7b"
+    sha256 cellar: :any_skip_relocation, sonoma:         "82823e6ef8cc0b47fb974404e9ec5b0672c2be378773eb5024c0e573317890ab"
+    sha256 cellar: :any_skip_relocation, ventura:        "82823e6ef8cc0b47fb974404e9ec5b0672c2be378773eb5024c0e573317890ab"
+    sha256 cellar: :any_skip_relocation, monterey:       "82823e6ef8cc0b47fb974404e9ec5b0672c2be378773eb5024c0e573317890ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6678847742e50ee8b596080fcd238329e7fc02b40b422a8c099a4684d89ffd99"
   end
 
   depends_on "certifi"
