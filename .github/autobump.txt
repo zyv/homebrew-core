@@ -1223,6 +1223,7 @@ liboqs
 libpano
 libphonenumber
 libpipeline
+libplist
 libpng
 libproxy
 libpulsar
