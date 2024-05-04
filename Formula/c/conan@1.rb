@@ -6,7 +6,7 @@ class ConanAT1 < Formula
   url "https://files.pythonhosted.org/packages/bd/da/a9312a0e37e78f4dd9e0812869debe51566619b59eb593cb777cba872357/conan-1.64.0.tar.gz"
   sha256 "0f9694f98d3fb9b62ca5869cd41c4cbd0434c5f5d9fb2da52e8a6f6b44300157"
   license "MIT"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://github.com/conan-io/conan.git"
@@ -117,8 +117,8 @@ class ConanAT1 < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/ea/85/3ce0f9f7d3f596e7ea57f4e5ce8c18cb44e4a9daa58ddb46ee0d13d6bff8/tqdm-4.66.2.tar.gz"
-    sha256 "6cd52cdf0fef0e0f543299cfc96fec90d7b8a7e88745f411ec33eb44d5ed3531"
+    url "https://files.pythonhosted.org/packages/5a/c0/b7599d6e13fe0844b0cda01b9aaef9a0e87dbb10b06e4ee255d3fa1c79a2/tqdm-4.66.4.tar.gz"
+    sha256 "e4d936c9de8727928f3be6079590e97d9abfe8d39a590be678eb5919ffc186bb"
   end
 
   resource "urllib3" do
