@@ -1,8 +1,8 @@
 class Simutrans < Formula
   desc "Transport simulator"
   homepage "https://www.simutrans.com/"
-  url "svn://servers.simutrans.org/simutrans/trunk/", revision: "10421"
-  version "123.0.1"
+  url "svn://servers.simutrans.org/simutrans/trunk/", revision: "11164"
+  version "124.0"
   license "Artistic-1.0"
   head "https://github.com/aburch/simutrans.git", branch: "master"
 
@@ -31,6 +31,7 @@ class Simutrans < Formula
   depends_on "freetype"
   depends_on "libpng"
   depends_on "sdl2"
+  depends_on "zstd"
 
   uses_from_macos "curl"
   uses_from_macos "unzip"
@@ -38,15 +39,15 @@ class Simutrans < Formula
   fails_with gcc: "5"
 
   resource "pak64" do
-    url "https://downloads.sourceforge.net/project/simutrans/pak64/123-0/simupak64-123-0.zip"
-    sha256 "b8a0a37c682d8f62a3b715c24c49bc738f91d6e1e4600a180bb4d2e9f85b86c1"
+    url "https://downloads.sourceforge.net/project/simutrans/pak64/124-0/simupak64-124-0.zip"
+    sha256 "0defc5e7ce4c2c3620b621d94d0735dacc3ff13b1af24dee3a127ca76603b2a3"
   end
 
   def install
     # These translations are dynamically generated.
-    system "./get_lang_files.sh"
+    system "./tools/get_lang_files.sh"
 
-    system "cmake", "-B", "build", "-S", ".", *std_cmake_args
+    system "cmake", "-B", "build", "-S", ".", *std_cmake_args, "-DSIMUTRANS_USE_REVISION=#{version}"
     system "cmake", "--build", "build"
     system "cmake", "--build", "build", "--target", "makeobj"
     system "cmake", "--build", "build", "--target", "nettool"
@@ -55,8 +56,8 @@ class Simutrans < Formula
     libexec.install "build/#{simutrans_path}/simutrans" => "simutrans"
     libexec.install Dir["simutrans/*"]
     bin.write_exec_script libexec/"simutrans"
-    bin.install "build/makeobj/makeobj"
-    bin.install "build/nettools/nettool"
+    bin.install "build/src/makeobj/makeobj"
+    bin.install "build/src/nettool/nettool"
 
     libexec.install resource("pak64")
   end
