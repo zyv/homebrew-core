@@ -6,7 +6,7 @@ class MagicWormhole < Formula
   url "https://files.pythonhosted.org/packages/89/99/8c8709d8c3e1058ba8b6d9f331529a0e91b484ae0585dd24cd77cb45ad4f/magic-wormhole-0.14.0.tar.gz"
   sha256 "006d239f88bff7c37bc2eff60a004e263faf9258f7279192d06ba0c9ced6b080"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/magic-wormhole/magic-wormhole.git", branch: "master"
 
   bottle do
@@ -129,8 +129,8 @@ class MagicWormhole < Formula
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/ea/85/3ce0f9f7d3f596e7ea57f4e5ce8c18cb44e4a9daa58ddb46ee0d13d6bff8/tqdm-4.66.2.tar.gz"
-    sha256 "6cd52cdf0fef0e0f543299cfc96fec90d7b8a7e88745f411ec33eb44d5ed3531"
+    url "https://files.pythonhosted.org/packages/5a/c0/b7599d6e13fe0844b0cda01b9aaef9a0e87dbb10b06e4ee255d3fa1c79a2/tqdm-4.66.4.tar.gz"
+    sha256 "e4d936c9de8727928f3be6079590e97d9abfe8d39a590be678eb5919ffc186bb"
   end
 
   resource "twisted" do
