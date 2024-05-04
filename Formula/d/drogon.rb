@@ -3,8 +3,8 @@ class Drogon < Formula
   homepage "https://drogon.org"
   # pull from git tag to get submodules
   url "https://github.com/drogonframework/drogon.git",
-      tag:      "v1.9.3",
-      revision: "da7f065a6f7d0793eec7737882248a4471714707"
+      tag:      "v1.9.4",
+      revision: "b5cd748a12cd02a2511fd14a89567584430ed620"
   license "MIT"
   head "https://github.com/drogonframework/drogon.git", branch: "master"
 
@@ -22,13 +22,10 @@ class Drogon < Formula
   depends_on "brotli"
   depends_on "c-ares"
   depends_on "jsoncpp"
+  depends_on "openssl@3"
   depends_on "ossp-uuid"
 
   uses_from_macos "zlib"
-
-  on_linux do
-    depends_on "openssl@3"
-  end
 
   def install
     cmake_args = std_cmake_args
