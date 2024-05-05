@@ -1,8 +1,8 @@
 class PcscLite < Formula
   desc "Middleware to access a smart card using SCard API"
   homepage "https://pcsclite.apdu.fr/"
-  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.1.0.tar.bz2"
-  sha256 "85cab61cc744c81e2bc432656863293b8428d0136f079e3b12a84b335b5b35aa"
+  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.2.0.tar.xz"
+  sha256 "76e06bb9f47f0c10c4eaec3ee9cea634bda28a1fc46f1286c097d220386c22d4"
   license all_of: ["BSD-3-Clause", "GPL-3.0-or-later", "ISC"]
 
   livecheck do
@@ -22,27 +22,38 @@ class PcscLite < Formula
 
   keg_only :shadowed_by_macos, "macOS provides PCSC.framework"
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
+
   uses_from_macos "flex" => :build
 
   on_linux do
-    depends_on "pkg-config" => :build
     depends_on "libusb"
+    depends_on "systemd" # for libudev
+  end
+
+  # upstream build patch for https://github.com/LudovicRousseau/PCSC/issues/179
+  patch do
+    url "https://salsa.debian.org/rousseau/PCSC/-/commit/960e367edc01518b90684ffff99010ee07ae1bd4.patch"
+    sha256 "30e5e3c5ca16d18243c6cf7db662f4cc504e05ccc0c70747f34832397ae1cdd5"
   end
 
   def install
     args = %W[
-      --disable-dependency-tracking
-      --disable-silent-rules
-      --prefix=#{prefix}
-      --sysconfdir=#{etc}
-      --disable-libsystemd
-      --disable-polkit
+      -Dlibsystemd=false
+      -Dlibudev=false
+      -Dpolkit=false
+      -Dipcdir=#{var}/run
+      -Dsysconfdir=#{etc}
+      -Dsbindir=#{sbin}
     ]
 
-    args << "--disable-udev" if OS.linux?
+    args << "-Dlibudev=false" if OS.linux?
 
-    system "./configure", *args
-    system "make", "install"
+    system "meson", "setup", "build", *args, *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
