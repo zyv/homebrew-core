@@ -1919,6 +1919,7 @@ sing-box
 singular
 singularity
 sip
+sispmctl
 sjk
 skaffold
 skeema
