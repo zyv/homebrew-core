@@ -291,6 +291,9 @@
     "exclude_packages": ["certifi"]
   },
   "fonttools": "fonttools[woff]",
+  "forbidden": {
+    "exclude_packages": ["certifi"]
+  },
   "fwupd": {
     "package_name": "",
     "extra_packages": ["jinja2", "markupsafe"]
