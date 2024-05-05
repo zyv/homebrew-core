@@ -14,13 +14,13 @@ class GraphTool < Formula
   end
 
   bottle do
-    sha256                               arm64_sonoma:   "0a71272eeab1f19d1bb3ee2ac45511c5a7281495373d3c95d07d3dc7d0461595"
-    sha256                               arm64_ventura:  "47273513345bdd8f0db5258fee7657b11088f1f0e50673a9feebb61abec06ba7"
-    sha256                               arm64_monterey: "ff82a0504e278d61b073bdbe2027d86fc0748dc8fdd14735f18777071d549a00"
-    sha256                               sonoma:         "47fe4283a680cd100d41ba91de481dc79aa319a169d26c50db5367eec6143a81"
-    sha256                               ventura:        "2b8120b82c01c7e73d3664ca2b6b9b619b01ef72044e0bc36647fcc1cdab35e3"
-    sha256                               monterey:       "eec9f358987145a0fca07f55d66dc6d7eb541aea6ea602e53834c63ebc6b20c3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "20f7864c1512303da96f7ba9f7d37cb6e392755137318e154e6b190eed177999"
+    sha256                               arm64_sonoma:   "0c8071a6d32501e2105532f1d470836423cc51a1961772371e85b403fc016273"
+    sha256                               arm64_ventura:  "056e13acefc576cfae569727c693f643663258c2bff7a327adbdec69ba24ea8b"
+    sha256                               arm64_monterey: "389210b4a1c5a37dbd7ab4aaaa932bdd4fc29998e8e027e0549a634eb8285f33"
+    sha256                               sonoma:         "61cce793e5f7a8d3cdf10cd0bf1acaab62d82bce32af219dc9154562e1b9d714"
+    sha256                               ventura:        "e2ddfb0bae32c8603d3335b565f9f3cf153027d2ba957486f5c00e8ef7623190"
+    sha256                               monterey:       "3b9e41d52bd1fd211d3332790619c824774cbef0a8932927a4b1052b2250d1dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "6e0a02e12bbe4d67e1de8be6cd3ef930b0d0b9843152fefd6fdf46d8182fdf2f"
   end
 
   depends_on "ninja" => :build
