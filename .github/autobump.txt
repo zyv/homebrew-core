@@ -748,6 +748,7 @@ fontforge
 fonts-encodings
 fonttools
 fop
+forbidden
 forcecli
 ford
 foreman
