@@ -1,8 +1,8 @@
 class Xplr < Formula
   desc "Hackable, minimal, fast TUI file explorer"
   homepage "https://github.com/sayanarijit/xplr"
-  url "https://github.com/sayanarijit/xplr/archive/refs/tags/v0.21.7.tar.gz"
-  sha256 "d38f94cc46044dac3cfc96d89dec81989b69a66a98c2f960ea3abe44313675a6"
+  url "https://github.com/sayanarijit/xplr/archive/refs/tags/v0.21.8.tar.gz"
+  sha256 "6fa6ab87cd9f48e531146e2f04c980f2ec90259b3e7b874bf9e165e613be0789"
   license "MIT"
   head "https://github.com/sayanarijit/xplr.git", branch: "main"
 
@@ -20,11 +20,8 @@ class Xplr < Formula
   depends_on "rust" => :build
   depends_on "luajit"
 
-  # Avoid vendoring `luajit`.
-  patch :DATA
-
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", "--no-default-features", *std_cargo_args
   end
 
   def check_binary_linkage(binary, library)
@@ -53,18 +50,3 @@ class Xplr < Formula
            "No linkage with libluajit! Cargo is likely using a vendored version."
   end
 end
-
-__END__
-diff --git a/Cargo.toml b/Cargo.toml
-index 6c50de0..953d578 100644
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -73,7 +73,7 @@ features = ['serde']
- 
- [dependencies.mlua]
- version = "0.9.6"
--features = ['luajit', 'vendored', 'serialize', 'send']
-+features = ['luajit', 'serialize', 'send']
- 
- [dependencies.tui-input]
- version = "0.8.0"
