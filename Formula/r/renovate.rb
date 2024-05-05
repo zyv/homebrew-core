@@ -19,13 +19,13 @@ class Renovate < Formula
   end
 
   bottle do
-    sha256                               arm64_sonoma:   "e899c3c52d9aeaa36b6fbc3af33fdd059d4fe72e8171829538acc77578aaee7b"
-    sha256                               arm64_ventura:  "b57a568b23852bb32e9dfe0751cf03a0ef969274d77e2b404c022d752786f241"
-    sha256                               arm64_monterey: "537c41cad08a4352ce3d7770e139cf212511ec98d23ab6a708f39b2c31ce8ee1"
-    sha256                               sonoma:         "f6112e9a1510177334daa0968ca3e11ec64302a2a9885b7a5bdad7e98ecdc21a"
-    sha256                               ventura:        "11af4a31a0da6f7bde0a95233ae53d8d635f4b3072aa716eb6d8ba76279ff6f9"
-    sha256                               monterey:       "2257cd0d274180bfdf27cb45c48e84de099df200dcff6119e9851b534f16e3e1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "603202bd5fce6922d0aaf3202b2247f47f9e61a92b56c667574f9b1933b8a731"
+    sha256                               arm64_sonoma:   "f1e64052783c232daf4566de8ee92f87bf1abb933d137fc75b462341dabdb79b"
+    sha256                               arm64_ventura:  "b0f1497c0a5f5b4a61ed8b9246dc85c504c204c4d2284b24ab20195748302bb1"
+    sha256                               arm64_monterey: "fca04686ae414aaef9680f044235a2c3bf0ccd4c7fd8748350b626682b416a91"
+    sha256                               sonoma:         "c7d0a87e9fefb641dae0defd96527cb2a8ae394e8ae96ddbaae0802e840337b6"
+    sha256                               ventura:        "fc7430bcdb723137423b8197a773e7ca213fb5ff1ec08116d4de4ae4d8fc6122"
+    sha256                               monterey:       "e9bc12585feffc41401012c7f47898262d51b6cffc65dc5714d3dd32af43c3c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89a7375ef1999714cd3eb91bd62016e8c8a5dfea51b3c7a8ea0e79d524eca580"
   end
 
   depends_on "node"
