@@ -15,14 +15,14 @@ class Distcc < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_sonoma:   "f5cffa740e019ecb9464d09feda348769cba918566dce0f279584e92a8b4d16a"
-    sha256 arm64_ventura:  "a05b3f4d6f2a93b71f087fac1c5e874c0eef2e01f6948d21953bf0056b2d2686"
-    sha256 arm64_monterey: "c004a1e0a47b7fe7bba7e2dd6c730f962cc2dd0f3004f948ed6eb9d0948a5cf3"
-    sha256 sonoma:         "f80d67bb32b6b555a17b6ef87e14520f3b37b4193911a1529a718d1d41f4cf68"
-    sha256 ventura:        "9235d3dc9673e104ccaf44a575d48a6a8e467e724381703fb2451c4473488787"
-    sha256 monterey:       "54f7ff487afded94b517b80b63806d285c447f9f4bf7165e7b7314b12325b0ef"
-    sha256 x86_64_linux:   "afcb3e0911ffdb494af0fb80013de9c990690812e86f77001dde497ee0966b79"
+    rebuild 2
+    sha256 arm64_sonoma:   "86f9db8cf49b2761bed7f067435d5e44a7e6d766f926d889b07feff6f0faf606"
+    sha256 arm64_ventura:  "2e5d348a1fadf36a192c384d570935d3207c4328b56989429ccba71009218a65"
+    sha256 arm64_monterey: "fbab64f137d740df58d38572b657f223ee7ac9b9b0bae4831a6a1d15b614a5c3"
+    sha256 sonoma:         "622db90f14bcdefda607c55b5ac3591a851ee10b2a5824f1a847117839f4486b"
+    sha256 ventura:        "1f1403908514f997b9adb2c7533c95d327e59af14d77debb6735020301cfaade"
+    sha256 monterey:       "f45fc0328cf2e97468b13f407ac8dd594df7d456c55f24a7d077ace92777bd55"
+    sha256 x86_64_linux:   "e8044112f0fb9eead14311e10e8ca49e8ff4d5eab6bd58c7ffb0a4bbd00aba42"
   end
 
   depends_on "python@3.12"
