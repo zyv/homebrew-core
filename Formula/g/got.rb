@@ -1,8 +1,8 @@
 class Got < Formula
   desc "Version control system"
   homepage "https://gameoftrees.org/"
-  url "https://gameoftrees.org/releases/portable/got-portable-0.97.tar.gz"
-  sha256 "e07a4894a458503a32982047f064bc0c35da6349d8895be8b69064c2094e3b72"
+  url "https://gameoftrees.org/releases/portable/got-portable-0.99.tar.gz"
+  sha256 "aea408353a02b2e3ad9b4d1b7607900269af97986d40998c57f10acdf0fa1e38"
   license "ISC"
 
   livecheck do
@@ -23,8 +23,9 @@ class Got < Formula
   depends_on "bison" => :build
   depends_on "pkg-config" => :build
   depends_on "libevent"
+  depends_on "libressl"
   depends_on "ncurses"
-  depends_on "openssl@3"
+
   uses_from_macos "zlib"
 
   on_linux do
@@ -34,8 +35,10 @@ class Got < Formula
   end
 
   def install
-    inreplace "configure", %r{\$\{HOMEBREW_PREFIX?\}/opt/openssl@\d+(\.\d+)?}, Formula["openssl@3"].opt_prefix
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    inreplace "configure", %r{\$\{HOMEBREW_PREFIX?\}/opt/openssl@\d+(\.\d+)?}, Formula["libressl"].opt_prefix
+    system "./configure", "--disable-silent-rules",
+                          "--with-libtls=#{Formula["libressl"].opt_prefix}",
+                          *std_configure_args
     system "make", "install"
   end
 
