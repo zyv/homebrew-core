@@ -8,6 +8,16 @@ class Forbidden < Formula
   license "MIT"
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "48af5d20a5ef90171a16527bee52680d46e9da0466e3b10a2992a3929b298722"
+    sha256 cellar: :any,                 arm64_ventura:  "92c3f28d440b53b0dbb0a15ce3d45ffbd323f94c2eeccaf95343b627278ca97f"
+    sha256 cellar: :any,                 arm64_monterey: "4f30579695cdbb96cdcb8c03b8c5bdeae6b211a7bb0aa6ea8cf0223409ba6970"
+    sha256 cellar: :any,                 sonoma:         "f31f683bbacd5a532fff97092f83dfb8e00f6d77a9339d998b6f06983a9d7fd7"
+    sha256 cellar: :any,                 ventura:        "e80247d70732c6458e623a48f928ad8e8c2b3038e5d7f29bffb039230d4ff54c"
+    sha256 cellar: :any,                 monterey:       "2ee05de7b3c64b6fa95c89acfac6dd3ccdb60a69a6bcfbc979e211d165037e72"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4cc0c8504e7aa008a174e8211d2ea4b2eac17b65cd2ad3dd34556ee9e1dd2337"
+  end
+
   depends_on "certifi"
   depends_on "curl"
   depends_on "openssl@3"
