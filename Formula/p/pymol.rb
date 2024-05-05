@@ -29,7 +29,6 @@ class Pymol < Formula
   depends_on "netcdf"
   depends_on "numpy"
   depends_on "pyqt@5"
-  depends_on "python-setuptools" # for pymol/plugins/installation.py
   depends_on "python@3.12"
   uses_from_macos "libxml2"
 
@@ -55,6 +54,12 @@ class Pymol < Formula
   resource "pmw" do
     url "https://github.com/schrodinger/pmw-patched/archive/8bedfc8747e7757c1048bc5e11899d1163717a43.tar.gz"
     sha256 "3a59e6d33857733d0a8ff0c968140b8728f8e27aaa51306160ae6ab13cea26d3"
+  end
+
+  # Drop distutils: https://github.com/schrodinger/pymol-open-source/pull/362
+  patch do
+    url "https://github.com/schrodinger/pymol-open-source/commit/4d81b4a8537421e9a1c4647934d1a16e24bc51dd.patch?full_index=1"
+    sha256 "ee5895ecd3bf731fc1ad714cc6cea17cb5dbb81cd4dab62e77554219fe7ae1ec"
   end
 
   def python3
@@ -95,7 +100,7 @@ class Pymol < Formula
       cmd.zoom()
       cmd.png("test.png", 200, 200)
     EOS
-    system "#{bin}/pymol", "-cq", testpath/"test.py"
+    system bin/"pymol", "-cq", testpath/"test.py"
     assert_predicate testpath/"test.png", :exist?, "Amino acid image should exist"
     system python3, "-c", "import pymol"
   end
