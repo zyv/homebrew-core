@@ -1690,6 +1690,7 @@ proj
 prometheus
 prometheus-cpp
 promptfoo
+proteinortho
 proto
 protoc-gen-go
 protoc-gen-go-grpc
