@@ -702,6 +702,7 @@ favirecon
 fblog
 fclones
 fd
+fdk-aac-encoder
 fdroidcl
 fdroidserver
 feh
