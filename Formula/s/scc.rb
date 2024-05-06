@@ -1,8 +1,8 @@
 class Scc < Formula
   desc "Fast and accurate code counter with complexity and COCOMO estimates"
   homepage "https://github.com/boyter/scc/"
-  url "https://github.com/boyter/scc/archive/refs/tags/v3.3.2.tar.gz"
-  sha256 "2bbfed4cf34bbe50760217b479331cf256285335556a0597645b7250fb603388"
+  url "https://github.com/boyter/scc/archive/refs/tags/v3.3.3.tar.gz"
+  sha256 "266b7baabe345e5d9bbd6652dc556925445f4ab5c80f2492f34ebc821b34e687"
   license any_of: ["MIT", "Unlicense"]
 
   livecheck do
