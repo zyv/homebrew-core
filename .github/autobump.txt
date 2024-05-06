@@ -798,6 +798,7 @@ gdu
 geeqie
 gegl
 genact
+geogram
 geoipupdate
 geoserver
 geph4
