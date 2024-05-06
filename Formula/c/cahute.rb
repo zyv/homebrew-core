@@ -3,8 +3,8 @@ class Cahute < Formula
 
   desc "Library and set of utilities to interact with Casio calculators"
   homepage "https://cahuteproject.org/"
-  url "https://ftp.cahuteproject.org/releases/cahute-0.3.tar.gz"
-  sha256 "e84fdcbfc901b7818900fd959dab110a8aeb7d17ad8ac2f79287436d2519fdfa"
+  url "https://ftp.cahuteproject.org/releases/cahute-0.4.tar.gz"
+  sha256 "a178389ac82e2e83cd55d8d80ee1771daae88331a0e799d5573d986428825648"
   license "CECILL-2.1"
 
   livecheck do
