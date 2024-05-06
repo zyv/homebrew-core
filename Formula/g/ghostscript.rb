@@ -9,8 +9,10 @@ class Ghostscript < Formula
 
     on_macos do
       # 1. Prevent dependent rebuilds on minor version bumps.
+      # 2. Fix missing pointer dereference
       # Reported upstream at:
       #   https://bugs.ghostscript.com/show_bug.cgi?id=705907
+      #   https://bugs.ghostscript.com/show_bug.cgi?id=707649
       patch :DATA
     end
   end
@@ -128,3 +130,18 @@ index 89dfa5a..c907831 100644
  #LDFLAGS_SO=-dynamiclib -flat_namespace
  #LDFLAGS_SO_MAC=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
  #LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
+diff --git a/pdf/pdf_sec.c b/pdf/pdf_sec.c
+index 565ae80ca..7e8f6719d 100644
+--- a/pdf/pdf_sec.c
++++ b/pdf/pdf_sec.c
+@@ -183,8 +183,8 @@ static int apply_sasl(pdf_context *ctx, char *Password, int Len, char **NewPassw
+          * this easy: the errors we want to ignore are the ones with
+          * codes less than 100. */
+         if ((int)err < 100) {
+-            NewPassword = Password;
+-            NewLen = Len;
++            *NewPassword = Password;
++            *NewLen = Len;
+             return 0;
+         }
+ 
