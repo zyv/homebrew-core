@@ -1,8 +1,8 @@
 class Adns < Formula
   desc "C/C++ resolver library and DNS resolver utilities"
   homepage "https://www.chiark.greenend.org.uk/~ian/adns/"
-  url "https://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-1.6.0.tar.gz"
-  sha256 "fb427265a981e033d1548f2b117cc021073dc8be2eaf2c45fd64ab7b00ed20de"
+  url "https://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-1.6.1.tar.gz"
+  sha256 "7138b3789b7506bd683f451d4f7d853077a91803b7b35d86ec667f0f9cd401cd"
   license all_of: ["GPL-3.0-or-later", "LGPL-2.0-or-later"]
   head "https://www.chiark.greenend.org.uk/ucgi/~ianmdlvl/githttp/adns.git", branch: "master"
 
