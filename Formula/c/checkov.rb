@@ -3,10 +3,9 @@ class Checkov < Formula
 
   desc "Prevent cloud misconfigurations during build-time for IaC tools"
   homepage "https://www.checkov.io/"
-  url "https://files.pythonhosted.org/packages/3a/8b/ae49b6f7c84b0a5d7256896f133413e6051416f3bde2d44fa63cc9a5ec9b/checkov-3.2.70.tar.gz"
-  sha256 "2dc8f052f432fae09a8e39b8761083ba9d62bae6fef49c2d278e1567fa3da51a"
+  url "https://files.pythonhosted.org/packages/6b/9e/8ddfe3bb88ff572cb3c97a67bcf2c5f3b2f90846364aa150ed5ea3be5d34/checkov-3.2.80.tar.gz"
+  sha256 "59c58f6998a9b3727d24a77982530bf0a195321175698ae0584769bb805b931e"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url "https://pypi.org/rss/project/checkov/releases.xml"
@@ -72,8 +71,8 @@ class Checkov < Formula
   end
 
   resource "bc-detect-secrets" do
-    url "https://files.pythonhosted.org/packages/c0/d0/10cfe6af91a1055bcb25974761bb4cb959c1ce7fba2dd8f031c519e010fc/bc-detect-secrets-1.5.7.tar.gz"
-    sha256 "a1833883b7613bc0dbef3da5628a545cf4d6d732239ac403a2e8e640060cc744"
+    url "https://files.pythonhosted.org/packages/42/0f/25a1152db4487a6f53e4787ce51b1b616079396f2d6ec7ec952f17f417bb/bc-detect-secrets-1.5.9.tar.gz"
+    sha256 "f93399a11a3762644768ac09995c464e311338f974d0796d97f2bd388ad9dedd"
   end
 
   resource "bc-jsonpath-ng" do
@@ -222,8 +221,8 @@ class Checkov < Formula
   end
 
   resource "jinja2" do
-    url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
-    sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
+    url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
+    sha256 "4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"
   end
 
   resource "jmespath" do
