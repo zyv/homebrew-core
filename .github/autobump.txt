@@ -2185,6 +2185,7 @@ veilid
 velero
 verapdf
 vercel-cli
+verovio
 vet
 vfox
 vgmstream
