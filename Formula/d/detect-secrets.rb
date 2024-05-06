@@ -3,10 +3,9 @@ class DetectSecrets < Formula
 
   desc "Enterprise friendly way of detecting and preventing secrets in code"
   homepage "https://github.com/Yelp/detect-secrets"
-  url "https://files.pythonhosted.org/packages/f1/55/292f9ce52bba7f3df0a9cde65dabf458d3aeec6a63bf737e5a5fa9fe6d31/detect_secrets-1.4.0.tar.gz"
-  sha256 "d56787e339758cef48c9ccd6692f7a094b9963c979c9813580b0169e41132833"
+  url "https://files.pythonhosted.org/packages/69/67/382a863fff94eae5a0cf05542179169a1c49a4c8784a9480621e2066ca7d/detect_secrets-1.5.0.tar.gz"
+  sha256 "6bb46dcc553c10df51475641bb30fd69d25645cc12339e46c824c1e0c388898a"
   license "Apache-2.0"
-  revision 4
   head "https://github.com/Yelp/detect-secrets.git", branch: "master"
 
   bottle do
