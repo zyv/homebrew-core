@@ -1472,6 +1472,7 @@ nfpm
 nginx
 ngt
 nickel
+nicotine-plus
 nim
 ninja
 nixpacks
