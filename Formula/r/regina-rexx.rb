@@ -1,10 +1,9 @@
 class ReginaRexx < Formula
   desc "Interpreter for Rexx"
   homepage "https://regina-rexx.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/regina-rexx/regina-rexx/3.9.5/regina-rexx-3.9.5.tar.gz"
-  sha256 "08e9a9061bee0038cfb45446de20766ffdae50eea37f6642446ec4e73a2abc51"
+  url "https://downloads.sourceforge.net/project/regina-rexx/regina-rexx/3.9.6/regina-rexx-3.9.6.tar.gz"
+  sha256 "ed98c7a7f1d5a4148b02fef1b16aee4a6a6d8658d01a80cf5c503015ef01afa5"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
     sha256 arm64_sonoma:   "d5c5ba7129bbe4bff8d1123c1fe9854cf4f2131a49386a2f266bbd13f4777d4c"
