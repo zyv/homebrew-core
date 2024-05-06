@@ -1964,6 +1964,7 @@ sonarqube-lts
 sonobuoy
 soplex
 sound-touch
+sourcekitten
 sourcery
 spack
 spectral-cli
