@@ -1,8 +1,8 @@
 class DjangoCompletion < Formula
   desc "Bash completion for Django"
   homepage "https://www.djangoproject.com/"
-  url "https://github.com/django/django/archive/refs/tags/5.0.4.tar.gz"
-  sha256 "0484848137b22138bac47ad13c25f4064b6e1fad33db6094ca508c2399390e67"
+  url "https://github.com/django/django/archive/refs/tags/5.0.5.tar.gz"
+  sha256 "172bc45228a1d190f022f0caecd3b8a0df0ea6b850af40f932615273b3366e4c"
   license "BSD-3-Clause"
   head "https://github.com/django/django.git", branch: "main"
 
