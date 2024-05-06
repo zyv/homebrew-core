@@ -2,8 +2,8 @@ class Portablegl < Formula
   desc "Implementation of OpenGL 3.x-ish in clean C"
   homepage "https://github.com/rswinkle/PortableGL"
   url "https://github.com/rswinkle/PortableGL.git",
-    tag:      "0.97.1",
-    revision: "24f8840b800f247c328860c578c19b0535be6d58"
+    tag:      "0.98.0",
+    revision: "79fe2816009bca0f8f5f06c21930531e854edb89"
   license "MIT"
   head "https://github.com/rswinkle/PortableGL.git", branch: "master"
 
