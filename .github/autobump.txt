@@ -2156,6 +2156,7 @@ ungit
 uni
 uni-algo
 universal-ctags
+uriparser
 urlscan
 usb.ids
 usbredir
