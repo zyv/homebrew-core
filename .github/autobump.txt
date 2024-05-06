@@ -285,6 +285,7 @@ cgl
 cglm
 cgrep
 chain-bench
+chainhook
 chainloop-cli
 chamber
 chaoskube
