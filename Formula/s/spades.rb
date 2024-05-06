@@ -26,11 +26,11 @@ class Spades < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 sonoma:       "fe9990fdd0a2aed4be9ae1b409ec9ce7624fb67cecdaf9a93dc7a27e79a5d44b"
-    sha256 cellar: :any,                 ventura:      "7937876005faaaf6721f9aa34a38eaf46559863660b8a80f610cce1ab82e9eef"
-    sha256 cellar: :any,                 monterey:     "c81b55304bedd35d5b1959ab650f0d005d3fee2eadf6795fc3d69b3c5a4539b7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3889b1e2c9a0a3f08f9e478cf370e078524fd2155150af7431866f4fca7c0557"
+    rebuild 3
+    sha256 cellar: :any,                 sonoma:       "596f3c88c276179428ce87c7801b6e41483bdaca32f97e809d1e74c6ab656104"
+    sha256 cellar: :any,                 ventura:      "f03d022acc5928a400a57d56815a314cdbe2b72c5600eb952096e57fd4abd85a"
+    sha256 cellar: :any,                 monterey:     "c4da4be23d91abf193367765d6bee9cbd758add046aee900caec845d1bed243b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c284a1b00ebca8794f3f4396f481c09228aedc0ea4b6d2ad364a4efb29115a7e"
   end
 
   head do
