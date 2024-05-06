@@ -3,8 +3,8 @@ class Weasyprint < Formula
 
   desc "Convert HTML to PDF"
   homepage "https://www.courtbouillon.org/weasyprint"
-  url "https://files.pythonhosted.org/packages/47/45/57dbaf38d631a964963bd762e93bf62536d548d59cacd4da2176b0098aaf/weasyprint-62.0.tar.gz"
-  sha256 "9f56eaefdaafcf35ae568c56eee5dba189af1272a46f4d205bd12936315f9481"
+  url "https://files.pythonhosted.org/packages/3b/0b/b2b165439954c1d4ed4045ad95cb7fb2bd0c696e3b90ecba56533b8aa12f/weasyprint-62.1.tar.gz"
+  sha256 "bf3c1a9ac4194271a7cf117229c093744105b50ac2fa64c0a6e44e68ae742992"
   license "BSD-3-Clause"
 
   bottle do
