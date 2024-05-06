@@ -8,13 +8,12 @@ class Sourcekitten < Formula
   head "https://github.com/jpsim/SourceKitten.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b8e8c03abf8411f909a910b72e91eec75c96435be7011806158d10b7d5991ae0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "98ca219d2062f4501b0dc5821274ee57e93b357889709ed1b68e09c417c70658"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2396d7736386e9b389da34e9667a20c84d42db627e0cd1435fb4a5ed552637d1"
-    sha256 cellar: :any_skip_relocation, sonoma:         "672d24b4160cff44cf0e7f0b90c3daeb9f19819eef33cfec6c703c9c4df81a85"
-    sha256 cellar: :any_skip_relocation, ventura:        "ff7817850aeea5f48f6ad8767975527f07f0987688a2bbe25922efb100898b15"
-    sha256 cellar: :any_skip_relocation, monterey:       "d99b27e850722229a9da7fd8f55a655dde4f5b920e03d3d660ecb4088b363613"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0bd1035c22cd6761912daa069a6f20f49b312d7aa2cc217a8004796f37ee080f"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "eafdd15b9e0de09d67b815c6daf250d61976f4baf11513c558a430b0bb5182fc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4e35a2af7a4273b844ab35b150e8e6a45553c3078fdfe2c5d15bd38a68ec1156"
+    sha256 cellar: :any_skip_relocation, sonoma:         "8779a196675cad2cddec33812545647731994a36cf9542de513bfa9e0ed85093"
+    sha256 cellar: :any_skip_relocation, ventura:        "44cfbed75b6096db3306b208d008ef619604c72587ab3ee4ead87e82f7681b32"
+    sha256 cellar: :any_skip_relocation, monterey:       "b97ff5ab90b33c889a57fe2a5b80117cc4e7649e790658cfb55611bebbc54885"
   end
 
   depends_on xcode: ["14.0", :build]
