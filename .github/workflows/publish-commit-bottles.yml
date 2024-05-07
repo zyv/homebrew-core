@@ -244,6 +244,7 @@ jobs:
       volumes:
         - /mnt:/mnt
     permissions:
+      attestations: write # for `generate build provenance`
       id-token: write # for `generate build provenance`
       contents: write # for `generate build provenance`
       packages: write # for `generate build provenance`
@@ -335,11 +336,23 @@ jobs:
 
           echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: generate build provenance
-        uses: github-early-access/generate-build-provenance@main
+      - name: Generate build provenance
+        # GitHub Attestations are still in early public access, and we've seen
+        # some sporadic errors when generating attestations.
+        # Rather than fail outright, we allow this step to fail and fall
+        # through to a last-ditch retry below. Longer term, we should put this
+        # above the 'pr-pull' step, which should be split into separate 'pull'
+        # and 'push to GitHub Packages' phases.
+        continue-on-error: true
+        uses: actions/attest-build-provenance@v1
         with:
           subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
-  
+
+      - name: Generate build provenance (last ditch)
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
+
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
         with:
