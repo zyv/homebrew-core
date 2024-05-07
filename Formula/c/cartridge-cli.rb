@@ -2,8 +2,8 @@ class CartridgeCli < Formula
   desc "Tarantool Cartridge command-line utility"
   homepage "https://tarantool.org/"
   url "https://github.com/tarantool/cartridge-cli.git",
-      tag:      "2.12.11",
-      revision: "4ba052189c0b9776126a7905fe5160622695ba14"
+      tag:      "2.12.12",
+      revision: "7f7efcfd4aaf7a2b4061f8424b6843a462794ed6"
   license "BSD-2-Clause"
 
   bottle do
@@ -22,10 +22,10 @@ class CartridgeCli < Formula
   def install
     system "mage", "build"
     bin.install "cartridge"
-    system bin/"cartridge", "gen", "completion"
-
-    bash_completion.install "completion/bash/cartridge"
-    zsh_completion.install "completion/zsh/_cartridge"
+    generate_completions_from_executable(bin/"cartridge", "gen", "completion",
+                                            shells:                 [:bash, :zsh],
+                                            shell_parameter_format: :none,
+                                            base_name:              "cartridge")
   end
 
   test do
