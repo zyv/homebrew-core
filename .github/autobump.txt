@@ -769,6 +769,8 @@ freetype
 freexl
 frei0r
 fribidi
+frpc
+frps
 frugal
 fselect
 fsql
