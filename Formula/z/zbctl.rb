@@ -1,9 +1,8 @@
 class Zbctl < Formula
   desc "Zeebe CLI client"
   homepage "https://docs.camunda.io/docs/apis-clients/cli-client/index/"
-  url "https://github.com/camunda/zeebe.git",
-      tag:      "8.5.0",
-      revision: "0bf27175173109b8f05f3ea6a7e44e9ef6efa506"
+  url "https://github.com/camunda/zeebe/archive/refs/tags/8.5.1.tar.gz"
+  sha256 "05fa5d7830004c39e00cf2ff0db85e95ac4aedc2e5a9444450491dffdb6270cb"
   license "Apache-2.0"
   head "https://github.com/camunda/zeebe.git", branch: "develop"
 
@@ -31,14 +30,9 @@ class Zbctl < Formula
   depends_on "go" => :build
 
   def install
-    commit = Utils.git_short_head
-    chdir "clients/go/cmd/zbctl" do
+    cd "clients/go/cmd/zbctl" do
       project = "github.com/camunda/zeebe/clients/go/v8/cmd/zbctl/internal/commands"
-      ldflags = %W[
-        -w
-        -X #{project}.Version=#{version}
-        -X #{project}.Commit=#{commit}
-      ]
+      ldflags = "-s -w -X #{project}.Version=#{version} -X #{project}.Commit=#{tap.user}"
       system "go", "build", "-tags", "netgo", *std_go_args(ldflags:)
 
       generate_completions_from_executable(bin/"zbctl", "completion")
@@ -53,9 +47,7 @@ class Zbctl < Formula
       "desc = \"transport: Error while dialing: dial tcp 127.0.0.1:26500: connect: connection refused\""
     output = shell_output("#{bin}/zbctl status 2>&1", 1)
     assert_match status_error_message, output
-    # Check version
-    commit = stable.specs[:revision][0..7]
-    expected_version = "zbctl #{version} (commit: #{commit})"
-    assert_match expected_version, shell_output("#{bin}/zbctl version")
+
+    assert_match version.to_s, shell_output("#{bin}/zbctl version")
   end
 end
