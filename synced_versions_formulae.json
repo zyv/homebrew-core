@@ -42,7 +42,6 @@
   ["moreutils", "sponge"],
   ["mupdf", "mupdf-tools"],
   ["mysql", "mysql-client"],
-  ["nifi-registry", "nifi"],
   ["notmuch", "notmuch-mutt"],
   ["openssh", "ssh-copy-id"],
   ["petsc", "petsc-complex"],
