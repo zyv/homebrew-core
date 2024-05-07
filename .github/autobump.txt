@@ -1276,6 +1276,7 @@ libxvmc
 libzim
 libzzip
 license-eye
+licensefinder
 lighthouse
 lighttpd
 lima
