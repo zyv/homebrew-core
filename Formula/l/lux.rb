@@ -19,7 +19,11 @@ class Lux < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args
+    ldflags = %W[
+      -s -w
+      -X github.com/iawia002/lux/app.version=#{version}
+    ]
+    system "go", "build", *std_go_args(ldflags:)
   end
 
   test do
