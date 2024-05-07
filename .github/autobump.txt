@@ -2161,6 +2161,7 @@ unar
 ungit
 uni
 uni-algo
+unison
 universal-ctags
 uriparser
 urlscan
