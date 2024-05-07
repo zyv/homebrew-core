@@ -4,10 +4,9 @@ class Licensefinder < Formula
   # pull from git tag as gemspec uses `git ls-files`
   # For versions following v7.1.0, may be able to remove 4cac18e5 patch.
   url "https://github.com/pivotal/LicenseFinder.git",
-      tag:      "v7.1.0",
-      revision: "81092404aeaf1cb39dbf2551f50f007ed049c26c"
+      tag:      "v7.2.0",
+      revision: "461c44c222ea3672d9db70980ff4a272f85da14d"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2dd84e133cb82c6ed665cc0eaf65255c2c9dabd20c87a4c8d3163c758c3363c7"
