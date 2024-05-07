@@ -308,6 +308,7 @@ cgl
 cglm
 cgrep
 chain-bench
+chainhook
 chainloop-cli
 chainsaw
 chamber
