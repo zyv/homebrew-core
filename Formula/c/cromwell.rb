@@ -1,8 +1,8 @@
 class Cromwell < Formula
   desc "Workflow Execution Engine using Workflow Description Language"
   homepage "https://github.com/broadinstitute/cromwell"
-  url "https://github.com/broadinstitute/cromwell/releases/download/86/cromwell-86.jar"
-  sha256 "f9581657e0484c90b5ead0f699d8d791f94e3cabe87d8cb0c5bfb21d1fdb6592"
+  url "https://github.com/broadinstitute/cromwell/releases/download/87/cromwell-87.jar"
+  sha256 "8b6fc53d3654d32bcd15f16914d482c3aeea87fd2ed92703b937621e9d4b6a17"
   license "BSD-3-Clause"
 
   bottle do
@@ -23,11 +23,13 @@ class Cromwell < Formula
   depends_on "openjdk"
 
   resource "womtool" do
-    url "https://github.com/broadinstitute/cromwell/releases/download/86/womtool-86.jar"
-    sha256 "5212a139755cd299ad61324429a3319bf0d2c5c4966e4270dd90579a4f84c0d8"
+    url "https://github.com/broadinstitute/cromwell/releases/download/87/womtool-87.jar"
+    sha256 "73b63098ac0a87d586b7c5b8729b6e8b440de3df0f5c8b0daafd796dc4ff734c"
   end
 
   def install
+    odie "womtool resource needs to be updated" if build.stable? && version != resource("womtool").version
+
     if build.head?
       system "sbt", "assembly"
       libexec.install Dir["server/target/scala-*/cromwell-*.jar"][0] => "cromwell.jar"
