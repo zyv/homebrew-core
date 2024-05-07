@@ -10,6 +10,7 @@ class Ccls < Formula
   url "https://github.com/MaskRay/ccls/archive/refs/tags/0.20240202.tar.gz"
   sha256 "355ff7f5eb5f24d278dda05cccd9157e89583272d0559d6b382630171f142d86"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/MaskRay/ccls.git", branch: "master"
 
   bottle do
@@ -24,7 +25,7 @@ class Ccls < Formula
 
   depends_on "cmake" => :build
   depends_on "rapidjson" => :build
-  depends_on "llvm@16"
+  depends_on "llvm"
   depends_on macos: :high_sierra # C++ 17 is required
 
   fails_with gcc: "5"
