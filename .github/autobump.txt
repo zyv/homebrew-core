@@ -189,6 +189,7 @@ bitwarden-cli
 bk
 bkt
 black
+blis
 bluepill
 blueutil
 bluez
