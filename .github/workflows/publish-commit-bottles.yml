@@ -289,15 +289,13 @@ jobs:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: gh pr checkout "$PR"
 
-      - name: Pull and upload bottles to GitHub Packages
+      - name: Pull PR bottles
         id: pr-pull
         working-directory: ${{steps.set-up-homebrew.outputs.repository-path}}
         env:
           BREWTESTBOT_NAME_EMAIL: "BrewTestBot <1589480+BrewTestBot@users.noreply.github.com>"
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
           HOMEBREW_GITHUB_API_TOKEN: ${{secrets.HOMEBREW_CORE_PUBLIC_REPO_EMAIL_TOKEN}}
-          HOMEBREW_GITHUB_PACKAGES_USER: brewtestbot
-          HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{secrets.HOMEBREW_CORE_GITHUB_PACKAGES_TOKEN}}
           EXPECTED_SHA: ${{needs.check.outputs.head_sha}}
           LARGE_RUNNER: ${{inputs.large_runner}}
         run: |
@@ -323,6 +321,7 @@ jobs:
 
           # Don't quote arguments that might be empty; this causes errors.
           brew pr-pull \
+            --no-upload \
             --debug \
             --clean \
             --no-cherry-pick \
@@ -337,23 +336,26 @@ jobs:
           echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Generate build provenance
-        # GitHub Attestations are still in early public access, and we've seen
-        # some sporadic errors when generating attestations.
-        # Rather than fail outright, we allow this step to fail and fall
-        # through to a last-ditch retry below. Longer term, we should put this
-        # above the 'pr-pull' step, which should be split into separate 'pull'
-        # and 'push to GitHub Packages' phases.
-        continue-on-error: true
-        id: first-attestation-attempt
         uses: actions/attest-build-provenance@v1
         with:
           subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
 
-      - name: Generate build provenance (last ditch)
-        if: always() && steps.first-attestation-attempt.outcome == 'failure'
-        uses: actions/attest-build-provenance@v1
-        with:
-          subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
+      - name: Upload bottles to GitHub Packages
+        id: pr-upload
+        working-directory: ${{steps.set-up-homebrew.outputs.repository-path}}
+        env:
+          BREWTESTBOT_NAME_EMAIL: "BrewTestBot <1589480+BrewTestBot@users.noreply.github.com>"
+          HOMEBREW_GITHUB_API_TOKEN: ${{secrets.HOMEBREW_CORE_PUBLIC_REPO_EMAIL_TOKEN}}
+          HOMEBREW_GITHUB_PACKAGES_USER: brewtestbot
+          HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{secrets.HOMEBREW_CORE_GITHUB_PACKAGES_TOKEN}}
+        run: |
+          # Don't quote arguments that might be empty; this causes errors.
+          brew pr-upload \
+            --debug \
+            --committer="$BREWTESTBOT_NAME_EMAIL" \
+            --root-url="https://ghcr.io/v2/homebrew/core" \
+            ${{inputs.warn_on_upload_failure && '--warn-on-upload-failure' || ''}} \
+            "$PR"
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
