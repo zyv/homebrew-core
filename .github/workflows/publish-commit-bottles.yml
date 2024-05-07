@@ -344,11 +344,13 @@ jobs:
         # above the 'pr-pull' step, which should be split into separate 'pull'
         # and 'push to GitHub Packages' phases.
         continue-on-error: true
+        id: first-attestation-attempt
         uses: actions/attest-build-provenance@v1
         with:
           subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
 
       - name: Generate build provenance (last ditch)
+        if: always() && steps.first-attestation-attempt.outcome == 'failure'
         uses: actions/attest-build-provenance@v1
         with:
           subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
