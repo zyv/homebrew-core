@@ -3,10 +3,9 @@ class AstrometryNet < Formula
 
   desc "Automatic identification of astronomical images"
   homepage "https://github.com/dstndstn/astrometry.net"
-  url "https://github.com/dstndstn/astrometry.net/releases/download/0.94/astrometry.net-0.94.tar.gz"
-  sha256 "38c0d04171ecae42033ce5c9cd0757d8c5fc1418f2004d85e858f29aee383c5f"
+  url "https://github.com/dstndstn/astrometry.net/releases/download/0.95/astrometry.net-0.95.tar.gz"
+  sha256 "b8239e39b44d6877b0427edeffd95efc258520044ff5afdd0fb1a89ff8f1afc0"
   license "BSD-3-Clause"
-  revision 3
 
   livecheck do
     url :stable
@@ -42,33 +41,24 @@ class AstrometryNet < Formula
     sha256 "c64f60588f25fb2ba499854082bca73b0eda43b32ed6091f09dfcbcb72a911a6"
   end
 
-  # https://github.com/Homebrew/homebrew-core/issues/130484
-  # Review for removal on next release
-  patch do
-    url "https://github.com/dstndstn/astrometry.net/commit/f85136190b6e39393049e9be1cf14ac32b89b538.patch?full_index=1"
-    sha256 "82f8968805dacfd66961ea7cfea7e190be6faaaaa5367f2b86b0b5a62f160706"
-  end
-
   def install
     # astrometry-net doesn't support parallel build
     # See https://github.com/dstndstn/astrometry.net/issues/178#issuecomment-592741428
     ENV.deparallelize
 
-    python = which("python3.12")
     ENV["FITSIO_USE_SYSTEM_FITSIO"] = "1"
     ENV["NETPBM_INC"] = "-I#{Formula["netpbm"].opt_include}/netpbm"
     ENV["NETPBM_LIB"] = "-L#{Formula["netpbm"].opt_lib} -lnetpbm"
     ENV["SYSTEM_GSL"] = "yes"
-    ENV["PYTHON"] = python
+    ENV["PYTHON"] = python3 = which("python3.12")
 
-    venv = virtualenv_create(libexec, python)
+    venv = virtualenv_create(libexec, python3)
     venv.pip_install(resources, build_isolation: false)
 
     ENV["INSTALL_DIR"] = prefix
-    site_packages = Language::Python.site_packages(python)
-    ENV["PY_BASE_INSTALL_DIR"] = libexec/site_packages/"astrometry"
-    ENV["PY_BASE_LINK_DIR"] = libexec/site_packages/"astrometry"
-    ENV["PYTHON_SCRIPT"] = libexec/"bin/python"
+    ENV["PY_BASE_INSTALL_DIR"] = venv.site_packages/"astrometry"
+    ENV["PY_BASE_LINK_DIR"] = venv.site_packages/"astrometry"
+    ENV["PYTHON_SCRIPT"] = venv.root/"bin/python"
 
     system "make"
     system "make", "py"
