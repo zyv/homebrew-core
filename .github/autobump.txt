@@ -177,6 +177,7 @@ bgpq4
 biber
 bibtexconv
 bigloo
+bigquery-emulator
 bilix
 binaryen
 bind
