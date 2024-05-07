@@ -1892,6 +1892,7 @@ sdb
 sdl2
 seam
 seaweedfs
+secp256k1
 securefs
 selene
 semgrep
