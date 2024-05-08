@@ -1,8 +1,8 @@
 class Alluxio < Formula
   desc "Open Source Memory Speed Virtual Distributed Storage"
   homepage "https://www.alluxio.io/"
-  url "https://downloads.alluxio.io/downloads/files/2.9.3/alluxio-2.9.3-bin.tar.gz"
-  sha256 "c71abc5e852d37cfd6b1dea076f056c6997e3f60fbb940bf005acb3a6354a369"
+  url "https://downloads.alluxio.io/downloads/files/2.9.4/alluxio-2.9.4-bin.tar.gz"
+  sha256 "21ec1fbe838a998d3bfd1072b07fbcac0919052c810df49d006f89b52d471b4b"
   license "Apache-2.0"
 
   livecheck do
