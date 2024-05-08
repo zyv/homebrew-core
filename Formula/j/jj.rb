@@ -4,6 +4,7 @@ class Jj < Formula
   url "https://github.com/martinvonz/jj/archive/refs/tags/v0.17.1.tar.gz"
   sha256 "653e1190a82a39dae733487a11aa641ba62a36ae1e221c21844f822575961919"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/martinvonz/jj.git", branch: "main"
 
   bottle do
@@ -20,12 +21,13 @@ class Jj < Formula
   depends_on "rust" => :build
   depends_on "libgit2"
   depends_on "openssl@3"
+  depends_on "watchman"
   uses_from_macos "zlib"
 
   def install
     ENV["LIBGIT2_NO_VENDOR"] = "1"
 
-    system "cargo", "install", "--no-default-features", "--bin", "jj", *std_cargo_args(path: "cli")
+    system "cargo", "install", *std_cargo_args(path: "cli")
 
     generate_completions_from_executable(bin/"jj", "util", "completion", shell_parameter_format: :flag)
     (man1/"jj.1").write Utils.safe_popen_read(bin/"jj", "util", "mangen")
