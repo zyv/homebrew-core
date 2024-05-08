@@ -1198,6 +1198,7 @@ libdap
 libdeflate
 libdnet
 libepoxy
+libewf
 libfabric
 libffi
 libfontenc
