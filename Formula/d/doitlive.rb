@@ -10,14 +10,13 @@ class Doitlive < Formula
   head "https://github.com/sloria/doitlive.git", branch: "dev"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b7f3203d43405983df8f0a5485f13c31231568333b2da35a9b2cfeff8f55c32e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "284dc2184e111fccb4d8f57b8e181659cdd7a3dda2404f94a60ad46f324339fb"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9c52956766e5b2351402959a4a6ad901cb0ddc652446db97e84671604f1f6e09"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8de40bb4d2936e765e4a91030a4fd720c988562da2736555a6212390611457b6"
-    sha256 cellar: :any_skip_relocation, ventura:        "1d895dee3252e9c18e0827cd8220c2d42d403b47d567fe95fa016b530e554917"
-    sha256 cellar: :any_skip_relocation, monterey:       "37b3f7099735ddbf60c94372b40e065f2bd62b3f56d89711514d7724639c7260"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5ebbdb6f7c62955f7d9b2f8e130bf6e033fd989b1b9c48c50c8fe2cfd1b29d8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2daa5f32027ff7712740051dcb330a1c848b36e0334c02cedfcea3f4a137ef85"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "946ce9358688fb5634500b7af4355a724f7862a8fb948d6a54ec1c0c10497ce1"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "301116d0a62a38271ae8c912c52685033f55ced59502dde85b37f93e35335e49"
+    sha256 cellar: :any_skip_relocation, sonoma:         "d9b79c717364cb83be9b5755758627c4e24bb3689aaa8280840d5d4c5e0fd3d3"
+    sha256 cellar: :any_skip_relocation, ventura:        "be879e2d977218eb0e9fbab32439641da043c72c7ff51672950bb4907926e5dc"
+    sha256 cellar: :any_skip_relocation, monterey:       "05ad943f30291839b9222947eb266559bc51be832071e62b8ccd7cf17b2ca248"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "42f21feed234fdca264d7c8064df700bad1a6bbfcf37cfb1b9a59caf46f3a9ea"
   end
 
   depends_on "python@3.12"
