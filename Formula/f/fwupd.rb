@@ -10,13 +10,13 @@ class Fwupd < Formula
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
   bottle do
-    sha256 arm64_sonoma:   "10c65512c18814f568f13ff2b8f0ff1814f217c169b421531e5562c2a52a4e17"
-    sha256 arm64_ventura:  "c493dfaeb23db7abfe695948cfa63ca8a998c6694a36bbf7ea13455610883e77"
-    sha256 arm64_monterey: "026ad2008614890eda210f0e415fa4351149ddd2a932d5719dc85c37a2c86c81"
-    sha256 sonoma:         "57b183efd91db4b4c3ea9b7c69f79194e7113791a8a54ad69753ce799ac318e3"
-    sha256 ventura:        "9e73fa70f65f8249e745f9e6ab26459e011370e8291cf174dbd466283239179b"
-    sha256 monterey:       "d0ed0d9ed7efe1187d5915a898662b2955cfd3796f97ad9242b5bf720b422bca"
-    sha256 x86_64_linux:   "3eee6cc5cb668c048e133aabd722386c1181890eb85db340d85b37b5790246eb"
+    sha256 arm64_sonoma:   "554be22b786b71d3e55a73e07fa67df7032685f4a96ee6e828d4b905c264d26a"
+    sha256 arm64_ventura:  "edc9317e4a569dbde5d15f74662c9f2dde9d867ced68f7639a0d848662ca4b02"
+    sha256 arm64_monterey: "7e26e8ca921869ef01844ec223a36365ed10a972ee299e69cdd6d970d4729b9e"
+    sha256 sonoma:         "e88a49b9cfcab94db98de7516b6ea36435da54b7fa3fc658c76420867c181f20"
+    sha256 ventura:        "066fd4bace52cc8c7934390d28152e5e397be33ed862f839001b1f417a449e53"
+    sha256 monterey:       "ce58ef1ffce2ff9a793e2c5d1b1db636bbd0e0f733e848005cb9a9bf231ee4f1"
+    sha256 x86_64_linux:   "334a8751a60bcd23e7f715464fcebfbef6e892e2e8ffbdab60808c1db579dd9a"
   end
 
   depends_on "gi-docgen" => :build
