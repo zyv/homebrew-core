@@ -848,6 +848,7 @@ gitmoji
 gitoxide
 gitql
 gitsign
+gittuf
 gitu
 gjs
 glances
