@@ -60,6 +60,7 @@ class MecabIpadic < Formula
       dicdir = #{HOMEBREW_PREFIX}/lib/mecab/dic/ipadic
     EOS
 
-    pipe_output("mecab --rcfile=#{testpath}/mecabrc", "すもももももももものうち\n", 0)
+    assert_match "名詞", pipe_output("mecab --rcfile=#{testpath}/mecabrc", "すもももももももものうち\n", 0)
+    assert_match "名詞,固有名詞,組織", pipe_output("mecab --rcfile=#{testpath}/mecabrc", "A\n")
   end
 end
