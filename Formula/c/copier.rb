@@ -9,13 +9,13 @@ class Copier < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "620ed43cbaffc9dbb32d66d4e69b87360bd6521ae22c3b2c519221f1cf1a568a"
-    sha256 cellar: :any,                 arm64_ventura:  "d1ac92e32bf688218d2563469f24f67c63852f07d4fe2589c6e823ccf964cb3a"
-    sha256 cellar: :any,                 arm64_monterey: "2fb7d6f1caddd467a17517004cc3ec55470b4f8505642d1685bac2752ce47256"
-    sha256 cellar: :any,                 sonoma:         "ec79a7a8c766214f40d006ab214f9951215f1b0c01560cfc188f3919fa9ed933"
-    sha256 cellar: :any,                 ventura:        "deb338ce43fbe88bcaeb13f0e3887ba50dd947a43b6493c956d049f67e8da2e5"
-    sha256 cellar: :any,                 monterey:       "d0ba42d0349b54a41679841b7be6881fae0f46e71c53ccad7564d7ce5ba05ee8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "30ec7494318b195b1bf496be6cbdcf8f94b40490ae24f1d3795751ac1896a5bb"
+    sha256 cellar: :any,                 arm64_sonoma:   "192650b8d0f59284f2aff41e34d3284d1ec282f43acf41d0d4c6d711b2fae40a"
+    sha256 cellar: :any,                 arm64_ventura:  "4145426c0ad0df83a51091699936b2d0b40f12c5ec11d85acc81c85050111cee"
+    sha256 cellar: :any,                 arm64_monterey: "e48dafa4a110bbf8c96d270d18587de8dee4e0eb9177dc9bd7e53bb4e0fea7d6"
+    sha256 cellar: :any,                 sonoma:         "9fb2459f3ac5559549cd1ceb8e35bd42cf7ac178598281e24fcf694a8bbb3069"
+    sha256 cellar: :any,                 ventura:        "b1c97a51fd97dd5540f459bbec4e4b6941ede77699e0afbb4f0310693674cf61"
+    sha256 cellar: :any,                 monterey:       "e374678cf3fb262582664e25c7ba82beb004ce32819521a0eacb5cc890b4337e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a3b4204b3dedd84489b831193b131bcf3cbfeba3d226ee0f5597210090bc94ef"
   end
 
   depends_on "rust" => :build
