@@ -12,13 +12,13 @@ class Syncthing < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "59f281953cfdb2eaeac0897e2c334b81e773077d0fa1d162f600989cf557e104"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "119e061d9804bc057e361f933e647ffe2bf56be9dd206af743c6dce5d0a91256"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0ea383632dbfa5904c764954d86be2f2a55c457fbcc705bac2538ad910667c4d"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3031721b5dfe865dc44cfb1cc417fd985aa4b364379931d0a6957f8a28340a5d"
-    sha256 cellar: :any_skip_relocation, ventura:        "11304db616b9872726b5ebde7868c91ccfdee1693814d6093b63f2b769522029"
-    sha256 cellar: :any_skip_relocation, monterey:       "e907a48fced62d85d0087806fca994ce45575ba800130c4ade1e8f37c2b1a738"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "242906a8e7663744e08d1c176797f93816928fee2c7098fbf1e229d42ec913ed"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "273d82530ebc08d437256856c2a6df72da7279e24bccc1b41cfc03b9e5432d38"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "84a4f6de5068fa586c01637e77c3939a28ef984e740045d0a7fbbfba4c4d5131"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "50be8e475572c1d28e077df7274bfe0b66a06f44fdc3c76eaeb63a5521891d9a"
+    sha256 cellar: :any_skip_relocation, sonoma:         "52d8f6883dafbece727d249c9928ed3171292ef62f6350ddbb1e5a44e8ba9886"
+    sha256 cellar: :any_skip_relocation, ventura:        "25b570919894690f64fc1a4a512aa6cf4acd84faf70527a8cfdc489ffdcb8b4e"
+    sha256 cellar: :any_skip_relocation, monterey:       "3fe22895e9b0217bc12ebeefc56b8ff55d99973fb76313981e239ce342bd4155"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "34f1ee5af46151fe294ceb93ad76c72beb408cc9bb624a022fba07ce98926259"
   end
 
   depends_on "go" => :build
