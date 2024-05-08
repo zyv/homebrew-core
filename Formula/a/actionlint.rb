@@ -6,14 +6,13 @@ class Actionlint < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "61d2f14eed714017d3d53ddd4fe6666c8dfa2e2f8044a154e7cb5d8bbc718496"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6e676462ab3f966a1121361e7b1a294176fc063d332ae4ceac0bc57db457aa36"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "480ccff8d4c16bb86183644f15d8cbd715254ce14a8029ee9144bae89a71a5a7"
-    sha256 cellar: :any_skip_relocation, sonoma:         "09ce14e67ba47deadb63819ea850d69ba34e53d3f652ce5510a9520c2f389de8"
-    sha256 cellar: :any_skip_relocation, ventura:        "62f5277a6bae988b32dff663c1094dc7da1e7b0f042d95b5b1cca0a224d52108"
-    sha256 cellar: :any_skip_relocation, monterey:       "22b212529e48eca5cb0cbb6c2cd034a19f60b5a5314e386dad340e70acb2f792"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "aa3c5f07b0f59c71bdaea2199b619833f09d8339dcc6c63a63c1a8c12b937393"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "70ab423bc1aa56d06e94ad8baf38e2da108839a4a3eeec95b3e49d868f6247ac"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "60fc6d0bdddacf704a220c6387f0e7897e0a06a8ca328685b9e218d9832e3fef"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6d5277aa95af7bcfd6f1ed3be2aa563125c83d66f2ccefae515bf10a24c25169"
+    sha256 cellar: :any_skip_relocation, sonoma:         "c99bbf5d1868b59f633f37ad311cc5eb2c501a6e5c1ec92bf707be55dc62eead"
+    sha256 cellar: :any_skip_relocation, ventura:        "bdf9ba1a7dab0e375ba1344ea921bad5d053ab91fbe234ba62b52d8d4333a82d"
+    sha256 cellar: :any_skip_relocation, monterey:       "993394b5d71989d366e46c813ed38e4e6abbbad97b79d4f577115c2f2a781f6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f7517cb6ecc4d4dda9af32e97a1f1ac815b3685289a674f54ec92aceecdc15d"
   end
 
   depends_on "go" => :build
