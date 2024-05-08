@@ -2227,6 +2227,7 @@ volk
 volta
 vpn-slice
 vrc-get
+vscode-langservers-extracted
 vsearch
 vsh
 vte3
