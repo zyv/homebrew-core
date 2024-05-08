@@ -18,6 +18,12 @@ class Actionlint < Formula
   depends_on "go" => :build
   depends_on "ronn" => :build
 
+  # Support permissions for attestations
+  patch do
+    url "https://github.com/rhysd/actionlint/commit/1f0efe145326c0886ba32791ffc9d70e12ae6107.patch?full_index=1"
+    sha256 "e42a59a65c274ebff7ae28e012cf0c1c136c26f6bbfe56133611b52e5d2ec7bc"
+  end
+
   def install
     ldflags = "-s -w -X github.com/rhysd/actionlint.version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd/actionlint"
@@ -26,15 +32,19 @@ class Actionlint < Formula
   end
 
   test do
-    (testpath/"action.yaml").write <<~EOS
+    (testpath/"action.yaml").write <<~YAML
       name: Test
       on: push
       jobs:
         test:
+          permissions:
+            attestations: write
           steps:
             - run: actions/checkout@v2
-    EOS
+    YAML
 
-    assert_match "\"runs-on\" section is missing in job", shell_output("#{bin}/actionlint #{testpath}/action.yaml", 1)
+    output = shell_output("#{bin}/actionlint #{testpath}/action.yaml", 1)
+    assert_match "\"runs-on\" section is missing in job", output
+    refute_match "unknown permission scope", output
   end
 end
