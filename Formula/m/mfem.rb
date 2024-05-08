@@ -1,10 +1,9 @@
 class Mfem < Formula
   desc "Free, lightweight, scalable C++ library for FEM"
   homepage "http://www.mfem.org/"
-  url "https://github.com/mfem/mfem/archive/refs/tags/v4.6.tar.gz"
-  sha256 "250bb6aa0fd5f6a6002c072d357656241ed38acfc750e43e87d8c36a8f8a4b4f"
+  url "https://github.com/mfem/mfem/archive/refs/tags/v4.7.tar.gz"
+  sha256 "731bc2665c13d4099f9c9c946eb83ab07cd2e78a9575d4fa62a96cdb40d6ba0f"
   license "BSD-3-Clause"
-  revision 2
   head "https://github.com/mfem/mfem.git", branch: "master"
 
   bottle do

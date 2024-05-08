@@ -1370,6 +1370,7 @@ meta-package-manager
 metabase
 metals
 metricbeat
+mfem
 micro
 micromamba
 micronaut
