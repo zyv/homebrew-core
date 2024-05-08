@@ -6,6 +6,16 @@ class Kuzu < Formula
   license "MIT"
   head "https://github.com/kuzudb/kuzu.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "fe73a2155139c0201c8adf45b66d1ae79794aa4d01a4c44d55b267b53a484d2f"
+    sha256 cellar: :any,                 arm64_ventura:  "73694da5bd64f8ebd2048331842fe1f7ead1caff2b9adbcbcf9909c8aff5ac3c"
+    sha256 cellar: :any,                 arm64_monterey: "85f38b926adbc9404434295ddf290249dcf1abeb6c7ee2ece04b415e678bdf30"
+    sha256 cellar: :any,                 sonoma:         "8c2c18146931ee91b987b7f288cd7171adb43ab5f0885f3246b9c8e9127f61cd"
+    sha256 cellar: :any,                 ventura:        "2a3fd58f7dafea8ad74636ae33cee6189384051a2577b3f645e0beaec0750613"
+    sha256 cellar: :any,                 monterey:       "a5bf8b2b9ed93fbf3394d7972d4f7e43759da182a2793fd522028e1c793ea448"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "09f6c8c6e9731dda6c8e8e26204418194a95afe4a1024430a7c0584b8b0b70f0"
+  end
+
   depends_on "cmake" => :build
   depends_on "python@3.12" => :build
 
