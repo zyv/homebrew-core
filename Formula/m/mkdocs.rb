@@ -9,13 +9,13 @@ class Mkdocs < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "a190efbe93903ce9d490782ce8a9a21912cb1e73b3f1cca26758333737fa15d6"
-    sha256 cellar: :any,                 arm64_ventura:  "ff2e7fbee744df1c6611c32664cf0f86c2d636c67ff516269794a9ee37e4e26d"
-    sha256 cellar: :any,                 arm64_monterey: "1033d4398e14868dc481c813a3ba2e7438690adb40ae4f541a3841411f217012"
-    sha256 cellar: :any,                 sonoma:         "5e564ec0afb5e83020edc5eb1fec38b749951ed6f51722d30af6ac63c7a12964"
-    sha256 cellar: :any,                 ventura:        "a1afefefefbf2f48fbbb7b91cb6524ca2099363378615f11ad9cd11811d0aa10"
-    sha256 cellar: :any,                 monterey:       "898b36b0795cd020859b6fa67105b42d54c3bf58ec6ebc04bf39ed53cdb00597"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "16b46b6df08599edd8438de6b67d464b655ee02dac40fcef1cb2ed14d31badf8"
+    sha256 cellar: :any,                 arm64_sonoma:   "7a834dcb588206de1a2fceb77f4e5693ea51b723f12864ff261fde2b4578e8a5"
+    sha256 cellar: :any,                 arm64_ventura:  "4244bd7d7e461381f3a16d0f250b963de60e3e718bbb7bb20f673ffc801194dd"
+    sha256 cellar: :any,                 arm64_monterey: "f3ee4f314f02fe8790cd2cc844d75cf419a95f62eb9033b311939be7c94cb285"
+    sha256 cellar: :any,                 sonoma:         "ddd745ebed313ad3948a7b517a5da3e7923062116d0b92ccbd95f04b476be1cc"
+    sha256 cellar: :any,                 ventura:        "c116cab9896508baeadfa0e8db0fd7794ec67938553741cc436b5a8a7e3f9ba7"
+    sha256 cellar: :any,                 monterey:       "b9fb30cdfbc29e23a7a1de023f84065adf6f500ab6ce8fd8eb159ac6d6d39d70"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf5edf643d1def02800748469ea00717ed29373efc2e58902b6db79532b7e33d"
   end
 
   depends_on "libyaml"
