@@ -10,13 +10,13 @@ class Cruft < Formula
   head "https://github.com/cruft/cruft.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "97753e30167df2d948bcef45e37ba5b7dc9994327ccbb31e8433496355f35d20"
-    sha256 cellar: :any,                 arm64_ventura:  "00d7d8d99cb5d3b1dffa88a3d7b9457755cf88dc44869f0233373d2f6f086c73"
-    sha256 cellar: :any,                 arm64_monterey: "5c5e3022313378a0ed70928f25bf6fb4f3b1d80098e7fc12322c4ff20532f227"
-    sha256 cellar: :any,                 sonoma:         "30502babf273cef970520a01a5482c6b262baa0df7adf9cc1b37d3d52d4813af"
-    sha256 cellar: :any,                 ventura:        "3af04d152ca4c1e9120fb77b81e244e23ecb5e1554fc54f07707be0b6366f85b"
-    sha256 cellar: :any,                 monterey:       "6b16336b10c2f4fd1418b27f9c6c0056d998abd91f57b204e1f1636148724665"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ffd9e7b8becfa5d3be635a1258fb43c167b43d8925a8424dc6c245420797f6c0"
+    sha256 cellar: :any,                 arm64_sonoma:   "aaf7489c66e0c5fc86fa64eb10f307df5edb0b792ddb02928d3fe82bb8b9d55d"
+    sha256 cellar: :any,                 arm64_ventura:  "95aa77b4df88bf2ec3ebb4135e03ca0119fd61f0a80b03a2f627b9d8aa64bd92"
+    sha256 cellar: :any,                 arm64_monterey: "ebae80feb90047202a18b163679038392ad60924456a96384e78e65bd2adb776"
+    sha256 cellar: :any,                 sonoma:         "36a3f5bcf6e4012f6760262c8dd9098313a2b654ad7009dc321b18a17873030b"
+    sha256 cellar: :any,                 ventura:        "723b8c3025444214a9453c4f3e21cd3e5b6265f900cec5f68a93274c9e5a5134"
+    sha256 cellar: :any,                 monterey:       "4be9bc58ad7a4fd03bb6973efdd323cc7cec13573d773feeaa3fd24553d58c51"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f78e9b156e5e3c76752d22c72eea4b5d2e2f8bc60850c534f871c66a98636ec0"
   end
 
   depends_on "certifi"
