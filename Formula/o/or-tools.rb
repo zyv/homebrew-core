@@ -1,10 +1,9 @@
 class OrTools < Formula
   desc "Google's Operations Research tools"
   homepage "https://developers.google.com/optimization/"
-  url "https://github.com/google/or-tools/archive/refs/tags/v9.9.tar.gz"
-  sha256 "8c17b1b5b05d925ed03685522172ca87c2912891d57a5e0d5dcaeff8f06a4698"
+  url "https://github.com/google/or-tools/archive/refs/tags/v9.10.tar.gz"
+  sha256 "e7c27a832f3595d4ae1d7e53edae595d0347db55c82c309c8f24227e675fd378"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/google/or-tools.git", branch: "stable"
 
   livecheck do
@@ -34,20 +33,16 @@ class OrTools < Formula
   depends_on "osi"
   depends_on "protobuf"
   depends_on "re2"
-
+  depends_on "scip"
   uses_from_macos "zlib"
 
   fails_with gcc: "5"
 
-  # Backport fix for Protobuf 26
-  patch do
-    url "https://github.com/google/or-tools/commit/e0a4dcf5a082e7f90b73708fc7ff4a5e4760ed85.patch?full_index=1"
-    sha256 "db8c40e25f68ea052dc74fc0ed163c1354667059632c8173ff42dc0c6a1f9bad"
-  end
-
   def install
+    # FIXME: Upstream enabled Highs support in their binary distribution, but our build fails with it.
     args = %w[
-      -DUSE_SCIP=OFF
+      -DUSE_HIGHS=OFF
+      -DBUILD_DEPS=OFF
       -DBUILD_SAMPLES=OFF
       -DBUILD_EXAMPLES=OFF
     ]
