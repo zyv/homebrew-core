@@ -1487,7 +1487,6 @@ nfpm
 nginx
 ngt
 nickel
-nicotine-plus
 nifi
 nifi-registry
 nim
