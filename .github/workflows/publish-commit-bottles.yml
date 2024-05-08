@@ -331,8 +331,6 @@ jobs:
             ${{inputs.message && '--message="$INPUT_MESSAGE"' || ''}} \
             "$PR"
 
-          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
       - name: Generate build provenance
         uses: actions/attest-build-provenance@v1
         with:
@@ -355,6 +353,8 @@ jobs:
             --root-url="https://ghcr.io/v2/homebrew/core" \
             ${{inputs.warn_on_upload_failure && '--warn-on-upload-failure' || ''}} \
             "$PR"
+
+          echo "head_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
@@ -389,7 +389,7 @@ jobs:
         id: wait-until-in-sync
         working-directory: ${{steps.set-up-homebrew.outputs.repository-path}}
         env:
-          EXPECTED_SHA: ${{steps.pr-pull.outputs.head_sha}}
+          EXPECTED_SHA: ${{steps.pr-upload.outputs.head_sha}}
         run: |
           echo "::notice ::Local repository HEAD: $EXPECTED_SHA"
 
@@ -429,7 +429,7 @@ jobs:
         id: automerge
         env:
           GH_TOKEN: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
-          EXPECTED_SHA: ${{steps.pr-pull.outputs.head_sha}}
+          EXPECTED_SHA: ${{steps.pr-upload.outputs.head_sha}}
         working-directory: ${{steps.set-up-homebrew.outputs.repository-path}}
         run: |
           local_git_head="$(git rev-parse HEAD)"
