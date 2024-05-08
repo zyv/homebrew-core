@@ -2,8 +2,8 @@ class ParquetCli < Formula
   desc "Apache Parquet command-line tools and utilities"
   homepage "https://parquet.apache.org/"
   url "https://github.com/apache/parquet-mr.git",
-      tag:      "apache-parquet-1.13.1",
-      revision: "db4183109d5b734ec5930d870cdae161e408ddba"
+      tag:      "apache-parquet-1.14.0",
+      revision: "fe9179414906cc19b550d13d2819b4e16fddf8a1"
   license "Apache-2.0"
   head "https://github.com/apache/parquet-mr.git", branch: "master"
 
@@ -26,13 +26,6 @@ class ParquetCli < Formula
 
   depends_on "openjdk"
 
-  # This file generated with `red-parquet` gem:
-  #   Arrow::Table.new("values" => ["foo", "Homebrew", "bar"]).save("homebrew.parquet")
-  resource("homebrew-test-parquet") do
-    url "https://gist.github.com/bayandin/2144b5fc6052153c1a33fd2679d50d95/raw/7d793910a1afd75ee4677f8c327491f7bdd2256b/homebrew.parquet"
-    sha256 "5caf572cb0df5ce9d6893609de82d2369b42c3c81c611847b6f921d912040118"
-  end
-
   def install
     cd "parquet-cli" do
       system "mvn", "clean", "package", "-DskipTests=true"
@@ -45,12 +38,21 @@ class ParquetCli < Formula
         exec "#{Formula["openjdk"].opt_bin}/java" -cp "#{libexec}/*" org.apache.parquet.cli.Main "$@"
       EOS
     end
+
+    (pkgshare/"test").install "parquet-avro/src/test/avro/stringBehavior.avsc"
   end
 
   test do
-    resource("homebrew-test-parquet").stage testpath
-
-    output = shell_output("#{bin}/parquet cat #{testpath}/homebrew.parquet")
-    assert_match "{\"values\": \"Homebrew\"}", output
+    output = shell_output("#{bin}/parquet schema #{pkgshare}/test/stringBehavior.avsc")
+    assert_match <<~EOS, output
+      {
+        "type" : "record",
+        "name" : "StringBehaviorTest",
+        "namespace" : "org.apache.parquet.avro",
+        "fields" : [ {
+          "name" : "default_class",
+          "type" : "string"
+        }, {
+    EOS
   end
 end
