@@ -5,6 +5,16 @@ class Dillo < Formula
   sha256 "f56766956d90dac0ccca31755917cba8a4014bcf43b3e36c7d86efe1d20f9d92"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 arm64_sonoma:   "6b6ad17d3a8797bd5b1c8fede45201a498ce949ae0aa736614b0e8e0f65e6faf"
+    sha256 arm64_ventura:  "bab53bbc438c2443d7f719d24efb696974b4173f05b48eeae96907d29cea911b"
+    sha256 arm64_monterey: "0ec5d858b40c794c8bb15a5f03fd0fb77291dffd8a746d716eb4980608998f3f"
+    sha256 sonoma:         "9193be742f33b7d2cb71777491ff014687fa0f2b8669584731722ada2fc0e891"
+    sha256 ventura:        "6a879420943b29cd9c0fd67cc8b0b2ec1f0941947c2c89bb10b094d2ec40192f"
+    sha256 monterey:       "a4ef74fa043c58267c4413225d4b2de5c22ab13520741a8cbe2ffd40b0f2ea86"
+    sha256 x86_64_linux:   "0a24be77fa9c3812601d3acf746e178d1e411811aa345eb7f7c58091b73fa37b"
+  end
+
   head do
     url "https://github.com/dillo-browser/dillo.git", branch: "master"
 
