@@ -525,6 +525,7 @@ diesel
 diffoscope
 difftastic
 digdag
+dillo
 direnv
 direvent
 dislocker
