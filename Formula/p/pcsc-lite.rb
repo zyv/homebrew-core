@@ -1,8 +1,8 @@
 class PcscLite < Formula
   desc "Middleware to access a smart card using SCard API"
   homepage "https://pcsclite.apdu.fr/"
-  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.2.0.tar.xz"
-  sha256 "76e06bb9f47f0c10c4eaec3ee9cea634bda28a1fc46f1286c097d220386c22d4"
+  url "https://pcsclite.apdu.fr/files/pcsc-lite-2.2.1.tar.xz"
+  sha256 "625edcd6cf4b45af015eb5b6b75ea47f8914e892774c67e1079c9553c8665a57"
   license all_of: ["BSD-3-Clause", "GPL-3.0-or-later", "ISC"]
 
   livecheck do
@@ -31,12 +31,6 @@ class PcscLite < Formula
   on_linux do
     depends_on "libusb"
     depends_on "systemd" # for libudev
-  end
-
-  # upstream build patch for https://github.com/LudovicRousseau/PCSC/issues/179
-  patch do
-    url "https://salsa.debian.org/rousseau/PCSC/-/commit/960e367edc01518b90684ffff99010ee07ae1bd4.patch"
-    sha256 "30e5e3c5ca16d18243c6cf7db662f4cc504e05ccc0c70747f34832397ae1cdd5"
   end
 
   def install
