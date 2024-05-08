@@ -338,7 +338,7 @@ jobs:
 
       - name: Upload bottles to GitHub Packages
         id: pr-upload
-        working-directory: ${{steps.set-up-homebrew.outputs.repository-path}}
+        working-directory: ${{steps.pr-pull.outputs.bottle_path}}
         env:
           BREWTESTBOT_NAME_EMAIL: "BrewTestBot <1589480+BrewTestBot@users.noreply.github.com>"
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
