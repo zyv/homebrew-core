@@ -349,8 +349,7 @@ jobs:
             --debug \
             --committer="$BREWTESTBOT_NAME_EMAIL" \
             --root-url="https://ghcr.io/v2/homebrew/core" \
-            ${{inputs.warn_on_upload_failure && '--warn-on-upload-failure' || ''}} \
-            "$PR"
+            ${{inputs.warn_on_upload_failure && '--warn-on-upload-failure' || ''}}
 
           echo "head_sha=$(git -C "$REPO_PATH" rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
