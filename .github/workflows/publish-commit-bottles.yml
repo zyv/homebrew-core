@@ -291,7 +291,6 @@ jobs:
         id: pr-pull
         working-directory: ${{steps.set-up-homebrew.outputs.repository-path}}
         env:
-          BREWTESTBOT_NAME_EMAIL: "BrewTestBot <1589480+BrewTestBot@users.noreply.github.com>"
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
           HOMEBREW_GITHUB_API_TOKEN: ${{secrets.HOMEBREW_CORE_PUBLIC_REPO_EMAIL_TOKEN}}
           EXPECTED_SHA: ${{needs.check.outputs.head_sha}}
@@ -324,7 +323,6 @@ jobs:
             --clean \
             --no-cherry-pick \
             --workflows=tests.yml \
-            --committer="$BREWTESTBOT_NAME_EMAIL" \
             --root-url="https://ghcr.io/v2/homebrew/core" \
             --retain-bottle-dir \
             ${{inputs.warn_on_upload_failure && '--warn-on-upload-failure' || ''}} \
