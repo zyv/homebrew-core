@@ -10,13 +10,13 @@ class Ford < Formula
   head "https://github.com/Fortran-FOSS-Programmers/ford.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e6005fc5c4a7297e40659813691f1e7317585af554be43b904b8b1ec622559ff"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f703d5f06516c60649c65d1d7dc8bb9b4201bae67e3c12e9db8b905ff404fd1d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c9512c2ebbed12ba38a16ce8ee1fbf47093a42e4e62b6fcb1e7cc85f51b67311"
-    sha256 cellar: :any_skip_relocation, sonoma:         "65f71674fb5b5ac65a260c5c4cb777f8342d369ba62ad79bc1710cbba6eccf9a"
-    sha256 cellar: :any_skip_relocation, ventura:        "efad8e9f256caa887f2d791875b849d0bbbb770092ae9181272f7a4102fc84a4"
-    sha256 cellar: :any_skip_relocation, monterey:       "69388c9ce67f400179448b710ada3914b9c3023a849bf10bddcdf4dda3894ea7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba1d8a4202bfc3ca8b75853a8dff3d10276216e78ead18b6af536abf9cdac4cb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3386d8cc4f37dfa3e73f486c98689b4a0e05406b4d191209a45761a5a908ab03"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "27435d9550543d93472e829e55ec8ce5bf7ccd3ecb099599be42a63bc01b194d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fd5bb0e9e66a8ff21a094d3cd1a0760d5a551bfd8bc7613fae54bbfcebec33dd"
+    sha256 cellar: :any_skip_relocation, sonoma:         "4433ddbac554a53a95e953dec38fd51096e2df839b96c8e8c651a5bf677f875c"
+    sha256 cellar: :any_skip_relocation, ventura:        "5d2ac1f779a55e3b2b79d73c0633de1043dad9b85feb67ae78b78d382bef467d"
+    sha256 cellar: :any_skip_relocation, monterey:       "e5eb67c563a17d422fd9ad274d52e34d2ddcdf9e1490cbcd2c90ef1c397b9953"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cc534d0defa8049f075162df856d0e8305b31b4fa6f3cc46310184c68f535f90"
   end
 
   depends_on "graphviz"
