@@ -721,6 +721,7 @@ ffsend
 ffuf
 fheroes2
 fig2dev
+file-roller
 filebeat
 findent
 findomain
