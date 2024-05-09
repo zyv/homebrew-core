@@ -1,8 +1,8 @@
 class Httping < Formula
   desc "Ping-like tool for HTTP requests"
   homepage "https://github.com/folkertvanheusden/HTTPing"
-  url "https://github.com/folkertvanheusden/HTTPing/archive/refs/tags/v2.9.tar.gz"
-  sha256 "37da3c89b917611d2ff81e2f6c9e9de39d160ef0ca2cb6ffec0bebcb9b45ef5d"
+  url "https://github.com/folkertvanheusden/HTTPing/archive/refs/tags/v3.6.tar.gz"
+  sha256 "d332fc5436bcf8290bcb4fe75b7019b90facfb64264dc3c7bc3407da27c18d77"
   license "GPL-3.0-only"
 
   # There can be a notable gap between when a version is tagged and a
@@ -26,7 +26,9 @@ class Httping < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "94b00c89e3f72041ad7e5aee324783437ad76f99c1b5bfdacf858e6aaa4d101d"
   end
 
+  depends_on "cmake" => :build
   depends_on "gettext" => :build # for msgfmt
+  depends_on "pkg-config" => :build
   depends_on "openssl@3"
 
   uses_from_macos "ncurses"
@@ -35,13 +37,22 @@ class Httping < Formula
     depends_on "gettext" # for libintl
   end
 
+  # add missing install, remove in 3.7
+  patch do
+    url "https://github.com/folkertvanheusden/HTTPing/commit/9524733e67454518ee1075a47f3c21166543e620.patch?full_index=1"
+    sha256 "cac8ee1e96b22cc33a47cda3fa4189cfe690c91adeea4f0791727254461ae49c"
+  end
+
+  patch do
+    url "https://github.com/folkertvanheusden/HTTPing/commit/7f76370729c594180348f94feb4216fd14e12abd.patch?full_index=1"
+    sha256 "7fcb599c206e943fc16fdb8118d9abf51ea4cfc92d8781b13445a4ab331d4969"
+  end
+
   def install
-    # Reported upstream, see: https://github.com/folkertvanheusden/HTTPing/issues/4
-    inreplace "utils.h", "useconds_t", "unsigned int"
-    # Reported upstream, see: https://github.com/folkertvanheusden/HTTPing/issues/7
-    inreplace %w[configure Makefile], "lncursesw", "lncurses"
-    ENV.append "LDFLAGS", "-lintl" if OS.mac?
-    system "make", "install", "PREFIX=#{prefix}"
+    inreplace "CMakeLists.txt", "/usr/share/locale", share/"locale"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
