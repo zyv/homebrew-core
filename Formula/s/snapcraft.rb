@@ -3,8 +3,8 @@ class Snapcraft < Formula
 
   desc "Package any app for every Linux desktop, server, cloud or device"
   homepage "https://snapcraft.io/"
-  url "https://github.com/snapcore/snapcraft/archive/refs/tags/8.2.5.tar.gz"
-  sha256 "57bf73454c0ecff3e5da85fe9922e28214b03416b0547150b6316a6dda7e2b3c"
+  url "https://github.com/snapcore/snapcraft/archive/refs/tags/8.2.6.tar.gz"
+  sha256 "4c3f348543dcf2a9db45337607e2f78b2d195b4ab46383262322369d984ba135"
   license "GPL-3.0-only"
 
   livecheck do
@@ -118,8 +118,8 @@ class Snapcraft < Formula
   end
 
   resource "craft-application" do
-    url "https://files.pythonhosted.org/packages/42/b8/c0a024554bddaed086576610348ceffc0de13555dbe9a50f8adf50e3bb8a/craft_application-2.6.3.tar.gz"
-    sha256 "b7bf5a185970d400d64b705d138bf1fa340eae3bd155d9508119d80c27922392"
+    url "https://files.pythonhosted.org/packages/87/ac/b32a5d79e0d44050f35764cbecc6ebb7ade24045fbfaa65a923090d6be0f/craft_application-2.7.0.tar.gz"
+    sha256 "6a754792c793e616a27469ad0d55f42a2ad1e8bbfcfb2a689dd2421a37a6bcba"
   end
 
   resource "craft-archives" do
@@ -148,8 +148,8 @@ class Snapcraft < Formula
   end
 
   resource "craft-store" do
-    url "https://files.pythonhosted.org/packages/c4/c4/5033f4deebe022b6b3ae96a75c254280362d437a1822c5ffa73a38a30ee1/craft-store-2.6.1.tar.gz"
-    sha256 "30b6b8c5deca963e320af604904c5fbf92d1cb884a2f1dd3c9d0958dac2adde0"
+    url "https://files.pythonhosted.org/packages/8f/99/0fce0d9f2a72a5959af3e8cdc20dfbd3554afa82967e9766ffe73bf5b01d/craft-store-2.6.2.tar.gz"
+    sha256 "de735f95013ec687b4b893a9740b4c7c4858f53d172f2a4d131a71dc085166b5"
   end
 
   resource "deprecated" do
