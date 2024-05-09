@@ -2175,6 +2175,7 @@ typstfmt
 tz
 tzdiff
 u-boot-tools
+ucloud
 uffizzi
 uftrace
 ugit
