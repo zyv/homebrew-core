@@ -566,7 +566,8 @@
     "exclude_packages": ["certifi", "cryptography"]
   },
   "poetry": {
-    "exclude_packages": ["certifi", "cryptography"]
+    "exclude_packages": ["certifi", "cryptography"],
+    "extra_packages": ["cffi", "jeepney", "secretstorage", "xattr"]
   },
   "policy_sentry": {
     "exclude_packages": ["certifi"]
