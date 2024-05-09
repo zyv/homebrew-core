@@ -1111,6 +1111,7 @@ k8sgpt
 k9s
 kafka
 kahip
+kakoune
 kalker
 kamel
 kapacitor

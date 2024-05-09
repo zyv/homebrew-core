@@ -1,8 +1,8 @@
 class Kakoune < Formula
   desc "Selection-based modal text editor"
   homepage "https://github.com/mawww/kakoune"
-  url "https://github.com/mawww/kakoune/releases/download/v2023.08.05/kakoune-2023.08.05.tar.bz2"
-  sha256 "3e45151e0addd3500de2d6a29b5aacf2267c42bb256d44a782e73defb29cda5c"
+  url "https://github.com/mawww/kakoune/releases/download/v2024.05.09/kakoune-2024.05.09.tar.bz2"
+  sha256 "2190bddfd3af590c0593c38537088976547506f47bd6eb6c0e22350dbd16a229"
   license "Unlicense"
   head "https://github.com/mawww/kakoune.git", branch: "master"
 
@@ -39,12 +39,12 @@ class Kakoune < Formula
   end
 
   def install
-    cd "src" do
-      system "make", "install", "debug=no", "PREFIX=#{prefix}"
-    end
+    system "make", "install", "debug=no", "PREFIX=#{prefix}"
   end
 
   test do
     system bin/"kak", "-ui", "dummy", "-e", "q"
+
+    assert_match version.to_s, shell_output("#{bin}/kak -version")
   end
 end
