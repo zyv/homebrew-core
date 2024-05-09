@@ -1564,6 +1564,9 @@ open-adventure
 open-image-denoise
 open-mpi
 open62541
+opencl-clhpp-headers
+opencl-headers
+opencl-icd-loader
 opendetex
 opendht
 openexr
