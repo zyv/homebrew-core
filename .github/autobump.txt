@@ -1009,6 +1009,7 @@ httpyac
 hubble
 huggingface-cli
 hugo
+hut
 hwatch
 hyperfine
 hypre
