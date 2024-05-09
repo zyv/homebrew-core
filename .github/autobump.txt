@@ -1616,6 +1616,7 @@ pandoc-crossref
 pango
 parallel
 pari
+parquet-cli
 parsedmarc
 partio
 pass-git-helper
