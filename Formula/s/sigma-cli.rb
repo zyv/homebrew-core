@@ -6,7 +6,7 @@ class SigmaCli < Formula
   url "https://files.pythonhosted.org/packages/93/d9/1f9b9129b722fe4127b3749d427ec0f2e0966858e204743c068446b532f0/sigma_cli-1.0.1.tar.gz"
   sha256 "a65dd949dd9812a4380332bacd6cf0c229647404fa31b766fae1596b6bf5e208"
   license "LGPL-2.1-or-later"
-  revision 1
+  revision 2
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
@@ -44,8 +44,8 @@ class SigmaCli < Formula
   end
 
   resource "jinja2" do
-    url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
-    sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
+    url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
+    sha256 "4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"
   end
 
   resource "markupsafe" do
@@ -69,8 +69,8 @@ class SigmaCli < Formula
   end
 
   resource "pysigma" do
-    url "https://files.pythonhosted.org/packages/94/75/aec3ebd2f369040b1de41e7453fad58ed3bf51343f3cc3356a6c09fc7619/pysigma-0.11.4.tar.gz"
-    sha256 "1e09b32e195f56d6afd2bd0e97f2d360f3d5ad99c2fe48b92012a935e52babdd"
+    url "https://files.pythonhosted.org/packages/8e/67/c02ba2ea1a93c9b614a7f694d62421dd8416da33b9ce8db9c39a55592885/pysigma-0.11.5.tar.gz"
+    sha256 "de27ef86db1b9341a8b540ca4691f489a9f5d63bc2de40bb3257221404d4f2d1"
   end
 
   resource "pysigma-backend-sqlite" do
