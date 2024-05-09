@@ -128,6 +128,7 @@ aws-sam-cli
 aws-sso-cli
 awscli
 awscli@1
+awscurl
 awslogs
 axel
 azcopy
@@ -143,6 +144,7 @@ balena-cli
 ballerburg
 ballerina
 bandicoot
+bandit
 bandwhich
 baobab
 bareos-client
@@ -556,6 +558,7 @@ docker-gen
 docker-machine
 docker-slim
 docker-squash
+dockly
 dockviz
 doctest
 doctl
@@ -835,7 +838,9 @@ git-delta
 git-extras
 git-grab
 git-lfs
+git-machete
 git-quick-stats
+git-review
 git-split-diffs
 git-sync
 git-town
@@ -1116,6 +1121,7 @@ kepubify
 kew
 keydb
 keyring
+khal
 ki
 kickstart
 kics
@@ -1829,6 +1835,7 @@ reposurgeon
 reproc
 restic
 resvg
+retire
 revive
 rhit
 riemann
@@ -1841,6 +1848,7 @@ rke
 roadrunner
 roapi
 robin-map
+roblox-ts
 rocksdb
 rojo
 rollup
@@ -1934,6 +1942,7 @@ shellz
 shfmt
 showkey
 shtools
+shub
 shush
 sigma-cli
 signal-cli
@@ -2010,6 +2019,7 @@ sqlcmd
 sqlfluff
 sqlmap
 sqlpage
+sqlparse
 sqlx-cli
 squashfuse
 squealer
@@ -2102,6 +2112,7 @@ tenv
 termshark
 terracognita
 terraform-inventory
+terraform-local
 terraform-ls
 terraform-provider-libvirt
 terraformer
@@ -2142,6 +2153,7 @@ tomcat@9
 tomee-plume
 tomee-plus
 tomee-webprofile
+toot
 topgrade
 tor
 tox
@@ -2152,6 +2164,7 @@ traefik
 trafficserver
 trafilatura
 translate-toolkit
+trash-cli
 tree
 tree-sitter
 triangle
@@ -2276,6 +2289,7 @@ werf
 wgcf
 whistle
 whois
+wikibase-cli
 wildfly-as
 wildmidi
 wimlib
