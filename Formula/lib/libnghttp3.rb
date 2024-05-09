@@ -2,8 +2,8 @@ class Libnghttp3 < Formula
   desc "HTTP/3 library written in C"
   homepage "https://nghttp2.org/nghttp3/"
   url "https://github.com/ngtcp2/nghttp3.git",
-      tag:      "v1.2.0",
-      revision: "2e3cce607fe3e5e248bfd363f616c4fa520a5b95"
+      tag:      "v1.3.0",
+      revision: "e4f96f9572e4fc27324b4a009d877a4a2bbacc4e"
   license "MIT"
   head "https://github.com/ngtcp2/nghttp3.git", branch: "main"
 

@@ -1231,6 +1231,7 @@ libmatio
 libmicrohttpd
 libmxml
 libnfs
+libnghttp3
 libnice
 libntlm
 libobjc2
