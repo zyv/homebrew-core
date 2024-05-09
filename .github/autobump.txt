@@ -963,6 +963,7 @@ halide
 hapi-fhir-cli
 haproxy
 harfbuzz
+haskell-language-server
 haskell-stack
 hasura-cli
 hatari
