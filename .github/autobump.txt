@@ -2124,6 +2124,7 @@ tile38
 timg
 tin
 tintin
+tinyproxy
 tio
 tippecanoe
 tkey-ssh-agent
