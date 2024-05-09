@@ -1251,6 +1251,7 @@ libphonenumber
 libpipeline
 libplist
 libpng
+libpq
 libproxy
 libpulsar
 librdkafka
