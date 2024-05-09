@@ -1,8 +1,8 @@
 class Hut < Formula
   desc "CLI tool for sr.ht"
   homepage "https://sr.ht/~emersion/hut"
-  url "https://git.sr.ht/~emersion/hut/archive/v0.4.0.tar.gz"
-  sha256 "f25ab4452e4622f404a6fa5713e8505302bfcee4dd3a8dfe76f1fc4c05688c09"
+  url "https://git.sr.ht/~emersion/hut/archive/v0.5.0.tar.gz"
+  sha256 "0f78917a2da718b0317cd73307549f429340c7f5cac84c6356341e4fae800cc1"
   license "AGPL-3.0-or-later"
   head "https://git.sr.ht/~emersion/hut", branch: "master"
 
