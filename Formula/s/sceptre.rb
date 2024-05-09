@@ -9,13 +9,13 @@ class Sceptre < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "ba61afc7656132785e7351989f692f1622610205334096d3bf3c560bd2c30ad2"
-    sha256 cellar: :any,                 arm64_ventura:  "8403bbceacab59eb0f12d15cc757ba70551ba90829ef9d3a83b96d39edd4d112"
-    sha256 cellar: :any,                 arm64_monterey: "8fd30ce6853fa754ca42b5d107f9e2a8b078ca9558d5e4cbdaca73a15b17759e"
-    sha256 cellar: :any,                 sonoma:         "de7f22b1c29bf6ebb491d568a551d38abfc25dbc7fb05beaca0dd3110e44a46c"
-    sha256 cellar: :any,                 ventura:        "22b05ffb27ffc3e9cd0260902e8808c05e8cd8d35c1976a3b39efc38779d6149"
-    sha256 cellar: :any,                 monterey:       "456bdc1664acda6e7b8871c6a9bb5a2d02de04062193fca22e25cd26a50be062"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2f19735813f6d96deb0d68e23fd169bd2b465ce09c0ed62b415831b598918348"
+    sha256 cellar: :any,                 arm64_sonoma:   "97b0ea364cf176ca984409f4a27e65aae588ce3bb6becee2b15cc9b65e4761fe"
+    sha256 cellar: :any,                 arm64_ventura:  "1f02b2dabc885ee5e83cd2c860e43865dfb7f61315ccf64f42ab413652e5591e"
+    sha256 cellar: :any,                 arm64_monterey: "7fbd8c49d907f92e27d54b5f2d286807c0c7bbcc3d1c0de52ad9d63955532976"
+    sha256 cellar: :any,                 sonoma:         "f33aedbd2649173496de6a2a6ad74560513e75eab608ab6e021351c57c3be457"
+    sha256 cellar: :any,                 ventura:        "4e4059a88e5d9ddc3a87d75f94644f289a89508ff128f12e0c361b364643b789"
+    sha256 cellar: :any,                 monterey:       "7ba84a7be90a2ddb3f3ad91df1ff88ca970a9faaf2373ede804fefabc7d25432"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "88facf1df25eb7f6e454b2e1126a70309a4ce8a19547327052bf50cea0712099"
   end
 
   depends_on "certifi"
