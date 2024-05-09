@@ -6,7 +6,7 @@ class Rawdog < Formula
   url "https://files.pythonhosted.org/packages/3c/ab/eaae3e0f2fac4a717d632990795fd6a560efaf9e54a1741e842234dec1cb/rawdog_ai-0.1.6.tar.gz"
   sha256 "1fc37d0e3336e87568ae9ee5dde5e7c68c1af652efd0956ee0c62281ddf14b41"
   license "Apache-2.0"
-  revision 3
+  revision 4
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "fe749ddaa599255cccc53a0f8ad9d682faeadb79ddda4e88a9c9c2277ea880bd"
@@ -109,13 +109,13 @@ class Rawdog < Formula
   end
 
   resource "jinja2" do
-    url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
-    sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
+    url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
+    sha256 "4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"
   end
 
   resource "litellm" do
-    url "https://files.pythonhosted.org/packages/b8/31/1eebd605b339f541ab4a380033d9594d0de986f4ed43bfb2e665874ad2ab/litellm-1.35.38.tar.gz"
-    sha256 "1a0b195c74d45ba0c2391c5be533c211ee1bcdba6be09e6950037432f62f79ea"
+    url "https://files.pythonhosted.org/packages/2f/f2/43f5e8099483ac5673bb824cff44af22122a13a488746b29b6b937669714/litellm-1.36.4.tar.gz"
+    sha256 "60f27612344505b4f8c3f3120f386b3c35457d8e673133963ac524b8d7014098"
   end
 
   resource "markupsafe" do
@@ -129,8 +129,8 @@ class Rawdog < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/06/8a/7e3d0aa81be59fa3c7beb54ade24ec46b569f78908761eb5f3a78cbbdc4e/openai-1.25.1.tar.gz"
-    sha256 "f561ce86f4b4008eb6c78622d641e4b7e1ab8a8cdb15d2f0b2a49942d40d21a8"
+    url "https://files.pythonhosted.org/packages/8d/c2/ad426b9ebc4109181e93988f0913bebaf4c6ca4ae52e61cd56a54cb75faf/openai-1.27.0.tar.gz"
+    sha256 "498adc80ba81a95324afdfd11a71fa43a37e1d94a5ca5f4542e52fe9568d995b"
   end
 
   resource "packaging" do
