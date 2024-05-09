@@ -1266,6 +1266,7 @@ libsql
 libstrophe
 libtiff
 libtommath
+libtrace
 libucl
 libunibreak
 libunwind
