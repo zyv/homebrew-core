@@ -1,11 +1,9 @@
 class Bazelisk < Formula
   desc "User-friendly launcher for Bazel"
   homepage "https://github.com/bazelbuild/bazelisk/"
-  url "https://github.com/bazelbuild/bazelisk.git",
-      tag:      "v1.19.0",
-      revision: "c7c6c19799ff408c48bdce6b7557217ad0050b17"
+  url "https://github.com/bazelbuild/bazelisk/archive/refs/tags/v1.20.0.tar.gz"
+  sha256 "3c2303d45562cf7a9bc64ad41b670f38c2634bf8ba5b3acffa2997577955b3e0"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/bazelbuild/bazelisk.git", branch: "master"
 
   bottle do
@@ -23,7 +21,7 @@ class Bazelisk < Formula
   conflicts_with "bazel", because: "Bazelisk replaces the bazel binary"
 
   resource "bazel_zsh_completion" do
-    url "https://raw.githubusercontent.com/bazelbuild/bazel/036e533/scripts/zsh_completion/_bazel"
+    url "https://raw.githubusercontent.com/bazelbuild/bazel/036e5337f63d967bb4f5fea78dc928d16d0b213c/scripts/zsh_completion/_bazel"
     sha256 "4094dc84add2f23823bc341186adf6b8487fbd5d4164bd52d98891c41511eba4"
   end
 
@@ -46,7 +44,7 @@ class Bazelisk < Formula
     # This is an older than current version, so that we can test that bazelisk
     # will target an explicit version we specify. This version shouldn't need to
     # be bumped.
-    bazel_version = Hardware::CPU.arm? ? "4.1.0" : "4.0.0"
+    bazel_version = Hardware::CPU.arm? ? "7.1.0" : "7.0.0"
     ENV["USE_BAZEL_VERSION"] = bazel_version
     assert_match "Build label: #{bazel_version}", shell_output("#{bin}/bazelisk version")
   end
