@@ -49,47 +49,12 @@ module.exports = async ({github, context, core}, formulae_detect) => {
       core.setOutput('test-dependents', true)
     }
 
-    const maximum_long_pr_count = 2
-    if (label_names.includes('CI-long-timeout')) {
-      const labelCountQuery = `query($owner:String!, $name:String!, $label:String!) {
-        repository(owner:$owner, name:$name) {
-          pullRequests(last: 100, states: OPEN, labels: [$label]) {
-            totalCount
-          }
-        }
-      }`;
-      var long_pr_count;
-      try {
-        const response = await github.graphql(
-          labelCountQuery, {
-            owner: context.repo.owner,
-            name: context.repo.repo,
-            label: 'CI-long-timeout'
-          }
-        )
-        long_pr_count = response.repository.pullRequests.totalCount
-      } catch (error) {
-        // The GitHub API query errored, so fail open and assume 0 long PRs.
-        long_pr_count = 0
-        core.warning('CI-long-timeout label count query failed. Assuming no long PRs.')
-      }
-      if (long_pr_count > maximum_long_pr_count) {
-        core.setFailed(`Too many pull requests (${long_pr_count}) with the long-timeout label!`)
-        core.error(`Only ${maximum_long_pr_count} pull requests at a time can use this label.`)
-        core.error('Remove the long-timeout label from this or other PRs (once their CI has completed).')
-      }
-      console.log('CI-long-timeout label found. Setting long GitHub Actions timeout.')
+    if (label_names.includes('long build')) {
+      console.log('"long build" label found. Setting long GitHub Actions timeout.')
       core.setOutput('timeout-minutes', 4320)
     } else {
-      console.log('No CI-long-timeout label found. Setting short GitHub Actions timeout.')
+      console.log('No "long build" label found. Setting short GitHub Actions timeout.')
       core.setOutput('timeout-minutes', 120)
-
-      if (label_names.includes('long build')) {
-        core.setFailed('PR requires the CI-long-timeout label but it is not set!')
-        core.error('If the longer timeout is not required, remove the "long build" label.')
-        core.error('Otherwise, add the "CI-long-timeout" label.')
-        core.error(`No more than ${maximum_long_pr_count} PRs at a time may use "CI-long-timeout".`)
-      }
     }
 
     const test_bot_formulae_args = ["--only-formulae", "--junit", "--only-json-tab", "--skip-dependents"]
