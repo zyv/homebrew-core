@@ -3,8 +3,8 @@ class Fortls < Formula
 
   desc "Fortran language server"
   homepage "https://fortls.fortran-lang.org/"
-  url "https://files.pythonhosted.org/packages/38/04/db988efbcaac142999af91888e9750dfa422108a318ec3038c2cd42ecf04/fortls-2.13.0.tar.gz"
-  sha256 "23c5013e8dd8e1d65bf07be610d0827bc48aa7331a7a7ce13612d4c646d0db31"
+  url "https://files.pythonhosted.org/packages/94/0c/80c669ecf7ae6b45c2e1fa2313d41af1e1c7a3e4f68e2fc9acec00300938/fortls-3.0.0.tar.gz"
+  sha256 "1cf560b56aa74221d93d414b27f0d43c0e2475addcf1c1622713017c5bfbef01"
   license "MIT"
   head "https://github.com/fortran-lang/fortls.git", branch: "master"
 
@@ -24,13 +24,13 @@ class Fortls < Formula
   conflicts_with "fortran-language-server", because: "both install `fortls` binaries"
 
   resource "json5" do
-    url "https://files.pythonhosted.org/packages/f9/40/89e0ecbf8180e112f22046553b50a99fdbb9e8b7c49d547cda2bfa81097b/json5-0.9.14.tar.gz"
-    sha256 "9ed66c3a6ca3510a976a9ef9b8c0787de24802724ab1860bc0153c7fdd589b02"
+    url "https://files.pythonhosted.org/packages/91/59/51b032d53212a51f17ebbcc01bd4217faab6d6c09ed0d856a987a5f42bbc/json5-0.9.25.tar.gz"
+    sha256 "548e41b9be043f9426776f05df8635a00fe06104ea51ed24b67f908856e151ae"
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
-    sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
+    url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
+    sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
   end
 
   def install
@@ -38,21 +38,10 @@ class Fortls < Formula
 
     # Disable automatic update check
     (bin/"fortls").unlink
-    # Replace with `exec python3 -m fortls --disable_autoupdate "$@"` in the future
     (bin/"fortls").write <<~EOS
-      #!#{libexec}/bin/python3
-
-      import re
-      import sys
-
-      from fortls.__init__ import main
-
-      if __name__ == '__main__':
-          sys.argv[0] = re.sub(r'(-script.pyw?|.exe)?$', '', sys.argv[0])
-          sys.argv.append('--disable_autoupdate')
-          sys.exit(main())
+      #!/bin/sh
+      exec #{libexec}/bin/python3 -m fortls --disable_autoupdate "$@"
     EOS
-    chmod 0755, "#{bin}/fortls"
   end
 
   test do
