@@ -4,6 +4,8 @@ class Vectorscan < Formula
   url "https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.11.tar.gz"
   sha256 "905f76ad1fa9e4ae0eb28232cac98afdb96c479666202c5a4c27871fb30a2711"
   license "BSD-3-Clause"
+  revision 1
+  head "https://github.com/VectorCamp/vectorscan.git", branch: "develop"
 
   bottle do
     sha256 cellar: :any, arm64_sonoma:   "f9f675e8abdcc7118df42cec8ab5235e50ae24632de7c28ca4156c6fc031b68a"
@@ -16,7 +18,12 @@ class Vectorscan < Formula
   depends_on "pcre" => :build
   depends_on "pkg-config" => :build
   depends_on "ragel" => :build
-  depends_on arch: :arm64
+
+  # fix SQLite requirement check; included in next release
+  patch do
+    url "https://github.com/VectorCamp/vectorscan/commit/d9ebb20010b3f90a7a5c7bf4a5edff2eb58f2a4f.patch?full_index=1"
+    sha256 "e61de5f0321e9020871912883dadcdc1f49cd423dab37de67b6c1e8d07115162"
+  end
 
   def install
     cmake_args = [
