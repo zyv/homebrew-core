@@ -7,6 +7,16 @@ class Tmt < Formula
   sha256 "a32d1b9f8b2b21d66c753e72b2b5980e259325eee83c19364f9e03b4282415d3"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "030e09cb5e91d0a1b22d7b94b46e9a2054164cd11c615482cc3ded11a7131736"
+    sha256 cellar: :any,                 arm64_ventura:  "cd47feb47f59825a02c69155a48fcd3e7258b66866baf928b048d922bd80ed72"
+    sha256 cellar: :any,                 arm64_monterey: "27c5c1feb62169cc5708c18c798351d9c171947d531493f6a641a7292ef44cd9"
+    sha256 cellar: :any,                 sonoma:         "e10c3e222cfae3086bc468280710d3adb8a0e4620a7faa2f4ca3a1d472cdbc9e"
+    sha256 cellar: :any,                 ventura:        "7ba96572ade2c32821631ee39e4cac9fa4120139c72ee5210c5c1b615b8bdca4"
+    sha256 cellar: :any,                 monterey:       "ef84a9cf47e36953184a168be2acfd97e6f54ec1db3fdf1c02f1211d5555484c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2dfc9d073777c7e5f1583e8fc339367314791e53e3ee390e4b8407c34ccd18a6"
+  end
+
   depends_on "rust" => :build # for rpds-py
   depends_on "beakerlib"
   depends_on "certifi"
