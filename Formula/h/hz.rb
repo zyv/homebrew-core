@@ -1,8 +1,8 @@
 class Hz < Formula
   desc "Golang HTTP framework for microservices"
   homepage "https://github.com/cloudwego/hertz"
-  url "https://github.com/cloudwego/hertz/archive/refs/tags/cmd/hz/v0.8.1.tar.gz"
-  sha256 "99c64988df9a4bfbd59e694572dbd30bd61d109b3462df8a5db64b2fc2afaf4e"
+  url "https://github.com/cloudwego/hertz/archive/refs/tags/cmd/hz/v0.9.0.tar.gz"
+  sha256 "23577d9453939104d8290c40e151c25dcbaa3dd9b3fcc9bb5611da0744161fb5"
   license "Apache-2.0"
   head "https://github.com/cloudwego/hertz.git", branch: "develop"
 
@@ -21,7 +21,7 @@ class Hz < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f359f99e4756d54fc1f96058f80e24d687ead5734e32a88aa7f168ca5bd18111"
   end
 
-  depends_on "go" => :build
+  depends_on "go" => [:build, :test]
 
   def install
     cd "cmd/hz" do

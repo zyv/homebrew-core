@@ -1021,6 +1021,7 @@ hyperfine
 hypre
 hysteria
 hyx
+hz
 i2p
 i2pd
 iamy
