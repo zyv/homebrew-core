@@ -6,6 +6,7 @@ class Vunnel < Formula
   url "https://files.pythonhosted.org/packages/a0/28/cd9eff639860bc6c748b152320d6ffd10ccf0fdb5dbdcc86459d8dac600b/vunnel-0.22.2.tar.gz"
   sha256 "1ce0357e2c54c2e508470fdc5fab3b8364ac0520ad46523e0885f08a0d75e1de"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
   bottle do
@@ -87,8 +88,8 @@ class Vunnel < Formula
   end
 
   resource "jinja2" do
-    url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
-    sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
+    url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
+    sha256 "4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"
   end
 
   resource "lxml" do
@@ -152,8 +153,8 @@ class Vunnel < Formula
   end
 
   resource "ruff" do
-    url "https://files.pythonhosted.org/packages/e4/1c/5a709706948875d13fc4aa6cfbbaab7549bc06078c0b422749f092792fe3/ruff-0.4.3.tar.gz"
-    sha256 "ff0a3ef2e3c4b6d133fbedcf9586abfbe38d076041f2dc18ffb2c7e0485d5a07"
+    url "https://files.pythonhosted.org/packages/2f/2f/1e91c17c5223a37992a9302af69056966657d23f945e07039319fe006f82/ruff-0.4.4.tar.gz"
+    sha256 "f87ea42d5cdebdc6a69761a9d0bc83ae9b3b30d0ad78952005ba6568d6c022af"
   end
 
   resource "six" do
@@ -187,8 +188,8 @@ class Vunnel < Formula
   end
 
   resource "xsdata" do
-    url "https://files.pythonhosted.org/packages/9c/31/6c556219fd5c79abca4a6205d9836d8ff50b480a8c9c2b8b329d4f84c1a8/xsdata-24.4.tar.gz"
-    sha256 "bbff8e7706dad9cd691e5eb0f47008edabae10c4e650759a4f56daab6d98b6c4"
+    url "https://files.pythonhosted.org/packages/b4/ef/35d8118f903510f9e028f8a6a4edb615fa69e28a30d955593425a88e587a/xsdata-24.5.tar.gz"
+    sha256 "4e8414a01bff603ca38a361d04d819934fcc525f9b4220f0076e040d84a4a963"
   end
 
   resource "xxhash" do
