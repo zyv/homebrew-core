@@ -1,8 +1,8 @@
 class CargoBloat < Formula
   desc "Find out what takes most of the space in your executable"
   homepage "https://github.com/RazrFalcon/cargo-bloat"
-  url "https://github.com/RazrFalcon/cargo-bloat/archive/refs/tags/v0.12.0.tar.gz"
-  sha256 "999b6b982b6907d92e089d1283626fedc578473f5a6bc360a9dad869d3079597"
+  url "https://github.com/RazrFalcon/cargo-bloat/archive/refs/tags/v0.12.1.tar.gz"
+  sha256 "8195cebb94a740cd3b89611ae79d7d3e2d8fd8ec297f5a0f07efa7069ef05be7"
   license "MIT"
   head "https://github.com/RazrFalcon/cargo-bloat.git", branch: "master"
 
