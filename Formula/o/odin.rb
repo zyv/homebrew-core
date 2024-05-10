@@ -2,11 +2,10 @@ class Odin < Formula
   desc "Programming language with focus on simplicity, performance and modern systems"
   homepage "https://odin-lang.org/"
   url "https://github.com/odin-lang/Odin.git",
-      tag:      "dev-2024-04a",
-      revision: "aab122ede8b04a9877e22c9013c0b020186bc9b4"
-  version "2024-04a"
+      tag:      "dev-2024-05",
+      revision: "2250eb3e78eb38d22c0e8c288f82e6ded20b3cfe"
+  version "2024-05"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/odin-lang/Odin.git", branch: "master"
 
   bottle do
@@ -20,7 +19,7 @@ class Odin < Formula
   end
 
   depends_on "glfw"
-  depends_on "llvm@17"
+  depends_on "llvm"
   depends_on "raylib"
 
   fails_with gcc: "5" # LLVM is built with GCC
@@ -83,6 +82,11 @@ class Odin < Formula
         cp "libraygui.dylib", buildpath/raylib_installpath
       end
     end
+
+    # By default the build runs an example program, we don't want to run it during install.
+    # This would fail when gcc is used because Odin can be build with gcc,
+    # but programs linked by Odin need clang specifically.
+    inreplace "build_odin.sh", /^\s*run_demo\s*$/, ""
 
     # Keep version number consistent and reproducible for tagged releases.
     args = []
