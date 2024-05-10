@@ -9,14 +9,13 @@ class Fortls < Formula
   head "https://github.com/fortran-lang/fortls.git", branch: "master"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f72f3698e59bbac8d6f18cc0837a069f780677fb2eba3b4ad1a7c54159c9a511"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7251adffa56e231b0fd92d1b1bb862dd60d8d0453757e4e8956a97e2e949238a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "6e3d8d40a2958cdac989492c3c547074c1e1a4aeecfef2b4b8a645f5c6cab97c"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e1e3429b82468af4bc8df61ca17d26184aeeabdea52dd24cccae1149739b2116"
-    sha256 cellar: :any_skip_relocation, ventura:        "297dbb38409899d4641895bc9ea234813ee91ed00340a333d2d0063afb37d259"
-    sha256 cellar: :any_skip_relocation, monterey:       "d20219ad11612fd7339f2c292dfa2dd62a9f264be2f2c5bdd9f65d951c9c6d35"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fec87f2bc7d3c8013ca32e1bc113d6c9d82a4080bd6bb1de170d1ab9c59ce7fa"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2699022c66461a29076a279c94e95bad33596a8363d48444a41ac91f61c1506b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cec00bf6373b3343bf431526da85743dd8b583d4dac9a670014e7bb559e2c3cd"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "601c1c5f109d425b9daf72a71ed09e765f376dff843e00e7159b08624f4cf0a7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "120a913699c53a90de4f563beb948ae9689af12cbe02d2ac36117839861c05f3"
+    sha256 cellar: :any_skip_relocation, ventura:        "63454492686ae3963eeb465dfe864138302b86a8447d9bba8b748695be61d8d2"
+    sha256 cellar: :any_skip_relocation, monterey:       "7fbeeb67ecae5c43708f3ffcaeb3c5f713dbe0cfa46701a34dbd23930b11803a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7720090598a9f6830c39bc83ca7c96add500cccf07e8cc2a0bf72883a1e2cec"
   end
 
   depends_on "python@3.12"
