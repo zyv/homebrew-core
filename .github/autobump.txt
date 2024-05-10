@@ -1265,6 +1265,7 @@ libsais
 libscfg
 libsecret
 libshumate
+libslirp
 libsndfile
 libsolv
 libsoundio
