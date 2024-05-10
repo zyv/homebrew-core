@@ -5,6 +5,7 @@ class Snort < Formula
   mirror "https://fossies.org/linux/misc/snort3-3.1.84.0.tar.gz"
   sha256 "dca1707a66f6ca56ddd526163b2d951cefdb168bddc162c791adc74c0d226c7f"
   license "GPL-2.0-only"
+  revision 1
   head "https://github.com/snort3/snort3.git", branch: "master"
 
   # There can be a notable gap between when a version is tagged and a
@@ -36,20 +37,13 @@ class Snort < Formula
   depends_on "luajit"
   depends_on "openssl@3"
   depends_on "pcre" # PCRE2 issue: https://github.com/snort3/snort3/issues/254
+  depends_on "vectorscan"
   depends_on "xz" # for lzma.h
 
   uses_from_macos "zlib"
 
   on_linux do
     depends_on "libunwind"
-  end
-
-  on_arm do
-    depends_on "vectorscan"
-  end
-
-  on_intel do
-    depends_on "hyperscan"
   end
 
   fails_with gcc: "5"
