@@ -1051,6 +1051,7 @@ internetarchive
 inxi
 ioctl
 iperf
+iperf3
 ipfs
 ipinfo-cli
 ipmiutil
