@@ -1216,6 +1216,7 @@ libcpuid
 libdap
 libdeflate
 libdnet
+libdpp
 libepoxy
 libewf
 libfabric
