@@ -1615,6 +1615,7 @@ ortp
 osc
 osctrl-cli
 osi
+osinfo-db
 osm2pgsql
 ospray
 osslsigncode
