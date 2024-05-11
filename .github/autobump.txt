@@ -1867,6 +1867,7 @@ rojo
 rollup
 root
 rosa-cli
+rospo
 rover
 rpcgen
 rpg-cli
