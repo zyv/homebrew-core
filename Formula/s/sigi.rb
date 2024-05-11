@@ -1,8 +1,8 @@
 class Sigi < Formula
   desc "Organizing tool for terminal lovers that hate organizing"
   homepage "https://sigi-cli.org"
-  url "https://github.com/sigi-cli/sigi/archive/refs/tags/v3.6.3.tar.gz"
-  sha256 "8bd08b8fb372cf0bcefd45275f8a6956d0f551e9c940c8724f55770ef5b79612"
+  url "https://github.com/sigi-cli/sigi/archive/refs/tags/v3.6.4.tar.gz"
+  sha256 "3c41ebabcef294d109545a7736f2d6f62532a107375566f8fe102414367eceea"
   license "GPL-2.0-only"
   head "https://github.com/sigi-cli/sigi.git", branch: "core"
 
