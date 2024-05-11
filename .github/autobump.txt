@@ -1197,6 +1197,7 @@ lego
 leiningen
 leptonica
 lerna
+lesspipe
 lexbor
 lexicon
 lf
