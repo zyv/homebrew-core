@@ -1,10 +1,9 @@
 class Ldc < Formula
   desc "Portable D programming language compiler"
   homepage "https://wiki.dlang.org/LDC"
-  url "https://github.com/ldc-developers/ldc/releases/download/v1.37.0/ldc-1.37.0-src.tar.gz"
-  sha256 "50e80ae3c436c90637c2c3d40f392dc28b721f7aab3a1e3ca3bf4f9c28dba064"
+  url "https://github.com/ldc-developers/ldc/releases/download/v1.38.0/ldc-1.38.0-src.tar.gz"
+  sha256 "ca6238efe022e34cd3076741f8a070c6a377196351c61949a48a48c99379f38e"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/ldc-developers/ldc.git", branch: "master"
 
   livecheck do
@@ -25,29 +24,29 @@ class Ldc < Formula
   depends_on "cmake" => :build
   depends_on "libconfig" => :build
   depends_on "pkg-config" => :build
-  depends_on "llvm@17"
+  depends_on "llvm"
 
   uses_from_macos "libxml2" => :build
 
   resource "ldc-bootstrap" do
     on_macos do
       on_arm do
-        url "https://github.com/ldc-developers/ldc/releases/download/v1.37.0/ldc2-1.37.0-osx-arm64.tar.xz"
-        sha256 "e8e715e185a4086c0771299b418956a5cfb5759679514eaee55a0c59a84571c7"
+        url "https://github.com/ldc-developers/ldc/releases/download/v1.38.0/ldc2-1.38.0-osx-arm64.tar.xz"
+        sha256 "bfcad81853462a1308c045f1c82b641c3ac007000c5f7de269172067e60a6dea"
       end
       on_intel do
-        url "https://github.com/ldc-developers/ldc/releases/download/v1.37.0/ldc2-1.37.0-osx-x86_64.tar.xz"
-        sha256 "6cc65f7edc8e753b059062d1652d7eb299a122235bde1cce4878ae1cfae09ae2"
+        url "https://github.com/ldc-developers/ldc/releases/download/v1.38.0/ldc2-1.38.0-osx-x86_64.tar.xz"
+        sha256 "d52e1bc5634f045528083d5088b8cfb936b5ab9c041aaaa604902dbf82eef76b"
       end
     end
     on_linux do
       on_arm do
-        url "https://github.com/ldc-developers/ldc/releases/download/v1.37.0/ldc2-1.37.0-linux-aarch64.tar.xz"
-        sha256 "6b1b740002bea1be67f758f9e40c1c629d08903062c6bf83b93af3b13b962c9f"
+        url "https://github.com/ldc-developers/ldc/releases/download/v1.38.0/ldc2-1.38.0-linux-aarch64.tar.xz"
+        sha256 "3d17aae84f7500a0e0ad5a3b6a4c6398415d2a4cd330216a4b15a3b4d3a2edea"
       end
       on_intel do
-        url "https://github.com/ldc-developers/ldc/releases/download/v1.37.0/ldc2-1.37.0-linux-x86_64.tar.xz"
-        sha256 "55524bf320fcc7ed453c29a07e9a98a1716f278dbab7ba4c156dc2719b4671df"
+        url "https://github.com/ldc-developers/ldc/releases/download/v1.38.0/ldc2-1.38.0-linux-x86_64.tar.xz"
+        sha256 "e5108a5ae7ca135623f79569182929a2aab117767a6fb85b599338648b7e7737"
       end
     end
   end
