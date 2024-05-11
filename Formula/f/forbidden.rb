@@ -3,8 +3,8 @@ class Forbidden < Formula
 
   desc "Bypass 4xx HTTP response status codes and more"
   homepage "https://github.com/ivan-sincek/forbidden"
-  url "https://files.pythonhosted.org/packages/2d/df/6c76ede86d494d32862a7456c84390f99721f20dbcb085a367a38a42f3ac/forbidden-10.8.tar.gz"
-  sha256 "3682b2ebcc78d96474e2e184fbc28d92ef36e1f93e19971e2c4404a3f0550b1f"
+  url "https://files.pythonhosted.org/packages/1f/2a/5c3209a31bc4c77eda57a0a6199f030a6c9332473b7b0e262948b74c9584/forbidden-10.9.tar.gz"
+  sha256 "3997d6e8d7172f98b9be4cec561030850ab64af2157bf3747cc4c34160e8e7c5"
   license "MIT"
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
@@ -59,8 +59,8 @@ class Forbidden < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/c0/d6/87709afa2a195ea902810dfaa796d21dd45d91b496dc98828073acbfe5af/regex-2024.4.28.tar.gz"
-    sha256 "83ab366777ea45d58f72593adf35d36ca911ea8bd838483c1823b883a121b0e4"
+    url "https://files.pythonhosted.org/packages/24/ca/2477acbf4d4abe7b2efaa775d5e96dfa236982671bd01a4172e81278d411/regex-2024.5.10.tar.gz"
+    sha256 "304e7e2418146ae4d0ef0e9ffa28f881f7874b45b4994cc2279b21b6e7ae50c8"
   end
 
   resource "requests" do
