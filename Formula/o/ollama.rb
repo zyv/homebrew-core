@@ -16,13 +16,13 @@ class Ollama < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4c22835eeaf09a49c67a75ea09812d0088ad32ca33100c40f8198c670a0634a7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a7d7bf2d6dfb73c1b2e416f09fd52a3f687212022bddeed5bce3c5102550f2cc"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2ad89b8dbf62429679bb7bd015a50e144ac1b90416260bcd461070adc00e15a3"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e9258cd784898bb0088827723cab95b0b88adee8427b504968959b072d734193"
-    sha256 cellar: :any_skip_relocation, ventura:        "2e5a0c3c96264043c57f19ae5f6af7604a09a8f1731abef0b19c567b76cc4da1"
-    sha256 cellar: :any_skip_relocation, monterey:       "f0edbfe64e1bb657d46f133353ad2430d5494341f32acd60accce7515fdbe87b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "389d4d3e07fab0bd5dfe217df57ff6232da2bef374edff8b830d73d20d60d1b0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "0da7e2b7ca44186f76a2f9bdfe4a7739089c88e148a6aa4f199422367f0d8ab2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a438278b91c9aabb7c7982b005e278e6d9c08c46d7bce105443b1acc41e1859c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c2a0f965f600e43842f9bec4aed6e26141e674eb8056464a59160cec7c21a5a"
+    sha256 cellar: :any_skip_relocation, sonoma:         "55c6397515b310128ff757706ee687c5b502cb8ff758d96406642e7ce8c4f7b0"
+    sha256 cellar: :any_skip_relocation, ventura:        "6b251bbbb590b5a7a0cfe8fb3e356dd877af8cd5e02ae5e176dea5e83460d2f0"
+    sha256 cellar: :any_skip_relocation, monterey:       "1354fb134f6b3d93ddc22682b168fe27c946bdd4c7fb7e04dfb2c33fa31c31b9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c54a32f0267446473afbd78c1f1c7bdf77a361a809bc3982c152a25cfd8c0f28"
   end
 
   depends_on "cmake" => :build
