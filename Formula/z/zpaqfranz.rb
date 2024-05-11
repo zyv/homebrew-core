@@ -1,8 +1,8 @@
 class Zpaqfranz < Formula
   desc "Deduplicating command-line archiver and backup tool"
   homepage "https://github.com/fcorbelli/zpaqfranz"
-  url "https://github.com/fcorbelli/zpaqfranz/archive/refs/tags/59.3.tar.gz"
-  sha256 "a1e3c6d738050a7b89881d5da39a95a02e04cbadd6e796c4e03267691a185d83"
+  url "https://github.com/fcorbelli/zpaqfranz/archive/refs/tags/59.4.tar.gz"
+  sha256 "556b30d9c29d26f2705d862155aaf351c8801c2423288c9b397fd76f461ac84d"
   license all_of: [:public_domain, "MIT", "Zlib", "Unlicense", "BSD-2-Clause", "Apache-2.0"]
   head "https://github.com/fcorbelli/zpaqfranz.git", branch: "main"
 
