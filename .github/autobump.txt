@@ -768,6 +768,7 @@ fork-cleaner
 fortio
 fossil
 fourmolu
+fourstore
 fping
 fred
 freeciv
