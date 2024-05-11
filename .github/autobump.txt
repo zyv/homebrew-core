@@ -1957,6 +1957,7 @@ showkey
 shtools
 shub
 shush
+sigi
 sigma-cli
 signal-cli
 signmykey
