@@ -1,8 +1,8 @@
 class UtilLinux < Formula
   desc "Collection of Linux utilities"
   homepage "https://github.com/util-linux/util-linux"
-  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.39/util-linux-2.39.3.tar.xz"
-  sha256 "7b6605e48d1a49f43cc4b4cfc59f313d0dd5402fa40b96810bd572e167dfed0f"
+  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.1.tar.xz"
+  sha256 "59e676aa53ccb44b6c39f0ffe01a8fa274891c91bef1474752fad92461def24f"
   license all_of: [
     "BSD-3-Clause",
     "BSD-4-Clause-UC",
@@ -36,12 +36,14 @@ class UtilLinux < Formula
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
 
+  depends_on "pkg-config" => :build
+
   uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
+  uses_from_macos "sqlite"
   uses_from_macos "zlib"
 
   on_macos do
-    depends_on "pkg-config" => :build # fixes ncursesw detection
     depends_on "gettext" # for libintl
   end
 
@@ -52,6 +54,13 @@ class UtilLinux < Formula
     conflicts_with "flock", because: "both install `flock` binaries"
     conflicts_with "ossp-uuid", because: "both install `uuid.3` file"
     conflicts_with "rename", because: "both install `rename` binaries"
+  end
+
+  # uuid_time function compatibility fix on macos
+  # upstream patch PR, https://github.com/util-linux/util-linux/pull/3013
+  patch do
+    url "https://github.com/util-linux/util-linux/commit/9445f477cfcfb3615ffde8f93b1b98c809ee4eca.patch?full_index=1"
+    sha256 "7a7fe4d32806e59f90ca0eb33a9b4eb306e59c9c148493cd6a57f0dea3eafc64"
   end
 
   def install
@@ -65,6 +74,7 @@ class UtilLinux < Formula
       args << "--disable-ipcs" # does not build on macOS
       args << "--disable-ipcrm" # does not build on macOS
       args << "--disable-wall" # already comes with macOS
+      args << "--disable-liblastlog2" # does not build on macOS
       args << "--disable-libmount" # does not build on macOS
       args << "--enable-libuuid" # conflicts with ossp-uuid
     else
