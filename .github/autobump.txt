@@ -376,6 +376,7 @@ clzip
 cmake-language-server
 cmctl
 cmu-pocketsphinx
+cmus
 cnats
 cntb
 cobalt
