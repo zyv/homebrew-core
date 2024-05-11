@@ -1,8 +1,8 @@
 class Reprepro < Formula
   desc "Debian package repository manager"
   homepage "https://salsa.debian.org/debian/reprepro"
-  url "https://deb.debian.org/debian/pool/main/r/reprepro/reprepro_5.3.1.orig.tar.xz"
-  sha256 "5a6d48bf1f60cfd3c32eae05b535b334972c1e9d4e62ed886dd54e040e9c1cda"
+  url "https://deb.debian.org/debian/pool/main/r/reprepro/reprepro_5.4.4.orig.tar.xz"
+  sha256 "8cf1e1f39bb75e90467f905eda47b0b40c86071a3d696c4470e28f263813cd52"
   license "GPL-2.0-only"
 
   livecheck do
@@ -36,16 +36,21 @@ class Reprepro < Formula
     cause "No support for GNU C nested functions"
   end
 
+  # Replace strcmp2 with strcmp for consistent string comparison
+  # upstream patch PR, https://salsa.debian.org/debian/reprepro/-/merge_requests/10
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/5426d605c0d6b6bf4c2e315fed7a991f447caf1a/reprepro/5.4.4-strcmp2.patch"
+    sha256 "cf1aacf08960cb89896a739086d170417820fe894044d0f446b4ff303a1182e5"
+  end
+
   def install
     system "./autogen.sh"
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}",
+    system "./configure", "--disable-silent-rules",
                           "--with-gpgme=#{Formula["gpgme"].opt_lib}",
                           "--with-libarchive=#{Formula["libarchive"].opt_lib}",
                           "--with-libbz2=yes",
-                          "--with-liblzma=#{Formula["xz"].opt_lib}"
+                          "--with-liblzma=#{Formula["xz"].opt_lib}",
+                          *std_configure_args
     system "make", "install"
   end
 
