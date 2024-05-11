@@ -6,13 +6,13 @@ class Corrosion < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "96299165701c7fda8c49cd6ea73a27ce7a3f4383030dc5b823f8e335d0a48d94"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "cf52745cc8bc4eeeb685142f6e90586dc0d1e9f23c39b238ce6f69b1393e2c18"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2966e3368d4c454b99768c5418424789fb1d674b27c79b0a7347d20b4f7e60ad"
-    sha256 cellar: :any_skip_relocation, sonoma:         "474265fd565c734cdb34c0665bf0d9a063186905a2ed095bb5dd9b5ae52917f1"
-    sha256 cellar: :any_skip_relocation, ventura:        "68223a2c5c372caeb92d9d76a5421487e5bed728b99d4ffef4ac26250a3efc06"
-    sha256 cellar: :any_skip_relocation, monterey:       "20d5ed5576f4045c374f41c45780c5aed7461c29a802141068f93e35d9a36c6a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "17f91d3c90e179d3d1a7bebe5f1736d4fbb27495c023e0055bee78dff71243d8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ddff9c532b8f13fe7f85436d1d700568f8237ea87c0b82b5c1cfc9b319cdecae"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4fe778077db42f28cd3b6fa2ba390f0521739a46d7e4ccf7a8b3a98eee9f3f8f"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fc1f550bcc28bc4f5588a9aa86c7096571f27c6729ad2ffdf22613eb327597f5"
+    sha256 cellar: :any_skip_relocation, sonoma:         "f7e083cf7d2c68b4001903bfd3181fe702f9e16e3a0654f9b37ce8e4ac574dd6"
+    sha256 cellar: :any_skip_relocation, ventura:        "5b9af1491b5385fef303b9905347182bfcdf22130e4781dafbe69a0ce1ae99c4"
+    sha256 cellar: :any_skip_relocation, monterey:       "7753593f53a886542a3d452194623baf5288accbe90bb6b4cd71aa37592f2d5e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5523100a860eb38c3ada88fd37ff095b53c66ad7d20aba89025fdd580ac6ee55"
   end
 
   depends_on "cmake" => [:build, :test]
