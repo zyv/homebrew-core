@@ -5,8 +5,8 @@ class DosboxStaging < Formula
   head "https://github.com/dosbox-staging/dosbox-staging.git", branch: "main"
 
   stable do
-    url "https://github.com/dosbox-staging/dosbox-staging/archive/refs/tags/v0.81.0.tar.gz"
-    sha256 "211cbd2fb781bee1e92963f57e8111e22bcaf17a3a6dc11189982a0eea311e9b"
+    url "https://github.com/dosbox-staging/dosbox-staging/archive/refs/tags/v0.81.1.tar.gz"
+    sha256 "2b389fdc338454f916240aab5a2ae5560d1dd9808d63c70f34ec9a91e60b535a"
 
     # Backport fix to bypass SDL wraps on macOS
     patch do
