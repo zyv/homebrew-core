@@ -1,15 +1,15 @@
 class Flarectl < Formula
   desc "CLI application for interacting with a Cloudflare account"
   homepage "https://github.com/cloudflare/cloudflare-go/tree/master/cmd/flarectl"
-  # Pin to 0.93.0 as cloudflare-go v2 does not produce flarectl
-  url "https://github.com/cloudflare/cloudflare-go/archive/refs/tags/v0.93.0.tar.gz"
-  sha256 "406f6e1a8fc5b2a15c9e47d88c1d864a2073011162dc29c82e3e39201d1f5211"
+  url "https://github.com/cloudflare/cloudflare-go/archive/refs/tags/v0.95.0.tar.gz"
+  sha256 "394fec591f9ae1fdda0f2827ae012c320c799c9ec3adb0549c699be8851f6fc0"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/cloudflare-go.git", branch: "master"
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    # track v0.x releases
+    regex(/^v?(0(?:\.\d+)+)$/i)
   end
 
   bottle do
