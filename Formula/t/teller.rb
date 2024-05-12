@@ -7,16 +7,13 @@ class Teller < Formula
   head "https://github.com/tellerops/teller.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c0b2d3427371a56a0261783681d437a98d622e21e4812355af4695fa0b41f09f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6efc5ee36a0fb0d5a6c3bf9bd34424e8fa297a328e5ff3d590863521b4b5d0c0"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "880fe24f3d79c196a20b850452274728a9cb135cb0bf19ee1e0888b9025cbf00"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "c82814b0c169afe96b4315b8a18a95881129c44d607c9a3185f38caba8fb7f71"
-    sha256 cellar: :any_skip_relocation, sonoma:         "72846665335b3bd2f5af5d00c915fea23744a9c559207427e9a40fa5644355f3"
-    sha256 cellar: :any_skip_relocation, ventura:        "d425c61cf4358c7c2ff451c1c3b6161ad67bcef64aa19401201789be98d198fc"
-    sha256 cellar: :any_skip_relocation, monterey:       "c95785a51067a6ed798e7a41787bb00d7cf5747bb0a3559e9f7df9442de756db"
-    sha256 cellar: :any_skip_relocation, big_sur:        "04987c4db227ef8fab1288ee03506684c4e49f72d73f06c4035c858cea21b72d"
-    sha256 cellar: :any_skip_relocation, catalina:       "86656bbfd93625dac6daa93ecfaba265c3113a5f00bd4ed811f39aa80c445be5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "234ad493942bf3d5d2b93ff1114dfebf5280a0325c1b6271a7e2b22306a02067"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6704477a5bbff6ae77e598d7f3e23a8e6ed29cacd4569d06ad813187f4bff6dc"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c233bfc50235f79a795811a99adc75e4225abd0a80215a540817d00156fef93a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9a3828e6f65e1cbd3424fd5b83e7d83868917c8895bf2aacabbc2483e25a96a1"
+    sha256 cellar: :any_skip_relocation, sonoma:         "12bca722b124885d676020473e0928ab3cc6cbd4ffee3d9550b91c0619679c8f"
+    sha256 cellar: :any_skip_relocation, ventura:        "eae9f8e809b4422e262d3efc14b46aac3bed6b2d650d5296a6b2b62176aab17c"
+    sha256 cellar: :any_skip_relocation, monterey:       "8f5e8a3d924bf746875503648da58fa6c9c68c82e116c1b3e0f5a4e1bbb288f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "79cfdf095ca432dacdae22d526d9707ee3750d93d453054dcf9e2f8175346b5b"
   end
 
   depends_on "pkg-config" => :build
