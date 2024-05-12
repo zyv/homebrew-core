@@ -2206,6 +2206,7 @@ tsduck
 tt
 ttdl
 ttyd
+ttyplot
 tup
 tygo
 typescript
