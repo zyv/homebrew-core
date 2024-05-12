@@ -1,8 +1,8 @@
 class Teller < Formula
   desc "Secrets management tool for developers built in Go"
   homepage "https://github.com/tellerops/teller"
-  url "https://github.com/tellerops/teller/archive/refs/tags/v2.0.3.tar.gz"
-  sha256 "d752c60df4b3577b135e55ced4504c8c5a7d5b9c1042bbd8a58caab6b933722e"
+  url "https://github.com/tellerops/teller/archive/refs/tags/v2.0.4.tar.gz"
+  sha256 "d340d160f00c0653d3160cf16aa41d22acb240556464d8803f234f1fe46efcef"
   license "Apache-2.0"
   head "https://github.com/tellerops/teller.git", branch: "master"
 
@@ -46,5 +46,7 @@ class Teller < Formula
 
     output = shell_output("#{bin}/teller -c #{testpath}/.teller.yml show 2>&1")
     assert_match "[dotenv (dotenv)]: foo = ba", output
+
+    assert_match version.to_s, shell_output("#{bin}/teller --version")
   end
 end
