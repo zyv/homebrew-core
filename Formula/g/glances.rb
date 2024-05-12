@@ -3,8 +3,8 @@ class Glances < Formula
 
   desc "Alternative to top/htop"
   homepage "https://nicolargo.github.io/glances/"
-  url "https://files.pythonhosted.org/packages/2d/5c/628323ef58132b4a093e7182bbb5c5c3063fbd598873f31024b58448be73/Glances-3.4.0.5.tar.gz"
-  sha256 "2aaae0222744837e1223f63bd2efffbc6a3fdae42c95b2ebd1925cf94ae2a85b"
+  url "https://files.pythonhosted.org/packages/92/7f/8129e9adf7e8c0e2d7eca497a7f0e3978282508ad7b3b6997abd8a4a6092/glances-4.0.5.tar.gz"
+  sha256 "8ae6929be7b972c3292ce9587d3f342fc0fd7f7789506fa403fa50109491a547"
   license "LGPL-3.0-or-later"
 
   bottle do
@@ -35,12 +35,13 @@ class Glances < Formula
   end
 
   resource "ujson" do
-    url "https://files.pythonhosted.org/packages/6e/54/6f2bdac7117e89a47de4511c9f01732a283457ab1bf856e1e51aa861619e/ujson-5.9.0.tar.gz"
-    sha256 "89cc92e73d5501b8a7f48575eeb14ad27156ad092c2e9fc7e3cf949f07e75532"
+    url "https://files.pythonhosted.org/packages/f0/00/3110fd566786bfa542adb7932d62035e0c0ef662a8ff6544b6643b3d6fd7/ujson-5.10.0.tar.gz"
+    sha256 "b3cd8f3c5d8c7738257f1018880444f7b7d9b66232c64649f562d7ba86ad4bc1"
   end
 
   def install
     virtualenv_install_with_resources
+
     prefix.install libexec/"share"
   end
 
