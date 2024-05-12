@@ -1,8 +1,8 @@
 class Goctl < Formula
   desc "Generates server-side and client-side code for web and RPC services"
   homepage "https://go-zero.dev"
-  url "https://github.com/zeromicro/go-zero/archive/refs/tags/tools/goctl/v1.6.4.tar.gz"
-  sha256 "7cd3f6b7368efcefeae20e103dcac15b99bea1171bb22ea405c8859d0c98b762"
+  url "https://github.com/zeromicro/go-zero/archive/refs/tags/tools/goctl/v1.6.5.tar.gz"
+  sha256 "c30e9a08acc35971a725b6b63a1adac321c988c31f197f7e74e90d0a6a2a4363"
   license "MIT"
 
   bottle do
