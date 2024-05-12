@@ -1,8 +1,8 @@
 class Lune < Formula
   desc "Standalone Luau script runtime"
   homepage "https://lune-org.github.io/docs"
-  url "https://github.com/lune-org/lune/archive/refs/tags/v0.8.3.tar.gz"
-  sha256 "f91ffc22ad6416231180197f39a437b7241131d80544ac7df88f56193875e50a"
+  url "https://github.com/lune-org/lune/archive/refs/tags/v0.8.4.tar.gz"
+  sha256 "ff254da9ed4f3f2cf171f69015ce833e3954a8fa2e357aa208718e2e53ed5a01"
   license "MPL-2.0"
 
   bottle do
@@ -15,10 +15,11 @@ class Lune < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "53e9d5eadb78c68c2fd20d7184609e1a560f8efe3ed6e8b2f144194e8cf3fe9b"
   end
 
+  depends_on "cmake" => :build
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", "--all-features", *std_cargo_args
+    system "cargo", "install", "--all-features", *std_cargo_args(path: "crates/lune")
   end
 
   test do
