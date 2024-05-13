@@ -3,8 +3,8 @@ require "language/node"
 class Zx < Formula
   desc "Tool for writing better scripts"
   homepage "https://github.com/google/zx"
-  url "https://registry.npmjs.org/zx/-/zx-8.0.2.tgz"
-  sha256 "ed4f770208f5e0e0c47f710f0b4f4e6ae3f54e59ac8efcfc960b4208b3d8a20b"
+  url "https://registry.npmjs.org/zx/-/zx-8.1.0.tgz"
+  sha256 "aeb9483d5f4e2e56b21371f65a57545d93365634be730988b0d808d038d0ea69"
   license "Apache-2.0"
 
   bottle do
