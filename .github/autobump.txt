@@ -317,6 +317,7 @@ chainhook
 chainloop-cli
 chainsaw
 chamber
+changie
 chaoskube
 charmcraft
 chars
