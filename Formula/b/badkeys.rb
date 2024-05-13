@@ -3,8 +3,8 @@ class Badkeys < Formula
 
   desc "Tool to find common vulnerabilities in cryptographic public keys"
   homepage "https://badkeys.info"
-  url "https://files.pythonhosted.org/packages/41/93/d101028c62f0dfb853715388dab374b36089d21a7530b91d4f6f46a85221/badkeys-0.0.10.tar.gz"
-  sha256 "2d31b77c789508b6d810b8d1919ffea08547d6913b7917c247967c921d60646b"
+  url "https://files.pythonhosted.org/packages/88/fd/0b40be2d9d46befa087cc5ca494ebadf5777cb05a5ef6ee27577e82ae409/badkeys-0.0.11.tar.gz"
+  sha256 "0bc38ac6e683d5c85f7abb15de5ea14e1bf428267e60a9240b1faa34bd91f018"
   license "MIT"
   head "https://github.com/badkeys/badkeys.git", branch: "main"
 
