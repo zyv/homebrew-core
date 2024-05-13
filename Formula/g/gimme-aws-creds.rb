@@ -8,13 +8,13 @@ class GimmeAwsCreds < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "740540de070b31de07033f6cfabe0905bc251bd7f5def19e5764aeb7fca1806e"
-    sha256 cellar: :any,                 arm64_ventura:  "f8ffa7959fa029ae10cc21ae56ef9c9fd41d2b938af487001263208578fc6298"
-    sha256 cellar: :any,                 arm64_monterey: "076c14aa1b09db1e7309c4ad426c37a18e49063c2c34329e959853d51019f1f9"
-    sha256 cellar: :any,                 sonoma:         "e5b1eedca20603a9d665dcf1bc6153672bb30f77f8f14b08477ce893722fff3f"
-    sha256 cellar: :any,                 ventura:        "9ad0ef02d0df276263cda7c934233eeedbffc238bcfcec6709d712b2f66f5723"
-    sha256 cellar: :any,                 monterey:       "a6bee03ab824a68e6485d1e540b622623260dda7f8e42c8a1ae57cfeaa98117b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "188f78309f7a4e33a7cd52157666e8c2ef81bf74e21bef87b0cd0f6038699e19"
+    sha256 cellar: :any,                 arm64_sonoma:   "17aa5d8830e8e9e27544335c01029bfda5febedb19f24a0b5014f711bfea6ff8"
+    sha256 cellar: :any,                 arm64_ventura:  "55145d0cece8da33bf3c99b0ede1fa4e8143a4ffb9d59468e39869ddebab01ce"
+    sha256 cellar: :any,                 arm64_monterey: "88652661ad55e1b03f07bdbe5bd259777cae325c5402022f6a953e378d792278"
+    sha256 cellar: :any,                 sonoma:         "35bb52a073f1d5f1932fc25f94f8ea9192dde40d30e8609bce70721c5fdd2d13"
+    sha256 cellar: :any,                 ventura:        "8b581cbea5c9515c59ea372444b8ef949c5d51bc246024e904d9984a2bc2fe1a"
+    sha256 cellar: :any,                 monterey:       "01cdce3c726d2c168a035f68bc2a3bd8ce92ce41e05e6640c7bb64ba80bf7566"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "15332e4e998c37989ecbec65fa316e4458b46ed8d0c826435d9de2df29e63b51"
   end
 
   depends_on "certifi"
