@@ -6,7 +6,13 @@ class ZshYouShouldUse < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "559c5067d040915063806f345fbf5470c5508766bb91208a92d2038b6d683f3b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "39e5a4a5da8cba7c88f4badc2910dc46224c10dd62b6a827631265db651f8351"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "39e5a4a5da8cba7c88f4badc2910dc46224c10dd62b6a827631265db651f8351"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "39e5a4a5da8cba7c88f4badc2910dc46224c10dd62b6a827631265db651f8351"
+    sha256 cellar: :any_skip_relocation, sonoma:         "39e5a4a5da8cba7c88f4badc2910dc46224c10dd62b6a827631265db651f8351"
+    sha256 cellar: :any_skip_relocation, ventura:        "39e5a4a5da8cba7c88f4badc2910dc46224c10dd62b6a827631265db651f8351"
+    sha256 cellar: :any_skip_relocation, monterey:       "39e5a4a5da8cba7c88f4badc2910dc46224c10dd62b6a827631265db651f8351"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e6489c8642bb013394563408bed73bf2996f8d950c2ad659c6db15a0ad77b4a0"
   end
 
   uses_from_macos "zsh"
