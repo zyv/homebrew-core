@@ -3,10 +3,9 @@ class Dvc < Formula
 
   desc "Git for data science projects"
   homepage "https://dvc.org"
-  url "https://files.pythonhosted.org/packages/aa/df/64d43a2caaed1f58237993570a20cba3cbdde27b45c3293d93a717f49e82/dvc-3.50.1.tar.gz"
-  sha256 "97c92a530da38ea08f1cfad6ec7ad7ad1abf55887eb243d10b789123131616f9"
+  url "https://files.pythonhosted.org/packages/ec/e6/931fddaa44694faea4e5e67bdc11bd7cf76240fbf2c714fbb32065e4756e/dvc-3.50.2.tar.gz"
+  sha256 "b8e12d3521391ae839b8f38ea807d6f88699c570806f4bfdf4fff3733f87a1cc"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "c289e81cf7318a615edac1320b1ee214d8e6f7189619f4693d644a0787a59296"
@@ -75,8 +74,8 @@ class Dvc < Formula
   end
 
   resource "aliyun-python-sdk-kms" do
-    url "https://files.pythonhosted.org/packages/cb/87/f0004243da50bb102715fdc92e2fbff92b039bfbd16400c57a7dba572308/aliyun-python-sdk-kms-2.16.2.tar.gz"
-    sha256 "f87234a8b64d457ca2338f87650db18a3ce7f7dbc9bfef71efe8f2894aded3d6"
+    url "https://files.pythonhosted.org/packages/c5/a6/f958162647f2f581a5d767a5cf1b9e172183863559abfbe594face7141f7/aliyun-python-sdk-kms-2.16.3.tar.gz"
+    sha256 "c31b7d24e153271a3043e801e7b6b6b3f0db47e95a83c8d10cdab8c11662fc39"
   end
 
   resource "amqp" do
@@ -140,8 +139,8 @@ class Dvc < Formula
   end
 
   resource "azure-storage-blob" do
-    url "https://files.pythonhosted.org/packages/bd/a2/b1c1d6d8e3709bd949a18969ae8c1c61bd77d54f2b896e8574ef53053df5/azure-storage-blob-12.19.1.tar.gz"
-    sha256 "13e16ba42fc54ac2c7e8f976062173a5c82b9ec0594728e134aac372965a11b0"
+    url "https://files.pythonhosted.org/packages/1b/0f/86cdaec4be486d12fd5bd2c56e835492a58d3bcd4915d24473e889b70f2c/azure-storage-blob-12.20.0.tar.gz"
+    sha256 "eeb91256e41d4b5b9bad6a87fd0a8ade07dd58aa52344e2c8d2746e27a017d3b"
   end
 
   resource "bcrypt" do
@@ -375,8 +374,8 @@ class Dvc < Formula
   end
 
   resource "google-api-python-client" do
-    url "https://files.pythonhosted.org/packages/cb/0f/6f0a8070802d6ee9a1393a4653202786c5ea9b10aa098a4c40c04be7c668/google-api-python-client-2.127.0.tar.gz"
-    sha256 "bbb51b0fbccdf40e536c26341e372d7800f09afebb53103bbcc94e08f14b523b"
+    url "https://files.pythonhosted.org/packages/c2/97/56b0c6661e0b60e9d743a2eed018329a5265bd37d1b14969ef53cd06239b/google-api-python-client-2.129.0.tar.gz"
+    sha256 "984cc8cc8eb4923468b1926d2b8effc5b459a4dda3c845896eb87c153b28ef84"
   end
 
   resource "google-auth" do
@@ -630,8 +629,8 @@ class Dvc < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
-    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
+    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
   resource "pygtrie" do
@@ -705,8 +704,8 @@ class Dvc < Formula
   end
 
   resource "scmrepo" do
-    url "https://files.pythonhosted.org/packages/ca/ef/3eca3d34aad6369059cb1745f1783e06b6dece2a7584ef45c54f59b55477/scmrepo-3.3.2.tar.gz"
-    sha256 "a817334bf005275e7f0f98d768ce21bb5cbfc05676a0d6081372eb927e7c737b"
+    url "https://files.pythonhosted.org/packages/7d/ad/d422fee6fd96b142bf6848cfad6a3c095162df59cbfa06cc122b4131bd17/scmrepo-3.3.3.tar.gz"
+    sha256 "9eb592b4aadd51360f1bbe316d055b04278ca909f162023078fe504961b1a1d8"
   end
 
   resource "semver" do
@@ -765,8 +764,8 @@ class Dvc < Formula
   end
 
   resource "tomlkit" do
-    url "https://files.pythonhosted.org/packages/7d/49/4c0764898ee67618996148bdba4534a422c5e698b4dbf4001f7c6f930797/tomlkit-0.12.4.tar.gz"
-    sha256 "7ca1cfc12232806517a8515047ba66a19369e71edf2439d0f5824f91032b6cc3"
+    url "https://files.pythonhosted.org/packages/2b/ab/18f4c8f2bec75eb1a7aebcc52cdb02ab04fd39ff7025bb1b1c7846cc45b8/tomlkit-0.12.5.tar.gz"
+    sha256 "eef34fba39834d4d6b73c9ba7f3e4d1c417a4e56f89a7e96e090dd0d24b8fb3c"
   end
 
   resource "tqdm" do
