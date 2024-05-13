@@ -1,8 +1,8 @@
 class Doltgres < Formula
   desc "Dolt for Postgres"
   homepage "https://github.com/dolthub/doltgresql"
-  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "17fc3a89e6e36d99ae86da8b3b37e2addb12b93061128ce04a0896a1ee1bd342"
+  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "23341bb0e8745e8a1d575c2c079f86cfb67522c935d15f98ddb00fc3117cf9e4"
   license "Apache-2.0"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
@@ -28,17 +28,36 @@ class Doltgres < Formula
 
   def install
     system "./postgres/parser/build.sh"
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/doltgres"
   end
 
   test do
+    port = free_port
+
+    (testpath/"config.yaml").write <<~EOS
+      behavior:
+        read_only: false
+        disable_client_multi_statements: false
+        dolt_transaction_commit: false
+
+      user:
+        name: "doltgres"
+        password: "password"
+
+      listener:
+        host: localhost
+        port: #{port}
+        read_timeout_millis: 28800000
+        write_timeout_millis: 28800000
+    EOS
+
     fork do
-      exec bin/"doltgres"
+      exec bin/"doltgres", "--config", testpath/"config.yaml"
     end
     sleep 5
 
     psql = Formula["libpq"].opt_bin/"psql"
-    output = shell_output("#{psql} -h 127.0.0.1 -U doltgres -c 'SELECT DATABASE()' 2>&1", 2)
-    assert_match "database \"doltgres\" does not exist", output
+    output = shell_output("#{psql} -h 127.0.0.1 -p #{port} -U doltgres -c 'SELECT DATABASE()' 2>&1")
+    assert_match "database() \n------------\n doltgres\n(1 row)", output
   end
 end
