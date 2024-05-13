@@ -97,6 +97,7 @@ asn
 asnmap
 aspell
 assh
+assimp
 ast-grep
 astgen
 astro
