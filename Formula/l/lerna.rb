@@ -8,13 +8,13 @@ class Lerna < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "5c71bb2e2ac9b417802e4080524648810494334e65f592b6b96042d60234ab44"
-    sha256 cellar: :any,                 arm64_ventura:  "5c71bb2e2ac9b417802e4080524648810494334e65f592b6b96042d60234ab44"
-    sha256 cellar: :any,                 arm64_monterey: "5c71bb2e2ac9b417802e4080524648810494334e65f592b6b96042d60234ab44"
-    sha256 cellar: :any,                 sonoma:         "1d7dece6b2bcb119bdff3efeb24e6e817f87708509b0f69d0c9579a13a13f045"
-    sha256 cellar: :any,                 ventura:        "1d7dece6b2bcb119bdff3efeb24e6e817f87708509b0f69d0c9579a13a13f045"
-    sha256 cellar: :any,                 monterey:       "1d7dece6b2bcb119bdff3efeb24e6e817f87708509b0f69d0c9579a13a13f045"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b30fb2b78c628c706a7886f110bfaa9ae95dfcc7480480e5ece785d98e151317"
+    sha256 cellar: :any,                 arm64_sonoma:   "2e4e73282d554cd7106b152905e73fca933e5e5cdf9d563fe8cd8c8790edf71f"
+    sha256 cellar: :any,                 arm64_ventura:  "c73e8d7c61cb465ebc183e6a228173e0ef3c5e9125e6d088714a915652a7f41b"
+    sha256 cellar: :any,                 arm64_monterey: "e650bbc35fc4b46c44218866344788b337ef93888c63ff00f357281f97490539"
+    sha256 cellar: :any,                 sonoma:         "40af4183cd7593dcde89436884d4c83e83ad054c2518e59636092817995f4c22"
+    sha256 cellar: :any,                 ventura:        "c9c8c68f2ca4efb8c350f89f237f30f04e0dd6456796d6971dbe25f483b5ef9b"
+    sha256 cellar: :any,                 monterey:       "fc681e366796f3fa2493ded8258444ef72a22d5c4bc2bf90a8f635b6c8b1e65c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f3b3d3284abf0017e231f8bb5da17fdf95ffb70fdcbc6be063f81435b8ef2ec"
   end
 
   depends_on "node"
