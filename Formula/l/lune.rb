@@ -6,13 +6,13 @@ class Lune < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2ad4d64310fc1ff594deef77977f5a6dffaaf245ca5fb6a7a2ac8e53f1980da1"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3e9ef66dba5c8da96dad166a7276ee184332023b98af5c101fae05fa684aaede"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "820c4ec2f7703e900079004f7629b748d9cb7c83cec421b4dee6ca94687e88c0"
-    sha256 cellar: :any_skip_relocation, sonoma:         "45811007d9ffb9ac8fd35495df0717c2b3c4723d05400c25378c2fc52cb74eac"
-    sha256 cellar: :any_skip_relocation, ventura:        "7136d7ec284966d88dc07942d208a1112207d3b521f6ea37f7ce583faffae986"
-    sha256 cellar: :any_skip_relocation, monterey:       "05ef95c291a651cab571219301cc003dfdae214a49e86499faeb993d1adfc082"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53e9d5eadb78c68c2fd20d7184609e1a560f8efe3ed6e8b2f144194e8cf3fe9b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8949c764721a0bf40b1776e7eae8c602072219b7a751189defafefe4946b736b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "37dd8caaeead1b25fe127b50e10ba6c05dc0058ae6289121da794919d4a07546"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "c1caa82efddfe56d2317690f62c84a06ba86fd82be0a8ab1674393fb029d0b55"
+    sha256 cellar: :any_skip_relocation, sonoma:         "eda471d35b8474f79538a9532ea54e013ecc1099158c2a881edfb5c9249293bc"
+    sha256 cellar: :any_skip_relocation, ventura:        "d3b5cb8e2f5ead4b3ece429ea70bbbf0cae68d76afb6be17d0816f8626f91cca"
+    sha256 cellar: :any_skip_relocation, monterey:       "aa20bb57f1b6a5eed583ca3fed7adc5fef4c8e8e5ab276efd1d7a4ed3d324ffe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5feeced3cca6d54736debde01907b953efbcda2c7c412da324ed8c42e58e2e73"
   end
 
   depends_on "cmake" => :build
