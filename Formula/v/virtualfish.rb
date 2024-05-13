@@ -3,8 +3,8 @@ class Virtualfish < Formula
 
   desc "Python virtual environment manager for the fish shell"
   homepage "https://virtualfish.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/95/03/0f7b063c25c60e4221fb2a710cce05fe4686aa5dd1f6fce4bd6abd4595e4/virtualfish-2.5.8.tar.gz"
-  sha256 "ea887a44399a4b2621b71f15c1d856d54a3ff3348a3292b0dfcb2d8238fe6932"
+  url "https://files.pythonhosted.org/packages/1f/4e/343d044d61e80a44163d15ad2f6ca20eca0cb4fef4058caf8e5e55fc3dd9/virtualfish-2.5.9.tar.gz"
+  sha256 "9beada15b00c5b38c700ed8dfd76fe35ad0c716dec391536cc322ddd1bccf5e2"
   license "MIT"
   head "https://github.com/justinmayer/virtualfish.git", branch: "main"
 
@@ -27,8 +27,8 @@ class Virtualfish < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/38/ff/877f1dbe369a2b9920e2ada3c9ab81cf6fe8fa2dce45f40cad510ef2df62/filelock-3.13.4.tar.gz"
-    sha256 "d13f466618bfde72bd2c18255e269f72542c6e70e7bac83a0232d6b1cc5c8cf4"
+    url "https://files.pythonhosted.org/packages/06/ae/f8e03746f0b62018dcf1120f5ad0a1db99e55991f2cda0cf46edc8b897ea/filelock-3.14.0.tar.gz"
+    sha256 "6ea72da3be9b8c82afd3edcf99f2fffbb5076335a5ae4d03248bb5b6c3eae78a"
   end
 
   resource "packaging" do
@@ -52,8 +52,8 @@ class Virtualfish < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/d8/02/0737e7aca2f7df4a7e4bfcd4de73aaad3ae6465da0940b77d222b753b474/virtualenv-20.26.0.tar.gz"
-    sha256 "ec25a9671a5102c8d2657f62792a27b48f016664c6873f6beed3800008577210"
+    url "https://files.pythonhosted.org/packages/93/9f/97beb3dd55a764ac9776c489be4955380695e8d7a6987304e58778ac747d/virtualenv-20.26.1.tar.gz"
+    sha256 "604bfdceaeece392802e6ae48e69cec49168b9c5f4a44e483963f9242eb0e78b"
   end
 
   def install
