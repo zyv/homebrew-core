@@ -48,6 +48,11 @@ class Httping < Formula
     sha256 "7fcb599c206e943fc16fdb8118d9abf51ea4cfc92d8781b13445a4ab331d4969"
   end
 
+  patch do
+    url "https://github.com/folkertvanheusden/httping/commit/57b843c049d1f2d545508e7aceebd254f9f06880.patch?full_index=1"
+    sha256 "f9d8b586ea9c66fba3fc70cf96b3979d5475e3f67c461445b880a27f97f3c742"
+  end
+
   def install
     inreplace "CMakeLists.txt", "/usr/share/locale", share/"locale"
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
