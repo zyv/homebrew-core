@@ -1,8 +1,8 @@
 class Mise < Formula
   desc "Polyglot runtime manager (asdf rust clone)"
   homepage "https://mise.jdx.dev/"
-  url "https://github.com/jdx/mise/archive/refs/tags/v2024.5.11.tar.gz"
-  sha256 "14c19770f88afb4d83e8bb2943a15e9e865b441798c74a049867a3ad33101f0c"
+  url "https://github.com/jdx/mise/archive/refs/tags/v2024.5.12.tar.gz"
+  sha256 "9a8aa0bdff297f7f8e596d95d4838e6d73935571bb4e003363d6440d31314523"
   license "MIT"
   head "https://github.com/jdx/mise.git", branch: "main"
 
@@ -21,14 +21,18 @@ class Mise < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "d7d8a752995f13b3b6bb5d8adde51cebcceb367826911be8e8584520efdf9736"
   end
 
+  depends_on "pkg-config" => :build
   depends_on "rust" => :build
-
-  on_linux do
-    depends_on "pkg-config" => :build
-    depends_on "openssl@3"
-  end
+  depends_on "libgit2"
+  depends_on "openssl@3"
 
   def install
+    ENV["LIBGIT2_NO_VENDOR"] = "1"
+
+    # Ensure that the `openssl` crate picks up the intended library.
+    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
+    ENV["OPENSSL_NO_VENDOR"] = "1"
+
     system "cargo", "install", *std_cargo_args
     man1.install "man/man1/mise.1"
     generate_completions_from_executable(bin/"mise", "completion")
@@ -47,8 +51,25 @@ class Mise < Formula
     EOS
   end
 
+  def check_binary_linkage(binary, library)
+    binary.dynamically_linked_libraries.any? do |dll|
+      next false unless dll.start_with?(HOMEBREW_PREFIX.to_s)
+
+      File.realpath(dll) == File.realpath(library)
+    end
+  end
+
   test do
-    system "#{bin}/mise", "install", "nodejs@18.13.0"
-    assert_match "v18.13.0", shell_output("#{bin}/mise exec nodejs@18.13.0 -- node -v")
+    system "#{bin}/mise", "install", "nodejs@22.1.0"
+    assert_match "v22.1.0", shell_output("#{bin}/mise exec nodejs@22.1.0 -- node -v")
+
+    [
+      Formula["libgit2"].opt_lib/shared_library("libgit2"),
+      Formula["openssl@3"].opt_lib/shared_library("libssl"),
+      Formula["openssl@3"].opt_lib/shared_library("libcrypto"),
+    ].each do |library|
+      assert check_binary_linkage(bin/"mise", library),
+             "No linkage with #{library.basename}! Cargo is likely using a vendored version."
+    end
   end
 end
