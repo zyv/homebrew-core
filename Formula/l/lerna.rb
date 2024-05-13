@@ -3,8 +3,8 @@ require "language/node"
 class Lerna < Formula
   desc "Tool for managing JavaScript projects with multiple packages"
   homepage "https://lerna.js.org"
-  url "https://registry.npmjs.org/lerna/-/lerna-8.1.2.tgz"
-  sha256 "269041891d18502be115f34f96af966f74fcceeb8750e1addde49d68541cbfdc"
+  url "https://registry.npmjs.org/lerna/-/lerna-8.1.3.tgz"
+  sha256 "1af740d44c04badf4ce1c9bddab9a4df4ae3053075a1e41904643cbbc6a01909"
   license "MIT"
 
   bottle do
@@ -22,9 +22,6 @@ class Lerna < Formula
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
-
-    node_modules = libexec/"lib/node_modules/lerna/node_modules"
-    (node_modules/"@nx/nx-linux-x64-musl/nx.linux-x64-musl.node").unlink if OS.linux?
 
     # Replace universal binaries with native slices
     deuniversalize_machos
