@@ -1302,6 +1302,7 @@ libxdmcp
 libxext
 libxkbfile
 libxlsxwriter
+libxml2
 libxmlb
 libxmlsec1
 libxmu
