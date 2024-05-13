@@ -3,8 +3,8 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.48.tar.gz"
-  sha256 "fd47c888ff8807801db8372d8a114fccd5860252f33dfd96edf5e624a47c8810"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.49.tar.gz"
+  sha256 "9671dbeccf1e33a0305ed17a2d406d68bff00769e3720831d30969c3022321c5"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
