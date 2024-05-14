@@ -1,8 +1,8 @@
 class Kuzu < Formula
   desc "Embeddable graph database management system built for query speed & scalability"
   homepage "https://kuzudb.com/"
-  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "e81be1e94dafba5e4a6f08b7f3a530c75926740d47e3a6b198687cd132630b6d"
+  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "47057d6b241b13a989b39d5277c234cdae19291f9cce7a642113bbe7ab916ad6"
   license "MIT"
   head "https://github.com/kuzudb/kuzu.git", branch: "master"
 
@@ -22,17 +22,11 @@ class Kuzu < Formula
   def install
     args = %w[
       -DAUTO_UPDATE_GRAMMAR=0
-      -DENABLE_LTO=1
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
-    # The artifact will be renamed to `kuzu` in CMakeLists.txt for the next
-    # release of Kuzu. This is a temporary workaround and will be removed when
-    # the next release is out. See: https://github.com/kuzudb/kuzu/issues/3458
-    bin.install_symlink bin/"kuzu_shell" => "kuzu"
   end
 
   test do
