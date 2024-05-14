@@ -880,6 +880,7 @@ glslang
 gmailctl
 gmic
 gmsh
+gnmic
 gnu-getopt
 gnu-units
 gnumeric
