@@ -1,10 +1,9 @@
 class Papilo < Formula
   desc "Parallel Presolve for Integer and Linear Optimization"
   homepage "https://www.scipopt.org"
-  url "https://github.com/scipopt/papilo/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "4ed759e55fe1c74be779137e4e3cdae67e1b64bd62ca31793ca3b321509c27a8"
+  url "https://github.com/scipopt/papilo/archive/refs/tags/v2.2.1.tar.gz"
+  sha256 "b022af82bda3db1a594fe67524d98be82e67279f9d9d645b2fcdfc9349cdc6f7"
   license all_of: ["LGPL-3.0-only", "GPL-3.0-only"]
-  revision 1
   version_scheme 1
 
   bottle do
@@ -18,8 +17,8 @@ class Papilo < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "gcc" => :build
   depends_on "boost"
+  depends_on "gcc"
   depends_on "gmp"
   depends_on "openblas"
   depends_on "tbb"

@@ -1644,6 +1644,7 @@ pan
 pandoc
 pandoc-crossref
 pango
+papilo
 parallel
 pari
 parquet-cli
