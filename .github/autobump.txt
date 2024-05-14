@@ -1898,6 +1898,7 @@ rune
 rure
 rust
 rust-analyzer
+rust-parallel
 rustcat
 rustfmt
 rustscan
