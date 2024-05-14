@@ -822,6 +822,7 @@
     "exclude_packages": ["numpy", "pillow", "six"]
   },
   "xdot": {
+    "exclude_packages": ["numpy", "pygobject"],
     "extra_packages": ["graphviz"]
   },
   "xonsh": "xonsh[ptk,pygments,proctitle]",
