@@ -1,8 +1,8 @@
 class Doltgres < Formula
   desc "Dolt for Postgres"
   homepage "https://github.com/dolthub/doltgresql"
-  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "23341bb0e8745e8a1d575c2c079f86cfb67522c935d15f98ddb00fc3117cf9e4"
+  url "https://github.com/dolthub/doltgresql/archive/refs/tags/v0.7.4.tar.gz"
+  sha256 "26aa819db16975a9ca5b4560855949f435087f8d36cf50a69c383320e6212a91"
   license "Apache-2.0"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
