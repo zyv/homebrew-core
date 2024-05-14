@@ -15,6 +15,7 @@ adns
 adr-viewer
 adwaita-icon-theme
 aerleon
+aespipe
 afflib
 aftman
 agda
