@@ -6,13 +6,13 @@ class Gnmic < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "57f8cd448ef3faa4e38f6a4a1988bc1d6f685ee8d7e82bbb6a82911d3565fb5a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6fe1cae22a6d610e168d49b9d51cbe7bb5376b7b73fc545f54470c7eb0f2fa64"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5a50d0a6236484c05de3ee10bf034219716b40585b434642bbc4dbbb36e347d7"
-    sha256 cellar: :any_skip_relocation, sonoma:         "0f1d4aac476761c85505dcdb11f01725b4228b1845eb7a2ed7f9041b88da009d"
-    sha256 cellar: :any_skip_relocation, ventura:        "29baa72688cb04005d05ee92f70243ca8573dc477664d4712ab236a327352b51"
-    sha256 cellar: :any_skip_relocation, monterey:       "a0a656bfaed7c987cddd3415f1a895dab8bc9cb6d6300643289845cf636d5740"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4c74ef4c8d9dc0e5ec29571579c865a933fb8cc9c67ef006b3251550fe7cf5b8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c460520c7798190c67aa416fd81e36db3fcba13ae1d40f571f393e1309b9547c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3c91b536f0b8d8351df6e48919783da24bc21244ac305902fc38327b240415c0"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "529c022886492396c2d9dbfacded6e8f3179d5376c892dd8790da615f2265098"
+    sha256 cellar: :any_skip_relocation, sonoma:         "2ba3e6bb13e3a757281c033051b00f42e67ccff1b7cd424f56abaa66306489a7"
+    sha256 cellar: :any_skip_relocation, ventura:        "7ad238744873458b569ce34095c86107c0c2056faf21f6a95cac8a06ab7e359f"
+    sha256 cellar: :any_skip_relocation, monterey:       "ae8ec26421f489dcd4be2b4d59bf71b61a501b60c20b5ab77b72eda0d7cd0bb2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c7159c83578aa3a910d7e94b4d3183f81ad5296a25f3be279e63f22a3775d4d5"
   end
 
   depends_on "go" => :build
