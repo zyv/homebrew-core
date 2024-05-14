@@ -3,10 +3,9 @@ class Vunnel < Formula
 
   desc "Tool for collecting vulnerability data from various sources"
   homepage "https://github.com/anchore/vunnel"
-  url "https://files.pythonhosted.org/packages/a0/28/cd9eff639860bc6c748b152320d6ffd10ccf0fdb5dbdcc86459d8dac600b/vunnel-0.22.2.tar.gz"
-  sha256 "1ce0357e2c54c2e508470fdc5fab3b8364ac0520ad46523e0885f08a0d75e1de"
+  url "https://files.pythonhosted.org/packages/fb/09/41bdd02068f2daf79ea1faf83598bd67b369cf6bfd7019755880feab4886/vunnel-0.23.0.tar.gz"
+  sha256 "e1963c9e4dfed4b1d6eeaac29c29b0d5c0e19741ff5168d461058d563ac5b051"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
   bottle do
@@ -93,8 +92,8 @@ class Vunnel < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/ea/e2/3834472e7f18801e67a3cd6f3c203a5456d6f7f903cfb9a990e62098a2f3/lxml-5.2.1.tar.gz"
-    sha256 "3f7765e69bbce0906a7c74d5fe46d2c7a7596147318dbc08e4a2431f3060e306"
+    url "https://files.pythonhosted.org/packages/63/f7/ffbb6d2eb67b80a45b8a0834baa5557a14a5ffce0979439e7cd7f0c4055b/lxml-5.2.2.tar.gz"
+    sha256 "bb2dc4898180bea79863d5487e5f9c7c34297414bad54bcd0f0852aee9cfdb87"
   end
 
   resource "markupsafe" do
