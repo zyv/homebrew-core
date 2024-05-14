@@ -1,8 +1,8 @@
 class Gmic < Formula
   desc "Full-Featured Open-Source Framework for Image Processing"
   homepage "https://gmic.eu/"
-  url "https://gmic.eu/files/source/gmic_3.3.5.tar.gz"
-  sha256 "052456e0d9dd6a3c1e102a857ae32150ee6d5cb02a1d2f810c197ec490e56c1b"
+  url "https://gmic.eu/files/source/gmic_3.3.6.tar.gz"
+  sha256 "783db018dece6dc443349ddf1cc85ff06b2aeb9a4612f795859c39c85d38fddf"
   license "CECILL-2.1"
   head "https://github.com/GreycLab/gmic.git", branch: "master"
 
