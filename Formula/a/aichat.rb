@@ -1,8 +1,8 @@
 class Aichat < Formula
-  desc "ChatGPT cli"
+  desc "All-in-one AI-Powered CLI Chat & Copilot"
   homepage "https://github.com/sigoden/aichat"
-  url "https://github.com/sigoden/aichat/archive/refs/tags/v0.16.0.tar.gz"
-  sha256 "e0aa74e6b89d6cffac5b0639ffc59204b64bf9e19c92e35d0a7cd9ab50c47911"
+  url "https://github.com/sigoden/aichat/archive/refs/tags/v0.17.0.tar.gz"
+  sha256 "113f910315c6fd1bd0746daf346570a26883206d6f61a8a8dd07d98b4c509393"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/sigoden/aichat.git", branch: "main"
 
@@ -20,9 +20,13 @@ class Aichat < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+    bash_completion.install "scripts/completions/aichat.bash" => "aichat"
+    fish_completion.install "scripts/completions/aichat.fish"
+    zsh_completion.install "scripts/completions/aichat.zsh" => "_aichat"
   end
 
   test do
+    ENV["AICHAT_PLATFORM"] = "openai"
     ENV["OPENAI_API_KEY"] = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     output = shell_output("#{bin}/aichat --dry-run math 3.2x4.8")
     assert_match "math 3.2x4.8", output
