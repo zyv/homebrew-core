@@ -14,13 +14,13 @@ class Doltgres < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "14b267eb5dfd3b6f3e9529b5bd6fb7b93bf68eb2e91674aa3e6f62f15bc3ac00"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "f50431d23fa2f72d769b4c839191c25b7777399df2a391988f3071e40b4272f9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3ecd36de72cd6d1c55af264e2c82e391b40d51c895534c520a263171f05dd730"
-    sha256 cellar: :any_skip_relocation, sonoma:         "402139cbe5b6231cfbc889ba7fa184285e4d9403dced0cc65ef226ac480bf266"
-    sha256 cellar: :any_skip_relocation, ventura:        "f6a921b64c2d2b9c1a21045d996e17e90d8ce42be9ebadc770555bd2f4865ff3"
-    sha256 cellar: :any_skip_relocation, monterey:       "788deb7024c7e19bd6f46dcbd4b5355a12a713863e8d1e00aa86597dbf581c01"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "84c8b8701cc95fad2ee6b29b764d41f2dc40f3792ba39ae721ffa2631978c82c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b753f3a728a83818b4c9a4cb52c8808ade7f6169c34d9c2c525117f080e1a85d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b94b31131436cb4f7d71c162d80fb97f83ac5e3a07c51b8c98cfbeb7a918b755"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "0e94649dade3562453d93e268934719b37d0d7a9629ff6c8a412fc97e9761ffb"
+    sha256 cellar: :any_skip_relocation, sonoma:         "10040b48f2de6bc5b80efb05d747089c8441fad54926279961675b6b7fcabb95"
+    sha256 cellar: :any_skip_relocation, ventura:        "7d480ac2831526fd5090365ddc1ad6496e8240a6dbae826455d6d3215b6c095d"
+    sha256 cellar: :any_skip_relocation, monterey:       "154cc5484ab4661c2a28dec58d5d8019cd559a3b72fe9543868d08a7f837af27"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "962105ce5424342940f4c4684d9145c3edc6ebb0a92ec4b98b6c064fec3193ec"
   end
 
   depends_on "go" => :build
