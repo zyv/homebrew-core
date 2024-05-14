@@ -898,6 +898,7 @@ goaccess
 goawk
 gobject-introspection
 goctl
+godap
 goffice
 gofumpt
 gojq
