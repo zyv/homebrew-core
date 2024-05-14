@@ -47,5 +47,8 @@ class Mecab < Formula
 
   test do
     assert_equal "#{HOMEBREW_PREFIX}/lib/mecab/dic", shell_output("#{bin}/mecab-config --dicdir").chomp
+    return if OS.linux?
+
+    assert_includes (bin/"mecab").dynamically_linked_libraries, "/usr/lib/libiconv.2.dylib"
   end
 end
