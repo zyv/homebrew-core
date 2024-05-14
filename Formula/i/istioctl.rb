@@ -1,8 +1,8 @@
 class Istioctl < Formula
   desc "Istio configuration command-line utility"
   homepage "https://istio.io/"
-  url "https://github.com/istio/istio/archive/refs/tags/1.21.2.tar.gz"
-  sha256 "9d4e10268eca696001504482659f171a7593ab2774f913802c3ac98834bab6d8"
+  url "https://github.com/istio/istio/archive/refs/tags/1.22.0.tar.gz"
+  sha256 "949bb140cda875a786f50f78394fac6ceeea13220d62855a0cb5f2304a6354be"
   license "Apache-2.0"
   head "https://github.com/istio/istio.git", branch: "master"
 
