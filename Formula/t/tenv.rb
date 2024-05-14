@@ -1,8 +1,8 @@
 class Tenv < Formula
-  desc "OpenTofu / Terraform / Terragrunt version manager"
+  desc "OpenTofu / Terraform / Terragrunt / Atmos version manager"
   homepage "https://tofuutils.github.io/tenv/"
-  url "https://github.com/tofuutils/tenv/archive/refs/tags/v1.10.2.tar.gz"
-  sha256 "36e8dd7830043c4a7a61d359cfb3f4dd9ad79218dcd23bdd7bdd3659fdbb973c"
+  url "https://github.com/tofuutils/tenv/archive/refs/tags/v1.11.2.tar.gz"
+  sha256 "99e129b29325716cf2ac8a8dc53591d783a90fcdffae488920a97a834c203601"
   license "Apache-2.0"
   head "https://github.com/tofuutils/tenv.git", branch: "main"
 
@@ -21,12 +21,14 @@ class Tenv < Formula
   conflicts_with "opentofu", because: "both install tofu binary"
   conflicts_with "terraform", because: "both install terraform binary"
   conflicts_with "terragrunt", because: "both install terragrunt binary"
+  conflicts_with "atmos", because: "both install atmos binary"
   conflicts_with "tfenv", because: "tfenv symlinks terraform binaries"
   conflicts_with "tgenv", because: "tgenv symlinks terragrunt binaries"
 
   def install
+    ENV["CGO_ENABLED"] = "0"
     ldflags = "-s -w -X main.version=#{version}"
-    %w[tenv terraform terragrunt tf tofu].each do |f|
+    %w[tenv terraform terragrunt tf tofu atmos].each do |f|
       system "go", "build", *std_go_args(ldflags:, output: bin/f), "./cmd/#{f}"
     end
   end
