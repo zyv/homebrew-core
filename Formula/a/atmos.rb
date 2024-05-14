@@ -17,6 +17,8 @@ class Atmos < Formula
 
   depends_on "go" => :build
 
+  conflicts_with "tenv", because: "tenv symlinks atmos binaries"
+
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w -X 'github.com/cloudposse/atmos/cmd.Version=#{version}'")
 
