@@ -6,6 +6,16 @@ class GoSizeAnalyzer < Formula
   license "AGPL-3.0-only"
   head "https://github.com/Zxilly/go-size-analyzer.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dc6163b1d30f99e179ce5df5b2d0ed66c336ca4239aa2d747c62b3ca1b6c8cec"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c7158d22fe3789469589fbf04efad626e31b460773d2940c46ab3b9f9ca5cd55"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4249641bcb1d1ad4f883a34bf21a4100ddaf3d8a8e021a909b760fee70c63f74"
+    sha256 cellar: :any_skip_relocation, sonoma:         "30dd183466a8b332448e241fe61c9410b2523a77be5a509e9fdf5befaa054556"
+    sha256 cellar: :any_skip_relocation, ventura:        "056f2f3485c02a396c7c6b71f387857e3fcabcbba5f5e932b5d212c5a89e4722"
+    sha256 cellar: :any_skip_relocation, monterey:       "15bea7c7442db2454c539d1e0616dc7b41ac1217dff70736a15d16d408b0f6ac"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba49dfa0fef5ef8d07d87ec63b2887f66962a8e82d4a3efb291b47bd000e8087"
+  end
+
   depends_on "go" => [:build, :test]
   depends_on "node" => :build
   depends_on "pnpm" => :build
