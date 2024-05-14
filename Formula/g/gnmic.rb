@@ -1,9 +1,8 @@
 class Gnmic < Formula
   desc "GNMI CLI client and collector"
   homepage "https://gnmic.openconfig.net"
-  url "https://github.com/openconfig/gnmic.git",
-      tag:      "v0.36.2",
-      revision: "a7844a6d7d47c302df1fabb845dd22e4e4b70e22"
+  url "https://github.com/openconfig/gnmic/archive/refs/tags/v0.37.0.tar.gz"
+  sha256 "37fa3e0cc0a9899508fe84dfd849d83bd28bcb23d8705c6a23a4f4fa6080f1e1"
   license "Apache-2.0"
 
   bottle do
@@ -22,11 +21,13 @@ class Gnmic < Formula
     ldflags = %W[
       -s -w
       -X github.com/openconfig/gnmic/pkg/app.version=#{version}
-      -X github.com/openconfig/gnmic/pkg/app.commit=#{Utils.git_head}
+      -X github.com/openconfig/gnmic/pkg/app.commit=#{tap.user}
       -X github.com/openconfig/gnmic/pkg/app.date=#{time.iso8601}
       -X github.com/openconfig/gnmic/pkg/app.gitURL=https://github.com/openconfig/gnmic
     ]
     system "go", "build", *std_go_args(ldflags:)
+
+    generate_completions_from_executable(bin/"gnmic", "completion")
   end
 
   test do
@@ -34,5 +35,7 @@ class Gnmic < Formula
                                          "capabilities 2>&1", 1)
     assert_match "target \"127.0.0.1:0\", capabilities request failed: failed to create a gRPC client for " \
                  "target \"127.0.0.1:0\" : 127.0.0.1:0: context deadline exceeded", connection_output
+
+    assert_match version.to_s, shell_output("#{bin}/gnmic version")
   end
 end
