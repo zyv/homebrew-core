@@ -2,8 +2,8 @@ class Heartbeat < Formula
   desc "Lightweight Shipper for Uptime Monitoring"
   homepage "https://www.elastic.co/beats/heartbeat"
   url "https://github.com/elastic/beats.git",
-      tag:      "v8.13.3",
-      revision: "79b1528b7bfbf5152041db8f4ab497af6afa06e2"
+      tag:      "v8.13.4",
+      revision: "b24ddd14c936c216817afed0cc7d0b23fd920194"
   license "Apache-2.0"
   head "https://github.com/elastic/beats.git", branch: "master"
 
