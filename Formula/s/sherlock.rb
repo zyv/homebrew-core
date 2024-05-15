@@ -8,6 +8,16 @@ class Sherlock < Formula
   license "MIT"
   head "https://github.com/sherlock-project/sherlock.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "26aedc590d23e6364b1735eaa513494f950b2e499b958ec8d4973766aa663f9c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b4d4070e98c4bd1152b8d2b57ea460ee155eca49335f6708edbfd4066ca86871"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "822c3e415445ad5a9ea376b4740cfda8adc2d988cb4e37044dba2fa43e12462d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "9a2808ad630f7e05bfd102ea55b4749413bcde7d953046694aad296345c8743b"
+    sha256 cellar: :any_skip_relocation, ventura:        "0e5e59bf90156bbf9b297095b404bbc61a1a7881873cb427b769aafac8164fef"
+    sha256 cellar: :any_skip_relocation, monterey:       "33a5f6b73b6c772710d7bf6ef862a9c8e7ee4f6c382da8f5eb4bba44df99de09"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e814c15a0d1db8555470aead884633a692909df7affe1f98ef5518297e7d7982"
+  end
+
   depends_on "cmake" => :build
   depends_on "certifi"
   depends_on "numpy"
