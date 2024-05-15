@@ -3,18 +3,18 @@ require "language/node"
 class BashLanguageServer < Formula
   desc "Language Server for Bash"
   homepage "https://github.com/bash-lsp/bash-language-server"
-  url "https://registry.npmjs.org/bash-language-server/-/bash-language-server-5.3.1.tgz"
-  sha256 "15bba3e57e679925822be90645dfb287f296e6c33c50520b5f995bf85e22df06"
+  url "https://registry.npmjs.org/bash-language-server/-/bash-language-server-5.3.2.tgz"
+  sha256 "acb05b923dba15fe7f5653ac6573c51c6a41bcc798f82d1883d9533b440821ba"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "46aaf58c005141ed998c5b30effd00943097937e7fd6b7985845c4200857ad6b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7d193412747347fc43fd5005f3752706a23ea71097850d40ec4b970f2b091be7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "28b7b05518c8901a610c02c544966c9704c111f36a87cf3771b36753448e46f2"
-    sha256 cellar: :any_skip_relocation, sonoma:         "9a5f3f04e88ade55556c3042df908eb499829f6aacf4c00368e2db2d37efa44e"
-    sha256 cellar: :any_skip_relocation, ventura:        "83026495f48f5c8577173abc57401763c872bd3cf2822cb9674467604fe86eb4"
-    sha256 cellar: :any_skip_relocation, monterey:       "d4d2e2bff22d407040574f6b44487b0fbd0c5c9f74759f9c05b6e33ee25f05d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bb0a81ee5e21f791bed6e3bd24513e56a0e8c86526b7d0cf9bcc3ff4f1c156d8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e719a0f5cd83250621dc2b8662a0e524573b416fc77386cde887b703be0ff0ce"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "15542a7e01f66b77eaf2094d3bf7ad30343652cca9781cef9d87567f790a5fcb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "adf002bc2947ddf104dcb48f4abeee8b78fdade3e6331e1f4c858fe388d07d64"
+    sha256 cellar: :any_skip_relocation, sonoma:         "2114cf9cb1085469a492a603cb1af9aac87c4c8bc0a3a82af26e1b8561edfd6c"
+    sha256 cellar: :any_skip_relocation, ventura:        "f09cd486425d9d47ecee193ceda1e5bb98526631b3fd7d3a4296f6aa19f3dbff"
+    sha256 cellar: :any_skip_relocation, monterey:       "7867f6f561eeedee4501cc727a3e06def5dd90fb846b17ad2b217fab57df0578"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2e3fbd85686b86f49fdbbcc3e2d6539a1b90041630239cbf2bf31c2761ff39eb"
   end
 
   depends_on "node"
