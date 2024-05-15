@@ -1,9 +1,8 @@
 class DockerCredentialHelperEcr < Formula
   desc "Docker Credential Helper for Amazon ECR"
   homepage "https://github.com/awslabs/amazon-ecr-credential-helper"
-  url "https://github.com/awslabs/amazon-ecr-credential-helper.git",
-      tag:      "v0.7.1",
-      revision: "adf1bafd791ae7d4ff098108b1e91f36a4da5404"
+  url "https://github.com/awslabs/amazon-ecr-credential-helper/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "7014f4c972ef360b7204d376bbd771aeebb8f1e9281948688de1bcebb0d0b0a4"
   license "Apache-2.0"
 
   livecheck do
@@ -26,12 +25,13 @@ class DockerCredentialHelperEcr < Formula
   depends_on "go" => :build
 
   def install
+    (buildpath/"GITCOMMIT_SHA").write tap.user
     system "make", "build"
     bin.install "bin/local/docker-credential-ecr-login"
   end
 
   test do
     output = shell_output("#{bin}/docker-credential-ecr-login", 1)
-    assert_match %r{^Usage: .*/docker-credential-ecr-login.*}, output
+    assert_match(/^Usage: .*docker-credential-ecr-login/, output)
   end
 end
