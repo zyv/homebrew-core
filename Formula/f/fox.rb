@@ -1,10 +1,9 @@
 class Fox < Formula
   desc "Toolkit for developing Graphical User Interfaces easily"
   homepage "http://fox-toolkit.org/"
-  url "http://fox-toolkit.org/ftp/fox-1.6.56.tar.gz"
-  sha256 "c517e5fcac0e6b78ca003cc167db4f79d89e230e5085334253e1d3f544586cb2"
+  url "http://fox-toolkit.org/ftp/fox-1.6.58.tar.gz"
+  sha256 "5a734b84d76d2f8e334e26ff85dd3950d3fedf53057a4d4b19fd4a712c8d5b81"
   license "LGPL-2.1-or-later"
-  revision 4
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "6490dbfbbd60bd7f4b4b14fcbfe774d3e758c23486484ece21a6b09dd14867c2"
@@ -17,11 +16,6 @@ class Fox < Formula
     sha256 cellar: :any,                 big_sur:        "bb8bdbecbd7b8c4c8f9c3caa90f17063579e1ecbdd9beea3276330fb8116d907"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e8721a37c018aedef917055183eede83c8a1cab283371e2be629d85c9e006a0b"
   end
-
-  # There have been numerous attempts to update this to 1.6.57 (latest stable)
-  # with no success. If you are reading this and can fix the build, please open
-  # a PR and we can undeprecate this formula
-  deprecate! date: "2023-09-03", because: :does_not_build
 
   depends_on "fontconfig"
   depends_on "freetype"
