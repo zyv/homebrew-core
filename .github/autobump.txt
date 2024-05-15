@@ -1216,6 +1216,7 @@ libavif
 libbpf
 libbsd
 libcap-ng
+libchewing
 libclc
 libcoap
 libcouchbase
