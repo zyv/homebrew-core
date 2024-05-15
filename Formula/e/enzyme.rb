@@ -1,8 +1,8 @@
 class Enzyme < Formula
   desc "High-performance automatic differentiation of LLVM"
   homepage "https://enzyme.mit.edu"
-  url "https://github.com/EnzymeAD/Enzyme/archive/refs/tags/v0.0.109.tar.gz", using: :homebrew_curl
-  sha256 "375e09faaa43679592641cc586c7457825cf679d4acee91239d6235d4b807e25"
+  url "https://github.com/EnzymeAD/Enzyme/archive/refs/tags/v0.0.110.tar.gz", using: :homebrew_curl
+  sha256 "350ff70d870fa5d92fb8e5c72dfea76ad01e9de700f9045dc157636b63c3b546"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/EnzymeAD/Enzyme.git", branch: "main"
 
@@ -17,7 +17,7 @@ class Enzyme < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@17"
+  depends_on "llvm"
 
   fails_with gcc: "5"
 
