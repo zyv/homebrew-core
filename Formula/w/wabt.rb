@@ -2,8 +2,8 @@ class Wabt < Formula
   desc "Web Assembly Binary Toolkit"
   homepage "https://github.com/WebAssembly/wabt"
   url "https://github.com/WebAssembly/wabt.git",
-      tag:      "1.0.34",
-      revision: "46e554971eb593f9a071b8d9acd8229027b1c374"
+      tag:      "1.0.35",
+      revision: "39f85a791cbbad91a253a851841a29777efdc2cd"
   license "Apache-2.0"
 
   livecheck do
@@ -29,7 +29,11 @@ class Wabt < Formula
   fails_with gcc: "5" # C++17
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DBUILD_TESTS=OFF", "-DWITH_WASI=ON"
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DBUILD_TESTS=OFF",
+                    "-WITH_WASI=ON",
+                    *std_cmake_args,
+                    "-DFETCHCONTENT_FULLY_DISCONNECTED=OFF" # FIXME: Find a way to build without this.
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
