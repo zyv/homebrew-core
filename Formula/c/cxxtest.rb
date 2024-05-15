@@ -1,10 +1,12 @@
 class Cxxtest < Formula
+  include Language::Python::Virtualenv
+
   desc "C++ unit testing framework similar to JUnit, CppUnit and xUnit"
   homepage "https://github.com/CxxTest/cxxtest"
   url "https://github.com/CxxTest/cxxtest/releases/download/4.4/cxxtest-4.4.tar.gz"
   mirror "https://deb.debian.org/debian/pool/main/c/cxxtest/cxxtest_4.4.orig.tar.gz"
   sha256 "1c154fef91c65dbf1cd4519af7ade70a61d85a923b6e0c0b007dc7f4895cf7d8"
-  license "LGPL-3.0"
+  license "LGPL-3.0-only"
   revision 3
 
   bottle do
@@ -18,15 +20,11 @@ class Cxxtest < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "312674e4519fd0bd7c7c99fb00fc5c445963b0802a8286f9c32ec4dda3ea5237"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "python@3.12"
 
-  def python3
-    "python3.12"
-  end
-
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "./python"
+    venv = virtualenv_create(libexec, "python3.12")
+    venv.pip_install_and_link buildpath/"python"
 
     include.install "cxxtest"
     doc.install Dir["doc/*"]
