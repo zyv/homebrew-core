@@ -1,8 +1,8 @@
 class OpenMesh < Formula
   desc "Generic data structure to represent and manipulate polygonal meshes"
   homepage "https://www.graphics.rwth-aachen.de/software/openmesh/"
-  url "https://www.graphics.rwth-aachen.de/media/openmesh_static/Releases/10.0/OpenMesh-10.0.0.tar.bz2"
-  sha256 "af22520a474bb6a3b355eb0867449c6b995126f97632d1ee5ff9c7ebd322fedb"
+  url "https://www.graphics.rwth-aachen.de/media/openmesh_static/Releases/11.0/OpenMesh-11.0.0.tar.bz2"
+  sha256 "9d22e65bdd6a125ac2043350a019ec4346ea83922cafdf47e125a03c16f6fa07"
   license "BSD-3-Clause"
   head "https://gitlab.vci.rwth-aachen.de:9000/OpenMesh/OpenMesh.git", branch: "master"
 
@@ -24,11 +24,12 @@ class OpenMesh < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DBUILD_APPS=OFF",
-                    "-DCMAKE_CXX_STANDARD=14",
-                    "-DCMAKE_INSTALL_RPATH=#{rpath}",
-                    *std_cmake_args
+    args = %W[
+      -DBUILD_APPS=OFF
+      -DCMAKE_CXX_STANDARD=14
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+    ]
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
