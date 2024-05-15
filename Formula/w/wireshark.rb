@@ -1,9 +1,9 @@
 class Wireshark < Formula
   desc "Graphical network analyzer and capture tool"
   homepage "https://www.wireshark.org"
-  url "https://www.wireshark.org/download/src/all-versions/wireshark-4.2.4.tar.xz"
-  mirror "https://1.eu.dl.wireshark.org/src/all-versions/wireshark-4.2.4.tar.xz"
-  sha256 "46bd0f4474337144b30816fb2d8f14e72a26d0391f24fe0b7b619acdcdad8c0c"
+  url "https://www.wireshark.org/download/src/all-versions/wireshark-4.2.5.tar.xz"
+  mirror "https://1.eu.dl.wireshark.org/src/all-versions/wireshark-4.2.5.tar.xz"
+  sha256 "55e793ab87a9a73aac44336235c92cb76c52180c469b362ed3a54f26fbb1261f"
   license "GPL-2.0-or-later"
   head "https://gitlab.com/wireshark/wireshark.git", branch: "master"
 
@@ -34,13 +34,20 @@ class Wireshark < Formula
   depends_on "libsmi"
   depends_on "libssh"
   depends_on "lua"
+  depends_on "pcre2"
   depends_on "speexdsp"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
   uses_from_macos "python" => :build
+  uses_from_macos "krb5"
   uses_from_macos "libpcap"
   uses_from_macos "libxml2"
+  uses_from_macos "zlib"
+
+  on_macos do
+    depends_on "libgpg-error"
+  end
 
   def install
     args = %W[
