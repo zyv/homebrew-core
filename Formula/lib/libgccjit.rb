@@ -44,6 +44,12 @@ class Libgccjit < Formula
 
   uses_from_macos "zlib"
 
+  on_macos do
+    on_intel do
+      depends_on "gcc"
+    end
+  end
+
   # GCC bootstraps itself, so it is OK to have an incompatible C++ stdlib
   cxxstdlib_check :skip
 
@@ -70,13 +76,15 @@ class Libgccjit < Formula
       --with-system-zlib
     ]
 
-    if OS.mac?
+    make_args = if OS.mac?
       cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
       args << "--build=#{cpu}-apple-darwin#{OS.kernel_version.major}"
 
       # System headers may not be in /usr/include
       sdk = MacOS.sdk_path_if_needed
       args << "--with-sysroot=#{sdk}" if sdk
+
+      []
     else
       # Fix cc1: error while loading shared libraries: libisl.so.15
       args << "--with-boot-ldflags=-static-libstdc++ -static-libgcc #{ENV.ldflags}"
@@ -87,12 +95,17 @@ class Libgccjit < Formula
       # Change the default directory name for 64-bit libraries to `lib`
       # https://stackoverflow.com/a/54038769
       inreplace "gcc/config/i386/t-linux64", "m64=../lib64", "m64="
+
+      %W[
+        BOOT_CFLAGS=-I#{Formula["zlib"].opt_include}
+        BOOT_LDFLAGS=-I#{Formula["zlib"].opt_lib}
+      ]
     end
 
     # Building jit needs --enable-host-shared, which slows down the compiler.
     mkdir "build-jit" do
       system "../configure", *args, "--enable-languages=jit", "--enable-host-shared"
-      system "make"
+      system "make", *make_args
       system "make", "install"
     end
 
@@ -103,6 +116,16 @@ class Libgccjit < Formula
 
     # Provide a `lib/gcc/xy` directory to align with the versioned GCC formulae.
     (lib/"gcc"/version.major).install_symlink (lib/"gcc/current").children
+
+    return if OS.linux? || Hardware::CPU.arm?
+
+    lib.glob("gcc/current/#{shared_library("libgccjit", "*")}").each do |dylib|
+      next if dylib.symlink?
+
+      # Fix linkage with `libgcc_s.1.1`. See: Homebrew/discussions#5364
+      gcc_libdir = Formula["gcc"].opt_lib/"gcc/current"
+      MachO::Tools.add_rpath(dylib, rpath(source: lib/"gcc/current", target: gcc_libdir))
+    end
   end
 
   test do
@@ -159,9 +182,18 @@ class Libgccjit < Formula
 
     gcc_major_ver = Formula["gcc"].any_installed_version.major
     gcc = Formula["gcc"].opt_bin/"gcc-#{gcc_major_ver}"
-    libs = "#{HOMEBREW_PREFIX}/lib/gcc/#{gcc_major_ver}"
+    libs = HOMEBREW_PREFIX/"lib/gcc/current"
+    test_flags = %W[-I#{include} test-libgccjit.c -o test -L#{libs} -lgccjit]
 
-    system gcc.to_s, "-I#{include}", "test-libgccjit.c", "-o", "test", "-L#{libs}", "-lgccjit"
+    system gcc.to_s, *test_flags
+    assert_equal "hello world", shell_output("./test")
+
+    # The test below fails with the host compiler on Linux.
+    return if OS.linux?
+
+    # Also test with the host compiler, which many users use with libgccjit
+    (testpath/"test").unlink
+    system ENV.cc, *test_flags
     assert_equal "hello world", shell_output("./test")
   end
 end
