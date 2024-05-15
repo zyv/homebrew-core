@@ -3,8 +3,8 @@ class Forbidden < Formula
 
   desc "Bypass 4xx HTTP response status codes and more"
   homepage "https://github.com/ivan-sincek/forbidden"
-  url "https://files.pythonhosted.org/packages/cf/f2/4009d0284192f2f871007c158b22d47a60fda3734a77f432ca66b96fddd1/forbidden-11.0.tar.gz"
-  sha256 "0fcaff3b0f3b82461efaae084221f8b3c01ad76a65248ac888b92f297fa623e8"
+  url "https://files.pythonhosted.org/packages/fa/03/9f18651dbe09f130e444b836c448b3b3b8a6ddec4996c4183c17e9131592/forbidden-11.2.tar.gz"
+  sha256 "be837a5f9bf22ab4f73dfe900f10f2b28baea7d766771becaeebe788968e78bb"
   license "MIT"
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
