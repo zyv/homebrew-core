@@ -1551,6 +1551,7 @@ nushell
 nut
 nvc
 nvchecker
+nzbget
 oauth2_proxy
 oauth2c
 objfw
