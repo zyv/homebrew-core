@@ -1,8 +1,8 @@
 class GdkPixbuf < Formula
   desc "Toolkit for image loading and pixel buffer manipulation"
   homepage "https://gtk.org"
-  url "https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.11.tar.xz"
-  sha256 "49dcb402388708647e8c321d56b6fb30f21e51e515d0c5a942268d23052a2f00"
+  url "https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz"
+  sha256 "b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -17,11 +17,11 @@ class GdkPixbuf < Formula
   end
 
   depends_on "docutils" => :build # for rst2man
-  depends_on "gettext" => :build
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => [:build, :test]
+  depends_on "gettext"
   depends_on "glib"
   depends_on "jpeg-turbo"
   depends_on "libpng"
