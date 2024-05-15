@@ -701,6 +701,10 @@
   "sgr": {
     "exclude_packages": ["certifi", "cryptography"]
   },
+  "sherlock": {
+    "exclude_packages": ["certifi", "numpy"],
+    "extra_packages": ["setuptools"]
+  },
   "shodan": {
     "exclude_packages": ["certifi"]
   },

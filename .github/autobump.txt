@@ -1970,6 +1970,7 @@ shell2http
 shellcheck
 shellharden
 shellz
+sherlock
 shfmt
 showkey
 shtools
