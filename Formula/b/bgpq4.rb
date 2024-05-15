@@ -1,8 +1,8 @@
 class Bgpq4 < Formula
   desc "BGP filtering automation for Cisco, Juniper, BIRD and OpenBGPD routers"
   homepage "https://github.com/bgp/bgpq4"
-  url "https://github.com/bgp/bgpq4/archive/refs/tags/1.14.tar.gz"
-  sha256 "5cfaec098f4923965eb8e579a57cd29ad1850f5929dc1ef7aeb6a2f724d31c5e"
+  url "https://github.com/bgp/bgpq4/archive/refs/tags/1.15.tar.gz"
+  sha256 "30fea8d6274af6e3fba30497b977a924c79de326ae2211e490362dc7282403d6"
   license "BSD-2-Clause"
   head "https://github.com/bgp/bgpq4.git", branch: "main"
 
