@@ -1,8 +1,8 @@
 class Teller < Formula
   desc "Secrets management tool for developers built in Go"
   homepage "https://github.com/tellerops/teller"
-  url "https://github.com/tellerops/teller/archive/refs/tags/v2.0.4.tar.gz"
-  sha256 "d340d160f00c0653d3160cf16aa41d22acb240556464d8803f234f1fe46efcef"
+  url "https://github.com/tellerops/teller/archive/refs/tags/v2.0.5.tar.gz"
+  sha256 "736bfe5781c85f02b56dba9e987016510918a5b951b56f3bf1e42f291ce32f59"
   license "Apache-2.0"
   head "https://github.com/tellerops/teller.git", branch: "master"
 
