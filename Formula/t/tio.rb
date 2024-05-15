@@ -1,8 +1,8 @@
 class Tio < Formula
   desc "Simple TTY terminal I/O application"
   homepage "https://tio.github.io"
-  url "https://github.com/tio/tio/releases/download/v3.2/tio-3.2.tar.xz"
-  sha256 "9208e98dce783598a76c406f0b076f07dc0f645aaaab99ee5c3039744e8c0e2a"
+  url "https://github.com/tio/tio/releases/download/v3.3/tio-3.3.tar.xz"
+  sha256 "506635b2e922306be3ded980d0b6fd8bb74647b1561b01015b769041f7ddca8d"
   license "GPL-2.0-or-later"
   head "https://github.com/tio/tio.git", branch: "master"
 
@@ -19,6 +19,7 @@ class Tio < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
+  depends_on "gettext"
   depends_on "glib"
   depends_on "lua"
 
