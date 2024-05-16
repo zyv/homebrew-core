@@ -2037,6 +2037,7 @@ source-to-image
 sourcekitten
 sourcery
 spack
+spatialindex
 spectral-cli
 spglib
 sphinx-doc
