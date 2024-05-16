@@ -8,13 +8,13 @@ class PythonMatplotlib < Formula
   license "PSF-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "70dcf827b4410b88add48985a1e199ae5a4668385b34101f3418b9f163b0ed02"
-    sha256 cellar: :any,                 arm64_ventura:  "28f56ea49d9257a37f0f2d3146335eb66a2bdba08ad44f108835e2696909d3fb"
-    sha256 cellar: :any,                 arm64_monterey: "fc8c8a2c7b9171fe375cb13ee2caa9b384026705a18a55dd83d8c992302638c8"
-    sha256 cellar: :any,                 sonoma:         "ac8eaff1dc4a206bdf1883aba3de270d439283898b7dae667224be8f3ddfb799"
-    sha256 cellar: :any,                 ventura:        "5c3c65f367397de8dbca47d885ee667b289970cd34ac23e089e674928278cd60"
-    sha256 cellar: :any,                 monterey:       "0ed12aa0d6e2d1a0b6fb27a02458fada429463415badc9464198e1cd31bfc447"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82b00f5a99aa96718626c038275b4e7e7e2d0b9a4698c5798f426d0660146fde"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8cd17c7a9d3958a2a2972a419c91761db75d2645963f659fdd9de886779825ac"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "316c8d1d41b7166fcd2a660464cc7888a6c4747a375ef8729f848f159050a112"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "96d57fcc85304480976af631bcd637a0bf190f359589699b646ebaf43b011fd0"
+    sha256 cellar: :any_skip_relocation, sonoma:         "3547b3df44235b0ed9e4f9d5572ec1e5d30222ce6c4cedfa51400ad6f1c8777e"
+    sha256 cellar: :any_skip_relocation, ventura:        "9cddedca7ffa2e2970426394b82e77f557640a01bf8072acaecaa8d8e525b2b3"
+    sha256 cellar: :any_skip_relocation, monterey:       "56367e7bae4372f2c4a0b93e3f04838728611fabe1e6b03bcd7facf7119a61e3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64579a19b74154e4e746f14114ffc54a7f5e54e4a8de7c7fdc576606574054f9"
   end
 
   depends_on "meson" => :build
