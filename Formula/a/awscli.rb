@@ -3,8 +3,8 @@ class Awscli < Formula
 
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
-  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.51.tar.gz"
-  sha256 "ac4908c89f0a53974138387e9e88bbe4cc4535bc1e30a9e53b69962cc12a8d76"
+  url "https://github.com/aws/aws-cli/archive/refs/tags/2.15.52.tar.gz"
+  sha256 "ef04c5baca93c06e83a0453f0452d69862a2504fd63925838fd3a78feb98dcc2"
   license "Apache-2.0"
   head "https://github.com/aws/aws-cli.git", branch: "v2"
 
@@ -25,6 +25,7 @@ class Awscli < Formula
   depends_on "openssl@3"
   depends_on "python@3.11" # Python 3.12 issue: https://github.com/aws/aws-cli/issues/8342
 
+  uses_from_macos "libffi"
   uses_from_macos "mandoc"
 
   resource "awscrt" do
