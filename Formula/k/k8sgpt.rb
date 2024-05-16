@@ -1,8 +1,8 @@
 class K8sgpt < Formula
   desc "Scanning your k8s clusters, diagnosing, and triaging issues in simple English"
   homepage "https://k8sgpt.ai/"
-  url "https://github.com/k8sgpt-ai/k8sgpt/archive/refs/tags/v0.3.30.tar.gz"
-  sha256 "096b234fcb6abfce3e3cf82051719f31d8049b29a842809f183379899682622a"
+  url "https://github.com/k8sgpt-ai/k8sgpt/archive/refs/tags/v0.3.31.tar.gz"
+  sha256 "a76dded5c65c9694fabcc667be361c6961adcc5f12f9f37f665ca2bd08820eeb"
   license "Apache-2.0"
   head "https://github.com/k8sgpt-ai/k8sgpt.git", branch: "main"
 
@@ -17,6 +17,12 @@ class K8sgpt < Formula
   end
 
   depends_on "go" => :build
+
+  # patch build, upstream pr ref, https://github.com/k8sgpt-ai/k8sgpt/pull/1115
+  patch do
+    url "https://github.com/k8sgpt-ai/k8sgpt/commit/1fb75a633c546bc6ada689e27d29c134d4cf8b5f.patch?full_index=1"
+    sha256 "9ca5985449b404e4d12db2c3ce8823a18dc29fa9f8b391eb48c0de22400fe292"
+  end
 
   def install
     ldflags = %W[
