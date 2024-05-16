@@ -7,13 +7,13 @@ class GoSizeAnalyzer < Formula
   head "https://github.com/Zxilly/go-size-analyzer.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dc6163b1d30f99e179ce5df5b2d0ed66c336ca4239aa2d747c62b3ca1b6c8cec"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c7158d22fe3789469589fbf04efad626e31b460773d2940c46ab3b9f9ca5cd55"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4249641bcb1d1ad4f883a34bf21a4100ddaf3d8a8e021a909b760fee70c63f74"
-    sha256 cellar: :any_skip_relocation, sonoma:         "30dd183466a8b332448e241fe61c9410b2523a77be5a509e9fdf5befaa054556"
-    sha256 cellar: :any_skip_relocation, ventura:        "056f2f3485c02a396c7c6b71f387857e3fcabcbba5f5e932b5d212c5a89e4722"
-    sha256 cellar: :any_skip_relocation, monterey:       "15bea7c7442db2454c539d1e0616dc7b41ac1217dff70736a15d16d408b0f6ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ba49dfa0fef5ef8d07d87ec63b2887f66962a8e82d4a3efb291b47bd000e8087"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "38306a69de32ffc552f228449fb59c14e6a53fec2147fb5222b5978928884801"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a51c70838f693ac345a5a9b50656c69099893018fc99704061b130df041c45fe"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d39fe1838af68d22be2d61a1808c9ca4a00e435c0ab5889b76b4a3fc5ac2f087"
+    sha256 cellar: :any_skip_relocation, sonoma:         "a3e9e0fb64d8f55511647b9d05b6d2399b7bcd5df8e30356a5d4a01dae65f01b"
+    sha256 cellar: :any_skip_relocation, ventura:        "8e5dbaeecd586ababee83bf9917d197edd41d4aa670b955b1b2a6f6b13565f8e"
+    sha256 cellar: :any_skip_relocation, monterey:       "bb7dc6eb12f29017781909753d87c7e5b8cbf4d6d349d0e8988f6870f51ae8b3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fda282fd589b3ca6bc78a49a3be6e360ca932160ec6f3709740e702fa2de31e3"
   end
 
   depends_on "go" => [:build, :test]
