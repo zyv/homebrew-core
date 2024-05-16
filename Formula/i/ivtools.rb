@@ -4,7 +4,7 @@ class Ivtools < Formula
   url "https://github.com/vectaport/ivtools/archive/refs/tags/ivtools-2.1.tar.gz"
   sha256 "6a5a55883399cbfef317d8bbf553e57e54945188666b344d9efa98ba3edb57ad"
   license "MIT"
-  revision 4
+  revision 5
 
   bottle do
     sha256 cellar: :any, arm64_sonoma:   "011cc352eb448d2252427469b35d029111a57f591b7aca4dc86f1c5f1f36b5a8"
@@ -19,6 +19,12 @@ class Ivtools < Formula
   depends_on "ace"
   depends_on "libx11"
   depends_on "libxext"
+
+  # c++17 build patch, upstream PR ref, https://github.com/vectaport/ivtools/pull/22
+  patch do
+    url "https://github.com/vectaport/ivtools/commit/7ce87b9159e720cf1990b6fef10ba7a8b664bcda.patch?full_index=1"
+    sha256 "0c1e722b574df66e3c6d4114b066db99691764a04f92c77af2b7adaabde3782c"
+  end
 
   def install
     cp "Makefile.orig", "Makefile"
