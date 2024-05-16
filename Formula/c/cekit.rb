@@ -3,10 +3,9 @@ class Cekit < Formula
 
   desc "Container Evolution Kit"
   homepage "https://cekit.io"
-  url "https://files.pythonhosted.org/packages/2b/e8/f6f756156e26ee85221306123f60b2f1162a0d988a0e59f195d0631ed21f/cekit-4.11.0.tar.gz"
-  sha256 "5dc7ce15f903c2de20b119a18086c042a28ed0c72ef7f1d5956fa20cef2cfc32"
+  url "https://files.pythonhosted.org/packages/98/cf/091d054e0bee657f4ed0e26a2f3384007c66a9eb57b009375ed1c0848f06/cekit-4.12.0.tar.gz"
+  sha256 "797d28ac17a991643d851774a2564d02c788ca9b304517c375142374be8e17f8"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "b8235b830c8e7dd338bfb42addb9d3179c7c4c5e0d0bc824848c6737fcecde19"
