@@ -2023,6 +2023,7 @@ sniffnet
 snort
 snowflake
 snyk-cli
+soapyremote
 socket_vmnet
 solana
 solhint
