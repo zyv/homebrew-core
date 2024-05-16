@@ -2,8 +2,8 @@ class Zeek < Formula
   desc "Network security monitor"
   homepage "https://www.zeek.org"
   url "https://github.com/zeek/zeek.git",
-      tag:      "v6.2.0",
-      revision: "e90c6e4d0bd6a60af0c5cea9f89b8ce6afff9827"
+      tag:      "v6.2.1",
+      revision: "3492981a2976f08057818687a6c804487f6230b1"
   license "BSD-3-Clause"
   head "https://github.com/zeek/zeek.git", branch: "master"
 
@@ -32,6 +32,7 @@ class Zeek < Formula
   depends_on "openssl@3"
   depends_on "python@3.12"
 
+  uses_from_macos "krb5"
   uses_from_macos "libpcap"
   uses_from_macos "libxcrypt"
   uses_from_macos "zlib"
