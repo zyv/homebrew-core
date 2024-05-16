@@ -8,13 +8,13 @@ class SafCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9619bf70c8e76cabe235c9d1b7d17a66b0631e8aad2fbbecc09195454639fe54"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9619bf70c8e76cabe235c9d1b7d17a66b0631e8aad2fbbecc09195454639fe54"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "9619bf70c8e76cabe235c9d1b7d17a66b0631e8aad2fbbecc09195454639fe54"
-    sha256 cellar: :any_skip_relocation, sonoma:         "7219c63390d20fd29b8dba0d62af6a22291d3829e96cbf86285441bade8efc4d"
-    sha256 cellar: :any_skip_relocation, ventura:        "7219c63390d20fd29b8dba0d62af6a22291d3829e96cbf86285441bade8efc4d"
-    sha256 cellar: :any_skip_relocation, monterey:       "7219c63390d20fd29b8dba0d62af6a22291d3829e96cbf86285441bade8efc4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9619bf70c8e76cabe235c9d1b7d17a66b0631e8aad2fbbecc09195454639fe54"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4ecc314aee5c72433e0fe22d0e5ee1e8234fedc60ef05de469befb5ef37258a0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c5495987440dc0e4fef496507820a42b9a567a4ffbbb96fb1858e1ae3f9ce085"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "1605b9df7582b482b308ad132ebbc9b7e899ef98813eddc60c7e220642365405"
+    sha256 cellar: :any_skip_relocation, sonoma:         "ac26567b0e0674e66594b74a639fb8accbcfb9f88280f8ca9cd6c06f47009ff0"
+    sha256 cellar: :any_skip_relocation, ventura:        "4dfcc95789ccd25f701f711cddb5810137c7c838ba028d372cec0cced5858106"
+    sha256 cellar: :any_skip_relocation, monterey:       "a6e64b6b1851065849294bb25b77e55b3bfa0c86fe23ce23404252b07804e37f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "58b36341a64dd61faf0d6f7175ea9a1368c5677a05e12ac422c42951a4be3e25"
   end
 
   depends_on "node"
