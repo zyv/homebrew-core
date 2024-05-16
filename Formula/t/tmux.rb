@@ -60,7 +60,7 @@ class Tmux < Formula
       # and uses that as the default `TERM`, but this causes issues for
       # tools that link with the very old ncurses provided by macOS.
       # https://github.com/Homebrew/homebrew-core/issues/102748
-      args << "--with-TERM=screen-256color"
+      args << "--with-TERM=screen-256color" if MacOS.version < :sonoma
       args << "--enable-utf8proc" if MacOS.version >= :high_sierra
     else
       args << "--enable-utf8proc"
