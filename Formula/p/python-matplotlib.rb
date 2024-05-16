@@ -3,8 +3,8 @@ class PythonMatplotlib < Formula
 
   desc "Python library for creating static, animated, and interactive visualizations"
   homepage "https://matplotlib.org/"
-  url "https://files.pythonhosted.org/packages/38/4f/8487737a74d8be4ab5fbe6019b0fae305c1604cf7209500969b879b5f462/matplotlib-3.8.4.tar.gz"
-  sha256 "8aac397d5e9ec158960e31c381c5ffc52ddd52bd9a47717e2a694038167dffea"
+  url "https://files.pythonhosted.org/packages/c5/a4/a7236bf8b0137deff48737c6ccf2154ef4486e57c6a5b7c309bf515992bd/matplotlib-3.9.0.tar.gz"
+  sha256 "e6d29ea6c19e34b30fb7d88b7081f869a03014f66fe06d62cc77d5a6ea88ed7a"
   license "PSF-2.0"
 
   bottle do
@@ -96,6 +96,6 @@ class PythonMatplotlib < Formula
 
   test do
     backend = shell_output("#{python3} -c 'import matplotlib; print(matplotlib.get_backend())'").chomp
-    assert_equal OS.mac? ? "MacOSX" : "agg", backend
+    assert_equal OS.mac? ? "macosx" : "agg", backend
   end
 end
