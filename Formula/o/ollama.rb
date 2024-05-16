@@ -2,8 +2,8 @@ class Ollama < Formula
   desc "Create, run, and share large language models (LLMs)"
   homepage "https://ollama.com/"
   url "https://github.com/ollama/ollama.git",
-      tag:      "v0.1.37",
-      revision: "41ba3017fd74dfce9a3dc00160f29befec85a41b"
+      tag:      "v0.1.38",
+      revision: "d1692fd3e0b4a80ff55ba052b430207134df4714"
   license "MIT"
   head "https://github.com/ollama/ollama.git", branch: "main"
 
@@ -51,7 +51,7 @@ class Ollama < Formula
     ENV["OLLAMA_HOST"] = "localhost:#{port}"
 
     pid = fork { exec "#{bin}/ollama", "serve" }
-    sleep 1
+    sleep 3
     begin
       assert_match "Ollama is running", shell_output("curl -s localhost:#{port}")
     ensure
