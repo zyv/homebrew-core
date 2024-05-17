@@ -53,6 +53,8 @@ jobs:
       contents: read
       pull-requests: write # for `post-comment`, `gh api`, `gh pr edit`
       repository-projects: write # for `gh pr edit`
+      attestations: write # for actions/attest-build-provenance
+      id-token: write # for actions/attest-build-provenance
     defaults:
       run:
         shell: bash
@@ -151,6 +153,7 @@ jobs:
           signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
 
       - name: Pull PR${{ inputs.upload && ' and upload bottles to GitHub Packages' || '' }}
+        id: pr-pull
         working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
         env:
           BREWTESTBOT_NAME_EMAIL: "${{ steps.git-user-config.outputs.name }} <${{ steps.git-user-config.outputs.email }}>"
@@ -172,6 +175,11 @@ jobs:
             ${{ inputs.warn_on_upload_failure && '--warn-on-upload-failure' || '' }} \
             ${{ inputs.message && '--message="$MESSAGE"' || '' }} \
             "$PR"
+
+      - name: Generate build provenance
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
 
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
