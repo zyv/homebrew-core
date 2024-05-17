@@ -1,10 +1,9 @@
 class Passenger < Formula
   desc "Server for Ruby, Python, and Node.js apps via Apache/NGINX"
   homepage "https://www.phusionpassenger.com/"
-  url "https://github.com/phusion/passenger/releases/download/release-6.0.20/passenger-6.0.20.tar.gz"
-  sha256 "fa8d9a37edb92f4a8f064b3005b57bccf10392ce4eb067838883206060e27107"
+  url "https://github.com/phusion/passenger/releases/download/release-6.0.21/passenger-6.0.21.tar.gz"
+  sha256 "c4a283256c0e24c684fa685729c564a203df49391890ce32c25895644f63d920"
   license "MIT"
-  revision 2
   head "https://github.com/phusion/passenger.git", branch: "stable-6.0"
 
   bottle do
@@ -29,6 +28,7 @@ class Passenger < Formula
   uses_from_macos "curl"
   uses_from_macos "libxcrypt"
   uses_from_macos "ruby", since: :catalina
+  uses_from_macos "zlib"
 
   def install
     if OS.mac? && MacOS.version >= :mojave && MacOS::CLT.installed?
