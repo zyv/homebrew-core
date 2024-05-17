@@ -1581,6 +1581,7 @@ onedrive
 onionprobe
 ooniprobe
 opa
+opam
 open-adventure
 open-image-denoise
 open-mpi
