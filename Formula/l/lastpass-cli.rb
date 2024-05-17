@@ -1,8 +1,8 @@
 class LastpassCli < Formula
   desc "LastPass command-line interface tool"
   homepage "https://github.com/lastpass/lastpass-cli"
-  url "https://github.com/lastpass/lastpass-cli/releases/download/v1.4.0/lastpass-cli-1.4.0.tar.gz"
-  sha256 "e317c7ac964e35d8535e039b70c0eab26fe4ef5aa596ad0f09f72fd8c7207d87"
+  url "https://github.com/lastpass/lastpass-cli/releases/download/v1.5.0/lastpass-cli-1.5.0.tar.gz"
+  sha256 "542dc3d7ff175866c0eddfcc6f2dffdb54acf6854dd1fadaf4d509dcde2d4bf3"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
   head "https://github.com/lastpass/lastpass-cli.git", branch: "master"
 
@@ -24,6 +24,7 @@ class LastpassCli < Formula
   depends_on "pinentry"
 
   uses_from_macos "curl"
+  uses_from_macos "libxml2"
   uses_from_macos "libxslt"
 
   # Avoid crashes on Mojave's version of libcurl (https://github.com/lastpass/lastpass-cli/issues/427)
