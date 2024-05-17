@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-22.04
     continue-on-error: ${{ matrix.stable }}
     container:
-      image: ghcr.io/homebrew/ubuntu22.04:master
+      image: ghcr.io/homebrew/ubuntu22.04:${{ matrix.stable && 'latest' || 'master'}}
     env:
       HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
     steps:
