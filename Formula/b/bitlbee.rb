@@ -26,10 +26,13 @@ class Bitlbee < Formula
   end
 
   depends_on "pkg-config" => :build
-  depends_on "gettext"
   depends_on "glib"
   depends_on "gnutls"
   depends_on "libgcrypt"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   def install
     args = %W[
