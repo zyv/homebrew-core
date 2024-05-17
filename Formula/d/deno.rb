@@ -1,8 +1,8 @@
 class Deno < Formula
   desc "Secure runtime for JavaScript and TypeScript"
   homepage "https://deno.com/"
-  url "https://github.com/denoland/deno/releases/download/v1.43.3/deno_src.tar.gz"
-  sha256 "d52a711679c400de999759e8a9b2099adbeb72219e124fa7488a5cd8c7a71620"
+  url "https://github.com/denoland/deno/releases/download/v1.43.4/deno_src.tar.gz"
+  sha256 "9c386d7b7d35cf8810b462ee5cbcda215f09bc7c485114d47a398c6d404f97dc"
   license "MIT"
   head "https://github.com/denoland/deno.git", branch: "main"
 
@@ -42,8 +42,7 @@ class Deno < Formula
   # Temporary resources to work around build failure due to files missing from crate
   # We use the crate as GitHub tarball lacks submodules and this allows us to avoid git overhead.
   # TODO: Remove this and `v8` resource when https://github.com/denoland/rusty_v8/issues/1065 is resolved
-  # Use the version of `v8` crate at: https://github.com/denoland/deno/blob/v#{version}/Cargo.lock
-  # Search for 'name = "v8"' (without single quotes).
+  # VERSION = #{version} && curl -s https://raw.githubusercontent.com/denoland/deno/v$VERSION/Cargo.lock | grep -C 1 'name = "v8"'
   resource "rusty_v8" do
     url "https://static.crates.io/crates/v8/v8-0.91.1.crate"
     sha256 "69026e2e8af55a4d2f20c0c17f690e8b31472bf76ab75b1205d3a0fab60c8f84"
@@ -57,8 +56,7 @@ class Deno < Formula
     sha256 "f54d9a4bf2a3b32d705f48912264ea669e827ce6ef22258d3e9aa2792acd23e7"
   end
 
-  # Use the version of `deno_core` crate at: https://github.com/denoland/deno/blob/v#{version}/Cargo.lock
-  # Search for 'name = "deno_core"' (without single quotes).
+  # VERSION = #{version} && curl -s https://raw.githubusercontent.com/denoland/deno/v$VERSION/Cargo.lock | grep -C 1 'name = "deno_core"'
   resource "deno_core" do
     url "https://github.com/denoland/deno_core/archive/refs/tags/0.280.0.tar.gz"
     sha256 "3c6106ecf8e736de0b894f233762d0e0c86e8090ca90dff561dc5a4f68fcedea"
