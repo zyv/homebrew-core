@@ -23,6 +23,7 @@ class Vineyard < Formula
   depends_on "python@3.12" => :build
   depends_on "apache-arrow"
   depends_on "boost"
+  depends_on "cpprestsdk"
   depends_on "etcd"
   depends_on "etcd-cpp-apiv3"
   depends_on "gflags"
@@ -34,6 +35,12 @@ class Vineyard < Formula
   depends_on "openssl@3"
   depends_on "protobuf"
   depends_on "redis"
+
+  on_macos do
+    depends_on "abseil"
+    depends_on "c-ares"
+    depends_on "re2"
+  end
 
   fails_with gcc: "5"
 
