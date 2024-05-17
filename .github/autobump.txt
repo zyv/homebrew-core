@@ -62,6 +62,7 @@ apache-opennlp
 apache-spark
 apachetop
 apidoc
+apkleaks
 apko
 apktool
 appium
