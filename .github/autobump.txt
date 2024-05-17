@@ -962,6 +962,7 @@ gsmartcontrol
 gsoap
 gstreamer
 gtk-gnutella
+gtk+3
 gtk4
 gtkmm4
 gtranslator
