@@ -38,6 +38,11 @@ env:
   HOMEBREW_NO_AUTO_UPDATE: 1
   HOMEBREW_NO_INSTALL_FROM_API: 1
   RUN_URL: ${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}
+  DISPATCH_REBOTTLE_SENDER: ${{ github.event.sender.login }}
+  DISPATCH_REBOTTLE_FORMULA: ${{ inputs.formula }}
+  DISPATCH_REBOTTLE_TIMEOUT: ${{ inputs.timeout }}
+  DISPATCH_REBOTTLE_ISSUE: ${{ inputs.issue }}
+  DISPATCH_REBOTTLE_UPLOAD: ${{ inputs.upload }}
 
 jobs:
   setup:
@@ -57,7 +62,7 @@ jobs:
 
       - name: Determine runners
         id: determine-runners
-        run: brew determine-rebottle-runners "${{inputs.formula}}" "${{inputs.timeout}}"
+        run: brew determine-rebottle-runners "${DISPATCH_REBOTTLE_FORMULA}" "${DISPATCH_REBOTTLE_TIMEOUT}"
 
   bottle:
     permissions:
@@ -81,18 +86,21 @@ jobs:
       - name: ${{inputs.formula}}
         id: print_details
         run: |
-          echo sender='${{github.event.sender.login}}'
-          echo formula='${{inputs.formula}}'
-          echo timeout='${{inputs.timeout}}'
-          echo issue='${{inputs.issue}}'
-          echo upload='${{inputs.upload}}'
+          echo sender="${DISPATCH_REBOTTLE_SENDER}"
+          echo formula="${DISPATCH_REBOTTLE_FORMULA}"
+          echo timeout="${DISPATCH_REBOTTLE_TIMEOUT}"
+          echo issue="${DISPATCH_REBOTTLE_ISSUE}"
+          echo upload="${DISPATCH_REBOTTLE_UPLOAD}"
 
       - name: Pre-test steps
         uses: Homebrew/actions/pre-build@master
         with:
           bottles-directory: ${{ env.BOTTLES_DIR }}
 
-      - run: brew test-bot --only-formulae --only-json-tab --skip-online-checks --skip-dependents '${{inputs.formula}}'
+      - run: |
+          brew test-bot --only-formulae --only-json-tab --skip-online-checks \
+                        --skip-dependents \
+                        "${DISPATCH_REBOTTLE_FORMULA}"
         working-directory: ${{ env.BOTTLES_DIR }}
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{secrets.GITHUB_TOKEN}}
