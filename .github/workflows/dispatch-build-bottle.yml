@@ -30,6 +30,12 @@ env:
   HOMEBREW_NO_AUTO_UPDATE: 1
   HOMEBREW_NO_INSTALL_FROM_API: 1
   RUN_URL: ${{github.event.repository.html_url}}/actions/runs/${{github.run_id}}
+  DISPATCH_BUILD_BOTTLE_SENDER: ${{ github.event.sender.login }}
+  DISPATCH_BUILD_BOTTLE_FORMULA: ${{ inputs.formula }}
+  DISPATCH_BUILD_BOTTLE_RUNNER: ${{ inputs.runner }}
+  DISPATCH_BUILD_BOTTLE_TIMEOUT: ${{ inputs.timeout }}
+  DISPATCH_BUILD_BOTTLE_ISSUE: ${{ inputs.issue }}
+  DISPATCH_BUILD_BOTTLE_UPLOAD: ${{ inputs.upload }}
 
 # Intentionally the same as dispatch-rebottle
 concurrency: bottle-${{ github.event.inputs.formula }}
@@ -92,12 +98,12 @@ jobs:
       - name: ${{inputs.formula}}
         id: print_details
         run: |
-          echo sender='${{github.event.sender.login}}'
-          echo formula='${{inputs.formula}}'
-          echo runner='${{inputs.runner}}'
-          echo timeout='${{inputs.timeout}}'
-          echo issue='${{inputs.issue}}'
-          echo upload='${{inputs.upload}}'
+          echo sender="${DISPATCH_BUILD_BOTTLE_SENDER}"
+          echo formula="${DISPATCH_BUILD_BOTTLE_FORMULA}"
+          echo runner="${DISPATCH_BUILD_BOTTLE_RUNNER}"
+          echo timeout="${DISPATCH_BUILD_BOTTLE_TIMEOUT}"
+          echo issue="${DISPATCH_BUILD_BOTTLE_ISSUE}"
+          echo upload="${DISPATCH_BUILD_BOTTLE_UPLOAD}"
 
       - name: Pre-test steps
         uses: Homebrew/actions/pre-build@master
@@ -113,7 +119,7 @@ jobs:
             --only-json-tab \
             --skip-online-checks \
             --skip-dependents \
-            '${{inputs.formula}}'
+            "${DISPATCH_BUILD_BOTTLE_FORMULA}"
 
       - name: Post-build steps
         if: always()
