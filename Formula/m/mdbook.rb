@@ -1,8 +1,8 @@
 class Mdbook < Formula
   desc "Create modern online books from Markdown files"
   homepage "https://rust-lang.github.io/mdBook/"
-  url "https://github.com/rust-lang/mdBook/archive/refs/tags/v0.4.37.tar.gz"
-  sha256 "7a360cb8702d8a35d9db9d0639a6a4650d3a9492970cf772f49c5a99d981272c"
+  url "https://github.com/rust-lang/mdBook/archive/refs/tags/v0.4.38.tar.gz"
+  sha256 "f3de97e41af28b8817e85440385afcf6060a959ef708b317de7f65844fdbf391"
   license "MPL-2.0"
   head "https://github.com/rust-lang/mdBook.git", branch: "master"
 
