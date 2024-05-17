@@ -13,10 +13,16 @@ class Swiftlint < Formula
     sha256                               x86_64_linux: "551c6e567e00130f816eeef8b08db9013d594216e315957550ed3f8c098984e8"
   end
 
-  depends_on xcode: ["15.3", :build]
   depends_on xcode: "8.0"
 
   uses_from_macos "swift"
+
+  on_sonoma :or_newer do
+    depends_on xcode: ["15.3", :build]
+  end
+  on_ventura :or_older do
+    depends_on "swift" => :build
+  end
 
   def install
     system "swift", "build", "--disable-sandbox", "--configuration", "release", "--product", "swiftlint"
