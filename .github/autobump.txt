@@ -1167,6 +1167,7 @@ kubecm
 kubecolor
 kubeconform
 kubectl-cnpg
+kubectl-rook-ceph
 kubefirst
 kubekey
 kubergrunt
