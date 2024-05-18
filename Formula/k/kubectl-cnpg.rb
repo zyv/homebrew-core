@@ -5,6 +5,7 @@ class KubectlCnpg < Formula
       tag:      "v1.23.1",
       revision: "336ddf5308fe0d5cf78c4da1d03959fa02a60c70"
   license "Apache-2.0"
+  head "https://github.com/cloudnative-pg/cloudnative-pg.git", branch: "main"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8c5a6a52655e70b13db5ad69e03ff985900171d20cc94c05655a1713794d98ef"
@@ -27,6 +28,15 @@ class KubectlCnpg < Formula
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/kubectl-cnpg"
     generate_completions_from_executable(bin/"kubectl-cnpg", "completion")
+
+    kubectl_plugin_completion = <<~EOS
+      #!/usr/bin/env sh
+      # Call the __complete command passing it all arguments
+      kubectl cnpg __complete "$@"
+    EOS
+
+    (bin/"kubectl_complete-cnpg").write(kubectl_plugin_completion)
+    chmod 0755, bin/"kubectl_complete-cnpg"
   end
 
   test do
