@@ -1,20 +1,10 @@
 class Bear < Formula
   desc "Generate compilation database for clang tooling"
   homepage "https://github.com/rizsotto/Bear"
+  url "https://github.com/rizsotto/Bear/archive/refs/tags/3.1.4.tar.gz"
+  sha256 "a1105023795b3e1b9abc29c088cdec5464cc9f3b640b5078dc90a505498da5ff"
   license "GPL-3.0-or-later"
-  revision 17
   head "https://github.com/rizsotto/Bear.git", branch: "master"
-
-  stable do
-    url "https://github.com/rizsotto/Bear/archive/refs/tags/3.1.3.tar.gz"
-    sha256 "8314438428069ffeca15e2644eaa51284f884b7a1b2ddfdafe12152581b13398"
-
-    # Backport fix for Protobuf 26
-    patch do
-      url "https://github.com/rizsotto/Bear/commit/4d9d4525cd3d1ad11761c79ca71645946f48e07c.patch?full_index=1"
-      sha256 "be8ffbcb8f7562d70e16f724d2a91cffbd7e0b28b564dcafe46510a4b248bdea"
-    end
-  end
 
   bottle do
     sha256 arm64_sonoma:   "1a78bff5e557ce160afa533464a19a092581a75d95ec989d55787a92de5537ea"
@@ -28,9 +18,11 @@ class Bear < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
+  depends_on "abseil"
   depends_on "fmt"
   depends_on "grpc"
   depends_on "nlohmann-json"
+  depends_on "protobuf"
   depends_on "spdlog"
 
   uses_from_macos "llvm" => :test
