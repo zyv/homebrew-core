@@ -114,9 +114,10 @@ class Rust < Formula
       --tools=#{tools.join(",")}
       --llvm-root=#{Formula["llvm"].opt_prefix}
       --enable-llvm-link-shared
+      --enable-profiler
       --enable-vendor
       --disable-cargo-native-static
-      --enable-profiler
+      --disable-docs
       --set=rust.jemalloc
       --release-description=#{tap.user}
     ]
