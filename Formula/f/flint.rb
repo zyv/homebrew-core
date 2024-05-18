@@ -12,13 +12,13 @@ class Flint < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "cd9081c8a59306634adce74fe130329c10da59dc5cde3d6d64a97b3db50b3aac"
-    sha256 cellar: :any,                 arm64_ventura:  "48298b28a7101f3e1d996b99466dddfe3ab223081704a824822d8b4f262c483c"
-    sha256 cellar: :any,                 arm64_monterey: "3402845f37dc68f76013519bb65aa7eb41271350d30af228344665f724af0802"
-    sha256 cellar: :any,                 sonoma:         "38b55243359af6245acad6bb3135eb23d3502ac5d4bf53249a0f383f2f1b9911"
-    sha256 cellar: :any,                 ventura:        "51e691ed458d7938cc5d43f4231ea7a79afd1b49a01f99b959bc7a729fbd832d"
-    sha256 cellar: :any,                 monterey:       "e2cc694938b6af748f2700a3274b5b634bd345c79b824435490ac1e24425cc16"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "796f363a97eb42772140b94d31a9eaccfb2acf445175639aba7869250b293942"
+    sha256 cellar: :any,                 arm64_sonoma:   "d057cba267ea669bb35954ccdc28acfa5ec41a958f6a2561ee1f0fc441f46ce3"
+    sha256 cellar: :any,                 arm64_ventura:  "42d56a37bdb7120e4c9cbb5e1a92d5995168b8e26893d235089fd3f36f1fa1a7"
+    sha256 cellar: :any,                 arm64_monterey: "068b313a597524554baa988c2dab1d08377d373e7c85a1fed7260c0c9f9433b7"
+    sha256 cellar: :any,                 sonoma:         "182c134ae4ee00fac31c06d59cd77a0511569509a73425012b5462d05821f9ab"
+    sha256 cellar: :any,                 ventura:        "9341daa4aadca4bc5c36a0cbcf46ecb81cf5df8cbcf7a9df4c8e5f4c8d82271b"
+    sha256 cellar: :any,                 monterey:       "3446629a142b1fff5ece6b083ff5417736e091ee086bae449024bbed8b30901c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9505e259fb2fd8aa0e734cf1dc74b46a5a6a97c59a2561f51c1e24512eca750f"
   end
 
   depends_on "autoconf" => :build
