@@ -1888,6 +1888,7 @@ riemann-client
 rio
 ripsecrets
 risor
+river
 rizin
 rke
 roadrunner
