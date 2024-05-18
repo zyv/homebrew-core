@@ -1,8 +1,8 @@
 class EasyRsa < Formula
   desc "CLI utility to build and manage a PKI CA"
   homepage "https://github.com/OpenVPN/easy-rsa"
-  url "https://github.com/OpenVPN/easy-rsa/archive/refs/tags/v3.1.7.tar.gz"
-  sha256 "438206426324e6d34380d09da265b9ea1e2e2c0b301865dfef1ee89cb394602a"
+  url "https://github.com/OpenVPN/easy-rsa/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "0d714529486f7bdc312dac5e2082b8715ddf58e41bb17e35e8c20606604c5335"
   license "GPL-2.0-only"
   head "https://github.com/OpenVPN/easy-rsa.git", branch: "master"
 
