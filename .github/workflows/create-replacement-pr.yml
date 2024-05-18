@@ -156,6 +156,8 @@ jobs:
         id: pr-pull
         working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
         env:
+          BREWTESTBOT_NAME_EMAIL: "BrewTestBot <1589480+BrewTestBot@users.noreply.github.com>"
+          HOMEBREW_GPG_PASSPHRASE: ${{ inputs.autosquash && secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_CORE_PUBLIC_REPO_EMAIL_TOKEN }}
           MESSAGE: ${{ inputs.message }}
         run: |
@@ -165,6 +167,7 @@ jobs:
             --debug \
             --branch-okay \
             --workflows=tests.yml \
+            --committer="$BREWTESTBOT_NAME_EMAIL" \
             --root-url="https://ghcr.io/v2/homebrew/core" \
             ${{ inputs.autosquash && '--autosquash' || '--clean --no-cherry-pick' }} \
             ${{ inputs.message && '--message="$MESSAGE"' || '' }} \
@@ -174,6 +177,7 @@ jobs:
         uses: actions/attest-build-provenance@v1
         with:
           subject-path: '${{steps.pr-pull.outputs.bottle_path}}/*.tar.gz'
+        if: inputs.upload
 
       - name: Upload bottles to GitHub Packages
         id: pr-upload
