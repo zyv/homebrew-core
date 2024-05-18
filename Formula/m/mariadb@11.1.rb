@@ -1,8 +1,8 @@
 class MariadbAT111 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://archive.mariadb.org/mariadb-11.1.4/source/mariadb-11.1.4.tar.gz"
-  sha256 "8f6473368a67b1a615f7a5c3af151b78744af058c3e406a9b4d3b8eb4055f97b"
+  url "https://archive.mariadb.org/mariadb-11.1.5/source/mariadb-11.1.5.tar.gz"
+  sha256 "eccdcdf487b4c99844573a2dbe691f905f485450925545119949e58bdacaee68"
   license "GPL-2.0-only"
 
   livecheck do
@@ -38,11 +38,15 @@ class MariadbAT111 < Formula
   depends_on "fmt" => :build
   depends_on "pkg-config" => :build
   depends_on "groonga"
+  depends_on "lz4"
   depends_on "openssl@3"
   depends_on "pcre2"
+  depends_on "xz"
   depends_on "zstd"
 
   uses_from_macos "bzip2"
+  uses_from_macos "krb5"
+  uses_from_macos "libedit"
   uses_from_macos "libxcrypt"
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
@@ -54,13 +58,6 @@ class MariadbAT111 < Formula
   end
 
   fails_with gcc: "5"
-
-  # upstream patch ref, https://github.com/MariaDB/server/pull/3064
-  # remove when it got merged and released
-  patch do
-    url "https://github.com/MariaDB/server/commit/3624a36aed0346380255b141cb8a59998aaca4ee.patch?full_index=1"
-    sha256 "c9d0aa64b34c43ac9e3077d74c18532125c459d9d867ade69ce283d27b595b22"
-  end
 
   def install
     ENV.cxx11
