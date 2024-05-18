@@ -745,6 +745,7 @@ flank
 flann
 flashrom
 flatbuffers
+flawz
 fleet-cli
 flint
 flix
