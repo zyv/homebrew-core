@@ -211,6 +211,7 @@ bosh-cli
 botan
 botan@2
 bottom
+bowtie2
 bpftop
 breezy
 brev
