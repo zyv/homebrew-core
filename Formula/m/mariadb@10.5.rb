@@ -1,8 +1,8 @@
 class MariadbAT105 < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://archive.mariadb.org/mariadb-10.5.24/source/mariadb-10.5.24.tar.gz"
-  sha256 "f677c5edf82aeb394cc41937aea33a3d3cc64ea2ed786adaf162b32f203d14a5"
+  url "https://archive.mariadb.org/mariadb-10.5.25/source/mariadb-10.5.25.tar.gz"
+  sha256 "9619d0f51e864357466b2c63301a34a53f7dfd99f18c4fd452fab22bf39ba64e"
   license "GPL-2.0-only"
 
   livecheck do
@@ -41,9 +41,11 @@ class MariadbAT105 < Formula
   depends_on "pcre2"
 
   uses_from_macos "bzip2"
+  uses_from_macos "krb5"
   uses_from_macos "libxcrypt"
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
+  uses_from_macos "xz"
   uses_from_macos "zlib"
 
   on_linux do
