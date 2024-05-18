@@ -2,9 +2,9 @@ require "language/node"
 
 class AnsibleLanguageServer < Formula
   desc "Language Server for Ansible Files"
-  homepage "https://github.com/ansible/ansible-language-server"
-  url "https://registry.npmjs.org/@ansible/ansible-language-server/-/ansible-language-server-1.2.1.tgz"
-  sha256 "1614a212952e778e97a8dc1a4a84a2bf195764931cdc8e022eea4895e4b677ec"
+  homepage "https://github.com/ansible/vscode-ansible"
+  url "https://registry.npmjs.org/@ansible/ansible-language-server/-/ansible-language-server-1.2.3.tgz"
+  sha256 "3182960a35f229f453d520cfb6c9624ca18104653457eca99dc1406690fa5aa2"
   license "MIT"
 
   bottle do
@@ -18,8 +18,6 @@ class AnsibleLanguageServer < Formula
     sha256 cellar: :any_skip_relocation, big_sur:        "60fa43eca628baf765c7985e3e628660f3f61d8ae6666f9a80cda4e7fae65286"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6abc09d916281ceb0ee5ffed77be92564ba8c3dd992231af50027a9d29a12063"
   end
-
-  deprecate! date: "2024-03-15", because: :repo_archived
 
   depends_on "node"
 
