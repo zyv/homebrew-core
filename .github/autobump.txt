@@ -1375,6 +1375,13 @@ man-db
 manifest-tool
 mantra
 mapcidr
+mariadb@10.11
+mariadb@10.4
+mariadb@10.5
+mariadb@10.6
+mariadb@11.0
+mariadb@11.1
+mariadb@11.2
 markdownlint-cli2
 marked
 marp-cli
