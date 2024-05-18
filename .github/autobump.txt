@@ -1166,6 +1166,7 @@ kubecfg
 kubecm
 kubecolor
 kubeconform
+kubectl-cnpg
 kubefirst
 kubekey
 kubergrunt
