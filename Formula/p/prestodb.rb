@@ -3,8 +3,8 @@ class Prestodb < Formula
 
   desc "Distributed SQL query engine for big data"
   homepage "https://prestodb.io"
-  url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.286/presto-server-0.286.tar.gz"
-  sha256 "3249c15cf574444c1527ed9dc130a6435075074fad4f96b3be44a618240b0443"
+  url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-server/0.287/presto-server-0.287.tar.gz"
+  sha256 "c16ef78d56820a16fec6918a439b26121a78eb3cc50fdcd7bee93a1211347f8f"
   license "Apache-2.0"
 
   # Upstream has said that we should check Maven for Presto version information
@@ -25,8 +25,8 @@ class Prestodb < Formula
   depends_on "python@3.12"
 
   resource "presto-cli" do
-    url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-cli/0.286/presto-cli-0.286-executable.jar"
-    sha256 "e6a5721824178e8755c407aa9057a7de615c6eee7cd2c8cbdbe58a2ed342ce95"
+    url "https://search.maven.org/remotecontent?filepath=com/facebook/presto/presto-cli/0.287/presto-cli-0.287-executable.jar"
+    sha256 "ff91091dae44976266625476e5f4dc483273324433e36ef209154ce947e34c90"
   end
 
   def install
@@ -109,7 +109,7 @@ class Prestodb < Formula
                                        "--data-dir", testpath,
                                        "--config", testpath/"config.properties"
     end
-    sleep 30
+    sleep 45
 
     query = "SELECT state FROM system.runtime.nodes"
     output = shell_output(bin/"presto --debug --server localhost:#{port} --execute '#{query}'")
