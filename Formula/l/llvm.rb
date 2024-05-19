@@ -1,8 +1,8 @@
 class Llvm < Formula
   desc "Next-gen compiler infrastructure"
   homepage "https://llvm.org/"
-  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.5/llvm-project-18.1.5.src.tar.xz"
-  sha256 "3591a52761a7d390ede51af01ea73abfecc4b1d16445f9d019b67a57edd7de56"
+  url "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.6/llvm-project-18.1.6.src.tar.xz"
+  sha256 "bd4b4cb6374bcd5fc5a3ba60cb80425d29da34f316b8821abc12c0db225cf6b4"
   # The LLVM Project is under the Apache License v2.0 with LLVM Exceptions
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/llvm/llvm-project.git", branch: "main"
@@ -32,6 +32,7 @@ class Llvm < Formula
   depends_on "ninja" => :build
   depends_on "swig" => :build
   depends_on "python@3.12"
+  depends_on "xz"
   depends_on "z3"
   depends_on "zstd"
 
