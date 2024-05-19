@@ -3,13 +3,12 @@ class Jupyterlab < Formula
 
   desc "Interactive environments for writing and running code"
   homepage "https://jupyter.org/"
-  url "https://files.pythonhosted.org/packages/42/c2/decb25538588ed104ada22c31d1845b1500f98806e3261b94f0333e8b099/jupyterlab-4.1.6.tar.gz"
-  sha256 "7935f36ba26eb615183a4f5c2bbca5791b5108ce2a00b5505f8cfd100d53648e"
+  url "https://files.pythonhosted.org/packages/d0/b3/51d88c27256694761cdc56682393360596169cdb38e542c84e9337e577a0/jupyterlab-4.2.0.tar.gz"
+  sha256 "356e9205a6a2ab689c47c8fe4919dba6c076e376d03f26baadc05748c2435dd5"
   license all_of: [
     "BSD-3-Clause",
     "MIT", # semver.py
   ]
-  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "a77c5274e2f7f4f053de054f680cfe24f8a72ba437ddc5eff8c40f97e61653aa"
@@ -296,8 +295,8 @@ class Jupyterlab < Formula
   end
 
   resource "notebook" do
-    url "https://files.pythonhosted.org/packages/65/38/f2c6cb06f3c4997980ad27713f23378616761fd8d36013c9cdd0d9c54ad2/notebook-7.1.3.tar.gz"
-    sha256 "41fcebff44cf7bb9377180808bcbae066629b55d8c7722f1ebbe75ca44f9cfc1"
+    url "https://files.pythonhosted.org/packages/d2/67/94c234344db57eb467cb6a9ed2da156d90524a33bdf19f0243c7261e4483/notebook-7.2.0.tar.gz"
+    sha256 "34a2ba4b08ad5d19ec930db7484fb79746a1784be9e1a5f8218f9af8656a141f"
   end
 
   resource "notebook-shim" do
