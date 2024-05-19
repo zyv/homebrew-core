@@ -7,13 +7,13 @@ class JupyterR < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "151782fb831022f90c5fdad716d7b121da36d5d5c9ea2bd3f584e66e139adb5f"
-    sha256 cellar: :any,                 arm64_ventura:  "d861cd8f4d80a4c0683762a528e53f1593990f9d40f932fa6c3aadf863bcfa95"
-    sha256 cellar: :any,                 arm64_monterey: "f45c3449078efc0e4ce5c74c8567a9a12c4fc9268b636ae0d32829b55ab19a52"
-    sha256 cellar: :any,                 sonoma:         "b1f3f39a03e08e06eef622f4a25da773cd172ba6f9e6dbee35758a5a36ba8725"
-    sha256 cellar: :any,                 ventura:        "71857a24e8167ac10568aca76a648c15d43ffe034fe53b8e0c367e8a35a2c1d5"
-    sha256 cellar: :any,                 monterey:       "ce28d98222243455722bdd5f29371dac96172bc0e19202fbbc8fa77d1a352754"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2684e4e63246fb5853fc3f14554b527d215acbc52854b9bb0f731c6f3897992b"
+    sha256 cellar: :any,                 arm64_sonoma:   "f5e53d2e1c07fada5048527bf93c183650f8f4b5ec3bb088d2f27136d06ce3c3"
+    sha256 cellar: :any,                 arm64_ventura:  "6b747fb9bf5f4b4cc3d115143b213ed41cefeb8afb2254f0cb643a621f20f87e"
+    sha256 cellar: :any,                 arm64_monterey: "8aa1108c74e5910e683727b8b4a793fa5c0108361f8dbf8f199f5c105957c531"
+    sha256 cellar: :any,                 sonoma:         "0316f97858c3952691008a53a36107235976bc213a24c894d89de8890c8822eb"
+    sha256 cellar: :any,                 ventura:        "7d99a0c04195211aaad73759ee745a55823854e0d326e34627220103fbf4d545"
+    sha256 cellar: :any,                 monterey:       "a10453cf63c2b498366e1a90dd42d47b828502a870e527684558d1bef37e07ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5b13b7b57330d27afc80e134f7d27c2b5207a9abc00a92f081d2fa21f834ede"
   end
 
   depends_on "pkg-config" => :build
