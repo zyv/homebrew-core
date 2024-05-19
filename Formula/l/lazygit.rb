@@ -1,8 +1,8 @@
 class Lazygit < Formula
   desc "Simple terminal UI for git commands"
   homepage "https://github.com/jesseduffield/lazygit/"
-  url "https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.41.0.tar.gz"
-  sha256 "f2176fa253588fe4b7118bf83f4316ae3ecb914ae1e99aad8c474e23cea49fb8"
+  url "https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.42.0.tar.gz"
+  sha256 "50a502b44fa5d28ce046def9388c6fd3e484f678691deea64c729bfd728c7f77"
   license "MIT"
   head "https://github.com/jesseduffield/lazygit.git", branch: "master"
 
@@ -28,12 +28,12 @@ class Lazygit < Formula
     system "go", "build", "-mod=vendor", *std_go_args(ldflags:)
   end
 
-  # lazygit is a terminal GUI, but it can be run in 'client mode' to do certain tasks
   test do
-    (testpath/"git-rebase-todo").write ""
-    ENV["LAZYGIT_DAEMON_KIND"] = "2" # cherry pick commit
-    ENV["LAZYGIT_DAEMON_INSTRUCTION"] = "{\"Todo\":\"pick 401a0c3\"}"
-    system "#{bin}/lazygit", "git-rebase-todo"
-    assert_match "pick 401a0c3", (testpath/"git-rebase-todo").read
+    system "git", "init", "--initial-branch=main"
+
+    output = shell_output("#{bin}/lazygit log 2>&1", 1)
+    assert_match "errors.errorString terminal not cursor addressable", output
+
+    assert_match version.to_s, shell_output("#{bin}/lazygit -v")
   end
 end
