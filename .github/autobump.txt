@@ -2184,6 +2184,7 @@ tetra
 texmath
 tfautomv
 tfmigrate
+tfproviderlint
 tfsec
 tfupdate
 tgui

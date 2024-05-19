@@ -1,8 +1,8 @@
 class Tfproviderlint < Formula
   desc "Terraform Provider Lint Tool"
   homepage "https://github.com/bflad/tfproviderlint"
-  url "https://github.com/bflad/tfproviderlint/archive/refs/tags/v0.29.0.tar.gz"
-  sha256 "60427ce6952106ba6c321555352645f051781ff55fe876b591e5dd2454852692"
+  url "https://github.com/bflad/tfproviderlint/archive/refs/tags/v0.30.0.tar.gz"
+  sha256 "c62be00c7745ae6d2662e09df9d2192d73c4062a765a596b4ff4fc5bb54c956e"
   license "MPL-2.0"
   head "https://github.com/bflad/tfproviderlint.git", branch: "main"
 
@@ -16,9 +16,7 @@ class Tfproviderlint < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "6d5103190a14b75826496cbe28614f49619a25d8f8492b4a1804e48e6c22bfca"
   end
 
-  # use "go" again when when https://github.com/bflad/tfproviderlint/pull/297 is released and released
-  depends_on "go@1.21" => :build
-  depends_on "go" => :test
+  depends_on "go" => [:build, :test]
 
   def install
     ldflags = %W[
