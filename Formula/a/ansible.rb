@@ -6,7 +6,7 @@ class Ansible < Formula
   url "https://files.pythonhosted.org/packages/dd/d6/728e1423af98ee08f05a341792abb053b73c30a5a978fc3e0777a87037a4/ansible-9.5.1.tar.gz"
   sha256 "3c278bc9642b97fc953b2ba05b99cd80801e75bf3567dfaa1cb5131fe0ec1ecd"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
@@ -24,6 +24,7 @@ class Ansible < Formula
   depends_on "rust" => :build
   depends_on "certifi"
   depends_on "cryptography"
+  depends_on "libssh"
   depends_on "libyaml"
   depends_on "python@3.12"
 
@@ -42,6 +43,11 @@ class Ansible < Formula
   resource "ansible-core" do
     url "https://files.pythonhosted.org/packages/0c/65/d28ed46f5daeb2ed37f9b55631cac7070d7a39f72b6d25cb99a5d8068827/ansible_core-2.16.6.tar.gz"
     sha256 "111e55d358c2297ec0ce03ba98e6c5ce95947fdf50d878215eb8c183d0c275e4"
+  end
+
+  resource "ansible-pylibssh" do
+    url "https://files.pythonhosted.org/packages/68/da/348258a26285f257ecea0d2ac7ebf51e9600b3213da68dae8c92643374ee/ansible-pylibssh-1.1.0.tar.gz"
+    sha256 "b29686bb1e9d62fb54b6939d53aa0ded2127f08801a1fd8da5048fbebf99a658"
   end
 
   resource "apache-libcloud" do
