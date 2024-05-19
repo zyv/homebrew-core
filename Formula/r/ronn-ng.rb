@@ -18,6 +18,8 @@ class RonnNg < Formula
   # Nokogiri 1.9 requires a newer Ruby
   depends_on "ruby"
 
+  conflicts_with "ronn", because: "both install `ronn` binaries"
+
   def install
     ENV["GEM_HOME"] = libexec
     system "gem", "build", "ronn-ng.gemspec"
