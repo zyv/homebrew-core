@@ -1,5 +1,5 @@
 class Teller < Formula
-  desc "Secrets management tool for developers built in Go"
+  desc "Secrets management tool for developers"
   homepage "https://github.com/tellerops/teller"
   url "https://github.com/tellerops/teller/archive/refs/tags/v2.0.7.tar.gz"
   sha256 "1d4275ede4366a31efc94039c58da4cec87466d09cc01444c3c18e9432716d23"
