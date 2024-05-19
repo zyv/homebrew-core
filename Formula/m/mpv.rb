@@ -39,6 +39,10 @@ class Mpv < Formula
 
   uses_from_macos "zlib"
 
+  on_macos do
+    depends_on "molten-vk"
+  end
+
   on_linux do
     depends_on "alsa-lib"
     depends_on "pulseaudio"
