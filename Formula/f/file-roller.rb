@@ -1,8 +1,8 @@
 class FileRoller < Formula
   desc "GNOME archive manager"
   homepage "https://wiki.gnome.org/Apps/FileRoller"
-  url "https://download.gnome.org/sources/file-roller/44/file-roller-44.2.tar.xz"
-  sha256 "2c5717ce7f05fbab13c847b6ce31b1b0248861fa7ab8f0ff1f1e1d45d1e2cdf9"
+  url "https://download.gnome.org/sources/file-roller/44/file-roller-44.3.tar.xz"
+  sha256 "04c8a74625fec84267fdec40306afb4104bd332d85061e0d36d4ab0533adfa4a"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -21,12 +21,18 @@ class FileRoller < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
+  depends_on "glib"
   depends_on "gtk4"
   depends_on "hicolor-icon-theme"
   depends_on "json-glib"
   depends_on "libadwaita"
   depends_on "libarchive"
   depends_on "libmagic"
+  depends_on "pango"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   def install
     # Patch out gnome.post_install to avoid failing when unused commands are missing.
