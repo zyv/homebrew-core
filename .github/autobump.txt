@@ -1213,6 +1213,7 @@ lerna
 lesspipe
 lexbor
 lexicon
+lexido
 lf
 libabigail
 libadwaita
