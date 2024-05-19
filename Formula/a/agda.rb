@@ -2,10 +2,12 @@ class Agda < Formula
   desc "Dependently typed functional programming language"
   homepage "https://wiki.portal.chalmers.se/agda/"
   license "BSD-3-Clause"
+  revision 1
 
   stable do
-    url "https://hackage.haskell.org/package/Agda/Agda-2.6.4.3.tar.gz"
-    sha256 "74edc96ec57d43bc148b329c02f6b06c3c3c16e8e40802e735570b1424df03a2"
+    url "https://github.com/agda/agda/archive/refs/tags/v2.6.4.3-r1.tar.gz"
+    sha256 "15a0ebf08b71ebda0510c8cad04b053beeec653ed26e2c537614a80de8b2e132"
+    version "2.6.4.3"
 
     resource "stdlib" do
       url "https://github.com/agda/agda-stdlib/archive/refs/tags/v2.0.tar.gz"
