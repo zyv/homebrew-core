@@ -1217,6 +1217,7 @@ lf
 libabigail
 libadwaita
 libaec
+libass
 libassuan
 libavif
 libbpf
