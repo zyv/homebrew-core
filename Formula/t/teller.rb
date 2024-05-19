@@ -1,8 +1,8 @@
 class Teller < Formula
   desc "Secrets management tool for developers built in Go"
   homepage "https://github.com/tellerops/teller"
-  url "https://github.com/tellerops/teller/archive/refs/tags/v2.0.5.tar.gz"
-  sha256 "736bfe5781c85f02b56dba9e987016510918a5b951b56f3bf1e42f291ce32f59"
+  url "https://github.com/tellerops/teller/archive/refs/tags/v2.0.7.tar.gz"
+  sha256 "1d4275ede4366a31efc94039c58da4cec87466d09cc01444c3c18e9432716d23"
   license "Apache-2.0"
   head "https://github.com/tellerops/teller.git", branch: "master"
 
@@ -17,6 +17,7 @@ class Teller < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "protobuf" => :build
   depends_on "rust" => :build
 
   on_linux do
