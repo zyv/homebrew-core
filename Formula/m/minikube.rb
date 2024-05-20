@@ -3,7 +3,7 @@ class Minikube < Formula
   homepage "https://minikube.sigs.k8s.io/"
   url "https://github.com/kubernetes/minikube.git",
       tag:      "v1.33.1",
-      revision: "248d1ec5b3f9be5569977749a725f47b018078ff"
+      revision: "5883c09216182566a63dff4c326a6fc9ed2982ff"
   license "Apache-2.0"
   head "https://github.com/kubernetes/minikube.git", branch: "master"
 
