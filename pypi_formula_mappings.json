@@ -334,6 +334,9 @@
   "goolabs": {
     "exclude_packages": ["certifi"]
   },
+  "gorilla-cli": {
+    "exclude_packages": ["certifi"]
+  },
   "gptline": {
     "exclude_packages": ["certifi", "pillow"]
   },

@@ -924,6 +924,7 @@ goredo
 goreleaser
 goreman
 goresym
+gorilla-cli
 gosec
 gossip
 gostatic
