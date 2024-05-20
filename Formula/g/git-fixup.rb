@@ -1,8 +1,8 @@
 class GitFixup < Formula
   desc "Alias for git commit --fixup <ref>"
   homepage "https://github.com/keis/git-fixup"
-  url "https://github.com/keis/git-fixup/archive/refs/tags/v1.5.0.tar.gz"
-  sha256 "b110730f37009f8fe26bcbdd83e20a9ccad02367b48cd0cfe50f4ec1a74f0eae"
+  url "https://github.com/keis/git-fixup/archive/refs/tags/v1.6.1.tar.gz"
+  sha256 "414d207687059094df9603c79d5e52343704e077b72777f25eda4d6ce291046e"
   license "ISC"
   head "https://github.com/keis/git-fixup.git", branch: "master"
 
