@@ -3,8 +3,8 @@ class CheckJsonschema < Formula
 
   desc "JSON Schema CLI"
   homepage "https://github.com/python-jsonschema/check-jsonschema"
-  url "https://files.pythonhosted.org/packages/a0/cf/7dd56b2153e42604a5d9e13983dea7d2979c0d587e0a6936978f6a3fd8a5/check_jsonschema-0.28.3.tar.gz"
-  sha256 "ffd55ec4e1cf6aec2860cab18f0d0f1aa4a886d01b81395f6be50d0cc0201159"
+  url "https://files.pythonhosted.org/packages/53/bb/c8c1d02b38cbc4726b08db61ba36d9f1aa8c99c62d5de515966eb35dfa09/check_jsonschema-0.28.4.tar.gz"
+  sha256 "e6acd2e89a7cbc41d2813a5b00fb5dfb7a14a5e72f4898a62bc761cf0899ad97"
   license "Apache-2.0"
   head "https://github.com/python-jsonschema/check-jsonschema.git", branch: "main"
 
@@ -88,8 +88,8 @@ class CheckJsonschema < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/28/a2/423f4d16d6934ef502f10ad56673719dd4345e656aedbd6687ccc359ffc5/requests-2.32.0.tar.gz"
+    sha256 "fa5490319474c82ef1d2c9bc459d3652e3ae4ef4c4ebdd18a21145a47ca4b6b8"
   end
 
   resource "rfc3339-validator" do
