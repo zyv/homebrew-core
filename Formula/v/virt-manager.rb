@@ -6,7 +6,7 @@ class VirtManager < Formula
   url "https://releases.pagure.org/virt-manager/virt-manager-4.1.0.tar.gz"
   sha256 "950681d7b32dc61669278ad94ef31da33109bf6fcf0426ed82dfd7379aa590a2"
   license "GPL-2.0-or-later"
-  revision 4
+  revision 5
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
   bottle do
@@ -30,6 +30,7 @@ class VirtManager < Formula
   depends_on "gtksourceview4"
   depends_on "libosinfo"
   depends_on "libvirt-glib"
+  depends_on "libvirt-python"
   depends_on "libxml2" # can't use from macos, since we need python3 bindings
   depends_on :macos
   depends_on "osinfo-db"
@@ -47,11 +48,6 @@ class VirtManager < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
     sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
-  end
-
-  resource "libvirt-python" do
-    url "https://files.pythonhosted.org/packages/47/f7/5c5112f79761616bf0388b97bb4d0ea1de1d015fb46a40672fe56fdc8ef0/libvirt-python-10.2.0.tar.gz"
-    sha256 "483a2e38ffc2e65f743e4c819ccb45135dbe50b594a0a2cd60b73843dcfde694"
   end
 
   resource "requests" do

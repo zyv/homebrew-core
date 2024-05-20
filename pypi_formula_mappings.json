@@ -800,7 +800,7 @@
   },
   "virt-manager": {
     "exclude_packages": ["certifi"],
-    "extra_packages": ["libvirt-python", "requests"]
+    "extra_packages": ["requests"]
   },
   "volatility": {
     "extra_packages": ["capstone", "pycryptodome", "yara-python", "jsonschema"]
