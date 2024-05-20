@@ -1232,6 +1232,7 @@ libdap
 libdeflate
 libdnet
 libdpp
+libedit
 libepoxy
 libewf
 libfabric
