@@ -1,8 +1,8 @@
 class GoSizeAnalyzer < Formula
   desc "Analyzing the dependencies in compiled Golang binaries"
   homepage "https://github.com/Zxilly/go-size-analyzer"
-  url "https://github.com/Zxilly/go-size-analyzer/archive/refs/tags/v1.0.9.tar.gz"
-  sha256 "18fdc0e5b2db2bce861d9ce51137d465b10752395da8c9b621fee56b7fe2c9a9"
+  url "https://github.com/Zxilly/go-size-analyzer/archive/refs/tags/v1.0.10.tar.gz"
+  sha256 "d1db22afffe756229ad2046f36223d0a2ac0472c9c17313f37e159e2a03b32f8"
   license "AGPL-3.0-only"
   head "https://github.com/Zxilly/go-size-analyzer.git", branch: "master"
 
@@ -53,7 +53,7 @@ class GoSizeAnalyzer < Formula
 
     system "go", "build", "-o", testpath/"hello", testpath/"hello.go"
 
-    output = shell_output("#{bin}/gsa #{testpath}/hello")
+    output = shell_output("#{bin}/gsa #{testpath}/hello 2>&1")
 
     assert_includes output, "runtime"
     assert_includes output, "main"
