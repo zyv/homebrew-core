@@ -830,7 +830,6 @@ ggshield
 ghcup
 ghex
 ghorg
-ghostscript
 ghostunnel
 ghq
 ghz
