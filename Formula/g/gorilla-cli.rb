@@ -7,6 +7,16 @@ class GorillaCli < Formula
   sha256 "bf375230a06fac99ba56f14f49474466036f072751cd1d5a1908e8ace561856c"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "cd2121fe85e6f0fab3f223998773d4435493cce3d70bb348652dbf1efc1ce2d7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "153a8cee180cfc7005a3696736532eb7b789dd9e764521e9f2d834447b4b1a53"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5d3d36069764d98c9c864b2ccb96ce8f7b397b0f42e41ceb54dbb05deca080fc"
+    sha256 cellar: :any_skip_relocation, sonoma:         "300136a73982ba38da7017771816046e2c58bb32a31958cbdecc45973fc98787"
+    sha256 cellar: :any_skip_relocation, ventura:        "4c568b83709eb52f803af9438335da682561c3b68651128d9f0db7cc25d68961"
+    sha256 cellar: :any_skip_relocation, monterey:       "8822e3df327f7c273372e248596c3d482cdbc2571e735debd4c40ecc35b08fa1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fff465dc09cfb4d03c92cb92872ae55d43c283990c364c23fe52477fc333dbbd"
+  end
+
   depends_on "certifi"
   depends_on "python@3.12"
 
