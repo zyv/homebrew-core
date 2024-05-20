@@ -1,8 +1,8 @@
 class Mrboom < Formula
   desc "Eight player Bomberman clone"
   homepage "http://mrboom.mumblecore.org/"
-  url "https://github.com/Javanaise/mrboom-libretro/releases/download/5.4/MrBoom-src-5.4.tar.gz"
-  sha256 "5f8f612a850a184dc59f03bcc74e279b50bc027d8ca2d9a4927a4caaa570b93a"
+  url "https://github.com/Javanaise/mrboom-libretro/releases/download/5.5/MrBoom-src-5.5.tar.gz"
+  sha256 "c37c09c30662b17f1c7da337da1475f534674686ce78c7e15b603eeadc4498f0"
   license "MIT"
 
   bottle do
@@ -20,13 +20,6 @@ class Mrboom < Formula
   depends_on "minizip"
   depends_on "sdl2"
   depends_on "sdl2_mixer"
-
-  # Fixes: common.cpp:115:10: fatal error: 'SDL_mixer.h' file not found
-  # upstream build patch, https://github.com/Javanaise/mrboom-libretro/pull/125
-  patch do
-    url "https://github.com/Javanaise/mrboom-libretro/commit/126f9d1124b1220e5ffea20f0e41ed9bfc77cda5.patch?full_index=1"
-    sha256 "09cb065af18578080214322f0e8fbd03d1b3bebf8c802747447f518e0778c807"
-  end
 
   def install
     system "make", "mrboom", "LIBSDL2=1"
