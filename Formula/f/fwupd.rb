@@ -3,10 +3,9 @@ class Fwupd < Formula
 
   desc "Firmware update daemon"
   homepage "https://github.com/fwupd/fwupd"
-  url "https://github.com/fwupd/fwupd/releases/download/1.9.19/fwupd-1.9.19.tar.xz"
-  sha256 "29d599277d10376a39733cb8978223512f1ce573face51a788649b9b2f47d146"
+  url "https://github.com/fwupd/fwupd/releases/download/1.9.20/fwupd-1.9.20.tar.xz"
+  sha256 "b86a2d7fe1b6cc0ac4f75f3351a78cb3c225880c9e20b932fa078ef472e9fcb2"
   license "LGPL-2.1-or-later"
-  revision 1
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
   bottle do
@@ -37,9 +36,11 @@ class Fwupd < Formula
   depends_on "libjcat"
   depends_on "libxmlb"
   depends_on "protobuf-c"
+  depends_on "sqlite"
+  depends_on "xz"
 
   uses_from_macos "curl"
-  uses_from_macos "sqlite"
+  uses_from_macos "zlib"
 
   resource "jinja2" do
     url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
