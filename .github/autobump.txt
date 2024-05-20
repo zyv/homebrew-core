@@ -1224,6 +1224,7 @@ libassuan
 libavif
 libbpf
 libbsd
+libcap
 libcap-ng
 libchewing
 libclc
