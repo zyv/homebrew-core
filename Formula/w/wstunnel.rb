@@ -1,8 +1,8 @@
 class Wstunnel < Formula
   desc "Tunnel all your traffic over Websocket or HTTP2"
   homepage "https://github.com/erebe/wstunnel"
-  url "https://github.com/erebe/wstunnel/archive/refs/tags/v9.5.0.tar.gz"
-  sha256 "15e83929af29e44d4be1b9e13f38d3420d1681fdfe900409607d56579a1ceee1"
+  url "https://github.com/erebe/wstunnel/archive/refs/tags/v9.5.1.tar.gz"
+  sha256 "6451fe1cf4c7f9f6a990cea447359d4d2fee92e434d414edd48dc8345786efb2"
   license "BSD-3-Clause"
   head "https://github.com/erebe/wstunnel.git", branch: "main"
 
@@ -25,12 +25,6 @@ class Wstunnel < Formula
   end
 
   depends_on "rust" => :build
-
-  # patch version info, upstream pr ref, https://github.com/erebe/wstunnel/pull/276
-  patch do
-    url "https://github.com/erebe/wstunnel/commit/4f1ab5c8cb7c32048e380c3ce35e817e2df82f85.patch?full_index=1"
-    sha256 "fdd5fea55f244239b21f22a14b841c404158ca24884fd74ae7675161601137a4"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args
