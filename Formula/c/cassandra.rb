@@ -4,9 +4,9 @@ class Cassandra < Formula
 
   desc "Eventually consistent, distributed key-value store"
   homepage "https://cassandra.apache.org"
-  url "https://www.apache.org/dyn/closer.lua?path=cassandra/4.1.4/apache-cassandra-4.1.4-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/cassandra/4.1.4/apache-cassandra-4.1.4-bin.tar.gz"
-  sha256 "03447f958339ba70f717cf2cf2fd97be17876540526a86343db635a8ca523bcd"
+  url "https://www.apache.org/dyn/closer.lua?path=cassandra/4.1.5/apache-cassandra-4.1.5-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/cassandra/4.1.5/apache-cassandra-4.1.5-bin.tar.gz"
+  sha256 "ed184c361482e8b34f75537a1ac83755286313d6dcb0e11293813fb8ce4afbf5"
   license "Apache-2.0"
 
   bottle do
@@ -25,8 +25,8 @@ class Cassandra < Formula
   depends_on "python@3.12"
 
   resource "cassandra-driver" do
-    url "https://files.pythonhosted.org/packages/59/28/3e0ea7003910166525304b65a8ffa190666b483c2cc9c38ed5746a25d0fd/cassandra-driver-3.29.0.tar.gz"
-    sha256 "0a34f9534356e5fd33af8cdda109d5e945b6335cb50399b267c46368c4e93c98"
+    url "https://files.pythonhosted.org/packages/07/46/cdf1e69263d8c2fe7a05a8f16ae67910b62cc40ba313ffbae3bc5025519a/cassandra-driver-3.29.1.tar.gz"
+    sha256 "38e9c2a2f2a9664bb03f1f852d5fccaeff2163942b5db35dffcf8bf32a51cfe5"
   end
 
   resource "click" do
