@@ -2,11 +2,11 @@ class ArcadeLearningEnvironment < Formula
   include Language::Python::Virtualenv
 
   desc "Platform for AI research"
-  homepage "https://github.com/mgbellemare/Arcade-Learning-Environment"
-  url "https://github.com/mgbellemare/Arcade-Learning-Environment/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "28960616cd89c18925ced7bbdeec01ab0b2ebd2d8ce5b7c88930e97381b4c3b5"
+  homepage "https://github.com/Farama-Foundation/Arcade-Learning-Environment"
+  url "https://github.com/Farama-Foundation/Arcade-Learning-Environment/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "7625ffbb9eb6c0efc6716f34b93bc8339f2396ea5e31191a251cb31bdd363f80"
   license "GPL-2.0-only"
-  head "https://github.com/mgbellemare/Arcade-Learning-Environment.git", branch: "master"
+  head "https://github.com/Farama-Foundation/Arcade-Learning-Environment.git", branch: "master"
 
   bottle do
     rebuild 2
@@ -31,18 +31,10 @@ class ArcadeLearningEnvironment < Formula
 
   fails_with gcc: "5"
 
-  # Don't require importlib-resources for recent pythons
-  # https://github.com/mgbellemare/Arcade-Learning-Environment/pull/491
-  patch do
-    url "https://github.com/mgbellemare/Arcade-Learning-Environment/commit/61da474b8e3b3993969c9e4de3933559598613e1.patch?full_index=1"
-    sha256 "72baf458430b81a6b8e56f1fc8edde732ba210c3540a6775000d6393dbcb73dd"
-  end
-
-  # Allow building from tarball
-  # https://github.com/mgbellemare/Arcade-Learning-Environment/pull/492
-  patch do
-    url "https://github.com/mgbellemare/Arcade-Learning-Environment/commit/7e3d9ffbca6d97b49f48e46c030b4236eb09019b.patch?full_index=1"
-    sha256 "64cf83625fe19bc32097b34853db6752fcf835a3d42909a9ac88315dfca2b85f"
+  # See https://github.com/Farama-Foundation/Arcade-Learning-Environment/blob/master/scripts/download_unpack_roms.sh
+  resource "roms" do
+    url "https://gist.githubusercontent.com/jjshoots/61b22aefce4456920ba99f2c36906eda/raw/00046ac3403768bfe45857610a3d333b8e35e026/Roms.tar.gz.b64"
+    sha256 "02ca777c16476a72fa36680a2ba78f24c3ac31b2155033549a5f37a0653117de"
   end
 
   # Allow building with system pybind11
@@ -65,6 +57,18 @@ class ArcadeLearningEnvironment < Formula
     system "cmake", "--install", "build"
     pkgshare.install "tests/resources/tetris.bin"
 
+    # Install ROMs
+    resource("roms").stage do
+      require "base64"
+
+      pwd = Pathname.pwd
+      encoded = (pwd/"Roms.tar.gz.b64").read
+      (pwd/"Roms.tar.gz").write Base64.decode64(encoded)
+
+      system "tar", "-xzf", "Roms.tar.gz"
+      (buildpath/"src/python/roms").install pwd.glob("ROM/*/*.bin")
+    end
+
     # error: no member named 'signbit' in the global namespace
     inreplace "setup.py", "cmake_args = [", "\\0\"-DCMAKE_OSX_SYSROOT=#{MacOS.sdk_path}\"," if OS.mac?
     system python3, "-m", "pip", "install", *std_pip_args, "."
@@ -79,15 +83,13 @@ class ArcadeLearningEnvironment < Formula
   end
 
   test do
-    output = shell_output("#{bin}/ale-import-roms 2>&1", 2)
-    assert_match "one of the arguments --import-from-pkg romdir is required", output
-    output = shell_output("#{bin}/ale-import-roms .").lines.last.chomp
-    assert_equal "Imported 0 / 0 ROMs", output
+    (testpath/"roms.py").write <<~EOS
+      from ale_py.roms import get_all_rom_ids
+      print(get_all_rom_ids())
+    EOS
+    assert_match "adventure", shell_output("#{python3} roms.py")
 
     cp pkgshare/"tetris.bin", testpath
-    output = shell_output("#{bin}/ale-import-roms --dry-run .").lines.first.chomp
-    assert_match(/\[SUPPORTED\].*tetris\.bin/, output)
-
     (testpath/"test.py").write <<~EOS
       from ale_py import ALEInterface, SDL_SUPPORT
       assert SDL_SUPPORT
