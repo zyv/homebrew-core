@@ -1825,6 +1825,7 @@ python-lxml
 python-matplotlib
 python-setuptools
 python-yq
+pythran
 pyyaml
 qbe
 qbs
