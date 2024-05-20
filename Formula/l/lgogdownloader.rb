@@ -1,10 +1,9 @@
 class Lgogdownloader < Formula
   desc "Unofficial downloader for GOG.com games"
   homepage "https://sites.google.com/site/gogdownloader/"
-  url "https://github.com/Sude-/lgogdownloader/releases/download/v3.12/lgogdownloader-3.12.tar.gz"
-  sha256 "bf3a16c1b2ff09152f9ac52ea9b52dfc0afae799ed1b370913149cec87154529"
+  url "https://github.com/Sude-/lgogdownloader/releases/download/v3.13/lgogdownloader-3.13.tar.gz"
+  sha256 "e1bd9abd5955ad6a6d083674021cd9421d03473ce90d6e6a1a497f71c05d1fd0"
   license "WTFPL"
-  revision 3
   head "https://github.com/Sude-/lgogdownloader.git", branch: "master"
 
   livecheck do
@@ -29,14 +28,18 @@ class Lgogdownloader < Formula
   depends_on "htmlcxx"
   depends_on "jsoncpp"
   depends_on "rhash"
+  depends_on "tidy-html5"
   depends_on "tinyxml2"
 
   uses_from_macos "curl"
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DJSONCPP_INCLUDE_DIR=#{Formula["jsoncpp"].opt_include}",
-                    *std_cmake_args
+    args = %W[
+      -DJSONCPP_INCLUDE_DIR=#{Formula["jsoncpp"].opt_include}
+      -DBoost_INCLUDE_DIR=#{Formula["boost"].opt_include}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end

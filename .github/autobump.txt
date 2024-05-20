@@ -1218,6 +1218,7 @@ lexbor
 lexicon
 lexido
 lf
+lgogdownloader
 libabigail
 libadwaita
 libaec
