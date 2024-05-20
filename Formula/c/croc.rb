@@ -1,8 +1,8 @@
 class Croc < Formula
   desc "Securely send things from one computer to another"
   homepage "https://github.com/schollz/croc"
-  url "https://github.com/schollz/croc/archive/refs/tags/v9.6.16.tar.gz"
-  sha256 "d535362d0900e841090e48cd1d026bca66f428786adc627a95fe61f1e0ea8c00"
+  url "https://github.com/schollz/croc/archive/refs/tags/v9.6.17.tar.gz"
+  sha256 "d7b61c6cdb5c0d988d1bd71d0d6d97152c32e1019e5e9ce940fdeb3f06c84829"
   license "MIT"
   head "https://github.com/schollz/croc.git", branch: "master"
 
@@ -17,10 +17,6 @@ class Croc < Formula
   end
 
   depends_on "go" => :build
-
-  # Version 9.6.16 reports as previous 9.6.15 version, reported:
-  # https://github.com/schollz/croc/issues/703
-  patch :DATA
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
@@ -45,17 +41,3 @@ class Croc < Formula
     assert_match shell_output("#{bin}/croc --relay=localhost:#{port} --overwrite --yes homebrew-test").chomp, "mytext"
   end
 end
-__END__
-diff --git a/src/cli/cli.go b/src/cli/cli.go
-index acd2a18..67598f6 100644
---- a/src/cli/cli.go
-+++ b/src/cli/cli.go
-@@ -36,7 +36,7 @@ func Run() (err error) {
- 	app := cli.NewApp()
- 	app.Name = "croc"
- 	if Version == "" {
--		Version = "v9.6.15"
-+		Version = "v9.6.16"
- 	}
- 	app.Version = Version
- 	app.Compiled = time.Now()
