@@ -3,8 +3,8 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm.fming.dev"
-  url "https://files.pythonhosted.org/packages/f6/22/e34f13f5e9c4b311b2568af86b09c22550c5db24a0efd47518721514c651/pdm-2.15.2.tar.gz"
-  sha256 "c08e87078c29c00e7ad9681dc6a23419dc5617dcbe6cc205024ef4b4e7e28475"
+  url "https://files.pythonhosted.org/packages/f1/6f/4f3c970b6c4257c3a60938e1339da3098716d72bd92845063887f7c2db3c/pdm-2.15.3.tar.gz"
+  sha256 "c227d81f6bf109626a5643a7bb531c5f5b777a850c4eac8d08b472c1146beee5"
   license "MIT"
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
@@ -102,13 +102,13 @@ class Pdm < Formula
   end
 
   resource "pbs-installer" do
-    url "https://files.pythonhosted.org/packages/bc/51/1a535bbbb7d2fbd30853c62a26d5d66c2d77549b750d9f3fce4f238ae3e1/pbs_installer-2024.4.1.tar.gz"
-    sha256 "1f2aca82511fb9e1973b14708d7386780a8c56d111b680ae5786b3f430fa918a"
+    url "https://files.pythonhosted.org/packages/08/ae/4cd6d39bd365ac440f6a0f11e3614356fc280a8717b22a36f73f139f59b4/pbs_installer-2024.4.24.tar.gz"
+    sha256 "19224733068b0ffa39b53afbb61544bee8ecb9503e7222ba034f07b9913e2c1c"
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/b2/e4/2856bf61e54d7e3a03dd00d0c1b5fa86e6081e8f262eb91befbe64d20937/platformdirs-4.2.1.tar.gz"
-    sha256 "031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"
+    url "https://files.pythonhosted.org/packages/f5/52/0763d1d976d5c262df53ddda8d8d4719eedf9594d046f117c25a27261a19/platformdirs-4.2.2.tar.gz"
+    sha256 "38b7b51f512eed9e84a22788b4bce1de17c0adb134d6becb09836e37d8654cd3"
   end
 
   resource "pygments" do
@@ -152,8 +152,8 @@ class Pdm < Formula
   end
 
   resource "tomlkit" do
-    url "https://files.pythonhosted.org/packages/7d/49/4c0764898ee67618996148bdba4534a422c5e698b4dbf4001f7c6f930797/tomlkit-0.12.4.tar.gz"
-    sha256 "7ca1cfc12232806517a8515047ba66a19369e71edf2439d0f5824f91032b6cc3"
+    url "https://files.pythonhosted.org/packages/2b/ab/18f4c8f2bec75eb1a7aebcc52cdb02ab04fd39ff7025bb1b1c7846cc45b8/tomlkit-0.12.5.tar.gz"
+    sha256 "eef34fba39834d4d6b73c9ba7f3e4d1c417a4e56f89a7e96e090dd0d24b8fb3c"
   end
 
   resource "truststore" do
@@ -172,13 +172,8 @@ class Pdm < Formula
   end
 
   resource "virtualenv" do
-    url "https://files.pythonhosted.org/packages/93/9f/97beb3dd55a764ac9776c489be4955380695e8d7a6987304e58778ac747d/virtualenv-20.26.1.tar.gz"
-    sha256 "604bfdceaeece392802e6ae48e69cec49168b9c5f4a44e483963f9242eb0e78b"
-  end
-
-  resource "zstandard" do
-    url "https://files.pythonhosted.org/packages/5d/91/2162ab4239b3bd6743e8e407bc2442fca0d326e2d77b3f4a88d90ad5a1fa/zstandard-0.22.0.tar.gz"
-    sha256 "8226a33c542bcb54cd6bd0a366067b610b41713b64c9abec1bc4533d69f51e70"
+    url "https://files.pythonhosted.org/packages/44/5a/cabd5846cb550e2871d9532def625d0771f4e38f765c30dc0d101be33697/virtualenv-20.26.2.tar.gz"
+    sha256 "82bf0f4eebbb78d36ddaee0283d43fe5736b53880b8a8cdcd37390a07ac3741c"
   end
 
   def install
