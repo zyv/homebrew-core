@@ -1,8 +1,8 @@
 class Xcodegen < Formula
   desc "Generate your Xcode project from a spec file and your folder structure"
   homepage "https://github.com/yonaskolb/XcodeGen"
-  url "https://github.com/yonaskolb/XcodeGen/archive/refs/tags/2.40.1.tar.gz"
-  sha256 "b9e6233a32819bf83d17f49d014610703f0fd5170b510f527bf4779aecc86d0b"
+  url "https://github.com/yonaskolb/XcodeGen/archive/refs/tags/2.41.0.tar.gz"
+  sha256 "d7588e490ea636cc4eabd08b6f63167c1497a5d579b692fc02e8b1e39636810c"
   license "MIT"
   head "https://github.com/yonaskolb/XcodeGen.git", branch: "master"
 
