@@ -1,8 +1,8 @@
 class ChainloopCli < Formula
   desc "CLI for interacting with Chainloop"
   homepage "https://docs.chainloop.dev"
-  url "https://github.com/chainloop-dev/chainloop/archive/refs/tags/v0.87.2.tar.gz"
-  sha256 "5e8cf54312b8a13edaef627fd00d61fe003695e3edcf0f1dbe63789e894720ad"
+  url "https://github.com/chainloop-dev/chainloop/archive/refs/tags/v0.88.1.tar.gz"
+  sha256 "4cb3d44ec1d81e86ba5b613258fc1a50d24d504685e230f1f53e8dbcdd08da79"
   license "Apache-2.0"
   head "https://github.com/chainloop-dev/chainloop.git", branch: "main"
 
@@ -24,7 +24,7 @@ class ChainloopCli < Formula
       -X github.com/chainloop-dev/chainloop/app/cli/cmd.Version=#{version}
     ]
 
-    system "go", "build", *std_go_args(output: bin/"chainloop", ldflags:), "./app/cli"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"chainloop"), "./app/cli"
 
     generate_completions_from_executable(bin/"chainloop", "completion", base_name: "chainloop")
   end
