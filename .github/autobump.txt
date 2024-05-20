@@ -773,6 +773,7 @@ foreman
 forgit
 fork-cleaner
 fortio
+fortls
 fossil
 fourmolu
 fourstore

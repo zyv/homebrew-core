@@ -3,8 +3,8 @@ class Fortls < Formula
 
   desc "Fortran language server"
   homepage "https://fortls.fortran-lang.org/"
-  url "https://files.pythonhosted.org/packages/94/0c/80c669ecf7ae6b45c2e1fa2313d41af1e1c7a3e4f68e2fc9acec00300938/fortls-3.0.0.tar.gz"
-  sha256 "1cf560b56aa74221d93d414b27f0d43c0e2475addcf1c1622713017c5bfbef01"
+  url "https://files.pythonhosted.org/packages/7a/3f/db215a89836cf9c9e7d2039f9ded31511fdaeceb63bb8bc8d0e01714b1a0/fortls-3.1.0.tar.gz"
+  sha256 "e38f9f6af548f78151d54bdbb9884166f8d717f8e147ab1e2dbf06b985df2c6d"
   license "MIT"
   head "https://github.com/fortran-lang/fortls.git", branch: "master"
 
