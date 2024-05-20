@@ -9,13 +9,13 @@ class Pythran < Formula
   head "https://github.com/serge-sans-paille/pythran.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ed54e55300e0492657e1b14e520d1fdc4dcd3488e80af86d56806f8128fdd15b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ed54e55300e0492657e1b14e520d1fdc4dcd3488e80af86d56806f8128fdd15b"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ed54e55300e0492657e1b14e520d1fdc4dcd3488e80af86d56806f8128fdd15b"
-    sha256 cellar: :any_skip_relocation, sonoma:         "7ce3a62cdded4844c8e48eb4d94d44a1f8b0e29ea6c3ba9917de3035d436c144"
-    sha256 cellar: :any_skip_relocation, ventura:        "7ce3a62cdded4844c8e48eb4d94d44a1f8b0e29ea6c3ba9917de3035d436c144"
-    sha256 cellar: :any_skip_relocation, monterey:       "7ce3a62cdded4844c8e48eb4d94d44a1f8b0e29ea6c3ba9917de3035d436c144"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d1b90ef9e073d8a0859320be40980d7ace987e028368fac19c1c457191f2766b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "52722dc180e865d03abb75e35f9ced44c0707ad43d5692f7b811dd786e3f5902"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4020598fc8f4ef658cfbd3e03b7291aded9e6d989251602e842dec636a57000e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3e6ab2dcd805b62ade9c04b231b76ec2e3edc124092d9cb4b1b5a90e0a431be0"
+    sha256 cellar: :any_skip_relocation, sonoma:         "21f374b129a08b28f3f555732ef6d338d8f43b9ed1765dba315e829b0e74c508"
+    sha256 cellar: :any_skip_relocation, ventura:        "81df4a3f1240795897a2c4285f3c7e6c173dddf7510212053429435cc5831150"
+    sha256 cellar: :any_skip_relocation, monterey:       "aedb4b56e50b316822d5a56b97ddb6906c9e7bfb2921bc9a560b2acb9458f340"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2534151a43e0bdd098f01a1c1dec5a4726c499e0135640ce0c95615f6a33c21f"
   end
 
   depends_on "gcc" # for OpenMP
