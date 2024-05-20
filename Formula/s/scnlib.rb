@@ -1,10 +1,9 @@
 class Scnlib < Formula
   desc "Scanf for modern C++"
   homepage "https://scnlib.dev"
-  url "https://github.com/eliaskosunen/scnlib/archive/refs/tags/v2.0.2.tar.gz"
-  sha256 "a485076b8710576cf05fbc086d39499d16804575c0660b0dfaeeaf7823660a17"
+  url "https://github.com/eliaskosunen/scnlib/archive/refs/tags/v2.0.3.tar.gz"
+  sha256 "507ed0e988f1d9460a9c921fc21f5a5244185a4015942f235522fbe5c21e6a51"
   license "Apache-2.0"
-  revision 2
   head "https://github.com/eliaskosunen/scnlib.git", branch: "master"
 
   bottle do
@@ -18,12 +17,6 @@ class Scnlib < Formula
 
   depends_on "cmake" => :build
   depends_on "simdutf"
-
-  # patch to support simdutf 5.2.2, https://github.com/eliaskosunen/scnlib/pull/102
-  patch do
-    url "https://github.com/eliaskosunen/scnlib/commit/f958f10131434ea76775e068648f7d6dd2b94924.patch?full_index=1"
-    sha256 "d952732c35bb6e345179ec19a32e88edd5f840719b4d3a5bb77b0c84344cda6c"
-  end
 
   def install
     args = %w[
