@@ -312,6 +312,7 @@ cfonts
 cfr-decompiler
 cfripper
 cfssl
+cfv
 cgal
 cgl
 cglm

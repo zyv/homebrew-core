@@ -3,8 +3,8 @@ class Cfv < Formula
 
   desc "Test and create various files (e.g., .sfv, .csv, .crc., .torrent)"
   homepage "https://github.com/cfv-project/cfv"
-  url "https://files.pythonhosted.org/packages/db/54/c5926a7846a895b1e096854f32473bcbdcb2aaff320995f3209f0a159be4/cfv-3.0.0.tar.gz"
-  sha256 "2530f08b889c92118658ff4c447ccf83ac9d2973af8dae4d33cf5bed1865b376"
+  url "https://files.pythonhosted.org/packages/29/ca/91cca3d1799d0e74b672e30c41f82a8135fe8d5baf7e6a8af2fdea282449/cfv-3.1.0.tar.gz"
+  sha256 "8f352fe4e99837720face2a339ac793f348dd967bacf2a0ff0f5e771340261e3"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -21,9 +21,6 @@ class Cfv < Formula
   depends_on "python@3.12"
 
   def install
-    # fix man folder location issue
-    inreplace "setup.py", "'man/man1'", "'share/man/man1'"
-
     virtualenv_install_with_resources
   end
 
