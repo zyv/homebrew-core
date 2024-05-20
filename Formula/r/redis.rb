@@ -3,14 +3,20 @@ class Redis < Formula
   homepage "https://redis.io/"
   # NOTE: Do not bump to v7.4+ as license changed to RSALv2+SSPLv1
   # https://github.com/redis/redis/pull/13157
-  url "https://download.redis.io/releases/redis-7.2.4.tar.gz"
-  sha256 "8d104c26a154b29fd67d6568b4f375212212ad41e0c2caa3d66480e78dbd3b59"
+  url "https://download.redis.io/releases/redis-7.2.5.tar.gz"
+  sha256 "5981179706f8391f03be91d951acafaeda91af7fac56beffb2701963103e423d"
   license "BSD-3-Clause"
   head "https://github.com/redis/redis.git", branch: "unstable"
 
   livecheck do
     url "https://download.redis.io/releases/"
     regex(/href=.*?redis[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    strategy :page_match do |page, regex|
+      version_limit = Version.new("7.4")
+      page.scan(regex).map do |match|
+        match[0] if Version.new(match[0]) < version_limit
+      end
+    end
   end
 
   bottle do
@@ -26,6 +32,8 @@ class Redis < Formula
   depends_on "openssl@3"
 
   def install
+    odie "Do not bump to v7.4+" if version.major_minor >= "7.4"
+
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}", "BUILD_TLS=yes"
 
     %w[run db/redis log].each { |p| (var/p).mkpath }
