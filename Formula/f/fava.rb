@@ -10,13 +10,13 @@ class Fava < Formula
   head "https://github.com/beancount/fava.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d9562161ed0720ccdf392c1ed83b459ce73de9ef0acfec7e0fa6e9aa09ced81e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c923375ff1997b63ba3c2dd2646e1c52228fdac861eee53bcecaf075d6a45123"
-    sha256 cellar: :any,                 arm64_monterey: "23491ee15ded810f256630e24a3be5e7b13860507276a77225c30133ac008b64"
-    sha256 cellar: :any_skip_relocation, sonoma:         "9c15abf5499c7036c083c7d1f110cfc977d7c10c9e2715f887a2d884e4cf4fe7"
-    sha256 cellar: :any_skip_relocation, ventura:        "387d2a03e7657afec4cccdd4b30eb60062d1edbffe316ffd0b2ba8c9736decbc"
-    sha256 cellar: :any,                 monterey:       "3b7e35c5370410587841cf5e068fd58d6b26d98b86e06d1bee1057096c0d958f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d56132621d1365f356f8be14e20d69a9bcd6368d0b4085e6abdf95f09d79ae5c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "22129c2bb33e69e8da83a6d0d92df4afdc4181f4522bbaa7512308a64e0ad5b0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "62a0edfe05a779c3fe5b572148abeb220c0dd921e276a45edee13962a2aecee6"
+    sha256 cellar: :any,                 arm64_monterey: "b53fdceff51001755c388f52390f95bf5f2013039d3f3bd5f0e84d552e5f5b49"
+    sha256 cellar: :any_skip_relocation, sonoma:         "95cd4a48cf27a5bd6b8d2169f8d46ee28b9e1681711be00b83d4fbc4d390b290"
+    sha256 cellar: :any_skip_relocation, ventura:        "9702ef9bfab1b650b5c26cda6b2ec530482cc0e29d7dd2dc9171436d209f52b4"
+    sha256 cellar: :any,                 monterey:       "12e19cacf18f57f42985b1c1db0197f723fe0f7f000a87467240c16983b5ff3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "86ecf980d7d8bdb876bc70200838357887d6fdc4d03b3930757aaf1961d65258"
   end
 
   depends_on "certifi"
