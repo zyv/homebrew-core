@@ -10,13 +10,13 @@ class Forbidden < Formula
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "63769938ebba8c2933a102216f4174a71bd04b210e84db1785d8a4f0f2e79f0e"
-    sha256 cellar: :any,                 arm64_ventura:  "5ed07e360344939056479f117edcde2a737e7a415b0e8fbabd43f4eab8900032"
-    sha256 cellar: :any,                 arm64_monterey: "56c00c02ff481e7b5b5243d1bb5c055a0c11a7e3c1ddfc30c694aec54ed9ecf4"
-    sha256 cellar: :any,                 sonoma:         "993b929119f242447dd237743b1cae05bfd37fbb254703fae9cd0e03c5262818"
-    sha256 cellar: :any,                 ventura:        "9d3c53ac99f1f80397d512eeb4511afd2e433bb4a03d57d980d0f25d423de778"
-    sha256 cellar: :any,                 monterey:       "e1ef099df77f1a22d262e41cfc74b4f6e70f0833a3414a0ea7bd57d9c74db753"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5d2e3e2b1a8dd131c9c4521e979b33e622a7751efcdb8f3cef26e31a6d4d7adb"
+    sha256 cellar: :any,                 arm64_sonoma:   "131384ae348893b0908929724081b46098d76fe2eb790686d70ec11c644d9252"
+    sha256 cellar: :any,                 arm64_ventura:  "a5f21680cd774da78bad2a7ddaff8130c48c0803ff80aeb7b973269d540a31e4"
+    sha256 cellar: :any,                 arm64_monterey: "f00cc6793dd97862cf31f1cfa1fd27e2efa7619364c7133f2968d7ef94b15baf"
+    sha256 cellar: :any,                 sonoma:         "e7bc2f158ceccf3dca6b18107061358dfaeb8c31e3fb046bee040abbb57533b9"
+    sha256 cellar: :any,                 ventura:        "8799430e6cef3aa6eae22049dc1e63e45258b904373d8daad151dc3f32f08118"
+    sha256 cellar: :any,                 monterey:       "596e793288afb0b6c9847e0ec7f542eac90f1a21837270c7a3e6042aff27bcdb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4be4b758002c2040e6bd880a5ea92464ae8fe9d2369d9d43ad665d7672b11ef3"
   end
 
   depends_on "certifi"
