@@ -1211,6 +1211,7 @@ leakcanary-shark
 lean-cli
 leapp-cli
 leetup
+legitify
 lego
 leiningen
 leptonica
