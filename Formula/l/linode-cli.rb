@@ -6,6 +6,7 @@ class LinodeCli < Formula
   url "https://files.pythonhosted.org/packages/b7/81/1d3f969f9ebd99bc80c052e87234269ef63e8deef9c9a8bc1561766bed4d/linode_cli-5.49.1.tar.gz"
   sha256 "7609390dbccb72967481ac43e76f2a92c253ac8bb501a6628b77404187573b63"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/linode/linode-cli.git", branch: "main"
 
   bottle do
@@ -78,8 +79,8 @@ class LinodeCli < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/55/59/8bccf4157baf25e4aa5a0bb7fa3ba8600907de105ebc22b0c78cfbf6f565/pygments-2.17.2.tar.gz"
-    sha256 "da46cec9fd2de5be3a8a784f434e4c4ab670b4ff54d605c4c2717e9d49c4c367"
+    url "https://files.pythonhosted.org/packages/8e/62/8336eff65bcbc8e4cb5d05b55faf041285951b6e80f33e2bff2024788f31/pygments-2.18.0.tar.gz"
+    sha256 "786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199"
   end
 
   resource "pyyaml" do
@@ -88,8 +89,8 @@ class LinodeCli < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "rich" do
