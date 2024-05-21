@@ -6,7 +6,7 @@ class Grip < Formula
   url "https://files.pythonhosted.org/packages/f4/3f/e8bc3ea1f24877292fa3962ad9e0234ad4bc787dc1eb5bd08c35afd0ceca/grip-4.6.2.tar.gz"
   sha256 "3cf6dce0aa06edd663176914069af83f19dcb90f3a9c401271acfa71872f8ce3"
   license "MIT"
-  revision 5
+  revision 6
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "188148d2c2631f5fd1ea018820ae4699ff2b548d31235b22f44117e9afa6d2aa"
@@ -82,8 +82,8 @@ class Grip < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/d8/c1/f32fb7c02e7620928ef14756ff4840cae3b8ef1d62f7e596bc5413300a16/requests-2.32.1.tar.gz"
+    sha256 "eb97e87e64c79e64e5b8ac75cee9dd1f97f49e289b083ee6be96268930725685"
   end
 
   resource "urllib3" do
