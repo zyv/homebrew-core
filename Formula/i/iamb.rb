@@ -25,6 +25,7 @@ class Iamb < Formula
 
   def install
     ENV["LIBSQLITE3_SYS_USE_PKG_CONFIG"] = "1"
+    ENV["VERGEN_GIT_SHA"] = tap.user
     system "cargo", "install", *std_cargo_args
   end
 
