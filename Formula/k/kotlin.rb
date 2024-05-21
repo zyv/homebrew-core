@@ -1,8 +1,8 @@
 class Kotlin < Formula
   desc "Statically typed programming language for the JVM"
   homepage "https://kotlinlang.org/"
-  url "https://github.com/JetBrains/kotlin/releases/download/v1.9.24/kotlin-compiler-1.9.24.zip"
-  sha256 "eb7b68e01029fa67bc8d060ee54c12018f2c60ddc438cf21db14517229aa693b"
+  url "https://github.com/JetBrains/kotlin/releases/download/v2.0.0/kotlin-compiler-2.0.0.zip"
+  sha256 "ef578730976154fd2c5968d75af8c2703b3de84a78dffe913f670326e149da3b"
   license "Apache-2.0"
 
   # This repository has thousands of development tags, so the `GithubLatest`
