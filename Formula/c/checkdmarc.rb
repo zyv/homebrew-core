@@ -10,13 +10,13 @@ class Checkdmarc < Formula
   head "https://github.com/domainaware/checkdmarc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3680a47f178cd3a8c2fb9a0f8a230829258609507d63fdbf2e36cbb47088607f"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3680a47f178cd3a8c2fb9a0f8a230829258609507d63fdbf2e36cbb47088607f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3680a47f178cd3a8c2fb9a0f8a230829258609507d63fdbf2e36cbb47088607f"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3680a47f178cd3a8c2fb9a0f8a230829258609507d63fdbf2e36cbb47088607f"
-    sha256 cellar: :any_skip_relocation, ventura:        "3680a47f178cd3a8c2fb9a0f8a230829258609507d63fdbf2e36cbb47088607f"
-    sha256 cellar: :any_skip_relocation, monterey:       "3680a47f178cd3a8c2fb9a0f8a230829258609507d63fdbf2e36cbb47088607f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9caebdcdefba3c289f8d429bb654e301d5a40e83f087dc372d41be00391fe506"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f37ecbd8f4a67955953854bf1fda6a1bbae3b74e382955eaf9a5626ce5abe7c0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "07d42320a68588e26252d47a0e3126d8dcdb20f48e8142f9dc48d63865877a99"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec5f3ba11b38f7691b7a6b803187a61d4d7f79491e358e4c07711e8ebed05828"
+    sha256 cellar: :any_skip_relocation, sonoma:         "fe4460542470e471d17bd37773f70e5afb00cedf8c2cee000552fd4ab56fec3c"
+    sha256 cellar: :any_skip_relocation, ventura:        "128d1b85a6a26ba95eb6e5852a581ef0710e82e2cced206bbacb87f770defe08"
+    sha256 cellar: :any_skip_relocation, monterey:       "b1734df5655d135bc7fa9b58faed2e461d9361b2747ba2dca9e8420180330c12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "76d8939aaec0fb6e498d45d0d28d815a4945da492c0c6142644ee7231c65e6d6"
   end
 
   depends_on "certifi"
