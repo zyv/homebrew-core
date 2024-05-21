@@ -7,7 +7,7 @@ class MetaPackageManager < Formula
   url "https://files.pythonhosted.org/packages/ea/32/a264dab7e8104720b9284c9e881eb47cd2d2ebbf8911bc08c3ec09cb49f2/meta_package_manager-5.15.0.tar.gz"
   sha256 "ab2bf53f4e2e798a14197ba8f40d81daea638644cb11911f189b3fd07a58f821"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "3201debddc9d05647d3c57eb8cd747e3708cbeb7571d11d81a87c793e51cb06b"
@@ -139,8 +139,8 @@ class MetaPackageManager < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "snowballstemmer" do
@@ -199,8 +199,8 @@ class MetaPackageManager < Formula
   end
 
   resource "wcmatch" do
-    url "https://files.pythonhosted.org/packages/38/c6/0c5f324561c9396868d6badf571590c1a7802a81180c3097e4dfdc2f35c0/wcmatch-8.5.1.tar.gz"
-    sha256 "c0088c7f6426cf6bf27e530e2b7b734031905f7e490475fd83c7c5008ab581b3"
+    url "https://files.pythonhosted.org/packages/ea/c4/55e0d36da61d7b8b2a49fd273e6b296fd5e8471c72ebbe438635d1af3968/wcmatch-8.5.2.tar.gz"
+    sha256 "a70222b86dea82fb382dd87b73278c10756c138bd6f8f714e2183128887b9eb2"
   end
 
   resource "wcwidth" do
