@@ -1,8 +1,8 @@
 class Libchewing < Formula
   desc "Intelligent phonetic input method library"
   homepage "https://chewing.im/"
-  url "https://github.com/chewing/libchewing/releases/download/v0.8.1/libchewing-0.8.1.tar.zst"
-  sha256 "038b7e1eef85f90b46c87fca7ca432796aaa14522291fa48c408c6f6f92ef83a"
+  url "https://github.com/chewing/libchewing/releases/download/v0.8.2/libchewing-0.8.2.tar.zst"
+  sha256 "46a520295f5313067610a0fccec596323558fafa74245ea56fcf506c9757fbdf"
   license "LGPL-2.1-only"
 
   bottle do
@@ -25,8 +25,20 @@ class Libchewing < Formula
     depends_on "texinfo" => :build
   end
 
+  # patch to use system corrosion, upstream PR ref, https://github.com/chewing/libchewing/pull/559
+  patch do
+    url "https://github.com/chewing/libchewing/commit/7ab350bd213c05389f14d1e97b88c019328977f4.patch?full_index=1"
+    sha256 "5c9c830d4b67f06837a5958dfd5ba84ba7a3488e81c9a3c0d3906dad9bbcdcdc"
+  end
+
+  # add option to turn off tests, upstream PR ref, https://github.com/chewing/libchewing/pull/560
+  patch do
+    url "https://github.com/chewing/libchewing/commit/31809bc57acbef19e3c051a104cac584a2bc22f2.patch?full_index=1"
+    sha256 "13874606bad73beef47e045dadd82e150ed7503ddee5248997e772302bf78aec"
+  end
+
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DBUILD_TESTS=OFF", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
