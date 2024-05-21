@@ -1032,6 +1032,7 @@ huggingface-cli
 hugo
 hut
 hwatch
+hy
 hyperfine
 hypre
 hysteria

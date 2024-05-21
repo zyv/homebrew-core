@@ -3,8 +3,8 @@ class Hy < Formula
 
   desc "Dialect of Lisp that's embedded in Python"
   homepage "https://github.com/hylang/hy"
-  url "https://files.pythonhosted.org/packages/51/f2/e34dd8cdf4ca4918dc4bc6f11021ed5f6aacef9ff22db1191577ed85ab3e/hy-0.28.0.tar.gz"
-  sha256 "ae202f0b5e9094489af2a41b2cee9e0f776d0572da69cb108db2935a7224e17a"
+  url "https://files.pythonhosted.org/packages/88/53/e92bfd8a36dc4a62e0922d409f703299eac8a0a74ed4db2106acad4f00a0/hy-0.29.0.tar.gz"
+  sha256 "1f985c92fddfb09989dd2a2ad75bf661efcbad571352eb5ee48c8b8e08f666fa"
   license "MIT"
 
   bottle do
