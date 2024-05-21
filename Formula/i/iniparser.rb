@@ -7,13 +7,13 @@ class Iniparser < Formula
   head "https://gitlab.com/iniparser/iniparser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "5bd9e7fd492164e6e74b2eb9b3ac322f13b0a383b55ac5c7d60ae20063093367"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ae8b0bc1a4d2edce09a3e9cd5771853c0d26eddc78b3e9dd3ba394c622f88e35"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "298cac18a7200dfda350aa218c12db2ed5ecddba1fff2969bef99cd0461318e4"
-    sha256 cellar: :any_skip_relocation, sonoma:         "6f763885403551ab79db25a4ba0c3bd8abf590a774395feaad050e37a9ba6a77"
-    sha256 cellar: :any_skip_relocation, ventura:        "5a7f176c604c0a24cc81d58989079e385665cf8e04e6f9c973537d324636a367"
-    sha256 cellar: :any_skip_relocation, monterey:       "304dfe192cec416dec4e74a941cf4ad34332f6866b1d4484dfadf746ea63f441"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c601ef4b4010ba20349b8a3098894b2fc1f6303cc6c126b3786e395584fe1a24"
+    sha256 cellar: :any,                 arm64_sonoma:   "ff19dc079e7b301b1ecf4fe793f71e24d4f3c62453ab75c5de958a03d1acdc30"
+    sha256 cellar: :any,                 arm64_ventura:  "dcae85da4cdd7827d6ebcfbddd005a5e1839b3944fafb0a2aaf25f8e35f78774"
+    sha256 cellar: :any,                 arm64_monterey: "0c3040ee4f3a1cd894fd2893642e2326f623c5b3148c5fce1db4a8636b3083d6"
+    sha256 cellar: :any,                 sonoma:         "78373947428f27fe156a8fb965fca7dbf959cfe73f3a44c51bd1256536f4a7a0"
+    sha256 cellar: :any,                 ventura:        "7de2d005b9b01c0cf9dc1897f4f4e326a4ceb62a0ac691487452e5e81ed7af94"
+    sha256 cellar: :any,                 monterey:       "208d502f8c397c5ddc6b1f2dec3b54fc03957ae94216c9eafc7bd204f331339a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "899186db0aa1a8860f8e188a3526bccbf076c183b78c3360d4528fba43e3ff70"
   end
 
   depends_on "cmake" => :build
