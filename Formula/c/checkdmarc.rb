@@ -6,7 +6,7 @@ class Checkdmarc < Formula
   url "https://files.pythonhosted.org/packages/df/06/e61a492a70a2126ac62fea72694aa0ce6f645cbe44ea513d9a68e2df822b/checkdmarc-5.3.1.tar.gz"
   sha256 "1d71e7fa611fa8faa36fad09416b5e2c3265d026d3b5209c051f4e292565e332"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/domainaware/checkdmarc.git", branch: "master"
 
   bottle do
@@ -44,8 +44,8 @@ class Checkdmarc < Formula
   end
 
   resource "publicsuffixlist" do
-    url "https://files.pythonhosted.org/packages/3a/0f/b8cf593fda6c7525ccc444d15f42f2aada2f3d9a34297f8c622696460102/publicsuffixlist-0.10.0.20240412.tar.gz"
-    sha256 "1b685d974dbd3258ab1c7f473449cf2a55275a74a995b60a8410f0f07d7f5b78"
+    url "https://files.pythonhosted.org/packages/34/be/78f21c540b536e6e0fa3f29b3d996dd2ca6e48a406a8124e9b4c1ac8e717/publicsuffixlist-0.10.0.20240515.tar.gz"
+    sha256 "d0195ba9e7d80e3611216bf95208d34489c3d76975c06a7e9e7c09044e6f6d7b"
   end
 
   resource "pyleri" do
@@ -54,8 +54,8 @@ class Checkdmarc < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/d8/c1/f32fb7c02e7620928ef14756ff4840cae3b8ef1d62f7e596bc5413300a16/requests-2.32.1.tar.gz"
+    sha256 "eb97e87e64c79e64e5b8ac75cee9dd1f97f49e289b083ee6be96268930725685"
   end
 
   resource "timeout-decorator" do
