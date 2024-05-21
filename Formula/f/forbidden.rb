@@ -6,6 +6,7 @@ class Forbidden < Formula
   url "https://files.pythonhosted.org/packages/fa/03/9f18651dbe09f130e444b836c448b3b3b8a6ddec4996c4183c17e9131592/forbidden-11.2.tar.gz"
   sha256 "be837a5f9bf22ab4f73dfe900f10f2b28baea7d766771becaeebe788968e78bb"
   license "MIT"
+  revision 1
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
   bottle do
@@ -59,18 +60,18 @@ class Forbidden < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/24/ca/2477acbf4d4abe7b2efaa775d5e96dfa236982671bd01a4172e81278d411/regex-2024.5.10.tar.gz"
-    sha256 "304e7e2418146ae4d0ef0e9ffa28f881f7874b45b4994cc2279b21b6e7ae50c8"
+    url "https://files.pythonhosted.org/packages/7a/db/5ddc89851e9cc003929c3b08b9b88b429459bf9acbf307b4556d51d9e49b/regex-2024.5.15.tar.gz"
+    sha256 "d3ee02d9e5f482cc8309134a91eeaacbdd2261ba111b0fef3748eeb4913e6a2c"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/d8/c1/f32fb7c02e7620928ef14756ff4840cae3b8ef1d62f7e596bc5413300a16/requests-2.32.1.tar.gz"
+    sha256 "eb97e87e64c79e64e5b8ac75cee9dd1f97f49e289b083ee6be96268930725685"
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/d6/4f/b10f707e14ef7de524fe1f8988a294fb262a29c9b5b12275c7e188864aed/setuptools-69.5.1.tar.gz"
-    sha256 "6c1fccdac05a97e598fb0ae3bbed5904ccb317337a51139dcd51453611bbb987"
+    url "https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz"
+    sha256 "f211a66637b8fa059bb28183da127d4e86396c991a942b028c6650d4319c3fd0"
   end
 
   resource "tabulate" do
@@ -89,8 +90,8 @@ class Forbidden < Formula
   end
 
   resource "zope-interface" do
-    url "https://files.pythonhosted.org/packages/2a/bd/a30bf6df24480017171da4f52ee527a72c7a6450c86355011e0156e71723/zope.interface-6.3.tar.gz"
-    sha256 "f83d6b4b22262d9a826c3bd4b2fbfafe1d0000f085ef8e44cd1328eea274ae6a"
+    url "https://files.pythonhosted.org/packages/1f/41/d0bdb50947f77341e979241de26f348e538a5d0f3ddb2482bc3907a3d728/zope_interface-6.4.tar.gz"
+    sha256 "b11f2b67ccc990a1522fa8cd3f5d185a068459f944ab2d0e7a1b15d31bcb4af4"
   end
 
   def install
