@@ -1,8 +1,8 @@
 class NodeAT18 < Formula
   desc "Platform built on V8 to build network applications"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v18.20.2/node-v18.20.2.tar.xz"
-  sha256 "8aaea7c9c7e927fb09d91498da311b6e4d18233390e23c723a53b891fad4c73f"
+  url "https://nodejs.org/dist/v18.20.3/node-v18.20.3.tar.xz"
+  sha256 "4b144f9fd6ae4b1d62b732c5b3160e7b9e84be4af0ae062c7b484e89ea41ae8d"
   license "MIT"
 
   livecheck do
@@ -51,13 +51,6 @@ class NodeAT18 < Formula
   end
 
   fails_with gcc: "5"
-
-  # upstream bug report, https://github.com/nodejs/node/issues/52230
-  # and v8 dep patch PR, https://github.com/nodejs/node/pull/52337
-  patch do
-    url "https://github.com/nodejs/node/commit/f7a319eb22d956c11c71fd203243c3fb7fa2094e.patch?full_index=1"
-    sha256 "e410e1abe96bc23b4dc8e308cdc93fc3e940b524bcff78d5a4c15f64b2e075f2"
-  end
 
   def install
     ENV.llvm_clang if OS.mac? && (DevelopmentTools.clang_build_version <= 1100)
