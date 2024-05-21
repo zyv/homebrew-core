@@ -14,13 +14,13 @@ class Ace < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "23bf3e3369c31a1a091f21a4ae0616c9766d24fe80c22c382c31ccc2ad05fd5b"
-    sha256 cellar: :any,                 arm64_ventura:  "6160d76088608db480cfbcd6789d3c5fbbe64cecc5453e23f8f8ee994cf4c9bb"
-    sha256 cellar: :any,                 arm64_monterey: "cfe86f5366472ea181c67f12b22e81ab5d7af1e7d8b323db0c0caa1eebdcae6a"
-    sha256 cellar: :any,                 sonoma:         "95440d175556c12584d81c191fee8831b00480da7d893144bb0db738b8bff5d3"
-    sha256 cellar: :any,                 ventura:        "458b1587d0d88b602d65042ca99f0345b615eb07b8ea641b68c0de29081d2bc5"
-    sha256 cellar: :any,                 monterey:       "82e137faffbbc08487414aa7521ce55a7a5436193f49815e0b6e6cf51d868346"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9ee81e6d3a4af23944fdf77a65cdd671b014d5d3b7c6731cd052f4e804802ffd"
+    sha256 cellar: :any,                 arm64_sonoma:   "ac9c7e43ccb61d15d93548aca81fa333c0dc142b55f860dd638ffc8e399d9b18"
+    sha256 cellar: :any,                 arm64_ventura:  "bdaec0419bfd90395dccd4cd33c0f5351e8238531b261b24761f95dc386343cf"
+    sha256 cellar: :any,                 arm64_monterey: "6e5819bbd942acbdf4840586c90d25dbfc28c656f495c490ccb6ba6d99be12e7"
+    sha256 cellar: :any,                 sonoma:         "adf3900bd19645c123da4d28ea0801bdb66df39eeaf0bba1b1604c0dab3b9a2d"
+    sha256 cellar: :any,                 ventura:        "25cc9c8513e6f06767be9ec8f5e3ba29168e580549777904ad65bf9c2607c744"
+    sha256 cellar: :any,                 monterey:       "257bcbe9063e065718dc17fa3f17ae5aed4e88bbf025567dae373ab92218c32c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "164697b83486f3e168d8f5fc5f77d153e591badef94ae74ce75b6ac27b8c6504"
   end
 
   def install
