@@ -16,13 +16,22 @@ class CrystalIcr < Formula
     sha256 x86_64_linux:   "5e1918682e133a6980b4a0e9284ef4aa60cbd6253da43bf06cf73ae96ceab4eb"
   end
 
+  depends_on "bdw-gc"
   depends_on "crystal"
   depends_on "libevent"
   depends_on "libyaml"
   depends_on "openssl@3"
+  depends_on "pcre2"
   depends_on "readline"
 
+  uses_from_macos "zlib"
+
   def install
+    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
+    # libunwind due to it being present in a library search path.
+    llvm = Formula["llvm"]
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", llvm.opt_lib if DevelopmentTools.clang_build_version >= 1500
+
     system "make", "install", "PREFIX=#{prefix}"
   end
 
