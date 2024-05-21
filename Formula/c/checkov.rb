@@ -6,6 +6,7 @@ class Checkov < Formula
   url "https://files.pythonhosted.org/packages/61/86/c7bb76c11cc96097a3064178e5e18455b22583cace4196d19eab71a6941d/checkov-3.2.90.tar.gz"
   sha256 "d5569f8586bbb134a08f54dcdf9d839d5d98c12fce98dffacc6f92a70ca77524"
   license "Apache-2.0"
+  revision 1
 
   livecheck do
     url "https://pypi.org/rss/project/checkov/releases.xml"
@@ -17,13 +18,13 @@ class Checkov < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "2b38c7c11c8442eb28a70a6c2199cdf0c66de5830bd442a60cb78bddff84c0d2"
-    sha256 cellar: :any,                 arm64_ventura:  "d885c4de532a96099b7ec4470a3954b9a5e690049034f1cba658ebfbcd1a0b6e"
-    sha256 cellar: :any,                 arm64_monterey: "3eec238d31da40ddcd3f46d9694f86139ad9ba638d1bbc8f123e1c2398acf4ef"
-    sha256 cellar: :any,                 sonoma:         "7d901c9f3af01d2b8889ad2e8faf42d5c568b8847c36136a31b3bab218d3f391"
-    sha256 cellar: :any,                 ventura:        "d8d061d9d9a88dabb92ea32243a96648f0a9713c36783091cd0a40f413c9b4f9"
-    sha256 cellar: :any,                 monterey:       "269578407f520f013c916a22ef496c6ae1b79b6d3dd3773f65790c8bcb1b49c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c478ef1585a8ddd8130af1ba22159e57fb4cd373d709935684edd4c44ff4d879"
+    sha256 cellar: :any,                 arm64_sonoma:   "0fa61de0c501f65c3c6848fcb2a18681ecf64c632bc4608118ddfd328e92ecbf"
+    sha256 cellar: :any,                 arm64_ventura:  "777f0dbd3e407dfd0f388f6b4960df8bd1edc211f031f53642bd742f446e9e16"
+    sha256 cellar: :any,                 arm64_monterey: "acee381aba28253360b9929240d2bb1e0be53b4bb6c3e8aa25b167e437947241"
+    sha256 cellar: :any,                 sonoma:         "1671d74ebfcae06a63eddfc39baacbb76fbd0b119e6b1cce370b2f95d6157045"
+    sha256 cellar: :any,                 ventura:        "564522a62dd853c12bda740d0f8a3fd8af0c18c1058a42e7a090c8822facf0d0"
+    sha256 cellar: :any,                 monterey:       "5ab362f8b589b4779c525439736acbf74378c35138c818418c65b72180346be2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "388a78f25ffb72fd7dfb7c0bbc95bbc9856bffa5aaf411298e0be4bc40e20916"
   end
 
   depends_on "cmake" => :build # for igraph
@@ -56,8 +57,8 @@ class Checkov < Formula
   end
 
   resource "annotated-types" do
-    url "https://files.pythonhosted.org/packages/67/fe/8c7b275824c6d2cd17c93ee85d0ee81c090285b6d52f4876ccc47cf9c3c4/annotated_types-0.6.0.tar.gz"
-    sha256 "563339e807e53ffd9c267e99fc6d9ea23eb8443c08f112651963e24e22f84a5d"
+    url "https://files.pythonhosted.org/packages/ee/67/531ea369ba64dcff5ec9c3402f9f51bf748cec26dde048a2f973a4eea7f5/annotated_types-0.7.0.tar.gz"
+    sha256 "aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"
   end
 
   resource "argcomplete" do
@@ -361,13 +362,13 @@ class Checkov < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/c0/d6/87709afa2a195ea902810dfaa796d21dd45d91b496dc98828073acbfe5af/regex-2024.4.28.tar.gz"
-    sha256 "83ab366777ea45d58f72593adf35d36ca911ea8bd838483c1823b883a121b0e4"
+    url "https://files.pythonhosted.org/packages/7a/db/5ddc89851e9cc003929c3b08b9b88b429459bf9acbf307b4556d51d9e49b/regex-2024.5.15.tar.gz"
+    sha256 "d3ee02d9e5f482cc8309134a91eeaacbdd2261ba111b0fef3748eeb4913e6a2c"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/d8/c1/f32fb7c02e7620928ef14756ff4840cae3b8ef1d62f7e596bc5413300a16/requests-2.32.1.tar.gz"
+    sha256 "eb97e87e64c79e64e5b8ac75cee9dd1f97f49e289b083ee6be96268930725685"
   end
 
   resource "rpds-py" do
@@ -471,8 +472,8 @@ class Checkov < Formula
   end
 
   resource "zipp" do
-    url "https://files.pythonhosted.org/packages/3e/ef/65da662da6f9991e87f058bc90b91a935ae655a16ae5514660d6460d1298/zipp-3.18.1.tar.gz"
-    sha256 "2884ed22e7d8961de1c9a05142eb69a247f120291bc0206a00a7642f09b5b715"
+    url "https://files.pythonhosted.org/packages/16/e5/8efdac4c61bd5fd24f4face2295103f42790ad2ad0f322e3a81bb8391812/zipp-3.18.2.tar.gz"
+    sha256 "6278d9ddbcfb1f1089a88fde84481528b07b0e10474e09dcfe53dad4069fa059"
   end
 
   def install
