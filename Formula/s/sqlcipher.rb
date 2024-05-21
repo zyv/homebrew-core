@@ -7,13 +7,13 @@ class Sqlcipher < Formula
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "e7eba25afbc75a74c0b19654b54f8676042ec1c79f661a04cce1766631b46a53"
-    sha256 cellar: :any,                 arm64_ventura:  "0284a513ca90ce57383aa82c464f9a8d538d3bbf649705ce6255eec640e55087"
-    sha256 cellar: :any,                 arm64_monterey: "5aa411eca16ea061b7d6ce1b8d76be198d3e651b314349682ebb025f07888b4d"
-    sha256 cellar: :any,                 sonoma:         "7ee3f9a4743e58d5d59413a0089173a3b3bc1f49c77da88dfc0bde4d93a9ae75"
-    sha256 cellar: :any,                 ventura:        "e8edb9c3132e6bbcc7e15b587411b957bb2192a8d6a304243024ad80b95a6b40"
-    sha256 cellar: :any,                 monterey:       "54189020cfce9af7bc8d2b2507bfc7627fece8e21997a04fd0be505df879c45f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3ff8d01a84d2d59626937676ef8a2a01de01a7af4cb719a98fefe12dc0af5e5a"
+    sha256 cellar: :any,                 arm64_sonoma:   "066c9f17f15ee360aa64baf7c1189e3e6931cee28b6ead023e779150a3cfb813"
+    sha256 cellar: :any,                 arm64_ventura:  "7453973a34facdcb7fd98bdde53955686021c6a1dffab50dd4a229ed610b2131"
+    sha256 cellar: :any,                 arm64_monterey: "618500314eb6ef0ca989541b3606a7175056683ff54bede42735d231ba298a1f"
+    sha256 cellar: :any,                 sonoma:         "9f0ae29d495f35636c928b5b03a403c6046d50204e6b8c5c285fa1f83ab99fef"
+    sha256 cellar: :any,                 ventura:        "5e4b2cc9a69dc2b00a49044ee693898e12a59ec57622237abc7da2d683dfd3ff"
+    sha256 cellar: :any,                 monterey:       "8dff54227f63f32d8cf26b08cecd6827d4b8ca6e88d049cf3a46c42154e3f0cb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44c92cf4a3768a35bd7c8bc7f99c183ac00227d6db4b9cd8c5db2b4d136da8b2"
   end
 
   depends_on "openssl@3"
