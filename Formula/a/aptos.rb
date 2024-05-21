@@ -1,8 +1,8 @@
 class Aptos < Formula
   desc "Layer 1 blockchain built to support fair access to decentralized assets for all"
   homepage "https://aptosfoundation.org/"
-  url "https://github.com/aptos-labs/aptos-core/archive/refs/tags/aptos-cli-v3.3.0.tar.gz"
-  sha256 "bb5071a1016b5ad22f3d7a2f9357f0661c86a986bfa6b9cd14cfe145eed531f1"
+  url "https://github.com/aptos-labs/aptos-core/archive/refs/tags/aptos-cli-v3.3.1.tar.gz"
+  sha256 "af9d936ee4a3b6e5f9968e975daa26ae2314f6b9cb5b467dfe94f34ffc206696"
   license "Apache-2.0"
   head "https://github.com/aptos-labs/aptos-core.git", branch: "main"
 
@@ -29,6 +29,7 @@ class Aptos < Formula
   on_linux do
     depends_on "pkg-config" => :build
     depends_on "zip" => :build
+    depends_on "openssl@3"
     depends_on "systemd"
   end
 
