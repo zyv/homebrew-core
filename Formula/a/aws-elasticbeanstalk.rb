@@ -6,7 +6,7 @@ class AwsElasticbeanstalk < Formula
   url "https://files.pythonhosted.org/packages/ec/5e/96dbeec0f796ac7928f52ed61c6b3a44764ae4113185bb1e08fc4d758ba7/awsebcli-3.20.10.tar.gz"
   sha256 "8599d0e2ca70e42ee55948e6f58f65ea06596143c556925572fbf80ce705548d"
   license "Apache-2.0"
-  revision 2
+  revision 3
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "e30643c64d6c9bba31c863ad9a4d9816d5f1392980360db91789636cef9135bb"
@@ -75,8 +75,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/d8/c1/f32fb7c02e7620928ef14756ff4840cae3b8ef1d62f7e596bc5413300a16/requests-2.32.1.tar.gz"
+    sha256 "eb97e87e64c79e64e5b8ac75cee9dd1f97f49e289b083ee6be96268930725685"
   end
 
   resource "semantic-version" do
