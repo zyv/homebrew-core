@@ -1,8 +1,8 @@
 class Sqlcipher < Formula
   desc "SQLite extension providing 256-bit AES encryption"
   homepage "https://www.zetetic.net/sqlcipher/"
-  url "https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.5.7.tar.gz"
-  sha256 "b670845f28da0a3c717e991e9f18a334e08f6bc977190bbce6be864ca229f96d"
+  url "https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.6.0.tar.gz"
+  sha256 "879fb030c36bc5138029af6aa3ae3f36c28c58e920af05ac7ca78a5915b2fa3c"
   license "BSD-3-Clause"
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
@@ -21,6 +21,7 @@ class Sqlcipher < Formula
   # Build scripts require tclsh. `--disable-tcl` only skips building extension
   uses_from_macos "tcl-tk" => :build
   uses_from_macos "sqlite"
+  uses_from_macos "zlib"
 
   def install
     args = %W[
