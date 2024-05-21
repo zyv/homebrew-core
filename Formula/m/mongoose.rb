@@ -1,8 +1,8 @@
 class Mongoose < Formula
   desc "Web server build on top of Libmongoose embedded library"
-  homepage "https://github.com/cesanta/mongoose"
-  url "https://github.com/cesanta/mongoose/archive/refs/tags/7.13.tar.gz"
-  sha256 "5c9dc8d1d1762ef483b6d2fbf5234e421ca944b722225bb533d2d0507b118a0f"
+  homepage "https://mongoose.ws/"
+  url "https://github.com/cesanta/mongoose/archive/refs/tags/7.14.tar.gz"
+  sha256 "7c4aecf92f7f27f1cbb2cbda3c185c385f2b7af84f6bd7c0ce31b84742b15691"
   license "GPL-2.0-only"
 
   bottle do
@@ -20,7 +20,7 @@ class Mongoose < Formula
   def install
     # No Makefile but is an expectation upstream of binary creation
     # https://github.com/cesanta/mongoose/issues/326
-    cd "examples/http-server" do
+    cd "tutorials/http/http-server" do
       system "make", "mongoose_mac", "PROG=mongoose_mac"
       bin.install "mongoose_mac" => "mongoose"
     end

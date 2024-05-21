@@ -1469,6 +1469,7 @@ molecule
 mongo-cxx-driver
 mongocli
 mongodb-atlas-cli
+mongoose
 monika
 monolith
 moon
