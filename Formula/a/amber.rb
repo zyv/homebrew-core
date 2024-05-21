@@ -16,9 +16,15 @@ class Amber < Formula
     sha256 x86_64_linux:   "0d426231e65332308d6b8bb925c8d0b08ed187fa360dd808615b3048b1c531e6"
   end
 
+  depends_on "bdw-gc"
   depends_on "crystal"
+  depends_on "libevent"
+  depends_on "libyaml"
   depends_on "openssl@3"
-  uses_from_macos "sqlite"
+  depends_on "pcre2"
+  depends_on "sqlite"
+
+  uses_from_macos "zlib"
 
   # patch granite to fix db dependency resolution issue
   # upstream patch https://github.com/amberframework/amber/pull/1339
@@ -28,6 +34,11 @@ class Amber < Formula
   end
 
   def install
+    # Work around an Xcode 15 linker issue which causes linkage against LLVM's
+    # libunwind due to it being present in a library search path.
+    llvm = Formula["llvm"]
+    ENV.remove "HOMEBREW_LIBRARY_PATHS", llvm.opt_lib if DevelopmentTools.clang_build_version >= 1500
+
     system "shards", "install"
     system "make", "install", "PREFIX=#{prefix}"
   end
