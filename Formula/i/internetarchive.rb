@@ -6,6 +6,7 @@ class Internetarchive < Formula
   url "https://files.pythonhosted.org/packages/0d/9e/07e577a1d3e20deeae447069b80d523e7140b790f0a8e1bab1e23b1b9252/internetarchive-4.1.0.tar.gz"
   sha256 "467188386218d2c77815ca798a51dd18310b326841113bb462b24ea9a71beedc"
   license "AGPL-3.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "752a0f897fb37671b8d347dc3c9287dffd261a8f22fc0669c244483c5c611b89"
@@ -46,8 +47,8 @@ class Internetarchive < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "schema" do
