@@ -2448,6 +2448,7 @@ zipkin
 zlib
 zlint
 zls
+zmap
 znapzend
 znc
 zola
