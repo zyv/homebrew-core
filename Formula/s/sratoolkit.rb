@@ -4,12 +4,12 @@ class Sratoolkit < Formula
   license all_of: [:public_domain, "GPL-3.0-or-later", "MIT"]
 
   stable do
-    url "https://github.com/ncbi/sra-tools/archive/refs/tags/3.1.0.tar.gz"
-    sha256 "ce92ce887ee4a7581a7511cfb6b965ac6a5e38841bad9be66a3aee903ec48952"
+    url "https://github.com/ncbi/sra-tools/archive/refs/tags/3.1.1.tar.gz"
+    sha256 "96b110bd5a30ad312e2f02552062b48a77d40c763e6aba5bb84e83662a505cf1"
 
     resource "ncbi-vdb" do
-      url "https://github.com/ncbi/ncbi-vdb/archive/refs/tags/3.1.0.tar.gz"
-      sha256 "eec5a64b8353a201bd4cf2c58cfcbb3622327397c3b11696ae59d827fcfcea9d"
+      url "https://github.com/ncbi/ncbi-vdb/archive/refs/tags/3.1.1.tar.gz"
+      sha256 "e9766f259853c696be48e289b08cb5ae6e198d82d7ffee79f09ce7f720487991"
     end
   end
 
@@ -46,10 +46,6 @@ class Sratoolkit < Formula
     odie "ncbi-vdb resource needs to be updated" if build.stable? && version != resource("ncbi-vdb").version
 
     (buildpath/"ncbi-vdb-source").install resource("ncbi-vdb")
-
-    # Workaround to allow clang/aarch64 build to use the gcc/arm64 directory
-    # Issue ref: https://github.com/ncbi/ncbi-vdb/issues/65
-    ln_s "../gcc/arm64", buildpath/"ncbi-vdb-source/interfaces/cc/clang/arm64" if Hardware::CPU.arm?
 
     # Need to use HDF 1.10 API: error: too few arguments to function call, expected 5, have 4
     # herr_t h5e = H5Oget_info_by_name( self->hdf5_handle, buffer, &obj_info, H5P_DEFAULT );
