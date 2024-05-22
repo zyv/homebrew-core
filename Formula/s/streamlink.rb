@@ -6,6 +6,7 @@ class Streamlink < Formula
   url "https://files.pythonhosted.org/packages/e0/9b/e8149ee6e566500e1133e42b3686d4e292e64a4e7f435efbca9a66ec99e1/streamlink-6.7.4.tar.gz"
   sha256 "9337537ab119fe77524a5d665aaecebbfb06e2cb8df28d1260d92876425751ce"
   license "BSD-2-Clause"
+  revision 1
   head "https://github.com/streamlink/streamlink.git", branch: "master"
 
   bottle do
@@ -55,8 +56,8 @@ class Streamlink < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/ea/e2/3834472e7f18801e67a3cd6f3c203a5456d6f7f903cfb9a990e62098a2f3/lxml-5.2.1.tar.gz"
-    sha256 "3f7765e69bbce0906a7c74d5fe46d2c7a7596147318dbc08e4a2431f3060e306"
+    url "https://files.pythonhosted.org/packages/63/f7/ffbb6d2eb67b80a45b8a0834baa5557a14a5ffce0979439e7cd7f0c4055b/lxml-5.2.2.tar.gz"
+    sha256 "bb2dc4898180bea79863d5487e5f9c7c34297414bad54bcd0f0852aee9cfdb87"
   end
 
   resource "outcome" do
@@ -80,8 +81,8 @@ class Streamlink < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "six" do
@@ -100,8 +101,8 @@ class Streamlink < Formula
   end
 
   resource "trio" do
-    url "https://files.pythonhosted.org/packages/b4/51/4f5ae37ec58768b9c30e5bc5b89431a7baf3fa9d0dda98983af6ef55eb47/trio-0.25.0.tar.gz"
-    sha256 "9b41f5993ad2c0e5f62d0acca320ec657fdb6b2a2c22b8c7aed6caf154475c4e"
+    url "https://files.pythonhosted.org/packages/b9/37/74d6556dda898c0dec707a5877c3d7a12a294682151616cee58643accd17/trio-0.25.1.tar.gz"
+    sha256 "9f5314f014ea3af489e77b001861c535005c3858d38ec46b6b071ebfa339d7fb"
   end
 
   resource "trio-websocket" do
