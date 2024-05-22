@@ -1,8 +1,8 @@
 class Shuffledns < Formula
   desc "Enumerate subdomains using active bruteforce & resolve subdomains with wildcards"
   homepage "https://github.com/projectdiscovery/shuffledns"
-  url "https://github.com/projectdiscovery/shuffledns/archive/refs/tags/v1.0.9.tar.gz"
-  sha256 "ce61eb210c0bb7ff5cc2e0d45e90129764494d9c0b8883e04fe67b16169ab707"
+  url "https://github.com/projectdiscovery/shuffledns/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "32507e92a754fce3bad6c6445a4199c11be298c0994719a39711e0354bde318f"
   license "GPL-3.0-or-later"
   head "https://github.com/projectdiscovery/shuffledns.git", branch: "main"
 
@@ -25,7 +25,7 @@ class Shuffledns < Formula
   end
 
   test do
+    assert_match "resolver file doesn't exists", shell_output("#{bin}/shuffledns 2>&1", 1)
     assert_match version.to_s, shell_output("#{bin}/shuffledns -version 2>&1")
-    assert_match "no resolver list provided", shell_output("#{bin}/shuffledns 2>&1", 1)
   end
 end
