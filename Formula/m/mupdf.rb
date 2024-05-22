@@ -4,6 +4,7 @@ class Mupdf < Formula
   url "https://mupdf.com/downloads/archive/mupdf-1.23.11-source.tar.gz"
   sha256 "478f2a167feae2a291c8b8bc5205f2ce2f09f09b574a6eb0525bfad95a3cfe66"
   license "AGPL-3.0-or-later"
+  revision 1
   head "https://git.ghostscript.com/mupdf.git", branch: "master"
 
   livecheck do
@@ -23,7 +24,6 @@ class Mupdf < Formula
 
   depends_on "pkg-config" => :build
   depends_on "freetype"
-  depends_on "gumbo-parser"
   depends_on "harfbuzz"
   depends_on "jbig2dec"
   depends_on "jpeg-turbo"
@@ -40,12 +40,12 @@ class Mupdf < Formula
     depends_on "mesa"
   end
 
-  conflicts_with "mupdf-tools",
-    because: "mupdf and mupdf-tools install the same binaries"
+  conflicts_with "mupdf-tools", because: "both install the same binaries"
 
   def install
-    # Remove bundled libraries excluding `extract` and "strongly preferred" `lcms2mt` (lcms2 fork)
-    keep = %w[extract lcms2]
+    # Remove bundled libraries excluding `extract`, `gumbo-parser` (deprecated), and
+    # "strongly preferred" `lcms2mt` (lcms2 fork)
+    keep = %w[extract gumbo-parser lcms2]
     (buildpath/"thirdparty").each_child { |path| path.rmtree if keep.exclude? path.basename.to_s }
 
     args = %W[
@@ -54,6 +54,7 @@ class Mupdf < Formula
       verbose=yes
       prefix=#{prefix}
       CC=#{ENV.cc}
+      USE_SYSTEM_GUMBO=no
       USE_SYSTEM_LIBS=yes
       USE_SYSTEM_MUJS=yes
     ]
@@ -61,7 +62,6 @@ class Mupdf < Formula
     if OS.mac?
       [
         ["FREETYPE", "freetype2"],
-        ["GUMBO", "gumbo"],
         ["HARFBUZZ", "harfbuzz"],
         ["LIBJPEG", "libjpeg"],
         ["OPENJPEG", "libopenjp2"],
