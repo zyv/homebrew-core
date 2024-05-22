@@ -11,7 +11,7 @@
   "ansible": {
     "exclude_packages": ["certifi", "cryptography"],
     "extra_packages": [
-      "apache-libcloud", "boto3", "dnspython", "docker",
+      "ansible-pylibssh", "apache-libcloud", "boto3", "dnspython", "docker",
       "junos-eznc", "jxmlease", "kerberos", "ntc-templates", "openshift",
       "passlib", "pexpect", "proxmoxer", "pysphere3", "python-consul",
       "python-neutronclient", "pywinrm", "requests-credssp", "shade", "zabbix-api"
