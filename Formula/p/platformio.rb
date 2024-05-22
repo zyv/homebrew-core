@@ -6,6 +6,7 @@ class Platformio < Formula
   url "https://files.pythonhosted.org/packages/13/78/8903f4f505a393ee48a18a00b4b9c866a726ef844d23ff3ce4863d710898/platformio-6.1.15.tar.gz"
   sha256 "d3209a60d40340fdbab2c76ee23303d90e5ecea0a11f92980c9d2068d0975fde"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/platformio/platformio-core.git", branch: "develop"
 
   bottle do
@@ -88,8 +89,8 @@ class Platformio < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "semantic-version" do
