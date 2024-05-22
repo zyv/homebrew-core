@@ -11,15 +11,13 @@ class Spot < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "72663c12334ae775dfdb90a986fdd83d133c7871fcb5ff3d2ff3a052b2312d8f"
-    sha256 cellar: :any,                 arm64_ventura:  "da6a0bf4b6504b15be13b47a9b45ad2fb1cd573b099081597f5ef49b6678a3b9"
-    sha256 cellar: :any,                 arm64_monterey: "be6f4d8f6bad04c2ce15fc353f17ef53b89567a31f2a0c93c83ac43b425191b8"
-    sha256 cellar: :any,                 arm64_big_sur:  "eebc434b54f36eef7ceee02079d267b73969ff3673c64604d6d7ae1ab7730255"
-    sha256 cellar: :any,                 sonoma:         "2f24170de6e6cab454f2cc0b753b99c5887968233900ca58a13ea25a273223a0"
-    sha256 cellar: :any,                 ventura:        "c823bdf1d266af19b3b10ca6ab90136fe4c02eff446585dd797fd280a907b1f0"
-    sha256 cellar: :any,                 monterey:       "dad4012d3966c40b24151d3751d3b1552bd388bb673c367412080b27e0496af4"
-    sha256 cellar: :any,                 big_sur:        "0aa2bb9b33ff61844ac4c22b7785c9613db59e6b4da1ab13d83097ba75579141"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7087a187f5f60917e98f9cb6c2262c67ab02e926510ef024f7028615c49a8e2f"
+    sha256 cellar: :any,                 arm64_sonoma:   "e4c76f482118ead7179f160c066dfdf0ab3a2e1c7d00b2c90c00278921ab527f"
+    sha256 cellar: :any,                 arm64_ventura:  "0820204a038373d059598cc87c0e65a9302abff79d89fe16b8726d746b6d06a8"
+    sha256 cellar: :any,                 arm64_monterey: "af8c2ecf6ccf310913e30dd943b3020814adb5fd771e2884471f4b26e64c478b"
+    sha256 cellar: :any,                 sonoma:         "ceefbedede95d7a74cecdce0b0c0616c3130a5fe72094be2590b37f0522d87f3"
+    sha256 cellar: :any,                 ventura:        "b263cfe52f46515fb7ed5cf8bb60a480135bc3ba75e4cb167da98c456f648e54"
+    sha256 cellar: :any,                 monterey:       "6c7200f7ad180a1a54caa6b19380c53934f7e6697a9891916a0b8945d3115992"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2729262b1b52510bf7f256f7d54bbb7b4a99e820c19f718947785ad33b541a72"
   end
 
   depends_on "python@3.12" => :build
