@@ -4,6 +4,7 @@ class Pymupdf < Formula
   url "https://files.pythonhosted.org/packages/c5/47/ebd9cdc09d82462533f69f983c7f57ebbf01e68adb111a3c49acacde2540/PyMuPDF-1.23.26.tar.gz"
   sha256 "a904261b317b761b0aa2bd2c1f6cd25d25aa4258be67a90c02a878efc5dca649"
   license "AGPL-3.0-only"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "c43eaabbda986e9e2e387c177e3fcfb3e8a688fbd68d599466badfbf95c559a6"
@@ -18,17 +19,8 @@ class Pymupdf < Formula
   depends_on "freetype" => :build
   depends_on "python-setuptools" => :build
   depends_on "swig" => :build
-
   depends_on "mupdf"
   depends_on "python@3.12"
-
-  on_linux do
-    depends_on "gumbo-parser"
-    depends_on "harfbuzz"
-    depends_on "jbig2dec"
-    depends_on "mujs"
-    depends_on "openjpeg"
-  end
 
   def python3
     "python3.12"
@@ -41,7 +33,7 @@ class Pymupdf < Formula
     # Builds only classic implementation
     # https://github.com/pymupdf/PyMuPDF/issues/2628
     ENV["PYMUPDF_SETUP_IMPLEMENTATIONS"] = "a"
-    ENV["PYMUPDF_INCLUDES"] = "#{Formula["mupdf"].opt_include} -I#{Formula["freetype"].opt_include}/freetype2"
+    ENV["PYMUPDF_INCLUDES"] = "#{Formula["mupdf"].opt_include}:#{Formula["freetype"].opt_include}/freetype2"
     ENV["PYMUPDF_MUPDF_LIB"] = Formula["mupdf"].opt_lib.to_s
 
     system python3, "-m", "pip", "install", *std_pip_args, "."
