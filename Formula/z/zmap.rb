@@ -1,8 +1,8 @@
 class Zmap < Formula
   desc "Network scanner for Internet-wide network studies"
   homepage "https://zmap.io"
-  url "https://github.com/zmap/zmap/archive/refs/tags/v3.0.0.tar.gz"
-  sha256 "e3151cdcdf695ab7581e01a7c6ee78678717d6a62ef09849b34db39682535454"
+  url "https://github.com/zmap/zmap/archive/refs/tags/v4.1.1.tar.gz"
+  sha256 "b37c4e70e4f9c12091ee10dc7f6f3518cbb7bc291b5b81a451a37632c9440047"
   license "Apache-2.0"
   head "https://github.com/zmap/zmap.git", branch: "main"
 
@@ -29,6 +29,7 @@ class Zmap < Formula
   depends_on "pkg-config" => :build
   depends_on "gmp"
   depends_on "json-c"
+  depends_on "judy"
   depends_on "libdnet"
   depends_on "libunistring" # for unistr.h
 
@@ -45,6 +46,12 @@ class Zmap < Formula
   end
 
   test do
-    system "#{sbin}/zmap", "--version"
+    output = shell_output("#{sbin}/zmap -p 80 -N 1 8.8.8.8 2>&1", 1)
+    assert_match "[INFO] zmap: By default, ZMap will output the unique IP addresses " \
+                 "of hosts that respond successfully (e.g., SYN-ACK packet)", output
+    # need sudo permission
+    assert_match "[FATAL] recv: could not open device", output
+
+    system sbin/"zmap", "--version"
   end
 end
