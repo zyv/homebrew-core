@@ -3,8 +3,8 @@ class Pyinstaller < Formula
 
   desc "Bundle a Python application and all its dependencies"
   homepage "https://pyinstaller.org/"
-  url "https://files.pythonhosted.org/packages/19/f0/4213fadbae8ab5945786c4020f7cb6202e828d90df05be8f2dbc9395bcd9/pyinstaller-6.6.0.tar.gz"
-  sha256 "be6bc2c3073d3e84fb7148d3af33ce9b6a7f01cfb154e06314cd1d4c05798a32"
+  url "https://files.pythonhosted.org/packages/3e/c8/7acd0d98bc71585a2ca08b959951a4a76d5289c9bef3d40ed434694a3ee4/pyinstaller-6.7.0.tar.gz"
+  sha256 "8f09179c5f3d1b4b8453ac61adfe394dd416f9fc33abd7553f77d4897bc3a582"
   license "GPL-2.0-or-later"
   head "https://github.com/pyinstaller/pyinstaller.git", branch: "develop"
 
@@ -19,6 +19,8 @@ class Pyinstaller < Formula
   end
 
   depends_on "python@3.12"
+
+  uses_from_macos "zlib"
 
   resource "altgraph" do
     url "https://files.pythonhosted.org/packages/de/a8/7145824cf0b9e3c28046520480f207df47e927df83aa9555fb47f8505922/altgraph-0.17.4.tar.gz"
@@ -36,13 +38,13 @@ class Pyinstaller < Formula
   end
 
   resource "pyinstaller-hooks-contrib" do
-    url "https://files.pythonhosted.org/packages/63/e2/11b016c54e9c79d4027693241f3fbfe326006bc030f94c43363491d3ba98/pyinstaller-hooks-contrib-2024.3.tar.gz"
-    sha256 "d18657c29267c63563a96b8fc78db6ba9ae40af6702acb2f8c871df12c75b60b"
+    url "https://files.pythonhosted.org/packages/9a/b1/ea0917424a3f1b4ed760957415c5d02c081a4621300f89bd9caa9ff27b2e/pyinstaller_hooks_contrib-2024.6.tar.gz"
+    sha256 "3c188b3a79f5cd46d96520df3934642556a1b6ce8988ec5bbce820ada424bc2b"
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+    url "https://files.pythonhosted.org/packages/aa/60/5db2249526c9b453c5bb8b9f6965fcab0ddb7f40ad734420b3b421f7da44/setuptools-70.0.0.tar.gz"
+    sha256 "f211a66637b8fa059bb28183da127d4e86396c991a942b028c6650d4319c3fd0"
   end
 
   def install
