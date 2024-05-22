@@ -2427,6 +2427,7 @@ yle-dl
 yo
 yorkie
 yosys
+you-get
 youtubedr
 yq
 yt-dlp

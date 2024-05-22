@@ -3,8 +3,8 @@ class YouGet < Formula
 
   desc "Dumb downloader that scrapes the web"
   homepage "https://you-get.org/"
-  url "https://files.pythonhosted.org/packages/92/39/423701a8346435292fdde5ad78beb5437ebb7718f6faa16e1546d3ef479b/you-get-0.4.1650.tar.gz"
-  sha256 "b3c944cf7a63cc468cccc8816dce7fc008c2e6b5ba52aefe5ce2081818a3ad47"
+  url "https://files.pythonhosted.org/packages/7e/87/5faa48930348f57c26109b623accdf0517ac82253fa3c236ba1131d35f5d/you-get-0.4.1700.tar.gz"
+  sha256 "5cd21492012a446ac1b52c6f7e44944aac65b59e997645a84dcf64cf8043e99c"
   license "MIT"
   head "https://github.com/soimort/you-get.git", branch: "develop"
 
@@ -21,13 +21,6 @@ class YouGet < Formula
 
   depends_on "python@3.12"
   depends_on "rtmpdump"
-
-  # Support Python 3.12
-  # https://github.com/soimort/you-get/pull/2677
-  patch do
-    url "https://github.com/soimort/you-get/commit/aedf3e458f3ec6083ebe4c3e3c0f21e1eb582000.patch?full_index=1"
-    sha256 "a585310a37a54bcbe077bcbff99f39dcbfe53457179dbf035409cbdda042275f"
-  end
 
   def install
     virtualenv_install_with_resources
