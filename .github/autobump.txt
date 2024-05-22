@@ -242,6 +242,7 @@ byteman
 bzt
 c-ares
 c-blosc2
+c2048
 c2rust
 c3c
 c4core
