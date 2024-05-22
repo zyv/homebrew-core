@@ -1060,6 +1060,7 @@ imapsync
 imath
 imgproxy
 immortal
+immudb
 imposm3
 influxdb
 influxdb-cli
