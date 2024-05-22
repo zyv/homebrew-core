@@ -2011,6 +2011,7 @@ shfmt
 showkey
 shtools
 shub
+shuffledns
 shush
 sigi
 sigma-cli
