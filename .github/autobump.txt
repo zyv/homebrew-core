@@ -1571,6 +1571,7 @@ nss
 ntfy
 nuclei
 nudoku
+nuget
 numactl
 numbat
 numcpp
