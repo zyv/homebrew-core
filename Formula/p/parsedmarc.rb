@@ -3,12 +3,9 @@ class Parsedmarc < Formula
 
   desc "DMARC report analyzer and visualizer"
   homepage "https://domainaware.github.io/parsedmarc/"
-  # TODO: Remove `kafka-python` & `kafka-python-ng` from pypi_formula_mappings.json
-  # if https://github.com/domainaware/parsedmarc/pull/510 is merged
-  url "https://files.pythonhosted.org/packages/d2/3a/6f796f3b6eea53c426576066305db5a8b05674461afb740065bc076b5d29/parsedmarc-8.11.0.tar.gz"
-  sha256 "381c6269707c34a34cbe2448d7dad8609c699df9da10bdf348f998078bab22e8"
+  url "https://files.pythonhosted.org/packages/4f/64/920c9a6bacd2bf967c19faeb121639c0662501c6d9b95908a1b16c87585a/parsedmarc-8.12.0.tar.gz"
+  sha256 "9ac71cdd344c62e693aabaf118f09554a6b67e0e6c5f02bf0609696ef2d76cb7"
   license "Apache-2.0"
-  revision 3
   head "https://github.com/domainaware/parsedmarc.git", branch: "master"
 
   bottle do

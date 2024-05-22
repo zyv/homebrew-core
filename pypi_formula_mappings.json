@@ -539,8 +539,7 @@
     "extra_packages": ["setuptools"]
   },
   "parsedmarc": {
-    "exclude_packages": ["certifi", "cryptography", "kafka-python"],
-    "extra_packages": ["kafka-python-ng"]
+    "exclude_packages": ["certifi", "cryptography"]
   },
   "pass-git-helper": {
     "package_name": "",
