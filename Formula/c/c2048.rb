@@ -1,8 +1,8 @@
 class C2048 < Formula
   desc "Console version of 2048"
   homepage "https://github.com/mevdschee/2048.c"
-  url "https://github.com/mevdschee/2048.c/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "13d3fb3f2fd12f188d54f0a2d6809f89b5cc5e630d4f5a5b758386c0f63878ed"
+  url "https://github.com/mevdschee/2048.c/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "43a357a6d30859f2f6e797ddf96f35c278b5f0ad7dd1bfc70c3b6d3f24e89dcd"
   license "MIT"
   head "https://github.com/mevdschee/2048.c.git", branch: "main"
 
@@ -22,6 +22,7 @@ class C2048 < Formula
   end
 
   test do
-    system "#{bin}/2048", "test"
+    output = shell_output("#{bin}/2048 test")
+    assert_match "All 13 tests executed successfully", output
   end
 end
