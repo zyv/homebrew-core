@@ -1345,6 +1345,7 @@ linux-headers@5.15
 linux-pam
 liqoctl
 liquibase
+liquidprompt
 lit
 litecli
 literate-git
