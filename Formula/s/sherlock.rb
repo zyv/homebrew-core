@@ -6,6 +6,7 @@ class Sherlock < Formula
   url "https://files.pythonhosted.org/packages/2a/63/96b5e9a8a8785d4d3f41d1c8909833cd0d847b9feda1a38df5af2a426b30/sherlock_project-0.14.3.tar.gz"
   sha256 "253066b2265ce689e2747242040c10e6f43d13364919a97b37ec04af769a1933"
   license "MIT"
+  revision 1
   head "https://github.com/sherlock-project/sherlock.git", branch: "master"
 
   bottle do
@@ -79,8 +80,8 @@ class Sherlock < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "requests-futures" do
