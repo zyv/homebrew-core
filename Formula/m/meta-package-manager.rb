@@ -10,13 +10,13 @@ class MetaPackageManager < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "3201debddc9d05647d3c57eb8cd747e3708cbeb7571d11d81a87c793e51cb06b"
-    sha256 cellar: :any,                 arm64_ventura:  "fe6361fc4600d1bf3376e17cb64230be9dae483990741e755426a73a94a63f20"
-    sha256 cellar: :any,                 arm64_monterey: "6423cf9b28c96d67be98c125bcac3f0f21b1f9865c5995f7306e24a4cfa4597c"
-    sha256 cellar: :any,                 sonoma:         "6d02bf2cc6e17630b5986e5088f52c0962d69229ce8fb77c0a4144118ec54b3d"
-    sha256 cellar: :any,                 ventura:        "801fcbd8a407d88913ebaebc48263dacae391aceedba990fd61ee0168fc74b94"
-    sha256 cellar: :any,                 monterey:       "9db82668fd929a35f6c2e5ebb2f026861cec3f129c78784ed8b111bfc90e3111"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "247a9d5208dbeb5e095744165c8ec2b1a0b779c99074b0a840f5e5b06a0df170"
+    sha256 cellar: :any,                 arm64_sonoma:   "5ba7778e6ce52a1cb429b0baab82b72c3b0a3037eb848b48675fe5a4ccd87e1b"
+    sha256 cellar: :any,                 arm64_ventura:  "585c410d1e2c8d22d01cdd4f3efbc72c2a7d81814368236bbe6fa84b9847ffda"
+    sha256 cellar: :any,                 arm64_monterey: "aa2a15dc3cd844dc0e375b249769f6abca3ea1bd297ca2ec48bb6c4798abf338"
+    sha256 cellar: :any,                 sonoma:         "c26d5a002de00d2de7c52628eade0e3548173e925990a5909a57d84214f668b7"
+    sha256 cellar: :any,                 ventura:        "6dc64703f943e50f965107d31884fea0a744022dfc663d90b65716d772d4e194"
+    sha256 cellar: :any,                 monterey:       "3f91a3768892415d12431acb24ae7d652c2d0273d4df6191b3c9af8f867f0427"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "224c603bcb505ea69ef1b71d32802e3463bd0269521c6319774c7ce580ddcc87"
   end
 
   depends_on "certifi"
