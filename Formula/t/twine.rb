@@ -6,6 +6,7 @@ class Twine < Formula
   url "https://files.pythonhosted.org/packages/66/6d/dcf5c58dbc468b52f20f2de0470caaae09a7ab91d847f7ca4a786137ca4f/twine-5.1.0.tar.gz"
   sha256 "4d74770c88c4fcaf8134d2a6a9d863e40f08255ff7d8e2acb3cbbd57d25f6e9d"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/pypa/twine.git", branch: "main"
 
   bottle do
@@ -98,8 +99,8 @@ class Twine < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "requests-toolbelt" do
