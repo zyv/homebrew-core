@@ -1,8 +1,8 @@
 class BazelRemote < Formula
   desc "Remote cache for Bazel"
   homepage "https://github.com/buchgr/bazel-remote/"
-  url "https://github.com/buchgr/bazel-remote/archive/refs/tags/v2.4.3.tar.gz"
-  sha256 "01a84e318ff7ee4aa72d756c40a6ae9753d2dfaaaf5612fe1c8c8a66ad221bde"
+  url "https://github.com/buchgr/bazel-remote/archive/refs/tags/v2.4.4.tar.gz"
+  sha256 "f358997aa5c2b58e1d16a6acf5a6bb9797a8ee4d502ac7d3a00525d4edc6bad1"
   license "Apache-2.0"
 
   bottle do
