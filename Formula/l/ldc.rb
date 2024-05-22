@@ -25,6 +25,7 @@ class Ldc < Formula
   depends_on "libconfig" => :build
   depends_on "pkg-config" => :build
   depends_on "llvm"
+  depends_on "zstd"
 
   uses_from_macos "libxml2" => :build
 
@@ -92,10 +93,12 @@ class Ldc < Formula
     EOS
     system bin/"ldc2", "test.d"
     assert_match "Hello, world!", shell_output("./test")
-    system bin/"ldc2", "-flto=thin", "test.d"
-    assert_match "Hello, world!", shell_output("./test")
-    system bin/"ldc2", "-flto=full", "test.d"
-    assert_match "Hello, world!", shell_output("./test")
+    with_env(PATH: "#{Formula["llvm"].opt_bin}:#{ENV["PATH"]}") do
+      system bin/"ldc2", "-flto=thin", "--linker=lld", "test.d"
+      assert_match "Hello, world!", shell_output("./test")
+      system bin/"ldc2", "-flto=full", "--linker=lld", "test.d"
+      assert_match "Hello, world!", shell_output("./test")
+    end
     system bin/"ldmd2", "test.d"
     assert_match "Hello, world!", shell_output("./test")
   end
