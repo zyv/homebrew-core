@@ -1,8 +1,8 @@
 class Aftman < Formula
   desc "Toolchain manager for Roblox, the prodigal sequel to Foreman"
   homepage "https://github.com/LPGhatguy/aftman"
-  url "https://github.com/LPGhatguy/aftman/archive/refs/tags/v0.2.8.tar.gz"
-  sha256 "fb7a4fc6a0e736df3968834284da163380d4dcd4707e9836d35ff427e6c53f8c"
+  url "https://github.com/LPGhatguy/aftman/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "f75aab63cb887c63e3888a225061a1ab4e0fd0d9c3e0a1c86b8ac7ad035fdf6c"
   license "MIT"
   head "https://github.com/LPGhatguy/aftman.git", branch: "main"
 
