@@ -1138,6 +1138,7 @@ katana
 kcat
 kcptun
 kepubify
+kerl
 kew
 keydb
 keyring
