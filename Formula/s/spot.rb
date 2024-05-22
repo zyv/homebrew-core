@@ -1,8 +1,8 @@
 class Spot < Formula
   desc "Platform for LTL and ω-automata manipulation"
   homepage "https://spot.lre.epita.fr"
-  url "http://www.lrde.epita.fr/dload/spot/spot-2.11.6.tar.gz"
-  sha256 "a692794f89c0db3956ba5919bdd5313e372e0de34000a9022f29e1c6e91c538a"
+  url "http://www.lrde.epita.fr/dload/spot/spot-2.12.tar.gz"
+  sha256 "26ba076ad57ec73d2fae5482d53e16da95c47822707647e784d8c7cec0d10455"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -22,7 +22,7 @@ class Spot < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "7087a187f5f60917e98f9cb6c2262c67ab02e926510ef024f7028615c49a8e2f"
   end
 
-  uses_from_macos "python" => :build
+  depends_on "python@3.12" => :build
 
   fails_with gcc: "5" # C++17
 
@@ -32,6 +32,11 @@ class Spot < Formula
   end
 
   test do
-    system bin/"randltl -n20 a b c d | ltlcross 'ltl2tgba -H -D %f >%O' 'ltl2tgba -s %f >%O' 'ltl2tgba -DP %f >%O'"
+    randltl_output = pipe_output("#{bin}/randltl -n20 a b c d", "")
+    assert_match "Xb R ((Gb R c) W d)", randltl_output
+
+    ltlcross_output = pipe_output("#{bin}/ltlcross '#{bin}/ltl2tgba -H -D %f >%O' " \
+                                  "'#{bin}/ltl2tgba -s %f >%O' '#{bin}/ltl2tgba -DP %f >%O' 2>&1", randltl_output)
+    assert_match "No problem detected", ltlcross_output
   end
 end
