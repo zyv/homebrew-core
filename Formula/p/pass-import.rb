@@ -6,7 +6,7 @@ class PassImport < Formula
   url "https://files.pythonhosted.org/packages/f1/69/1d763287f49eb2d43f14280a1af9f6c2aa54a306071a4723a9723a6fb613/pass-import-3.5.tar.gz"
   sha256 "e3e5ec38f58511904a82214f8a80780729dfe84628d7c5d6b1cedee20ff3fb23"
   license "GPL-3.0-or-later"
-  revision 1
+  revision 2
   head "https://github.com/roddhjav/pass-import.git", branch: "master"
 
   bottle do
@@ -34,8 +34,8 @@ class PassImport < Formula
   end
 
   resource "pyaml" do
-    url "https://files.pythonhosted.org/packages/d0/3d/ddd68d7e8e0173f4ce450056835b759d986fa1cab7bf1a0fa142feed93cd/pyaml-23.12.0.tar.gz"
-    sha256 "ce6f648efdfb1b3a5579f8cedb04facf0fa1e8f64846b639309b585bb322b4e5"
+    url "https://files.pythonhosted.org/packages/a1/b4/41000b97447aba34a5054e90852e6b7ff5c0bc2a7e0306172176530c89e7/pyaml-24.4.0.tar.gz"
+    sha256 "0e483d9289010e747a325dc43171bcc39d6562dd1dd4719e8cc7e7c96c99fce6"
   end
 
   resource "pyyaml" do
@@ -44,8 +44,8 @@ class PassImport < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "urllib3" do
