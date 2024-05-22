@@ -1,8 +1,8 @@
 class Objfw < Formula
   desc "Portable, lightweight framework for the Objective-C language"
   homepage "https://objfw.nil.im/"
-  url "https://objfw.nil.im/downloads/objfw-1.1.3.tar.gz"
-  sha256 "e66ff27ac93c5747019aaa5c8a72b2e4508938e59b3ce08909e54e566ebb2e41"
+  url "https://objfw.nil.im/downloads/objfw-1.1.4.tar.gz"
+  sha256 "f6bfdbab22008aae3e4b48d77ced1a04c5153961c6f7e5492891f90ae5131a78"
   license "LGPL-3.0-only"
   head "https://objfw.nil.im/", using: :fossil
 
@@ -26,6 +26,7 @@ class Objfw < Formula
 
   on_linux do
     depends_on "llvm"
+    depends_on "openssl@3"
   end
 
   fails_with :gcc
