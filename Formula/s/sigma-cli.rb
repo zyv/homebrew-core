@@ -6,6 +6,7 @@ class SigmaCli < Formula
   url "https://files.pythonhosted.org/packages/cf/45/eef555a909ff716108ded653decf0a7642bc80169fff9590b665638164a0/sigma_cli-1.0.2.tar.gz"
   sha256 "8cb46dca0c5787969f33152c3cd085989fbc07a121d1c9a795664f7264c7ce9f"
   license "LGPL-2.1-or-later"
+  revision 1
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
@@ -83,8 +84,8 @@ class SigmaCli < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "urllib3" do
