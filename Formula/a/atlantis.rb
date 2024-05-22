@@ -1,8 +1,8 @@
 class Atlantis < Formula
   desc "Terraform Pull Request Automation tool"
   homepage "https://www.runatlantis.io/"
-  url "https://github.com/runatlantis/atlantis/archive/refs/tags/v0.27.3.tar.gz"
-  sha256 "ce17717ab9bb93f5cac5178f9f3dd956f3cd51e09142b25282d9ceb063f275c7"
+  url "https://github.com/runatlantis/atlantis/archive/refs/tags/v0.28.0.tar.gz"
+  sha256 "4673eaf6e92d540a228c18db581de9c504e9777b4547a781be9042347f7f9686"
   license "Apache-2.0"
   head "https://github.com/runatlantis/atlantis.git", branch: "main"
 
