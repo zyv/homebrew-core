@@ -2080,6 +2080,7 @@ sphinx-doc
 spicetify-cli
 spidermonkey
 sponge
+spot
 spotbugs
 spotify_player
 spotify-tui
