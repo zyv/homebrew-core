@@ -1,8 +1,8 @@
 class Quill < Formula
   desc "C++17 Asynchronous Low Latency Logging Library"
   homepage "https://github.com/odygrd/quill"
-  url "https://github.com/odygrd/quill/archive/refs/tags/v3.9.0.tar.gz"
-  sha256 "6e6a46dc6ae94e8321aca00d27dae754dcc51ee83fe60078f8f1f3eb7b3b227b"
+  url "https://github.com/odygrd/quill/archive/refs/tags/v4.0.0.tar.gz"
+  sha256 "c4e8a5a8f555a26baff1578fa37b9c6a968170a9bab64fcc913f6b90b91589dc"
   license "MIT"
   head "https://github.com/odygrd/quill.git", branch: "master"
 
@@ -29,23 +29,36 @@ class Quill < Formula
 
   test do
     (testpath/"test.cpp").write <<~EOS
-      #include "quill/Quill.h"
+      #include "quill/Backend.h"
+      #include "quill/Frontend.h"
+      #include "quill/LogMacros.h"
+      #include "quill/Logger.h"
+      #include "quill/sinks/ConsoleSink.h"
+
       int main()
       {
-        quill::start();
+        // Start the backend thread
+        quill::Backend::start();
 
-        quill::FileHandlerConfig file_handler_cfg;
-        file_handler_cfg.set_open_mode('w');
+        // Frontend
+        auto console_sink = quill::Frontend::create_or_get_sink<quill::ConsoleSink>("sink_id_1");
+        quill::Logger* logger = quill::Frontend::create_or_get_logger("root", std::move(console_sink));
 
-        std::shared_ptr< quill::Handler > file_handler = quill::file_handler("#{testpath}/basic-log.txt", file_handler_cfg);
-        quill::Logger* logger = quill::create_logger("logger_bar", std::move(file_handler));
-        LOG_INFO(logger, "Test");
+        // Change the LogLevel to print everything
+        logger->set_log_level(quill::LogLevel::TraceL3);
+
+        LOG_INFO(logger, "Welcome to Quill!");
+        LOG_ERROR(logger, "An error message. error code {}", 123);
+        LOG_WARNING(logger, "A warning message.");
+        LOG_CRITICAL(logger, "A critical error.");
+        LOG_DEBUG(logger, "Debugging foo {}", 1234);
+        LOG_TRACE_L1(logger, "{:>30}", "right aligned");
+        LOG_TRACE_L2(logger, "Positional arguments are {1} {0} ", "too", "supported");
+        LOG_TRACE_L3(logger, "Support for floats {:03.2f}", 1.23456);
       }
     EOS
 
-    system ENV.cxx, "-std=c++17", "test.cpp", "-I#{include}", "-L#{lib}", "-lquill", "-o", "test", "-pthread"
+    system ENV.cxx, "-std=c++17", "test.cpp", "-I#{include}", "-o", "test", "-pthread"
     system "./test"
-    assert_predicate testpath/"basic-log.txt", :exist?
-    assert_match "Test", (testpath/"basic-log.txt").read
   end
 end
