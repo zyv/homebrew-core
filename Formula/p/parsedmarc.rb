@@ -3,22 +3,19 @@ class Parsedmarc < Formula
 
   desc "DMARC report analyzer and visualizer"
   homepage "https://domainaware.github.io/parsedmarc/"
-  # TODO: Remove `kafka-python` & `kafka-python-ng` from pypi_formula_mappings.json
-  # if https://github.com/domainaware/parsedmarc/pull/510 is merged
-  url "https://files.pythonhosted.org/packages/d2/3a/6f796f3b6eea53c426576066305db5a8b05674461afb740065bc076b5d29/parsedmarc-8.11.0.tar.gz"
-  sha256 "381c6269707c34a34cbe2448d7dad8609c699df9da10bdf348f998078bab22e8"
+  url "https://files.pythonhosted.org/packages/4f/64/920c9a6bacd2bf967c19faeb121639c0662501c6d9b95908a1b16c87585a/parsedmarc-8.12.0.tar.gz"
+  sha256 "9ac71cdd344c62e693aabaf118f09554a6b67e0e6c5f02bf0609696ef2d76cb7"
   license "Apache-2.0"
-  revision 3
   head "https://github.com/domainaware/parsedmarc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "aacef2da1614c19f4f6699ea19a05d69dbf49ebfe3c0e1e20b464d7d8bfff329"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9981d9e6fe8f032746d48e8da1258a59385c01a30f78c87d28be2e7e7c39af46"
-    sha256 cellar: :any,                 arm64_monterey: "f450252508981cec8433863f9f7cfd3534e85979d8cc28e09bf8372f0b423040"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e04847f99e7b16e0987d8aabfd937f924eccb321c1f9d5b06990c1739274660e"
-    sha256 cellar: :any_skip_relocation, ventura:        "a5fc689702e6e3e67f94cb49b23cf982e745b0ea4c3c8e69ef6225bccab5a715"
-    sha256 cellar: :any,                 monterey:       "92ab492414c60ea442c8a63ab88a74218ca9854e51a2b3374d696105576682d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "67033eacc829f7a110b0a1259aa7d27c88032053bfd7cbe4b3a3efa3021971be"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a6cb544f8361e608c7de45954491bc30e063c68990613e1c1e4fa94ecbd32f1b"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4108189b6e5b480a9d76d08e03495714e0b2744461d1bff0faf40e4685e0603f"
+    sha256 cellar: :any,                 arm64_monterey: "5936998d3ab2b4dc8da65444d474673767556b0914b109b48314729ca9298aa3"
+    sha256 cellar: :any_skip_relocation, sonoma:         "5d1eeede10259930fabbf77635655397991d67d58ba32b215e646ac99791e9c7"
+    sha256 cellar: :any_skip_relocation, ventura:        "c09c755719f1d51e33dbe719771eb4f69a18f8018f234782d2c28577e2dfd4cd"
+    sha256 cellar: :any,                 monterey:       "87624454fb83c52e378847f29b83e10465a664827170b281f5c5b84289913ee4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d32249f7df843d9886bfbf4055ea9f9b3865e8909badd95b24325b0558e5ee82"
   end
 
   depends_on "certifi"
