@@ -26,12 +26,14 @@ class Emacs < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "gmp"
   depends_on "gnutls"
   depends_on "jansson"
   depends_on "tree-sitter"
 
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
+  uses_from_macos "zlib"
 
   on_linux do
     depends_on "jpeg-turbo"
