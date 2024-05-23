@@ -845,6 +845,7 @@ git-annex
 git-codereview
 git-cola
 git-credential-oauth
+git-delete-merged-branches
 git-delta
 git-extras
 git-grab
