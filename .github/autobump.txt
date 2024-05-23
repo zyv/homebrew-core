@@ -1995,6 +1995,7 @@ scummvm-tools
 scw
 sdb
 sdl2
+seal
 seam
 seaweedfs
 secp256k1
