@@ -21,6 +21,8 @@ class NetlifyCli < Formula
   depends_on "node"
 
   on_linux do
+    depends_on "glib"
+    depends_on "gmp"
     depends_on "vips"
     depends_on "xsel"
   end
