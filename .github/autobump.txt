@@ -748,6 +748,7 @@ fisher
 flac
 flank
 flann
+flarectl
 flashrom
 flatbuffers
 flawz
