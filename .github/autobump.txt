@@ -833,6 +833,7 @@ geph4
 getmail6
 gettext
 gf
+gfold
 ggshield
 ghcup
 ghex
