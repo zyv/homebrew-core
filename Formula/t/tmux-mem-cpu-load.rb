@@ -1,8 +1,8 @@
 class TmuxMemCpuLoad < Formula
   desc "CPU, RAM memory, and load monitor for use with tmux"
   homepage "https://github.com/thewtex/tmux-mem-cpu-load"
-  url "https://github.com/thewtex/tmux-mem-cpu-load/archive/refs/tags/v3.8.0.tar.gz"
-  sha256 "deb9bdedee2aa8ad0e1e95da4c2ffdfdd0d205288ac3c9ae42c770cec4df6615"
+  url "https://github.com/thewtex/tmux-mem-cpu-load/archive/refs/tags/v3.8.1.tar.gz"
+  sha256 "3fc373233f47c5cefd540a192415cf37f0135dc0d05530e63ee34eb927e1f1e0"
   license "Apache-2.0"
   head "https://github.com/thewtex/tmux-mem-cpu-load.git", branch: "master"
 
@@ -21,9 +21,9 @@ class TmuxMemCpuLoad < Formula
   depends_on "cmake" => :build
 
   def install
-    ENV.cxx11
-    system "cmake", ".", *std_cmake_args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
