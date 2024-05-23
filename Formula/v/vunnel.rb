@@ -3,10 +3,9 @@ class Vunnel < Formula
 
   desc "Tool for collecting vulnerability data from various sources"
   homepage "https://github.com/anchore/vunnel"
-  url "https://files.pythonhosted.org/packages/fb/09/41bdd02068f2daf79ea1faf83598bd67b369cf6bfd7019755880feab4886/vunnel-0.23.0.tar.gz"
-  sha256 "e1963c9e4dfed4b1d6eeaac29c29b0d5c0e19741ff5168d461058d563ac5b051"
+  url "https://files.pythonhosted.org/packages/75/bb/e3bd542ec5dbd288459ed06aca1eed8f0b0cf3fbaa45f7afe31ebf2f1606/vunnel-0.23.1.tar.gz"
+  sha256 "6added4f60601d5ef8cf364f81c1dbe9436f582e705d4f93f566213e35733512"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
   bottle do
@@ -153,8 +152,8 @@ class Vunnel < Formula
   end
 
   resource "ruff" do
-    url "https://files.pythonhosted.org/packages/2f/2f/1e91c17c5223a37992a9302af69056966657d23f945e07039319fe006f82/ruff-0.4.4.tar.gz"
-    sha256 "f87ea42d5cdebdc6a69761a9d0bc83ae9b3b30d0ad78952005ba6568d6c022af"
+    url "https://files.pythonhosted.org/packages/8b/ff/50f0c57ebbaf545fb8054b68e16fc8803d75be833542f886cf667f4d68f7/ruff-0.4.5.tar.gz"
+    sha256 "286eabd47e7d4d521d199cab84deca135557e6d1e0f0d01c29e757c3cb151b54"
   end
 
   resource "six" do
