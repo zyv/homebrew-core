@@ -1,9 +1,9 @@
 class Xterm < Formula
   desc "Terminal emulator for the X Window System"
   homepage "https://invisible-island.net/xterm/"
-  url "https://invisible-mirror.net/archives/xterm/xterm-391.tgz"
-  mirror "https://deb.debian.org/debian/pool/main/x/xterm/xterm_391.orig.tar.gz"
-  sha256 "6091371e94de867ce186cc1bc306947b0482d71631847fdeab7982acb20ae6b8"
+  url "https://invisible-mirror.net/archives/xterm/xterm-392.tgz"
+  mirror "https://deb.debian.org/debian/pool/main/x/xterm/xterm_392.orig.tar.gz"
+  sha256 "4d57372ef08eafa9fb7682db8d07be0fe0513e58e8478c2ec8e9b62486e7fe5e"
   license "X11"
 
   livecheck do
@@ -32,6 +32,8 @@ class Xterm < Formula
   depends_on "libxmu"
   depends_on "libxpm"
   depends_on "libxt"
+
+  uses_from_macos "ncurses"
 
   def install
     system "./configure", "--disable-debug",
