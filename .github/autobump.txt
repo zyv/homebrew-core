@@ -340,6 +340,7 @@ cherrytree
 chezmoi
 chkrootkit
 choose-rust
+chroma
 chromaprint
 chronograf
 chuck
