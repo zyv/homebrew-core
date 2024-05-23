@@ -166,6 +166,7 @@ bats-core
 bazarr
 bazel
 bazel-diff
+bazel-remote
 bazelisk
 bbot
 bbtools
