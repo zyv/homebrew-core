@@ -918,6 +918,7 @@ gokey
 golang-migrate
 golangci-lint
 google-authenticator-libpam
+google-benchmark
 google-java-format
 goose
 gopass
