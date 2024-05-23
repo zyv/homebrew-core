@@ -544,6 +544,7 @@ dillo
 direnv
 direvent
 dislocker
+displayplacer
 dissent
 distrobox
 dive
