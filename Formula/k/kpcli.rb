@@ -5,10 +5,9 @@ class Kpcli < Formula
 
   desc "Command-line interface to KeePass database files"
   homepage "https://kpcli.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/kpcli/kpcli-4.0.pl"
-  sha256 "5189d7dad69ddc9834d24757e561d2b48eaeda9cadb3e4999608ff8efe28fd35"
+  url "https://downloads.sourceforge.net/project/kpcli/kpcli-4.1.pl"
+  sha256 "dedf0e86f44f8f7a1a9c524a45a515846945d01e04f9402571f18c22971eb7db"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
-  revision 1
 
   livecheck do
     url :stable
@@ -27,19 +26,26 @@ class Kpcli < Formula
 
   depends_on "readline"
 
+  uses_from_macos "ncurses"
   uses_from_macos "perl"
 
   resource "Mac::Pasteboard" do
     on_macos do
-      url "https://cpan.metacpan.org/authors/id/W/WY/WYANT/Mac-Pasteboard-0.103.tar.gz"
-      sha256 "2f5e8dd2db0d6445558484ca6d42d839c5a97ee8aa1b250e694d67d5b7f6634c"
+      url "https://cpan.metacpan.org/authors/id/W/WY/WYANT/Mac-Pasteboard-0.104.tar.gz"
+      sha256 "c55a4431188bec4873212a7c308f835fd1f0e3ba1958173037b5e2d0100fca40"
+
+      # fix incompatible pointer error, upstream pr ref, https://github.com/trwyant/perl-Mac-Pasteboard/pull/5
+      patch do
+        url "https://github.com/trwyant/perl-Mac-Pasteboard/commit/0d5537e912409429d565e9b755e9e4e9c125fc55.patch?full_index=1"
+        sha256 "feae9fd03d694440d73b0ace29bd4c18788015ac51a7aa797f97d501567d613b"
+      end
     end
   end
 
   resource "Clone" do
     on_linux do
-      url "https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/Clone-0.45.tar.gz"
-      sha256 "cbb6ee348afa95432e4878893b46752549e70dc68fe6d9e430d1d2e99079a9e6"
+      url "https://cpan.metacpan.org/authors/id/G/GA/GARU/Clone-0.46.tar.gz"
+      sha256 "aadeed5e4c8bd6bbdf68c0dd0066cb513e16ab9e5b4382dc4a0aafd55890697b"
     end
   end
 
@@ -86,8 +92,8 @@ class Kpcli < Formula
   end
 
   resource "Clipboard" do
-    url "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.28.tar.gz"
-    sha256 "9e8d79015194263357c25a0f5d094800fff43bdbf9f8601ec3b0ed5eb0966d26"
+    url "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Clipboard-0.29.tar.gz"
+    sha256 "7eea786eb401ab7f6651e50dc5ea0b26431112a14353ed0fdb2307bac241aaea"
   end
 
   resource "Capture::Tiny" do

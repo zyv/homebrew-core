@@ -1169,6 +1169,7 @@ kompose
 kops
 kor
 kotlin
+kpcli
 krakend
 krew
 ktfmt
