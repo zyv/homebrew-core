@@ -1,10 +1,9 @@
 class SaneBackends < Formula
   desc "Backends for scanner access"
   homepage "http://www.sane-project.org/"
-  url "https://gitlab.com/sane-project/backends/uploads/110fc43336d0fb5e514f1fdc7360dd87/sane-backends-1.2.1.tar.gz"
-  sha256 "f832395efcb90bb5ea8acd367a820c393dda7e0dd578b16f48928b8f5bdd0524"
+  url "https://gitlab.com/sane-project/backends/uploads/83bdbb6c9a115184c2d48f1fdc6847db/sane-backends-1.3.1.tar.gz"
+  sha256 "aa82f76f409b88f8ea9793d4771fce01254d9b6549ec84d6295b8f59a3879a0c"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url :head
@@ -42,6 +41,10 @@ class SaneBackends < Formula
 
   uses_from_macos "python" => :build
   uses_from_macos "libxml2"
+
+  on_linux do
+    depends_on "systemd"
+  end
 
   def install
     system "./autogen.sh" if build.head?
