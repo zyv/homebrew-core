@@ -2,11 +2,10 @@ class Libgeotiff < Formula
   desc "Library and tools for dealing with GeoTIFF"
   homepage "https://github.com/OSGeo/libgeotiff"
   license "MIT"
-  revision 3
 
   stable do
-    url "https://github.com/OSGeo/libgeotiff/releases/download/1.7.1/libgeotiff-1.7.1.tar.gz"
-    sha256 "05ab1347aaa471fc97347d8d4269ff0c00f30fa666d956baba37948ec87e55d6"
+    url "https://github.com/OSGeo/libgeotiff/releases/download/1.7.2/libgeotiff-1.7.2.tar.gz"
+    sha256 "93c51fe139661d78092b30449293d28c230041d4e33ec3cabadeb167745c1177"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
