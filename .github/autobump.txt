@@ -2227,6 +2227,7 @@ tinyproxy
 tio
 tippecanoe
 tkey-ssh-agent
+tmux-mem-cpu-load
 tmux-xpanes
 tmuxp
 tmx
