@@ -1754,6 +1754,7 @@ pnpm@8
 po4a
 pocketbase
 poco
+podlet
 podman
 podsync
 poetry
