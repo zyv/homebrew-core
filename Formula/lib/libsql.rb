@@ -12,13 +12,13 @@ class Libsql < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "769668f205d94168de92a7e20facfa1f0b16ee8670beb460f52f10aff4e2ac9d"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a7d30ecdde6ce4acca63967a93b6e26ee3fe84dfb0d4443d4cdc49bb080799b8"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a27e975bb8497cbb35a8eb32fb10bbe0193ef8f16b4c8442a14b398755a690e0"
-    sha256 cellar: :any_skip_relocation, sonoma:         "8c4a8a9c255961f1dc4c1b17ba708dfb82a51d207822b4bafe84628e4306dd13"
-    sha256 cellar: :any_skip_relocation, ventura:        "5351c1db59b8f96828859e21b240d7549c946654d07b0310394667cb76c97d0c"
-    sha256 cellar: :any_skip_relocation, monterey:       "e94a9c52c011cdbf5e022584dc67c1afb1bdb5afe0d6d196919a8bf2c6037177"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5989b7cc9bee67ab2a62d5e90f231f298af3255aaa09d525a06202913e8ce3e2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "59c72c99981a04ce3f44d6cd62e250befe36ddb4cbfe80c3ea65b9a251a9fd24"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "eae66133e671828cca865c8e087d0e0537fc770964b8046062a5dbb01bbb1310"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "faa445931e08d8c35b7c0544fcebd8e78a3846ebe54d99ab9d5d6a3ffcc22a6f"
+    sha256 cellar: :any_skip_relocation, sonoma:         "ab01fcd42aa0b0d6a3e87bed138c9efb41be30d728bb8184422236e842d6f3c7"
+    sha256 cellar: :any_skip_relocation, ventura:        "b21b7e8a58337acd7508d190c48dd76504dddb78fca01b9697105e67f9ef471b"
+    sha256 cellar: :any_skip_relocation, monterey:       "d33bef5e08b39604334892dc474183a064abc429e9770a582350c2b608925eee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60e10a5f2c9578fa6ea16304d35d61ae0fb7e213c0f8f9c0570f3fdc5270ee99"
   end
 
   depends_on "rust" => :build
