@@ -3,8 +3,8 @@ require "language/node"
 class DockerfileLanguageServer < Formula
   desc "Language server for Dockerfiles powered by Node, TypeScript, and VSCode"
   homepage "https://github.com/rcjsuen/dockerfile-language-server"
-  url "https://registry.npmjs.org/dockerfile-language-server-nodejs/-/dockerfile-language-server-nodejs-0.11.0.tgz"
-  sha256 "042cbd1fb9baf818bf5eb0730a45a0ae257d42e74d358c8bf177f5a561f3839b"
+  url "https://registry.npmjs.org/dockerfile-language-server-nodejs/-/dockerfile-language-server-nodejs-0.12.0.tgz"
+  sha256 "02ac128649abe554de722dc45090bf7c1cd2770fc7597f65f1b73571f2d3d87a"
   license "MIT"
   head "https://github.com/rcjsuen/dockerfile-language-server.git", branch: "master"
 
