@@ -1,8 +1,8 @@
 class MkConfigure < Formula
   desc "Lightweight replacement for GNU autotools"
   homepage "https://github.com/cheusov/mk-configure"
-  url "https://downloads.sourceforge.net/project/mk-configure/mk-configure/mk-configure-0.38.3/mk-configure-0.38.3.tar.gz"
-  sha256 "c6b5dfdca304eb9462f7d61f94f591844ef2a1ea7c0bbe1397eeff9c9b912afa"
+  url "https://downloads.sourceforge.net/project/mk-configure/mk-configure/mk-configure-0.39.0/mk-configure-0.39.0.tar.gz"
+  sha256 "201555d064ee80722ce53c1df7f0deff40bd5b3a8196d1edab1037be85ae5c95"
   license all_of: ["BSD-2-Clause", "BSD-3-Clause", "MIT", "MIT-CMU"]
 
   livecheck do
@@ -11,13 +11,13 @@ class MkConfigure < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c6e3eaad03df69e5184e6ea7afb922d7fe0e4314b45db877dd6bd554e1be44f7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9eab326a7e545c3bc9eb7db353d1661f6af37281b0c99cd3b37b432156f5bbe1"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "1c7fc5403cab7c48eec3e14248f4f8e762f87b0f8245e72fff48cf9063bbf7c3"
-    sha256 cellar: :any_skip_relocation, sonoma:         "1de2d66c2112108a0f334f131e38c24d5e3dfbd9ef2500ccca346fecf01f0405"
-    sha256 cellar: :any_skip_relocation, ventura:        "af0b96e1776cae5c830478ba53d1527f34445ca9e415ee74513c0ed1c520b140"
-    sha256 cellar: :any_skip_relocation, monterey:       "ae839243ef4ae026fcd8f9005e40e857999f33549273d99ea208be550334deef"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c9b6ece260aab02d39d3a28ac42ca04e91401ca254acc286c6fb4a7285fae48"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "6b6b0504567d782b397108252732579d3ea8a4223f4c34be3d04baaadb14e8e0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d333fa290595e6ccea5d4bafd31cc0547220e2cd8853fdd984f36a545f73e436"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "9acb780def12659ab21bbafd7fde77518f0e16291fab9946627bcf37fd9e216d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "4bd28e3afbee12c1b77a07e52139b56f138ecd37d0d9d61eb50ebcbc7fbbe427"
+    sha256 cellar: :any_skip_relocation, ventura:        "4f60c94d99fb9244f4274a7faad34d1fec68d428d3f28eda5bf97b586fd49f64"
+    sha256 cellar: :any_skip_relocation, monterey:       "abf80283e74610541fb9f88ec1c02a5692caa495067e526d814748cccd2d6ac0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "877bd2c89e9d2d6dbd8c4b4dcbf44202cbaf1dcd2088f2ff93fbc54d283d1d15"
   end
 
   depends_on "bmake"
