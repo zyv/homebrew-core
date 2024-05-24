@@ -2329,6 +2329,7 @@ vault-cli
 vcluster
 vcsh
 veclibfort
+vedic
 veilid
 velero
 verapdf
