@@ -2166,6 +2166,7 @@ swiftformat
 swiftplantuml
 swig
 syft
+symengine
 syncthing
 sysaidmin
 sysdig
