@@ -6,16 +6,16 @@ class VirtManager < Formula
   url "https://releases.pagure.org/virt-manager/virt-manager-4.1.0.tar.gz"
   sha256 "950681d7b32dc61669278ad94ef31da33109bf6fcf0426ed82dfd7379aa590a2"
   license "GPL-2.0-or-later"
-  revision 5
+  revision 6
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ecf1f45c4f57e6f9e55d67d2ae4786f57c72025aa0ed92e9dcc358d3c920e05e"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7271ff9e9df2a13798c01dd22c4acde37e48a1c3e22707eccb986d3a21649bb4"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7d12af582f3255d36f3e6a714fed4bab5a33961f7802e1af7a796cd3ec47ebf"
-    sha256 cellar: :any_skip_relocation, sonoma:         "77f72487a6b283858479f0458c9e185596d7b3dfabbf9448b128575ca9c648a8"
-    sha256 cellar: :any_skip_relocation, ventura:        "4d2c8270ffca1f32d841d02ea51eb4df08291d6c82e0622b93db3c1db406effb"
-    sha256 cellar: :any_skip_relocation, monterey:       "d0f954d3f5fffa14633c0aa4f12bc66eb38d27aae0734cd593d5571335ec6555"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "14429d8f3fb234cb4de3b000f034b6b10acfca45a3b8a15cbdbf9f46d78a69e3"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6783700ef6e932b444508bfec50d88609d640c4cb2232c7eb8d5cfac5642ec1b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5c5474b471b67c8dca81234745cd79144df4744a7cfdc5a8b4988fe9d869cab9"
+    sha256 cellar: :any_skip_relocation, sonoma:         "9b26211b260ec8a8d0eb5888bf5e9311a75761ba3e840bf7c6abcd3e461e9d88"
+    sha256 cellar: :any_skip_relocation, ventura:        "bf51feb81223c6e96bcd88df41f9aa8543fe094062306c63b14f188cc5f64f19"
+    sha256 cellar: :any_skip_relocation, monterey:       "65a24cd05348fc76c900ce7b989dcf8280274c14b7203958674a50ad70efa1fa"
   end
 
   depends_on "docutils" => :build
@@ -50,8 +50,8 @@ class VirtManager < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
-    sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "urllib3" do
