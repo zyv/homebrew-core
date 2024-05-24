@@ -7,6 +7,16 @@ class CloudflareCli4 < Formula
   sha256 "7a3e9b71cad0a995d59b0c3e285e1cf16bd08d9998509f44d7c321abe803d22b"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "e214f0e5e14308f0fef6f3b141a99d5bc06f62ca1bf6446753d34125fe9a2100"
+    sha256 cellar: :any,                 arm64_ventura:  "aa60dfee6b98a70ab7db2759487097cebfcc4a9e072791781458013a5543bb40"
+    sha256 cellar: :any,                 arm64_monterey: "56e8085bb18dc0703fba593c6217ce943df2e5db3ead4b2c4925f1489bf5b7a5"
+    sha256 cellar: :any,                 sonoma:         "89d92d7e22c43f6c47ab35c9d62bd1c5cbe69a7d72e774d3f1e8441785a41a96"
+    sha256 cellar: :any,                 ventura:        "4de6caca8bb4af1c0b3943a7dd38fff6ada1f201508c7e8d06dd3ae0e172d89c"
+    sha256 cellar: :any,                 monterey:       "c842588105813cb0225dedb2e241ee0ae47d31127407013c8861110b04d2388e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a972ca71c5dbd48d7c63776e040e23ac633758e4b619ec67eb75188a225c1984"
+  end
+
   depends_on "libyaml"
   depends_on "python@3.12"
 
