@@ -5,6 +5,16 @@ class Jsontoolkit < Formula
   sha256 "00f82f02166beabec80522e2bbc7b839ee9b7ccb631411c42e6fab65186e80ba"
   license "AGPL-3.0-only"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "db44ed711e76947fdcb106dbc0501306e04cb649e66c523ad68b79513b5b5128"
+    sha256 cellar: :any,                 arm64_ventura:  "cdfad362acd1612e6bfca265a162775f56839029cba214b98caa4dd68d65ca7f"
+    sha256 cellar: :any,                 arm64_monterey: "ffe5e64bf78410c1467804c862b83156c47d455f53bbd941f256324f13ccb627"
+    sha256 cellar: :any,                 sonoma:         "1eb414104958725535408765ecc618e76bdaacaf07a491e1361799200dde54a4"
+    sha256 cellar: :any,                 ventura:        "82f13b513c2f80a41b9362e5dd116f413cdf5d1d4d603664c36884d7149855ed"
+    sha256 cellar: :any,                 monterey:       "ab1e654b6af6f056ed2bfaa18ee9f220be238166e965f343ef23ba0ee43f06ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7201211ab61aa4766b12221174fd6fa7215e99571a2f898395d1fedbe19432c7"
+  end
+
   depends_on "cmake" => :build
 
   def install
