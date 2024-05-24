@@ -1377,6 +1377,7 @@ lout
 lsd
 lsof
 lttng-ust
+luacheck
 luarocks
 luau
 lucky-commit

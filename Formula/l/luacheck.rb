@@ -1,8 +1,8 @@
 class Luacheck < Formula
   desc "Tool for linting and static analysis of Lua code"
   homepage "https://luacheck.readthedocs.io/"
-  url "https://github.com/lunarmodules/luacheck/archive/refs/tags/v1.1.2.tar.gz"
-  sha256 "a3ae089f3939b9fba4dd91c8c6f206e088cc4b21b49f1b6c7a5cc7345a09dc19"
+  url "https://github.com/lunarmodules/luacheck/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "8efe62a7da4fdb32c0c22ec1f7c9306cbc397d7d40493c29988221a059636e25"
   license "MIT"
   head "https://github.com/lunarmodules/luacheck.git", branch: "master"
 
@@ -22,7 +22,7 @@ class Luacheck < Formula
   uses_from_macos "unzip" => :build
 
   def install
-    system "luarocks", "make", "--tree=#{libexec}", "--global", "--lua-dir=#{Formula["lua"].opt_prefix}"
+    system "luarocks", "make", "--tree=#{libexec}", "--local", "--lua-dir=#{Formula["lua"].opt_prefix}"
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
