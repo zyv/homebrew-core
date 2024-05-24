@@ -6,13 +6,13 @@ class Symengine < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "0ec354593497defa98b87c5c01f019e496c5434ca7be1cf0ccfad7aa3d353908"
-    sha256 cellar: :any,                 arm64_ventura:  "df36bbe8ff66b72650d28b7cd821f7859c666ccbcd7d8d5148012ed73bb44414"
-    sha256 cellar: :any,                 arm64_monterey: "30e10dc0a06e53f43fe3b02e7c988b997f66f7311f7c2ab8bdbc8d6df9fffeeb"
-    sha256 cellar: :any,                 sonoma:         "d1142560a962fbd72bd6f3f78b34ef6cd6ba84b1abc9cf5abfa1bb7495051a2c"
-    sha256 cellar: :any,                 ventura:        "08366ea97ec72c41f3ee3dc1cc8cbdf13453c4435a1dca76d0d68266c00c108d"
-    sha256 cellar: :any,                 monterey:       "c551b89cec835f3f779e423e9e24771b062517b3f12a398f0f7671576874761f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f1fd34da0b75f0bc3b416590152e333a3dcc041adc31c0cc0dac6eeaf2519db6"
+    sha256 cellar: :any,                 arm64_sonoma:   "d2ab56021bd2a124b559a41a213cad940fd883a3869af2d01361b94b7fd3bd6b"
+    sha256 cellar: :any,                 arm64_ventura:  "1e9bd2a99176dc1fd9476ed304dc9b21e8a0f3bf323a4a09c01dd046aad21d4f"
+    sha256 cellar: :any,                 arm64_monterey: "99f948cca1c0144a48902ec86106aeb9473862e8cfce1063fbe2714dff3aeb5f"
+    sha256 cellar: :any,                 sonoma:         "ee58982edf91d2a315962e5a1782b8cd9370e0c52e01ef961bfaa22bd083fba1"
+    sha256 cellar: :any,                 ventura:        "8c08e8dff2ec75f71a1a8be955460a4e270d15d3120470514aca14eeec199900"
+    sha256 cellar: :any,                 monterey:       "96dd0c2c05e1cad567ec5acd6eada34cbe10984b10ef8f002076d0692786ffae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e567a13b598d649e018ee63905d33563f10bbd22b81ad370289e2a7cd78d66e0"
   end
 
   depends_on "cereal" => :build
