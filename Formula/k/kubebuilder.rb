@@ -2,8 +2,8 @@ class Kubebuilder < Formula
   desc "SDK for building Kubernetes APIs using CRDs"
   homepage "https://github.com/kubernetes-sigs/kubebuilder"
   url "https://github.com/kubernetes-sigs/kubebuilder.git",
-      tag:      "v3.15.1",
-      revision: "01f76cf67d89e32167d35b6a81b05d21b2c4febf"
+      tag:      "v4.0.0",
+      revision: "6c08ed1db5804042509a360edd971ebdc4ae04d8"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/kubebuilder.git", branch: "master"
 
@@ -35,12 +35,23 @@ class Kubebuilder < Formula
   end
 
   test do
-    assert_match "KubeBuilderVersion:\"#{version}\"", shell_output("#{bin}/kubebuilder version 2>&1")
     mkdir "test" do
       system "go", "mod", "init", "example.com"
-      system "#{bin}/kubebuilder", "init",
-        "--plugins", "go/v3", "--project-version", "3",
-        "--skip-go-version-check"
+      system bin/"kubebuilder", "init",
+                 "--plugins", "go.kubebuilder.io/v4",
+                 "--project-version", "3",
+                 "--skip-go-version-check"
     end
+
+    assert_match <<~EOS, (testpath/"test/PROJECT").read
+      domain: my.domain
+      layout:
+      - go.kubebuilder.io/v4
+      projectName: test
+      repo: example.com
+      version: "3"
+    EOS
+
+    assert_match version.to_s, shell_output("#{bin}/kubebuilder version")
   end
 end
