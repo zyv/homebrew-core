@@ -1,8 +1,8 @@
 class WhisperkitCli < Formula
   desc "Swift native on-device speech recognition with Whisper for Apple Silicon"
   homepage "https://github.com/argmaxinc/WhisperKit"
-  url "https://github.com/argmaxinc/WhisperKit/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "2c23f161907bc86f032fe1b5688ab5f4c422d0a2cb11e2e4ca5e16d6668a17f6"
+  url "https://github.com/argmaxinc/WhisperKit/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "aa927d178b2ce6fd2f0d521c361eab306541e5850195f5706cde0d67bf441c1e"
   license "MIT"
 
   bottle do
@@ -14,6 +14,7 @@ class WhisperkitCli < Formula
   depends_on arch: :arm64
   depends_on :macos
   depends_on macos: :ventura
+
   uses_from_macos "swift"
 
   def install
@@ -24,19 +25,10 @@ class WhisperkitCli < Formula
   test do
     mkdir_p "#{testpath}/tokenizer"
     mkdir_p "#{testpath}/model"
-    whisperkit_command = [
-      "#{bin}/whisperkit-cli",
-      "transcribe",
-      "--model",
-      "tiny",
-      "--download-model-path",
-      "#{testpath}/model",
-      "--download-tokenizer-path",
-      "#{testpath}/tokenizer",
-      "--audio-path",
-      test_fixtures("test.mp3"),
-      "--verbose",
-    ].join(" ")
-    assert_includes shell_output(whisperkit_command), "Transcription:"
+
+    test_file = test_fixtures("test.mp3")
+    output = shell_output("#{bin}/whisperkit-cli transcribe --model tiny --download-model-path #{testpath}/model " \
+                          "--download-tokenizer-path #{testpath}/tokenizer --audio-path #{test_file} --verbose")
+    assert_match "Transcription of test.mp3", output
   end
 end
