@@ -1127,6 +1127,7 @@ jsdoc3
 json-fortran
 json2ts
 jsonnet
+jsontoolkit
 jsvc
 jtbl
 juju
