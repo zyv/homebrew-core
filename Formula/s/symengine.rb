@@ -1,10 +1,9 @@
 class Symengine < Formula
   desc "Fast symbolic manipulation library written in C++"
-  homepage "https://sympy.org"
-  url "https://github.com/symengine/symengine/releases/download/v0.11.2/symengine-0.11.2.tar.gz"
-  sha256 "f6972acd6a65354f6414e69460d2e175729470632bdac05919bc2f7f32e48cbd"
+  homepage "https://www.sympy.org/en/index.html"
+  url "https://github.com/symengine/symengine/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "1b5c3b0bc6a9f187635f93585649f24a18e9c7f2167cebcd885edeaaf211d956"
   license "MIT"
-  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "0ec354593497defa98b87c5c01f019e496c5434ca7be1cf0ccfad7aa3d353908"
@@ -23,24 +22,16 @@ class Symengine < Formula
   depends_on "libmpc"
   depends_on "llvm"
   depends_on "mpfr"
+  depends_on "zstd"
+
+  uses_from_macos "ncurses"
+  uses_from_macos "zlib"
+
+  on_macos do
+    depends_on "z3"
+  end
 
   fails_with gcc: "5"
-
-  # Avoid static linkage with LLVM. The static libraries contain
-  # LTOed objects which causes errors with Apple's `ld`.
-  # An alternative workaround is to use `lld` with `-fuse-ld=lld`.
-  # TODO(carlocab): Upstream a version of this patch.
-  patch do
-    url "https://gitweb.gentoo.org/repo/gentoo.git/plain/sci-libs/symengine/files/symengine-0.8.1-fix_llvm.patch?id=83ab9587be9f89e667506b861208d613a2f016e5"
-    sha256 "c654ea7c4ee44c689433e87f71c7ae78e6c04968e7dfe89be5e4ba4c8c53713b"
-  end
-
-  # LLVM 18 support
-  # remove at next release
-  patch do
-    url "https://github.com/symengine/symengine/commit/b3b9b43d3ecb387664223bb08bb7511f4f5fa548.patch?full_index=1"
-    sha256 "09574aba1efcd2bfeb12deb4dc786d41d42a48c613e2ee6f829fec0f1bf92391"
-  end
 
   def install
     llvm = deps.map(&:to_formula).find { |f| f.name.match?(/^llvm(@\d+)?$/) }
