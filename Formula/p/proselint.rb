@@ -9,14 +9,13 @@ class Proselint < Formula
   head "https://github.com/amperser/proselint.git", branch: "main"
 
   bottle do
-    rebuild 4
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4ed17aae83ab4db2184a89ed428f0f55e7460e81f549e74b3325d966f7dc4df5"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5e6e0f868c31a9a934209e57c5a3980450af0c8fe44f6bb61edfdfb6b71d6c6d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "be71ca3ef347306463ab8aa9bd64e1a53a5511776268683853cc0175e5f9d676"
-    sha256 cellar: :any_skip_relocation, sonoma:         "61131b05955cc82a2f168ef03f21cda3e5f312313a11841b78c92a825e3356b0"
-    sha256 cellar: :any_skip_relocation, ventura:        "6ea888644c7b7e7f21104ab2360d004db60011764c048a52a3848f9986787a4d"
-    sha256 cellar: :any_skip_relocation, monterey:       "75436637988d1f5e7dd286c2cddb563b4b13e82c210276c3f04e006f8f7ff844"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "207764a7a35aef6ffda10dcbba76e5cd3b54e2662ec6e8e5ff091fdee6679e35"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "216e04dbf6fed2c35a614a601a636232030fc54b9e51901eaad0d8811f555ebc"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e2b1430dfe879f22305bffae6be7c84a4fe347e8cf1e2f09d1b19221695bb083"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "3fef3e97aaabdb8ebdd6e0b30ce5d9ef5b25d602db9f34a94d8734145a8110d0"
+    sha256 cellar: :any_skip_relocation, sonoma:         "4b480d58b0ca4ea57721e71354f9e425d4bd8d47c68e8481c8f30a62076cfe4f"
+    sha256 cellar: :any_skip_relocation, ventura:        "360ae0ab57b3aa09c663b71fd6c53e9cc873a925fb580d0bbb91ff3324607f3c"
+    sha256 cellar: :any_skip_relocation, monterey:       "b9d117899a3c76dcc4a8a2983778e7ca306035c56411773a0adf30fea0b2a937"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "0fd0442ce8777f0925f5da36659d9f6fccdc2865c728f39d370114af3def79a0"
   end
 
   depends_on "python@3.12"
