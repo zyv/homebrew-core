@@ -1464,6 +1464,7 @@ minizinc
 minizip
 minizip-ng
 minuit2
+mk-configure
 mkdocs
 mkfontscale
 mkvtoolnix
