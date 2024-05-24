@@ -1259,6 +1259,7 @@ libfabric
 libffi
 libfontenc
 libgedit-gtksourceview
+libgeotiff
 libgetdata
 libgpg-error
 libgr
