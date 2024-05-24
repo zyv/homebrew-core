@@ -33,6 +33,8 @@ class Tailscale < Formula
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/tailscale"
     system "go", "build", *std_go_args(ldflags:, output: bin/"tailscaled"), "./cmd/tailscaled"
+
+    generate_completions_from_executable(bin/"tailscale", "completion")
   end
 
   service do
