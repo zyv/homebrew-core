@@ -1,8 +1,8 @@
 class Xmake < Formula
   desc "Cross-platform build utility based on Lua"
   homepage "https://xmake.io/"
-  url "https://github.com/xmake-io/xmake/releases/download/v2.9.1/xmake-v2.9.1.tar.gz"
-  sha256 "a31dbef8c303aea1268068b4b1ac1aec142ac4124c7cb7d9c7eeb57c414f8d15"
+  url "https://github.com/xmake-io/xmake/releases/download/v2.9.2/xmake-v2.9.2.tar.gz"
+  sha256 "1f617b6a4568c7eb3e8ab0f3a67c16989245adc547e3a7d1fd861acb308fb5b2"
   license "Apache-2.0"
   head "https://github.com/xmake-io/xmake.git", branch: "master"
 
@@ -15,6 +15,8 @@ class Xmake < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "9456eeed677eec804370dfd26b8839be655d8298730c8c8782e1d9079e9b5c83"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "b7f8118c4a169d7f12c7c778a202cb958ab021c18137e7dc35b66d437bcba6b2"
   end
+
+  uses_from_macos "ncurses"
 
   on_linux do
     depends_on "readline"
