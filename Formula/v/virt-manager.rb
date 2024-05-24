@@ -6,17 +6,16 @@ class VirtManager < Formula
   url "https://releases.pagure.org/virt-manager/virt-manager-4.1.0.tar.gz"
   sha256 "950681d7b32dc61669278ad94ef31da33109bf6fcf0426ed82dfd7379aa590a2"
   license "GPL-2.0-or-later"
-  revision 4
+  revision 5
   head "https://github.com/virt-manager/virt-manager.git", branch: "main"
 
   bottle do
-    rebuild 9
-    sha256 cellar: :any, arm64_sonoma:   "41fd6e9a29d3603489ab9da23e8966e1dcaaaecaf66e19ffe47122abdbe850d0"
-    sha256 cellar: :any, arm64_ventura:  "f53adafe25e436ef8e61ce865b1af111b8c2de9e4ddf1d0730f1c568c3339919"
-    sha256 cellar: :any, arm64_monterey: "e746ef562019ccc97d922eedcd91f93c1bbc9ef0db0e7065c8fef7bc1fbbdf77"
-    sha256 cellar: :any, sonoma:         "b7667d575c7a133e03822d83a5b57cb90077c8fbecfd6d79b1a162eef0af3ff0"
-    sha256 cellar: :any, ventura:        "fc0ce55d9c07f4c60731b8b2cfcdcf7359b1c4dfccc090e6bca981b9ea956d16"
-    sha256 cellar: :any, monterey:       "5c0e2b424eef79822016435dd21a2349b89a5d22f4d59f9c632114d7f57d966a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ecf1f45c4f57e6f9e55d67d2ae4786f57c72025aa0ed92e9dcc358d3c920e05e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7271ff9e9df2a13798c01dd22c4acde37e48a1c3e22707eccb986d3a21649bb4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a7d12af582f3255d36f3e6a714fed4bab5a33961f7802e1af7a796cd3ec47ebf"
+    sha256 cellar: :any_skip_relocation, sonoma:         "77f72487a6b283858479f0458c9e185596d7b3dfabbf9448b128575ca9c648a8"
+    sha256 cellar: :any_skip_relocation, ventura:        "4d2c8270ffca1f32d841d02ea51eb4df08291d6c82e0622b93db3c1db406effb"
+    sha256 cellar: :any_skip_relocation, monterey:       "d0f954d3f5fffa14633c0aa4f12bc66eb38d27aae0734cd593d5571335ec6555"
   end
 
   depends_on "docutils" => :build
@@ -30,6 +29,7 @@ class VirtManager < Formula
   depends_on "gtksourceview4"
   depends_on "libosinfo"
   depends_on "libvirt-glib"
+  depends_on "libvirt-python"
   depends_on "libxml2" # can't use from macos, since we need python3 bindings
   depends_on :macos
   depends_on "osinfo-db"
@@ -47,11 +47,6 @@ class VirtManager < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
     sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
-  end
-
-  resource "libvirt-python" do
-    url "https://files.pythonhosted.org/packages/47/f7/5c5112f79761616bf0388b97bb4d0ea1de1d015fb46a40672fe56fdc8ef0/libvirt-python-10.2.0.tar.gz"
-    sha256 "483a2e38ffc2e65f743e4c819ccb45135dbe50b594a0a2cd60b73843dcfde694"
   end
 
   resource "requests" do
