@@ -16,7 +16,7 @@ class Chezscheme < Formula
   end
 
   depends_on "libx11" => :build
-  depends_on "xterm"
+  depends_on "xterm" => :build
   uses_from_macos "ncurses"
 
   def install
