@@ -20,15 +20,13 @@ class Libgeotiff < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "c6e0a1796e5cd01960cef8ecbfa49080261a900e69dab8e64024922dea6d5faf"
-    sha256 cellar: :any,                 arm64_ventura:  "8be2bc3923800b11fd54eadba98cc528d7938ed5595961784fa911b38b0e7d62"
-    sha256 cellar: :any,                 arm64_monterey: "a684b1bf1a96b49fc931f226ac796878462981dfc0f1e2382266b3e11b30a63e"
-    sha256 cellar: :any,                 arm64_big_sur:  "a917c710b51e42a7ee6a21a7c36da6fce310188638d44d168bf9cde2db7b66f0"
-    sha256 cellar: :any,                 sonoma:         "6f428017ccc891b176a2967b4d29908ab3a2685c526c5e92c7dba3647500e7ee"
-    sha256 cellar: :any,                 ventura:        "84ad9fc666dea682be3fe19e0910a4ec6c494da0a25f1ccaff65c83bc9aeda21"
-    sha256 cellar: :any,                 monterey:       "5fc86bf32a1e9e9e228f8ef20dc82779d5923eb87b065cb7fd5ae772b805dfb0"
-    sha256 cellar: :any,                 big_sur:        "e9ba1dffdcf7833cc9f91a9ecba376ec31e25d2e52cea76d7fdcfe927c511a57"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a4c0df2152deddcbb8a8be8b107b7e88ad8c4ad76c2266cf7d137ca5e8e86a5f"
+    sha256 cellar: :any,                 arm64_sonoma:   "50d91e947c0969911681cab5955e6225642120376359f9e18e12c179d6b3316a"
+    sha256 cellar: :any,                 arm64_ventura:  "a166acd2043b465027c51dd99511c6d36d0e821bd178f449acebb74bb49cd1ff"
+    sha256 cellar: :any,                 arm64_monterey: "afed8abb5481dc95894186274a6836a415750e2954dc5ff94d4b9fcd5fc3691a"
+    sha256 cellar: :any,                 sonoma:         "93f331ee2af0f7a43d840352d0c62275a37d7690a73a4838a1d101cef2a8bd35"
+    sha256 cellar: :any,                 ventura:        "6dffe00210966a0a9d96cb7bf8ac2166a62cab3f10697e1f965eecfa28d151f2"
+    sha256 cellar: :any,                 monterey:       "513fbaebba07eb6984a75c7eb48f73f4772ae5ba3c1f835f18dfa259a9d234c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5b3e3ccfac32e6404fc1c3c77211d4d670f5b838e1daa3de67fdb4f686ce37af"
   end
 
   head do
