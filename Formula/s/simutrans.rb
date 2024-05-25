@@ -4,7 +4,8 @@ class Simutrans < Formula
   url "svn://servers.simutrans.org/simutrans/trunk/", revision: "11164"
   version "124.0"
   license "Artistic-1.0"
-  head "https://github.com/aburch/simutrans.git", branch: "master"
+  revision 1
+  head "https://github.com/simutrans/simutrans.git", branch: "master"
 
   livecheck do
     url "https://sourceforge.net/projects/simutrans/files/simutrans/"
@@ -24,19 +25,27 @@ class Simutrans < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
+  depends_on "fluid-synth"
+  depends_on "fontconfig"
   depends_on "freetype"
   depends_on "libpng"
   depends_on "sdl2"
   depends_on "zstd"
 
+  uses_from_macos "unzip" => :build
+  uses_from_macos "bzip2"
   uses_from_macos "curl"
-  uses_from_macos "unzip"
+  uses_from_macos "zlib"
 
   fails_with gcc: "5"
 
   resource "pak64" do
     url "https://downloads.sourceforge.net/project/simutrans/pak64/124-0/simupak64-124-0.zip"
     sha256 "0defc5e7ce4c2c3620b621d94d0735dacc3ff13b1af24dee3a127ca76603b2a3"
+  end
+  resource "soundfont" do
+    url "https://src.fedoraproject.org/repo/pkgs/PersonalCopy-Lite-soundfont/PCLite.sf2/629732b7552c12a8fae5b046d306273a/PCLite.sf2"
+    sha256 "ba3304ec0980e07f5a9de2cfad3e45763630cbc15c7e958c32ce06aa9aefd375"
   end
 
   def install
@@ -56,6 +65,7 @@ class Simutrans < Formula
     bin.install "build/src/nettool/nettool"
 
     libexec.install resource("pak64")
+    (libexec/"music").install resource("soundfont")
   end
 
   test do
