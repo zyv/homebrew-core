@@ -3,8 +3,8 @@ class Icloudpd < Formula
 
   desc "Tool to download photos from iCloud"
   homepage "https://github.com/icloud-photos-downloader/icloud_photos_downloader"
-  url "https://github.com/icloud-photos-downloader/icloud_photos_downloader/archive/refs/tags/v1.17.6.tar.gz"
-  sha256 "ffc15877bc82655381aadec93c776a5fc51a180783a6efc1914922b780a639a4"
+  url "https://github.com/icloud-photos-downloader/icloud_photos_downloader/archive/refs/tags/v1.17.7.tar.gz"
+  sha256 "a05321017e58cc779efb77f57b2fd65dd19d924c102a4dfc5ddd6c84d2afb37f"
   license "MIT"
   head "https://github.com/icloud-photos-downloader/icloud_photos_downloader.git", branch: "master"
 
@@ -50,14 +50,24 @@ class Icloudpd < Formula
     sha256 "47a024b51d0239c0dd8c8540c6c7f484be3b8fcf0b2d85c13825780d3b3f3acd"
   end
 
+  resource "jaraco-context" do
+    url "https://files.pythonhosted.org/packages/c9/60/e83781b07f9a66d1d102a0459e5028f3a7816fdd0894cba90bee2bbbda14/jaraco.context-5.3.0.tar.gz"
+    sha256 "c2f67165ce1f9be20f32f650f25d8edfc1646a8aeee48ae06fb35f90763576d2"
+  end
+
+  resource "jaraco-functools" do
+    url "https://files.pythonhosted.org/packages/bc/66/746091bed45b3683d1026cb13b8b7719e11ccc9857b18d29177a18838dc9/jaraco_functools-4.0.1.tar.gz"
+    sha256 "d33fa765374c0611b52f8b3a795f8900869aa88c84769d4d1746cd68fb28c3e8"
+  end
+
   resource "keyring" do
-    url "https://files.pythonhosted.org/packages/55/fe/282f4c205add8e8bb3a1635cbbac59d6def2e0891b145aa553a0e40dd2d0/keyring-23.13.1.tar.gz"
-    sha256 "ba2e15a9b35e21908d0aaf4e0a47acc52d6ae33444df0da2b49d41a46ef6d678"
+    url "https://files.pythonhosted.org/packages/3e/e9/54f232e659f635a000d94cfbca40b9d5d617707593c3d552ec14d3ba27f1/keyring-25.2.1.tar.gz"
+    sha256 "daaffd42dbda25ddafb1ad5fec4024e5bbcfe424597ca1ca452b299861e49f1b"
   end
 
   resource "keyrings-alt" do
-    url "https://files.pythonhosted.org/packages/88/4e/2af12a91eb8245b7ff24fdc0afbe5a1d62e9d5ec24ffdb53972753cec644/keyrings.alt-4.2.0.tar.gz"
-    sha256 "2ba3d56441ba0637f5f9c096068f67010ac0453f9d0b626de2aa3019353b6431"
+    url "https://files.pythonhosted.org/packages/4f/55/7a52c9961f607353034945692c700ab648f18ea2ab2d509e248b24cb0a91/keyrings.alt-5.0.1.tar.gz"
+    sha256 "cd372a1ec446a1bc5a90624a52c88e83b9330218e39047a6c9a48ae37d116745"
   end
 
   resource "more-itertools" do
