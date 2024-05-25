@@ -14,13 +14,13 @@ class Simutrans < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "39426ef14b391bcd7c63817c961da2988f541c1c3436ca5d8b94032c072cb1f0"
-    sha256 cellar: :any,                 arm64_ventura:  "cfa9b9c74717245cb5f3add5a14186cdbf202cca56d2488cb5fadae60838659d"
-    sha256 cellar: :any,                 arm64_monterey: "978f95bcfb824cc5c0c3bc8ec63e8ab4d4b0b8e947dacb45714984798298de21"
-    sha256 cellar: :any,                 sonoma:         "3f8cc425d3434b62624a56e56038eabc71eccbc0f6fba5c1af2f478e6dc83f75"
-    sha256 cellar: :any,                 ventura:        "4aed3ce8eaba72d72f2d97d8646c21c7192b3e4a1c5112693e065b11618a5c33"
-    sha256 cellar: :any,                 monterey:       "dcd3ecb50bfa4cdc6830caeb9736f46545df30e569fe3209a1695f9b84948428"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "336b2d0a9743b56884d5c61c7da94daaf6b651a2dd30ba18d6330e63ab073696"
+    sha256 cellar: :any,                 arm64_sonoma:   "5053e036752f688c1b43cd93dbe90e718e47f25b67d4d1495c8bd4414eaef7ea"
+    sha256 cellar: :any,                 arm64_ventura:  "317f29c326ab735b90d3fe1bd8c82f04236819facb09d5a2a2c289b7ad70322e"
+    sha256 cellar: :any,                 arm64_monterey: "fa53fdfd946870602a2ef85f02f72f290be3b0f797244912de49c4c43c66b2ab"
+    sha256 cellar: :any,                 sonoma:         "cda8eb282092f90b3e9c65f7f2ab32d2bf43ee0c397345c81d862bab55145a99"
+    sha256 cellar: :any,                 ventura:        "e56ae3b42719b33dad06b7ea683a9ac88f52a90c13b636379b63a1aae497b293"
+    sha256 cellar: :any,                 monterey:       "1d2d5c36939c185fe6692998ae0701ccad393791b98d88380795bf19a562f368"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d4776aa464c1bf1fd76abd163f17737f00e8d1ab2b8323e96fcc80200da97a03"
   end
 
   depends_on "cmake" => :build
