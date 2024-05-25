@@ -1,8 +1,8 @@
 class Librsvg < Formula
   desc "Library to render SVG files using Cairo"
   homepage "https://wiki.gnome.org/Projects/LibRsvg"
-  url "https://download.gnome.org/sources/librsvg/2.58/librsvg-2.58.0.tar.xz"
-  sha256 "d7c444a926406b59790be0deae196e18ed26059da573fa1aa9ec9ca7658a559c"
+  url "https://download.gnome.org/sources/librsvg/2.58/librsvg-2.58.1.tar.xz"
+  sha256 "3728596290a8576d305d06ec8afdf473516feee9dff22e03235eac433d56824e"
   license "LGPL-2.1-or-later"
 
   # librsvg doesn't use GNOME's "even-numbered minor is stable" version scheme.
