@@ -1399,6 +1399,7 @@ mafft
 mage
 magic-wormhole
 mailpit
+mailsy
 mailutils
 makedepend
 makensis
