@@ -1,10 +1,9 @@
 class VideoCompare < Formula
   desc "Split screen video comparison tool using FFmpeg and SDL2"
   homepage "https://github.com/pixop/video-compare"
-  url "https://github.com/pixop/video-compare/archive/refs/tags/20240429.tar.gz"
-  sha256 "28f0522efa728dd817e116346211c40d744d66b530c57900855e5f0e2152d79e"
+  url "https://github.com/pixop/video-compare/archive/refs/tags/20240525.tar.gz"
+  sha256 "7a8f559da1f069270495bfabe19cde4a0102187812afbd6885430d4a7b3bd9c2"
   license "GPL-2.0-only"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_sonoma:   "d646239b37a1086c7428b54e2294ad51187e0b9ced9ccaf1f741bce367e7abdb"
