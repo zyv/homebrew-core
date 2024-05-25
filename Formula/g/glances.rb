@@ -3,18 +3,18 @@ class Glances < Formula
 
   desc "Alternative to top/htop"
   homepage "https://nicolargo.github.io/glances/"
-  url "https://files.pythonhosted.org/packages/7b/7e/dd749c47ef5f2af4a274293dd2ec424985d3df8c442146f5d794d62d0a41/glances-4.0.6.tar.gz"
-  sha256 "9c6681e63f618cce5dc97b3b907daa3c0f67a7cdfdaab484eef25c0316e4417b"
+  url "https://files.pythonhosted.org/packages/6e/19/62010365c0694f801a878b4d0ace6b638312241228b6731f4dddd1c16c8c/glances-4.0.7.tar.gz"
+  sha256 "f476e86552da231799bd36e6e7e86e3463eb00505267181f6595c8a4125068f9"
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "118e07126f278b830713ebe7d56f44289da308b9ae6a7b75be31110b1160dea3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6b093194a8b2a85eab4802e9d8c16019d80c1610a6eb7a29661c253f5f2fb19e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7cf078e542bbd4d5f49d6f7294da5257bcd4401e63f2bf9931bd0265bc57a94e"
-    sha256 cellar: :any_skip_relocation, sonoma:         "08e983ab1c30dec7559ab844703fefc809649ed94cdce5c490924c3ecca3837f"
-    sha256 cellar: :any_skip_relocation, ventura:        "4b8f7a4e09a06a899471ab6b468de45d3050d92abb13424e49a3bf6ee412e10c"
-    sha256 cellar: :any_skip_relocation, monterey:       "5e4d3130825cdd64913dc387b7be66b7468d2f2c4070aa69773efe6fe60695d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1d72ba378dd7810b23684e0301fe73bc0a53b3286a80dbb5264efb4591d2926f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4e14ed8b0a655bada3f61f1fd4a78c627417e317fc00953fbb410cd70b70c81d"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "5f64024da68f80d832e82abeb3cd61f425f1de4d48686f05858f49f574450bcb"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "95e175336b8fcfd87e7883e8dc5130a620fc84c935ed70a5c2741712ae74247c"
+    sha256 cellar: :any_skip_relocation, sonoma:         "acccfe275ed25f8276e20290e5626ae2c252ece855363757eb5bd8cc644f02bf"
+    sha256 cellar: :any_skip_relocation, ventura:        "cd48beb74172bba43979d0a458b6a7121fd279f4b2ebbeaef38e09f83c09a7b1"
+    sha256 cellar: :any_skip_relocation, monterey:       "956a233e7ed4dd1eef498587ea42cf94e65f316c19bdeef4f93b61781f3c88ad"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "398f9bdb1e339be194a222a5983bf6073ca6c9ecd3cfc35f36181cfe52e2f3fa"
   end
 
   depends_on "python@3.12"
