@@ -1,8 +1,8 @@
 class Mailcatcher < Formula
   desc "Catches mail and serves it through a dream"
   homepage "https://mailcatcher.me"
-  url "https://github.com/sj26/mailcatcher/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "6f6651035bf09357ca50cccf2ce4874e30e56563006219b8bf7b663e12ccaecf"
+  url "https://github.com/sj26/mailcatcher/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "4cd027e22878342d6a002402306d42ada1f34045cc1d7f35b5a7fa37b944326e"
   license "MIT"
 
   bottle do
@@ -38,8 +38,8 @@ class Mailcatcher < Formula
   end
 
   resource "eventmachine" do
-    url "https://rubygems.org/downloads/eventmachine-1.0.9.1.gem"
-    sha256 "9f4cb30b3bce0c2a90da875a81534f12cbf6f1174f80d64c32efbda1140b599e"
+    url "https://rubygems.org/downloads/eventmachine-1.2.7.gem"
+    sha256 "994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972"
   end
 
   resource "websocket-extensions" do
@@ -58,8 +58,8 @@ class Mailcatcher < Formula
   end
 
   resource "mini_mime" do
-    url "https://rubygems.org/downloads/mini_mime-1.1.2.gem"
-    sha256 "a54aec0cc7438a03a850adb00daca2bdb60747f839e28186994df057cea87151"
+    url "https://rubygems.org/downloads/mini_mime-1.1.5.gem"
+    sha256 "8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef"
   end
 
   resource "date" do
@@ -68,18 +68,18 @@ class Mailcatcher < Formula
   end
 
   resource "timeout" do
-    url "https://rubygems.org/downloads/timeout-0.4.0.gem"
-    sha256 "cd6d1f3e83594a90ac1f3de8235399bff87112d97fec928ee2b77de240dd2cb5"
+    url "https://rubygems.org/downloads/timeout-0.4.1.gem"
+    sha256 "6f1f4edd4bca28cffa59501733a94215407c6960bd2107331f0280d4abdebb9a"
   end
 
   resource "net-protocol" do
-    url "https://rubygems.org/downloads/net-protocol-0.2.1.gem"
-    sha256 "21adb19c197768899c389bd257545de9d5af64adb1928787653460c2699eac37"
+    url "https://rubygems.org/downloads/net-protocol-0.2.2.gem"
+    sha256 "aa73e0cba6a125369de9837b8d8ef82a61849360eba0521900e2c3713aa162a8"
   end
 
   resource "net-imap" do
-    url "https://rubygems.org/downloads/net-imap-0.3.7.gem"
-    sha256 "231fc961974fe32c59a019893ae0849d55792412b65a8d43910a7e761ee6c751"
+    url "https://rubygems.org/downloads/net-imap-0.4.11.gem"
+    sha256 "ac8140736df32ed87ff4155189b6ae3d846e2101be794ba657d269c5aefa17f8"
   end
 
   resource "net-pop" do
@@ -88,8 +88,8 @@ class Mailcatcher < Formula
   end
 
   resource "net-smtp" do
-    url "https://rubygems.org/downloads/net-smtp-0.3.3.gem"
-    sha256 "3d51dcaa981b74aff2d89cbe89de4503bc2d682365ea5176366e950a0d68d5b0"
+    url "https://rubygems.org/downloads/net-smtp-0.5.0.gem"
+    sha256 "5fc0415e6ea1cc0b3dfea7270438ec22b278ca8d524986a3ae4e5ae8d087b42a"
   end
 
   resource "mail" do
@@ -108,8 +108,8 @@ class Mailcatcher < Formula
   end
 
   resource "rack" do
-    url "https://rubygems.org/downloads/rack-1.6.13.gem"
-    sha256 "207e60f917a7b47cb858a6e813500bc6042a958c2ca9eeb64631b19cde702173"
+    url "https://rubygems.org/downloads/rack-2.2.9.gem"
+    sha256 "fd6301a97a1c1e955e68f85c861fcb1cde6145a32c532e1ea321a72ff8cc4042"
   end
 
   resource "rack-protection" do

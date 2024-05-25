@@ -1398,6 +1398,7 @@ mactop
 mafft
 mage
 magic-wormhole
+mailcatcher
 mailpit
 mailsy
 mailutils
