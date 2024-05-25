@@ -3,8 +3,8 @@ class Vunnel < Formula
 
   desc "Tool for collecting vulnerability data from various sources"
   homepage "https://github.com/anchore/vunnel"
-  url "https://files.pythonhosted.org/packages/75/bb/e3bd542ec5dbd288459ed06aca1eed8f0b0cf3fbaa45f7afe31ebf2f1606/vunnel-0.23.1.tar.gz"
-  sha256 "6added4f60601d5ef8cf364f81c1dbe9436f582e705d4f93f566213e35733512"
+  url "https://files.pythonhosted.org/packages/7a/02/d327738b5569c44ce824dd750e0cd1dbebd12af0c05b281395739b3fe239/vunnel-0.23.2.tar.gz"
+  sha256 "8317648c4d8df2cd8842356d558e938e4c4d7c404084ad524b7593826638233b"
   license "Apache-2.0"
   head "https://github.com/anchore/vunnel.git", branch: "main"
 
@@ -172,8 +172,8 @@ class Vunnel < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
-    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
+    url "https://files.pythonhosted.org/packages/ce/6a/aa0a40b0889ec2eb81a02ee0daa6a34c6697a605cf62e6e857eead9e4f85/typing_extensions-4.12.0.tar.gz"
+    sha256 "8cbcdc8606ebcb0d95453ad7dc5065e6237b6aa230a31e81d0f440c30fed5fd8"
   end
 
   resource "untokenize" do
