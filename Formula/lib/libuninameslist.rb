@@ -1,8 +1,8 @@
 class Libuninameslist < Formula
   desc "Library of Unicode names and annotation data"
   homepage "https://github.com/fontforge/libuninameslist"
-  url "https://github.com/fontforge/libuninameslist/releases/download/20230916/libuninameslist-dist-20230916.tar.gz"
-  sha256 "3ce49721de808a389f90997e9217adac449ab23e2fbf2115b22a8664e0e0a686"
+  url "https://github.com/fontforge/libuninameslist/releases/download/20240524/libuninameslist-dist-20240524.tar.gz"
+  sha256 "cb69d6b0b1bf896c98cd00497d3078be2d22b896b0dc7cba2bb3d6bc3172dac5"
   license "BSD-3-Clause"
 
   livecheck do

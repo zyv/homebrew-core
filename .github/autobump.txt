@@ -1324,6 +1324,7 @@ libtommath
 libtrace
 libucl
 libunibreak
+libuninameslist
 libunwind
 libupnp
 liburing
