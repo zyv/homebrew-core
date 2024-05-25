@@ -1,8 +1,8 @@
 class ImagemagickAT6 < Formula
   desc "Tools and libraries to manipulate images in many formats"
   homepage "https://legacy.imagemagick.org/"
-  url "https://imagemagick.org/archive/releases/ImageMagick-6.9.13-10.tar.xz"
-  sha256 "1ee6ef603f9bb9dc10702b2bb83233e0a7717751b6f650c33f4e9daaf4816eea"
+  url "https://imagemagick.org/archive/releases/ImageMagick-6.9.13-11.tar.xz"
+  sha256 "aca9e58cbb1a591114ac1818d928d45bd2ae0c95524aaa92042806a0f6287591"
   license "ImageMagick"
   head "https://github.com/imagemagick/imagemagick6.git", branch: "main"
 
@@ -25,6 +25,7 @@ class ImagemagickAT6 < Formula
 
   depends_on "pkg-config" => :build
 
+  depends_on "fontconfig"
   depends_on "freetype"
   depends_on "ghostscript"
   depends_on "jpeg-turbo"
@@ -36,7 +37,9 @@ class ImagemagickAT6 < Formula
   depends_on "webp"
   depends_on "xz"
 
+  uses_from_macos "bzip2"
   uses_from_macos "libxml2"
+  uses_from_macos "zlib"
 
   skip_clean :la
 
