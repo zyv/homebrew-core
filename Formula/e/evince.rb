@@ -1,8 +1,8 @@
 class Evince < Formula
   desc "GNOME document viewer"
   homepage "https://wiki.gnome.org/Apps/Evince"
-  url "https://download.gnome.org/sources/evince/46/evince-46.2.tar.xz"
-  sha256 "8afb533cd6660fe4006339aaa03c0fe449e60d1042d25bbe51dc98fbee789f8b"
+  url "https://download.gnome.org/sources/evince/46/evince-46.3.tar.xz"
+  sha256 "bc0d1d41b9d7ffc762e99d2abfafacbf745182f0b31d86db5eec8c67f5f3006b"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -23,7 +23,12 @@ class Evince < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "adwaita-icon-theme"
+  depends_on "at-spi2-core"
+  depends_on "cairo"
   depends_on "djvulibre"
+  depends_on "gdk-pixbuf"
+  depends_on "gettext"
+  depends_on "glib"
   depends_on "gspell"
   depends_on "gtk+3"
   depends_on "hicolor-icon-theme"
@@ -32,7 +37,12 @@ class Evince < Formula
   depends_on "libhandy"
   depends_on "libsecret"
   depends_on "libspectre"
+  depends_on "libtiff"
+  depends_on "pango"
   depends_on "poppler"
+
+  uses_from_macos "libxml2"
+  uses_from_macos "zlib"
 
   def install
     ENV["DESTDIR"] = "/"
