@@ -199,6 +199,7 @@ bk
 bkt
 black
 blis
+blocky
 bluepill
 blueutil
 bluez
