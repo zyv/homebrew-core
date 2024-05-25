@@ -6,8 +6,8 @@ class WhisperkitCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d74ea92c430d68f726cadbfcc1b871cdeca55015ac5cf817edaf652827416a85"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "0274bd173d1e56be4f88a2f8773740152e1776808f11f8fd3ad0bb48013c1e3e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a424b3a167845726013f463345b55e5c4e6c7a11dddf42a6ff4941eedb43273a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "dca71e4cb8e86c37b851aeecbbeda10907507062bb208fd468f15c07e2151f81"
   end
 
   depends_on xcode: ["15.0", :build]
