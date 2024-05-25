@@ -1,8 +1,8 @@
 class Gucharmap < Formula
   desc "GNOME Character Map, based on the Unicode Character Database"
   homepage "https://wiki.gnome.org/Apps/Gucharmap"
-  url "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.4/gucharmap-15.1.4.tar.bz2"
-  sha256 "305a911a5bb4cc470fb1e4f40cf838748797cee39c742fc0f754c874e6f5d4ab"
+  url "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.1.5/gucharmap-15.1.5.tar.bz2"
+  sha256 "45c46e854a7de1a6491e6b3b0f3acd6363de1110208bdf5ba88d4e9460e9a897"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -23,7 +23,16 @@ class Gucharmap < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
   depends_on "vala" => :build
+  depends_on "at-spi2-core"
+  depends_on "cairo"
+  depends_on "glib"
   depends_on "gtk+3"
+  depends_on "pango"
+  depends_on "pcre2"
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   on_linux do
     depends_on "gettext" => :build
@@ -36,7 +45,7 @@ class Gucharmap < Formula
 
   resource "unihan" do
     url "https://www.unicode.org/Public/16.0.0/ucd/Unihan.zip", using: :nounzip
-    sha256 "254d040ceee449c8aa0c1959046f14fdc90999aca6d28695902f0d0e53b9d891"
+    sha256 "faed0321cf85bbc18fd3edb5f03dbae9d7099ea712d75f08d1fb2f87dcc197e1"
   end
 
   def install
