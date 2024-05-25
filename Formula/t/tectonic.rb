@@ -47,6 +47,7 @@ class Tectonic < Formula
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
 
     system "cargo", "install", "--features", "external-harfbuzz", *std_cargo_args
+    bin.install_symlink bin/"tectonic" => "nextonic"
   end
 
   test do
@@ -54,5 +55,9 @@ class Tectonic < Formula
     system bin/"tectonic", "-o", testpath, "--format", "plain", testpath/"test.tex"
     assert_predicate testpath/"test.pdf", :exist?, "Failed to create test.pdf"
     assert_match "PDF document", shell_output("file test.pdf")
+
+    system bin/"nextonic", "new", "."
+    system bin/"nextonic", "build"
+    assert_predicate testpath/"build/default/default.pdf", :exist?, "Failed to create default.pdf"
   end
 end
