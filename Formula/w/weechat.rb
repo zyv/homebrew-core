@@ -1,8 +1,8 @@
 class Weechat < Formula
   desc "Extensible IRC client"
   homepage "https://www.weechat.org"
-  url "https://weechat.org/files/src/weechat-4.2.2.tar.xz"
-  sha256 "20968b22c7f0f50df9cf6ff8598dd1bd017c5759b2c94593f5d9ed7b24ebb941"
+  url "https://weechat.org/files/src/weechat-4.3.0.tar.xz"
+  sha256 "36f9f90bf2f69f77a34d1e0d58f06ca08f0f20f8263ab940b637e7abf796862d"
   license "GPL-3.0-or-later"
   head "https://github.com/weechat/weechat.git", branch: "master"
 
@@ -20,6 +20,7 @@ class Weechat < Formula
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "aspell"
+  depends_on "cjson"
   depends_on "gettext"
   depends_on "gnutls"
   depends_on "libgcrypt"
@@ -32,6 +33,11 @@ class Weechat < Formula
 
   uses_from_macos "curl"
   uses_from_macos "tcl-tk"
+  uses_from_macos "zlib"
+
+  on_macos do
+    depends_on "libgpg-error"
+  end
 
   def python3
     which("python3.12")
