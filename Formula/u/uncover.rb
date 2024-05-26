@@ -1,8 +1,8 @@
 class Uncover < Formula
   desc "Tool to discover exposed hosts on the internet using multiple search engines"
   homepage "https://github.com/projectdiscovery/uncover"
-  url "https://github.com/projectdiscovery/uncover/archive/refs/tags/v1.0.7.tar.gz"
-  sha256 "1c97474166b84ef68c3085fd58fd0eba34ea7e835d0db6bb6c7590725b835329"
+  url "https://github.com/projectdiscovery/uncover/archive/refs/tags/v1.0.8.tar.gz"
+  sha256 "b88864edc8832b70135191ea7fbd4b8e89a6acc2a4c923d7382a9413b21016e7"
   license "MIT"
   head "https://github.com/projectdiscovery/uncover.git", branch: "main"
 

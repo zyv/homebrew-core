@@ -2310,6 +2310,7 @@ uftrace
 ugit
 ugrep
 unar
+uncover
 ungit
 uni
 uni-algo
