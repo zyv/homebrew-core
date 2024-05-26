@@ -2485,6 +2485,7 @@ zeromq
 zf
 zig
 zipkin
+zk
 zlib
 zlint
 zls
