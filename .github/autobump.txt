@@ -988,6 +988,7 @@ gulp-cli
 gum
 gupnp
 gupnp-tools
+gwyddion
 gxml
 gyb
 hackrf

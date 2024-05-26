@@ -1,8 +1,8 @@
 class Gwyddion < Formula
   desc "Scanning Probe Microscopy visualization and analysis tool"
   homepage "http://gwyddion.net/"
-  url "https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.65/gwyddion-2.65.tar.xz"
-  sha256 "9115fb0a83c963c62460da1d7b9834382c9698bfb9b0cf29b829a4f591369ea3"
+  url "https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.66/gwyddion-2.66.tar.xz"
+  sha256 "377bedcd2b0d8d133a329686da9f5f91807ff1d47937f9991195f1e863792d52"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -21,11 +21,19 @@ class Gwyddion < Formula
   end
 
   depends_on "pkg-config" => :build
+  depends_on "cairo"
   depends_on "fftw"
+  depends_on "gdk-pixbuf"
+  depends_on "glib"
   depends_on "gtk+"
   depends_on "gtkglext"
+  depends_on "libpng"
   depends_on "libxml2"
   depends_on "minizip"
+  depends_on "pango"
+
+  uses_from_macos "bzip2"
+  uses_from_macos "zlib"
 
   on_macos do
     # Regenerate autoconf files to avoid flat namespace in library
@@ -35,6 +43,9 @@ class Gwyddion < Formula
     depends_on "gtk-doc" => :build
     depends_on "libtool" => :build
     # TODO: depends_on "gtk-mac-integration"
+    depends_on "at-spi2-core"
+    depends_on "gettext"
+    depends_on "harfbuzz"
   end
 
   def install
