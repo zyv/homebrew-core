@@ -8,7 +8,13 @@ class Czg < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "49ce4bfcecd606fc4433d4d6610b4e3159115bc3af65658e07f7c13f661339ab"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "dc438d10f8a7239f5cfca51975f6e07e8d194acc6eb4fd8bdee3918988eddff8"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dc438d10f8a7239f5cfca51975f6e07e8d194acc6eb4fd8bdee3918988eddff8"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "dc438d10f8a7239f5cfca51975f6e07e8d194acc6eb4fd8bdee3918988eddff8"
+    sha256 cellar: :any_skip_relocation, sonoma:         "dc438d10f8a7239f5cfca51975f6e07e8d194acc6eb4fd8bdee3918988eddff8"
+    sha256 cellar: :any_skip_relocation, ventura:        "dc438d10f8a7239f5cfca51975f6e07e8d194acc6eb4fd8bdee3918988eddff8"
+    sha256 cellar: :any_skip_relocation, monterey:       "dc438d10f8a7239f5cfca51975f6e07e8d194acc6eb4fd8bdee3918988eddff8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ee4edd9c9f1702183c1bbcff7b750a9e4b872264a3f97243216b754825cf1924"
   end
 
   depends_on "node"
