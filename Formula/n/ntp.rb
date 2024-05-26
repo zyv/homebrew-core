@@ -1,9 +1,9 @@
 class Ntp < Formula
   desc "Network Time Protocol (NTP) Distribution"
   homepage "https://www.ntp.org"
-  url "https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p17.tar.gz"
-  version "4.2.8p17"
-  sha256 "103dd272e6a66c5b8df07dce5e9a02555fcd6f1397bdfb782237328e89d3a866"
+  url "https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/ntp-4.2.8p18.tar.gz"
+  version "4.2.8p18"
+  sha256 "cf84c5f3fb1a295284942624d823fffa634144e096cfc4f9969ac98ef5f468e5"
   license all_of: ["BSD-2-Clause", "NTP"]
 
   livecheck do
