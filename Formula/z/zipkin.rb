@@ -1,8 +1,8 @@
 class Zipkin < Formula
   desc "Collect and visualize traces written in Zipkin format"
   homepage "https://zipkin.io"
-  url "https://search.maven.org/remotecontent?filepath=io/zipkin/zipkin-server/3.3.1/zipkin-server-3.3.1-exec.jar"
-  sha256 "8012a5c5d0c6bcef12890ea513873f368df6c752c00cbc4f58f026904feafc7b"
+  url "https://search.maven.org/remotecontent?filepath=io/zipkin/zipkin-server/3.4.0/zipkin-server-3.4.0-exec.jar"
+  sha256 "e0ac243a9c72fb5708056ca7176cdbd3d95fbec4edf7484655ce715f846a966a"
   license "Apache-2.0"
 
   livecheck do
