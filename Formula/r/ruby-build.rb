@@ -19,11 +19,9 @@ class RubyBuild < Formula
 
   depends_on "autoconf"
   depends_on "libyaml"
+  depends_on "openssl@3"
   depends_on "pkg-config"
   depends_on "readline"
-  on_macos do
-    depends_on "openssl@3"
-  end
 
   def install
     # these references are (as-of v20210420) only relevant on FreeBSD but they
