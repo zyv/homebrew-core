@@ -571,6 +571,7 @@ docker-gen
 docker-machine
 docker-slim
 docker-squash
+dockerfile-language-server
 dockly
 dockviz
 doctest
@@ -1418,6 +1419,7 @@ mariadb@10.6
 mariadb@11.0
 mariadb@11.1
 mariadb@11.2
+markdownlint-cli
 markdownlint-cli2
 marked
 marp-cli
@@ -1806,6 +1808,7 @@ proj
 prometheus
 prometheus-cpp
 promptfoo
+proselint
 proteinortho
 proto
 protoc-gen-go
@@ -2226,6 +2229,7 @@ terrascan
 tesseract
 testkube
 tetra
+texlab
 texmath
 tfautomv
 tfmigrate
@@ -2372,6 +2376,7 @@ vsh
 vte3
 vue-cli
 vultr
+vunnel
 vvdec
 vvenc
 wabt
@@ -2454,6 +2459,7 @@ yaegi
 yamale
 yamlfmt
 yamllint
+yara
 yash
 ydiff
 ykman
