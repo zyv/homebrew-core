@@ -1,8 +1,8 @@
 class Vte3 < Formula
   desc "Terminal emulator widget used by GNOME terminal"
   homepage "https://wiki.gnome.org/Apps/Terminal/VTE"
-  url "https://download.gnome.org/sources/vte/0.76/vte-0.76.1.tar.xz"
-  sha256 "084e83ef765774269a4b29df97ca22edc343b9a1d81433d300b8cb2d087a1ec2"
+  url "https://download.gnome.org/sources/vte/0.76/vte-0.76.2.tar.xz"
+  sha256 "e3dc6082d5bd70f8aafaaad2cdfcaf7e51da6ba00a919b11ddac6efa09c72847"
   license "LGPL-2.0-or-later"
 
   bottle do
@@ -21,12 +21,16 @@ class Vte3 < Formula
   depends_on "ninja" => :build
   depends_on "pkg-config" => [:build, :test]
   depends_on "vala" => :build
+  depends_on "at-spi2-core"
+  depends_on "cairo"
   depends_on "fribidi"
+  depends_on "gdk-pixbuf"
   depends_on "glib"
   depends_on "gnutls"
   depends_on "gtk+3"
   depends_on "gtk4"
   depends_on "icu4c"
+  depends_on "lz4"
   depends_on macos: :mojave
   depends_on "pango"
   depends_on "pcre2"
