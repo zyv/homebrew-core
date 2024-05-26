@@ -1,8 +1,8 @@
 class Favirecon < Formula
   desc "Uses favicon.ico to improve the target recon phase"
   homepage "https://github.com/edoardottt/favirecon"
-  url "https://github.com/edoardottt/favirecon/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "a60ef157499003b2f92d8c2b618033496d1220f2c65b96b559760c460236bfea"
+  url "https://github.com/edoardottt/favirecon/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "fda132c912983d0501a99675ce0b546c1782aec0e380b6a2a84d7133befef465"
   license "MIT"
 
   bottle do
