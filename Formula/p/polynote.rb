@@ -36,14 +36,13 @@ class Polynote < Formula
     sha256               x86_64_linux:   "f9ec11fd988d61e408555488aa45f20ae99d998c80db09ec0ca2a009a10e9cf5"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "numpy" # used by `jep` for Java primitive arrays
   depends_on "openjdk"
   depends_on "python@3.12"
 
   resource "jep" do
-    url "https://files.pythonhosted.org/packages/b3/0c/d208bc8a86f032b9a9270876129aadb41fa1a4baa172d68a29c579950856/jep-4.1.1.tar.gz"
-    sha256 "5914a4d815a7e86819f55be3de840edc2d3fe0d0b3f67626e5cea73841b1d1c0"
+    url "https://files.pythonhosted.org/packages/16/94/3bc40b4683442bd34e7c511cbe5c1a1bb8d5d6de1f4955991a07fe02c836/jep-4.2.0.tar.gz"
+    sha256 "636368786b4f3dc29510454e0580a432e45e696de99ce973a3caef6faec35287"
   end
 
   def install
@@ -57,7 +56,7 @@ class Polynote < Formula
           ENV.append "LDFLAGS", "-Wl,-rpath,#{Formula["openjdk"].libexec}/lib/server"
         end
 
-        system python3, "-m", "pip", "install", *std_pip_args(prefix: libexec/"vendor"), "."
+        system python3, "-m", "pip", "install", *std_pip_args(prefix: libexec/"vendor", build_isolation: true), "."
       end
     end
 
