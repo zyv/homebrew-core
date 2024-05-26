@@ -6,7 +6,13 @@ class Checkstyle < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "472f4700f5fedb2029f9f94cb93fa609c35aca75a5bb8d8b937b3fd8d3bddad0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "829060074ffe76478882a5517e237c4936ad0335634477114eac91227d151677"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "829060074ffe76478882a5517e237c4936ad0335634477114eac91227d151677"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "829060074ffe76478882a5517e237c4936ad0335634477114eac91227d151677"
+    sha256 cellar: :any_skip_relocation, sonoma:         "829060074ffe76478882a5517e237c4936ad0335634477114eac91227d151677"
+    sha256 cellar: :any_skip_relocation, ventura:        "829060074ffe76478882a5517e237c4936ad0335634477114eac91227d151677"
+    sha256 cellar: :any_skip_relocation, monterey:       "829060074ffe76478882a5517e237c4936ad0335634477114eac91227d151677"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8e66124d5dd25287da109802a676ffae490f42de6354869571b322cb840c1041"
   end
 
   depends_on "openjdk"
