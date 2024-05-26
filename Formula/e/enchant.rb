@@ -1,8 +1,8 @@
 class Enchant < Formula
   desc "Spellchecker wrapping library"
   homepage "https://abiword.github.io/enchant/"
-  url "https://github.com/AbiWord/enchant/releases/download/v2.7.3/enchant-2.7.3.tar.gz"
-  sha256 "fe6ad4cbe8c71b9384ffdef962be52d4d2bd5ebfb6351435bb390543d4f78b1e"
+  url "https://github.com/AbiWord/enchant/releases/download/v2.8.0/enchant-2.8.0.tar.gz"
+  sha256 "c57add422237b8a7eed116a9a88d8be4f7b9281778fa36f03e1f2c051ecb0372"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -20,6 +20,10 @@ class Enchant < Formula
   depends_on "glib"
 
   uses_from_macos "mandoc" => :build
+
+  on_macos do
+    depends_on "gettext"
+  end
 
   on_system :linux, macos: :ventura_or_newer do
     depends_on "groff" => :build
