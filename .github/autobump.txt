@@ -498,6 +498,7 @@ dagger
 daktilo
 daq
 dar
+darcs
 darkhttpd
 darkstat
 dart-sdk
