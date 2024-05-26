@@ -196,6 +196,7 @@ biome
 bitrise
 bitwarden-cli
 bk
+bkcrack
 bkt
 black
 blis
