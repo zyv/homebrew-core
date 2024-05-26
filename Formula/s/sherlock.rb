@@ -3,10 +3,9 @@ class Sherlock < Formula
 
   desc "Hunt down social media accounts by username"
   homepage "https://sherlock-project.github.io"
-  url "https://files.pythonhosted.org/packages/2a/63/96b5e9a8a8785d4d3f41d1c8909833cd0d847b9feda1a38df5af2a426b30/sherlock_project-0.14.3.tar.gz"
-  sha256 "253066b2265ce689e2747242040c10e6f43d13364919a97b37ec04af769a1933"
+  url "https://files.pythonhosted.org/packages/eb/57/0ac8fcde9e2dbdacb20f48e8c20f3049972a59839d8bccbef0799b944140/sherlock_project-0.14.4.tar.gz"
+  sha256 "3c0edc4ebbcdb8eae03d5ce2e377e1c6839d73b8e77388b70125120537917022"
   license "MIT"
-  revision 1
   head "https://github.com/sherlock-project/sherlock.git", branch: "master"
 
   bottle do
