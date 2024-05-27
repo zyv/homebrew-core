@@ -152,6 +152,7 @@ bandit
 bandwhich
 baobab
 bareos-client
+baresip
 bartib
 bartycrouch
 base16384
@@ -1309,6 +1310,7 @@ libpq
 libproxy
 libpulsar
 librdkafka
+libre
 librealsense
 librespot
 libressl
