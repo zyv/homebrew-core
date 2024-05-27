@@ -15,7 +15,6 @@ class Lit < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "272675caea165b67c8c26b12c6456eccc4f3cbb2e863d127872f88ddbba6e03b"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "llvm" => :test
   depends_on "python@3.12"
 
@@ -24,7 +23,7 @@ class Lit < Formula
   end
 
   def install
-    system python3, "-m", "pip", "install", *std_pip_args, "."
+    system python3, "-m", "pip", "install", *std_pip_args(build_isolation: true), "."
 
     # Install symlinks so that `import lit` works with multiple versions of Python
     python_versions = Formula.names
