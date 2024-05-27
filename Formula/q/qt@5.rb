@@ -4,12 +4,11 @@ class QtAT5 < Formula
   desc "Cross-platform application and UI framework"
   homepage "https://www.qt.io/"
   # NOTE: Use *.diff for GitLab/KDE patches to avoid their checksums changing.
-  url "https://download.qt.io/official_releases/qt/5.15/5.15.13/single/qt-everywhere-opensource-src-5.15.13.tar.xz"
-  mirror "https://mirrors.dotsrc.org/qtproject/archive/qt/5.15/5.15.13/single/qt-everywhere-opensource-src-5.15.13.tar.xz"
-  mirror "https://mirrors.ocf.berkeley.edu/qt/archive/qt/5.15/5.15.13/single/qt-everywhere-opensource-src-5.15.13.tar.xz"
-  sha256 "9550ec8fc758d3d8d9090e261329700ddcd712e2dda97e5fcfeabfac22bea2ca"
+  url "https://download.qt.io/official_releases/qt/5.15/5.15.14/single/qt-everywhere-opensource-src-5.15.14.tar.xz"
+  mirror "https://mirrors.dotsrc.org/qtproject/archive/qt/5.15/5.15.14/single/qt-everywhere-opensource-src-5.15.14.tar.xz"
+  mirror "https://mirrors.ocf.berkeley.edu/qt/archive/qt/5.15/5.15.14/single/qt-everywhere-opensource-src-5.15.14.tar.xz"
+  sha256 "fdd3a4f197d2c800ee0085c721f4bef60951cbda9e9c46e525d1412f74264ed7"
   license all_of: ["GFDL-1.3-only", "GPL-2.0-only", "GPL-3.0-only", "LGPL-2.1-only", "LGPL-3.0-only"]
-  revision 1
 
   livecheck do
     url "https://download.qt.io/official_releases/qt/5.15/"
@@ -85,8 +84,8 @@ class QtAT5 < Formula
 
   resource "qtwebengine" do
     url "https://code.qt.io/qt/qtwebengine.git",
-        tag:      "v5.15.16-lts",
-        revision: "224806a7022eed6d5c75b486bec8715a618cb314"
+        tag:      "v5.15.17-lts",
+        revision: "17fd3176988586168bee8654008a097a5f23ec1d"
 
     # Fix libxml2 2.12 compatibility
     # https://codereview.qt-project.org/c/qt/qtwebengine-chromium/+/525714
@@ -180,39 +179,12 @@ class QtAT5 < Formula
     directory "qtbase"
   end
 
-  # CVE-2023-32573
-  # Original (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2023-32573-qtsvg-5.15.diff
-  # Remove with Qt 5.15.14
-  patch do
-    url "https://invent.kde.org/qt/qt/qtsvg/-/commit/5b1b4a99d6bc98c42a11b7a3f6c9f0b0f9e56f34.diff"
-    sha256 "0a978cac9954a557dde7f0c01e059a227f2e064fe6542defd78f37a9f7dd7a3d"
-    directory "qtsvg"
-  end
-
-  # CVE-2023-32762
-  # Original (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2023-32762-qtbase-5.15.diff
-  # Remove with Qt 5.15.14
-  patch do
-    url "https://invent.kde.org/qt/qt/qtbase/-/commit/1286cab2c0e8ae93749a71dcfd61936533a2ec50.diff"
-    sha256 "2fba1152067c60756162b7ad7a2570d55c9293dd4a53395197fd31ab770977d7"
-    directory "qtbase"
-  end
-
   # CVE-2023-32763
   # Original (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2023-32763-qtbase-5.15.diff
   # Remove with Qt 5.15.15
   patch do
     url "https://invent.kde.org/qt/qt/qtbase/-/commit/deb7b7b52b6e6912ff8c78bc0217cda9e36c4bba.diff"
     sha256 "ceafd01b3e2602140bfe8b052a5ad80ec2f3b3b21aed1e2d6f27cd50b9fb60b7"
-    directory "qtbase"
-  end
-
-  # CVE-2023-33285
-  # Original (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2023-33285-qtbase-5.15.diff
-  # Remove with Qt 5.15.14
-  patch do
-    url "https://invent.kde.org/qt/qt/qtbase/-/commit/21f6b720c26705ec53d61621913a0385f1aa805a.diff"
-    sha256 "d2cb352a506a30fa4f4bdf41f887139d8412dfe3dc87e8b29511bd0c990839c5"
     directory "qtbase"
   end
 
@@ -252,6 +224,24 @@ class QtAT5 < Formula
   patch do
     url "https://download.qt.io/official_releases/qt/5.15/0002-CVE-2023-51714-qtbase-5.15.diff"
     sha256 "99d5d32527e767d6ab081ee090d92e0b11f27702619a4af8966b711db4f23e42"
+    directory "qtbase"
+  end
+
+  # CVE-2024-36048
+  # Original (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2024-36048-qtnetworkauth-5.15.diff
+  # Remove with Qt 5.15.17
+  patch do
+    url "https://invent.kde.org/qt/qt/qtnetworkauth/-/commit/5c0c90b6e5c3cdabd6ad41d5b6478250c8877f48.diff"
+    sha256 "8f0a53bc04156cc4db61bf708df2cd80250d0b6e1a4c64d4a9d86df84a4e0c1c"
+    directory "qtnetworkauth"
+  end
+
+  # CVE-2024-25580
+  # Original (malformed with CRLF): https://download.qt.io/official_releases/qt/5.15/CVE-2024-25580-qtbase-5.15.diff
+  # Remove with Qt 5.15.17
+  patch do
+    url "https://invent.kde.org/qt/qt/qtbase/-/commit/28ecb523ce8490bff38b251b3df703c72e057519.diff"
+    sha256 "ae10a2b50ca14c6a434e98769aae52b635ea4ded0b18eb7222746f437bdd94d8"
     directory "qtbase"
   end
 

@@ -1878,6 +1878,7 @@ qpdf
 qpid-proton
 qsoas
 qsv
+qt@5
 qthreads
 qtkeychain
 quantlib
