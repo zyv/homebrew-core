@@ -1,8 +1,8 @@
 class Mise < Formula
   desc "Polyglot runtime manager (asdf rust clone)"
   homepage "https://mise.jdx.dev/"
-  url "https://github.com/jdx/mise/archive/refs/tags/v2024.5.22.tar.gz"
-  sha256 "6eef93f758afa65551896b823d2051a0a52fbb02bdfa6c855c175cb6eb1c7366"
+  url "https://github.com/jdx/mise/archive/refs/tags/v2024.5.23.tar.gz"
+  sha256 "d430b1784a1426cfb7bcce1d447b361478cba34dd9ba5dce8e49274c18dc8151"
   license "MIT"
   head "https://github.com/jdx/mise.git", branch: "main"
 
@@ -60,8 +60,8 @@ class Mise < Formula
   end
 
   test do
-    system "#{bin}/mise", "install", "nodejs@22.1.0"
-    assert_match "v22.1.0", shell_output("#{bin}/mise exec nodejs@22.1.0 -- node -v")
+    system "#{bin}/mise", "install", "terraform@1.5.7"
+    assert_match "1.5.7", shell_output("#{bin}/mise exec terraform@1.5.7 -- terraform -v")
 
     [
       Formula["libgit2"].opt_lib/shared_library("libgit2"),
