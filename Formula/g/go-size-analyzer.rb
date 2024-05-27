@@ -1,8 +1,8 @@
 class GoSizeAnalyzer < Formula
   desc "Analyzing the dependencies in compiled Golang binaries"
   homepage "https://github.com/Zxilly/go-size-analyzer"
-  url "https://github.com/Zxilly/go-size-analyzer/archive/refs/tags/v1.0.13.tar.gz"
-  sha256 "a7261e3b6067e3d7e35d3fc0df93f220d8ed9a8a1ef4d1d775690df225394162"
+  url "https://github.com/Zxilly/go-size-analyzer/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "07e053ecd115043683360f8b124bb6f9c7002430bbde8c8c839e47b6a620d03d"
   license "AGPL-3.0-only"
   head "https://github.com/Zxilly/go-size-analyzer.git", branch: "master"
 
@@ -22,9 +22,9 @@ class GoSizeAnalyzer < Formula
 
   def install
     system "pnpm", "--dir", "ui", "install"
-    system "pnpm", "--dir", "ui", "build"
+    system "pnpm", "--dir", "ui", "build:ui"
 
-    mv "ui/dist/index.html", "internal/webui/index.html"
+    mv "ui/dist/webui/index.html", "internal/webui/index.html"
 
     ldflags = %W[
       -s -w
