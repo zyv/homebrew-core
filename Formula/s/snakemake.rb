@@ -3,10 +3,9 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/0e/71/a7463b38491aee6017268e9ee844a92295b1474392d0bd671d654716f9c5/snakemake-8.11.6.tar.gz"
-  sha256 "dd0979b9bf97623e78968cb497f400984f311cff039c4ad58571fbe4bef65a15"
+  url "https://files.pythonhosted.org/packages/57/77/836314ddd2e9c22f0bb32b3a35ef8fb91aab3b2a96823151650c1fa3cf5a/snakemake-8.12.0.tar.gz"
+  sha256 "d76d8751f96e0b947d1e7e40aac74e1b550dffda136ed606ac05610be9169da2"
   license "MIT"
-  revision 1
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
   bottle do
@@ -46,8 +45,8 @@ class Snakemake < Formula
   end
 
   resource "conda-inject" do
-    url "https://files.pythonhosted.org/packages/f8/6c/fc8bf18a8245cd96303d5fbfab0762ed35e3b3ecddeefdc181aa7ce6ead5/conda_inject-1.3.1.tar.gz"
-    sha256 "9e8d902230261beba74083aae12c2c5a395e29b408469fefadc8aaf51ee441e5"
+    url "https://files.pythonhosted.org/packages/b1/a8/8dc86113c65c949cc72d651461d6e4c544b3302a85ed14a5298829e6a419/conda_inject-1.3.2.tar.gz"
+    sha256 "0b8cde8c47998c118d8ff285a04977a3abcf734caf579c520fca469df1cd0aac"
   end
 
   resource "configargparse" do
