@@ -9,6 +9,15 @@ class LlamaCpp < Formula
   license "MIT"
   head "https://github.com/ggerganov/llama.cpp.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_sonoma:   "8393f0f181d2e4874d6de3c2134ccde0f843dbdfefb5aa647acc0dd01629fecb"
+    sha256 cellar: :any,                 arm64_ventura:  "2869e829ff336df54b963f290a55a9093e43c961301b25e4aac799c2cc32f12b"
+    sha256 cellar: :any,                 arm64_monterey: "6d01d125f7366d138e91c2e1d2b7c7017f6673efa349b58d0abffc12f153b855"
+    sha256 cellar: :any,                 sonoma:         "cc27f441a2ca1a8514b00b470affd3bee28e7a0f6bd3ab8cd297e6344f384a4a"
+    sha256 cellar: :any,                 ventura:        "6ad4b827154f548407ff12bd569aa1bc37ca787873d74a00b7763a7e0beb687a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d76e6219a8d3b76b8736724f2904d59895db7b0b4bd32dcc7098fada637fc69c"
+  end
+
   depends_on "cmake" => :build
   uses_from_macos "curl"
 
