@@ -1,8 +1,8 @@
 class Nodenv < Formula
   desc "Manage multiple NodeJS versions"
   homepage "https://github.com/nodenv/nodenv"
-  url "https://github.com/nodenv/nodenv/archive/refs/tags/v1.4.1.tar.gz"
-  sha256 "6c6ff198f1b99183431e709f2897774f1e0d5b0dcd105577972f709a61bf80c5"
+  url "https://github.com/nodenv/nodenv/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "f11bd5acd3ff99c5a1b4df3f0cc6bca0814ec03df658ad90f53e5f2f173a25e8"
   license "MIT"
   head "https://github.com/nodenv/nodenv.git", branch: "master"
 
