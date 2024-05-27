@@ -1616,6 +1616,7 @@ oauth2c
 objfw
 ocaml-findlib
 oci-cli
+ocicl
 ocm
 ocp
 ocrmypdf
