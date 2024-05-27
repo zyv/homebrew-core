@@ -3,19 +3,23 @@ class LlamaCpp < Formula
   homepage "https://github.com/ggerganov/llama.cpp"
   # CMake uses Git to generate version information.
   url "https://github.com/ggerganov/llama.cpp.git",
-      tag:      "b3003",
-      revision: "d298382ad977ec89c8de7b57459b9d7965d2c272"
-  version "b3003"
+      tag:      "b3008",
+      revision: "1d8fca72ae9154eec0e1c0a75cfaac3c50f08e4a"
   license "MIT"
   head "https://github.com/ggerganov/llama.cpp.git", branch: "master"
 
+  livecheck do
+    url :stable
+    regex(/^v?b(\d+(?:\.\d+)*)$/i)
+  end
+
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "8393f0f181d2e4874d6de3c2134ccde0f843dbdfefb5aa647acc0dd01629fecb"
-    sha256 cellar: :any,                 arm64_ventura:  "2869e829ff336df54b963f290a55a9093e43c961301b25e4aac799c2cc32f12b"
-    sha256 cellar: :any,                 arm64_monterey: "6d01d125f7366d138e91c2e1d2b7c7017f6673efa349b58d0abffc12f153b855"
-    sha256 cellar: :any,                 sonoma:         "cc27f441a2ca1a8514b00b470affd3bee28e7a0f6bd3ab8cd297e6344f384a4a"
-    sha256 cellar: :any,                 ventura:        "6ad4b827154f548407ff12bd569aa1bc37ca787873d74a00b7763a7e0beb687a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d76e6219a8d3b76b8736724f2904d59895db7b0b4bd32dcc7098fada637fc69c"
+    sha256 cellar: :any,                 arm64_sonoma:   "13a8fc099673427a580891fb3565ce6f5ab8e3eff041fe7a6d9e573c0592bf85"
+    sha256 cellar: :any,                 arm64_ventura:  "bd78d813bd091eb4761c1688b69b4f61d24b80556482d05748150fa1adf41ad2"
+    sha256 cellar: :any,                 arm64_monterey: "3e89f8d1b86a026f810f189fe6e140261893c796bba8110fe42ee85e499009ec"
+    sha256 cellar: :any,                 sonoma:         "bb1dffd17b89fe72ed1d7aabf4a4192679a5aa801ce469724125a45ee8404af6"
+    sha256 cellar: :any,                 ventura:        "92da8d57ffba7088e9016d11ed7d1fb1904183a0451daff4b9c105e0695b6f06"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "539b753b06a82e05ef0bb693124026626179812f0fd8090c5d752113d5f68075"
   end
 
   depends_on "cmake" => :build
