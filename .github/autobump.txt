@@ -1643,6 +1643,7 @@ opa
 opam
 open-adventure
 open-image-denoise
+open-mesh
 open-mpi
 open62541
 opencl-clhpp-headers
