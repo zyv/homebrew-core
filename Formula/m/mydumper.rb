@@ -1,8 +1,8 @@
 class Mydumper < Formula
   desc "How MySQL DBA & support engineer would imagine 'mysqldump' ;-)"
   homepage "https://launchpad.net/mydumper"
-  url "https://github.com/mydumper/mydumper/archive/refs/tags/v0.16.1-3.tar.gz"
-  sha256 "ba5defbed572ac73f7cd2faeb2f0132bbcf72ce44d3159235d3b8b2e2c9e792a"
+  url "https://github.com/mydumper/mydumper/archive/refs/tags/v0.16.3-1.tar.gz"
+  sha256 "a4d2a08432b232b2a52ebeb868c8456f1cbfe9de8712e9e878d6a76356c58950"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -27,8 +27,7 @@ class Mydumper < Formula
   depends_on "glib"
   depends_on "mysql-client"
   depends_on "pcre"
-
-  uses_from_macos "zlib"
+  depends_on "zlib"
 
   fails_with gcc: "5"
 
