@@ -5,6 +5,7 @@ class Vlang < Formula
   url "https://github.com/vlang/v/archive/refs/tags/0.4.6.tar.gz"
   sha256 "0f8eeb05eb9026f833ea3726bb505f0fa556e2baf3d8ced132af9a9d3ad5735f"
   license "MIT"
+  revision 1
 
   livecheck do
     url :stable
@@ -44,13 +45,25 @@ class Vlang < Formula
 
   def install
     inreplace "vlib/builtin/builtin_d_gcboehm.c.v", "@PREFIX@", Formula["bdw-gc"].opt_prefix
+    # upstream-recommended packaging, https://github.com/vlang/v/blob/master/doc/packaging_v_for_distributions.md
+    %w[up self].each do |cmd|
+      (buildpath/"cmd/tools/v#{cmd}.v").delete
+      (buildpath/"cmd/tools/v#{cmd}.v").write <<~EOS
+        println('ERROR: `v #{cmd}` is disabled. Use `brew upgrade #{name}` to update V.')
+      EOS
+    end
+    # `v share` requires X11 on Linux, so don't build it
+    mv "cmd/tools/vshare.v", "vshare.v.orig" if OS.linux?
 
     resource("vc").stage do
       system ENV.cc, "-std=gnu99", "-w", "-o", buildpath/"v1", "v.c", "-lm"
     end
     system "./v1", "-no-parallel", "-o", buildpath/"v2", "cmd/v"
-    system "./v2", "-o", buildpath/"v", "cmd/v"
+    system "./v2", "-prod", "-d", "dynamic_boehm", "-o", buildpath/"v", "cmd/v"
     rm ["./v1", "./v2"]
+    system "./v", "-prod", "-d", "dynamic_boehm", "build-tools"
+    mv "vshare.v.orig", "cmd/tools/vshare.v" if OS.linux?
+
     libexec.install "cmd", "thirdparty", "v", "v.mod", "vlib"
     bin.install_symlink libexec/"v"
     pkgshare.install "examples"
@@ -65,22 +78,23 @@ end
 
 __END__
 diff --git a/vlib/builtin/builtin_d_gcboehm.c.v b/vlib/builtin/builtin_d_gcboehm.c.v
-index 0a13b64..23fca2b 100644
+index 2ace0b5..9f874c2 100644
 --- a/vlib/builtin/builtin_d_gcboehm.c.v
 +++ b/vlib/builtin/builtin_d_gcboehm.c.v
-@@ -31,12 +31,12 @@ $if dynamic_boehm ? {
+@@ -37,13 +37,8 @@ $if dynamic_boehm ? {
  } $else {
  	$if macos || linux {
  		#flag -DGC_BUILTIN_ATOMIC=1
 -		#flag -I @VEXEROOT/thirdparty/libgc/include
 -		$if (prod && !tinyc && !debug) || !(amd64 || arm64 || i386 || arm32) {
-+		#flag -I @PREFIX@/include
-+		$if (!macos && prod && !tinyc && !debug) || !(amd64 || arm64 || i386 || arm32) {
- 			// TODO: replace the architecture check with a `!$exists("@VEXEROOT/thirdparty/tcc/lib/libgc.a")` comptime call
- 			#flag @VEXEROOT/thirdparty/libgc/gc.o
- 		} $else {
+-			// TODO: replace the architecture check with a `!$exists("@VEXEROOT/thirdparty/tcc/lib/libgc.a")` comptime call
+-			#flag @VEXEROOT/thirdparty/libgc/gc.o
+-		} $else {
 -			#flag @VEXEROOT/thirdparty/tcc/lib/libgc.a
-+			#flag @PREFIX@/lib/libgc.a
- 		}
+-		}
++		#flag -I @PREFIX@/include
++		#flag @PREFIX@/lib/libgc.a
  		$if macos {
  			#flag -DMPROTECT_VDB=1
+ 		}
+
