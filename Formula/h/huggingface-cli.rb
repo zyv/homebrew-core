@@ -3,8 +3,8 @@ class HuggingfaceCli < Formula
 
   desc "Client library for huggingface.co hub"
   homepage "https://huggingface.co/docs/huggingface_hub/index"
-  url "https://files.pythonhosted.org/packages/85/58/af8998eb853f8e2caa7bb931612bb0750a69877f17fa03ec8e6badfaf277/huggingface_hub-0.23.1.tar.gz"
-  sha256 "4f62dbf6ae94f400c6d3419485e52bce510591432a5248a65d0cb72e4d479eb4"
+  url "https://files.pythonhosted.org/packages/6a/40/286b3935d55e97482fe54a58bcc13aea0f57339d5bde4749e5f06b141f73/huggingface_hub-0.23.2.tar.gz"
+  sha256 "f6829b62d5fdecb452a76fdbec620cba4c1573655a8d710c1df71735fd9edbd2"
   license "Apache-2.0"
 
   bottle do
@@ -53,8 +53,8 @@ class HuggingfaceCli < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/d8/c1/f32fb7c02e7620928ef14756ff4840cae3b8ef1d62f7e596bc5413300a16/requests-2.32.1.tar.gz"
-    sha256 "eb97e87e64c79e64e5b8ac75cee9dd1f97f49e289b083ee6be96268930725685"
+    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
+    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
   end
 
   resource "tqdm" do
@@ -63,8 +63,8 @@ class HuggingfaceCli < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
-    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
+    url "https://files.pythonhosted.org/packages/ce/6a/aa0a40b0889ec2eb81a02ee0daa6a34c6697a605cf62e6e857eead9e4f85/typing_extensions-4.12.0.tar.gz"
+    sha256 "8cbcdc8606ebcb0d95453ad7dc5065e6237b6aa230a31e81d0f440c30fed5fd8"
   end
 
   resource "urllib3" do
