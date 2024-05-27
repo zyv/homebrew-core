@@ -57,6 +57,7 @@ aom
 apache-archiva
 apache-drill
 apache-flink
+apache-flink-cdc
 apache-geode
 apache-opennlp
 apache-spark
