@@ -1,20 +1,10 @@
 class GitBranchless < Formula
   desc "High-velocity, monorepo-scale workflow for Git"
   homepage "https://github.com/arxanas/git-branchless"
+  url "https://github.com/arxanas/git-branchless/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "fa64dc92ec522520a6407ff61241fc1819a3093337b4e3d0f80248ae76938d43"
   license any_of: ["Apache-2.0", "MIT"]
-  revision 1
   head "https://github.com/arxanas/git-branchless.git", branch: "master"
-
-  stable do
-    url "https://github.com/arxanas/git-branchless/archive/refs/tags/v0.8.0.tar.gz"
-    sha256 "f9e13d9a3de960b32fb684a59492defd812bb0785df48facc964478f675f0355"
-
-    # Backport support for libgit2 1.7
-    patch do
-      url "https://github.com/arxanas/git-branchless/commit/5b3d67b20e7fb910be46ea3ee9d0642d11932681.patch?full_index=1"
-      sha256 "ff81ca9c921fc6b8254a75fecec3fc606f168215f66eb658803097b6bb2fcdb8"
-    end
-  end
 
   # Upstream appears to use GitHub releases to indicate that a version is
   # released (and some tagged versions don't end up as a release), so it's
