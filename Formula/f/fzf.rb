@@ -42,7 +42,7 @@ class Fzf < Formula
         eval "$(fzf --bash)"
 
         # zsh
-        eval "$(fzf --zsh)"
+        source <(fzf --zsh)
 
         # fish
         fzf --fish | source
