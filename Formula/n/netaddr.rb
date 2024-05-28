@@ -3,8 +3,8 @@ class Netaddr < Formula
 
   desc "Network address manipulation library"
   homepage "https://netaddr.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/54/e6/0308695af3bd001c7ce503b3a8628a001841fe1def19374c06d4bce9089b/netaddr-1.2.1.tar.gz"
-  sha256 "6eb8fedf0412c6d294d06885c110de945cf4d22d2b510d0404f4e06950857987"
+  url "https://files.pythonhosted.org/packages/54/90/188b2a69654f27b221fba92fda7217778208532c962509e959a9cee5229d/netaddr-1.3.0.tar.gz"
+  sha256 "5c3c3d9895b551b763779ba7db7a03487dc1f8e3b385af819af341ae9ef6e48a"
   license "BSD-3-Clause"
   head "https://github.com/netaddr/netaddr.git", branch: "master"
 
