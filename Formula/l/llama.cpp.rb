@@ -66,7 +66,7 @@ class LlamaCpp < Formula
 
   test do
     system bin/"llama", "--hf-repo", "ggml-org/tiny-llamas",
-                        "-m", "stories15M-q4_0.gguf",
+                        "-m", "stories260K.gguf",
                         "-n", "400", "-p", "I", "-ngl", "0"
   end
 end
