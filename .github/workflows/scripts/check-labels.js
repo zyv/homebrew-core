@@ -24,6 +24,14 @@ module.exports = async ({github, context, core}, formulae_detect, dependent_test
       return
     }
 
+    if (label_names.includes('CI-no-github-macos-runners')) {
+      console.log('CI-no-github-macos-runners label found. Building only on Homebrew macOS runners.')
+      core.setOutput('use-github-macos-runners', false)
+    } else {
+      console.log('No CI-no-github-macos-runners label found. Building on GitHub macOS runners where available.')
+      core.setOutput('use-github-macos-runners', true)
+    }
+
     var linux_runner = 'ubuntu-22.04'
     if (label_names.includes(`CI-linux-self-hosted${deps_suffix}`)) {
       linux_runner = 'linux-self-hosted-1'

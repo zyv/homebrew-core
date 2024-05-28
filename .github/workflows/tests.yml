@@ -102,6 +102,7 @@ jobs:
       long-timeout: ${{ steps.check-labels.outputs.long-timeout }}
       test-bot-formulae-args: ${{ steps.check-labels.outputs.test-bot-formulae-args }}
       test-bot-dependents-args: ${{ steps.check-labels.outputs.test-bot-dependents-args }}
+      use-github-macos-runners: ${{ steps.check-labels.outputs.use-github-macos-runners }}
     steps:
       - uses: actions/checkout@v4
 
@@ -145,6 +146,7 @@ jobs:
     env:
       HOMEBREW_LINUX_RUNNER: ${{needs.setup_tests.outputs.linux-runner}}
       HOMEBREW_MACOS_LONG_TIMEOUT: ${{needs.setup_tests.outputs.long-timeout}}
+      HOMEBREW_MACOS_BUILD_ON_GITHUB_RUNNER: ${{needs.setup_tests.outputs.use-github-macos-runners}}
       TESTING_FORMULAE: ${{needs.formulae_detect.outputs.testing_formulae}}
       DELETED_FORMULAE: ${{needs.formulae_detect.outputs.deleted_formulae}}
     steps:
