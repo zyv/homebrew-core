@@ -1,8 +1,8 @@
 class Virtctl < Formula
   desc "Allows for using more advanced kubevirt features"
   homepage "https://kubevirt.io/"
-  url "https://github.com/kubevirt/kubevirt/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "da63ee052939a68e54dca37084234ebd7a86233f2087bc13cb7d63fc24d356e3"
+  url "https://github.com/kubevirt/kubevirt/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "e086860913a5470dceca2f5d794ed77234ef1e2966e85d3b64f0d57273659ece"
   license "Apache-2.0"
   head "https://github.com/kubevirt/kubevirt.git", branch: "main"
 
