@@ -5,10 +5,11 @@ class Sevenzip < Formula
   version "24.06"
   sha256 "2aa1660c773525b2ed84d6cd7ff0680c786ec0893b87e4db44654dcb7f5ac8b5"
   license all_of: ["LGPL-2.1-or-later", "BSD-3-Clause"]
+  head "https://github.com/ip7z/7zip.git", branch: "main"
 
   livecheck do
     url "https://7-zip.org/download.html"
-    regex(%r{>\s*Download\s+7-Zip\s+v?(\d+(?:\.\d+)+)\s+\([^)]+?\)(?:</?[^>]+?>)*:}im)
+    regex(/>\s*Download\s+7-Zip\s+v?(\d+(?:\.\d+)+)\s+\([^)]+?\)/im)
   end
 
   bottle do
