@@ -1,9 +1,8 @@
 class Saml2aws < Formula
   desc "Login and retrieve AWS temporary credentials using a SAML IDP"
   homepage "https://github.com/Versent/saml2aws"
-  url "https://github.com/Versent/saml2aws.git",
-      tag:      "v2.36.15",
-      revision: "8988caca5e3f597028ddaaccdb8ff71a92fe9bc4"
+  url "https://github.com/Versent/saml2aws/archive/refs/tags/v2.36.16.tar.gz"
+  sha256 "a2be057a638bef4fa3c9537adcc8683493c09e45a1ce250ee964e02628535543"
   license "MIT"
 
   bottle do
@@ -39,5 +38,7 @@ class Saml2aws < Formula
   test do
     assert_match "error building login details: Failed to validate account.: URL empty in idp account",
       shell_output("#{bin}/saml2aws script 2>&1", 1)
+
+    assert_match version.to_s, shell_output("#{bin}/saml2aws --version 2>&1")
   end
 end
