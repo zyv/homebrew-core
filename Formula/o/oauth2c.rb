@@ -19,7 +19,11 @@ class Oauth2c < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w")
+    ldflags = "-s -w -X main.commit= -X main.version=#{version} -X main.date=#{time.iso8601}"
+
+    system "go", "build", *std_go_args(ldflags:)
+
+    generate_completions_from_executable(bin/"oauth2c", "completion")
   end
 
   test do
