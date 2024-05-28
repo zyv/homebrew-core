@@ -1,8 +1,8 @@
 class Actionlint < Formula
   desc "Static checker for GitHub Actions workflow files"
   homepage "https://rhysd.github.io/actionlint/"
-  url "https://github.com/rhysd/actionlint/archive/refs/tags/v1.7.0.tar.gz"
-  sha256 "3f4d8ac136476efafa207c1a8ecd115e7df533fd32aa7c3d2ffd943a3a165991"
+  url "https://github.com/rhysd/actionlint/archive/refs/tags/v1.7.1.tar.gz"
+  sha256 "f53808c46db1ac2aa579b00f4a12a8acdf6eaf85a382091ce051dea33b18d7b4"
   license "MIT"
 
   bottle do
