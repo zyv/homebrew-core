@@ -1,8 +1,8 @@
 class Nushell < Formula
   desc "Modern shell for the GitHub era"
   homepage "https://www.nushell.sh"
-  url "https://github.com/nushell/nushell/archive/refs/tags/0.93.0.tar.gz"
-  sha256 "00dcd5ab112d8afd683aa0b87b65b2e47a45487857a6d2481ce7eeb0045c2c00"
+  url "https://github.com/nushell/nushell/archive/refs/tags/0.94.0.tar.gz"
+  sha256 "697a3cc040f673c9eb74e31d8f9cce85f5d4d5302ea34277cfd16aacf9a495a5"
   license "MIT"
   head "https://github.com/nushell/nushell.git", branch: "main"
 
@@ -35,7 +35,7 @@ class Nushell < Formula
   end
 
   def install
-    system "cargo", "install", "--features", "dataframe", *std_cargo_args
+    system "cargo", "install", *std_cargo_args
 
     buildpath.glob("crates/nu_plugin_*").each do |plugindir|
       next unless (plugindir/"Cargo.toml").exist?
