@@ -1,8 +1,8 @@
 class CvsFastExport < Formula
   desc "Export an RCS or CVS history as a fast-import stream"
   homepage "http://www.catb.org/~esr/cvs-fast-export/"
-  url "http://www.catb.org/~esr/cvs-fast-export/cvs-fast-export-1.66.tar.gz"
-  sha256 "e44c347846bacaade787d6daf531bca7932d3316e1274e02f815bd9a5a5ffbbf"
+  url "http://www.catb.org/~esr/cvs-fast-export/cvs-fast-export-1.67.tar.gz"
+  sha256 "2243af947d25a92728e0209739c2caa2bf920ceea311e9772ecd87c8b12910d4"
   license "GPL-2.0-or-later"
 
   livecheck do
