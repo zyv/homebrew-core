@@ -1,8 +1,8 @@
 class Crowdin < Formula
   desc "Command-line tool that allows to manage your resources with crowdin.com"
   homepage "https://support.crowdin.com/cli-tool/"
-  url "https://github.com/crowdin/crowdin-cli/releases/download/3.19.4/crowdin-cli.zip"
-  sha256 "483e03f705be4ddaf7983f754892a6e4ade092d1f4cb0401461d1dd5331e2c3b"
+  url "https://github.com/crowdin/crowdin-cli/releases/download/4.0.0/crowdin-cli.zip"
+  sha256 "ecac905279763bfada40b70fe55b0c097df4f38327e8715fc6326692c0245817"
   license "MIT"
 
   livecheck do
@@ -44,10 +44,9 @@ class Crowdin < Formula
       ]
     EOS
 
-    assert "Your configuration file looks good",
-      shell_output("#{bin}/crowdin lint")
+    system bin/"crowdin", "init"
 
-    assert "Failed to authorize in Crowdin",
-      shell_output("#{bin}/crowdin upload sources --config #{testpath}/crowdin.yml", 1)
+    assert "Failed to collect project info",
+      shell_output("#{bin}/crowdin upload sources --config #{testpath}/crowdin.yml 2>&1", 102)
   end
 end
