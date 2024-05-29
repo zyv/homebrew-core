@@ -3,8 +3,8 @@ require "language/node"
 class Appwrite < Formula
   desc "Command-line tool for Appwrite"
   homepage "https://appwrite.io"
-  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-5.0.3.tgz"
-  sha256 "94ace9d8da0b45193aacddc2fcc8eeca1d34cd993ac49d539735cc7667422d5c"
+  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-5.0.5.tgz"
+  sha256 "70ed197ae9f4cd56a5b3040589b6fb76ba8ba75ec2678066af1acdc70fd1369e"
   license "BSD-3-Clause"
 
   bottle do
