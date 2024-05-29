@@ -1,8 +1,9 @@
 class Singular < Formula
   desc "Computer algebra system for polynomial computations"
   homepage "https://www.singular.uni-kl.de/"
-  url "https://www.singular.uni-kl.de/ftp/pub/Math/Singular/SOURCES/4-4-0/singular-4.4.0.tar.gz"
-  sha256 "c269abbd24c84fe33edc0af1e78b8fec53d8e94338410ac06c2666cfd40d43f2"
+  url "https://www.singular.uni-kl.de/ftp/pub/Math/Singular/SOURCES/4-4-0/singular-4.4.0p2.tar.gz"
+  version "4.4.0p2"
+  sha256 "68ef014cd52006399c09160f447191e36bda28dd5d64d251a577fae7eae237f1"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -56,6 +57,7 @@ class Singular < Formula
   depends_on "mpfr"
   depends_on "ntl"
   depends_on "python@3.12"
+  depends_on "readline"
 
   def install
     system "./autogen.sh" if build.head?
