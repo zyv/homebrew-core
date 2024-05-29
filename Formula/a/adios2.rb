@@ -34,10 +34,12 @@ class Adios2 < Formula
   depends_on "pugixml"
   depends_on "pybind11"
   depends_on "python@3.12"
+  depends_on "sqlite"
   depends_on "yaml-cpp"
   depends_on "zeromq"
 
   uses_from_macos "bzip2"
+  uses_from_macos "zlib"
 
   on_macos do
     depends_on "llvm" => :build if DevelopmentTools.clang_build_version == 1400
