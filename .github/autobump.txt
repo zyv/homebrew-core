@@ -74,6 +74,7 @@ apr
 apt
 aravis
 arb
+arcade-learning-environment
 archi-steam-farm
 argc
 argo
