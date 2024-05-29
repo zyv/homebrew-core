@@ -11,7 +11,13 @@ class Questdb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "79dc7204f199f6c1db1c7e919e8d9d717b9d5073e96a082d658cf2a3750d5809"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "a471b962bb7d44c19b170abdd32b7a5f1e2e6483fef0195f74fc8217ac63773c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a471b962bb7d44c19b170abdd32b7a5f1e2e6483fef0195f74fc8217ac63773c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "a471b962bb7d44c19b170abdd32b7a5f1e2e6483fef0195f74fc8217ac63773c"
+    sha256 cellar: :any_skip_relocation, sonoma:         "a15cb2b3e5e05f0712e6232ff183e7cf2fe4dd8207b3c77197e44b7999c256f3"
+    sha256 cellar: :any_skip_relocation, ventura:        "a15cb2b3e5e05f0712e6232ff183e7cf2fe4dd8207b3c77197e44b7999c256f3"
+    sha256 cellar: :any_skip_relocation, monterey:       "a15cb2b3e5e05f0712e6232ff183e7cf2fe4dd8207b3c77197e44b7999c256f3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "02681dfe0b53b86ac7df7f938463ac5e620d2ff318d4b248b944598b234dd314"
   end
 
   depends_on "openjdk"
