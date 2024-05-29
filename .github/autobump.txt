@@ -1562,6 +1562,7 @@ neosync
 nerdctl
 nest
 nestopia-ue
+netaddr
 netdata
 nethogs
 netlify-cli
