@@ -1,19 +1,19 @@
 class Flow < Formula
   desc "Static type checker for JavaScript"
   homepage "https://flow.org/"
-  url "https://github.com/facebook/flow/archive/refs/tags/v0.236.0.tar.gz"
-  sha256 "4510c83f07285ebcbcbfef2aec002b234131b6bca147996f539384e5482fbbbb"
+  url "https://github.com/facebook/flow/archive/refs/tags/v0.237.0.tar.gz"
+  sha256 "8de55e4861fd4e926984b2fe3bdbf7260da5bfb5a3c5d5c84cdc6d0cfc09c5ff"
   license "MIT"
   head "https://github.com/facebook/flow.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "48c4c90b2061b99c06e4537b3910d5cf5842fbf7a70a5976ccb1f91e2649c1fe"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "a37e75ecfc876866d830a1a30a4e4e13b8254f40547f943d834fabb86dfec037"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bcd69d44f82b9cd54fdb34b9acc94521f52a37c92da158240893519fea044787"
-    sha256 cellar: :any_skip_relocation, sonoma:         "fae98b2c865f12facd66ec7462487f8133c7a443210cad780528d73f8b994ae3"
-    sha256 cellar: :any_skip_relocation, ventura:        "663b9b492b3da071b669e23f95da54adc0aea438834db2652a684f8d5ee31aaf"
-    sha256 cellar: :any_skip_relocation, monterey:       "d4a032b6cd466f2f7a4d8857aed35a89e0cffc9e207ea96d96dfab24f0f68005"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1f606ef2fc9c4a3444c7bacadfa16f945f4a4c208381188b0fad4c5c0c8a296"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "645a5a4567c7285cc896d4397379554d4ec17ddca066cb99a7b95fa6ed416109"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "53d9ff68cd3c6ed1208604ab221d38099d1d01cb348459d8845e848d35ada246"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6ad642b2d27177ef3f9ebad30c70506bb03438bae133c8e79fdba7ab9aa72847"
+    sha256 cellar: :any_skip_relocation, sonoma:         "df0dc48d62209bcdf1ba7fcca6d62c0c48ad1f70e0a9fad484b8342e3beae8e3"
+    sha256 cellar: :any_skip_relocation, ventura:        "1f0d9cb17241f82abd364c6408e5cbea4bb91ceeb8077a182626967fca0f9890"
+    sha256 cellar: :any_skip_relocation, monterey:       "0e31e92fb7d8bc6935d1230c9e2a16214ca9517210aef60baa5268e2e70345c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8a40ca24159f96a2dc1e80e12814a4fae7b76e9fb161f75a91c43c08d74b0ea4"
   end
 
   depends_on "ocaml" => :build
