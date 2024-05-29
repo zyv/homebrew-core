@@ -70,13 +70,13 @@ class Ansible < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/f2/09/fe22f1a2704edbf370ffa0093e23ffb3fb78704f2e65989d0ba79a41687d/boto3-1.34.110.tar.gz"
-    sha256 "83ffe2273da7bdfdb480d85b0705f04e95bd110e9741f23328b7c76c03e6d53c"
+    url "https://files.pythonhosted.org/packages/ee/b4/8fc1043365aa5bf1056426acda0b15b38551b669eaec5ed3cd019c6b4c8b/boto3-1.34.114.tar.gz"
+    sha256 "eeb11bca9b19d12baf93436fb8a16b8b824f1f7e8b9bcc722607e862c46b1b08"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/68/21/3186c501d87a83dcc1b3df12c9112ee494033c1ed7c051e72414ba6a3212/botocore-1.34.110.tar.gz"
-    sha256 "b2c98c40ecf0b1facb9e61ceb7dfa28e61ae2456490554a16c8dbf99f20d6a18"
+    url "https://files.pythonhosted.org/packages/4c/7c/0a169bb7389625b97c95daed070e807a6e89580f013ba422a65a635d11c1/botocore-1.34.114.tar.gz"
+    sha256 "5705f74fda009656a218ffaf4afd81228359160f2ab806ab8222d07e9da3a73b"
   end
 
   resource "cachetools" do
@@ -115,8 +115,8 @@ class Ansible < Formula
   end
 
   resource "docker" do
-    url "https://files.pythonhosted.org/packages/25/14/7d40f8f64ceca63c741ee5b5611ead4fb8d3bcaf3e6ab57d2ab0f01712bc/docker-7.0.0.tar.gz"
-    sha256 "323736fb92cd9418fc5e7133bc953e11a9da04f4483f828b527db553f1e7e5a3"
+    url "https://files.pythonhosted.org/packages/91/9b/4a2ea29aeba62471211598dac5d96825bb49348fa07e906ea930394a83ce/docker-7.1.0.tar.gz"
+    sha256 "ad8c70e6e3f8926cb8a92619b832b4ea5299e2831c14284663184e200546fa6c"
   end
 
   resource "dogpile-cache" do
@@ -210,8 +210,8 @@ class Ansible < Formula
   end
 
   resource "netaddr" do
-    url "https://files.pythonhosted.org/packages/54/e6/0308695af3bd001c7ce503b3a8628a001841fe1def19374c06d4bce9089b/netaddr-1.2.1.tar.gz"
-    sha256 "6eb8fedf0412c6d294d06885c110de945cf4d22d2b510d0404f4e06950857987"
+    url "https://files.pythonhosted.org/packages/54/90/188b2a69654f27b221fba92fda7217778208532c962509e959a9cee5229d/netaddr-1.3.0.tar.gz"
+    sha256 "5c3c3d9895b551b763779ba7db7a03487dc1f8e3b385af819af341ae9ef6e48a"
   end
 
   resource "netifaces" do
@@ -270,8 +270,8 @@ class Ansible < Formula
   end
 
   resource "oslo-log" do
-    url "https://files.pythonhosted.org/packages/83/b8/399ddd945d31ab29346c515c5fc77a0bdb0f292abf1c3068405ef3074862/oslo.log-5.5.1.tar.gz"
-    sha256 "484148512c5db2a8b35c83cd997e9953755fd8bfa8aaf6ee0cc8c7aeb7429210"
+    url "https://files.pythonhosted.org/packages/67/d1/015096ac228990e0410347cc27ee759d5d27d4074f6041b9d2f1e994ee28/oslo.log-6.0.0.tar.gz"
+    sha256 "89f0d6fa2cba8281f89b508a7fe49bfb97daaf55c5278187d45a3069971e687f"
   end
 
   resource "oslo-serialization" do
@@ -450,8 +450,8 @@ class Ansible < Formula
   end
 
   resource "scp" do
-    url "https://files.pythonhosted.org/packages/b6/50/277f788967eed7aa2cbb669ff91dff90d2232bfda95577515a783bbccf73/scp-0.14.5.tar.gz"
-    sha256 "64f0015899b3d212cb8088e7d40ebaf0686889ff0e243d5c1242efe8b50f053e"
+    url "https://files.pythonhosted.org/packages/d6/1c/d213e1c6651d0bd37636b21b1ba9b895f276e8057f882c9f944931e4f002/scp-0.15.0.tar.gz"
+    sha256 "f1b22e9932123ccf17eebf19e0953c6e9148f589f93d91b872941a696305c83f"
   end
 
   resource "setuptools" do
