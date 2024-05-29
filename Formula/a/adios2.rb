@@ -1,18 +1,10 @@
 class Adios2 < Formula
   desc "Next generation of ADIOS developed in the Exascale Computing Program"
   homepage "https://adios2.readthedocs.io"
+  url "https://github.com/ornladios/ADIOS2/archive/refs/tags/v2.10.1.tar.gz"
+  sha256 "ce776f3a451994f4979c6bd6d946917a749290a37b7433c0254759b02695ad85"
   license "Apache-2.0"
   head "https://github.com/ornladios/ADIOS2.git", branch: "master"
-
-  stable do
-    url "https://github.com/ornladios/ADIOS2/archive/refs/tags/v2.10.0.tar.gz"
-    sha256 "e5984de488bda546553dd2f46f047e539333891e63b9fe73944782ba6c2d95e4"
-
-    # fix pugixml target name
-    # upstream patch ref, https://github.com/ornladios/ADIOS2/pull/4135
-    # https://github.com/ornladios/ADIOS2/pull/4142
-    patch :DATA
-  end
 
   livecheck do
     url :stable
@@ -114,52 +106,3 @@ class Adios2 < Formula
     assert_predicate testpath/"bpWriter-py.bp", :exist?
   end
 end
-
-__END__
-diff --git a/source/adios2/toolkit/remote/CMakeLists.txt b/source/adios2/toolkit/remote/CMakeLists.txt
-index a739e1a..fdea6ec 100644
---- a/source/adios2/toolkit/remote/CMakeLists.txt
-+++ b/source/adios2/toolkit/remote/CMakeLists.txt
-@@ -6,15 +6,11 @@
- if (NOT ADIOS2_USE_PIP)
-   add_executable(adios2_remote_server ./remote_server.cpp remote_common.cpp)
-
--  target_link_libraries(adios2_remote_server PUBLIC EVPath::EVPath adios2_core adios2sys
--    PRIVATE $<$<PLATFORM_ID:Windows>:shlwapi>)
-+  target_link_libraries(adios2_remote_server
-+                        PUBLIC EVPath::EVPath adios2_core adios2sys
-+                        PRIVATE adios2::thirdparty::pugixml $<$<PLATFORM_ID:Windows>:shlwapi>)
-
--  get_property(pugixml_headers_path
--    TARGET pugixml
--    PROPERTY INTERFACE_INCLUDE_DIRECTORIES
--  )
--
--  target_include_directories(adios2_remote_server PRIVATE ${PROJECT_BINARY_DIR} ${pugixml_headers_path})
-+  target_include_directories(adios2_remote_server PRIVATE ${PROJECT_BINARY_DIR})
-
-   set_property(TARGET adios2_remote_server PROPERTY OUTPUT_NAME adios2_remote_server${ADIOS2_EXECUTABLE_SUFFIX})
-   install(TARGETS adios2_remote_server EXPORT adios2
-diff --git a/source/utils/CMakeLists.txt b/source/utils/CMakeLists.txt
-index 30dd484..01f5f93 100644
---- a/source/utils/CMakeLists.txt
-+++ b/source/utils/CMakeLists.txt
-@@ -13,17 +13,11 @@ configure_file(
- add_executable(bpls ./bpls/bpls.cpp)
- target_link_libraries(bpls
-                       PUBLIC adios2_core adios2sys
--                      PRIVATE $<$<PLATFORM_ID:Windows>:shlwapi>)
--
--get_property(pugixml_headers_path
--  TARGET pugixml
--  PROPERTY INTERFACE_INCLUDE_DIRECTORIES
--)
-+                      PRIVATE adios2::thirdparty::pugixml $<$<PLATFORM_ID:Windows>:shlwapi>)
-
- target_include_directories(bpls PRIVATE
-   ${PROJECT_BINARY_DIR}
-   ${PROJECT_SOURCE_DIR}/bindings/C
--  ${pugixml_headers_path}
- )
-
- set_property(TARGET bpls PROPERTY OUTPUT_NAME bpls${ADIOS2_EXECUTABLE_SUFFIX})
