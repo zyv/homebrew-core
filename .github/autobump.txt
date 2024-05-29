@@ -1489,6 +1489,7 @@ mkdocs
 mkfontscale
 mkvtoolnix
 mlkit
+mlpack
 mlt
 mlx
 mmark
