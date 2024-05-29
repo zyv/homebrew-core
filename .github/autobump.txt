@@ -1120,6 +1120,7 @@ jetty-runner
 jfrog-cli
 jhipster
 jj
+jlog
 jmeter
 jnethack
 jnv
