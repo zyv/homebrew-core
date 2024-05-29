@@ -1589,6 +1589,7 @@ node-build
 node-sass
 node@18
 node@20
+nodeenv
 nomino
 noseyparker
 notcurses
