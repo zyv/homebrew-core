@@ -3,8 +3,8 @@ class Nvchecker < Formula
 
   desc "New version checker for software releases"
   homepage "https://github.com/lilydjwg/nvchecker"
-  url "https://files.pythonhosted.org/packages/2b/ad/f48d2bcce3acfbfd2ac78d10fa1448598b46f98f7e84718810b5f2d9a8c6/nvchecker-2.14.1.tar.gz"
-  sha256 "7a2992e6d5cab1907a16d079281a175cffa355b5d3c97fc782fa92f2fa3cdaca"
+  url "https://files.pythonhosted.org/packages/73/ac/3cdb953fab79abfdea4c758b9560069605d8714f6e928dbc0e7c966332ec/nvchecker-2.15.tar.gz"
+  sha256 "ca910cd7d0474ff3283ad7e4478da908f76391f7fcc2b3d3c4e352318f56d9ba"
   license "MIT"
 
   bottle do
@@ -27,8 +27,8 @@ class Nvchecker < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/96/dc/c1d911bf5bb0fdc58cc05010e9f3efe3b67970cef779ba7fbc3183b987a8/platformdirs-4.2.0.tar.gz"
-    sha256 "ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768"
+    url "https://files.pythonhosted.org/packages/f5/52/0763d1d976d5c262df53ddda8d8d4719eedf9594d046f117c25a27261a19/platformdirs-4.2.2.tar.gz"
+    sha256 "38b7b51f512eed9e84a22788b4bce1de17c0adb134d6becb09836e37d8654cd3"
   end
 
   resource "pycurl" do
@@ -37,8 +37,8 @@ class Nvchecker < Formula
   end
 
   resource "structlog" do
-    url "https://files.pythonhosted.org/packages/d1/ac/87aedb7a9ba52f645b9d29a7f48bb12a5c6b7e204b8137549fbe4754b563/structlog-24.1.0.tar.gz"
-    sha256 "41a09886e4d55df25bdcb9b5c9674bccfab723ff43e0a86a1b7b236be8e57b16"
+    url "https://files.pythonhosted.org/packages/87/87/9b237eda856dc3e72f2485e884f59fe0ee8be49aa2ce8eff3a425c388766/structlog-24.2.0.tar.gz"
+    sha256 "0e3fe74924a6d8857d3f612739efb94c72a7417d7c7c008d12276bca3b5bf13b"
   end
 
   resource "tornado" do
