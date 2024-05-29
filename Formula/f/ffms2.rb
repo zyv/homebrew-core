@@ -15,13 +15,13 @@ class Ffms2 < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "72597e1adda2f0302cdc138e81226ba8374739fbee6d25f98e77d33fac48ca7d"
-    sha256 cellar: :any,                 arm64_ventura:  "d3cea8104d6ed35a04269791d554fe0e42b38d2eea50191ff8ab51043687e6c5"
-    sha256 cellar: :any,                 arm64_monterey: "82a3cc0c378bcc1f00935e368db5570aa566e10237962439d2a85c7c5d6525d8"
-    sha256 cellar: :any,                 sonoma:         "f37ff12f719209caa561849a6aedc890accc2dfd877b3dfea7b77e002ea8b769"
-    sha256 cellar: :any,                 ventura:        "87ab1c98928a90b2391aaf638cfaec141e21eac099566f418484b6f4f891c192"
-    sha256 cellar: :any,                 monterey:       "bdd001b5547e9c5ca7b1ac1ff9cb5635424f48ab6cff3158d5548f6d9b89f064"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "260be451fa4aba990e99e519329b8190a599e06f84d88731ec10a4f6085a639a"
+    sha256 cellar: :any,                 arm64_sonoma:   "95cb1629607cc749fbb2539b42d859e18d8324a98fec677c95915bf1059d3398"
+    sha256 cellar: :any,                 arm64_ventura:  "379c741a8043b236ee007ea7a135a1c337e92f790c1496d1d9c72c6439ae5db6"
+    sha256 cellar: :any,                 arm64_monterey: "8a2b14cdb1755b0e19878ada11e8c13d86235e4acfdbac3c79a5f65422bacc11"
+    sha256 cellar: :any,                 sonoma:         "42e9ceb2071f6e3b545540e54137b0706654ec7564fe89778ac0a7178ddb45bf"
+    sha256 cellar: :any,                 ventura:        "765b489b7d023cb5518d390e48e5499d115d487a4fbddc7a120be1002279a638"
+    sha256 cellar: :any,                 monterey:       "dc2780271ad98a3f7499d056064fc9e95cc4dde8e2bafa61c03c237de73bde9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "bf354f0c181a7467b964788baf63363a4bdbea743da40fd725965ada086d4b3a"
   end
 
   depends_on "autoconf" => :build
