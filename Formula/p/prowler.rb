@@ -3,8 +3,8 @@ class Prowler < Formula
 
   desc "Tool for cloud security assessments, audits, incident response, and more"
   homepage "https://prowler.com/"
-  url "https://files.pythonhosted.org/packages/74/e9/33226f09e1f26f5010549510e494590ca3b33647709bc6d9168373c7bf88/prowler-4.2.0.tar.gz"
-  sha256 "1a156af09d1ede3bdf35a821cb1d2d0f13256a615173fd791e0fcfce96cdf4bb"
+  url "https://files.pythonhosted.org/packages/22/20/a22daea31747b73ea62f9b60e26c59d0040b977e5c2a414cd23dc040b8b7/prowler-4.2.1.tar.gz"
+  sha256 "3b6eb99d7adc1f1711daba7c7cc351950cd0263ef3ef3665cab57176129d68a9"
   license "Apache-2.0"
 
   bottle do
@@ -562,8 +562,8 @@ class Prowler < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
-    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "requests-file" do
