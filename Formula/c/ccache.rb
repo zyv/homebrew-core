@@ -1,10 +1,11 @@
+# TODO: Add this to Homebrew so it can be used as a dependency:
+#       https://github.com/martinmoene/span-lite
 class Ccache < Formula
   desc "Object-file caching compiler wrapper"
   homepage "https://ccache.dev/"
-  url "https://github.com/ccache/ccache/releases/download/v4.9.1/ccache-4.9.1.tar.xz"
-  sha256 "4c03bc840699127d16c3f0e6112e3f40ce6a230d5873daa78c60a59c7ef59d25"
+  url "https://github.com/ccache/ccache/releases/download/v4.10/ccache-4.10.tar.xz"
+  sha256 "83630b5e922b998ab2538823e0cad962c0f956fad1fcf443dd5288269a069660"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
@@ -19,15 +20,24 @@ class Ccache < Formula
 
   depends_on "asciidoctor" => :build
   depends_on "cmake" => :build
+  depends_on "cpp-httplib" => :build
+  depends_on "doctest" => :build
   depends_on "pkg-config" => :build
-
+  depends_on "tl-expected" => :build
+  depends_on "blake3"
+  depends_on "fmt"
   depends_on "hiredis"
+  depends_on "xxhash"
   depends_on "zstd"
 
   fails_with gcc: "5"
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args, "-DENABLE_IPO=TRUE"
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DENABLE_IPO=TRUE",
+                    "-DREDIS_STORAGE_BACKEND=ON",
+                    "-DDEPS=LOCAL",
+                    *std_cmake_args
     system "cmake", "--build", "build"
 
     # Homebrew compiler shim actively prevents ccache usage (see caveats), which will break the test suite.
