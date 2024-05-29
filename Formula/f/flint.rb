@@ -8,6 +8,7 @@ class Flint < Formula
 
   livecheck do
     url :stable
+    regex(/^v?(\d+(?:\.\d+)+(?:[._-]?p\d+)?)$/i)
     strategy :github_latest
   end
 
