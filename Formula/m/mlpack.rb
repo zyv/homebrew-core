@@ -1,8 +1,8 @@
 class Mlpack < Formula
   desc "Scalable C++ machine learning library"
   homepage "https://www.mlpack.org"
-  url "https://mlpack.org/files/mlpack-4.3.0.tar.gz"
-  sha256 "08cd54f711fde66fc3b6c9db89dc26776f9abf1a6256c77cfa3556e2a56f1a3d"
+  url "https://mlpack.org/files/mlpack-4.4.0.tar.gz"
+  sha256 "61c604026d05af26c244b0e47024698bbf150dfcc9d77b64057941d7d64d6cf6"
   license all_of: ["BSD-3-Clause", "MPL-2.0", "BSL-1.0", "MIT"]
   head "https://github.com/mlpack/mlpack.git", branch: "master"
 
@@ -27,9 +27,9 @@ class Mlpack < Formula
   depends_on "graphviz"
 
   resource "stb_image" do
-    url "https://raw.githubusercontent.com/nothings/stb/3ecc60f/stb_image.h"
-    version "2.28"
-    sha256 "38e08c1c5ab8869ae8d605ddaefa85ad3fea24a2964fd63a099c0c0f79c70bcc"
+    url "https://raw.githubusercontent.com/nothings/stb/0bc88af4de5fb022db643c2d8e549a0927749354/stb_image.h"
+    version "2.29"
+    sha256 "c54b15a689e6a1f32c75e2ec23afa442e3e0e37e894b73c1974d08679b20dd5c"
   end
 
   resource "stb_image_write" do
@@ -52,7 +52,7 @@ class Mlpack < Formula
       -DUSE_OPENMP=OFF
       -DARMADILLO_INCLUDE_DIR=#{Formula["armadillo"].opt_include}
       -DENSMALLEN_INCLUDE_DIR=#{Formula["ensmallen"].opt_include}
-      -DARMADILLO_LIBRARY=#{Formula["armadillo"].opt_lib}/#{shared_library("libarmadillo")}
+      -DARMADILLO_LIBRARY=#{Formula["armadillo"].opt_lib/shared_library("libarmadillo")}
       -DSTB_IMAGE_INCLUDE_DIR=#{include/"stb"}
       -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
@@ -83,7 +83,7 @@ class Mlpack < Formula
         Log::Warn << "A false alarm!" << std::endl;
       }
     EOS
-    system ENV.cxx, "test.cpp", "-std=c++14", "-I#{include}", "-L#{Formula["armadillo"].opt_lib}",
+    system ENV.cxx, "-std=c++17", "test.cpp", "-I#{include}", "-L#{Formula["armadillo"].opt_lib}",
                     "-larmadillo", "-L#{lib}", "-o", "test"
     system "./test", "--verbose"
   end
