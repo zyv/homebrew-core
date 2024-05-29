@@ -7,13 +7,13 @@ class Sigi < Formula
   head "https://github.com/sigi-cli/sigi.git", branch: "core"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "9ce5392cefa3f7b743fa91bd13525fc602d8bc4289e4b4f49687fb24c73c1c0b"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9732c37a1092aa6dd5f1e7bb15492a6450b7d9d256d1728a7b8255bcec4f8222"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "18fb2ecebd41c576e0b4e8aeb04121f924334157c01f576b860e2f234e523c53"
-    sha256 cellar: :any_skip_relocation, sonoma:         "3b867c702c536bb0243978b4e1a9e08c3e6a9650429b115baaf838bbcd01478b"
-    sha256 cellar: :any_skip_relocation, ventura:        "4151fa5bc0db6b3cbd11102c8ce8ba731fecf161cc533652bb3be0539562555e"
-    sha256 cellar: :any_skip_relocation, monterey:       "10c2e66baa41005b3a96a1212745bd18e6dbc871c951608281b1d3d8573b9f4d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d063619f613046b9203e321135443b92300f5f00a2fcf50933448d368efa87c2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e26706b19c0c5233a103c692b66c1b45dac5ebd6a735ed4e6d852861e4c3609a"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e15523164561b9823dae8d7581719b486833df10ad957deea4b90420ae3baac2"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "74e53c2d8ebc12f0e907082ebf6de4fabd1621f73ab8a4d47b7f7b2d4ed7155b"
+    sha256 cellar: :any_skip_relocation, sonoma:         "b2d5f45cc3906d4191ce72b5e374846e0c5c57da3b8b61388d1b2b161691d7eb"
+    sha256 cellar: :any_skip_relocation, ventura:        "3e61dd1fae21e604c077e1d83b6dab9add32ab5b77929bd80f7b10ba47232ce2"
+    sha256 cellar: :any_skip_relocation, monterey:       "3473b320d33aea1cade3ba6927d4cf8cfe835a9086caba42898ff34177305397"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9956ee5542d2289d376febb6d44e752e588ddcae44a71d4d89cd2da14983f259"
   end
 
   depends_on "rust" => :build
