@@ -1033,6 +1033,7 @@ himalaya
 hive
 hivemind
 hledger
+homebank
 hoverfly
 hpack
 hpp-fcl
