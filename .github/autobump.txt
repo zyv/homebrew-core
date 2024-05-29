@@ -743,6 +743,7 @@ fend
 fennel
 feroxbuster
 ffmpeg
+ffms2
 ffsend
 ffuf
 fheroes2
