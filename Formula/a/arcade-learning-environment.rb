@@ -9,14 +9,13 @@ class ArcadeLearningEnvironment < Formula
   head "https://github.com/Farama-Foundation/Arcade-Learning-Environment.git", branch: "master"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c810cfd1c114453a2680a98616eb6655ed4e77d826c297808f116535263cacc9"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2b83fafd9f9ba1938c7afa2ba873825379cd45b3cd169d3baf35688000cfba8e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2f1ad5d707bbfe02484dcf7d26f1a198fb9d6bec141eabad5692e14b12f342b6"
-    sha256 cellar: :any_skip_relocation, sonoma:         "854b443122257bbb7b8667b2e9f828b252e3aace232673bf98ad69ecca5e2c69"
-    sha256 cellar: :any_skip_relocation, ventura:        "fd24aee3582a77d3db5a74d7ec2faf2f64a8c44dbc16500c1585205a8175e963"
-    sha256 cellar: :any_skip_relocation, monterey:       "ca022cfbef7d0b2f6d68b03bf14300d600df758b72743473a4960daa6cbb6368"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "055912b9b89d3c61cad420eaa394554ab75c1465489f0a70519466ec6d2d4778"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "8e0f83738408c077a71d7114a36506355351993db387ce0838e7c9234f7ac9d5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "65f363115487158523e1f5948012ca96e20261a3477e2b89c52e07c191e23090"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "7e92cd5c757cd8e5e8b75c18024f5e30fcb1658d997e6caa6845a31360700552"
+    sha256 cellar: :any_skip_relocation, sonoma:         "153d0362a36c03f246e6a36b1fb187ed60e61184622345c7621236f78c74d207"
+    sha256 cellar: :any_skip_relocation, ventura:        "a737e03e4405e7891b84c1a0b411bed53e0f3910e7e4adb522aaa0f69f4cf06d"
+    sha256 cellar: :any_skip_relocation, monterey:       "33501d45df657c5275e0cdb8d61d433cdbf59b668fb6311ad89e097fd8071196"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "87f844a97941f0bd336d1101df9444784b5ee030b3fca920398e9da694e83224"
   end
 
   depends_on "cmake" => :build
