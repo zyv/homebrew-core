@@ -20,9 +20,6 @@ class Cloudsplaining < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "a35b1f5b2b168f857abd2c3d9c2423e9635334eb72805b65989603edbe6ff77d"
   end
 
-  # https://github.com/salesforce/cloudsplaining/commit/9cee9be13458f197b75ada02bce0140fd311b60d
-  deprecate! date: "2024-01-12", because: :repo_archived
-
   depends_on "certifi"
   depends_on "libyaml"
   depends_on "python@3.12"
