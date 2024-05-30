@@ -13,13 +13,13 @@ class Pnpm < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "98fbd4917dd1a5cc31e27e3ae4928749db21652172489c574b02348b0e07ca99"
-    sha256 cellar: :any,                 arm64_ventura:  "98fbd4917dd1a5cc31e27e3ae4928749db21652172489c574b02348b0e07ca99"
-    sha256 cellar: :any,                 arm64_monterey: "98fbd4917dd1a5cc31e27e3ae4928749db21652172489c574b02348b0e07ca99"
-    sha256 cellar: :any,                 sonoma:         "03ce01c7e467181d6893bc7ba861550c0a64544578ae14884a9090a758f3eb05"
-    sha256 cellar: :any,                 ventura:        "03ce01c7e467181d6893bc7ba861550c0a64544578ae14884a9090a758f3eb05"
-    sha256 cellar: :any,                 monterey:       "03ce01c7e467181d6893bc7ba861550c0a64544578ae14884a9090a758f3eb05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "37361adacfacb90c9a102d3eef6f331b6ad62ec7d86d8b12ecd3aa5e592f181b"
+    sha256 cellar: :any,                 arm64_sonoma:   "19a2e6abc88451ccc70ddff36507cffc019c137c40cb8d1c140e2cdaf9147cb0"
+    sha256 cellar: :any,                 arm64_ventura:  "19a2e6abc88451ccc70ddff36507cffc019c137c40cb8d1c140e2cdaf9147cb0"
+    sha256 cellar: :any,                 arm64_monterey: "19a2e6abc88451ccc70ddff36507cffc019c137c40cb8d1c140e2cdaf9147cb0"
+    sha256 cellar: :any,                 sonoma:         "da8e9eaac0e3511c4ed9f45c2759263267c83aa99f29788631f223abe5902454"
+    sha256 cellar: :any,                 ventura:        "da8e9eaac0e3511c4ed9f45c2759263267c83aa99f29788631f223abe5902454"
+    sha256 cellar: :any,                 monterey:       "da8e9eaac0e3511c4ed9f45c2759263267c83aa99f29788631f223abe5902454"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a0500b81443a616716a6e10d990e50e4ba9c90b5c29222b90acac78d342b14c6"
   end
 
   depends_on "node" => [:build, :test]
