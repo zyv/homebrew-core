@@ -1510,6 +1510,7 @@ mongocli
 mongodb-atlas-cli
 mongoose
 monika
+monit
 monolith
 moon
 morpheus
