@@ -1,8 +1,8 @@
 class NodeBuild < Formula
   desc "Install NodeJS versions"
   homepage "https://github.com/nodenv/node-build"
-  url "https://github.com/nodenv/node-build/archive/refs/tags/v5.0.2.tar.gz"
-  sha256 "cbf51858c3222b2b83fbed128893814cee456ab26a663648e42e43e1074a7af1"
+  url "https://github.com/nodenv/node-build/archive/refs/tags/v5.0.3.tar.gz"
+  sha256 "4b2640880e87987359a2e42781d68eb2b9e460707d8b3419e673656b007d40bd"
   license "MIT"
   head "https://github.com/nodenv/node-build.git", branch: "master"
 
@@ -12,13 +12,13 @@ class NodeBuild < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b8fb75fded686ae8a3a7f2bc3fa7c4df07545495cae9b76ce526d9c0d9c71cac"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b8fb75fded686ae8a3a7f2bc3fa7c4df07545495cae9b76ce526d9c0d9c71cac"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b8fb75fded686ae8a3a7f2bc3fa7c4df07545495cae9b76ce526d9c0d9c71cac"
-    sha256 cellar: :any_skip_relocation, sonoma:         "5f9882984eb3b7a45b26033a8f8db9937a3d8ae91183abaa2eafd0b3359b557b"
-    sha256 cellar: :any_skip_relocation, ventura:        "5f9882984eb3b7a45b26033a8f8db9937a3d8ae91183abaa2eafd0b3359b557b"
-    sha256 cellar: :any_skip_relocation, monterey:       "5f9882984eb3b7a45b26033a8f8db9937a3d8ae91183abaa2eafd0b3359b557b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "82db7bbf5cb7223754af7927aafa5f13da7fa4c2520cba55401e3e3d14439611"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "4fd1fed79297a546efe2c26d6809ade545c80dd8a9428b5c3836ff40d6382c92"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "4fd1fed79297a546efe2c26d6809ade545c80dd8a9428b5c3836ff40d6382c92"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4fd1fed79297a546efe2c26d6809ade545c80dd8a9428b5c3836ff40d6382c92"
+    sha256 cellar: :any_skip_relocation, sonoma:         "4fd1fed79297a546efe2c26d6809ade545c80dd8a9428b5c3836ff40d6382c92"
+    sha256 cellar: :any_skip_relocation, ventura:        "4fd1fed79297a546efe2c26d6809ade545c80dd8a9428b5c3836ff40d6382c92"
+    sha256 cellar: :any_skip_relocation, monterey:       "4fd1fed79297a546efe2c26d6809ade545c80dd8a9428b5c3836ff40d6382c92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ed90f84dec1ad6f3c3b4cb7e2f1a638a6900ee29f84f1f95c15a8d7149cc71ee"
   end
 
   depends_on "autoconf"
