@@ -9,13 +9,14 @@ class Ccache < Formula
   head "https://github.com/ccache/ccache.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "0c8879d73832689eab3f9048d0d83f5d32e6e05c97a414be28b323c5854571b0"
-    sha256 cellar: :any,                 arm64_ventura:  "a94a223954ac1456ab20063bbfcb9bf63b3f1f87cb6608cc172a2ac78346d1a6"
-    sha256 cellar: :any,                 arm64_monterey: "c4db07a5b0729a6ad510b34bf37189dfcd30038d7e941112abf19c4d37077546"
-    sha256 cellar: :any,                 sonoma:         "631c5cbacaafa32442cd9c81872471bedbb14f4232bb07699dd86c72faaa853c"
-    sha256 cellar: :any,                 ventura:        "2e0ad90b7dbf96d04e0bf45326f709068e875f522720c0b894fed421adb12372"
-    sha256 cellar: :any,                 monterey:       "c6180bbf38804a67a412889b592673119756797c2ae6624862609230e9cbf57c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f728a2c247c76cf136a809cbde7cf1c4a5c2c3f7e5b852085999f02aad79794b"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_sonoma:   "362e29807c48743ef00cab49b7872258f5636f449e966bbc0b386dc5a1f05818"
+    sha256 cellar: :any,                 arm64_ventura:  "f1cf9d4ae9fd82ab535acf13b409121d5f02afce7a5c519dd76003a2ed90435d"
+    sha256 cellar: :any,                 arm64_monterey: "23c1ddf2956b4f0a119485a46f6501f70b71c7382de7764d782e04c53ad16cf5"
+    sha256 cellar: :any,                 sonoma:         "f703c1bd5db344995f4b4c88e4027e69499c74a38dd9afec1e7a969e160a0ffa"
+    sha256 cellar: :any,                 ventura:        "e17b749981c76783e243bcea96d4041155dce095b422ecdc071706b5de165aa9"
+    sha256 cellar: :any,                 monterey:       "52bc73a6c84e522d694703e4451a5244c1838d72d8879aed4d3cef5fddd43d48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "991a5800ee133ad0535c8a28de13c3e6f5e3d14a5dbf6b8e0f5cdc92c80d79d2"
   end
 
   depends_on "asciidoctor" => :build
@@ -31,6 +32,19 @@ class Ccache < Formula
   depends_on "zstd"
 
   fails_with gcc: "5"
+
+  # Fix detection of system blake3
+  # https://github.com/ccache/ccache/pull/1464
+  patch do
+    url "https://github.com/ccache/ccache/commit/d159306db8398da233df6481ac3fd83460ef0f0b.patch?full_index=1"
+    sha256 "1db1a39677b94cd365b98d8df1fcd0b116866175d4a55730af9bfa1ab443e4be"
+  end
+
+  # Fix blake3 include. Same PR as above.
+  patch do
+    url "https://github.com/ccache/ccache/commit/fa4046966e71011587364b0241255130b62858fb.patch?full_index=1"
+    sha256 "c0d5d61e3ef594c0587e249798e95c9d508f41452fd649685b8f6a00e667be80"
+  end
 
   def install
     system "cmake", "-S", ".", "-B", "build",
