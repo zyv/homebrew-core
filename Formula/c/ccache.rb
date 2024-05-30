@@ -32,6 +32,19 @@ class Ccache < Formula
 
   fails_with gcc: "5"
 
+  # Fix detection of system blake3
+  # https://github.com/ccache/ccache/pull/1464
+  patch do
+    url "https://github.com/ccache/ccache/commit/d159306db8398da233df6481ac3fd83460ef0f0b.patch?full_index=1"
+    sha256 "1db1a39677b94cd365b98d8df1fcd0b116866175d4a55730af9bfa1ab443e4be"
+  end
+
+  # Fix blake3 include. Same PR as above.
+  patch do
+    url "https://github.com/ccache/ccache/commit/fa4046966e71011587364b0241255130b62858fb.patch?full_index=1"
+    sha256 "c0d5d61e3ef594c0587e249798e95c9d508f41452fd649685b8f6a00e667be80"
+  end
+
   def install
     system "cmake", "-S", ".", "-B", "build",
                     "-DENABLE_IPO=TRUE",
