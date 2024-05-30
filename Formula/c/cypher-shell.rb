@@ -12,7 +12,13 @@ class CypherShell < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "3d3063f698049b5a7caf4adf641aef431929e29420a5e3f6e49c0b9c993a6d0c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "fa037fd324bbfa874d7c4dd39713702c801b3db6a893bd895bf8006c1fe2ece4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fa037fd324bbfa874d7c4dd39713702c801b3db6a893bd895bf8006c1fe2ece4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "fa037fd324bbfa874d7c4dd39713702c801b3db6a893bd895bf8006c1fe2ece4"
+    sha256 cellar: :any_skip_relocation, sonoma:         "fa037fd324bbfa874d7c4dd39713702c801b3db6a893bd895bf8006c1fe2ece4"
+    sha256 cellar: :any_skip_relocation, ventura:        "fa037fd324bbfa874d7c4dd39713702c801b3db6a893bd895bf8006c1fe2ece4"
+    sha256 cellar: :any_skip_relocation, monterey:       "fa037fd324bbfa874d7c4dd39713702c801b3db6a893bd895bf8006c1fe2ece4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5ea8bac4cef16237f7e94adf672800bd5154cb40fb0e26d5071ca425f9658a79"
   end
 
   depends_on "openjdk"
