@@ -3,14 +3,15 @@ class LlamaCpp < Formula
   homepage "https://github.com/ggerganov/llama.cpp"
   # CMake uses Git to generate version information.
   url "https://github.com/ggerganov/llama.cpp.git",
-      tag:      "b3039",
-      revision: "975ec63ff26cdf96156d1126d86f75a395fdc43a"
+      tag:      "b3040",
+      revision: "55d62262a99cd8bc28a1492975791fe433c8cc0f"
   license "MIT"
   head "https://github.com/ggerganov/llama.cpp.git", branch: "master"
 
   livecheck do
     url :stable
     regex(/^v?b(\d+(?:\.\d+)*)$/i)
+    throttle 5
   end
 
   bottle do
