@@ -1,19 +1,19 @@
 class Talhelper < Formula
   desc "Configuration helper for talos clusters"
   homepage "https://budimanjojo.github.io/talhelper/latest/"
-  url "https://github.com/budimanjojo/talhelper/archive/refs/tags/v2.4.6.tar.gz"
-  sha256 "efdfc07f135e4e1ff96c46f7f0a4b2d4bb45a0f5567aa29a9dfa5dbf76a7ab02"
+  url "https://github.com/budimanjojo/talhelper/archive/refs/tags/v2.4.7.tar.gz"
+  sha256 "00eab4b15802744dff034b5a8453ba7578a18b664f1b4d57641a18fd6d74ee68"
   license "BSD-3-Clause"
   head "https://github.com/budimanjojo/talhelper.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e586dc5248ea15056b54b413acada00f608d264e17066d14fbb8e2fa5767f6ab"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "6a057655159f397c52b1698f7500a4386871987378d10c05b7dcdea813bb653d"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2facca60722141cfbf4f02a072d43c51ba2a923bcccd9578613c2b48637d7d3b"
-    sha256 cellar: :any_skip_relocation, sonoma:         "f28fd2f50ca1ae93dee01a2113a138d8fcef7d9a088670205ad35b73d3106562"
-    sha256 cellar: :any_skip_relocation, ventura:        "c6961ec14e308c0b8ae3a90c0b8f3f6cf238c7275421e83f49aa510c6e392abd"
-    sha256 cellar: :any_skip_relocation, monterey:       "f4b853e8035c06c38a6cef013266b2703dcc22178393df043dd6ba6bb87ad48f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "10bd8e43be6dd343aeb44a1b4191a4096b6080ed2e81e5069fa1570929bd9c3b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "51f8f53d528452ec368c2fe7799148020e596f99d53262a98e0392a3205b3254"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b476213980482c19510cf34f8cdd707e3c254338dda10e0f107bece283785e4b"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "4db3d1efed81f3c2857b4e74b77d801d34729c40847a225cc5eff7112930c605"
+    sha256 cellar: :any_skip_relocation, sonoma:         "ea6a23f0e0ab0bc14352f95688918cf5089efbacc9fbef7e1cac899cdf738109"
+    sha256 cellar: :any_skip_relocation, ventura:        "d0e3fa78a62a64d2e04dfb4df0bf530c2e97851bff07e3459ef5cdae663306be"
+    sha256 cellar: :any_skip_relocation, monterey:       "9b0f52ff276c2d04fec02c9cc9a483afc1f6d85a32f1043035491a3b00563acb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "786afcb06ff789b218799a60ab016f2be393e5cfe171462e7cfa5b39fe3cb434"
   end
 
   depends_on "go" => :build
