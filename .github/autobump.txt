@@ -390,6 +390,7 @@ clusterctl
 clzip
 cmake-language-server
 cmctl
+cminpack
 cmu-pocketsphinx
 cmus
 cnats
