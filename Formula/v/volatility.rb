@@ -10,13 +10,13 @@ class Volatility < Formula
   head "https://github.com/volatilityfoundation/volatility3.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any,                 arm64_sonoma:   "c27a3f69a019cf06ee7a68384797294db53c4c980e5f26fe18ccac4b7b43b674"
-    sha256 cellar: :any,                 arm64_ventura:  "9a582e7702af461df3117e3bcc1293f2355de2c7f2d2b556b43b1e36c1f7161b"
-    sha256 cellar: :any,                 arm64_monterey: "21c66fe8b90e45313dc4053c3a19a6a8d710e2389418be3193e29d05772275e1"
-    sha256 cellar: :any,                 sonoma:         "3d486920b86f30de7ef6f6c2951f5864844e4e207b454b86a76d8c65a80ff69b"
-    sha256 cellar: :any,                 ventura:        "2fbea6946dd4fce4326a05bc6fea5eb9b0b92a368d6f7f0b8cb2726b20101525"
-    sha256 cellar: :any,                 monterey:       "22f682f0a0e790b30f6afeda7ced170e873cdf33067199424d4ef2d0fbd11a7d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "91178521c389c403912df306601293f4af35d7aca48330f5a7371b005a6e1de1"
+    sha256 cellar: :any,                 arm64_sonoma:   "e3d99581f78a5d59430ff9f37c4ad70e6ab51d226eea13d3b27502b609672999"
+    sha256 cellar: :any,                 arm64_ventura:  "45217f65f7a113bdc19df88029588078fb405fb576aa3fe804b773d191d0293e"
+    sha256 cellar: :any,                 arm64_monterey: "f84bf96954fd4235a9d9c20023b8ae61f8eca5154680eae72fed19a89088381e"
+    sha256 cellar: :any,                 sonoma:         "62d9fee63af9040ac1a40e631a1b48646bc683d29bf1e1bdcbdd96b7076d4a57"
+    sha256 cellar: :any,                 ventura:        "1e7a5116183b757148dea8a17b68997c11b0241c9a897710b21b8233d144bfd5"
+    sha256 cellar: :any,                 monterey:       "f3d67210942472e9912fb052f79b539fbdd560a075a43b269838cbab17b49cbf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "41c56045d87563f8c9c3125ab2470d48e71a6167722450baefab18dfde06be76"
   end
 
   depends_on "rust" => :build # for rpds-py
