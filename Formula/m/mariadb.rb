@@ -1,8 +1,8 @@
 class Mariadb < Formula
   desc "Drop-in replacement for MySQL"
   homepage "https://mariadb.org/"
-  url "https://archive.mariadb.org/mariadb-11.3.2/source/mariadb-11.3.2.tar.gz"
-  sha256 "5570778f0a2c27af726c751cda1a943f3f8de96d11d107791be5b44a0ce3fb5c"
+  url "https://archive.mariadb.org/mariadb-11.4.2/source/mariadb-11.4.2.tar.gz"
+  sha256 "8c600e38adb899316c1cb11c68b87979668f4fb9d858000e347e6d8b7abe51b0"
   license "GPL-2.0-only"
 
   livecheck do
@@ -31,11 +31,15 @@ class Mariadb < Formula
   depends_on "fmt" => :build
   depends_on "pkg-config" => :build
   depends_on "groonga"
+  depends_on "lz4"
   depends_on "openssl@3"
   depends_on "pcre2"
+  depends_on "xz"
   depends_on "zstd"
 
   uses_from_macos "bzip2"
+  uses_from_macos "krb5"
+  uses_from_macos "libedit"
   uses_from_macos "libxcrypt"
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
@@ -53,13 +57,6 @@ class Mariadb < Formula
   conflicts_with "mariadb-connector-c", because: "both install `mariadb_config`"
 
   fails_with gcc: "5"
-
-  # Remove on next release.
-  # Upstream PR: https://github.com/MariaDB/server/pull/3064
-  patch do
-    url "https://github.com/MariaDB/server/commit/3624a36aed0346380255b141cb8a59998aaca4ee.patch?full_index=1"
-    sha256 "c9d0aa64b34c43ac9e3077d74c18532125c459d9d867ade69ce283d27b595b22"
-  end
 
   def install
     ENV.cxx11
