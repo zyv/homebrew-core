@@ -1,8 +1,8 @@
 class Cppad < Formula
   desc "Differentiation of C++ Algorithms"
   homepage "https://www.coin-or.org/CppAD"
-  url "https://github.com/coin-or/CppAD/archive/refs/tags/20240000.4.tar.gz"
-  sha256 "0dfc1e30b32d5dd3086ee3adb6d2746a019e9d670b644c4d5ec1df3c35dd1fe5"
+  url "https://github.com/coin-or/CppAD/archive/refs/tags/20240000.5.tar.gz"
+  sha256 "bd52f4b56139d1e4c92dbfe1d71253b87d1e88cc3e210c27cbef5e06bad6ba9f"
   license "EPL-2.0"
   version_scheme 1
   head "https://github.com/coin-or/CppAD.git", branch: "master"
