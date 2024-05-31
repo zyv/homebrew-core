@@ -3,8 +3,8 @@ class Checkov < Formula
 
   desc "Prevent cloud misconfigurations during build-time for IaC tools"
   homepage "https://www.checkov.io/"
-  url "https://files.pythonhosted.org/packages/80/76/ff52467e8975792ef7722c63457225bb0da3b4539b7c8fa7eb14e818ce62/checkov-3.2.110.tar.gz"
-  sha256 "758fc1de1951db4635273b9ccda0fb30a623ccb7b02fb6bf93d208ea545e3a8d"
+  url "https://files.pythonhosted.org/packages/cc/14/0c202375e81da6ddaddc17ed318d8a95bad84b9551080962a1ab19edb4f4/checkov-3.2.120.tar.gz"
+  sha256 "3e7240b1df7f2e28a7470ba8bd46ea502dcfbde1c099cfa72feec7eae27f58ca"
   license "Apache-2.0"
 
   livecheck do
@@ -366,8 +366,8 @@ class Checkov < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/86/ec/535bf6f9bd280de6a4637526602a146a68fde757100ecf8c9333173392db/requests-2.32.2.tar.gz"
-    sha256 "dd951ff5ecf3e3b3aa26b40703ba77495dab41da839ae72ef3c8e5d8e2433289"
+    url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
+    sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
   end
 
   resource "rpds-py" do
