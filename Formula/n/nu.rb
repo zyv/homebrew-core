@@ -4,7 +4,7 @@ class Nu < Formula
   url "https://github.com/programming-nu/nu/archive/refs/tags/v2.3.0.tar.gz"
   sha256 "1a6839c1f45aff10797dd4ce5498edaf2f04c415b3c28cd06a7e0697d6133342"
   license "Apache-2.0"
-  revision 2
+  revision 3
   head "https://github.com/programming-nu/nu.git", branch: "master"
 
   bottle do
@@ -60,7 +60,7 @@ class Nu < Formula
   end
 
   def install
-    ENV.delete("SDKROOT") if MacOS.version < :sierra
+    ENV.delete("SDKROOT") if OS.mac? && MacOS.version < :sierra
     ENV["PREFIX"] = prefix
     # Don't hard code path to clang.
     inreplace "tools/nuke", "/usr/bin/clang", ENV.cc
