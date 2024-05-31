@@ -7,13 +7,13 @@ class Ocicl < Formula
   revision 1
 
   bottle do
-    sha256 arm64_sonoma:   "692c26d7c250e9ce5e342104911d1565ae60f29500273fb5802f4608aa5858e7"
-    sha256 arm64_ventura:  "2a5ff385eeb2b5a431271d159148839958eb37bf4daad409f0b8b5e5feb1de16"
-    sha256 arm64_monterey: "d2d119ca64fbf4a23b9b79c3b53ae6a497ea4e1fd41a51d17dd09bab9a4bc22d"
-    sha256 sonoma:         "6559853794ce9f195f08e5ea52ff320b78688ec7a49eedc982f0d89cd492e354"
-    sha256 ventura:        "2f5fc5e517dd65e82f07cece9b24f0f2de5393638b3f01e09d0c581de42bac5f"
-    sha256 monterey:       "ef7edfa5111bc85dafaf2a656e733a9eee5e769ab4b88d05816d34d84f24c535"
-    sha256 x86_64_linux:   "7cf33ae7f42076838fc0c5d6f35d5e7d35ab509032b8782d5fb67463398f8914"
+    sha256 arm64_sonoma:   "1c993138242b9d91c0c083ccfd03738fa8026b2f983974069922c2e66b6e9bf4"
+    sha256 arm64_ventura:  "6f4d9af03e1e0e2e27e13133f4e8d4de74d6e9c6f05cdb1b024678e73d161d07"
+    sha256 arm64_monterey: "dc0a11cc2bb9d53d1b15eed9d06965e8fc5a6d3783fa6ce1818aa4621ff05dcc"
+    sha256 sonoma:         "a59d43028e7817ab6ab22bc8231d29df45adedc747ac9bd7712a00d6b52a90dc"
+    sha256 ventura:        "de2ad9e25522997365f1fad608f2dedc01279f7fa59f990f1b2ae5be03c32f4c"
+    sha256 monterey:       "b7a84b199eec7141dbdfd99cb4a10125b8796a8e97f8dcf49a3b433907cb8f1f"
+    sha256 x86_64_linux:   "e2faaece2efeee11b08b1accaee6f240d785599e5f32b7779508cc74ec1e0312"
   end
 
   depends_on "oras"
